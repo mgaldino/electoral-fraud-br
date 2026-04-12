@@ -1,0 +1,2 @@
+phase,model,n_obs,n_chains,warmup,sampling_iter,total_iter,wall_seconds,per_iter_ms,per_iter_per_obs_us,ess_bulk_min,ess_tail_min,rhat_max,divergent_transitions,max_treedepth_hits
+smoke_brasilia_qbl,qbl_stan_relaxed_reparam,2000,2,500,250,750,541.743277072907,722.324369430542,361.162184715271,8.23981820109289,43.7554508893433,1.22937525007881,0,0

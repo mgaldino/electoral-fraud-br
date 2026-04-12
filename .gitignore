@@ -1,0 +1,60 @@
+# ---- R ----
+.Rproj.user/
+.Rhistory
+.RData
+.Ruserdata
+*.Rcheck/
+*.tar.gz
+
+# ---- renv (manter so activate.R, settings.json, renv.lock) ----
+renv/library/
+renv/local/
+renv/cellar/
+renv/python/
+renv/sandbox/
+renv/staging/
+
+# ---- dados processados (reproduziveis via pipeline) ----
+data/processed/*
+!data/processed/.gitkeep
+
+# ---- dados brutos dos autores (grandes, replicacao; nao versionar) ----
+replication_authors/extracted/fingerprint_brazil/raw-data/*.csv
+replication_authors/extracted/fingerprint_brazil/raw-data/desktop.ini
+replication_authors/extracted/fingerprint_brazil/.Rproj.user/
+replication_authors/original_zip/*.zip
+
+# ---- fits MCMC (grandes, reproduziveis via scripts) ----
+quality_reports/results/*.rds
+data/processed/*.rds
+
+# ---- binarios Stan compilados ----
+stan/eforensics_bl
+stan/eforensics_qbl
+stan/*.hpp
+
+# ---- PDFs de referencia (nao versionar) ----
+PA2024.pdf
+Rplots.pdf
+
+# ---- xlsx grandes ----
+replication_authors/extracted/fingerprint_brazil/raw-data/*.xlsx
+
+# ---- outputs pesados ----
+output/figures/*
+!output/figures/.gitkeep
+output/tables/*
+!output/tables/.gitkeep
+
+# ---- logs ----
+quality_reports/results/*.log
+
+# ---- OS ----
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ---- editores ----
+.vscode/
+.idea/
+*.swp

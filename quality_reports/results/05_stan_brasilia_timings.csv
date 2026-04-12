@@ -1,0 +1,2 @@
+phase,n_obs,n_chains,warmup,sampling_iter,total_iter,wall_seconds,per_iter_ms,ess_bulk_min,ess_tail_min,rhat_max,divergent_transitions
+smoke_brasilia,6748,4,50,100,150,3271.25231289864,21808.3487526576,6.04238310616342,18.8764035067479,1.92432521774941,0

@@ -1,0 +1,28 @@
+=== Dip Test Diagnostics (Hartigan) ===
+Date: 2026-04-12 13:11:32 -0300
+Reference: Mebane (PA2024) — D(pi_k) for unimodality, M(pi_k) for chain agreement
+
+
+=== JAGS intercept-only ===
+param            dip_D     p-value   multimodal?     M(pi_k)
+------------------------------------------------------------ 
+pi[1]         0.001090      1.0000            no    0.002074
+pi[2]         0.001258      0.9988            no    0.002070
+pi[3]         0.001367      0.9968            no    0.000012
+
+PA2024 benchmark: M(pi_2) = 0.110 (Mebane aceita)
+
+=== JAGS zone FE ===
+param            dip_D     p-value   multimodal?     M(pi_k)
+------------------------------------------------------------ 
+pi[1]         0.033416      0.0000           YES    0.012525
+pi[2]         0.033000      0.0000           YES    0.012519
+pi[3]         0.002168      0.9972            no    0.000026
+
+PA2024 benchmark: M(pi_2) = 0.110 (Mebane aceita)
+
+=== Interpretacao ===
+- dip_D: estatistica de Hartigan. Valores maiores = mais evidencia de multimodalidade.
+- p-value < 0.05: rejeita H0 de unimodalidade.
+- M(pi_k): diferenca entre maior e menor media por chain. Mebane aceita M(pi_2) = 0.110 em PA2024.
+- Multimodalidade em pi_2 e esperada quando pi_2 ~ 0 (componente de fraude rara).
