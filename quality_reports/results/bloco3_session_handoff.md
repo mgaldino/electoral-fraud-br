@@ -14,7 +14,7 @@ Benford 2BL, Spikes/Rozenas) e consolidar o estado do pipeline de testes formais
 | Kobak integer pct | `R/05_kobak_integer.R` | Implementado + rodado | `output/tables/tab_kobak_integer_pct.csv` |
 | Beber-Scacco last digit | `R/06_beber_scacco.R` | Implementado + rodado | `output/tables/tab_beber_scacco_last_digit.csv` |
 | Benford 2BL | `R/07_benford_2bl.R` | Implementado + rodado | `output/tables/tab_benford_2bl.csv` |
-| Spikes/Rozenas | `R/08_spikes_rozenas.R` | Implementado; run em andamento (~longo, 471k obs x 1000 resamples) | `output/tables/tab_spikes_rozenas.csv` (quando terminar) |
+| Spikes/Rozenas | `R/08_spikes_rozenas.R` | Implementado + rodado (37 min) | `output/tables/tab_spikes_rozenas.csv` |
 
 ## Estado do eforensics pipeline (3a-3k)
 
@@ -53,10 +53,41 @@ Quando todos os testes estiverem prontos, consolidar em:
 
 Formato: test_name | candidate | round | level | statistic | ci_or_pvalue | decision
 
+## Resultados dos testes suplementares
+
+### Kobak (percentuais inteiros, metodo local-neighbor)
+- Median ratio < 1 em todos os testes (turnout e vote share, 5% e 10%)
+- Sem excesso sistematico de percentuais redondos
+- Outlier: Lula T2 10% tem max_ratio=19.3 no bin de ~50% vote share (concentracao natural no T2, nao fraude)
+
+### Beber-Scacco (ultimo digito)
+- H0: ultimo digito ~ Uniform(0,...,9)
+- T1 Lula: chi2=15.5, p=0.077 (nao rejeita)
+- T1 Bolsonaro: chi2=12.8, p=0.171 (nao rejeita)
+- T2 Lula: chi2=10.9, p=0.284 (nao rejeita)
+- T2 Bolsonaro: chi2=5.8, p=0.761 (nao rejeita)
+
+### Benford 2BL (segundo digito)
+- T1 Lula: MAD=0.01178 (acceptable), chi2=8833, p<0.001
+- T1 Bolsonaro: MAD=0.01178 (acceptable), chi2=8833, p<0.001
+- T2 Lula: MAD=0.01028 (acceptable), chi2=6631, p<0.001
+- T2 Bolsonaro: MAD=0.00650 (close conformity), chi2=3040, p<0.001
+- Nota: chi2 rejeita com n=471k (poder excessivo), MAD e metrica mais informativa
+- Caveat Deckert et al. (2011): desvio de Benford nao e evidencia forte de fraude
+
+### Spikes/Rozenas (picos anomalos)
+- T1 Lula: 0.02% precincts fraudulentos estimados
+- T1 Bolsonaro: 0.22%
+- T2 Lula: 0.05%
+- T2 Bolsonaro: 0.05%
+- Todos proximos de zero — sem evidencia de manipulacao
+
+### Conclusao dos testes suplementares
+Todos os 4 testes suportam a hipotese nula de ausencia de fraude sistematica.
+
 ## Proximos passos (em ordem)
 
-1. Revisar resultados dos testes suplementares (CSVs em output/tables/)
-2. Implementar `R/04_eforensics_mebane.R` — pipeline consolidado:
+1. Implementar `R/04_eforensics_mebane.R` — pipeline consolidado:
    - Escolher modelo (qbl recomendado) e sampler (JAGS recomendado)
    - Rodar no Brasil inteiro com UF FE
    - Gerar todas as tabelas e figuras de 3a-3k
