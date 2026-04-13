@@ -45,6 +45,7 @@ output/figures/*
 !output/figures/.gitkeep
 output/tables/*
 !output/tables/.gitkeep
+!output/tables/tab_*.csv
 
 # ---- logs ----
 quality_reports/results/*.log

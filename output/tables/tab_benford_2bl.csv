@@ -1,0 +1,5 @@
+turno,candidato,n,chi2,df,p_value,mad,mad_interpretation
+1,13,470873,6643.53,9,0,0.01046,acceptable
+1,22,466415,8832.507,9,0,0.01178,acceptable
+2,13,470900,6631.153,9,0,0.01028,acceptable
+2,22,467470,3040.095,9,0,0.0065,close
