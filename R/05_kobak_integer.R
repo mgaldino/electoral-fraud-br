@@ -33,49 +33,59 @@ candidatos_t2 <- c(13L, 22L)
 # ----------------------------------------------------------------------------
 
 #' Testa excesso de percentuais inteiros (multiplos de 5 ou 10)
+#' usando comparacao local: contagem no bin do multiplo vs media dos bins
+#' vizinhos. Segue o espirito de Kobak et al. (2016).
+#'
 #' @param values vetor numerico de proporcoes em [0,1]
 #' @param multiple multiplo a testar (0.05 = 5%, 0.10 = 10%)
-#' @param n_boot numero de bootstraps para CI
-#' @param tolerance tolerancia para considerar "inteiro" (default: 0.001)
-kobak_test <- function(values, multiple = 0.05, n_boot = 1000, tolerance = 0.001) {
+#' @param bin_width largura do bin para histograma fino (default: 0.001)
+kobak_test <- function(values, multiple = 0.05, bin_width = 0.001) {
   values <- values[!is.na(values) & values >= 0 & values <= 1]
   n <- length(values)
   if (n == 0L) return(NULL)
 
-  # Contagem observada de valores em multiplos exatos
-  remainder <- values %% multiple
-  is_integer <- remainder < tolerance | (multiple - remainder) < tolerance
-  observed_count <- sum(is_integer)
-  observed_frac <- observed_count / n
+  # Histograma fino
+  breaks <- seq(0, 1, by = bin_width)
+  h <- hist(values, breaks = breaks, plot = FALSE)
+  counts <- h$counts
+  mids <- h$mids
+  n_bins <- length(counts)
 
-  # Esperado sob distribuicao suave: proporcao de bins que sao multiplos
-  # Para multiple=0.05, bins de tamanho tolerance*2 = 0.002 cobrem
-  # 2*tolerance/multiple = 0.04 da area por multiplo, vezes ceil(1/multiple)+1 multiplos
-  n_multiples <- floor(1 / multiple) + 1L
-  expected_frac <- n_multiples * (2 * tolerance)
-
-  # Bootstrap CI: reamostrar e recontar
-  set.seed(20260413)
-  boot_fracs <- replicate(n_boot, {
-    boot_vals <- sample(values, n, replace = TRUE)
-    boot_rem <- boot_vals %% multiple
-    boot_int <- boot_rem < tolerance | (multiple - boot_rem) < tolerance
-    sum(boot_int) / n
+  # Identificar bins que correspondem a multiplos exatos
+  is_multiple_bin <- sapply(mids, function(m) {
+    rem <- m %% multiple
+    rem < bin_width / 2 | (multiple - rem) < bin_width / 2
   })
 
-  ratio <- observed_frac / expected_frac
-  boot_ratios <- boot_fracs / expected_frac
+  # Para cada bin de multiplo, comparar com media dos 4 vizinhos
+  # (2 abaixo + 2 acima), excluindo outros bins de multiplo
+  neighbor_window <- 5L  # vizinhos de cada lado
+  ratios <- numeric()
 
+  for (i in which(is_multiple_bin)) {
+    lo <- max(1L, i - neighbor_window)
+    hi <- min(n_bins, i + neighbor_window)
+    neighbors <- seq(lo, hi)
+    neighbors <- neighbors[neighbors != i & !is_multiple_bin[neighbors]]
+    if (length(neighbors) < 2L) next
+    expected <- mean(counts[neighbors])
+    if (expected > 0) {
+      ratios <- c(ratios, counts[i] / expected)
+    }
+  }
+
+  if (length(ratios) == 0L) return(NULL)
+
+  # Ratio medio e CI via quantis dos ratios individuais
   list(
     n = n,
     multiple = multiple,
-    observed_count = observed_count,
-    observed_frac = observed_frac,
-    expected_frac = expected_frac,
-    ratio = ratio,
-    ratio_ci_025 = quantile(boot_ratios, 0.025),
-    ratio_ci_975 = quantile(boot_ratios, 0.975),
-    p_excess = mean(boot_fracs >= observed_frac)
+    n_multiples_tested = length(ratios),
+    mean_ratio = mean(ratios),
+    median_ratio = median(ratios),
+    ratio_ci_025 = unname(quantile(ratios, 0.025)),
+    ratio_ci_975 = unname(quantile(ratios, 0.975)),
+    max_ratio = max(ratios)
   )
 }
 
@@ -93,38 +103,32 @@ for (turno in c(1L, 2L)) {
     label <- sprintf("T%d_cand%d", turno, cand)
 
     # Turnout
-    t_res <- kobak_test(sub_c$turnout, multiple = 0.05)
-    if (!is.null(t_res)) {
-      results[[paste0(label, "_turnout_5pct")]] <- c(
-        list(turno = turno, candidato = cand, variable = "turnout", multiple_pct = 5),
-        t_res
-      )
+    # Vote share (comparecimento) — candidato-especifico
+    for (mult in c(0.05, 0.10)) {
+      vs_res <- kobak_test(sub_c$vote_share_comparecimento, multiple = mult)
+      if (!is.null(vs_res)) {
+        results[[paste0(label, "_voteshare_", mult*100, "pct")]] <- c(
+          list(turno = turno, candidato = cand, variable = "vote_share",
+               multiple_pct = as.integer(mult * 100)),
+          vs_res
+        )
+      }
     }
 
-    # Vote share (comparecimento)
-    vs_res <- kobak_test(sub_c$vote_share_comparecimento, multiple = 0.05)
-    if (!is.null(vs_res)) {
-      results[[paste0(label, "_voteshare_5pct")]] <- c(
-        list(turno = turno, candidato = cand, variable = "vote_share", multiple_pct = 5),
-        vs_res
-      )
-    }
-
-    # 10% multiples
-    t10_res <- kobak_test(sub_c$turnout, multiple = 0.10)
-    if (!is.null(t10_res)) {
-      results[[paste0(label, "_turnout_10pct")]] <- c(
-        list(turno = turno, candidato = cand, variable = "turnout", multiple_pct = 10),
-        t10_res
-      )
-    }
-
-    vs10_res <- kobak_test(sub_c$vote_share_comparecimento, multiple = 0.10)
-    if (!is.null(vs10_res)) {
-      results[[paste0(label, "_voteshare_10pct")]] <- c(
-        list(turno = turno, candidato = cand, variable = "vote_share", multiple_pct = 10),
-        vs10_res
-      )
+    # Turnout — mesmo para todos os candidatos, testar so uma vez (cand == primeiro)
+    if (cand == cands[1]) {
+      # Deduplicar secoes para turnout
+      turnout_vals <- sub[!duplicated(paste(NR_ZONA, NR_SECAO))]$turnout
+      for (mult in c(0.05, 0.10)) {
+        t_res <- kobak_test(turnout_vals, multiple = mult)
+        if (!is.null(t_res)) {
+          results[[paste0("T", turno, "_turnout_", mult*100, "pct")]] <- c(
+            list(turno = turno, candidato = NA_integer_, variable = "turnout",
+                 multiple_pct = as.integer(mult * 100)),
+            t_res
+          )
+        }
+      }
     }
   }
 }
@@ -138,12 +142,16 @@ data.table::fwrite(res_dt, out_csv)
 log_step("Resultados salvos em {out_csv}")
 
 # Console summary
-cat("\n=== Kobak Integer Percentages Test ===\n")
+cat("\n=== Kobak Integer Percentages Test (local-neighbor method) ===\n")
+cat("ratio = count_at_multiple / mean(neighbor_counts). ratio > 1 = excess.\n\n")
 for (i in seq_len(nrow(res_dt))) {
   r <- res_dt[i]
-  cat(sprintf("T%d cand=%d %s mult=%d%%: ratio=%.3f [%.3f, %.3f] n=%d\n",
-              r$turno, r$candidato, r$variable, r$multiple_pct,
-              r$ratio, r$ratio_ci_025, r$ratio_ci_975, r$n))
+  cand_str <- if (is.na(r$candidato)) "all" else as.character(r$candidato)
+  cat(sprintf("T%d cand=%-4s %s mult=%d%%: mean_ratio=%.3f median=%.3f [%.3f, %.3f] max=%.3f (n=%d, %d multiples)\n",
+              r$turno, cand_str, r$variable, r$multiple_pct,
+              r$mean_ratio, r$median_ratio,
+              r$ratio_ci_025, r$ratio_ci_975, r$max_ratio,
+              r$n, r$n_multiples_tested))
 }
 
 log_section("Fim do teste Kobak")

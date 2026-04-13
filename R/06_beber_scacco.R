@@ -33,6 +33,8 @@ candidatos_t2 <- c(13L, 22L)
 #' @param counts vetor de contagens inteiras de votos
 #' @return lista com estatistica chi2, p-value, tabela de frequencias
 last_digit_test <- function(counts) {
+  # Excluir secoes com zero votos: "0 votos" reflete ausencia do candidato
+  # na secao, nao um resultado reportado sujeito a manipulacao de digitos.
   counts <- counts[!is.na(counts) & counts > 0L]
   n <- length(counts)
   if (n < 100L) return(NULL)

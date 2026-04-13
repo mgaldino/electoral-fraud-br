@@ -14,9 +14,8 @@
 
 source(here::here("R", "00_setup.R"))
 
-suppressPackageStartupMessages({
-  library(BenfordTests)
-})
+# BenfordTests nao e usado diretamente — teste implementado from scratch
+# para controle total sobre o segundo digito e MAD.
 
 log_section("Bloco 3 -- Benford second-digit (2BL) test")
 
@@ -43,8 +42,8 @@ benford_2bl_test <- function(counts) {
   n <- length(counts)
   if (n < 100L) return(NULL)
 
-  # Segundo digito
-  second_digit <- floor((counts / 10^(floor(log10(counts)) - 1)) %% 10)
+  # Segundo digito via string (robusto a floating-point)
+  second_digit <- as.integer(substr(as.character(counts), 2, 2))
 
   # Frequencias observadas
   observed <- tabulate(second_digit + 1L, nbins = 10)
@@ -98,7 +97,7 @@ for (turno in c(1L, 2L)) {
         turno = turno,
         candidato = cand,
         n = res$n,
-        chi2 = round(res$chi2, 3),
+        chi2 = res$chi2,
         df = res$df,
         p_value = res$p_value,
         mad = round(res$mad, 5),
