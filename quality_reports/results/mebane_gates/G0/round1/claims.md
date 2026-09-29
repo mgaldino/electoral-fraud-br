@@ -1,0 +1,14 @@
+# Reconciliacao de alegacoes historicas
+
+Esta tabela distingue logs de abril de 2026 de verificacoes feitas nesta rodada. Nao houve MCMC novo, reestimacao ou validacao de inferencia nacional.
+
+| Alegacao antiga | Evidencia examinada | Estado G0 |
+|---|---|---|
+| `CLAUDE.md` e `bloco3_session_handoff.md`: testes suplementares "suportam nula"/"nula confirmada" em Brasilia | Handoff e tabelas historicas em `output/tables/`; `README.md`/`CLAUDE.md` corrigidos. | Inferencia nao sustentada por G0; resultado de testes de anomalia nao prova fraude nem sua ausencia. Poder/calibracao pendem de G4. |
+| `05_stan_qbl_session_handoff.md`: JAGS fresh_v2 "converge" | `05_eforensics_qbl_brasilia_fresh_v2_summary.txt` informa R-hat classico `pi[2]=1.247`, `iota.s.alpha=1.714`; `check_loads.R` carregou quatro cadeias de 5.000 draws e reproduziu 1.2468 e 1.7138 com `coda::gelman.diag`. | Media de turnout proxima entre cadeias nao basta; este fit nao satisfaz criterios G4 para quantidades reportadas. G0 nao recalcula rank-normalized R-hat, ESS/MCSE ou preditiva. |
+| Handoff: zone FE "confirma nula"; dip/M(pi) substituiriam R-hat | `05_jags_qbl_zone_fe_summary.txt` historico informa R-hat classico `pi[2]=4.615`, `iota.s.alpha=13.506`; intervalo de `iota.s.alpha` negativo e reportado no mesmo resumo. | Sinal negativo isolado nao resolve mistura entre cadeias. Fit zone FE nao foi recarregado nesta rodada; seu resumo foi inspecionado, nao revalidado. |
+| Fit JAGS original seria benchmark | Handoff e `05_stan_validation_note.md` apontam modo de turnout ~0.711 no fit original versus ~1.616 no fresh_v2. | Diagnostico historico plausivel, mas causa "burn-in insuficiente" nao foi demonstrada causalmente em G0. Fit original preservado, nao usado como benchmark aprovado. |
+| Stan seria portagem/validacao cruzada do qbl | `05_stan_qbl_brasilia_log_n2000.md` diz explicitamente que contagens latentes foram substituidas por magnitudes continuas; smoke 2.000 observacoes, 2 cadeias, `rhat_max=1.229`, `ess_bulk_min=8.24`. `stan/eforensics_qbl.stan` e script foram congelados em snapshots. | Stan e aproximacao historica com diagnostico insuficiente; equivalencia com JAGS nao demonstrada. G2/G3 decidem contrato/engine. |
+| Brasil inteiro seria proximo passo ou ja preparado | `R/07_brasil_full_qbl.R` existe, mas `data/processed/07_brasil_full_qbl_T2_fit.rds`, timings e summary por ele anunciados nao constam do inventario; `R/04_eforensics_mebane.R` nao existe. | Nenhum resultado nacional qbl validado. Nao executar o runner antes dos gates de dados, modelo, inferencia e capacidade. |
+
+Os R-hat reproduzidos aqui sao estimativas classicas de `coda::gelman.diag` com `autoburnin=FALSE`, usadas para confrontar o resumo historico. Os criterios prospectivos G4 exigem R-hat rank-normalized, ESS, MCSE, cadeias, modos e recuperacao; G0 nao os aplica como se tivesse rodado G4.

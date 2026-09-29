@@ -1,0 +1,233 @@
+{
+  "r_version": "R version 4.4.2 (2024-10-31)",
+  "platform": "aarch64-apple-darwin20",
+  "library_paths": ["/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/renv/library/macos/R-4.4/aarch64-apple-darwin20", "/Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/library"],
+  "package_info": {
+    "renv": {
+      "installed": true,
+      "version": "1.1.4",
+      "library": "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/renv/library/macos/R-4.4/aarch64-apple-darwin20/renv",
+      "remote_sha": null,
+      "remote_repo": null,
+      "remote_username": null,
+      "built": "R 4.4.1; ; 2025-03-20 18:19:24 UTC; unix"
+    },
+    "eforensics": {
+      "installed": true,
+      "version": "0.0.4",
+      "library": "/Users/manoelgaldino/Library/Caches/org.R-project.R/R/renv/cache/v5/macos/R-4.4/aarch64-apple-darwin20/eforensics/0.0.4/0aac632e6ce61f88d823545ebbc3e17d/eforensics",
+      "remote_sha": "3017de537450f97a01872d0157462a68bea348ee",
+      "remote_repo": "eforensics_public",
+      "remote_username": "UMeforensics",
+      "built": "R 4.4.2; ; 2026-04-10 22:38:50 UTC; unix"
+    },
+    "rjags": {
+      "installed": true,
+      "version": "4-17",
+      "library": "/Users/manoelgaldino/Library/Caches/org.R-project.R/R/renv/cache/v5/macos/R-4.4/aarch64-apple-darwin20/rjags/4-17/1cf40ca3e11ef31ed51be85d4d227d8d/rjags",
+      "remote_sha": "4-17",
+      "remote_repo": null,
+      "remote_username": null,
+      "built": "R 4.4.2; aarch64-apple-darwin20; 2026-04-10 20:42:28 UTC; unix"
+    },
+    "coda": {
+      "installed": true,
+      "version": "0.19-4.1",
+      "library": "/Users/manoelgaldino/Library/Caches/org.R-project.R/R/renv/cache/v5/macos/R-4.4/aarch64-apple-darwin20/coda/0.19-4.1/af436915c590afc6fffc3ce3a5be1569/coda",
+      "remote_sha": null,
+      "remote_repo": null,
+      "remote_username": null,
+      "built": "R 4.4.1; ; 2025-02-01 04:53:09 UTC; unix"
+    },
+    "runjags": {
+      "installed": true,
+      "version": "2.2.2-5",
+      "library": "/Users/manoelgaldino/Library/Caches/org.R-project.R/R/renv/cache/v5/macos/R-4.4/aarch64-apple-darwin20/runjags/2.2.2-5/803dbb75fb06df5447e370e0ba74d196/runjags",
+      "remote_sha": "2.2.2-5",
+      "remote_repo": null,
+      "remote_username": null,
+      "built": "R 4.4.1; aarch64-apple-darwin20; 2025-04-09 14:33:09 UTC; unix"
+    },
+    "cmdstanr": {
+      "installed": true,
+      "version": "0.9.0",
+      "library": "/Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/library/cmdstanr",
+      "remote_sha": "da99e2ba954658bdad63bffb738c4444c33a4e0e",
+      "remote_repo": null,
+      "remote_username": null,
+      "built": "R 4.4.3; ; 2025-09-24 06:50:35 UTC; unix"
+    },
+    "posterior": {
+      "installed": true,
+      "version": "1.7.0",
+      "library": "/Users/manoelgaldino/Library/Caches/org.R-project.R/R/renv/cache/v5/macos/R-4.4/aarch64-apple-darwin20/posterior/1.7.0/5c78a3f8f08513ca28a3df5211f016db/posterior",
+      "remote_sha": "1.7.0",
+      "remote_repo": null,
+      "remote_username": null,
+      "built": "R 4.4.2; ; 2026-04-10 20:43:33 UTC; unix"
+    },
+    "arrow": {
+      "installed": true,
+      "version": "23.0.1.2",
+      "library": "/Users/manoelgaldino/Library/Caches/org.R-project.R/R/renv/cache/v5/macos/R-4.4/aarch64-apple-darwin20/arrow/23.0.1.2/16a699dbc79ce0a99e28966e67726e31/arrow",
+      "remote_sha": "23.0.1.2",
+      "remote_repo": null,
+      "remote_username": null,
+      "built": "R 4.4.2; aarch64-apple-darwin20; 2026-04-10 19:14:12 UTC; unix"
+    },
+    "data.table": {
+      "installed": true,
+      "version": "1.18.2.1",
+      "library": "/Users/manoelgaldino/Library/Caches/org.R-project.R/R/renv/cache/v5/macos/R-4.4/aarch64-apple-darwin20/data.table/1.18.2.1/df99cd4333ce592df5173d6ad39b5c14/data.table",
+      "remote_sha": "1.18.2.1",
+      "remote_repo": null,
+      "remote_username": null,
+      "built": "R 4.4.3; aarch64-apple-darwin20; 2026-01-27 16:12:00 UTC; unix"
+    },
+    "dplyr": {
+      "installed": true,
+      "version": "1.2.1",
+      "library": "/Users/manoelgaldino/Library/Caches/org.R-project.R/R/renv/cache/v5/macos/R-4.4/aarch64-apple-darwin20/dplyr/1.2.1/d71f190466b9496cf8543c76641be5cf/dplyr",
+      "remote_sha": "1.2.1",
+      "remote_repo": null,
+      "remote_username": null,
+      "built": "R 4.4.2; aarch64-apple-darwin20; 2026-04-10 19:03:29 UTC; unix"
+    },
+    "here": {
+      "installed": true,
+      "version": "1.0.2",
+      "library": "/Users/manoelgaldino/Library/Caches/org.R-project.R/R/renv/cache/v5/macos/R-4.4/aarch64-apple-darwin20/here/1.0.2/e5114f2abe04168238181913a8572358/here",
+      "remote_sha": "1.0.2",
+      "remote_repo": null,
+      "remote_username": null,
+      "built": "R 4.4.1; ; 2025-09-15 07:00:48 UTC; unix"
+    },
+    "readxl": {
+      "installed": true,
+      "version": "1.4.5",
+      "library": "/Users/manoelgaldino/Library/Caches/org.R-project.R/R/renv/cache/v5/macos/R-4.4/aarch64-apple-darwin20/readxl/1.4.5/18948de59f05d38a44d3e5065a76b4b6/readxl",
+      "remote_sha": "1.4.5",
+      "remote_repo": null,
+      "remote_username": null,
+      "built": "R 4.4.1; aarch64-apple-darwin20; 2025-03-07 18:57:09 UTC; unix"
+    }
+  },
+  "lock_r_version": "4.4.2",
+  "lock_gaps": [
+    {
+      "package": "renv",
+      "locked": true,
+      "locked_version": "1.1.4",
+      "effective_version": "1.1.4",
+      "version_equal": true
+    },
+    {
+      "package": "eforensics",
+      "locked": true,
+      "locked_version": "0.0.4",
+      "effective_version": "0.0.4",
+      "version_equal": true
+    },
+    {
+      "package": "rjags",
+      "locked": true,
+      "locked_version": "4-17",
+      "effective_version": "4-17",
+      "version_equal": true
+    },
+    {
+      "package": "coda",
+      "locked": true,
+      "locked_version": "0.19-4.1",
+      "effective_version": "0.19-4.1",
+      "version_equal": true
+    },
+    {
+      "package": "runjags",
+      "locked": true,
+      "locked_version": "2.2.2-5",
+      "effective_version": "2.2.2-5",
+      "version_equal": true
+    },
+    {
+      "package": "cmdstanr",
+      "locked": true,
+      "locked_version": "0.9.0",
+      "effective_version": "0.9.0",
+      "version_equal": true
+    },
+    {
+      "package": "posterior",
+      "locked": true,
+      "locked_version": "1.7.0",
+      "effective_version": "1.7.0",
+      "version_equal": true
+    },
+    {
+      "package": "arrow",
+      "locked": true,
+      "locked_version": "23.0.1.2",
+      "effective_version": "23.0.1.2",
+      "version_equal": true
+    },
+    {
+      "package": "data.table",
+      "locked": true,
+      "locked_version": "1.18.2.1",
+      "effective_version": "1.18.2.1",
+      "version_equal": true
+    },
+    {
+      "package": "dplyr",
+      "locked": true,
+      "locked_version": "1.2.1",
+      "effective_version": "1.2.1",
+      "version_equal": true
+    },
+    {
+      "package": "here",
+      "locked": true,
+      "locked_version": "1.0.2",
+      "effective_version": "1.0.2",
+      "version_equal": true
+    },
+    {
+      "package": "readxl",
+      "locked": true,
+      "locked_version": "1.4.5",
+      "effective_version": "1.4.5",
+      "version_equal": true
+    }
+  ],
+  "cmdstan": {
+    "path": "/Users/manoelgaldino/.cmdstan/cmdstan-2.37.0",
+    "version": "2.37.0"
+  },
+  "jags_banner": ["Welcome to JAGS 4.3.2 on Mon Sep 28 22:31:25 2026", "JAGS is free software and comes with ABSOLUTELY NO WARRANTY", "Loading module: basemod: ok", "Loading module: bugs: ok", ". "],
+  "fit": {
+    "path": "quality_reports/results/05_eforensics_qbl_brasilia_fresh_v2_fit.rds",
+    "class": "runjags",
+    "length": 44,
+    "names": ["mcmc", "deviance.table", "deviance.sum", "pd", "end.state", "samplers", "burnin", "sample", "thin", "model", "data", "monitor", "noread.monitor", "modules", "factories", "response", "residual", "fitted", "method", "method.options", "timetaken", "runjags.version", "summaries", "summary", "HPD", "hpd", "mcse", "psrf", "autocorr", "crosscorr", "truestochastic", "semistochastic", "nonstochastic", "discrete", "trace", "density", "histogram", "ecdfplot", "key", "acplot", "ccplot", "summary.available", "summary.pars", "dic"],
+    "object_bytes": 18144544,
+    "chains": 4,
+    "draws_per_chain": [5000, 5000, 5000, 5000],
+    "parameters": ["pi[1]", "pi[2]", "pi[3]", "beta.tau", "beta.nu", "beta.iota.m", "beta.iota.s", "beta.chi.m", "beta.chi.s", "tau.alpha", "nu.alpha", "iota.m.alpha", "iota.s.alpha", "chi.m.alpha", "chi.s.alpha", "tb", "nb", "imb", "isb", "cmb", "csb"],
+    "pi2_chain_means": [0.0085, 0.0083, 0.0097, 0.0076],
+    "rhat_tau_alpha": 1.0379,
+    "rhat_nu_alpha": 1.0328,
+    "rhat_pi_1_": 1.2398,
+    "rhat_pi_2_": 1.2468,
+    "rhat_iota_s_alpha": 1.7138
+  },
+  "data": {
+    "path": "data/processed/brasil_2022_secao_clean.parquet",
+    "class": ["data.table", "data.frame"],
+    "rows": 6136318,
+    "columns": 22,
+    "names": ["SG_UF", "regiao", "CD_MUNICIPIO", "NM_MUNICIPIO", "NR_ZONA", "NR_SECAO", "NR_TURNO", "NR_VOTAVEL", "NM_VOTAVEL", "QT_VOTOS", "QT_APTOS", "QT_COMPARECIMENTO", "QT_VOTOS_NOMINAIS", "QT_VOTOS_BRANCOS", "QT_VOTOS_NULOS", "QT_ABSTENCOES", "turnout", "vote_share_nominais", "vote_share_comparecimento", "n_eleitores_secao", "flag_exterior", "flag_comparecimento_excede"]
+  },
+  "qbl_model_snapshot": "quality_reports/results/mebane_gates/G0/round1/qbl_installed_3017de5.jags",
+  "qbl_reference_equal": true,
+  "rhat_method": "coda::gelman.diag point estimate, autoburnin=FALSE; not rank-normalized"
+}

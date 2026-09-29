@@ -1,0 +1,49 @@
+{
+  "gate_id": "G0",
+  "round": "round1",
+  "todos": [
+    {
+      "id": "G0-T1",
+      "status": "done",
+      "evidence": [
+        {"path": "quality_reports/results/mebane_gates/G0/round1/inventory.json", "basis": "executed", "locator": "items, archive_test, archive_matches, git"},
+        {"path": "quality_reports/results/mebane_gates/G0/round1/sources.md", "basis": "inspected", "locator": "source table and incomplete download"}
+      ]
+    },
+    {
+      "id": "G0-T2",
+      "status": "done",
+      "evidence": [
+        {"path": "quality_reports/results/mebane_gates/G0/round1/loads_environment.json", "basis": "executed", "locator": "r_version, package_info, cmdstan, lock_gaps"},
+        {"path": "quality_reports/results/mebane_gates/G0/round1/eforensics_installed_DESCRIPTION", "basis": "inspected", "locator": "Version, RemoteSha, Imports"},
+        {"path": "quality_reports/results/mebane_gates/G0/round1/lock_reconciliation.json", "basis": "executed", "locator": "missing and proposal_entries_available"},
+        {"path": "quality_reports/results/mebane_gates/G0/round1/renv_before.lock", "basis": "inspected", "locator": "125 original package entries"},
+        {"path": "quality_reports/results/mebane_gates/G0/round1/final_state/renv.lock", "basis": "executed", "locator": "49 appended package records; 174 total"}
+      ]
+    },
+    {
+      "id": "G0-T3",
+      "status": "done",
+      "evidence": [
+        {"path": "quality_reports/results/mebane_gates/G0/round1/claims.md", "basis": "inspected", "locator": "historical claims table"},
+        {"path": "quality_reports/results/mebane_gates/G0/round1/loads_environment.json", "basis": "executed", "locator": "fit.rhat_* and fit.pi2_chain_means"},
+        {"path": "quality_reports/results/05_jags_qbl_zone_fe_summary.txt", "basis": "historical", "locator": "Gelman.diag pi[2], iota.s.alpha"},
+        {"path": "quality_reports/results/05_stan_qbl_brasilia_log_n2000.md", "basis": "historical", "locator": "target, rhat_max, ESS, notes"}
+      ]
+    },
+    {
+      "id": "G0-T4",
+      "status": "done",
+      "evidence": [
+        {"path": "quality_reports/results/mebane_gates/G0/round1/eforensics_commit_api.json", "basis": "executed", "locator": "sha, commit date, URL"},
+        {"path": "quality_reports/results/mebane_gates/G0/round1/ef_models_3017de5.R", "basis": "executed", "locator": "qbl() source at line 983"},
+        {"path": "quality_reports/results/mebane_gates/G0/round1/eforensics_installed_DESCRIPTION", "basis": "inspected", "locator": "RemoteSha 3017de5"},
+        {"path": "quality_reports/results/mebane_gates/G0/round1/loads_environment.json", "basis": "executed", "locator": "qbl_reference_equal, fit, data"},
+        {"path": "quality_reports/results/mebane_gates/G0/round1/sources.md", "basis": "inspected", "locator": "primary PDFs pinned by title, version, pages, bytes and SHA-256"},
+        {"path": "quality_reports/results/mebane_gates/coordination/pm23_2023-07-02.pdf", "basis": "inspected", "locator": "first page, pdfinfo, SHA-256 615ddab2"},
+        {"path": "quality_reports/results/mebane_gates/coordination/measfrauds_2022-03-06.pdf", "basis": "inspected", "locator": "first page, pdfinfo, SHA-256 ad3b1cd4"},
+        {"path": "quality_reports/results/mebane_gates/G0/round1/final_state/quality_reports/results/mebane_gates/coordination/method_sources_download.md", "basis": "inspected", "locator": "source URL and download procedure"}
+      ]
+    }
+  ]
+}

@@ -51,7 +51,7 @@
       "goal": "Entregar inventário verificável de dados, documentos, código, fits e ambiente, distinguindo execução histórica de validação atual e tornando possível reproduzir o baseline.",
       "depends_on": [],
       "external_prerequisites": [],
-      "status": "under_review",
+      "status": "running",
       "executor": {"role": "SOL-BASELINE", "model": "gpt-6-sol", "effort": "high"},
       "reviewer": {"role": "QA-BASELINE", "model": "gpt-6-sol", "effort": "high", "independent": true},
       "write_scope": ["quality_reports/results/mebane_gates/G0/", "renv.lock", "README.md", "CLAUDE.md"],

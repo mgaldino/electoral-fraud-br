@@ -1,0 +1,22 @@
+# G0 round1: candidato para revisao independente
+
+Executor: `01a0eaba-2cec-74f3-bca0-8c27b736567e` (SOL-BASELINE). Este documento nao aprova o gate. Contrato estatico, run e hashes estao nos JSONs da rodada; o coordenador mantem o ledger e a revisao independente.
+
+## Resultado
+
+- Inventario executado: 108 arquivos relevantes, incluindo cinco entradas raw, quatro Parquet, quatro fits RDS, 28 CSVs de cadeias Stan, 26 logs, 12 PDFs, 21 arquivos de codigo e oito configuracoes/documentos. `inventory.json` lista caminho, bytes, SHA-256, status Git e integridade PDF. `unzip -t` passou e os quatro membros de raw-data extraidos correspondem byte-a-byte ao ZIP. Um arquivo `.download` falhou no `pdfinfo` e foi excluido como fonte valida.
+- Ambiente executado: R 4.4.2; JAGS 4.3.2; pacote `eforensics` 0.0.4/RemoteSha `3017de537450f97a01872d0157462a68bea348ee`; rjags 4-17; CmdStanR 0.9.0; CmdStan 2.37.0. `check_loads.R` evitou `.Rprofile` e reutilizou a biblioteca existente. `ef_models_3017de5.R` foi obtido do commit primario, e `qbl()` instalado retornou string JAGS identica a fonte. Nenhum pacote foi instalado/atualizado.
+- Lockfile: `propose_lock.R` identificou 49 registros ausentes da cadeia de dependencias de eforensics/JAGS/CmdStanR. `merge_lock.py` acrescentou somente esses registros, preservando integralmente os 125 registros anteriores; `renv_before.lock` e `installed_records.lock` permitem comparar antes/proposta. Checagem posterior: 110 pacotes na clausura de Depends/Imports/LinkingTo relevante, zero ausentes do lock; 12 pacotes-chave com `DESCRIPTION$Version` iguais ao lock. Isso e reconciliacao documental, nao teste de `renv::restore()` frio. JAGS/CmdStan binarios externos permanecem prerequisitos.
+- Loads executados: `readRDS()` do fit JAGS `fresh_v2` (objeto `runjags`, quatro cadeias x 5.000 draws) e `arrow::read_parquet()` de `brasil_2022_secao_clean.parquet` (6.136.318 linhas). Recalculados apenas R-hat classicos de parametros selecionados para conferir o handoff, nao diagnosticos G4. Nenhuma leitura gerou novo fit ou alterou dados.
+- Fontes e alegacoes: `sources.md` identifica versoes/URLs/SHA dos itens locais; os dois PDFs metodologicos primarios foram arquivados pelo coordenador, conferidos por titulo/data/`pdfinfo`/SHA-256 e declarados como inputs. `claims.md` confronta README/CLAUDE/handoffs com logs/cadeias. `snapshots/` preserva 14 fontes pre-edicao; `final_state/` preserva o estado reconciliado de codigo/configuracao, com mapa original→snapshot em `final_state_map.json`. Raw, PDFs metodologicos e fits historicos sao referenciados por hash diretamente.
+
+## Evidencia por todo
+
+O indice maquina-legivel e `todo_evidence.json`; os quatro todos estao marcados `done` como tarefas de baseline, nao como aprovacao do gate. `G0-T1`: `inventory.json` (executed), `sources.md` (inspected). `G0-T2`: `loads_environment.json` e `lock_reconciliation.json` (executed), `renv_before.lock` e snapshot final de `renv.lock` (inspected). `G0-T3`: `claims.md` (inspected), `loads_environment.json` (executed), logs/fits anteriores (historical). `G0-T4`: codigo `qbl`/commit e os dois PDFs primarios com hashes (executed/inspected), sem leitura matematica integral.
+
+## Limites que importam para a revisao
+
+- Nao houve restauracao fria, recompilacao Stan, nova execucao JAGS, pipeline G1 ou auditoria matematica G2. Disponibilidade local de pacotes/cache nao prova recuperacao a partir de maquina limpa. `renv.lock` nao instala JAGS/CmdStan nem autentica os CSVs como snapshot oficial TSE.
+- As tentativas iniciais no host `websites.umich.edu` receberam 403/challenge. O coordenador obteve os mesmos titulos no host primario `public.websites.umich.edu`; os dois PDFs agora tem versao e bytes fixados nesta rodada. G0 nao realizou leitura integral nem validacao matematica dos artigos, tarefa de G2.
+- O arquivo `ssrn-4073770.pdf` valido e de Kalinin, nao Mebane; `ssrn-4073770.pdf.download/ssrn-4073770.pdf` e incompleto. `PA2024.pdf` local foi identificado pela primeira pagina e `pdfinfo`.
+- `candidate_manifest.json` garante rastreabilidade dos arquivos declarados, mas nao certifica completude sem inspeção independente. O ledger e demais codigo/documentos canonicos mutaveis entram somente por snapshots de `final_state/`; `gate_contract.json` e a projecao estatica autoritativa. As fontes/outputs historicos inventariados sao evidencias de existencia, nao de validade inferencial.

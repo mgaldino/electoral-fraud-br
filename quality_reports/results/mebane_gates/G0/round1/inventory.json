@@ -1,0 +1,823 @@
+{
+  "generated_at_utc": "2026-09-29T01:29:46.661564+00:00",
+  "git": {
+    "head": "b7c3a9c11404d1db7d197cfe64c655481b320d27",
+    "branch": "main",
+    "remote_origin": "git@github.com:mgaldino/electoral-fraud-br.git",
+    "status_porcelain": "M CLAUDE.md\n M README.md\n M renv.lock\n?? quality_reports/results/mebane_gates/G0/\n?? quality_reports/results/mebane_gates/coordination/check_tse_controls.R\n?? quality_reports/results/mebane_gates/coordination/tse2022_control_arithmetic.csv\n?? quality_reports/results/mebane_gates/coordination/tse2022_control_sources.md"
+  },
+  "archive_test": {
+    "exit_code": 0,
+    "stdout": "Archive:  /Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/replication_authors/original_zip/fingerprint_brazil.zip\n    testing: fingerprint_brazil/      OK\n    testing: fingerprint_brazil/.Rproj.user/   OK\n    testing: fingerprint_brazil/.Rproj.user/3C29B61D/   OK\n    testing: fingerprint_brazil/.Rproj.user/3C29B61D/bibliography-index/   OK\n    testing: fingerprint_brazil/.Rproj.user/3C29B61D/ctx/   OK\n    testing: fingerprint_brazil/.Rproj.user/3C29B61D/explorer-cache/   OK\n    testing: fingerprint_brazil/.Rproj.user/3C29B61D/pcs/   OK\n    testing: fingerprint_brazil/.Rproj.user/3C29B61D/pcs/files-pane.pper   OK\n    testing: fingerprint_brazil/.Rproj.user/3C29B61D/pcs/source-pane.pper   OK\n    testing: fingerprint_brazil/.Rproj.user/3C29B61D/pcs/windowlayoutstate.pper   OK\n    testing: fingerprint_brazil/.Rproj.user/3C29B61D/pcs/workbench-pane.pper   OK\n    testing: fingerprint_brazil/.Rproj.user/3C29B61D/presentation/   OK\n    testing: fingerprint_brazil/.Rproj.user/3C29B61D/profiles-cache/   OK\n    testing: fingerprint_brazil/.Rproj.user/3C29B61D/sources/   OK\n    testing: fingerprint_brazil/.Rproj.user/3C29B61D/sources/prop/   OK\n    testing: fingerprint_brazil/.Rproj.user/3C29B61D/sources/prop/FDD2447F   OK\n    testing: fingerprint_brazil/.Rproj.user/3C29B61D/sources/prop/INDEX   OK\n    testing: fingerprint_brazil/.Rproj.user/3C29B61D/sources/session-b3c321dd/   OK\n    testing: fingerprint_brazil/.Rproj.user/3C29B61D/sources/session-b3c321dd/8D56A825   OK\n    testing: fingerprint_brazil/.Rproj.user/3C29B61D/sources/session-b3c321dd/8D56A825-contents   OK\n    testing: fingerprint_brazil/.Rproj.user/3C29B61D/sources/session-b3c321dd/lock_file   OK\n    testing: fingerprint_brazil/.Rproj.user/3C29B61D/tutorial/   OK\n    testing: fingerprint_brazil/.Rproj.user/3C29B61D/viewer-cache/   OK\n    testing: fingerprint_brazil/.Rproj.user/shared/   OK\n    testing: fingerprint_brazil/.Rproj.user/shared/notebooks/   OK\n    testing: fingerprint_brazil/.Rproj.user/shared/notebooks/patch-chunk-names   OK\n    testing: fingerprint_brazil/fingerprint_brazil.Rproj   OK\n    testing: fingerprint_brazil/raw-data/   OK\n    testing: fingerprint_brazil/raw-data/desktop.ini   OK\n    testing: fingerprint_brazil/raw-data/detalhe_votacao_secao_2022_BR.csv   OK\n    testing: fingerprint_brazil/raw-data/votacao_secao_2022_BR.csv   OK\n    testing: fingerprint_brazil/raw-data/votos_presidente_muni_nexojornal_2022.xlsx   OK\n    testing: fingerprint_brazil/script_paper_sig.R   OK\nNo errors detected in compressed data of /Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/replication_authors/original_zip/fingerprint_brazil.zip.",
+    "stderr": ""
+  },
+  "archive_matches": [
+    {
+      "archive_member": "fingerprint_brazil/raw-data/desktop.ini",
+      "extracted_path": "replication_authors/extracted/fingerprint_brazil/raw-data/desktop.ini",
+      "embedded_sha256": "63874d4ba4ecadc905ecddffc05d284aafca9530f2a8d719e3a45d2ca3f69f75",
+      "extracted_matches": true
+    },
+    {
+      "archive_member": "fingerprint_brazil/raw-data/detalhe_votacao_secao_2022_BR.csv",
+      "extracted_path": "replication_authors/extracted/fingerprint_brazil/raw-data/detalhe_votacao_secao_2022_BR.csv",
+      "embedded_sha256": "24a272ea64f4c90d0de229cffc050f1b69b632315025446440fa9944cd3bee9c",
+      "extracted_matches": true
+    },
+    {
+      "archive_member": "fingerprint_brazil/raw-data/votacao_secao_2022_BR.csv",
+      "extracted_path": "replication_authors/extracted/fingerprint_brazil/raw-data/votacao_secao_2022_BR.csv",
+      "embedded_sha256": "1a9e0feffe026c62b7e9559e9d3dbeb442a2df87f54cbed7a5a67c56abfc10e3",
+      "extracted_matches": true
+    },
+    {
+      "archive_member": "fingerprint_brazil/raw-data/votos_presidente_muni_nexojornal_2022.xlsx",
+      "extracted_path": "replication_authors/extracted/fingerprint_brazil/raw-data/votos_presidente_muni_nexojornal_2022.xlsx",
+      "embedded_sha256": "2073033a776e6dd68d75be3b0f585d755acd3f6008bfd4f6dfe9894fba528521",
+      "extracted_matches": true
+    }
+  ],
+  "items": [
+    {
+      "path": "replication_authors/original_zip/fingerprint_brazil.zip",
+      "category": "raw",
+      "bytes": 304919392,
+      "sha256": "88857251458aceecf6a8fdb2501a1e38d4f0f9aeda7c6693bb986464521c4422",
+      "git_tracked": false
+    },
+    {
+      "path": "replication_authors/extracted/fingerprint_brazil/raw-data/desktop.ini",
+      "category": "raw",
+      "bytes": 123,
+      "sha256": "63874d4ba4ecadc905ecddffc05d284aafca9530f2a8d719e3a45d2ca3f69f75",
+      "git_tracked": false
+    },
+    {
+      "path": "replication_authors/extracted/fingerprint_brazil/raw-data/detalhe_votacao_secao_2022_BR.csv",
+      "category": "raw",
+      "bytes": 276224141,
+      "sha256": "24a272ea64f4c90d0de229cffc050f1b69b632315025446440fa9944cd3bee9c",
+      "git_tracked": false
+    },
+    {
+      "path": "replication_authors/extracted/fingerprint_brazil/raw-data/votacao_secao_2022_BR.csv",
+      "category": "raw",
+      "bytes": 1591148802,
+      "sha256": "1a9e0feffe026c62b7e9559e9d3dbeb442a2df87f54cbed7a5a67c56abfc10e3",
+      "git_tracked": false
+    },
+    {
+      "path": "replication_authors/extracted/fingerprint_brazil/raw-data/votos_presidente_muni_nexojornal_2022.xlsx",
+      "category": "raw",
+      "bytes": 3962567,
+      "sha256": "2073033a776e6dd68d75be3b0f585d755acd3f6008bfd4f6dfe9894fba528521",
+      "git_tracked": false
+    },
+    {
+      "path": "data/processed/brasil_2022_muni_clean.parquet",
+      "category": "processed",
+      "bytes": 3133796,
+      "sha256": "8624a496d0ffb41a6a60b5febad1eca91cbebbb5fb16fc5b52e093385cff6b9d",
+      "git_tracked": false
+    },
+    {
+      "path": "data/processed/brasil_2022_secao.parquet",
+      "category": "processed",
+      "bytes": 148980254,
+      "sha256": "99b28312afae2a884555d970f4ba425e42226be4c21e5251515410ec23aee80f",
+      "git_tracked": false
+    },
+    {
+      "path": "data/processed/brasil_2022_secao_clean.parquet",
+      "category": "processed",
+      "bytes": 53678540,
+      "sha256": "af9795bb2b5065c1f2386e5c426c8fee54cd16126426e16b5da1a022944ef413",
+      "git_tracked": false
+    },
+    {
+      "path": "data/processed/nexojornal_muni_2022.parquet",
+      "category": "processed",
+      "bytes": 645577,
+      "sha256": "c1c1bd378cced5b29e6fd6c66bde16addd2d657a522f881b0df427d1932427f5",
+      "git_tracked": false
+    },
+    {
+      "path": "data/processed/cmdstanr_outputs/smoke_brasilia_20260410_194025/eforensics_bl-202604101940-1-26309a.csv",
+      "category": "stan_chains",
+      "bytes": 33007,
+      "sha256": "4748ee02903fcfd0636069ae3f3fd7419948ae663033d25ff103a82dd3965706",
+      "git_tracked": false
+    },
+    {
+      "path": "data/processed/cmdstanr_outputs/smoke_brasilia_20260410_194025/eforensics_bl-202604101940-2-26309a.csv",
+      "category": "stan_chains",
+      "bytes": 32895,
+      "sha256": "cc9759fc7254628f1553b2fcdff36ed66c8cf80003af960ba9f77dff930d0a03",
+      "git_tracked": false
+    },
+    {
+      "path": "data/processed/cmdstanr_outputs/smoke_brasilia_20260410_194025/eforensics_bl-202604101940-3-26309a.csv",
+      "category": "stan_chains",
+      "bytes": 32818,
+      "sha256": "fd5e5a63e8b056c286f158f183e3248195ba1d9d35f84f2c924e66a1ce7eaa8e",
+      "git_tracked": false
+    },
+    {
+      "path": "data/processed/cmdstanr_outputs/smoke_brasilia_20260410_194025/eforensics_bl-202604101940-4-26309a.csv",
+      "category": "stan_chains",
+      "bytes": 32664,
+      "sha256": "6c2caaa61258be1fbe9325d61c04b2e7c9df5009ce0c68726ce665adc4215abd",
+      "git_tracked": false
+    },
+    {
+      "path": "data/processed/cmdstanr_outputs/smoke_brasilia_20260410_194717/eforensics_bl-202604101947-1-2633bc.csv",
+      "category": "stan_chains",
+      "bytes": 32656,
+      "sha256": "95e6dc6082eb7c1873b04468ae3f2c98910562607154739e1ae098cac52b74e2",
+      "git_tracked": false
+    },
+    {
+      "path": "data/processed/cmdstanr_outputs/smoke_brasilia_20260410_194717/eforensics_bl-202604101947-2-2633bc.csv",
+      "category": "stan_chains",
+      "bytes": 32921,
+      "sha256": "b8392f97c15cf5727022404500fb234c25c666ab49a61d57ed1f7c6d76e37d6a",
+      "git_tracked": false
+    },
+    {
+      "path": "data/processed/cmdstanr_outputs/smoke_brasilia_20260410_194717/eforensics_bl-202604101947-3-2633bc.csv",
+      "category": "stan_chains",
+      "bytes": 32716,
+      "sha256": "ca4d86f2f3c4ece5812b9626c8b89a3e3a870b0416052fa9e2569d92f8d9299b",
+      "git_tracked": false
+    },
+    {
+      "path": "data/processed/cmdstanr_outputs/smoke_brasilia_20260410_194717/eforensics_bl-202604101947-4-2633bc.csv",
+      "category": "stan_chains",
+      "bytes": 32963,
+      "sha256": "500befd21012aea1c1bf004447a9b9538751e39293ccd7887ad073e3300755c1",
+      "git_tracked": false
+    },
+    {
+      "path": "data/processed/cmdstanr_outputs/smoke_brasilia_20260411_095157/eforensics_bl-202604110951-1-265882.csv",
+      "category": "stan_chains",
+      "bytes": 30714,
+      "sha256": "554fb907657cb458e4110b50f61770971067c557ed8b86db41a5467a4388e9ec",
+      "git_tracked": false
+    },
+    {
+      "path": "data/processed/cmdstanr_outputs/smoke_brasilia_20260411_095157/eforensics_bl-202604110951-2-265882.csv",
+      "category": "stan_chains",
+      "bytes": 30705,
+      "sha256": "bc7b8416fd08b56e280ceec9e71070e2aa74f618ca905426573eb1be9edbd88b",
+      "git_tracked": false
+    },
+    {
+      "path": "data/processed/cmdstanr_outputs/smoke_brasilia_20260411_095157/eforensics_bl-202604110951-3-265882.csv",
+      "category": "stan_chains",
+      "bytes": 30705,
+      "sha256": "b2742c92dfed5a0105496fad914bbb5344785ac287fe5c3926cd11433a252632",
+      "git_tracked": false
+    },
+    {
+      "path": "data/processed/cmdstanr_outputs/smoke_brasilia_20260411_095157/eforensics_bl-202604110951-4-265882.csv",
+      "category": "stan_chains",
+      "bytes": 30705,
+      "sha256": "c8c919eaf1caaee2c08b4d19c5d0e3cc3ca2bb9f6da10a23e2ca748fa8867c1e",
+      "git_tracked": false
+    },
+    {
+      "path": "data/processed/cmdstanr_outputs/smoke_brasilia_qbl_20260411_101600/eforensics_qbl-202604111016-1-2666c0.csv",
+      "category": "stan_chains",
+      "bytes": 66084,
+      "sha256": "bb7efa8e768cf13426924d0a860d3e86dbb9e716df9e3cbb288d46f3092756e0",
+      "git_tracked": false
+    },
+    {
+      "path": "data/processed/cmdstanr_outputs/smoke_brasilia_qbl_20260411_101655/eforensics_qbl-202604111016-1-26680f.csv",
+      "category": "stan_chains",
+      "bytes": 66083,
+      "sha256": "49043e4c03b08fb30f104122edec33f013e59ef254a2c7fbd58c16f0ab6e8a54",
+      "git_tracked": false
+    },
+    {
+      "path": "data/processed/cmdstanr_outputs/smoke_brasilia_qbl_20260411_101952/eforensics_qbl-202604111019-1-2669d8.csv",
+      "category": "stan_chains",
+      "bytes": 1042111,
+      "sha256": "4db19a9e61d35dd35e1b72a24744bee64da68bab15f24e899a5a9adc7ecca544",
+      "git_tracked": false
+    },
+    {
+      "path": "data/processed/cmdstanr_outputs/smoke_brasilia_qbl_20260411_101952/eforensics_qbl-202604111019-2-2669d8.csv",
+      "category": "stan_chains",
+      "bytes": 1043752,
+      "sha256": "a47365ca04164219805df197617b5683534189f26d90f0ffcae78fccca3eb2f8",
+      "git_tracked": false
+    },
+    {
+      "path": "data/processed/cmdstanr_outputs/smoke_brasilia_qbl_20260411_102043/eforensics_qbl-202604111020-1-266a6f.csv",
+      "category": "stan_chains",
+      "bytes": 3094488,
+      "sha256": "687fa01de952d06bb0975a181f036c4e2958c5c5ac75463ba08f25bdee98ba3d",
+      "git_tracked": false
+    },
+    {
+      "path": "data/processed/cmdstanr_outputs/smoke_brasilia_qbl_20260411_102043/eforensics_qbl-202604111020-2-266a6f.csv",
+      "category": "stan_chains",
+      "bytes": 3092814,
+      "sha256": "832d644be8608281ed7e31995bb3b3ba68d096cef95797af14a77d3ca2cd6f02",
+      "git_tracked": false
+    },
+    {
+      "path": "data/processed/cmdstanr_outputs/smoke_brasilia_qbl_20260411_102308/eforensics_qbl-202604111023-1-266c09.csv",
+      "category": "stan_chains",
+      "bytes": 25113279,
+      "sha256": "81f9287791587dc591887c252a70ed8e66ff3357d7ddc2acc9f1faeed0e5a754",
+      "git_tracked": false
+    },
+    {
+      "path": "data/processed/cmdstanr_outputs/smoke_brasilia_qbl_20260411_102308/eforensics_qbl-202604111023-2-266c09.csv",
+      "category": "stan_chains",
+      "bytes": 25134393,
+      "sha256": "5ce6d64c50d7c1b90a80636ad21d1328cb2027626495cd0ae07786d19574ee25",
+      "git_tracked": false
+    },
+    {
+      "path": "data/processed/cmdstanr_outputs/smoke_brasilia_qbl_20260411_102824/eforensics_qbl-202604111028-1-267181.csv",
+      "category": "stan_chains",
+      "bytes": 50136719,
+      "sha256": "18b25319e6e99fbc3176a74576c9d1c162bfa79b2e4e3ecfdd69fa3b9e61bebb",
+      "git_tracked": false
+    },
+    {
+      "path": "data/processed/cmdstanr_outputs/smoke_brasilia_qbl_20260411_102824/eforensics_qbl-202604111028-2-267181.csv",
+      "category": "stan_chains",
+      "bytes": 50116237,
+      "sha256": "62d90eebe6ed1a6dbeb4edd4ad48f13e7fc5f9e7ad0bf4145bf77058512d4f2f",
+      "git_tracked": false
+    },
+    {
+      "path": "data/processed/cmdstanr_outputs/smoke_brasilia_qbl_20260411_105543/eforensics_qbl-202604111055-1-2679f1.csv",
+      "category": "stan_chains",
+      "bytes": 99992105,
+      "sha256": "1af518d97bca52c03abe2eb1d911b10db2ea59432f8ec804b980455d706d3453",
+      "git_tracked": false
+    },
+    {
+      "path": "data/processed/cmdstanr_outputs/smoke_brasilia_qbl_20260411_105543/eforensics_qbl-202604111055-2-2679f1.csv",
+      "category": "stan_chains",
+      "bytes": 100279530,
+      "sha256": "99c1b412e045429542b3212c90229bc13bf377949a1c451222d50c448fce00b4",
+      "git_tracked": false
+    },
+    {
+      "path": "data/processed/cmdstanr_outputs/smoke_brasilia_qbl_20260412_122027/eforensics_qbl-202604121220-1-26d5b8.csv",
+      "category": "stan_chains",
+      "bytes": 10434238,
+      "sha256": "5efb3a0070355ac319ddcf64f513f6bf61273bb980a6fd892dc2764cb8ad015a",
+      "git_tracked": false
+    },
+    {
+      "path": "data/processed/cmdstanr_outputs/smoke_brasilia_qbl_20260412_122027/eforensics_qbl-202604121220-2-26d5b8.csv",
+      "category": "stan_chains",
+      "bytes": 10440310,
+      "sha256": "24b22691ba4fd7e54d1946a3a4d1ee703296e55b1f13f5ad6eb069041d7428f8",
+      "git_tracked": false
+    },
+    {
+      "path": "data/processed/cmdstanr_outputs/smoke_brasilia_qbl_20260412_124336/eforensics_qbl-202604121243-1-26dc95.csv",
+      "category": "stan_chains",
+      "bytes": 40615443,
+      "sha256": "4e72b6efd99924ea91ac406bc2566bea541acd69991b6b0e1e5339bcc184be5a",
+      "git_tracked": false
+    },
+    {
+      "path": "data/processed/cmdstanr_outputs/smoke_brasilia_qbl_20260412_124336/eforensics_qbl-202604121243-2-26dc95.csv",
+      "category": "stan_chains",
+      "bytes": 40563391,
+      "sha256": "e9d431d8693350c4145978b037b53872e30aff6da6465cba4f959c2ad2c241f6",
+      "git_tracked": false
+    },
+    {
+      "path": "quality_reports/results/04_eforensics_brasilia_fit.rds",
+      "category": "fits",
+      "bytes": 1394712,
+      "sha256": "dd570660f833822ac94f460e009693726b424f6d4c21f6518f7112e024f1844a",
+      "git_tracked": false
+    },
+    {
+      "path": "quality_reports/results/05_eforensics_qbl_brasilia_fit.rds",
+      "category": "fits",
+      "bytes": 739582076,
+      "sha256": "5b2c6336c6ff59d3bb8f1173556eaf4bfd2b2717396e0b2b9c461a770bcbac51",
+      "git_tracked": false
+    },
+    {
+      "path": "quality_reports/results/05_eforensics_qbl_brasilia_fresh_v2_fit.rds",
+      "category": "fits",
+      "bytes": 3866296,
+      "sha256": "47c0d222e7b7fe4f0e91d4b0f6c24bc4438943279db064b78816ad53af1c7af6",
+      "git_tracked": false
+    },
+    {
+      "path": "quality_reports/results/05_jags_qbl_zone_fe_fit.rds",
+      "category": "fits",
+      "bytes": 633467369,
+      "sha256": "5e1f9e54efab710b6ee4fd1444edcf84f5e8da73ee83303fd3e1cd21820f7c95",
+      "git_tracked": false
+    },
+    {
+      "path": "quality_reports/results/01_data_build_log.md",
+      "category": "logs",
+      "bytes": 5151,
+      "sha256": "6b0e3677cd9d345366f6aa8cdaf09582efc6abc8a402c84424add45b7342aa87",
+      "git_tracked": true
+    },
+    {
+      "path": "quality_reports/results/01_denominator_check.md",
+      "category": "logs",
+      "bytes": 3800,
+      "sha256": "48781bb3d1da85c1d262d2f7a3b109b0cdb14786e20c448b1f262eb7b78ee0a7",
+      "git_tracked": true
+    },
+    {
+      "path": "quality_reports/results/02_build_vars_log.md",
+      "category": "logs",
+      "bytes": 4739,
+      "sha256": "d7de58ca271618887e243ff144de5b2ad0b720f6b66f2d51c4d62a31fa62a640",
+      "git_tracked": true
+    },
+    {
+      "path": "quality_reports/results/03_fingerprint_base_log.md",
+      "category": "logs",
+      "bytes": 2896,
+      "sha256": "077b42e909809fa6b1e67e200586dbfbe1d8daa6139a72cdf5567216acad3b54",
+      "git_tracked": true
+    },
+    {
+      "path": "quality_reports/results/05_compare_fits.md",
+      "category": "logs",
+      "bytes": 1991,
+      "sha256": "39e0114b1e3554e215b11e30cc05bfc0f0228ab0dd462676fe2680f4073eeb47",
+      "git_tracked": true
+    },
+    {
+      "path": "quality_reports/results/05_stan_brasilia_log.md",
+      "category": "logs",
+      "bytes": 2891,
+      "sha256": "efde420c0d125abe2ba4dbf4ba1e68c727dcff0a5caf66ba90ca4596cfe49529",
+      "git_tracked": true
+    },
+    {
+      "path": "quality_reports/results/05_stan_qbl_brasilia_log.md",
+      "category": "logs",
+      "bytes": 3070,
+      "sha256": "d3d9f49e1cdf841c771859ffc00d3c1f44d031543f9d5192a9988d3a90a313e7",
+      "git_tracked": true
+    },
+    {
+      "path": "quality_reports/results/05_stan_qbl_brasilia_log_n1000.md",
+      "category": "logs",
+      "bytes": 3343,
+      "sha256": "f22dfb82d332fc1e48c09f75dec7ad33aeb355e62f48ee9b0c540e5a1385a5e7",
+      "git_tracked": true
+    },
+    {
+      "path": "quality_reports/results/05_stan_qbl_brasilia_log_n2000.md",
+      "category": "logs",
+      "bytes": 3659,
+      "sha256": "0ea876b005c3b9e8a9522ef8d3fe8edfb091aec444767bbfcd7ca20bfc273dd0",
+      "git_tracked": true
+    },
+    {
+      "path": "quality_reports/results/05_stan_qbl_brasilia_log_n500.md",
+      "category": "logs",
+      "bytes": 3341,
+      "sha256": "ae4e2eae632fb3aa186a61ade2796bd49cf0db3d9d953b60599a9c316ed15ccb",
+      "git_tracked": true
+    },
+    {
+      "path": "quality_reports/results/05_stan_qbl_session_handoff.md",
+      "category": "logs",
+      "bytes": 10710,
+      "sha256": "ac2cea79609707113b1bbac89f09c2c3cf3f5cea3ec42d31b98a3f72e9ba2f73",
+      "git_tracked": true
+    },
+    {
+      "path": "quality_reports/results/05_stan_validation_note.md",
+      "category": "logs",
+      "bytes": 11044,
+      "sha256": "a3fc0f65464b478a589c02d85bfe65897872029633a139eadfa7c69a59b670fa",
+      "git_tracked": true
+    },
+    {
+      "path": "quality_reports/results/bloco3_session_handoff.md",
+      "category": "logs",
+      "bytes": 4769,
+      "sha256": "6929e44daba8a386974880be879f61d6bc6c9732e3d03a9de5b2ac299b56bd47",
+      "git_tracked": true
+    },
+    {
+      "path": "quality_reports/results/bug_zero_vote_rows.md",
+      "category": "logs",
+      "bytes": 10016,
+      "sha256": "ebba3115d5be726d0ce189ec1d769ad0c54b87bba3a77adc921f6a19d9a7e9c8",
+      "git_tracked": true
+    },
+    {
+      "path": "quality_reports/results/00_setup_session.txt",
+      "category": "logs",
+      "bytes": 3414,
+      "sha256": "7ae233d17621d9c457efa1cfa7a98a6627565d9f009725b14fe714260da24de2",
+      "git_tracked": true
+    },
+    {
+      "path": "quality_reports/results/05_dip_test_diagnostics.txt",
+      "category": "logs",
+      "bytes": 1260,
+      "sha256": "780ce48885010379ef6b582d2e56f7d201cdcda1ab73ac3b7603d56d9b44dab4",
+      "git_tracked": true
+    },
+    {
+      "path": "quality_reports/results/05_eforensics_qbl_brasilia_fresh_v2_summary.txt",
+      "category": "logs",
+      "bytes": 6195,
+      "sha256": "3a2f7c427341c38ced861f2ff64a2d540d466374ec1835e991cc06ef32fabe6b",
+      "git_tracked": true
+    },
+    {
+      "path": "quality_reports/results/05_jags_qbl_zone_fe_summary.txt",
+      "category": "logs",
+      "bytes": 7616,
+      "sha256": "64d916baaef4dacc7fea45dd59a20692024b498079389e087b4b4ebc41b6236d",
+      "git_tracked": true
+    },
+    {
+      "path": "quality_reports/results/04_eforensics_timings.csv",
+      "category": "logs",
+      "bytes": 296,
+      "sha256": "da356ac45b61143794ecefd590c9523fab3f61dcd202660d7281b6c6134f5aaa",
+      "git_tracked": true
+    },
+    {
+      "path": "quality_reports/results/05_eforensics_qbl_timings.csv",
+      "category": "logs",
+      "bytes": 325,
+      "sha256": "60bdda7b17a1d867d99e4704d825209b95082cd837f550e405b7f91d29d21b1c",
+      "git_tracked": true
+    },
+    {
+      "path": "quality_reports/results/05_stan_brasilia_timings.csv",
+      "category": "logs",
+      "bytes": 255,
+      "sha256": "06d264072f0082c6210f5cbf6019838cb216bde733a4417a298e4f0f63f8cfc3",
+      "git_tracked": true
+    },
+    {
+      "path": "quality_reports/results/05_stan_qbl_brasilia_timings.csv",
+      "category": "logs",
+      "bytes": 346,
+      "sha256": "3b1e96a0b00501f3ee88051b5a4770a33ca4578ec340be2919d753cb849192b9",
+      "git_tracked": true
+    },
+    {
+      "path": "quality_reports/results/05_stan_qbl_brasilia_timings_n1000.csv",
+      "category": "logs",
+      "bytes": 340,
+      "sha256": "7fb5ac27b34f584a7f0ab35b9bbd70a7b33e5d5450b0908bda1c7cb43fe4e6ac",
+      "git_tracked": true
+    },
+    {
+      "path": "quality_reports/results/05_stan_qbl_brasilia_timings_n2000.csv",
+      "category": "logs",
+      "bytes": 349,
+      "sha256": "d46549108f895755b95510a7f9e15ce67d162dbfe03048a6af3092152297aab9",
+      "git_tracked": true
+    },
+    {
+      "path": "quality_reports/results/05_stan_qbl_brasilia_timings_n500.csv",
+      "category": "logs",
+      "bytes": 339,
+      "sha256": "0352fbe1c5daff4a703b7b779644fb3f5f725e1fed44b8ef5f17cb49393155c6",
+      "git_tracked": true
+    },
+    {
+      "path": "quality_reports/results/06_sp_linearity_comparison.csv",
+      "category": "logs",
+      "bytes": 189,
+      "sha256": "3fc5daf793e65d372f77fb81d260a28a9d7921e883c922862ebdd42cd4b55fc1",
+      "git_tracked": true
+    },
+    {
+      "path": "PA2024.pdf",
+      "category": "pdf",
+      "bytes": 2153684,
+      "sha256": "9de271cf21f13001c0ce6af5cdffc80594fe7365085aedf3e1f9fd02fef2b4c1",
+      "git_tracked": false,
+      "pdf_integrity": "pdfinfo_ok",
+      "pdf_pages": "13"
+    },
+    {
+      "path": "Rplots.pdf",
+      "category": "pdf",
+      "bytes": 55210,
+      "sha256": "33ae6654e433a33907e31131a903256eff983e11673b9172cafbd3f45c6cc5b7",
+      "git_tracked": false,
+      "pdf_integrity": "pdfinfo_ok",
+      "pdf_pages": "3"
+    },
+    {
+      "path": "ssrn-4073770.pdf",
+      "category": "pdf",
+      "bytes": 14699616,
+      "sha256": "5a1e9cc20575ed39c9ac9bebc1d88c17647ba79f1bc80093da03940976674906",
+      "git_tracked": true,
+      "pdf_integrity": "pdfinfo_ok",
+      "pdf_pages": "50"
+    },
+    {
+      "path": "output/figures/fig1_fingerprint_T1_muni_comparecimento.pdf",
+      "category": "pdf",
+      "bytes": 28090,
+      "sha256": "b99a879221175ef5a6da99b82db6629393aa566af0a892f593feb789b4197dd9",
+      "git_tracked": false,
+      "pdf_integrity": "pdfinfo_ok",
+      "pdf_pages": "1"
+    },
+    {
+      "path": "output/figures/fig1_fingerprint_T1_muni_nominais.pdf",
+      "category": "pdf",
+      "bytes": 28482,
+      "sha256": "772e899b744d80ff990697d053e36099df834629e84db99895ac9ed7e40639f1",
+      "git_tracked": false,
+      "pdf_integrity": "pdfinfo_ok",
+      "pdf_pages": "1"
+    },
+    {
+      "path": "output/figures/fig1_fingerprint_T1_secao_comparecimento.pdf",
+      "category": "pdf",
+      "bytes": 75537,
+      "sha256": "7f19fc82c002ed16f4088d42a2a68fa1fcb5221a78731032e1802037eac2ff97",
+      "git_tracked": false,
+      "pdf_integrity": "pdfinfo_ok",
+      "pdf_pages": "1"
+    },
+    {
+      "path": "output/figures/fig1_fingerprint_T1_secao_nominais.pdf",
+      "category": "pdf",
+      "bytes": 76708,
+      "sha256": "2ef622210c68375a5f980bc01d1f2fdd4dd150d0e26bd7ef00e7159bbad0278d",
+      "git_tracked": false,
+      "pdf_integrity": "pdfinfo_ok",
+      "pdf_pages": "1"
+    },
+    {
+      "path": "output/figures/fig1_fingerprint_T2_muni_comparecimento.pdf",
+      "category": "pdf",
+      "bytes": 21518,
+      "sha256": "9cbe85c67d0f1583bc0a371e7984242c4988dc54a33fa91c4dcf81ec9aed7f91",
+      "git_tracked": false,
+      "pdf_integrity": "pdfinfo_ok",
+      "pdf_pages": "1"
+    },
+    {
+      "path": "output/figures/fig1_fingerprint_T2_muni_nominais.pdf",
+      "category": "pdf",
+      "bytes": 21650,
+      "sha256": "f9c6a981d344d9aa379798ef94e6a3a318786fc52e70fc49218879204ec21f77",
+      "git_tracked": false,
+      "pdf_integrity": "pdfinfo_ok",
+      "pdf_pages": "1"
+    },
+    {
+      "path": "output/figures/fig1_fingerprint_T2_secao_comparecimento.pdf",
+      "category": "pdf",
+      "bytes": 57314,
+      "sha256": "fc9d6f76ab371987579faf0ef85badb21ac248c0ff01f8d48f41c099dc2ddae8",
+      "git_tracked": false,
+      "pdf_integrity": "pdfinfo_ok",
+      "pdf_pages": "1"
+    },
+    {
+      "path": "output/figures/fig1_fingerprint_T2_secao_nominais.pdf",
+      "category": "pdf",
+      "bytes": 57908,
+      "sha256": "4cc528545195f84681e95eafc9c6af0d275b35a10555614f3f36c991c7cd55b7",
+      "git_tracked": false,
+      "pdf_integrity": "pdfinfo_ok",
+      "pdf_pages": "1"
+    },
+    {
+      "path": "ssrn-4073770.pdf.download/ssrn-4073770.pdf",
+      "category": "pdf",
+      "bytes": 1360,
+      "sha256": "524dc82c59612ec91b3a6ab475dd34f0607546a37823c9a9b1fd652677a8acdf",
+      "git_tracked": true,
+      "pdf_integrity": "invalid_or_incomplete",
+      "pdf_pages": null,
+      "pdf_error": "Syntax Error: Couldn't find trailer dictionary\nSyntax Error: Couldn't find trailer dictionary\nSyntax Error: Couldn't read xref table"
+    },
+    {
+      "path": "R/00_setup.R",
+      "category": "code",
+      "bytes": 2429,
+      "sha256": "0d06aa4471d90cbf9f41fca859e23b366d08ccb8bb3562fbf23ea835753b87dd",
+      "git_tracked": true
+    },
+    {
+      "path": "R/01_load_tse.R",
+      "category": "code",
+      "bytes": 38631,
+      "sha256": "fdd8c9278d73b85a7782c300f15e1931fb0f28e667feccb138a36e593d6fbce8",
+      "git_tracked": true
+    },
+    {
+      "path": "R/02_build_vars.R",
+      "category": "code",
+      "bytes": 25775,
+      "sha256": "a18c49dc037de4ddf4a0d0e4ef7423a04522a963900d886bc86eca875c41dde5",
+      "git_tracked": true
+    },
+    {
+      "path": "R/03_fingerprint_base.R",
+      "category": "code",
+      "bytes": 13711,
+      "sha256": "b6388a8aa360bd660108e386181cf0b86eacd0e677834cd12dac3e239a7bee52",
+      "git_tracked": true
+    },
+    {
+      "path": "R/04_eforensics_calibrate.R",
+      "category": "code",
+      "bytes": 9589,
+      "sha256": "b694423c895e626f62f5a78ae0d42defa17d78f0a8fe90eea67cef0d552d21bb",
+      "git_tracked": true
+    },
+    {
+      "path": "R/05_compare_fits.R",
+      "category": "code",
+      "bytes": 7323,
+      "sha256": "3f5e11c975f74b3fb5d3dfe70894c861c9cbc5e4f79cc37b94f72f50afc2f8d5",
+      "git_tracked": true
+    },
+    {
+      "path": "R/05_dip_test_diagnostics.R",
+      "category": "code",
+      "bytes": 7150,
+      "sha256": "1b6f2fedaabdd0b8448a48147068c4ca2fdf50d12a40742f67a1964e35e032b1",
+      "git_tracked": true
+    },
+    {
+      "path": "R/05_eforensics_qbl_fresh_diagnostic.R",
+      "category": "code",
+      "bytes": 6930,
+      "sha256": "9faf09a91562adef904d94192c734de76e8741a172f68b73e7f1c095c0823a87",
+      "git_tracked": true
+    },
+    {
+      "path": "R/05_eforensics_umeforensics_qbl.R",
+      "category": "code",
+      "bytes": 8833,
+      "sha256": "659c12cdf1881b7a5b9dcdf9d463799f93362c0ae1744302128c4b6577b7b5c5",
+      "git_tracked": true
+    },
+    {
+      "path": "R/05_jags_qbl_zone_fe.R",
+      "category": "code",
+      "bytes": 7950,
+      "sha256": "a72118c328d1cce96ba2226b33da5d13d6608a42e34259b25208b14f823ed983",
+      "git_tracked": true
+    },
+    {
+      "path": "R/05_kobak_integer.R",
+      "category": "code",
+      "bytes": 5705,
+      "sha256": "68fd3a035463be6c79f2b67992fe4282e5a86ef75e35c3d83d32fe1de58845ee",
+      "git_tracked": true
+    },
+    {
+      "path": "R/05_stan_eforensics_calibrate.R",
+      "category": "code",
+      "bytes": 12790,
+      "sha256": "a9a6b483c5e1b7b96b8ca624026f1afeccc466829185bd6f3d830f321993153f",
+      "git_tracked": true
+    },
+    {
+      "path": "R/05_stan_eforensics_qbl_calibrate.R",
+      "category": "code",
+      "bytes": 17371,
+      "sha256": "1892b565f942e247fb5a6a2d5f2cfa4e53bc99f064d9a6216df202c8e611ebf9",
+      "git_tracked": true
+    },
+    {
+      "path": "R/06_beber_scacco.R",
+      "category": "code",
+      "bytes": 3620,
+      "sha256": "a8c3b2d5e2a91727886e22d62a3157bf52eb740aeac930b000a813b01d44cfaa",
+      "git_tracked": true
+    },
+    {
+      "path": "R/06_sp_linearity_check.R",
+      "category": "code",
+      "bytes": 5366,
+      "sha256": "743eedb8570c7d5e74e991e16cbce3f447497b0e24a85c848f487f76ef298628",
+      "git_tracked": true
+    },
+    {
+      "path": "R/07_benford_2bl.R",
+      "category": "code",
+      "bytes": 4486,
+      "sha256": "9b2b1141ce6ef9f3e846cd6f2f7eb3068301819017733bd3fb29cc126124e460",
+      "git_tracked": true
+    },
+    {
+      "path": "R/07_brasil_full_qbl.R",
+      "category": "code",
+      "bytes": 10090,
+      "sha256": "1244e5f6e49c5842ef109f8ded2a1caa3ba7ddd0a83eeeaa4694f7d08775d862",
+      "git_tracked": true
+    },
+    {
+      "path": "R/08_spikes_rozenas.R",
+      "category": "code",
+      "bytes": 3160,
+      "sha256": "1f1ce504f75dd03d2f98ef7b15a2ae89da42e759b5447f653aeef002a93b6e6d",
+      "git_tracked": true
+    },
+    {
+      "path": "stan/eforensics_bl.stan",
+      "category": "code",
+      "bytes": 4790,
+      "sha256": "27e488e9615ecdc05dfcf65a905deda376ca48e62ff80ef22cc10ed78e02bede",
+      "git_tracked": true
+    },
+    {
+      "path": "stan/eforensics_qbl.stan",
+      "category": "code",
+      "bytes": 8874,
+      "sha256": "7c2d23fcebcc020c16d4779f8fffe26f6c588461c9655fe34187690581764541",
+      "git_tracked": true
+    },
+    {
+      "path": "replication_authors/extracted/fingerprint_brazil/script_paper_sig.R",
+      "category": "code",
+      "bytes": 12242,
+      "sha256": "baa22aa3c51f2d37224f7ceb2b04a8ab841909f85cec43d441ef7bb1a263fefa",
+      "git_tracked": true
+    },
+    {
+      "path": "renv.lock",
+      "category": "configuration",
+      "bytes": 390534,
+      "sha256": "05a09347440eaa6d1a66218cd94605df1a047f6a4381d53a06f8547a529f153c",
+      "git_tracked": true
+    },
+    {
+      "path": "renv/settings.json",
+      "category": "configuration",
+      "bytes": 412,
+      "sha256": "965ebd30972d4dee75c91a2ba32242c64d5d0a4c6f1d386f6c73b3979ee4dc19",
+      "git_tracked": true
+    },
+    {
+      "path": ".Rprofile",
+      "category": "configuration",
+      "bytes": 362,
+      "sha256": "e07e6cd5ce1ee6ccacb81faef1af2a46daf1afb3673bd81f1a029a56136a0f2e",
+      "git_tracked": true
+    },
+    {
+      "path": "README.md",
+      "category": "configuration",
+      "bytes": 4903,
+      "sha256": "6ba4a41969b6bd016e82b34297cc724c9976e75f8bc5b79f16411dfc76350c9f",
+      "git_tracked": true
+    },
+    {
+      "path": "CLAUDE.md",
+      "category": "configuration",
+      "bytes": 4457,
+      "sha256": "fb64b3b61033e33f3fc65c51bdacab2c257c9f30948b5203dac41156107e4828",
+      "git_tracked": true
+    },
+    {
+      "path": "quality_reports/plans/mebane_2022_2026_gates.json",
+      "category": "configuration",
+      "bytes": 37709,
+      "sha256": "288ba910a67dd3a8bfaa3c046bd1b1e0374d5b995eac88ea1ba976eb7f068013",
+      "git_tracked": true
+    },
+    {
+      "path": "quality_reports/plans/mebane_gate_agent_prompts.md",
+      "category": "configuration",
+      "bytes": 13376,
+      "sha256": "793063d3e74be4d8b49535f3ade07da4a440f3ccc22a306fb846bf84f505bc2c",
+      "git_tracked": true
+    },
+    {
+      "path": "scripts/mebane_gates.py",
+      "category": "configuration",
+      "bytes": 28810,
+      "sha256": "15601b30477b940bda011a7370d3a2edc269c7ffd89fe92e09d8dd9d34a93480",
+      "git_tracked": true
+    }
+  ]
+}

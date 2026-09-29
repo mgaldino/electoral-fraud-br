@@ -1,0 +1,9 @@
+{
+  "roots": ["eforensics", "rjags", "coda", "runjags", "cmdstanr", "posterior"],
+  "needed_count": 110,
+  "missing_count": 49,
+  "missing": ["LCA", "LaplacesDemon", "MASS", "Matrix", "RcppArmadillo", "abind", "brio", "checkmate", "cmdstanr", "coda", "colourpicker", "commonmark", "desc", "diffobj", "distributional", "doParallel", "eforensics", "ellipse", "evd", "expm", "fftwtools", "foreach", "ggExtra", "htmlwidgets", "httpuv", "iterators", "later", "matrixStats", "mcmcse", "miniUI", "msm", "mvtnorm", "otel", "pkgbuild", "pkgload", "posterior", "praise", "promises", "rjags", "runjags", "shiny", "shinyjs", "sourcetools", "survival", "tensorA", "testthat", "truncdist", "waldo", "xtable"],
+  "proposal_entries_available": ["LCA", "LaplacesDemon", "MASS", "Matrix", "RcppArmadillo", "abind", "brio", "checkmate", "cmdstanr", "coda", "colourpicker", "commonmark", "desc", "diffobj", "distributional", "doParallel", "eforensics", "ellipse", "evd", "expm", "fftwtools", "foreach", "ggExtra", "htmlwidgets", "httpuv", "iterators", "later", "matrixStats", "mcmcse", "miniUI", "msm", "mvtnorm", "otel", "pkgbuild", "pkgload", "posterior", "praise", "promises", "rjags", "runjags", "shiny", "shinyjs", "sourcetools", "survival", "tensorA", "testthat", "truncdist", "waldo", "xtable"],
+  "proposal_entries_unavailable": [],
+  "preserved_original_entries": 125
+}
