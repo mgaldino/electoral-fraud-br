@@ -1,0 +1,632 @@
+{
+  "schema_version": "1.0",
+  "review_id": "QA-PLANO-science-round2",
+  "review_kind": "independent_bounded_scientific_protocol_recheck",
+  "date_local": "2026-09-28",
+  "timezone": "America/Sao_Paulo",
+  "status": "pass",
+  "reviewer_role": "QA-PLANO",
+  "reviewer_id": "01a0ea8e-ac85-76d1-8470-271c7dc6e6bd",
+  "executor_id": "019d795a-acfa-72c2-a210-d55a46c606c2",
+  "candidate_id": "mebane-gates-science-round2",
+  "candidate_manifest": "quality_reports/results/2026-09-28_gate_design/candidate_science_round2.json",
+  "candidate_manifest_sha256": "65acd106397a115c73b0ae50ee256091d9c892c9238f3cac25f05fba2f50a6c1",
+  "scope": {
+    "authority": "quality_reports/plans/mebane_2022_2026_gates.json",
+    "binding_files": [
+      {
+        "path": "quality_reports/plans/mebane_2022_2026_gates.json",
+        "sha256": "fc44b2c192b432f0b8754adf974ffc582f7f942fa091df0edef14b081b6a0e39"
+      },
+      {
+        "path": "quality_reports/plans/mebane_gate_agent_prompts.md",
+        "sha256": "793063d3e74be4d8b49535f3ade07da4a440f3ccc22a306fb846bf84f505bc2c"
+      },
+      {
+        "path": "quality_reports/plans/2026-09-28_mebane_2022_2026_gates.md",
+        "sha256": "6e883902133b12c16fdbb997283e5474dd9b04e91bd7219df1c509cf68588db7"
+      }
+    ],
+    "included": [
+      "Reparos S-F001 a S-F003",
+      "Coerência JSON/prompts/MD",
+      "Regressões materiais em DAG, goals, independência, alocação de modelos, aceitação, parada e governança"
+    ],
+    "excluded": [
+      "Código e testes do checker em reparo",
+      "Nova auditoria integral do qbl",
+      "MCMC ou simulação inferencial",
+      "Execução de gates",
+      "Instalações",
+      "Resultados oficiais futuros de 2026"
+    ],
+    "pass_means": "O desenho científico-documental resolve os achados revistos; não constitui pass de um gate operacional nem aprovação do checker ou do modelo empírico.",
+    "authorizes_additional_operational_execution": false
+  },
+  "goal": {
+    "native_goal_created": true,
+    "context_thread_id": "01a0ea8e-ac85-76d1-8470-271c7dc6e6bd",
+    "get_goal_before_creation": "null",
+    "token_budget_specified": false,
+    "other_context_goals_modified": false,
+    "completion_condition": "Entrega e verificação dos dois pareceres round2; o goal será concluído após conferir os arquivos finais."
+  },
+  "independence": {
+    "authored_repairs": false,
+    "modified_candidate": false,
+    "read_self_approval_notes": false,
+    "read_checker_code_or_tests": false,
+    "independent_verifications_performed": true,
+    "separate_executor_reviewer_ids": true
+  },
+  "integrity": {
+    "algorithm": "SHA-256",
+    "initial_check_at_utc": "2026-09-29T00:47:16.275906+00:00",
+    "delivery_check_at_utc": "2026-09-29T00:50:51.544874+00:00",
+    "manifest_match": true,
+    "hash_mismatch": false,
+    "candidate_change_detected": false,
+    "files": [
+      {
+        "path": "quality_reports/plans/mebane_2022_2026_gates.json",
+        "expected_sha256": "fc44b2c192b432f0b8754adf974ffc582f7f942fa091df0edef14b081b6a0e39",
+        "observed_sha256": "fc44b2c192b432f0b8754adf974ffc582f7f942fa091df0edef14b081b6a0e39",
+        "status": "match"
+      },
+      {
+        "path": "quality_reports/plans/mebane_gate_agent_prompts.md",
+        "expected_sha256": "793063d3e74be4d8b49535f3ade07da4a440f3ccc22a306fb846bf84f505bc2c",
+        "observed_sha256": "793063d3e74be4d8b49535f3ade07da4a440f3ccc22a306fb846bf84f505bc2c",
+        "status": "match"
+      },
+      {
+        "path": "quality_reports/plans/2026-09-28_mebane_2022_2026_gates.md",
+        "expected_sha256": "6e883902133b12c16fdbb997283e5474dd9b04e91bd7219df1c509cf68588db7",
+        "observed_sha256": "6e883902133b12c16fdbb997283e5474dd9b04e91bd7219df1c509cf68588db7",
+        "status": "match"
+      }
+    ],
+    "round1_preserved": true,
+    "round1_hashes": [
+      {
+        "path": "quality_reports/results/2026-09-28_gate_design/review_science_round1.md",
+        "sha256": "99cf42f550cc9f7511c6fc642ba9a8f2336df6eb9a2e4c7eb9363b9f6d1d8eee"
+      },
+      {
+        "path": "quality_reports/results/2026-09-28_gate_design/review_science_round1.json",
+        "sha256": "88d84516b300e4f7c92e0baab9535a0fb3dfac44789fe8ed95137bf2028df215"
+      }
+    ],
+    "code_checker_not_in_binding": true
+  },
+  "previous_review": {
+    "path": "quality_reports/results/2026-09-28_gate_design/review_science_round1.json",
+    "sha256": "88d84516b300e4f7c92e0baab9535a0fb3dfac44789fe8ed95137bf2028df215",
+    "usage": "Lista de rechecagem dos três findings e seus critérios de resolução.",
+    "previous_adjudication": "Os três achados foram CONFIRMED conforme informado pelo usuário; não foi usada uma nota de autoaprovação como evidência de correção."
+  },
+  "summary": "Três achados resolvidos no protocolo congelado; nenhum novo achado material ou pendência material residual. 10 gates e 45 todos permanecem pendentes. Coerência documental e DAG conferidos independentemente.",
+  "resolved_findings": [
+    {
+      "id": "S-F001",
+      "resolution": "resolved",
+      "previous_severity": "high",
+      "resolution_summary": "G4-T5 exige contrato de calibração e aprovação independente anteriores a G4-T6; pilotos e confirmação ficam separados.",
+      "locator": [
+        {
+          "path": "quality_reports/plans/mebane_2022_2026_gates.json",
+          "line_start": 146,
+          "line_end": 153,
+          "selector": "G4-T2/G4-T5/G4-T6 e acceptance"
+        },
+        {
+          "path": "quality_reports/plans/mebane_2022_2026_gates.json",
+          "line_start": 190,
+          "line_end": 196,
+          "selector": "G6-T2/G6-T4 e acceptance"
+        },
+        {
+          "path": "quality_reports/plans/mebane_gate_agent_prompts.md",
+          "line_start": 44,
+          "line_end": 50
+        },
+        {
+          "path": "quality_reports/plans/2026-09-28_mebane_2022_2026_gates.md",
+          "line_start": 235,
+          "line_end": 256
+        }
+      ],
+      "evidence": [
+        {
+          "path": "quality_reports/plans/mebane_2022_2026_gates.json",
+          "line": 146,
+          "quote": "sem tratar esses pilotos como avaliação confirmatória"
+        },
+        {
+          "path": "quality_reports/plans/mebane_2022_2026_gates.json",
+          "line": 149,
+          "quote": "obter revisão independente desse contrato antes de G4-T6"
+        },
+        {
+          "path": "quality_reports/plans/mebane_2022_2026_gates.json",
+          "line": 150,
+          "quote": "simulações/seeds distintas dos pilotos sob o contrato G4-T5 congelado e aprovado"
+        },
+        {
+          "path": "quality_reports/plans/mebane_2022_2026_gates.json",
+          "line": 153,
+          "quote": "Falta de cobertura, falso positivo excessivo ou precisão insuficiente seguem os critérios prévios de reprovação/inconclusividade."
+        },
+        {
+          "path": "quality_reports/plans/mebane_gate_agent_prompts.md",
+          "line": 49,
+          "quote": "Não ajustar os critérios após observar os testes confirmatórios."
+        }
+      ],
+      "assessed_repair": "O contrato inclui evento/regra de detecção, unidade, cenários, estimandos, tolerâncias justificadas, precisão Monte Carlo, tratamento de réplicas falhas e claims permitidos por poder; fixa especificações, réplicas e sementes. Revisor principal aprova previamente; hashes/timestamps/seeds documentam precedência. A confirmação aplica decisões congeladas e o checkpoint não equivale a pass final de G4.",
+      "round1_recheck_acceptance_met": true,
+      "residual_material_findings": [],
+      "future_obligation": "Produzir, revisar e cumprir o contrato durante G4. Sua existência futura e os resultados inferenciais não foram validados agora.",
+      "quoted_finding": "G4 exige medir recuperação, cobertura e falsos positivos, mas não exige congelar uma regra de detecção e critérios de aprovação dessas medidas antes da avaliação confirmatória; G6 herda essa lacuna ao concluir a análise de poder."
+    },
+    {
+      "id": "S-F002",
+      "resolution": "resolved",
+      "previous_severity": "medium",
+      "resolution_summary": "Contrato estático manifestado, hash vinculado à rodada, predecessores vinculados pelo run e invalidação expressa por mudança material.",
+      "locator": [
+        {
+          "path": "quality_reports/plans/mebane_2022_2026_gates.json",
+          "line_start": 23,
+          "line_end": 23,
+          "selector": "operating_rules"
+        },
+        {
+          "path": "quality_reports/plans/mebane_2022_2026_gates.json",
+          "line_start": 34,
+          "line_end": 39,
+          "selector": "evidence_contract"
+        },
+        {
+          "path": "quality_reports/plans/mebane_gate_agent_prompts.md",
+          "line_start": 79,
+          "line_end": 86
+        },
+        {
+          "path": "quality_reports/plans/mebane_gate_agent_prompts.md",
+          "line_start": 159,
+          "line_end": 201
+        },
+        {
+          "path": "quality_reports/plans/mebane_gate_agent_prompts.md",
+          "line_start": 226,
+          "line_end": 232
+        },
+        {
+          "path": "quality_reports/plans/2026-09-28_mebane_2022_2026_gates.md",
+          "line_start": 77,
+          "line_end": 94
+        }
+      ],
+      "evidence": [
+        {
+          "path": "quality_reports/plans/mebane_2022_2026_gates.json",
+          "line": 23,
+          "quote": "Mudança material em contrato, estimando, critérios, dependências, condição externa, entrada, código ou configuração após o congelamento invalida o parecer correspondente"
+        },
+        {
+          "path": "quality_reports/plans/mebane_2022_2026_gates.json",
+          "line": 39,
+          "quote": "O contrato estático tem snapshot próprio no manifesto"
+        },
+        {
+          "path": "quality_reports/plans/mebane_gate_agent_prompts.md",
+          "line": 159,
+          "quote": "O contrato estático é o objeto do gate excluindo apenas `status` e `records`"
+        },
+        {
+          "path": "quality_reports/plans/mebane_gate_agent_prompts.md",
+          "line": 184,
+          "quote": "`dependency_manifests`: mapa do ID de cada predecessor para o SHA-256 de seu"
+        },
+        {
+          "path": "quality_reports/plans/mebane_gate_agent_prompts.md",
+          "line": 226,
+          "quote": "Se contrato, aprovação de predecessor ou qualquer arquivo do manifesto mudou,"
+        }
+      ],
+      "assessed_repair": "gate_contract.json integra o manifesto; a projeção exclui somente campos operacionais. contract_sha256 identifica a rodada em run/manifesto/review/adjudication. O run liga os manifests dos predecessores, e review/adjudication ligam o manifesto que contém o run, formando vínculo transitivo. review_sha256 protege a adjudicação; mudanças do contrato ou predecessor invalidam a aprovação.",
+      "independent_test": {
+        "basis": "executed",
+        "method": "Projeção e SHA-256 implementados independentemente com Python padrão; mutações apenas em memória, sem importar ou executar checker.",
+        "g4_static_contract_sha256": "9b3955d2a43a370b418ceac010aa27ec441c868c6e6a06a938eb6e7759773bed",
+        "operational_status_records_todo_status_evidence_mutation_preserves_hash": true,
+        "acceptance_mutation_changes_hash": true,
+        "serialization": "json.dumps(projection, sort_keys=True, separators=(',', ':'), ensure_ascii=False).encode('utf-8')"
+      },
+      "round1_recheck_acceptance_met": true,
+      "residual_material_findings": [],
+      "future_obligation": "A revisão mecânica separada verifica implementação real de canonização e linhagem; QA futuro deve conferir manifest_complete e arquivos efetivamente usados.",
+      "quoted_finding": "O contrato do gate é entregue ao revisor, mas o protocolo não exige arquivar seu snapshot e hash no vínculo de aprovação; mudanças de critérios ou dependências podem conservar um parecer cujo manifesto continua idêntico."
+    },
+    {
+      "id": "S-F003",
+      "resolution": "resolved",
+      "previous_severity": "medium",
+      "resolution_summary": "G8/T1 e G9/T2 têm escopos e estados próprios, versões oficiais imutáveis e não aplicabilidade restrita à não ocorrência oficial.",
+      "locator": [
+        {
+          "path": "quality_reports/plans/mebane_2022_2026_gates.json",
+          "line_start": 30,
+          "line_end": 31,
+          "selector": "operating_rules"
+        },
+        {
+          "path": "quality_reports/plans/mebane_2022_2026_gates.json",
+          "line_start": 44,
+          "line_end": 44,
+          "selector": "readiness"
+        },
+        {
+          "path": "quality_reports/plans/mebane_2022_2026_gates.json",
+          "line_start": 214,
+          "line_end": 214,
+          "selector": "G7-T4"
+        },
+        {
+          "path": "quality_reports/plans/mebane_2022_2026_gates.json",
+          "line_start": 222,
+          "line_end": 264,
+          "selector": "G8/G9"
+        },
+        {
+          "path": "quality_reports/plans/mebane_gate_agent_prompts.md",
+          "line_start": 145,
+          "line_end": 147
+        },
+        {
+          "path": "quality_reports/plans/mebane_gate_agent_prompts.md",
+          "line_start": 203,
+          "line_end": 222
+        },
+        {
+          "path": "quality_reports/plans/2026-09-28_mebane_2022_2026_gates.md",
+          "line_start": 354,
+          "line_end": 421
+        }
+      ],
+      "evidence": [
+        {
+          "path": "quality_reports/plans/mebane_2022_2026_gates.json",
+          "line": 224,
+          "quote": "encerrando esse goal sem depender do segundo turno"
+        },
+        {
+          "path": "quality_reports/plans/mebane_2022_2026_gates.json",
+          "line": 225,
+          "quote": "\"election_scope\": {\"year\": 2026, \"turn\": 1}"
+        },
+        {
+          "path": "quality_reports/plans/mebane_2022_2026_gates.json",
+          "line": 247,
+          "quote": "\"election_scope\": {\"year\": 2026, \"turn\": 2}"
+        },
+        {
+          "path": "quality_reports/plans/mebane_2022_2026_gates.json",
+          "line": 256,
+          "quote": "ausência de publicação não equivale a não ocorrência"
+        },
+        {
+          "path": "quality_reports/plans/mebane_2022_2026_gates.json",
+          "line": 262,
+          "quote": "Pass de G8 não implica pass de G9; inconclusividade de T2 não apaga aprovação específica de T1."
+        },
+        {
+          "path": "quality_reports/plans/mebane_gate_agent_prompts.md",
+          "line": 219,
+          "quote": "`requirement: \"turn_not_held\"`, `occurrence: \"not_held\"`"
+        }
+      ],
+      "assessed_repair": "G8/G9 têm goals, todos, revisores, records e diretórios separados, ambos dependentes de G6/G7 e não um do outro. Somente G9 habilita not_applicable; exige evidência oficial e atestação independente, não ausência de arquivo. Não marca todos analíticos feitos. Versões usam ano/turno/SHA-do-snapshot/roundN e preservam records anteriores.",
+      "scenarios_checked": [
+        {
+          "scenario": "G8 pass / G9 waiting_external",
+          "result": "Representável sem alterar a aprovação específica de T1."
+        },
+        {
+          "scenario": "G8 pass / G9 inconclusive",
+          "result": "Representável sem apagar resultados já revisados de T1."
+        },
+        {
+          "scenario": "G9 not_applicable por não ocorrência oficial",
+          "result": "Encerramento somente da verificação de aplicabilidade; todos analíticos não executados."
+        },
+        {
+          "scenario": "T2 ocorreu, mas seus dados não foram publicados",
+          "result": "waiting_external, nunca not_applicable."
+        }
+      ],
+      "scenario_check_basis": "Inspeção das regras e dos objetos de gate; não é execução de estados no checker.",
+      "round1_recheck_acceptance_met": true,
+      "residual_material_findings": [],
+      "future_obligation": "Abrir a publicação oficial real e atestar ocorrência/cobertura no momento pertinente; não há fato eleitoral de 2026 presumido nesta revisão.",
+      "quoted_finding": "G8 exige execução, espera e inconclusividade por turno, mas oferece somente um status, um conjunto de todos e um records; falta a regra que permita concluir T1 sem aprovar, sobrescrever ou manter indefinidamente ativo o trabalho de T2."
+    }
+  ],
+  "findings": [],
+  "unresolved_material_findings": 0,
+  "counts": {
+    "previous_findings": 3,
+    "resolved": 3,
+    "new_material_findings": 0,
+    "residual_material_findings": 0
+  },
+  "checks": [
+    {
+      "id": "R2-C01",
+      "criterion": "Identidade e preservação",
+      "basis": "executed",
+      "status": "pass",
+      "result": "Três documentos iguais ao manifesto; manifesto e pareceres round1 preservados."
+    },
+    {
+      "id": "R2-C02",
+      "criterion": "Estados e tarefas",
+      "basis": "executed",
+      "status": "pass",
+      "result": {
+        "gates": 10,
+        "todos": 45,
+        "statuses": {
+          "queued": 8,
+          "waiting_external": 2
+        },
+        "all_todos": "todo",
+        "all_todo_evidence_empty": true,
+        "all_records_null": true
+      }
+    },
+    {
+      "id": "R2-C03",
+      "criterion": "DAG",
+      "basis": "executed",
+      "status": "pass",
+      "result": {
+        "topological_layers": [
+          [
+            "G0"
+          ],
+          [
+            "G1",
+            "G2"
+          ],
+          [
+            "G3",
+            "G7"
+          ],
+          [
+            "G4"
+          ],
+          [
+            "G5"
+          ],
+          [
+            "G6"
+          ],
+          [
+            "G8",
+            "G9"
+          ]
+        ],
+        "acyclic": true,
+        "missing_dependencies": []
+      }
+    },
+    {
+      "id": "R2-C04",
+      "criterion": "Correspondência JSON/MD",
+      "basis": "executed",
+      "status": "pass",
+      "result": {
+        "literal_strings_checked": 171,
+        "missing": [],
+        "edges_checked": 12,
+        "titles_checked": 10
+      }
+    },
+    {
+      "id": "R2-C05",
+      "criterion": "Coerência JSON/prompts",
+      "basis": "inspected",
+      "status": "pass",
+      "result": "Checkpoint G4, contrato estático, predecessores, reabertura, estados por turno e applicability_evidence coerentes."
+    },
+    {
+      "id": "R2-C06",
+      "criterion": "Projeção de contrato",
+      "basis": "executed",
+      "status": "pass",
+      "result": "Mutações operacionais em memória preservam hash; mudança da aceitação altera hash. Não é teste do validator."
+    },
+    {
+      "id": "R2-C07",
+      "criterion": "Independência e goals",
+      "basis": "inspected",
+      "status": "pass",
+      "locator": [
+        {
+          "path": "quality_reports/plans/mebane_2022_2026_gates.json",
+          "line_start": 17,
+          "line_end": 23
+        },
+        {
+          "path": "quality_reports/plans/mebane_gate_agent_prompts.md",
+          "line_start": 26,
+          "line_end": 50
+        },
+        {
+          "path": "quality_reports/plans/mebane_gate_agent_prompts.md",
+          "line_start": 94,
+          "line_end": 130
+        }
+      ],
+      "result": "Candidato entregue não equivale a pass; revisor novo/contexto separado e adjudicação continuam obrigatórios."
+    },
+    {
+      "id": "R2-C08",
+      "criterion": "Roteamento Sol/herdado",
+      "basis": "inspected",
+      "status": "pass",
+      "locator": [
+        {
+          "path": "quality_reports/plans/mebane_2022_2026_gates.json",
+          "line_start": 8,
+          "line_end": 14
+        },
+        {
+          "path": "quality_reports/plans/mebane_2022_2026_gates.json",
+          "line_start": 141,
+          "line_end": 142
+        },
+        {
+          "path": "quality_reports/plans/mebane_2022_2026_gates.json",
+          "line_start": 229,
+          "line_end": 230
+        },
+        {
+          "path": "quality_reports/plans/mebane_2022_2026_gates.json",
+          "line_start": 252,
+          "line_end": 253
+        }
+      ],
+      "result": "Heurística explícita, sem benchmark inventado; revisão científica de alto impacto permanece inherit."
+    },
+    {
+      "id": "R2-C09",
+      "criterion": "Alvo, engines e limites inferenciais",
+      "basis": "inspected",
+      "status": "pass",
+      "locator": [
+        {
+          "path": "quality_reports/plans/mebane_2022_2026_gates.json",
+          "line_start": 102,
+          "line_end": 109
+        },
+        {
+          "path": "quality_reports/plans/mebane_2022_2026_gates.json",
+          "line_start": 124,
+          "line_end": 131
+        },
+        {
+          "path": "quality_reports/plans/mebane_2022_2026_gates.json",
+          "line_start": 148,
+          "line_end": 153
+        },
+        {
+          "path": "quality_reports/plans/mebane_2022_2026_gates.json",
+          "line_start": 190,
+          "line_end": 196
+        }
+      ],
+      "result": "Fidelidade qbl e rotulagem da aproximação preservadas; mesmo alvo para comparações; identificação/convergência não dispensadas; sem prova automática de fraude/ausência."
+    },
+    {
+      "id": "R2-C10",
+      "criterion": "Dados e recursos",
+      "basis": "inspected",
+      "status": "pass",
+      "locator": [
+        {
+          "path": "quality_reports/plans/mebane_2022_2026_gates.json",
+          "line_start": 80,
+          "line_end": 88
+        },
+        {
+          "path": "quality_reports/plans/mebane_2022_2026_gates.json",
+          "line_start": 168,
+          "line_end": 175
+        }
+      ],
+      "result": "Requisitos de reconciliação/zeros/missing e limites de recursos/preflight/falha preservados."
+    },
+    {
+      "id": "R2-C11",
+      "criterion": "Isolamento dos turnos",
+      "basis": "executed_and_inspected",
+      "status": "pass",
+      "result": "election_scope distintos; apenas G9 allow_not_applicable; dependências iguais G6/G7; write scopes disjuntos; casos de estado documentados."
+    }
+  ],
+  "verification_method": {
+    "tools_used_for_checks": [
+      "Python padrão: json, hashlib, pathlib, copy, collections",
+      "Leitura textual com nl/sed"
+    ],
+    "no_checker_import_or_execution": true,
+    "no_candidate_mutations_on_disk": true,
+    "contract_mutations_only_in_memory": true,
+    "mechanical_checks_recomputed_independently": true,
+    "text_comparison_fields": [
+      "goal",
+      "todos.task",
+      "deliverables",
+      "acceptance",
+      "on_failure",
+      "external_prerequisites",
+      "operating_rules",
+      "evidence_contract",
+      "readiness",
+      "routing",
+      "gate titles",
+      "DAG edges"
+    ]
+  },
+  "residuals": [
+    {
+      "id": "R2-L01",
+      "kind": "future_execution_obligation",
+      "material_finding": false,
+      "description": "O contrato de calibração terá de ser preenchido, justificado, aprovado e aplicado no checkpoint G4; este pass não demonstra desempenho inferencial."
+    },
+    {
+      "id": "R2-L02",
+      "kind": "separate_review_boundary",
+      "material_finding": false,
+      "description": "Canonização, vínculos de predecessor e estados no checker dependem da revisão de código separada, não realizada aqui."
+    },
+    {
+      "id": "R2-L03",
+      "kind": "external_evidence_boundary",
+      "material_finding": false,
+      "description": "Ocorrência, publicação oficial e cobertura dos turnos de 2026 exigem verificação futura da fonte; não são fatos presumidos."
+    },
+    {
+      "id": "R2-L04",
+      "kind": "empirical_validation_boundary",
+      "material_finding": false,
+      "description": "Nenhum MCMC, simulação inferencial, auditoria integral do qbl, instalação ou execução de gate foi realizada."
+    }
+  ],
+  "changes_made": {
+    "outputs_only": [
+      "quality_reports/results/2026-09-28_gate_design/review_science_round2.md",
+      "quality_reports/results/2026-09-28_gate_design/review_science_round2.json"
+    ],
+    "round1_modified": false,
+    "candidate_modified": false,
+    "checker_modified": false,
+    "ledger_states_changed": false
+  },
+  "artifacts": [
+    {
+      "path": "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/2026-09-28_gate_design/review_science_round2.md",
+      "sha256": "fbc46e3a6587ca8de3b47d17d991bea32326f2931e1f9d1375e7247294963c4b"
+    },
+    {
+      "path": "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/2026-09-28_gate_design/review_science_round2.json",
+      "sha256": null,
+      "hash_note": "Hash calculado externamente na verificação final para evitar autorreferência."
+    }
+  ],
+  "disposition": "Concluir o goal da rechecagem após verificar a entrega. Preservar round1. O coordenador pode adjudicar este pass científico-documental, sem interpretá-lo como execução ou aprovação empírica dos gates."
+}

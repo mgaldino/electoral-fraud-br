@@ -1,0 +1,51 @@
+{
+  "reviewer_id": "01a0ea8e-acec-7211-a061-220d8547fc6c",
+  "reviewer_role": "QA-LEDGER-SOL",
+  "executor_id": "01a0ea96-c9e9-77e3-b931-0d448e1cc876",
+  "candidate_manifest": "quality_reports/results/2026-09-28_gate_design/candidate_checker_round2.json",
+  "candidate_manifest_sha256": "73a167addcb5d4536773b42458b4201258be6c7c42448ae93f5bb620e7c509a3",
+  "status": "changes_requested",
+  "scope": "Rechecagem independente do checker/renderer e compatibilidade ledger/prompts; nao inclui revisao estatistica.",
+  "hashes_verified": {
+    "scripts/mebane_gates.py": "2effb4bc77697ba4a60b108de42b797d7b211268e0209f1000c93baddb7b13aa",
+    "tests/test_mebane_gates.py": "84f98dbe3a4b397c21a64dc2936f827742b835cf3a6cb5efcab493ba39b0749b",
+    "quality_reports/plans/mebane_2022_2026_gates.json": "fc44b2c192b432f0b8754adf974ffc582f7f942fa091df0edef14b081b6a0e39",
+    "quality_reports/plans/mebane_gate_agent_prompts.md": "793063d3e74be4d8b49535f3ade07da4a440f3ccc22a306fb846bf84f505bc2c"
+  },
+  "checks": [
+    {"command": "PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tests -p 'test_mebane_gates.py' -v", "result": "24 tests passed"},
+    {"command": "PYTHONDONTWRITEBYTECODE=1 python3 scripts/mebane_gates.py check", "result": "PASS: 10 gates, 45 todos; structural checks only"},
+    {"command": "PYTHONDONTWRITEBYTECODE=1 python3 - <<'PY' (independent fixtures in tempfile.TemporaryDirectory(dir='/tmp'); import checker and call validate/check_external; run CLI on malformed ledger copies) PY", "result": "Round1 bypasses rejected mechanically except documented semantic limits; C-F009 reproduced"},
+    {"command": "PYTHONDONTWRITEBYTECODE=1 python3 - <<'PY' (compare render(read_json(LEDGER)) with saved Markdown) PY", "result": "Exact textual match"}
+  ],
+  "old_findings": [
+    {"id": "C-F001", "closure": "mechanically_closed", "evidence": "Cross-gate review rejected by gate/round/static-contract binding."},
+    {"id": "C-F002", "closure": "mechanically_closed", "evidence": "Whitespace alias and equal executor/reviewer IDs rejected by canonical UUID and distinctness checks."},
+    {"id": "C-F003", "closure": "mechanically_mitigated_semantic_human_check", "evidence": "Structured attestation and snapshot checks work; synthetic TSE-URL attestation still passes syntax, so official content/coverage requires human review."},
+    {"id": "C-F004", "closure": "mechanically_mitigated_semantic_human_check", "evidence": "Declared run files must be manifested and reviewer must attest completeness; undeclared used files and gate_contract.json snapshot presence require human verification."},
+    {"id": "C-F005", "closure": "mechanically_closed", "evidence": "Review digest and finding IDs linked to adjudication; changed review rejected."},
+    {"id": "C-F006", "closure": "closed", "evidence": "Missing date, invalid routing and invalid write_scope rejected before render without traceback."},
+    {"id": "C-F007", "closure": "closed", "evidence": "Malformed status and evidence basis rejected with FAIL, no traceback."},
+    {"id": "C-F008", "closure": "closed", "evidence": "Mermaid title injection rejected."}
+  ],
+  "new_findings": [
+    {
+      "id": "C-F009",
+      "severity": "major",
+      "location": "scripts/mebane_gates.py:189-203",
+      "contract_location": "quality_reports/plans/mebane_gate_agent_prompts.md:25-30,224-232",
+      "counterexample": "Valid G0/G1 passes. Replace G0 reviewer with a different canonical UUID, update G0 review and adjudication review_sha256, leave both manifests and G1 run unchanged. G0 review hash changes but validate(plan,tmp_root) remains [].",
+      "effect": "A child gate remains approved after the concrete approval of its predecessor was replaced, contrary to the documented reopening rule.",
+      "repair": "Bind each dependency's approved review/adjudication digests, as well as manifest digest, in the child run and verify current records; reopen affected descendants."
+    }
+  ],
+  "mechanical_vs_human": {
+    "mechanical": "Canonical UUID syntax, gate/round/contract hashes, manifested run paths, review hash, predecessor manifest hash, external attestation structure and T2 applicability are checked.",
+    "human": "Actual agent identity, complete used-file inventory and gate contract snapshot, official TSE publication and coverage, and substantive finding resolutions still require review."
+  },
+  "limits": [
+    "Only synthetic fixtures in /tmp were used; no analytical gate was approved.",
+    "No R, MCMC, installation, statistical audit or visual Markdown QA was performed.",
+    "Round1 and the round2 candidate were not edited."
+  ]
+}
