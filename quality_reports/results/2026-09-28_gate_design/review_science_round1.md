@@ -8,23 +8,23 @@
 - Independência: este revisor não escreveu o candidato, não o modificou e não leu as notas Sol preparatórias, a nota de autoavaliação ou o parecer separado sobre o validator. O manifesto não informa o ID nativo do autor; não foi inventada uma identidade para ele.
 - Autoridade: `quality_reports/plans/mebane_2022_2026_gates.json`. Prompts e MD foram confrontados com esse arquivo. Instruções e plano antigos foram usados apenas como contexto, não como autoridade concorrente.
 
-## 1. Identidade do Candidato
+## 1. Identidade do Candidato Científico
 
 Raiz de todos os caminhos relativos: `/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud`.
 
 Manifesto: `quality_reports/results/2026-09-28_gate_design/candidate_round1.json`.
 
-SHA-256 do manifesto: `ae5f84bef1186ad1f6d1500e5a308bc7d500c0e447cb39bbfee07eed5027da7a`.
+SHA-256 do manifesto round1 de referência: `ae5f84bef1186ad1f6d1500e5a308bc7d500c0e447cb39bbfee07eed5027da7a`.
+
+Por delimitação explícita do usuário recebida durante a revisão, **o vínculo de validade deste parecer abrange somente os três documentos científicos abaixo**. SOL-REPARO pode modificar `scripts/mebane_gates.py` e `tests/test_mebane_gates.py` em uma revisão de código separada. Esses dois arquivos foram conferidos apenas na entrada e não são alvos da reconferência final nem condicionam este parecer.
 
 | Arquivo do manifesto | SHA-256 esperado e observado | Escopo da inspeção |
 |---|---|---|
 | `quality_reports/plans/mebane_2022_2026_gates.json` | `bcb3c384960d87924178128fe4c7ce3db0a841e4e7941df26864c1f35b2dab7f` | Leitura integral, autoridade |
 | `quality_reports/plans/mebane_gate_agent_prompts.md` | `173bf29b1a6bd21247591a49f2d9ce3b3475d2e7cf0c748a446d60ab69c40838` | Leitura integral |
 | `quality_reports/plans/2026-09-28_mebane_2022_2026_gates.md` | `59dc46f99f5ed059cd334f84cbdbb4952b1994870f96c653cf7c66a3c10af3bb` | Leitura integral e comparação textual |
-| `scripts/mebane_gates.py` | `480c0b88674513f6cd4ffb1f34f59ab19efbf4cfaf50c0b403fd105aef8e33b6` | Hash apenas; revisão de código excluída |
-| `tests/test_mebane_gates.py` | `f192968af7d7988421541ea6a92f012ac357c7a4aa301c44b9fe469261232c74` | Hash apenas; execução excluída |
 
-Os cinco hashes conferiram na entrada. A reconferência de entrega está registrada no JSON correspondente. Não foi detectado `hash mismatch`. A leitura tem validade para esses bytes, não para uma versão posterior do protocolo.
+Os cinco hashes originais conferiram na entrada. Isso é um registro histórico da conferência, não uma afirmação sobre o estado atual do checker em reparo. Na entrega, os **três documentos científicos** foram reconferidos contra os hashes round1, sem `hash mismatch`. A leitura tem validade para esses bytes, não para uma versão posterior do protocolo. O JSON preserva separadamente a conferência inicial completa e a conferência final delimitada.
 
 ## 2. Findings
 
@@ -78,7 +78,7 @@ Os cinco hashes conferiram na entrada. A reconferência de entrega está registr
 
 | Critério | Resultado da revisão do protocolo | Evidência |
 |---|---|---|
-| Identidade do candidato | Conferida, cinco hashes iguais | Manifesto e SHA-256 recalculados |
+| Identidade do candidato científico | Conferida: três documentos iguais ao round1; cinco arquivos conferidos apenas na entrada | Manifesto de referência e SHA-256 recalculados |
 | Estado pendente | Conferido: G0-G7 `queued`, G8 `waiting_external`; 40 todos `todo`; nove `records` nulos | JSON integral; contagem independente |
 | DAG | Acíclico, sem referência ausente | Ordenação independente: G0; G1/G2; G3/G7; G4; G5; G6; G8 |
 | Dependências inferenciais | G6 herda G0-G5; G8 herda todos os gates anteriores | Fecho transitivo calculado independentemente |
@@ -109,5 +109,7 @@ O código Stan foi inspecionado apenas para confirmar que a portagem existente s
 Não foram lidos os PDFs como parte de uma nova auditoria matemática completa; a correspondência paper/qbl permanece tarefa de G2. Não houve reestimação, carregamento/reprocessamento de cadeias, teste empírico de identificação, cálculo novo de poder, consulta de resultados eleitorais de 2026, instalação, mudança de ambiente ou execução dos gates. Não foi conduzida revisão do código do validator. A conclusão é sobre suficiência do protocolo congelado, não sobre existência ou ausência de fraude, convergência de modelos ou disponibilidade de dados eleitorais futuros.
 
 **Encaminhamento:** adjudicar S-F001 a S-F003 contra este candidato e, se confirmados, corrigir apenas o protocolo, gerar novo manifesto e rechecá-lo independentemente. A entrega deste parecer conclui o goal de revisão, mesmo com `changes_requested`; não libera gates operacionais nem modifica a autorização de execução.
+
+Os achados da revisão separada do checker não foram usados para aprovar ou reprovar este protocolo. S-F002 descreve um requisito documental de governança e não é um teste ou veredicto sobre o comportamento do validator, antes ou depois do reparo.
 
 Artefatos exclusivos desta revisão: `quality_reports/results/2026-09-28_gate_design/review_science_round1.md` e `quality_reports/results/2026-09-28_gate_design/review_science_round1.json`. O JSON registra o SHA-256 deste Markdown; os hashes finais dos dois arquivos acompanham a entrega, sem tentar inserir em cada arquivo seu próprio hash.

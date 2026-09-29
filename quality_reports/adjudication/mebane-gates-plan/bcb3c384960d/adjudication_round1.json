@@ -1,0 +1,122 @@
+{
+  "schema_version": "1.0",
+  "adjudication_id": "mebane-gates-plan:bcb3c384960d:round1",
+  "source": {
+    "reviewed_artifact": "quality_reports/plans/mebane_2022_2026_gates.json",
+    "sha256": "bcb3c384960d87924178128fe4c7ce3db0a841e4e7941df26864c1f35b2dab7f",
+    "artifact_intact": true
+  },
+  "contract": {
+    "required": false,
+    "path": null,
+    "sha256": null,
+    "contract_id": null,
+    "artifact_sha256": null,
+    "status": null,
+    "stale": false
+  },
+  "review_sources": [
+    {
+      "review_id": "S-R1",
+      "path": "quality_reports/results/2026-09-28_gate_design/review_science_round1.json",
+      "sha256": "88d84516b300e4f7c92e0baab9535a0fb3dfac44789fe8ed95137bf2028df215"
+    }
+  ],
+  "findings": [
+    {
+      "finding_id": "S-F001",
+      "source_review": "S-R1",
+      "quoted_finding": "Falta definir e congelar uma regra operacional de aceite da calibração antes da avaliação confirmatória.",
+      "type": "scope_or_consistency",
+      "severity": "major",
+      "scientific_dimension": "inferência e governança",
+      "held_decision": false,
+      "status": "CONFIRMED",
+      "source_locations": [
+        "quality_reports/plans/mebane_2022_2026_gates.json:143"
+      ],
+      "defect_evidence": [
+        "G4-T2 mede recuperação/cobertura/falso positivo, mas acceptance fixa somente critérios MCMC; G4-T5 não exige regra de detecção, unidade e limiares."
+      ],
+      "refuting_evidence": [],
+      "mechanical_checks": [
+        {
+          "command": "Leitura do ledger congelado bcb3c384960d e confronto com review_science_round1.md.",
+          "result": "Lacuna confirmada no texto vigente."
+        }
+      ],
+      "reasoning": "As salvaguardas gerais existentes não fornecem o vínculo ou a regra operacional específica requerida.",
+      "proposed_fix_assessment": "safe",
+      "disposition": "Adicionar contrato de calibração versionado, revisão independente antes das simulações confirmatórias, critérios de pass/inconclusive e limites de afirmação; separar dados/seeds de piloto e avaliação."
+    },
+    {
+      "finding_id": "S-F002",
+      "source_review": "S-R1",
+      "quoted_finding": "Parecer não é obrigatoriamente vinculado à versão do contrato de aceite.",
+      "type": "scope_or_consistency",
+      "severity": "minor",
+      "scientific_dimension": "inferência e governança",
+      "held_decision": false,
+      "status": "CONFIRMED",
+      "source_locations": [
+        "quality_reports/plans/mebane_2022_2026_gates.json:31"
+      ],
+      "defect_evidence": [
+        "review/adjudication mínimos referenciam apenas candidate_manifest_sha256; contrato do gate não é artefato obrigatório."
+      ],
+      "refuting_evidence": [],
+      "mechanical_checks": [
+        {
+          "command": "Leitura do ledger congelado bcb3c384960d e confronto com review_science_round1.md.",
+          "result": "Lacuna confirmada no texto vigente."
+        }
+      ],
+      "reasoning": "As salvaguardas gerais existentes não fornecem o vínculo ou a regra operacional específica requerida.",
+      "proposed_fix_assessment": "safe",
+      "disposition": "Vincular snapshot do contrato estático a contract_sha256 em run/manifest/review/adjudication e verificar hashes de aprovações predecessoras; alteração material reabre gate."
+    },
+    {
+      "finding_id": "S-F003",
+      "source_review": "S-R1",
+      "quoted_finding": "G8 oferece um estado único para dois turnos que podem ter desfechos diferentes.",
+      "type": "scope_or_consistency",
+      "severity": "minor",
+      "scientific_dimension": "inferência e governança",
+      "held_decision": false,
+      "status": "CONFIRMED",
+      "source_locations": [
+        "quality_reports/plans/mebane_2022_2026_gates.json:218"
+      ],
+      "defect_evidence": [
+        "G8 contém status/records/todos únicos apesar de operar por turno; não há composição explícita ou instâncias."
+      ],
+      "refuting_evidence": [],
+      "mechanical_checks": [
+        {
+          "command": "Leitura do ledger congelado bcb3c384960d e confronto com review_science_round1.md.",
+          "result": "Lacuna confirmada no texto vigente."
+        }
+      ],
+      "reasoning": "As salvaguardas gerais existentes não fornecem o vínculo ou a regra operacional específica requerida.",
+      "proposed_fix_assessment": "safe",
+      "disposition": "Separar G8 2026 T1 e G9 2026 T2 condicional, com election_scope próprio e estado not_applicable fundamentado oficialmente. Versionar snapshot/rodada em diretórios imutáveis."
+    }
+  ],
+  "summary": {
+    "total": 3,
+    "confirmed": 3,
+    "partial": 0,
+    "refuted": 0,
+    "unresolved": 0,
+    "held_decisions": 0
+  },
+  "adjudication": {
+    "verdict": "READY_FOR_IMPLEMENTATION",
+    "checked_at": "2026-09-28",
+    "reasons": [
+      "Lacunas verificadas no protocolo exato.",
+      "Reparos concretizam o pedido de execução por goals com checagem independente.",
+      "Nenhum modelo, dado ou resultado eleitoral é aprovado nesta rodada."
+    ]
+  }
+}

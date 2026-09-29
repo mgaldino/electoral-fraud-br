@@ -1,0 +1,11 @@
+{
+  "candidate_id": "mebane-gates-science-round2",
+  "date": "2026-09-28",
+  "executor_id": "019d795a-acfa-72c2-a210-d55a46c606c2",
+  "scope": "Protocolo científico e despacho dos gates; não inclui o checker em reparo nem constitui execução dos gates analíticos.",
+  "files": [
+    {"path": "quality_reports/plans/mebane_2022_2026_gates.json", "sha256": "fc44b2c192b432f0b8754adf974ffc582f7f942fa091df0edef14b081b6a0e39"},
+    {"path": "quality_reports/plans/mebane_gate_agent_prompts.md", "sha256": "793063d3e74be4d8b49535f3ade07da4a440f3ccc22a306fb846bf84f505bc2c"},
+    {"path": "quality_reports/plans/2026-09-28_mebane_2022_2026_gates.md", "sha256": "6e883902133b12c16fdbb997283e5474dd9b04e91bd7219df1c509cf68588db7"}
+  ]
+}

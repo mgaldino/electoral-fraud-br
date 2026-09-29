@@ -18,27 +18,30 @@
     "O coordenador chama get_goal/create_goal para sua própria tarefa de coordenação. Os subagentes verificam seu próprio contexto antes de criar goals; se o recurso não existir, registram a limitação sem simular um goal nativo.",
     "A conclusão do goal do executor significa entrega para revisão. Somente o coordenador muda o gate para pass após evidência independente e adjudicação. O goal do revisor é emitir um parecer completo, inclusive quando encontrar falhas.",
     "O estado nativo blocked exige a recorrência prevista pelo tool. Dependência pendente no plano não autoriza marcar imediatamente um goal nativo como blocked; o gate fica queued ou waiting_external e o coordenador trabalha em outro ramo.",
-    "Revisão independente usa agente novo, sem herdar a conversa do implementador, contrato, fontes e hashes dos artefatos. Reproduz verificações relevantes e busca contraexemplos; autoavaliação não basta.",
+    "Revisão independente usa agente novo, sem herdar a conversa do implementador. Recebe o contrato congelado, fontes e hashes dos artefatos, reproduz verificações relevantes e busca contraexemplos; autoavaliação não basta.",
     "Só existe um escritor por arquivo. Subagentes recebem write_scope explícito; revisão não modifica o candidato. A concorrência inicial é de até dois executores com arquivos disjuntos e um revisor.",
-    "Mudança em entrada, código ou configuração após o congelamento invalida o parecer correspondente e reabre o gate e seus dependentes afetados. O coordenador verifica fingerprints antes de despacho e aprovação.",
+    "Mudança material em contrato, estimando, critérios, dependências, condição externa, entrada, código ou configuração após o congelamento invalida o parecer correspondente e reabre o gate e seus dependentes afetados. O contrato estático exclui somente status/records do gate e status/evidence dos todos; seu SHA-256 e os hashes das aprovações dos predecessores vinculam a rodada.",
     "Usar apply_patch para edições manuais, preservar alterações preexistentes e arquivos brutos. O arquivo ssrn-4073770.pdf e a pasta de download já existentes pertencem ao usuário; inventariar sem substituir e conferir integridade antes de usar como fonte.",
     "O pedido atual inclui 2026 e prevalece sobre o escopo antigo de CLAUDE.md. Alegações históricas de convergência ou confirmação da nula devem ser conferidas nos artefatos, não usadas como critérios de aprovação.",
     "Sem instalações ou atualizações fora da autorização já dada. Reutilizar o ambiente; se faltar dependência, apresentar item e necessidade exatos, respeitando autorizações anteriores no mesmo escopo.",
     "Não executar tarefas nacionais longas antes do gate de recursos. Nenhuma troca silenciosa de qbl por bl, aproximação contínua, estimação por UF ou amostragem substitui o alvo aprovado.",
     "Processos longos usam logs persistentes, IDs de execução e checkpoints possíveis. O coordenador não declara monitoramento futuro sem mecanismo ativo nem cria automação apenas por haver dependência futura.",
-    "Resultados eleitorais de 2026 dependem de publicação oficial. Dados e código podem ser preparados antes; a espera não deve manter um subagente ocioso ou um goal impossível de concluir ativo indefinidamente."
+    "Resultados eleitorais de 2026 dependem de publicação oficial. Dados e código podem ser preparados antes; a espera não deve manter um subagente ocioso ou um goal impossível de concluir ativo indefinidamente.",
+    "G8 e G9 representam respectivamente T1 e T2 de 2026, com estados/goals próprios. Cada versão oficial usa diretório imutável ano/turno/SHA-do-snapshot/roundN; reestimação por retificação preserva o records da versão anterior. Não existe aprovação conjunta implícita de 2026.",
+    "G9 pode ser not_applicable somente após atestação oficial independente de que T2 não ocorreu. Dados ausentes ou ainda não publicados exigem waiting_external, nunca not_applicable. Um goal finito verifica a ocorrência; esse desfecho não marca todos analíticos como executados."
   ],
   "evidence_contract": [
-    "run.json: gate, rodada, executor/revisor, IDs dos goals quando disponíveis, modelo solicitado, esforço, início/fim, comandos, sementes, versões, exit codes e tempos.",
+    "run.json: gate_id, round, contract_sha256, dependency_manifests, executor_id, IDs dos goals quando disponíveis, modelo solicitado, esforço, início/fim, comandos, sementes, versões, exit codes, tempos e paths de inputs/code/configuration/outputs efetivamente usados.",
     "candidate_manifest.json: SHA-256 dos arquivos de código, configuração, dados usados e saídas; tamanhos e caminhos. Documentar inputs ausentes ou excluídos, sem fingir snapshot completo.",
     "Todos: cada item done inclui localizador da evidência e sua origem: inspecionado, executado agora ou histórico. Uma alegação de agente não é evidência independente.",
-    "review.json/review.md: reviewer_id diferente de executor_id, manifest_sha256 revisado, testes independentes e findings identificados. Pass só com todos os critérios atendidos e sem falha material não resolvida.",
-    "adjudication.json/adjudication.md: achados classificados CONFIRMED, PARTIAL, REFUTED ou UNRESOLVED, evidência localizável, reparo delimitado e rechecagem. Não aprovar por média de notas.",
+    "review.json/review.md: reviewer_id canônico diferente de executor_id, gate_id, round, contract_sha256, candidate_manifest_sha256 revisado, atestação manifest_complete após inspeção, testes independentes e findings identificados. Pass só com todos os critérios atendidos e sem falha material não resolvida.",
+    "adjudication.json/adjudication.md: vínculo ao gate/round/contrato/manifesto e review_sha256; todos os achados classificados CONFIRMED, PARTIAL, REFUTED ou UNRESOLVED, com evidência localizável, reparo delimitado e resolução conferida. Não aprovar por média de notas.",
+    "O contrato estático tem snapshot próprio no manifesto; run e todos os caminhos declarados entram no manifesto. O revisor atesta completude após conferir a execução. O checker não descobre dependências não declaradas nem prova oficialidade pelo domínio de uma URL.",
     "O ledger contém referências aos artefatos aprovados. Um campo pass preenchido não substitui leitura e reprodução pelo coordenador."
   ],
   "readiness": {
     "data_ready_2026": "G7 pass: recepção e validação de arquivos estão ensaiadas com fixtures. Não implica estimativas de 2026.",
-    "inference_ready_2026": "G6 e G7 pass, com modelo/configuração aprovados e transferibilidade avaliada. G8 requer adicionalmente os dados oficiais do turno e checagem de cobertura.",
+    "inference_ready_2026": "G6 e G7 pass, com modelo/configuração aprovados e transferibilidade avaliada. G8 libera apenas T1, G9 apenas T2; cada qual exige dados oficiais e revisão própria. G8 pass/G9 waiting_external, G8 pass/G9 inconclusive e G9 not_applicable são estados distintos e preservados.",
     "pre_election_priority": "G0 -> G1 -> G7 em paralelo a G0 -> G2 -> G3 -> G4. Datas oficiais não são promessa de duração dos gates inferenciais."
   },
   "gates": [
@@ -140,13 +143,14 @@
       "write_scope": ["R/lib/mebane_diagnostics.R", "R/05_eforensics_qbl_fresh_diagnostic.R", "R/05_jags_qbl_zone_fe.R", "tests/mebane/inference/", "quality_reports/results/mebane_gates/G4/"],
       "todos": [
         {"id": "G4-T1", "task": "Recalcular os diagnósticos dos fits históricos e resolver as alegações de convergência/identificação por confronto com as cadeias e quantidades derivadas.", "status": "todo", "evidence": []},
-        {"id": "G4-T2", "task": "Executar simulações de fraude ausente, baixa, moderada e extrema, incluindo heterogeneidade legítima; medir recuperação, cobertura e falso positivo com incerteza Monte Carlo e registrar todos os ajustes que falharam, sem descartá-los da avaliação.", "status": "todo", "evidence": []},
+        {"id": "G4-T2", "task": "Executar pilotos exploratórios de simulação de fraude ausente, baixa, moderada e extrema, incluindo heterogeneidade legítima; dimensionar custo/precisão e registrar falhas, sem tratar esses pilotos como avaliação confirmatória.", "status": "todo", "evidence": []},
         {"id": "G4-T3", "task": "Rodar Brasília e piloto estratificado com ao menos quatro cadeias e inicializações dispersas; comparar seeds e investigar modos, parametrização e efeitos geográficos.", "status": "todo", "evidence": []},
         {"id": "G4-T4", "task": "Auditar Rhat rank-normalized, bulk/tail ESS, MCSE, traces/ranks e posterior preditiva para pi, magnitudes, escalas, totais e efeitos na margem; acrescentar divergências/energia/treedepth no Stan.", "status": "todo", "evidence": []},
-        {"id": "G4-T5", "task": "Fixar, antes da escala nacional, especificações primária e de sensibilidade, quantidade de réplicas e precisão dos testes de poder conforme o piloto, sem assumir 2022 livre de fraude.", "status": "todo", "evidence": []}
+        {"id": "G4-T5", "task": "Produzir calibration_contract.json com evento/regra de detecção, unidade de avaliação, cenários, estimandos, tolerâncias justificadas de recuperação/cobertura/falso positivo, precisão Monte Carlo, tratamento das réplicas falhas e afirmações permitidas por faixa de poder. Fixar especificações, réplicas e sementes novas; obter revisão independente desse contrato antes de G4-T6.", "status": "todo", "evidence": []},
+        {"id": "G4-T6", "task": "Executar avaliação confirmatória com simulações/seeds distintas dos pilotos sob o contrato G4-T5 congelado e aprovado. Aplicar suas regras sem ajustar limiares aos resultados; registrar pass, changes_requested ou inconclusive e limites de detectabilidade, sem supor 2022 livre de fraude.", "status": "todo", "evidence": []}
       ],
-      "deliverables": ["Diagnóstico refeito dos fits históricos", "Pilotos e validação por simulação", "Configurações e critérios inferenciais congelados"],
-      "acceptance": ["Critério inicial para quantidades reportadas: quatro cadeias, Rhat < 1.01 e bulk/tail ESS >= 400; MCSE precisa ser adequado à precisão dos intervalos efetivamente publicados, com checagem própria dos quantis extremos quando houver intervalos de 99,5%.", "Esses limiares são necessários ao protocolo, mas não prova suficiente de convergência; checar inicializações, modos, predição e recuperação.", "Não dispensar não convergência por pi pequeno ou não identificação; quantidades não identificadas recebem incerteza apropriada, e falha material gera inconclusive.", "Nenhuma divergência Stan não resolvida; diferenças entre métodos são avaliadas apenas no mesmo alvo e dados.", "Revisor reproduz diagnósticos a partir das cadeias e verifica ao menos um cenário sintético independentemente."],
+      "deliverables": ["Diagnóstico refeito dos fits históricos", "Pilotos e validação por simulação", "Contrato de calibração congelado com aprovação independente anterior à avaliação confirmatória", "Configurações e critérios inferenciais congelados"],
+      "acceptance": ["Critério inicial para quantidades reportadas: quatro cadeias, Rhat < 1.01 e bulk/tail ESS >= 400; MCSE precisa ser adequado à precisão dos intervalos efetivamente publicados, com checagem própria dos quantis extremos quando houver intervalos de 99,5%.", "Esses limiares são necessários ao protocolo, mas não prova suficiente de convergência; checar inicializações, modos, predição e recuperação.", "O revisor principal aprova calibration_contract.json de G4-T5 antes do início de G4-T6; hashes/timestamps/seeds provam precedência e separação dos pilotos. Cada resultado deve receber decisão aplicando regras congeladas, sem limiar inventado após observar o teste.", "Baixo poder delimita afirmações permitidas; não é escondido nem convertido em ausência de fraude. Falta de cobertura, falso positivo excessivo ou precisão insuficiente seguem os critérios prévios de reprovação/inconclusividade.", "Não dispensar não convergência por pi pequeno ou não identificação; quantidades não identificadas recebem incerteza apropriada, e falha material gera inconclusive.", "Nenhuma divergência Stan não resolvida; diferenças entre métodos são avaliadas apenas no mesmo alvo e dados.", "Revisor reproduz diagnósticos a partir das cadeias e verifica ao menos um cenário sintético independentemente."],
       "on_failure": "Investigar parametrização/identificação, retornar a G2/G3 se preciso e manter as conclusões substantivas pendentes; preparação de dados 2026 pode continuar.",
       "records": null
     },
@@ -207,7 +211,7 @@
         {"id": "G7-T1", "task": "Configurar fontes oficiais, cargo, turnos e regras de seleção do candidato; registrar data da fonte sem adivinhar resultado eleitoral nem URL de arquivo ainda inexistente.", "status": "todo", "evidence": []},
         {"id": "G7-T2", "task": "Ensaiar recepção, checksums, versionamento imutável, cobertura e validação com fixtures de 2022 e schemas deliberadamente alterados.", "status": "todo", "evidence": []},
         {"id": "G7-T3", "task": "Testar revisões de arquivos, duplicação de downloads, dados parciais, ausência de segundo turno e conflito de códigos de candidatos; impedir mistura de saídas entre anos/turnos.", "status": "todo", "evidence": []},
-        {"id": "G7-T4", "task": "Entregar roteiro de recepção por turno e condição explícita de liberação inferencial após G6; registrar o que depende dos dados reais.", "status": "todo", "evidence": []}
+        {"id": "G7-T4", "task": "Entregar roteiro de recepção por turno e snapshot oficial, preservando registros anteriores. Testar G8 pass/G9 waiting_external, G8 pass/G9 inconclusive e G9 not_applicable apenas por não ocorrência oficial; explicitar liberação inferencial após G6 e o que depende dos dados reais.", "status": "todo", "evidence": []}
       ],
       "deliverables": ["Configuração e intake 2026", "Fixtures e teste de ensaio", "Roteiro de execução por turno"],
       "acceptance": ["QA executa ensaio limpo e prova que revisões preservam a entrada anterior e não alteram 2022.", "Schema incompatível e cobertura incompleta geram falha identificável.", "Data-ready está separado de inference-ready: G7 não libera inferência sem G6.", "Segundo turno é condicional à ocorrência oficial e disponibilidade dos dados."],
@@ -216,23 +220,47 @@
     },
     {
       "id": "G8",
-      "title": "Aplicação aos dados oficiais de 2026",
-      "goal": "Aplicar por turno o procedimento validado aos dados oficiais de 2026, reavaliar adequação ao novo ano e entregar resultados rastreáveis com revisão independente.",
+      "title": "Aplicação a 2026, primeiro turno",
+      "goal": "Aplicar o procedimento validado ao primeiro turno de 2026, reavaliar adequação ao novo ano e entregar resultados rastreáveis com revisão independente, encerrando esse goal sem depender do segundo turno.",
+      "election_scope": {"year": 2026, "turn": 1},
       "depends_on": ["G6", "G7"],
-      "external_prerequisites": ["Dados oficiais do TSE do turno efetivamente realizado, publicados e com cobertura suficiente para a análise definida."],
+      "external_prerequisites": ["Dados oficiais do TSE do primeiro turno de 2026, publicados e com cobertura suficiente para a análise definida."],
       "status": "waiting_external",
-      "executor": {"role": "SOL-EXECUCAO-2026", "model": "gpt-6-sol", "effort": "high"},
-      "reviewer": {"role": "QA-RESULTADOS-2026", "model": "inherit", "effort": "xhigh", "independent": true},
-      "write_scope": ["output/mebane/2026/", "quality_reports/results/mebane_gates/G8/"],
+      "executor": {"role": "SOL-2026-T1", "model": "gpt-6-sol", "effort": "high"},
+      "reviewer": {"role": "QA-2026-T1", "model": "inherit", "effort": "xhigh", "independent": true},
+      "write_scope": ["output/mebane/2026/T1/", "quality_reports/results/mebane_gates/G8/"],
       "todos": [
-        {"id": "G8-T1", "task": "Arquivar a publicação oficial por turno, validar cobertura/schema/candidatos e reconciliar totais; registrar revisões posteriores separadamente.", "status": "todo", "evidence": []},
+        {"id": "G8-T1", "task": "Arquivar a publicação oficial de T1, validar cobertura/schema/candidatos e reconciliar totais; registrar cada versão em 2026/T1/SHA-do-snapshot/roundN, preservando manifests/records anteriores.", "status": "todo", "evidence": []},
         {"id": "G8-T2", "task": "Avaliar mudança de distribuição, tamanho de seção e estrutura geográfica em relação a 2022; retornar aos gates de dados/modelo se o contrato não se aplicar.", "status": "todo", "evidence": []},
         {"id": "G8-T3", "task": "Executar preflight e estimação com diagnósticos completos por turno e verificar quantidades centrais independentemente.", "status": "todo", "evidence": []},
         {"id": "G8-T4", "task": "Gerar relatório reproduzível com incerteza, revisões e limites; comparar anos apenas em unidades, estimandos e especificações compatíveis.", "status": "todo", "evidence": []}
       ],
       "deliverables": ["Snapshot oficial por turno", "Fits e diagnósticos 2026", "Relatório com revisão independente"],
-      "acceptance": ["Todos os requisitos externos e G6/G7 têm evidência atual, identificada por hash.", "A qualidade inferencial é reavaliada em 2026; aprovação de 2022 não é transferida automaticamente.", "QA reconcilia os dados oficiais, reproduz quantidades reportadas e verifica a comparabilidade entre anos.", "Resultados para segundo turno só existem se esse turno tiver ocorrido e sido analisado."],
-      "on_failure": "Manter o turno afetado inconclusive ou waiting_external, preservar as versões anteriores e corrigir o gate de origem.",
+      "acceptance": ["Todos os requisitos externos e G6/G7 têm evidência atual, identificada por hash.", "A qualidade inferencial é reavaliada em 2026; aprovação de 2022 não é transferida automaticamente.", "QA reconcilia os dados oficiais, reproduz quantidades reportadas e verifica a comparabilidade entre anos.", "Pass refere-se exclusivamente a T1 e à versão oficial revisada; não altera o estado de G9."],
+      "on_failure": "Manter T1 inconclusive ou waiting_external, preservar as versões anteriores e corrigir o gate de origem.",
+      "records": null
+    },
+    {
+      "id": "G9",
+      "title": "Aplicação a 2026, segundo turno condicional",
+      "goal": "Verificar a ocorrência oficial de segundo turno em 2026 e, se realizado, aplicar o procedimento validado e entregar resultados próprios com revisão independente; se não realizado, concluir somente a verificação de não aplicabilidade.",
+      "election_scope": {"year": 2026, "turn": 2},
+      "allow_not_applicable": true,
+      "depends_on": ["G6", "G7"],
+      "external_prerequisites": ["Ocorrência oficial do segundo turno presidencial de 2026 e dados oficiais do TSE publicados com cobertura suficiente para a análise definida."],
+      "status": "waiting_external",
+      "executor": {"role": "SOL-2026-T2", "model": "gpt-6-sol", "effort": "high"},
+      "reviewer": {"role": "QA-2026-T2", "model": "inherit", "effort": "xhigh", "independent": true},
+      "write_scope": ["output/mebane/2026/T2/", "quality_reports/results/mebane_gates/G9/"],
+      "todos": [
+        {"id": "G9-T1", "task": "Conferir oficialmente se T2 ocorreu. Se não ocorreu, arquivar fonte/atestação independente, registrar not_applicable e manter todos analíticos não executados; ausência de publicação não equivale a não ocorrência.", "status": "todo", "evidence": []},
+        {"id": "G9-T2", "task": "Se T2 ocorreu, arquivar snapshot oficial de votos/cobertura/candidatos e reconciliar totais, em 2026/T2/SHA-do-snapshot/roundN; preservar cada revisão anterior.", "status": "todo", "evidence": []},
+        {"id": "G9-T3", "task": "Verificar aplicabilidade do contrato a T2, distribuição e geografia; executar preflight e estimação apenas após G6/G7 pass e dados auditados, com diagnóstico próprio.", "status": "todo", "evidence": []},
+        {"id": "G9-T4", "task": "Entregar relatório de T2 com incerteza, checagem independente e comparação entre anos/turnos somente quando estimandos e amostras forem compatíveis.", "status": "todo", "evidence": []}
+      ],
+      "deliverables": ["Atestação independente de ocorrência ou não ocorrência", "Se aplicável: snapshot, fits, diagnóstico e relatório T2 próprios"],
+      "acceptance": ["Not_applicable exige fonte oficial e atestação independente de não ocorrência de T2; não exige nem representa tarefas analíticas executadas.", "Se T2 ocorreu, pass exige G6/G7 aprovados, dados auditados, todos analíticos concluídos e revisão própria por snapshot.", "Pass de G8 não implica pass de G9; inconclusividade de T2 não apaga aprovação específica de T1.", "Retificação de input reabre somente a versão/turno afetado e seus consumidores; os records anteriores permanecem arquivados."],
+      "on_failure": "Manter T2 waiting_external enquanto faltarem dados ou inconclusive se falhar inferência; nunca usar not_applicable para essas situações.",
       "records": null
     }
   ],

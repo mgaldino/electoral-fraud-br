@@ -39,6 +39,7 @@ nem medido ganho de custo ou velocidade. O tier efetivo não é exposto pelo too
 | SOL-METODO | 01a0ea81-834a-7f43-b6b1-bdf174f14103 | gpt-6-sol | xhigh | sol_metodo.md |
 | QA-PLANO | 01a0ea8e-ac85-76d1-8470-271c7dc6e6bd | herdado, sem override | xhigh | review_science_round1.md/json |
 | QA-LEDGER-SOL | 01a0ea8e-acec-7211-a061-220d8547fc6c | gpt-6-sol | xhigh | review_checker_round1.md/json |
+| SOL-REPARO | 01a0ea96-c9e9-77e3-b931-0d448e1cc876 | gpt-6-sol | xhigh | implementation_checker_round2.md |
 
 Cada subagente recebeu uma tarefa finita e instrução de criar goal próprio, sem
 orçamento de tokens, com todos e escopo exclusivo. Os dois executores preparatórios
@@ -49,7 +50,7 @@ e na adjudicação; esta tabela não antecipa seu veredicto.
 
 ## Correspondência com o pedido
 
-- Nove gates operacionais, G0 a G8, com 40 todos, objetivos, dependências,
+- Dez gates operacionais, G0 a G9, com 45 todos, objetivos, dependências,
   responsabilidades, entregáveis, critérios verificáveis e resposta à falha.
 - Um goal de entrega por executor, outro de revisão por agente independente,
   e coordenação do fechamento pelo agente principal.
