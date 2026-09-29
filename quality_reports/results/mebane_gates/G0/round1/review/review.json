@@ -1,0 +1,61 @@
+{
+  "gate_id": "G0",
+  "round": "round1",
+  "contract_sha256": "e5ba78d6f8d314c2bf94738df85fce0a31d8e9986ef974f6c69ee9e30ee06ca3",
+  "candidate_manifest_sha256": "61649af333a6d2ef6bea20e4ed5e38671bb6d6d5f2b867fbe1d9acdc195169ab",
+  "executor_id": "01a0eaba-2cec-74f3-bca0-8c27b736567e",
+  "reviewer_id": "01a0eace-749b-7490-994c-2cb3b39c9a26",
+  "status": "changes_requested",
+  "manifest_complete": false,
+  "findings": [
+    {
+      "id": "G0-R1-F1",
+      "severity": "major",
+      "localização": "quality_reports/results/mebane_gates/G0/round1/inventory.py (PATTERNS); run.json (inputs); candidate_manifest.json (files)",
+      "evidência": "O inventário cobre output/figures/*.pdf, mas não output/tables/*.csv nem research_note.md. Os quatro CSVs de testes suplementares existem em output/tables e são invocados por README.md e claims.md; CLAUDE.md aponta research_note.md como manuscrito. audit.py verificou que os cinco arquivos existem, mas não aparecem entre os 151 itens do manifesto. Todos os itens declarados passaram SHA-256, porém a declaração está incompleta.",
+      "risco": "O baseline não fixa a versão da evidência tabular histórica nem do documento que orienta o parecer; alterações posteriores podem mudar a interpretação sem mudar o hash do candidato G0.",
+      "reparo": "Adicionar manuscrito e tabelas ao inventário e ao run/manifesto, com hash, tamanho e papel explícito. Atualizar a identidade do candidato e submeter nova rodada de revisão."
+    },
+    {
+      "id": "G0-R1-F2",
+      "severity": "major",
+      "localização": "quality_reports/results/mebane_gates/G0/round1/propose_lock.R (roots); final_state/renv.lock; final_state/R/05_dip_test_diagnostics.R; final_state/R/08_spikes_rozenas.R",
+      "evidência": "O fechamento do lock usa apenas eforensics, rjags, coda, runjags, cmdstanr e posterior como roots. A leitura dos scripts congelados identifica diptest e spikes como dependências diretas; ambos estão instalados, mas não constam do lockfile final. O fechamento recursivo Depends/Imports/LinkingTo dessas duas entradas, refeito em R, também encontra ausentes bbmle, bdsmatrix, emdbook e plyr. O núcleo de 110 pacotes JAGS/Stan está presente com versões literais iguais às instaladas.",
+      "risco": "Uma restauração fria a partir do lockfile não fornece todas as dependências do código e do pipeline documental anunciados no README, ainda que a biblioteca local permita carregar o núcleo.",
+      "reparo": "Reconciliar o lock com todos os scripts incluídos no baseline, acrescentando as seis entradas faltantes com versão e fonte, ou delimitar explicitamente quais scripts ficam fora do ambiente reproduzível e por quê. Não é necessário executar restore no G0."
+    },
+    {
+      "id": "G0-R1-F3",
+      "severity": "major",
+      "localização": "quality_reports/results/mebane_gates/G0/round1/sources.md (fingerprint_brazil.zip); final_state/README.md (Dados)",
+      "evidência": "O ZIP fingerprint_brazil.zip e os quatro membros raw-data passaram SHA-256 e correspondência ZIP→extraído, inclusive votacao_secao_2022_BR.csv de 1.591.148.802 bytes. sources.md declara que não há URL/data de obtenção original do ZIP; inventory.json marca ZIP e extraídos como não rastreados pelo Git. README orienta obter CSVs TSE e XLSX Nexo, mas não identifica como recuperar os mesmos bytes do pacote de replicação dos autores em outro checkout.",
+      "risco": "A cadeia local de integridade é verificável, mas a origem e a recuperação externa dos insumos históricos não são reproduzíveis apenas com o material versionado. Dados TSE oficiais futuros não substituem automaticamente estes bytes históricos.",
+      "reparo": "Registrar origem, data e modo de obtenção do ZIP dos autores e uma forma autorizada de recuperar seus bytes exatos com conferência pelo hash; se isso não puder ser reconstruído, declarar explicitamente que a aquisição do baseline histórico é irrecuperável fora deste checkout e separar esse limite de qualquer promessa de restauração completa."
+    }
+  ],
+  "tests": [
+    {
+      "command": "python3 quality_reports/results/mebane_gates/G0/round1/review/audit.py",
+      "result": "exit 0; hash e tamanho de 151/151 itens coincidem; 32/32 snapshots finais íntegros; 125 pacotes antigos preservados e 49 adicionados; quatro membros do ZIP iguais aos extraídos; cinco omissões materiais detectadas"
+    },
+    {
+      "command": "Rscript --vanilla quality_reports/results/mebane_gates/G0/round1/review/check_loads_independent.R",
+      "result": "exit 0; fresh_v2 carregado como runjags, quatro cadeias de 5.000 draws; R-hat clássico pi[2]=1.246802 e iota.s.alpha=1.713809; quatro parquet carregados; DESCRIPTION e qbl instalado iguais aos snapshots; 110 dependências centrais sem falta ou desvio literal de versão; seis dependências suplementares ausentes do lock"
+    },
+    {
+      "command": "pdfinfo e pdftotext -f 1 -l 1 nos PDFs pm23, measfrauds e SSRN; pdfinfo no PA2024 e no .download",
+      "result": "PDFs primários íntegros com 105 e 75 páginas e versões de 2023-07-02 e 2022-03-06; SSRN íntegro com 50 páginas e autoria Kirill Kalinin, não Mebane; .download inválido por ausência de trailer/xref; hashes locais dos PDFs cobertos em audit.py"
+    },
+    {
+      "command": "Leitura direta de README.md/CLAUDE.md congelados, claims.md, logs e scripts R/Stan congelados",
+      "result": "As correções sobre JAGS, aproximação Stan, ausência de fit nacional e identidade do SSRN correspondem às evidências lidas; handoffs históricos foram preservados sem serem tratados como validação atual."
+    }
+  ],
+  "limits": [
+    "Não executei MCMC, transformação G1, auditoria matemática G2, renv::restore, instalação ou alteração de ambiente.",
+    "A identidade byte a byte dos PDFs locais com as URLs remotas atuais não foi retestada; verifiquei hashes locais, estrutura e identificação de primeira página.",
+    "O teste de versão compara DESCRIPTION$Version literal, pois packageVersion() normaliza hífens em pontos.",
+    "A correspondência dos arquivos não declarados no manifesto com sua eventual versão histórica anterior não pôde ser atestada porque o candidato não lhes atribui hash.",
+    "A revisão de G0 certifica apenas inventário, fontes e ambiente; não certifica inferência, validade matemática nem aprovação do gate."
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "gate_id": "G0",
+  "round": "round2",
+  "todos": [
+    {
+      "id": "G0-T1",
+      "status": "done",
+      "evidence": [
+        {"path": "quality_reports/results/mebane_gates/G0/round1/inventory.json", "basis": "executed", "locator": "108-item base inventory; ZIP/PDF integrity"},
+        {"path": "quality_reports/results/mebane_gates/G0/round2/inventory_additions.json", "basis": "executed", "locator": "research_note.md plus four tables: roles, bytes, SHA-256, snapshots"},
+        {"path": "quality_reports/results/mebane_gates/G0/round2/final_state_map.json", "basis": "executed", "locator": "original to immutable snapshot mapping"}
+      ]
+    },
+    {
+      "id": "G0-T2",
+      "status": "done",
+      "evidence": [
+        {"path": "quality_reports/results/mebane_gates/G0/round1/loads_environment.json", "basis": "executed", "locator": "effective R/JAGS/CmdStan and eforensics RemoteSha"},
+        {"path": "quality_reports/results/mebane_gates/G0/round2/lock_reconciliation.json", "basis": "executed", "locator": "script roots, 13-package closure, six installed missing records"},
+        {"path": "quality_reports/results/mebane_gates/G0/round2/lock_verification.json", "basis": "executed", "locator": "174 preserved, 180 final, zero missing, six literal versions"},
+        {"path": "quality_reports/results/mebane_gates/G0/round2/final_state/renv.lock", "basis": "executed", "locator": "reconciled lockfile snapshot"}
+      ]
+    },
+    {
+      "id": "G0-T3",
+      "status": "done",
+      "evidence": [
+        {"path": "quality_reports/results/mebane_gates/G0/round1/claims.md", "basis": "inspected", "locator": "historical claims versus fit/log evidence"},
+        {"path": "quality_reports/results/mebane_gates/G0/round1/loads_environment.json", "basis": "executed", "locator": "fresh_v2 chains and classical coda diagnostics"},
+        {"path": "quality_reports/results/mebane_gates/G0/round2/final_state/README.md", "basis": "inspected", "locator": "historical data acquisition limitation"}
+      ]
+    },
+    {
+      "id": "G0-T4",
+      "status": "done",
+      "evidence": [
+        {"path": "quality_reports/results/mebane_gates/G0/round1/sources.md", "basis": "inspected", "locator": "source versions, URLs and hashes; unknown ZIP acquisition"},
+        {"path": "quality_reports/results/mebane_gates/G0/round1/eforensics_commit_api.json", "basis": "executed", "locator": "reference commit SHA"},
+        {"path": "quality_reports/results/mebane_gates/G0/round1/loads_environment.json", "basis": "executed", "locator": "readRDS/read_parquet and qbl source equality"}
+      ]
+    }
+  ]
+}

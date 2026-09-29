@@ -1,0 +1,45 @@
+{
+  "base_inventory": "quality_reports/results/mebane_gates/G0/round1/inventory.json",
+  "added_files": [
+    {
+      "original": "research_note.md",
+      "snapshot": "quality_reports/results/mebane_gates/G0/round2/final_state/research_note.md",
+      "sha256": "0cccbb3da4e742fd5e46db7773ba79289618826b33087239d46bef5cfc415051",
+      "bytes": 94906,
+      "origin_round": "round2",
+      "role": "historical manuscript"
+    },
+    {
+      "original": "output/tables/tab_beber_scacco_last_digit.csv",
+      "snapshot": "quality_reports/results/mebane_gates/G0/round2/final_state/output/tables/tab_beber_scacco_last_digit.csv",
+      "sha256": "13118147c118f58d7bc9f8d2ed8d51078cdd49e612c4c8a30c82a496f1750c7b",
+      "bytes": 269,
+      "origin_round": "round2",
+      "role": "historical supplementary-test table"
+    },
+    {
+      "original": "output/tables/tab_benford_2bl.csv",
+      "snapshot": "quality_reports/results/mebane_gates/G0/round2/final_state/output/tables/tab_benford_2bl.csv",
+      "sha256": "744269c4dd049c8d2e0ad712595d5c14abbb192fc14db809d1daf2cb69b46be7",
+      "bytes": 226,
+      "origin_round": "round2",
+      "role": "historical supplementary-test table"
+    },
+    {
+      "original": "output/tables/tab_kobak_integer_pct.csv",
+      "snapshot": "quality_reports/results/mebane_gates/G0/round2/final_state/output/tables/tab_kobak_integer_pct.csv",
+      "sha256": "52809738d976e42df3d990eae42645f178cbc3c348632e07d4b22272c0ca23a7",
+      "bytes": 1490,
+      "origin_round": "round2",
+      "role": "historical supplementary-test table"
+    },
+    {
+      "original": "output/tables/tab_spikes_rozenas.csv",
+      "snapshot": "quality_reports/results/mebane_gates/G0/round2/final_state/output/tables/tab_spikes_rozenas.csv",
+      "sha256": "6a52bbe7cadbd5fa48df5e7ca695652e12679ea17e2f1d023272891f3a122350",
+      "bytes": 150,
+      "origin_round": "round2",
+      "role": "historical supplementary-test table"
+    }
+  ]
+}

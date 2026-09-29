@@ -12,8 +12,8 @@ G8/G9 continuam dependentes de publicação oficial e dos gates inferenciais.
 
 | Gate/papel | Agente nativo | Modelo solicitado | Esforço | Situação |
 |---|---|---|---|---|
-| G0 executor SOL-BASELINE | 01a0eaba-2cec-74f3-bca0-8c27b736567e | gpt-6-sol | high | Candidato entregue; goal próprio concluído |
-| G0 revisor independente QA-BASELINE | 01a0eace-749b-7490-994c-2cb3b39c9a26 | gpt-6-sol | high | Revisão em execução, contexto novo |
+| G0 executor SOL-BASELINE | 01a0eaba-2cec-74f3-bca0-8c27b736567e | gpt-6-sol | high | Round1 entregue; reparos round2 despachados |
+| G0 revisor independente QA-BASELINE | 01a0eace-749b-7490-994c-2cb3b39c9a26 | gpt-6-sol | high | Round1 changes_requested; goal concluído, agente fechado |
 
 O executor deve criar goal próprio sem token budget e escrever somente na
 rodada G0/round1, README, CLAUDE e renv.lock. O coordenador é o único escritor
@@ -50,7 +50,7 @@ Manifesto congelado: SHA-256
 `61649af333a6d2ef6bea20e4ed5e38671bb6d6d5f2b867fbe1d9acdc195169ab`.
 Contrato canônico: SHA-256
 `e5ba78d6f8d314c2bf94738df85fce0a31d8e9986ef974f6c69ee9e30ee06ca3`.
-O ledger está `under_review`, sem aprovação ou liberação de dependentes.
+O ledger está `changes_requested`, sem aprovação ou liberação de dependentes.
 
 O coordenador localizou e arquivou os artigos primários de 2022 e 2023 no
 endereço público oficial alternativo da Universidade de Michigan. Fontes,
@@ -65,6 +65,23 @@ a evidência de baseline. A revisão independente confere essa correspondência.
 
 Preparação documental independente de G1: `tse2022_control_sources.md`,
 `check_tse_controls.R` e `tse2022_control_arithmetic.csv`. A aritmética de
-notícias oficiais de 2022 revela uma discrepância de 657 no denominador de uma
-delas; o registro conserva ambas as fontes e não força os dados a um total
-escolhido. Esse trabalho não equivale à execução ou aprovação de G1.
+notícias oficiais de 2022 revela uma discrepância de 657 no denominador das
+notícias de T1/T2 do TSE; o registro conserva também uma fonte TRE-RN e não
+força os dados a um total escolhido. Esse trabalho não equivale à execução ou
+aprovação de G1.
+
+## Revisão e adjudicação G0 round1
+
+Parecer: `G0/round1/review/review.json`, SHA-256
+`0396d243250471cdf9db8e4c0ea8f80cf0bbe9830ddd4629feb0dec2ddb175b0`.
+Os 151 hashes e 32 snapshots passaram; fit e quatro bases foram carregados
+independentemente. Três lacunas impedem aprovar esta rodada. O coordenador
+confirmou a omissão de manuscrito/tabelas e de seis dependências no lock;
+classificou como parcial a questão de proveniência, delimitando o reparo à
+promessa excessiva de recuperação externa no README.
+
+Adjudicação: `G0/round1/adjudication.json` e `.md`, validados com a skill
+`adjudicate-review`. Veredicto `READY_FOR_IMPLEMENTATION`; não é pass do gate.
+O executor recebeu somente os reparos confirmados e o escopo confirmado do
+parcial, com nova rodada e preservação integral da anterior. Nova checagem
+independente será feita sobre o novo manifesto. Nenhum pacote será instalado.

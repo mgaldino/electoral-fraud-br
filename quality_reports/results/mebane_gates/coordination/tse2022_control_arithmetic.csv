@@ -1,3 +1,4 @@
-"source","electorate","turnout","abstention","valid","blank","null","leader","runner_up","electorate_identity_gap","turnout_identity_gap","valid_identity_gap"
-"TSE_news_T2",156454011,124252796,32200558,118552353,1769678,3930765,60345999,58206354,657,0,0
-"TRE_RN_national_T2",156454011,124252796,32201215,118552353,1769678,3930765,60345999,58206354,0,0,0
+"source","turn","electorate","turnout","abstention","valid","blank","null","leader","runner_up","electorate_identity_gap","turnout_identity_gap","other_nominal_residual"
+"TSE_news_T2",2,156454011,124252796,32200558,118552353,1769678,3930765,60345999,58206354,657,0,0
+"TRE_RN_national_T2",2,156454011,124252796,32201215,118552353,1769678,3930765,60345999,58206354,0,0,0
+"TSE_news_T1",1,156454011,123682372,32770982,118229719,1964779,3487874,57259504,51072345,657,0,9897870

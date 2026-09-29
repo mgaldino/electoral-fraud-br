@@ -28,10 +28,6 @@ raw-data/
   votos_presidente_muni_nexojornal_2022.xlsx
 ```
 
-### Denominadores do eforensics
-
-A [nota sobre eleitorado, votos depositados, brancos e nulos](quality_reports/results/2026-09-28_mebane_denominadores_brancos_nulos.md) documenta as definições de Mebane, as entradas dos scripts e as verificações das contagens. O baseline usa eleitores aptos como `N` e abstenções efetivas como `a`, de modo que `V = N - a` corresponde ao comparecimento, incluindo brancos e nulos. Há precedente dessa inclusão nas aplicações do autor; isso não constitui validação empírica da escolha para o Brasil. A nota explicita as limitações das fontes e a sensibilidade ainda não testada.
-
 ### Setup
 
 ```bash

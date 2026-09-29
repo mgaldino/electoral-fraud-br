@@ -1,0 +1,54 @@
+{
+  "prior_records_preserved": 174,
+  "final_records": 180,
+  "roots": ["diptest", "spikes"],
+  "closure_count": 13,
+  "missing_after_merge": [],
+  "scanned_R_scripts": ["00_setup.R", "01_load_tse.R", "02_build_vars.R", "03_fingerprint_base.R", "04_eforensics_calibrate.R", "05_compare_fits.R", "05_dip_test_diagnostics.R", "05_eforensics_qbl_fresh_diagnostic.R", "05_eforensics_umeforensics_qbl.R", "05_jags_qbl_zone_fe.R", "05_kobak_integer.R", "05_stan_eforensics_calibrate.R", "05_stan_eforensics_qbl_calibrate.R", "06_beber_scacco.R", "06_sp_linearity_check.R", "07_benford_2bl.R", "07_brasil_full_qbl.R", "08_spikes_rozenas.R"],
+  "direct_roots": ["arrow", "cli", "cmdstanr", "coda", "data.table", "diptest", "dplyr", "eforensics", "fixest", "fs", "future.apply", "ggplot2", "glue", "here", "jsonlite", "knitr", "patchwork", "posterior", "progressr", "readr", "readxl", "remotes", "rjags", "rmarkdown", "runjags", "scales", "spikes", "stringi", "stringr", "tidyr", "tidyverse", "viridis"],
+  "missing_direct_roots": [],
+  "six_records": {
+    "bbmle": {
+      "package": "bbmle",
+      "observed": "1.0.25.1",
+      "locked": "1.0.25.1",
+      "equal": true,
+      "source": "Repository"
+    },
+    "bdsmatrix": {
+      "package": "bdsmatrix",
+      "observed": "1.3-7",
+      "locked": "1.3-7",
+      "equal": true,
+      "source": "Repository"
+    },
+    "diptest": {
+      "package": "diptest",
+      "observed": "0.77-2",
+      "locked": "0.77-2",
+      "equal": true,
+      "source": "Repository"
+    },
+    "emdbook": {
+      "package": "emdbook",
+      "observed": "1.3.14",
+      "locked": "1.3.14",
+      "equal": true,
+      "source": "Repository"
+    },
+    "plyr": {
+      "package": "plyr",
+      "observed": "1.8.9",
+      "locked": "1.8.9",
+      "equal": true,
+      "source": "Repository"
+    },
+    "spikes": {
+      "package": "spikes",
+      "observed": "1.1",
+      "locked": "1.1",
+      "equal": true,
+      "source": "Repository"
+    }
+  }
+}

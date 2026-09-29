@@ -1,0 +1,66 @@
+{
+  "frozen_scripts": ["quality_reports/results/mebane_gates/G0/round1/final_state/R/00_setup.R", "quality_reports/results/mebane_gates/G0/round1/final_state/R/01_load_tse.R", "quality_reports/results/mebane_gates/G0/round1/final_state/R/02_build_vars.R", "quality_reports/results/mebane_gates/G0/round1/final_state/R/03_fingerprint_base.R", "quality_reports/results/mebane_gates/G0/round1/final_state/R/04_eforensics_calibrate.R", "quality_reports/results/mebane_gates/G0/round1/final_state/R/05_compare_fits.R", "quality_reports/results/mebane_gates/G0/round1/final_state/R/05_dip_test_diagnostics.R", "quality_reports/results/mebane_gates/G0/round1/final_state/R/05_eforensics_qbl_fresh_diagnostic.R", "quality_reports/results/mebane_gates/G0/round1/final_state/R/05_eforensics_umeforensics_qbl.R", "quality_reports/results/mebane_gates/G0/round1/final_state/R/05_jags_qbl_zone_fe.R", "quality_reports/results/mebane_gates/G0/round1/final_state/R/05_kobak_integer.R", "quality_reports/results/mebane_gates/G0/round1/final_state/R/05_stan_eforensics_calibrate.R", "quality_reports/results/mebane_gates/G0/round1/final_state/R/05_stan_eforensics_qbl_calibrate.R", "quality_reports/results/mebane_gates/G0/round1/final_state/R/06_beber_scacco.R", "quality_reports/results/mebane_gates/G0/round1/final_state/R/06_sp_linearity_check.R", "quality_reports/results/mebane_gates/G0/round1/final_state/R/07_benford_2bl.R", "quality_reports/results/mebane_gates/G0/round1/final_state/R/07_brasil_full_qbl.R", "quality_reports/results/mebane_gates/G0/round1/final_state/R/08_spikes_rozenas.R"],
+  "script_count": 18,
+  "roots": ["arrow", "cli", "cmdstanr", "coda", "data.table", "diptest", "dplyr", "eforensics", "fixest", "fs", "future.apply", "ggplot2", "glue", "here", "knitr", "patchwork", "posterior", "progressr", "readr", "readxl", "remotes", "rjags", "rmarkdown", "runjags", "scales", "spikes", "stringi", "stringr", "tidyr", "tidyverse", "viridis"],
+  "closure_count": 179,
+  "missing": [],
+  "version_mismatches": [],
+  "six_records": [
+    {
+      "package": "bbmle",
+      "observed_version": "1.0.25.1",
+      "locked_version": "1.0.25.1",
+      "source": "Repository",
+      "repository": "CRAN",
+      "remote_sha": null,
+      "version_equal": true
+    },
+    {
+      "package": "bdsmatrix",
+      "observed_version": "1.3-7",
+      "locked_version": "1.3-7",
+      "source": "Repository",
+      "repository": "CRAN",
+      "remote_sha": null,
+      "version_equal": true
+    },
+    {
+      "package": "diptest",
+      "observed_version": "0.77-2",
+      "locked_version": "0.77-2",
+      "source": "Repository",
+      "repository": "CRAN",
+      "remote_sha": null,
+      "version_equal": true
+    },
+    {
+      "package": "emdbook",
+      "observed_version": "1.3.14",
+      "locked_version": "1.3.14",
+      "source": "Repository",
+      "repository": "CRAN",
+      "remote_sha": null,
+      "version_equal": true
+    },
+    {
+      "package": "plyr",
+      "observed_version": "1.8.9",
+      "locked_version": "1.8.9",
+      "source": "Repository",
+      "repository": "CRAN",
+      "remote_sha": null,
+      "version_equal": true
+    },
+    {
+      "package": "spikes",
+      "observed_version": "1.1",
+      "locked_version": "1.1",
+      "source": "Repository",
+      "repository": "CRAN",
+      "remote_sha": null,
+      "version_equal": true
+    }
+  ],
+  "r_version": "R version 4.4.2 (2024-10-31)",
+  "method": "Parse frozen R expressions; recursive installed Depends/Imports/LinkingTo; literal DESCRIPTION versions"
+}
