@@ -3,7 +3,7 @@
   "plan_id": "mebane-brasil-2022-2026",
   "date": "2026-09-28",
   "scope": "Modelo eforensics qbl para eleição presidencial brasileira de 2022 e preparação para 2026, com execução por subagentes, goals delimitados e revisão independente.",
-  "current_deliverable": "Protocolo de execução e sua revisão independente. Os gates analíticos abaixo permanecem na fila até serem efetivamente executados e verificados.",
+  "current_deliverable": "Execução autorizada pelo usuário em 2026-09-28. O ledger registra o avanço real; nenhum resultado é aprovado antes da revisão independente e adjudicação do gate correspondente.",
   "coordinator": "Agente principal desta conversa: despacha, acompanha, adjudica achados e autoriza transições técnicas com base em evidências.",
   "routing": {
     "basis": "Heurística conservadora, sem benchmark comparativo de qualidade ou velocidade entre modelos neste projeto.",
@@ -51,15 +51,15 @@
       "goal": "Entregar inventário verificável de dados, documentos, código, fits e ambiente, distinguindo execução histórica de validação atual e tornando possível reproduzir o baseline.",
       "depends_on": [],
       "external_prerequisites": [],
-      "status": "queued",
+      "status": "running",
       "executor": {"role": "SOL-BASELINE", "model": "gpt-6-sol", "effort": "high"},
       "reviewer": {"role": "QA-BASELINE", "model": "gpt-6-sol", "effort": "high", "independent": true},
       "write_scope": ["quality_reports/results/mebane_gates/G0/", "renv.lock", "README.md", "CLAUDE.md"],
       "todos": [
-        {"id": "G0-T1", "task": "Inventariar Git, arquivos brutos/processados, fits, logs e PDFs; registrar integridade, hashes e proveniência sem alterar os originais.", "status": "todo", "evidence": []},
-        {"id": "G0-T2", "task": "Extrair versões efetivas de R, pacotes, JAGS e CmdStan e o commit de eforensics; reconciliar renv.lock com os componentes usados sem atualizar o ambiente silenciosamente.", "status": "todo", "evidence": []},
-        {"id": "G0-T3", "task": "Reconciliar README/CLAUDE/handoffs com a evidência: registrar falhas JAGS/Stan, a aproximação Stan e a ausência de resultado nacional, mantendo os logs históricos.", "status": "todo", "evidence": []},
-        {"id": "G0-T4", "task": "Fixar fontes bibliográficas e versão exata do código de referência; testar carregamento não destrutivo dos artefatos necessários e documentar faltantes.", "status": "todo", "evidence": []}
+        {"id": "G0-T1", "task": "Inventariar Git, arquivos brutos/processados, fits, logs e PDFs; registrar integridade, hashes e proveniência sem alterar os originais.", "status": "in_progress", "evidence": []},
+        {"id": "G0-T2", "task": "Extrair versões efetivas de R, pacotes, JAGS e CmdStan e o commit de eforensics; reconciliar renv.lock com os componentes usados sem atualizar o ambiente silenciosamente.", "status": "in_progress", "evidence": []},
+        {"id": "G0-T3", "task": "Reconciliar README/CLAUDE/handoffs com a evidência: registrar falhas JAGS/Stan, a aproximação Stan e a ausência de resultado nacional, mantendo os logs históricos.", "status": "in_progress", "evidence": []},
+        {"id": "G0-T4", "task": "Fixar fontes bibliográficas e versão exata do código de referência; testar carregamento não destrutivo dos artefatos necessários e documentar faltantes.", "status": "in_progress", "evidence": []}
       ],
       "deliverables": ["Inventário e manifestos de fontes/ambiente", "Lockfile reconciliado", "Mapa de alegações históricas versus evidência"],
       "acceptance": ["Todo artefato usado nos próximos gates tem versão e proveniência identificáveis.", "Artefatos em download/incompletos não são tratados como fontes válidas.", "Restauração do ambiente é verificável com o material disponível; dependência ausente permanece explícita e impede alegar reprodução completa.", "QA recalcula hashes de uma amostra material, verifica o commit do pacote e carrega ao menos um fit e um conjunto de dados necessários."],
