@@ -1,0 +1,129 @@
+{
+  "schema_version": "1.0",
+  "gate_id": "G2",
+  "round": "round2",
+  "contract_sha256": "f834bc1d12d88b4bc82fb2ada95120a838451c5809332630a75cd9abf03cf4d1",
+  "contract_hash_kind": "canonical_json_sha256_sort_keys_true_ensure_ascii_false_compact_separators",
+  "candidate_manifest_sha256": "5c4b39aaa1c2a273b1c7f4e9370291172d35d0f4a5a17afd079396c3a1984170",
+  "benchmark_contract_sha256": "63b61fb0594d0302a03d999bcff6c62967b6e999f37b4c9a8821f0f8e9ed18d2",
+  "run_sha256": "a549043d82fa34856e56148d233037e761ca8f0c57a0b1f1af9d955ec959d359",
+  "executor_id": "01a0eaee-01df-7773-bd63-d321db26a47c",
+  "reviewer_id": "01a0ed49-99a4-7892-af77-e62f82667860",
+  "reviewer_role": "QA-METODO-independent-round2",
+  "goal_id": "01a0ed49-99a4-7892-af77-e62f82667860",
+  "independent": true,
+  "participated_in_implementation": false,
+  "status": "inconclusive",
+  "benchmark_closure_result": "pass_in_delimited_methodological_scope",
+  "manifest_complete": false,
+  "candidate_manifest_complete": true,
+  "candidate_direct_files_verified": 163,
+  "candidate_modified": false,
+  "coordinator_adjudication": false,
+  "inferential_approval": false,
+  "G3_approval": false,
+  "summary": "D1-D3 estão fechadas para o benchmark literal autorizado e passaram em 59 checagens próprias. Todos os 163 arquivos de G2 estão íntegros. A assinatura geral fica inconclusive porque um arquivo integrante do manifesto dependente G0 foi removido durante a revisão: conferia no início e está ausente no final. Não foi identificado defeito material novo nas decisões ou funcionais de G2; a pendência é restrita à integridade/proveniência de G0, não à matemática do benchmark.",
+  "findings": [
+    {
+      "id": "G2-R2-QA-I1",
+      "severity": "major",
+      "classification": "CONFIRMED",
+      "category": "dependency_integrity_concurrent_change",
+      "title": "Dependência congelada G0 perdeu um arquivo durante a QA",
+      "blocks_current_signoff": true,
+      "contract_derivation_defect": false,
+      "locations": [
+        {"path": "quality_reports/results/mebane_gates/G0/round2/candidate_manifest.json", "line": 792},
+        {"path": "quality_reports/results/mebane_gates/G0/round1/inventory.json", "line": 610},
+        {"path": "quality_reports/results/mebane_gates/G2/round2/review/integrity_initial.json", "locator": "G0_dependency_manifest:ssrn-4073770.pdf.download/ssrn-4073770.pdf"},
+        {"path": "quality_reports/results/mebane_gates/G2/round2/review/integrity_final.json", "locator": "same check; expected hash recorded, actual=null"}
+      ],
+      "evidence": "Em 2026-09-29T13:13:46Z o arquivo de 1360 bytes conferia com SHA256 524dc82c59612ec91b3a6ab475dd34f0607546a37823c9a9b1fd652677a8acdf. Em 2026-09-29T13:19:25Z estava ausente. ls confirmou que a pasta .download não existe; git status mostra deleção dos dois arquivos rastreados. O revisor não realizou essa remoção.",
+      "counterevidence_and_scope": "G0 já classificava o PDF como invalid_or_incomplete. Ele não é fonte científica de G2 e não integra os 163 arquivos diretos do candidato G2. O literal JAGS, ef_main, contratos, autorização congelada pela QA, aprovações G0 e toda evidência matemática herdada continuam íntegros. Sua remoção não demonstra erro de D1-D3. A severidade se refere à condição formal de dependência congelada, não à validade científica do arquivo rejeitado.",
+      "consequence": "Não se pode afirmar neste instante que todos os bytes do manifesto G0 aprovado permanecem recuperáveis nos caminhos declarados. O parecer não resolve silenciosamente uma mudança concorrente de proveniência.",
+      "requested_resolution": "Coordenação deve registrar o tratamento autorizado do arquivo removido e reconciliar a recuperabilidade da dependência G0. Depois, basta rechecagem delimitada da integridade e do vínculo; não repetir a auditoria round1 nem alterar as escolhas metodológicas por causa deste achado.",
+      "proposal_safety": "owner_decision",
+      "implementation_performed": false
+    }
+  ],
+  "decision_closure": [
+    {
+      "id": "G2-QA-D1",
+      "historical_classification": "CONFIRMED",
+      "closure_status": "resolved_by_authorized_choice",
+      "review_result": "pass",
+      "scientific_defect_refuted": false,
+      "evidence": ["appendices/mebane_model_contract.md:307", "quality_reports/results/mebane_gates/G2/round2/benchmark_contract.json:18", "quality_reports/results/mebane_gates/G0/round1/qbl_installed_3017de5.jags:157", "independent_checks.csv:literal_matches_primary_qbl,D1_invalid_parent_retained,D1_no_runtime_assumption"],
+      "scope": "Commit 3017de537450f97a01872d0157462a68bea348ee, JAGS 4.3.2 exigido; não executado. F1/F2 continuam limitações. pW=499.5 confirmado algebricamente; sem clamp, normalização ou redraw. Semântica runtime fica para G3."
+    },
+    {
+      "id": "G2-QA-D2",
+      "historical_classification": "CONFIRMED",
+      "closure_status": "resolved_by_authorized_choice",
+      "review_result": "pass",
+      "scientific_defect_refuted": false,
+      "evidence": ["appendices/mebane_model_contract.md:315", "quality_reports/results/mebane_gates/G0/round1/qbl_installed_3017de5.jags:13", "quality_reports/results/mebane_gates/G0/round1/qbl_installed_3017de5.jags:86", "independent_checks.csv:literal_hierarchy_*,D2_alpha_b0_six_blocks,interface_six_intercept_matrices"],
+      "scope": "Seis X com coluna de uns e dimensões 1, seis efeitos por observação, alpha+b0, ordem parcial de pi, variâncias Exp(5), precisão 1/v, variância de b0=1e-4 e inclinações=1 preservadas. Geografia de produção não selecionada; G4 antes de G6."
+    },
+    {
+      "id": "G2-QA-D3",
+      "historical_classification": "CONFIRMED",
+      "closure_status": "resolved_by_authorized_choice",
+      "review_result": "pass",
+      "scientific_defect_refuted": false,
+      "evidence": ["appendices/mebane_model_contract.md:225", "appendices/mebane_model_contract.md:321", "independent_checks.csv:D3_executor_rows_independently_recomputed,D3_totals_same_draw,D3_margin_independent_oracle", "independent_functionals.csv"],
+      "scope": "M=N*m*(1-tau), S=N*s*tau*(1-nu), zero em Z=1, sem ruído adicional e com latentes do mesmo draw. Totais conjuntos, médias condicionais separadas de quantis e limites condicionais Dobs-M-2S a Dobs-M-S; inviabilidades preservadas, nenhum vencedor pontual identificado."
+    }
+  ],
+  "reviewed_concerns": [
+    {
+      "id": "G2-R2-QA-RUNNER",
+      "classification": "REFUTED",
+      "claim_reviewed": "O runner impediria toda reprodução não destrutiva ou a documentação omitiria a condição necessária.",
+      "confirmed_subclaim": "O runner rejeita saída alternativa e regrava o diretório results canônico quando executado na árvore congelada.",
+      "refuting_evidence": "implementation.md:50 já instrui explicitamente a usar cópia isolada do candidato ou script/diretório próprio após o freeze e avisa que R_session.txt é regravado.",
+      "locations": [
+        {"path": "tests/mebane/algebra/test_benchmark_round2.R", "line": 1},
+        {"path": "tests/mebane/algebra/test_benchmark_round2.R", "line": 8},
+        {"path": "quality_reports/results/mebane_gates/G2/round2/implementation.md", "line": 46},
+        {"path": "quality_reports/results/mebane_gates/G2/round2/implementation.md", "line": 50}
+      ],
+      "evidence": "Somente a expressão de guarda foi avaliada em ambiente isolado: diretório review rejeitado, diretório congelado aceito. Nenhuma expressão de escrita do runner executada. Testes runner_* em independent_checks.csv.",
+      "disposition": "Limite operacional documentado, não finding bloqueante adicional. Não executar o comando na árvore original; uma futura reprodução deve usar cópia isolada da árvore com caminhos relativos preservados, ou os scripts próprios de QA. A capacidade de reprodução em cópia não foi testada integralmente nesta revisão."
+    }
+  ],
+  "todos": [
+    {"id": "G2-T1", "review_result": "inherited_plus_closure_checked", "scope": "Diferenças paper/JAGS/Stan preservadas; mapeamento novo formula1=w/Xw e formula2=a/Xa testado em trecho primário isolado. Dois wrappers históricos invertidos, listas diretas fresh_v2 e zoneFE corretas; sem atribuir convergência à inversão."},
+    {"id": "G2-T2", "review_result": "inherited_plus_closure_checked", "scope": "Derivações round1 preservadas; priors e seis blocos confrontados com fonte literal e escolhas D2 testadas. Não repetida auditoria integral."},
+    {"id": "G2-T3", "review_result": "inherited_plus_closure_checked", "scope": "D1 preserva suporte e normalização como limitações; contraexemplo numérico e controle válido, sem execução JAGS."},
+    {"id": "G2-T4", "review_result": "independent_closure_checked", "scope": "Oito linhas e quatro totais recalculados por oráculo escalar próprio; seleção de classe, átomo, dependência por draw, incerteza condicional, limites e inviabilidades verificados."},
+    {"id": "G2-T5", "review_result": "independent_round1_rederivation_preserved_plus_round2_closure_checked", "scope": "75 checks, 162 enumerações e 9 checks de adjudicação herdados, com hashes conferidos; seção 5 idêntica byte a byte. Não reexecutados. Limites do kernel diagnóstico e custo não medido mantidos; novos testes são somente de fechamento."}
+  ],
+  "verification": {
+    "own_numerical_interface_documentary_checks": {"passed": 59, "total": 59, "absolute_tolerance": 1e-11, "RNG": "none", "MCMC": false},
+    "initial_integrity": {"passed": 719, "total": 719, "timestamp_utc": "2026-09-29T13:13:46.688626+00:00"},
+    "final_integrity": {"passed": 719, "total": 720, "timestamp_utc": "2026-09-29T13:19:25.178896+00:00", "new_check_since_initial": "nine inherited adjudication rows"},
+    "candidate_files": {"verified": 163, "failed": 0},
+    "source_execution_boundary": "Somente qbl() retornando string, getRegMatrix e atribuições isoladas de construção de dat da fonte primária; listas dat históricas isoladas. Nenhum wrapper completo, loader, processamento real ou ajuste executado.",
+    "warnings": "Fonte getRegMatrix emite non-list contrasts argument ignored; log preservado. Casos numéricos sem fatores passaram, mas nenhuma seleção ou certificação de contrastes geográficos foi feita.",
+    "executor_runner_executed": false,
+    "round1_runners_executed": false,
+    "run_manifest_fields_verified": ["inputs", "code", "configuration", "outputs", "executed_code"],
+    "authorization": "Citação está congelada no benchmark_contract e ligada pelo run. O arquivo coordination/authorization.md não figura como input do run; foi confrontado e congelado byte a byte pela QA em snapshots/authorization.md. O pedido atual também confirma explicitamente a autorização. Não se alega que o run tenha hasheado esse arquivo externo.",
+    "mutable_ledger_used": false,
+    "git_diff_check_exit_code": 0,
+    "git_diff_check_limit": "Diretório review não rastreado; conferência adicional dos arquivos novos é feita no selo próprio, não inferida apenas do git diff."
+  },
+  "commands": "commands.json contém argv, ambiente, horários, códigos de saída e logs; development_checks.json preserva correções dos scripts próprios, sem mudança de tolerâncias ou candidato.",
+  "limits": [
+    "Este parecer não substitui adjudicação da coordenação. O PASS metodológico delimitado não é um PASS geral do projeto.",
+    "Integridade da dependência G0 sofreu mudança concorrente; não restaurada ou reclassificada pelo revisor.",
+    "Sem JAGS/Stan, MCMC, instalação, download, inferência, identificação, convergência, potência ou benchmark nacional.",
+    "Semântica runtime de pais inválidos e interface realmente consumida pelo JAGS continuam testes G3, inclusive reparo dos wrappers históricos.",
+    "Priors e desenho do benchmark não escolhem geografia nacional. G4/G6 e replicação externa continuam separados.",
+    "Resultados fresh_v2/zoneFE são históricos, não prova de convergência; comentário do usuário preservado literalmente.",
+    "Nenhuma nova leitura integral dos papers ou auditoria round1 foi feita; evidência independente herdada foi verificada por hash e escopo.",
+    "Sem edição de candidato, ledger, produção, fontes, renv ou evidência round1; somente review/ recebeu escritas.",
+    "Entrega em JSON/Markdown conforme pedido; PDF consolidado atribuído à coordenação no registro congelado implementation.md:54."
+  ]
+}

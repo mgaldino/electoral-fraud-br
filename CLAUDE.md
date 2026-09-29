@@ -8,7 +8,11 @@ Parecer sobre a research note de terceiros "Is there evidence of fraud in Brazil
 
 ## Estado atual
 
-O protocolo vigente é `quality_reports/plans/mebane_2022_2026_gates.json`: baseline G0, validação de dados/modelo/inferência de 2022 e preparação separada para os turnos de 2026. G0, G1 e G7 round2 estão aprovados. G7 cobre staging ensaiado de CSV normalizado, não conversor bruto oficial nem atestação de votos reais de 2026. G2 tem auditoria matemática e rederivação independente concluídas, mas permanece `changes_requested` por decisões de alvo, priors e estimandos. Consultar `appendices/mebane_model_contract.md` e `quality_reports/results/mebane_gates/G2/round1/adjudication.md`. Blocos 0-2 e testes suplementares têm artefatos históricos; não equivalem a validação atual. O pipeline qbl nacional e as conclusões inferenciais continuam pendentes; o ledger prevalece sobre este resumo.
+O protocolo vigente é `quality_reports/plans/mebane_2022_2026_gates.json`. O usuário autorizou o benchmark literal qbl/JAGS e replicação externa dos autores (novo G10 entre G3 e G4). D1-D3 de G2 round2 passaram em 59 checagens metodológicas independentes; preservam priors efetivas, desenho inicial intercept-only com hierarquia e funcionais conjuntos, sem aprovação inferencial. Consultar `appendices/mebane_model_contract.md` e `quality_reports/results/mebane_gates/G2/round2/benchmark_contract.json`.
+
+Há uma pendência formal de integridade desde 29/09: `ssrn-4073770.pdf.download/ssrn-4073770.pdf`, de 1360 bytes e já classificado como incompleto, foi removido por ação concorrente durante a QA. Ele não é fonte do modelo; seus bytes são recuperáveis no Git. O usuário foi consultado antes de qualquer restauração. G0 fica `changes_requested`, G1/G7 `queued` e G2 `inconclusive` enquanto se resolve a dependência. Pareceres anteriores permanecem arquivados; fontes científicas, dados e matemática não foram alterados por esse incidente. Ver `G2/round2/adjudication_initial.json` e `coordination/2026-09-29_benchmark_round/ledger_pre_integrity_hold.json`, sob `quality_reports/results/mebane_gates/`.
+
+G7 cobre staging ensaiado de CSV normalizado, não conversor bruto oficial nem atestação de votos reais de 2026. A descoberta de materiais de replicação dos autores foi revisada, mas nenhum ajuste externo foi reproduzido e G10 não passou. Blocos 0-2 e testes suplementares têm artefatos históricos; não equivalem a validação atual. O pipeline nacional e as conclusões inferenciais continuam pendentes; o ledger prevalece sobre este resumo.
 
 - Manuscrito: `research_note.md`
 - Plano metodologico aprovado: `quality_reports/plans/2026-04-10_reconstrucao-metodologica.md`
@@ -47,8 +51,8 @@ R. O baseline qbl usa `eforensics` 0.0.4 de `UMeforensics/eforensics_public` no 
    - `quality_reports/results/bloco3_session_handoff.md` (estado geral)
    - `quality_reports/results/05_stan_qbl_session_handoff.md` (detalhes qbl)
 2. Checar `git log --oneline -10` e `git status`.
-3. Ler o ledger vigente e as evidencias congeladas da rodada G0 round2. Nao rodar a analise nacional antes de G1-G5 aprovados, sobretudo o preflight de recursos.
-4. Tratar escolhas de engine, especificacao e criterios inferenciais como pendentes dos gates G2-G4, nao como decisoes aprovadas pelos handoffs de abril.
+3. Ler o ledger vigente, verificar `integrity_hold` e as evidências congeladas. Não restaurar a exclusão concorrente sem a decisão solicitada ao usuário. Não rodar análise nacional antes de G1-G5 e G10 aprovados, sobretudo o preflight de recursos.
+4. O benchmark literal foi escolhido; engine de produção, geografia e critérios inferenciais continuam sujeitos aos gates pertinentes. Não usar handoffs de abril como aprovação. G10 exige contrato de replicação revisado antes da execução comparativa.
 5. Os loaders G1 exigem `CONFIG_JSON` e diretório de saída explícitos. Não usar as chamadas antigas sem argumentos nem ligar automaticamente seus produtos aos scripts históricos. Ver comandos vigentes no README; preservar rounds congelados e `data/processed/`.
 
 ### Evidencia historica e limites
@@ -57,3 +61,4 @@ R. O baseline qbl usa `eforensics` 0.0.4 de `UMeforensics/eforensics_public` no 
 - O log Stan de 2.000 observacoes identifica o modelo como aproximado e registra `rhat_max` 1.229 e `ess_bulk_min` 8.2. Igualdade com o JAGS nao foi demonstrada.
 - O handoff de abril usa limites de R-hat mais permissivos que os criterios definidos no plano atual G4; resultados historicos nao os substituem.
 - O PDF local `ssrn-4073770.pdf` e um artigo de Kirill Kalinin (2022), nao um paper de Mebane. O arquivo na pasta `.download` e incompleto; nao usar como fonte valida.
+- A interface UMeforensics usa formula1=w/Xw e formula2=a/Xa. Dois wrappers históricos inverteram as chamadas; o reparo AR-02 é independente da pendência de integridade e não reestima resultados. As listas diretas fresh_v2/zoneFE estão corretas nesse ponto.

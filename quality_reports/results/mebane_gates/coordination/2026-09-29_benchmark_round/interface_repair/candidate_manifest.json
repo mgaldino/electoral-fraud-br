@@ -1,0 +1,57 @@
+{
+  "schema_version": "1.0",
+  "candidate_id": "AR-02-interface-repair-2026-09-29",
+  "created_at_utc": "2026-09-29T13:38:26Z",
+  "status": "READY_FOR_INDEPENDENT_QA",
+  "gate_status": "PRE_G3_CANDIDATE_ONLY",
+  "base_commit": "b10c2a750c08f57fe80e68c9ad32e0e5d9c25758",
+  "adjudication": "quality_reports/results/mebane_gates/coordination/2026-09-29_benchmark_round/interface_repair_adjudication.json",
+  "reference": {
+    "package_remote_sha": "3017de537450f97a01872d0157462a68bea348ee",
+    "package_source_path": "quality_reports/results/mebane_gates/G2/round2/sources/ef_main_3017de5.R",
+    "package_source_sha256": "ee626c0c939f84567c0ee74a100954229567911711193716a46837e1d6e3ce8b",
+    "mapping_lines": "667-675: formula1 -> w/Xw; formula2 -> a/Xa",
+    "benchmark_contract_path": "quality_reports/results/mebane_gates/G2/round2/benchmark_contract.json",
+    "benchmark_contract_sha256": "63b61fb0594d0302a03d999bcff6c62967b6e999f37b4c9a8821f0f8e9ed18d2"
+  },
+  "changed_files": [
+    {
+      "path": "R/05_eforensics_umeforensics_qbl.R",
+      "before_sha256": "659c12cdf1881b7a5b9dcdf9d463799f93362c0ae1744302128c4b6577b7b5c5",
+      "after_sha256": "e00ae5283d13807bd1870ec760c64bc645ce9f42f0bfcaf5553344385cc141ad",
+      "preserved_before": [
+        "quality_reports/results/mebane_gates/coordination/2026-09-29_benchmark_round/replication_review_inputs/R/05_eforensics_umeforensics_qbl.R",
+        "quality_reports/results/mebane_gates/G0/round1/final_state/R/05_eforensics_umeforensics_qbl.R"
+      ],
+      "formula_pairs_repaired": 3,
+      "diff_numstat": "6 insertions, 6 deletions"
+    },
+    {
+      "path": "R/07_brasil_full_qbl.R",
+      "before_sha256": "1244e5f6e49c5842ef109f8ded2a1caa3ba7ddd0a83eeeaa4694f7d08775d862",
+      "after_sha256": "e7815dcbfb3f7b9ee74eb036da54a344f93e675e2e9cab7f927a00cf2d334350",
+      "preserved_before": [
+        "quality_reports/results/mebane_gates/coordination/2026-09-29_benchmark_round/replication_review_inputs/R/07_brasil_full_qbl.R",
+        "quality_reports/results/mebane_gates/G0/round1/final_state/R/07_brasil_full_qbl.R"
+      ],
+      "formula_pairs_repaired": 1,
+      "diff_numstat": "2 insertions, 2 deletions"
+    }
+  ],
+  "test_file": {
+    "path": "tests/mebane/likelihood/test_ar02_interface.R",
+    "sha256": "90f939a4b9ea8f87d73e4e91c2e38ff91733aaea983fd79ffb91864f88f630b3"
+  },
+  "evidence_files": [
+    "quality_reports/results/mebane_gates/coordination/2026-09-29_benchmark_round/interface_repair/run.json",
+    "quality_reports/results/mebane_gates/coordination/2026-09-29_benchmark_round/interface_repair/implementation.md"
+  ],
+  "excluded": [
+    "G3 execution or approval",
+    "MCMC or Stan compilation",
+    "national loader or historical runners",
+    "fit re-estimation or reinterpretation",
+    "global replication adjudication and ledger changes",
+    ".download recovery or deletion"
+  ]
+}

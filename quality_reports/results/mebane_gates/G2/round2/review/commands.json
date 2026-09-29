@@ -1,0 +1,52 @@
+[
+  {
+    "argv": [
+      "Rscript",
+      "--vanilla",
+      "quality_reports/results/mebane_gates/G2/round2/review/independent_closure.R"
+    ],
+    "cwd": "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud",
+    "started_at_utc": "2026-09-29T13:19:20.810523+00:00",
+    "elapsed_seconds": 0.2421124169777613,
+    "exit_code": 0,
+    "environment_override": {
+      "LC_ALL": "C",
+      "PYTHONDONTWRITEBYTECODE": "1"
+    },
+    "log": "quality_reports/results/mebane_gates/G2/round2/review/qa_command_01.log"
+  },
+  {
+    "argv": [
+      "/opt/homebrew/opt/python@3.13/bin/python3.13",
+      "quality_reports/results/mebane_gates/G2/round2/review/verify_integrity.py",
+      "integrity_final.json"
+    ],
+    "cwd": "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud",
+    "started_at_utc": "2026-09-29T13:19:21.052877+00:00",
+    "elapsed_seconds": 4.165461750002578,
+    "exit_code": 1,
+    "environment_override": {
+      "LC_ALL": "C",
+      "PYTHONDONTWRITEBYTECODE": "1"
+    },
+    "log": "quality_reports/results/mebane_gates/G2/round2/review/qa_command_02.log"
+  },
+  {
+    "argv": [
+      "git",
+      "diff",
+      "--check",
+      "--",
+      "quality_reports/results/mebane_gates/G2/round2/review"
+    ],
+    "cwd": "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud",
+    "started_at_utc": "2026-09-29T13:19:25.218603+00:00",
+    "elapsed_seconds": 0.014764499996090308,
+    "exit_code": 0,
+    "environment_override": {
+      "LC_ALL": "C",
+      "PYTHONDONTWRITEBYTECODE": "1"
+    },
+    "log": "quality_reports/results/mebane_gates/G2/round2/review/qa_command_03.log"
+  }
+]

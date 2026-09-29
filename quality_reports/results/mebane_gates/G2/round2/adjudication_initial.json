@@ -1,0 +1,115 @@
+{
+  "schema_version": "1.0",
+  "adjudication_id": "mebane-G2:5c4b39aaa1c2:round2-initial",
+  "gate_id": "G2",
+  "round": "round2",
+  "contract_sha256": "f834bc1d12d88b4bc82fb2ada95120a838451c5809332630a75cd9abf03cf4d1",
+  "candidate_manifest_sha256": "5c4b39aaa1c2a273b1c7f4e9370291172d35d0f4a5a17afd079396c3a1984170",
+  "review_sha256": "ff6d0d2ea29edde8083491a971269fd19094d7140e4f366e95b1910c400f64c7",
+  "status": "inconclusive",
+  "unresolved_material_findings": 1,
+  "source": {
+    "reviewed_artifact": "quality_reports/results/mebane_gates/G2/round2/candidate_manifest.json",
+    "sha256": "5c4b39aaa1c2a273b1c7f4e9370291172d35d0f4a5a17afd079396c3a1984170",
+    "artifact_intact": true
+  },
+  "contract": {
+    "required": false,
+    "path": null,
+    "sha256": null,
+    "contract_id": null,
+    "artifact_sha256": null,
+    "status": null,
+    "stale": false
+  },
+  "contract_scope_note": "Contrato de código e método, não transformação de argumento. Decisões D1-D3 aprovadas no escopo metodológico pela QA; assinatura geral depende da integridade G0.",
+  "review_sources": [
+    {
+      "review_id": "QA-G2-R2",
+      "path": "quality_reports/results/mebane_gates/G2/round2/review/review.json",
+      "sha256": "ff6d0d2ea29edde8083491a971269fd19094d7140e4f366e95b1910c400f64c7"
+    }
+  ],
+  "findings": [
+    {
+      "finding_id": "G2-R2-QA-I1",
+      "id": "G2-R2-QA-I1",
+      "source_review": "QA-G2-R2",
+      "quoted_finding": "Dependência congelada G0 perdeu um arquivo durante a QA",
+      "type": "artifact",
+      "severity": "major",
+      "scientific_dimension": "frozen_dependency_integrity",
+      "held_decision": false,
+      "status": "CONFIRMED",
+      "resolved": false,
+      "source_locations": [
+        "quality_reports/results/mebane_gates/G0/round2/candidate_manifest.json:792",
+        "ssrn-4073770.pdf.download/ssrn-4073770.pdf",
+        "quality_reports/results/mebane_gates/G2/round2/review/integrity_final.json"
+      ],
+      "defect_evidence": [
+        "O caminho esperado está ausente e o checker geral retorna missing file em G0.",
+        "A QA confirmou o arquivo no início e sua ausência no fim. A coordenação confirmou duas deleções concorrentes em git status, sem atribuir autoria."
+      ],
+      "refuting_evidence": [],
+      "mechanical_checks": [
+        "Todos os 163 hashes diretos do candidato G2 reconferidos pela coordenação.",
+        "git show eabe93a624dd4c6ef66b7de006339053011d15c7:ssrn-4073770.pdf.download/ssrn-4073770.pdf: 1360 bytes, SHA256 524dc82c59612ec91b3a6ab475dd34f0607546a37823c9a9b1fd652677a8acdf; nenhum arquivo restaurado.",
+        "python3 -B scripts/mebane_gates.py check: exit 1, missing file em G0."
+      ],
+      "reasoning": "A integridade formal da dependência mudou; isso não altera o conteúdo do modelo nem refuta os 59 checks metodológicos. O arquivo já era inválido/incompleto e não é fonte científica. O Git preserva os bytes, mas o checker exige o arquivo no caminho do manifesto. Não desfazer uma mudança concorrente sem escolha do usuário.",
+      "proposed_fix_assessment": "owner_decision",
+      "disposition": "Usuário consultado: recuperar apenas o arquivo inventariado ou manter a exclusão e rever os vínculos do inventário. Depois, rechecagem delimitada, sem repetir a auditoria matemática.",
+      "resolution": "Aguardando resposta. G3 completo não iniciado; reparo independente AR-02 pode prosseguir sob sua adjudicação própria."
+    }
+  ],
+  "resolved_prior_findings": [
+    {
+      "id": "G2-QA-D1",
+      "status": "CONFIRMED",
+      "resolved": true,
+      "resolution": "Commit 3017de537450f97a01872d0157462a68bea348ee, JAGS 4.3.2 exigido; não executado. F1/F2 continuam limitações. pW=499.5 confirmado algebricamente; sem clamp, normalização ou redraw. Semântica runtime fica para G3.",
+      "scientific_defect_refuted": false
+    },
+    {
+      "id": "G2-QA-D2",
+      "status": "CONFIRMED",
+      "resolved": true,
+      "resolution": "Seis X com coluna de uns e dimensões 1, seis efeitos por observação, alpha+b0, ordem parcial de pi, variâncias Exp(5), precisão 1/v, variância de b0=1e-4 e inclinações=1 preservadas. Geografia de produção não selecionada; G4 antes de G6.",
+      "scientific_defect_refuted": false
+    },
+    {
+      "id": "G2-QA-D3",
+      "status": "CONFIRMED",
+      "resolved": true,
+      "resolution": "M=N*m*(1-tau), S=N*s*tau*(1-nu), zero em Z=1, sem ruído adicional e com latentes do mesmo draw. Totais conjuntos, médias condicionais separadas de quantis e limites condicionais Dobs-M-2S a Dobs-M-S; inviabilidades preservadas, nenhum vencedor pontual identificado.",
+      "scientific_defect_refuted": false
+    }
+  ],
+  "summary": {
+    "total": 1,
+    "confirmed": 1,
+    "partial": 0,
+    "refuted": 0,
+    "unresolved": 0,
+    "held_decisions": 0
+  },
+  "adjudication": {
+    "verdict": "BLOCKED",
+    "checked_at": "2026-09-29T13:30:44.351102+00:00",
+    "reasons": [
+      "Pendência formal de integridade G0, não erro das decisões D1-D3.",
+      "Não restauração de alteração concorrente sem autorização; pergunta enviada ao usuário.",
+      "BLOCKED é veredicto desta assinatura, não estado do goal nativo nem veto a reparo independente."
+    ]
+  },
+  "evidence": {
+    "direct_candidate_files_verified": 163,
+    "independent_checks_passed": 59,
+    "preserved_git_commit": "eabe93a624dd4c6ef66b7de006339053011d15c7",
+    "missing_sha256": "524dc82c59612ec91b3a6ab475dd34f0607546a37823c9a9b1fd652677a8acdf",
+    "missing_bytes": 1360,
+    "restored": false,
+    "review_manifest_sha256": "67c2f9533de1947f41603b42c66ec1afb6fbcf5ac8cb5f2e5fc644eb7587589a"
+  }
+}

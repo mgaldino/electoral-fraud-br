@@ -1,0 +1,57 @@
+{
+  "reviewer_id": "01a0ed3f-7e0a-7dc2-be9c-6831e6924991",
+  "date": "2026-09-29",
+  "scope": "Independent preparatory discovery and G10/G4 dependency review; no gate approval or inference",
+  "status": "preparacao-verificada",
+  "g10_pass": false,
+  "contract_approved": false,
+  "numeric_benchmark_reproduced": false,
+  "findings": [
+    {
+      "id": "AR-01",
+      "severity": "major",
+      "classification": "confirmed_boundary",
+      "summary": "D.C. archived vignette lacks immutable published numeric output; proposed contract cannot establish external quantitative replication or G10 PASS.",
+      "locations": ["coordination/authors_replication_discovery/replication_contract.json:bibliographic_target", "coordination/authors_replication_discovery/archive/UMeforensics-eforensics_public-3017de5/vignettes/eforensics.Rmd:74-89", "quality_reports/plans/mebane_2022_2026_gates.json:G10.acceptance"]
+    },
+    {
+      "id": "AR-02",
+      "severity": "major",
+      "classification": "confirmed_interface_risk_outside_write_scope",
+      "summary": "Historical Brazilian eforensics wrapper calls reverse the archived package's formula1=w and formula2=a mapping; direct-list JAGS fresh_v2 and zoneFE calls are not affected by that particular reversal.",
+      "locations": ["coordination/authors_replication_discovery/archive/UMeforensics-eforensics_public-3017de5/R/ef_main.R:665-703", "R/05_eforensics_umeforensics_qbl.R:102-109,152-159,186-193", "R/07_brasil_full_qbl.R:149-156", "R/05_eforensics_qbl_fresh_diagnostic.R:68-71", "R/05_jags_qbl_zone_fe.R:64-67"]
+    },
+    {
+      "id": "AR-03",
+      "severity": "minor",
+      "classification": "confirmed_locator_error",
+      "summary": "Bolivia summary command is on printed p.29; Chain 1 numeric table begins on printed p.30, physical PDF p.31.",
+      "locations": ["coordination/authors_replication_discovery/discovery.md:Bolivia alternative", "coordination/authors_replication_discovery/candidates.csv:bolivia2019", "coordination/authors_replication_discovery/archive/Bolivia2019.pdf:printed p.30"]
+    },
+    {
+      "id": "AR-04",
+      "severity": "minor",
+      "classification": "scope_limit",
+      "summary": "Local hashes and archived commit metadata do not independently attest current remote provenance or original election-data construction.",
+      "locations": ["coordination/authors_replication_discovery/source_manifest.json", "coordination/authors_replication_discovery/archive/UMeforensics-eforensics_public-3017de5/data/dc2010.rda"]
+    }
+  ],
+  "evidence": {
+    "manifest_records_hash_and_size_match": 12,
+    "tar_members_match_extraction": 50,
+    "dc2010_rows": 143,
+    "dc2010_columns": 5,
+    "dc2010_arithmetic_violations": 0,
+    "bolivia_pi1_mean": 0.9924773465,
+    "bolivia_pi1_hpd_95": [0.991301, 0.993592],
+    "pennsylvania_table2_fw_mean": 225440.2,
+    "pennsylvania_table2_fw_interval_995": [207757.1, 252978.1],
+    "gate_unit_tests": "6 passed",
+    "current_ledger_check": "PASS: 11 gates, 49 todos; structural checks only",
+    "synthetic_gate_counterexamples": "4 expected outcomes confirmed",
+    "internal_t2_t3_order_enforced_by_checker": false
+  },
+  "commands": ["Rscript --vanilla -e 'load dc2010.rda in isolated environment; inspect dimensions, classes, missingness, duplicates and arithmetic'", "pdftotext -layout archive/Bolivia2019.pdf - | rg relevant numeric values", "pdftotext -layout archive/PA2024_2025-06-02.pdf - | rg relevant numeric values", "pdftotext -layout archive/measfrauds_2022-03-06.pdf - | rg Argentina", "pdftotext -layout archive/pm23_2023-07-02.pdf - | rg Argentina", "python3 tests/test_mebane_author_replication_gate.py -v", "PYTHONDONTWRITEBYTECODE=1 python3 scripts/mebane_gates.py check", "PYTHONDONTWRITEBYTECODE=1 python3 coordination/authors_replication_discovery_review/review_checks.py"],
+  "limitations": ["No online refresh", "No MCMC or inference", "No package installation", "No D.C. external numeric reference located", "No author Bolivia clean CSV or Pennsylvania emailed spreadsheet", "No G10 contract freeze/adjudication"],
+  "artifacts": ["review.md", "review.json", "review_checks.py", "review_checks_results.json", "review_manifest.json"]
+}

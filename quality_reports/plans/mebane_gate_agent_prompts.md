@@ -49,6 +49,29 @@ precisão Monte Carlo, tratamento de falhas e afirmações permitidas por poder.
 Não ajustar os critérios após observar os testes confirmatórios. Esse checkpoint
 não equivale à aprovação final de G4.
 
+## Replicação Dos Autores
+
+G10 é obrigatório entre G3 e G4. A busca e o arquivamento de materiais públicos
+podem ocorrer enquanto G2/G3 estão em andamento, mas são preparação, não execução
+nem aprovação de G10. Não substituir uma aplicação empírica dos autores por um
+exemplo sintético nosso, uma simulação didática ou a nota de terceiros sobre o Brasil.
+
+Antes de G10-T3, o coordenador deve receber revisão independente de
+`replication_contract.json`, registrar sua adjudicação e conferir o hash aprovado.
+Esse checkpoint de G10-T2 fixa caso, versão do artigo/código, tabela/figura/células,
+dados, denominadores, especificação, outputs, sementes, tolerâncias numéricas e de
+Monte Carlo, tratamento de falhas e limites do que será chamado de replicação.
+Critérios não podem ser escolhidos depois de ver o ajuste. O checker geral testa
+as dependências entre gates, não a ordem interna dos todos; o coordenador e o
+revisor devem conferir os timestamps e artefatos desse checkpoint explicitamente.
+
+O relatório separa resultados publicados pelos autores, leitura de artefatos
+arquivados, nova estimação do código dos autores e comparação de uma implementação
+própria no mesmo alvo. Versões ou modelos diferentes não sustentam equivalência.
+Sem dados ou outputs suficientes para a comparação, registrar a limitação e manter
+G10 pendente/inconclusivo. Um PASS não prova fraude nem valida automaticamente a
+aplicação brasileira; ele remove apenas a pendência de replicação externa.
+
 ## Prompt do executor
 
 ```text

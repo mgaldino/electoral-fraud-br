@@ -1,0 +1,5 @@
+Round2: 55/56 deterministic checks passed; no RNG, JAGS or MCMC.
+                          id  pass detail
+29 sentinel_formula_contract FALSE       
+Error: Round2 contract/functional test failed
+Execution halted

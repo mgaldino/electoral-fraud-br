@@ -1,0 +1,13 @@
+{
+  "purpose": "Transparent record of reviewer-script development before the logged final run; no candidate runner was executed.",
+  "attempts": [
+    {"command": "python3 quality_reports/results/mebane_gates/G2/round2/review/verify_integrity.py", "exit_code": 1, "error": "KeyError: 'pass'", "resolution": "Use inherited CSV column passed; no artifact assertion or tolerance changed."},
+    {"command": "python3 quality_reports/results/mebane_gates/G2/round2/review/verify_integrity.py", "exit_code": 0, "result": "719/719 checks; preserved as integrity_initial.json."},
+    {"command": "Rscript --vanilla quality_reports/results/mebane_gates/G2/round2/review/independent_closure.R", "exit_code": 1, "error": "'length = 3' in coercion to 'logical(1)'", "resolution": "Require a symbol before matching assignment operators in AST; no numerical assertion changed. Set LC_ALL=C for the logged execution to avoid host locale warnings."},
+    {"command": "env LC_ALL=C Rscript --vanilla quality_reports/results/mebane_gates/G2/round2/review/independent_closure.R", "exit_code": 0, "result": "56/56 checks; source helper emits non-list contrasts argument ignored warnings."},
+    {"command": "env LC_ALL=C Rscript --vanilla quality_reports/results/mebane_gates/G2/round2/review/independent_closure.R", "exit_code": 1, "error": "regular expression is invalid UTF-8", "resolution": "New documentary guard check used an accented literal under locale C; use the ASCII substring isolada. No mathematical assertion or tolerance changed."}
+  ],
+  "candidate_outputs_modified": false,
+  "round1_tests_executed": false,
+  "MCMC": false
+}

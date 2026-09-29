@@ -1,0 +1,79 @@
+[
+  {
+    "argv": [
+      "/usr/local/bin/Rscript",
+      "--vanilla",
+      "tests/mebane/algebra/test_benchmark_round2.R",
+      "quality_reports/results/mebane_gates/G2/round2/results"
+    ],
+    "started_at_utc": "2026-09-29T13:00:34.543043+00:00",
+    "elapsed_seconds": 0.5630669159872923,
+    "exit_code": 0,
+    "environment_override": {
+      "LC_ALL": "C"
+    },
+    "log": "quality_reports/results/mebane_gates/G2/round2/results/command_01.log"
+  },
+  {
+    "argv": [
+      "python3",
+      "quality_reports/results/mebane_gates/G2/round2/candidate_tools.py",
+      "freeze-interface"
+    ],
+    "started_at_utc": "2026-09-29T13:02:46.167114+00:00",
+    "elapsed_seconds": 0.048865458025829867,
+    "exit_code": 0,
+    "environment_override": {
+      "LC_ALL": "C"
+    },
+    "log": "quality_reports/results/mebane_gates/G2/round2/results/command_02.log"
+  },
+  {
+    "argv": [
+      "/usr/local/bin/Rscript",
+      "--vanilla",
+      "tests/mebane/algebra/test_benchmark_round2.R",
+      "quality_reports/results/mebane_gates/G2/round2/results"
+    ],
+    "started_at_utc": "2026-09-29T13:04:23.230634+00:00",
+    "elapsed_seconds": 0.2507151250028983,
+    "exit_code": 1,
+    "environment_override": {
+      "LC_ALL": "C"
+    },
+    "log": "quality_reports/results/mebane_gates/G2/round2/results/command_03.log"
+  },
+  {
+    "argv": [
+      "/usr/local/bin/Rscript",
+      "--vanilla",
+      "tests/mebane/algebra/test_benchmark_round2.R",
+      "quality_reports/results/mebane_gates/G2/round2/results"
+    ],
+    "started_at_utc": "2026-09-29T13:04:51.163685+00:00",
+    "elapsed_seconds": 0.22601187499822117,
+    "exit_code": 0,
+    "environment_override": {
+      "LC_ALL": "C"
+    },
+    "log": "quality_reports/results/mebane_gates/G2/round2/results/command_04.log"
+  },
+  {
+    "argv": [
+      "git",
+      "diff",
+      "--check",
+      "--",
+      "appendices/mebane_model_contract.md",
+      "tests/mebane/algebra/test_benchmark_round2.R",
+      "quality_reports/results/mebane_gates/G2/round2"
+    ],
+    "started_at_utc": "2026-09-29T13:07:51.546335+00:00",
+    "elapsed_seconds": 0.01542483302182518,
+    "exit_code": 0,
+    "environment_override": {
+      "LC_ALL": "C"
+    },
+    "log": "quality_reports/results/mebane_gates/G2/round2/results/command_05.log"
+  }
+]

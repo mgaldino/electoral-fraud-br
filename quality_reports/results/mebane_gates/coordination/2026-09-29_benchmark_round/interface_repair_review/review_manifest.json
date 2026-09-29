@@ -1,0 +1,34 @@
+{
+  "schema_version": "1.0",
+  "review_id": "QA-INTERFACE-AR-02-2026-09-29",
+  "reviewer_uuid": "01a0ed65-c901-7761-b666-8edd67efe4a8",
+  "executor_uuid": "01a0ed5a-1a40-7f33-bde3-b7b398c25b0a",
+  "candidate_manifest_sha256": "4e08a91ba47e8091d87adf1a07f0fb670af975f6f265480f5caa57865686a73c",
+  "hash_algorithm": "SHA-256",
+  "scope": "AR-02 pre-G3 interface QA; no mutable ledger snapshot and no self-hash",
+  "inputs_read": [
+    {"path": "CLAUDE.md", "sha256": "dd8473a2d852bbadef0e38e34206f215b7efa5439d3c1bf005ed2653892444e0"},
+    {"path": "quality_reports/results/mebane_gates/coordination/2026-09-29_benchmark_round/interface_repair_adjudication.json", "sha256": "413ea2625ed12ce20dcaabb14fb8ecb7cf05f0540437cc38580d7067a13d7edd"},
+    {"path": "quality_reports/results/mebane_gates/coordination/2026-09-29_benchmark_round/interface_repair/candidate_manifest.json", "sha256": "4e08a91ba47e8091d87adf1a07f0fb670af975f6f265480f5caa57865686a73c"},
+    {"path": "quality_reports/results/mebane_gates/coordination/2026-09-29_benchmark_round/interface_repair/run.json", "sha256": "2a3f457edc49e9f9e1012dff7dff4a80e76029f9474cd1b23048c94ec037cc45"},
+    {"path": "quality_reports/results/mebane_gates/coordination/2026-09-29_benchmark_round/interface_repair/implementation.md", "sha256": "7b5be759611fbb41106945e81f0aa75edb21189ce163300629ef9b2ec800dbfc"},
+    {"path": "tests/mebane/likelihood/test_ar02_interface.R", "sha256": "90f939a4b9ea8f87d73e4e91c2e38ff91733aaea983fd79ffb91864f88f630b3"},
+    {"path": "quality_reports/results/mebane_gates/G2/round2/sources/ef_main_3017de5.R", "sha256": "ee626c0c939f84567c0ee74a100954229567911711193716a46837e1d6e3ce8b"},
+    {"path": "quality_reports/results/mebane_gates/G2/round2/benchmark_contract.json", "sha256": "63b61fb0594d0302a03d999bcff6c62967b6e999f37b4c9a8821f0f8e9ed18d2"},
+    {"path": "quality_reports/results/mebane_gates/coordination/2026-09-29_benchmark_round/replication_review_inputs/R/05_eforensics_umeforensics_qbl.R", "sha256": "659c12cdf1881b7a5b9dcdf9d463799f93362c0ae1744302128c4b6577b7b5c5"},
+    {"path": "quality_reports/results/mebane_gates/coordination/2026-09-29_benchmark_round/replication_review_inputs/R/07_brasil_full_qbl.R", "sha256": "1244e5f6e49c5842ef109f8ded2a1caa3ba7ddd0a83eeeaa4694f7d08775d862"},
+    {"path": "quality_reports/results/mebane_gates/G0/round1/final_state/R/05_eforensics_umeforensics_qbl.R", "sha256": "659c12cdf1881b7a5b9dcdf9d463799f93362c0ae1744302128c4b6577b7b5c5"},
+    {"path": "quality_reports/results/mebane_gates/G0/round1/final_state/R/07_brasil_full_qbl.R", "sha256": "1244e5f6e49c5842ef109f8ded2a1caa3ba7ddd0a83eeeaa4694f7d08775d862"},
+    {"path": "R/05_eforensics_umeforensics_qbl.R", "sha256": "e00ae5283d13807bd1870ec760c64bc645ce9f42f0bfcaf5553344385cc141ad"},
+    {"path": "R/07_brasil_full_qbl.R", "sha256": "e7815dcbfb3f7b9ee74eb036da54a344f93e675e2e9cab7f927a00cf2d334350"}
+  ],
+  "outputs_generated": [
+    {"path": "quality_reports/results/mebane_gates/coordination/2026-09-29_benchmark_round/interface_repair_review/independent_covariate_probe.R", "sha256": "b13e0d07b018e35bbd2262b5d6eda9d8005e46217e120fed9ad38e5720e7cca0"},
+    {"path": "quality_reports/results/mebane_gates/coordination/2026-09-29_benchmark_round/interface_repair_review/independent_covariate_probe.log", "sha256": "b9f2f7317e49648dfecc64230ab3732081ebf44883a8388a526bf52c54a3093a"},
+    {"path": "quality_reports/results/mebane_gates/coordination/2026-09-29_benchmark_round/interface_repair_review/independent_covariate_probe_final.log", "sha256": "a9a9ec7408d46e3f1f7c3f8ca9dd2f7b8fc309fd737be15273275f5536169946"},
+    {"path": "quality_reports/results/mebane_gates/coordination/2026-09-29_benchmark_round/interface_repair_review/test_ar02_interface.log", "sha256": "4bf4de2f40c8f0a0317c708f0bbf49f3d1874f90dafe27465b7c072c582586ce"},
+    {"path": "quality_reports/results/mebane_gates/coordination/2026-09-29_benchmark_round/interface_repair_review/review.json", "sha256": "8a7fc048462ec04cf847b52313da9371630c9c31b1f4a496de71ff21fb224b37"},
+    {"path": "quality_reports/results/mebane_gates/coordination/2026-09-29_benchmark_round/interface_repair_review/review.md", "sha256": "f749018a82c921ddc892632b2c033966075601780bcfd1478c725c412c96558c"}
+  ],
+  "self_hash_excluded": true
+}

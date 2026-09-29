@@ -1,0 +1,51 @@
+{
+  "basis": "primary archived source and G0 script snapshots inspected in round2; no fitting code executed",
+  "primary_origin": {
+    "path": "quality_reports/results/mebane_gates/coordination/authors_replication_discovery/archive/UMeforensics-eforensics_public-3017de5/R/ef_main.R",
+    "sha256": "ee626c0c939f84567c0ee74a100954229567911711193716a46837e1d6e3ce8b",
+    "bytes": 50459
+  },
+  "discovery_manifest_origin": {
+    "path": "quality_reports/results/mebane_gates/coordination/authors_replication_discovery/source_manifest.json",
+    "sha256": "31832d81027ff0af50fb0ab0549203f8b701854a1e76635ef8eeaeda7fd8bc57",
+    "bytes": 5307
+  },
+  "source_manifest_note": "Full source-manifest snapshot retained only for provenance of ef_main.R; other discovered applications are not evidence adopted by G2.",
+  "files": [
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/authors_replication_discovery/archive/UMeforensics-eforensics_public-3017de5/R/ef_main.R",
+      "sha256": "ee626c0c939f84567c0ee74a100954229567911711193716a46837e1d6e3ce8b",
+      "bytes": 50459
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G0/round1/final_state/R/05_eforensics_umeforensics_qbl.R",
+      "sha256": "659c12cdf1881b7a5b9dcdf9d463799f93362c0ae1744302128c4b6577b7b5c5",
+      "bytes": 8833
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G0/round1/final_state/R/07_brasil_full_qbl.R",
+      "sha256": "1244e5f6e49c5842ef109f8ded2a1caa3ba7ddd0a83eeeaa4694f7d08775d862",
+      "bytes": 10090
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G0/round1/final_state/R/05_eforensics_qbl_fresh_diagnostic.R",
+      "sha256": "9faf09a91562adef904d94192c734de76e8741a172f68b73e7f1c095c0823a87",
+      "bytes": 6930
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G0/round1/final_state/R/05_jags_qbl_zone_fe.R",
+      "sha256": "a72118c328d1cce96ba2226b33da5d13d6608a42e34259b25208b14f823ed983",
+      "bytes": 7950
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G2/round2/sources/discovery_source_manifest.json",
+      "sha256": "31832d81027ff0af50fb0ab0549203f8b701854a1e76635ef8eeaeda7fd8bc57",
+      "bytes": 5307
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G2/round2/sources/ef_main_3017de5.R",
+      "sha256": "ee626c0c939f84567c0ee74a100954229567911711193716a46837e1d6e3ce8b",
+      "bytes": 50459
+    }
+  ]
+}

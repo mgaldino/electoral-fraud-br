@@ -1,0 +1,25 @@
+renv: autoloader pulado dentro do sandbox do Codex
+During startup - Warning messages:
+1: Setting LC_CTYPE failed, using "C" 
+2: Setting LC_COLLATE failed, using "C" 
+3: Setting LC_TIME failed, using "C" 
+4: Setting LC_MESSAGES failed, using "C" 
+5: Setting LC_MONETARY failed, using "C" 
+R=4.4.2 eforensics=0.0.4 RemoteSha=3017de537450f97a01872d0157462a68bea348ee runjags=2.2.2.5 rjags=4.17
+
+Burn-in: 50
+
+Number of MCMC samples per chain: 150
+
+MCMC in progress ....
+
+
+Burn-in: 50
+
+Number of MCMC samples per chain: 150
+
+MCMC in progress ....
+
+COVARIATE MUTATION DETECTED: responses unchanged; Xw and Xa differ
+SAMPLING BLOCKED: 2 sampler-stub captures; 0 compiler entries
+NAMESPACES RESTORED

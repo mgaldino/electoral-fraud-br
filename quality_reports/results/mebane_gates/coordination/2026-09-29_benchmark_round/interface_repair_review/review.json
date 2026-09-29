@@ -1,0 +1,90 @@
+{
+  "schema_version": "1.0",
+  "review_id": "QA-INTERFACE-AR-02-2026-09-29",
+  "reviewer_uuid": "01a0ed65-c901-7761-b666-8edd67efe4a8",
+  "executor_uuid": "01a0ed5a-1a40-7f33-bde3-b7b398c25b0a",
+  "reviewed_at_utc": "2026-09-29T13:44:49Z",
+  "candidate_manifest_path": "quality_reports/results/mebane_gates/coordination/2026-09-29_benchmark_round/interface_repair/candidate_manifest.json",
+  "candidate_manifest_sha256": "4e08a91ba47e8091d87adf1a07f0fb670af975f6f265480f5caa57865686a73c",
+  "scope": "AR-02 pre-G3 formula-to-JAGS-data interface repair only; independent QA of four wrapper calls and six design matrices at an intercepted sampling boundary",
+  "status": "pass",
+  "inferential_approval": false,
+  "G3_pass": false,
+  "gate_approval": false,
+  "blocking_findings": [],
+  "findings": [
+    {
+      "id": "AR02-QA-01",
+      "severity": "info",
+      "status": "verified",
+      "locations": [
+        "R/05_eforensics_umeforensics_qbl.R:103-104,153-154,187-188",
+        "R/07_brasil_full_qbl.R:150-151",
+        "quality_reports/results/mebane_gates/G2/round2/sources/ef_main_3017de5.R:667-675"
+      ],
+      "finding": "The four repaired formula pairs follow formula1=w/Xw and formula2=a/Xa; no other runner lines differ from both preserved before-copies.",
+      "evidence": "Before/after SHA-256 match the frozen manifest and two prior snapshot sets; diff -u has exactly 6/6 and 2/2 changed lines, all formula1/formula2; git diff --check exit 0."
+    },
+    {
+      "id": "AR02-QA-02",
+      "severity": "info",
+      "status": "verified",
+      "locations": [
+        "tests/mebane/likelihood/test_ar02_interface.R:114-206",
+        "quality_reports/results/mebane_gates/coordination/2026-09-29_benchmark_round/interface_repair_review/test_ar02_interface.log"
+      ],
+      "finding": "The actual extracted wrapper call expressions reached the replaced runjags::run.jags export, with responses, N, n, all six matrices and their dimensions matching direct expectations; reversed-response controls failed as intended.",
+      "evidence": "Full rerun log; exit 0; eight sampler-stub captures, zero compiler-guard entries, namespace restoration. Static inspection verified both guards were installed before eval and sampler_stub has no call to original run.jags."
+    },
+    {
+      "id": "AR02-QA-03",
+      "severity": "info",
+      "status": "verified",
+      "locations": [
+        "quality_reports/results/mebane_gates/coordination/2026-09-29_benchmark_round/interface_repair_review/independent_covariate_probe.R",
+        "quality_reports/results/mebane_gates/coordination/2026-09-29_benchmark_round/interface_repair_review/independent_covariate_probe_final.log"
+      ],
+      "finding": "An independent covariate-only mutation preserves w, a and N but changes both Xw and Xa, so response-only comparison cannot mask the covariate reversal.",
+      "evidence": "Independent probe exit 0; two sampler-stub captures, zero compiler entries, namespace restoration."
+    }
+  ],
+  "execution": [
+    {
+      "command": "Rscript tests/mebane/likelihood/test_ar02_interface.R > interface_repair_review/test_ar02_interface.log 2>&1",
+      "exit_code": 0,
+      "log": "quality_reports/results/mebane_gates/coordination/2026-09-29_benchmark_round/interface_repair_review/test_ar02_interface.log"
+    },
+    {
+      "command": "Rscript interface_repair_review/independent_covariate_probe.R > interface_repair_review/independent_covariate_probe.log 2>&1",
+      "exit_code": 1,
+      "log": "quality_reports/results/mebane_gates/coordination/2026-09-29_benchmark_round/interface_repair_review/independent_covariate_probe.log",
+      "note": "First independent QA probe stopped in its own AST walker before wrapper evaluation; fixed only the QA probe to skip missing call arguments."
+    },
+    {
+      "command": "Rscript interface_repair_review/independent_covariate_probe.R > interface_repair_review/independent_covariate_probe_final.log 2>&1",
+      "exit_code": 0,
+      "log": "quality_reports/results/mebane_gates/coordination/2026-09-29_benchmark_round/interface_repair_review/independent_covariate_probe_final.log"
+    },
+    {
+      "command": "git diff --check -- R/05_eforensics_umeforensics_qbl.R R/07_brasil_full_qbl.R",
+      "exit_code": 0
+    }
+  ],
+  "versions": {
+    "R": "4.4.2",
+    "eforensics": "0.0.4",
+    "eforensics_RemoteSha": "3017de537450f97a01872d0157462a68bea348ee",
+    "runjags": "2.2.2.5",
+    "rjags": "4.17"
+  },
+  "boundary": {
+    "ast_inspection": true,
+    "actual_wrapper_expressions_evaluated_until_intercept": true,
+    "MCMC_executed": false,
+    "JAGS_model_compiled": false,
+    "full_runners_executed": false,
+    "historical_fits_reestimated": false,
+    "note": "The package prints MCMC in progress before calling run.jags; the message does not indicate sampling. G0/G1/G7 integrity hold and G2 general inconclusive status are separate and were not adjudicated here."
+  },
+  "review_manifest_path": "quality_reports/results/mebane_gates/coordination/2026-09-29_benchmark_round/interface_repair_review/review_manifest.json"
+}

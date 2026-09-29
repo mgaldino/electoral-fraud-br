@@ -1,0 +1,35 @@
+{
+  "pdf_sha256": "42470469b487f646887b8a955ee5abd7fa5da0ecd7e30ec884afc939c4e50d6f",
+  "source_sha256": "cb0c2511598c333a6b31f74963e4cea4a4d8cddfd94e34c833dad6c4f07a69ce",
+  "pages": [
+    {
+      "page": 1,
+      "characters": 3405,
+      "words": 503,
+      "out_of_page_characters": 0
+    },
+    {
+      "page": 2,
+      "characters": 3007,
+      "words": 471,
+      "out_of_page_characters": 0
+    },
+    {
+      "page": 3,
+      "characters": 2639,
+      "words": 399,
+      "out_of_page_characters": 0
+    }
+  ],
+  "links": [
+    "https://public.websites.umich.edu/~wmebane/measfrauds.pdf",
+    "https://public.websites.umich.edu/~wmebane/pm23.pdf",
+    "https://github.com/UMeforensics/eforensics_public/tree/3017de537450f97a01872d0157462a68bea348ee",
+    "https://github.com/UMeforensics/eforensics_public/tree/3017de537450f97a01872d0157462a68bea348ee",
+    "https://github.com/UMeforensics/eforensics_public/blob/3017de537450f97a01872d0157462a68bea348ee/vignettes/eforensics.Rmd",
+    "https://websites.umich.edu/~wmebane/Bolivia2019.pdf",
+    "https://websites.umich.edu/~wmebane/PA2024.pdf"
+  ],
+  "geometry_pass": true,
+  "visual_review": "Record actual inspected final renders separately; geometry is not visual QA."
+}

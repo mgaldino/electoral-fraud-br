@@ -1,0 +1,170 @@
+{
+  "reviewer_id": "01a0ed3f-7e0a-7dc2-be9c-6831e6924991",
+  "hash_algorithm": "SHA-256",
+  "root": "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud",
+  "inputs": [
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-29_benchmark_round/authorization.md",
+      "bytes": 1955,
+      "sha256": "32d7277b0b247fb94a9d60845d9c735387e6c3f73d7286c9c740dd863e4a6825"
+    },
+    {
+      "path": "quality_reports/plans/mebane_2022_2026_gates.json",
+      "bytes": 51121,
+      "sha256": "45cbc2142f2e836944d7ce9c7635bc6f76acb6c117772ba14c0c0d8e8b961784"
+    },
+    {
+      "path": "quality_reports/plans/mebane_gate_agent_prompts.md",
+      "bytes": 14914,
+      "sha256": "1947c18e2e2f942ce94d821b4ce6d54b1aa1df99d04abb93b268a36abd7ff9d3"
+    },
+    {
+      "path": "scripts/mebane_gates.py",
+      "bytes": 28810,
+      "sha256": "15601b30477b940bda011a7370d3a2edc269c7ffd89fe92e09d8dd9d34a93480"
+    },
+    {
+      "path": "tests/test_mebane_gates.py",
+      "bytes": 20046,
+      "sha256": "2509b41b2cea142f2a4e17e64e2f3842ead8abff71409f3cf8462f50cd5d169e"
+    },
+    {
+      "path": "tests/test_mebane_author_replication_gate.py",
+      "bytes": 2554,
+      "sha256": "c2a83c6f3e7a50b9a4fcfd48378dc1ba296c74e0080f436d23ff2e95c885cff5"
+    },
+    {
+      "path": "R/05_eforensics_umeforensics_qbl.R",
+      "bytes": 8833,
+      "sha256": "659c12cdf1881b7a5b9dcdf9d463799f93362c0ae1744302128c4b6577b7b5c5"
+    },
+    {
+      "path": "R/07_brasil_full_qbl.R",
+      "bytes": 10090,
+      "sha256": "1244e5f6e49c5842ef109f8ded2a1caa3ba7ddd0a83eeeaa4694f7d08775d862"
+    },
+    {
+      "path": "R/05_eforensics_qbl_fresh_diagnostic.R",
+      "bytes": 6930,
+      "sha256": "9faf09a91562adef904d94192c734de76e8741a172f68b73e7f1c095c0823a87"
+    },
+    {
+      "path": "R/05_jags_qbl_zone_fe.R",
+      "bytes": 7950,
+      "sha256": "a72118c328d1cce96ba2226b33da5d13d6608a42e34259b25208b14f823ed983"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/authors_replication_discovery/discovery.md",
+      "bytes": 10282,
+      "sha256": "c2c70d52386aa1b0d7a1a6501b19296290e58c4956219ae55154ba390bd771ba"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/authors_replication_discovery/candidates.csv",
+      "bytes": 1621,
+      "sha256": "e1b3a9cb6f930cb66ef149ecafa27396771a6af1c3549dbdad76fb477914c16f"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/authors_replication_discovery/replication_contract.json",
+      "bytes": 5800,
+      "sha256": "94c78c9d812d0628381e960b28cdc19a84636e883ba9a9eea704dac1cf8b71f2"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/authors_replication_discovery/source_manifest.json",
+      "bytes": 5307,
+      "sha256": "31832d81027ff0af50fb0ab0549203f8b701854a1e76635ef8eeaeda7fd8bc57"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/authors_replication_discovery/archive/eforensics_public_3017de537450f97a01872d0157462a68bea348ee.tar.gz",
+      "bytes": 3752552,
+      "sha256": "0785aa8d926f6065a4f997189a0cede6112ee59390ade461e2ebe8467380026d"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/authors_replication_discovery/archive/eforensics_commit_3017de5.json",
+      "bytes": 8084,
+      "sha256": "f48694205d445c53c1525c33145b17aa339ec8bf957cf3a0bee14b3c594cdf0d"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/authors_replication_discovery/archive/measfrauds_2022-03-06.pdf",
+      "bytes": 524478,
+      "sha256": "ad3b1cd473d48540877fb00cdffaaa09df1a21a98e4a2b4fa0a03c227ec50d76"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/authors_replication_discovery/archive/pm23_2023-07-02.pdf",
+      "bytes": 5123025,
+      "sha256": "615ddab21034e22ca55d891e01f14b85a2e7d80e12238bfbfb142ff214531431"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/authors_replication_discovery/archive/PA2024_2025-06-02.pdf",
+      "bytes": 2153684,
+      "sha256": "9de271cf21f13001c0ce6af5cdffc80594fe7365085aedf3e1f9fd02fef2b4c1"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/authors_replication_discovery/archive/Bolivia2019.pdf",
+      "bytes": 6174103,
+      "sha256": "ddcdb42bebf8160abf80b6c189db37951db8ead7f0f763d5469423778f870fb7"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/authors_replication_discovery/archive/UMeforensics-eforensics_public-3017de5/DESCRIPTION",
+      "bytes": 1115,
+      "sha256": "4bbb33f8765b132ddac991c67eab01e59e699f82390c759a841768852fb46df9"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/authors_replication_discovery/archive/UMeforensics-eforensics_public-3017de5/data/dc2010.rda",
+      "bytes": 2010,
+      "sha256": "0386dcc86155e543382c2725e9eb61ebf365b2e6f96a2b037324dbee80005196"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/authors_replication_discovery/archive/UMeforensics-eforensics_public-3017de5/vignettes/eforensics.Rmd",
+      "bytes": 11932,
+      "sha256": "1d5f6894c66cd9a7882adb52f13b31d6fa87d363d2cce30dcf2e54e071c4c7a6"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/authors_replication_discovery/archive/UMeforensics-eforensics_public-3017de5/R/ef_main.R",
+      "bytes": 50459,
+      "sha256": "ee626c0c939f84567c0ee74a100954229567911711193716a46837e1d6e3ce8b"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/authors_replication_discovery/archive/UMeforensics-eforensics_public-3017de5/R/ef_models.R",
+      "bytes": 106392,
+      "sha256": "7140c70f03cdc01cffc32b29f18b8ccbc785b9f460282b518df4bf3625910b4a"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/authors_replication_discovery/archive/UMeforensics-eforensics_public-3017de5/man/dc2010.Rd",
+      "bytes": 792,
+      "sha256": "36668fe6f8c1bf933d1f749849569887e7c9c190fa718afd838ed7d498ce5873"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/authors_replication_discovery/archive/UMeforensics-eforensics_public-3017de5/R/ef_summary.R",
+      "bytes": 39107,
+      "sha256": "a7bda7e5e1415a1f04fa0673d6ef641ddadf6156e582449bb1cdf7dd5175c4fc"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/authors_replication_discovery/archive/UMeforensics-eforensics_public-3017de5/man/eforensics.Rd",
+      "bytes": 11667,
+      "sha256": "1630db300b3f080812f2c771750471d94521249cf8fbd86f99c1cd0382734fef"
+    }
+  ],
+  "review_artifacts": [
+    {
+      "path": "review.md",
+      "bytes": 7457,
+      "sha256": "3612ad87c5a6ebd88bda19c4de3a795ec2bb85542682585362b547a0d7f086e3"
+    },
+    {
+      "path": "review.json",
+      "bytes": 4204,
+      "sha256": "9a5d4044d12344937f97b174b67f3467763c1d67bc2124b82608387a0d90c1a4"
+    },
+    {
+      "path": "review_checks.py",
+      "bytes": 6149,
+      "sha256": "3ef9b25a0908aa163d486c2fc39005431f3e972ebefb04b399d74cc5033c262e"
+    },
+    {
+      "path": "review_checks_results.json",
+      "bytes": 506,
+      "sha256": "effa886c19d36f8caa38abf26aed1c23537b31f2da652a59088ce03f4976780a"
+    }
+  ],
+  "note": "Manifest excludes itself; hashes bind exact archived bytes inspected, not remote persistence."
+}

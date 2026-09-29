@@ -1,0 +1,13 @@
+^.*\.Rproj$
+^\.Rproj\.user$
+README.org
+.DS_Store
+.travis.yml
+.gitignore
+.git
+^data-raw$
+Makefile
+^test$
+^cran-comments\.md$
+CRAN-RELEASE
+^CRAN-RELEASE$

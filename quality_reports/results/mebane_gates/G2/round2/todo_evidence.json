@@ -1,0 +1,65 @@
+{
+  "gate_id": "G2",
+  "round": "round2",
+  "gate_approved": false,
+  "inferential_approval": false,
+  "implementer_delivery_status": "complete_candidate",
+  "round2_independent_review": "pending",
+  "historical_rederivation": "Round1 QA independente e adjudicação herdadas por hash; não reexecutadas nem reclassificadas pelo implementador.",
+  "todos": [
+    {
+      "id": "G2-T1", "status": "done",
+      "scope": "Mapeamento P22/P23/JAGS/Stan herdado, distinções mantidas e interface formula1/formula2 documentada com fonte primária adicional.",
+      "evidence": [
+        {"path": "appendices/mebane_model_contract.md", "basis": "inspected", "locator": "Seções 1.1, 2, 7 e Tabela 1; novo parágrafo de interface"},
+        {"path": "quality_reports/results/mebane_gates/G2/round1/review/review.json", "basis": "historical", "locator": "coverage_confirmed G2-T1"},
+        {"path": "quality_reports/results/mebane_gates/G2/round2/interface_sources.json", "basis": "executed", "locator": "Hashes diretos de ef_main.R, manifesto da descoberta e quatro scripts G0"},
+        {"path": "quality_reports/results/mebane_gates/G2/round2/results/round2_checks.csv", "basis": "executed", "locator": "source_interface_mapping_inspected; sentinel_formula_contract; sentinel_swapped_negative_control"}
+      ]
+    },
+    {
+      "id": "G2-T2", "status": "done",
+      "scope": "Derivações herdadas; D2 seleciona priors JAGS e alpha+b0 no harness intercept-only. Geografia de produção não selecionada.",
+      "evidence": [
+        {"path": "appendices/mebane_model_contract.md", "basis": "inspected", "locator": "Seções 3 e 9.2"},
+        {"path": "quality_reports/results/mebane_gates/G2/round1/review/independent_checks.csv", "basis": "historical", "locator": "Priors, Jacobianos, precisão/variância/SD e interceptos"},
+        {"path": "quality_reports/results/mebane_gates/G2/round2/benchmark_contract.json", "basis": "inspected", "locator": "decision_resolution G2-QA-D2; priors; first_harness"},
+        {"path": "quality_reports/results/mebane_gates/G2/round2/results/round2_checks.csv", "basis": "executed", "locator": "contract_partial_prior; contract_exp_variance; harness_retains_alpha_plus_b0; dummy_prior_fidelity_only; testes de mutação"}
+      ]
+    },
+    {
+      "id": "G2-T3", "status": "done",
+      "scope": "Suporte/normalização auditados anteriormente, não corrigidos. D1 seleciona software literal; semântica runtime e gerador continuam não certificados.",
+      "evidence": [
+        {"path": "appendices/mebane_model_contract.md", "basis": "inspected", "locator": "Seções 2.1, 4 e 9.1; F1/F2 preservados"},
+        {"path": "quality_reports/results/mebane_gates/G2/round1/adjudication_checks.csv", "basis": "historical", "locator": "Contraprovas de suporte e diferenças de alvo"},
+        {"path": "quality_reports/results/mebane_gates/G2/round2/benchmark_contract.json", "basis": "inspected", "locator": "likelihood; held_limitations; G3-L4/L5/L7"},
+        {"path": "quality_reports/results/mebane_gates/G2/round2/results/round2_checks.csv", "basis": "executed", "locator": "contract_no_repair; contract_runtime_unknown; contract_failure_preserved; countN_endpoint_not_one"}
+      ]
+    },
+    {
+      "id": "G2-T4", "status": "done",
+      "scope": "D3 escolhe funcionais completos por draw, sem contagem extra de cédulas, e limites condicionais de margem; origem de stolen e viabilidade não presumidas.",
+      "evidence": [
+        {"path": "appendices/mebane_model_contract.md", "basis": "inspected", "locator": "Seções 6 e 9.3; G2.19-G2.21"},
+        {"path": "quality_reports/results/mebane_gates/G2/round1/adjudication.json", "basis": "historical", "locator": "G2-QA-D3 CONFIRMED, distinção de distribuições e limites"},
+        {"path": "quality_reports/results/mebane_gates/G2/round2/results/joint_functionals.csv", "basis": "executed", "locator": "Oito linhas sintéticas com Z/quatro latentes; valores fracionários e inviabilidades preservadas"},
+        {"path": "quality_reports/results/mebane_gates/G2/round2/results/joint_totals.csv", "basis": "executed", "locator": "Quatro totais dentro do draw; limites condicionais, sem exclusão do draw inviável"},
+        {"path": "quality_reports/results/mebane_gates/G2/round2/results/uncertainty_example.csv", "basis": "executed", "locator": "Mesma média 2, variâncias 12 versus 0; exemplo finito, não posterior estimada"},
+        {"path": "quality_reports/results/mebane_gates/G2/round2/results/round2_checks.csv", "basis": "executed", "locator": "same_draw_totals; margin_origin_rho_*; capacity_not_fabricated; reject_mutation_extra_ballot_binomial"}
+      ]
+    },
+    {
+      "id": "G2-T5", "status": "done",
+      "scope": "Derivação, custo e contraprovas com rederivação independente já concluída em round1, herdada por hash. Não é nova QA de round2 nem benchmark runtime.",
+      "evidence": [
+        {"path": "quality_reports/results/mebane_gates/G2/round1/review/review.json", "basis": "historical", "locator": "independent_rederivation_completed; 75 testes e 162 enumerações"},
+        {"path": "quality_reports/results/mebane_gates/G2/round1/review/independent_metrics.csv", "basis": "historical", "locator": "Erro máximo 4.44e-16; custo teórico não medido"},
+        {"path": "quality_reports/results/mebane_gates/G2/round1/adjudication.json", "basis": "historical", "locator": "adjudication.reasons: G2-T5 tem rederivação independente concluída"},
+        {"path": "quality_reports/results/mebane_gates/G2/round2/results/inheritance_check.json", "basis": "executed", "locator": "73 arquivos do candidato e 49 da revisão; 110 arquivos round1 preservados"},
+        {"path": "appendices/mebane_model_contract.md", "basis": "inspected", "locator": "Seção 5 preservada; limitações de alvo e custo mantidas"}
+      ]
+    }
+  ],
+  "acceptance_boundary": "Todos implementadores done com evidência não equivale a gate PASS. As escolhas e os limites mantidos desta rodada ainda exigem QA independente e adjudicação do coordenador."
+}

@@ -3,7 +3,17 @@
   "plan_id": "mebane-brasil-2022-2026",
   "date": "2026-09-28",
   "scope": "Modelo eforensics qbl para eleição presidencial brasileira de 2022 e preparação para 2026, com execução por subagentes, goals delimitados e revisão independente.",
-  "current_deliverable": "Execução autorizada pelo usuário em 2026-09-28. O ledger registra o avanço real; nenhum resultado é aprovado antes da revisão independente e adjudicação do gate correspondente.",
+  "current_deliverable": "Lote G2-G3 autorizado em 2026-09-29, com replicação externa G10 antes de G4. D1-D3 de G2 passaram na QA metodológica, mas a assinatura geral aguarda decisão sobre remoção concorrente de um arquivo incompleto inventariado em G0. Aprovações anteriores de G0/G1/G7 permanecem arquivadas, sem liberação atual até reconciliar a integridade. O reparo independente AR-02 da interface foi concluído, revisado e adjudicado sem MCMC. Não há aprovação de G3 ou inferencial automática.",
+  "integrity_hold": {
+    "incident": "G2-R2-QA-I1",
+    "path": "ssrn-4073770.pdf.download/ssrn-4073770.pdf",
+    "expected_sha256": "524dc82c59612ec91b3a6ab475dd34f0607546a37823c9a9b1fd652677a8acdf",
+    "scope": "Arquivo de 1360 bytes já classificado como incompleto, sem papel científico no modelo. Não atribuir autoria da remoção.",
+    "status": "awaiting_user_choice_restore_or_rebaseline",
+    "previous_ledger": "quality_reports/results/mebane_gates/coordination/2026-09-29_benchmark_round/ledger_pre_integrity_hold.json",
+    "evidence": "quality_reports/results/mebane_gates/G2/round2/adjudication_initial.json",
+    "independent_work": "Reparo de interface AR-02 concluído e aceito, sem estimação; ver coordination/2026-09-29_benchmark_round/interface_repair_closure.json sob quality_reports/results/mebane_gates/."
+  },
   "coordinator": "Agente principal desta conversa: despacha, acompanha, adjudica achados e autoriza transições técnicas com base em evidências.",
   "routing": {
     "basis": "Heurística conservadora, sem benchmark comparativo de qualidade ou velocidade entre modelos neste projeto.",
@@ -28,7 +38,9 @@
     "Processos longos usam logs persistentes, IDs de execução e checkpoints possíveis. O coordenador não declara monitoramento futuro sem mecanismo ativo nem cria automação apenas por haver dependência futura.",
     "Resultados eleitorais de 2026 dependem de publicação oficial. Dados e código podem ser preparados antes; a espera não deve manter um subagente ocioso ou um goal impossível de concluir ativo indefinidamente.",
     "G8 e G9 representam respectivamente T1 e T2 de 2026, com estados/goals próprios. Cada versão oficial usa diretório imutável ano/turno/SHA-do-snapshot/roundN; reestimação por retificação preserva o records da versão anterior. Não existe aprovação conjunta implícita de 2026.",
-    "G9 pode ser not_applicable somente após atestação oficial independente de que T2 não ocorreu. Dados ausentes ou ainda não publicados exigem waiting_external, nunca not_applicable. Um goal finito verifica a ocorrência; esse desfecho não marca todos analíticos como executados."
+    "G9 pode ser not_applicable somente após atestação oficial independente de que T2 não ocorreu. Dados ausentes ou ainda não publicados exigem waiting_external, nunca not_applicable. Um goal finito verifica a ocorrência; esse desfecho não marca todos analíticos como executados.",
+    "G10 reproduz ao menos um resultado empírico dos próprios autores do eforensics, com artigo/versão e alvo numérico identificados, dados e código arquivados, critérios congelados e revisão independente antes da nova execução. Exemplo sintético ou pacote de terceiros sobre Brasil não substitui esse requisito. A busca preparatória pode ocorrer antes de G3, mas não é G10 pass.",
+    "Replicação externa bem-sucedida verifica implementação no caso reproduzido, não identificação ou validade eleitoral no Brasil. Divergência de versão/modelo deve ser rotulada; não ajustar critérios ou trocar de caso depois de observar fracasso sem preservar e justificar a decisão."
   ],
   "evidence_contract": [
     "run.json: gate_id, round, contract_sha256, dependency_manifests, executor_id, IDs dos goals quando disponíveis, modelo solicitado, esforço, início/fim, comandos, sementes, versões, exit codes, tempos e paths de inputs/code/configuration/outputs efetivamente usados.",
@@ -42,7 +54,7 @@
   "readiness": {
     "data_ready_2026": "G7 pass: recepção e validação de arquivos estão ensaiadas com fixtures. Não implica estimativas de 2026.",
     "inference_ready_2026": "G6 e G7 pass, com modelo/configuração aprovados e transferibilidade avaliada. G8 libera apenas T1, G9 apenas T2; cada qual exige dados oficiais e revisão própria. G8 pass/G9 waiting_external, G8 pass/G9 inconclusive e G9 not_applicable são estados distintos e preservados.",
-    "pre_election_priority": "G0 -> G1 -> G7 em paralelo a G0 -> G2 -> G3 -> G4. Datas oficiais não são promessa de duração dos gates inferenciais."
+    "pre_election_priority": "G0 -> G1 -> G7 em paralelo a G0 -> G2 -> G3 -> G10 -> G4. G10 tem numeração nova, mas precede G4 por dependência. Datas oficiais não são promessa de duração dos gates inferenciais."
   },
   "gates": [
     {
@@ -51,7 +63,7 @@
       "goal": "Entregar inventário verificável de dados, documentos, código, fits e ambiente, distinguindo execução histórica de validação atual e tornando possível reproduzir o baseline.",
       "depends_on": [],
       "external_prerequisites": [],
-      "status": "pass",
+      "status": "changes_requested",
       "executor": {"role": "SOL-BASELINE", "model": "gpt-6-sol", "effort": "high"},
       "reviewer": {"role": "QA-BASELINE", "model": "gpt-6-sol", "effort": "high", "independent": true},
       "write_scope": ["quality_reports/results/mebane_gates/G0/", "renv.lock", "README.md", "CLAUDE.md"],
@@ -79,7 +91,7 @@
       "goal": "Construir uma entrada parametrizada por ano, turno, cargo e candidato, reproduzindo os totais de 2022 e explicitando todas as regras de limpeza necessárias ao modelo.",
       "depends_on": ["G0"],
       "external_prerequisites": [],
-      "status": "pass",
+      "status": "queued",
       "executor": {"role": "SOL-DADOS", "model": "gpt-6-sol", "effort": "high"},
       "reviewer": {"role": "QA-DADOS", "model": "gpt-6-sol", "effort": "xhigh", "independent": true},
       "write_scope": ["R/01_load_tse.R", "R/02_build_vars.R", "R/lib/mebane_data.R", "config/mebane/", "tests/mebane/data/", "quality_reports/results/mebane_gates/G1/"],
@@ -108,7 +120,7 @@
       "goal": "Estabelecer o alvo estatístico preciso, o que o código JAGS implementa e as diferenças do Stan, com equações, domínios, priors e estimandos verificáveis.",
       "depends_on": ["G0"],
       "external_prerequisites": [],
-      "status": "changes_requested",
+      "status": "inconclusive",
       "executor": {"role": "METODO-PRINCIPAL", "model": "inherit", "effort": "xhigh"},
       "reviewer": {"role": "QA-MATEMATICA", "model": "inherit", "effort": "xhigh", "independent": true},
       "write_scope": ["appendices/mebane_model_contract.md", "tests/mebane/algebra/", "quality_reports/results/mebane_gates/G2/"],
@@ -116,7 +128,7 @@
         {"id": "G2-T1", "task": "Mapear artigo de 2022, discussão de 2023, qbl do commit fixado e Stan atual linha por linha, distinguindo paper, implementação e aproximação.", "status": "done", "evidence": [{"path": "appendices/mebane_model_contract.md", "basis": "inspected", "locator": "seções 1 e 8; snapshots P22/P23/J/S e mapa de blocos"}, {"path": "quality_reports/results/mebane_gates/G2/round1/review/review.json", "basis": "inspected", "locator": "coverage_confirmed de G2-T1"}]},
         {"id": "G2-T2", "task": "Derivar priors induzidas ordenadas, interceptos, efeitos geográficos e hierárquicos; conferir a parametrização JAGS de precisão e a distinção entre variância e desvio-padrão.", "status": "done", "evidence": [{"path": "appendices/mebane_model_contract.md", "basis": "inspected", "locator": "seção 2; escolha da prior de produção ainda pendente"}, {"path": "quality_reports/results/mebane_gates/G2/round1/review/independent_checks.csv", "basis": "executed", "locator": "priors, Jacobiano, variância/SD e interceptos"}]},
         {"id": "G2-T3", "task": "Verificar p.a e p.w, suporte físico e probabilístico, contagens binomiais latentes, condicionamentos, truncamentos e o efeito do clamp no Stan em casos de fronteira.", "status": "done", "evidence": [{"path": "appendices/mebane_model_contract.md", "basis": "inspected", "locator": "seções 3-5; sem certificar semântica runtime do JAGS"}, {"path": "quality_reports/results/mebane_gates/G2/round1/adjudication_checks.csv", "basis": "executed", "locator": "contraexemplos de suporte e substituição plug-in"}]},
-        {"id": "G2-T4", "task": "Definir votos manufactured/stolen, classes, totais conjuntos por draw e efeito contrafactual na margem; explicitar que a origem dos votos stolen pode exigir hipóteses adicionais ou limites de identificação parcial, pois não-leaders são agregados. Distinguir identificação, convergência e interpretação substantiva.", "status": "in_progress", "evidence": []},
+        {"id": "G2-T4", "task": "Definir votos manufactured/stolen, classes, totais conjuntos por draw e efeito contrafactual na margem; explicitar que a origem dos votos stolen pode exigir hipóteses adicionais ou limites de identificação parcial, pois não-leaders são agregados. Distinguir identificação, convergência e interpretação substantiva.", "status": "done", "evidence": [{"path": "quality_reports/results/mebane_gates/G2/round2/benchmark_contract.json", "basis": "inspected", "locator": "D3; estimands e margin"}, {"path": "quality_reports/results/mebane_gates/G2/round2/results/joint_functionals.csv", "basis": "executed", "locator": "funcionais sintéticos completos por draw"}, {"path": "quality_reports/results/mebane_gates/G2/round2/results/joint_totals.csv", "basis": "executed", "locator": "agregação conjunta e limites condicionais; não são resultados eleitorais"}]},
         {"id": "G2-T5", "task": "Derivar a marginalização exata em casos pequenos ou delimitar formalmente a aproximação e o custo; obter rederivação independente com contraexemplos.", "status": "done", "evidence": [{"path": "quality_reports/results/mebane_gates/G2/round1/review/review.json", "basis": "executed", "locator": "162 enumerações, 75 testes; independent_rederivation_completed"}, {"path": "quality_reports/results/mebane_gates/G2/round1/review/independent_metrics.csv", "basis": "executed", "locator": "erro máximo 4.44e-16; custo teórico, não benchmark"}]}
       ],
       "deliverables": ["Contrato matemático e tabela de diferenças", "Testes de identidades e fronteiras", "Definições de estimandos e limitações"],
@@ -124,11 +136,11 @@
       "on_failure": "Reparar a derivação ou especificar a decisão substantiva necessária. Sol pode produzir testes auxiliares, mas não substituir a checagem matemática.",
       "records": {
         "executor_id": "01a0eaee-01df-7773-bd63-d321db26a47c",
-        "reviewer_id": "01a0eb0d-15b5-7c51-8e6f-c5b5b93f6011",
-        "run": "quality_reports/results/mebane_gates/G2/round1/run.json",
-        "candidate_manifest": "quality_reports/results/mebane_gates/G2/round1/candidate_manifest.json",
-        "review": "quality_reports/results/mebane_gates/G2/round1/review/review.json",
-        "adjudication": "quality_reports/results/mebane_gates/G2/round1/adjudication.json"
+        "reviewer_id": "01a0ed49-99a4-7892-af77-e62f82667860",
+        "run": "quality_reports/results/mebane_gates/G2/round2/run.json",
+        "candidate_manifest": "quality_reports/results/mebane_gates/G2/round2/candidate_manifest.json",
+        "review": "quality_reports/results/mebane_gates/G2/round2/review/review.json",
+        "adjudication": "quality_reports/results/mebane_gates/G2/round2/adjudication_initial.json"
       }
     },
     {
@@ -140,11 +152,11 @@
       "status": "queued",
       "executor": {"role": "SOL-MODELO", "model": "gpt-6-sol", "effort": "xhigh"},
       "reviewer": {"role": "QA-FIDELIDADE", "model": "inherit", "effort": "xhigh", "independent": true},
-      "write_scope": ["stan/", "R/lib/mebane_model.R", "R/05_stan_eforensics_qbl_calibrate.R", "tests/mebane/likelihood/", "quality_reports/results/mebane_gates/G3/"],
+      "write_scope": ["stan/", "R/lib/mebane_model.R", "R/05_stan_eforensics_qbl_calibrate.R", "R/05_eforensics_umeforensics_qbl.R", "R/07_brasil_full_qbl.R", "tests/mebane/likelihood/", "quality_reports/results/mebane_gates/G3/"],
       "todos": [
         {"id": "G3-T1", "task": "Construir gerador sintético fiel ao contrato, sem reutilizar simulate_bl com constantes incompatíveis sem correção e teste.", "status": "todo", "evidence": []},
         {"id": "G3-T2", "task": "Implementar e testar a verossimilhança de referência para N pequeno, enumerando contagens discretas quando cabível, e comparar probabilidades em uma grade incluindo fronteiras.", "status": "todo", "evidence": []},
-        {"id": "G3-T3", "task": "Conferir priors, matrices de desenho, transformações e generated quantities; separar aproximação já existente de eventual Stan exato e testar gradientes se aplicável.", "status": "todo", "evidence": []},
+        {"id": "G3-T3", "task": "Conferir priors, matrizes de desenho, interface de dados, transformações e generated quantities; testar formula1=w/formula2=a com sentinelas assimétricas e corrigir as chamadas históricas invertidas preservando fonte anterior e fits; separar aproximação já existente de eventual Stan exato e testar gradientes se aplicável.", "status": "todo", "evidence": []},
         {"id": "G3-T4", "task": "Executar comparações pequenas entre engines apenas no mesmo alvo e dentro do erro Monte Carlo; documentar a decisão de engine e a viabilidade da marginalização.", "status": "todo", "evidence": []}
       ],
       "deliverables": ["Testes small-N e gerador auditado", "Implementação aprovada ou decisão documentada de manter JAGS", "Registro de equivalência/limites do Stan"],
@@ -153,10 +165,31 @@
       "records": null
     },
     {
+      "id": "G10",
+      "title": "Replicação externa dos autores",
+      "goal": "Reproduzir ao menos um resultado empírico publicado pelos próprios autores do eforensics, com dados e código de origem rastreável e comparação previamente especificada, antes de confiar na implementação para o Brasil.",
+      "depends_on": ["G3"],
+      "external_prerequisites": [],
+      "status": "queued",
+      "executor": {"role": "SOL-REPLICACAO-AUTORES", "model": "gpt-6-sol", "effort": "xhigh"},
+      "reviewer": {"role": "QA-REPLICACAO-AUTORES", "model": "inherit", "effort": "xhigh", "independent": true},
+      "write_scope": ["replication_mebane/", "R/09_replicate_mebane.R", "R/lib/mebane_author_replication.R", "config/mebane/replication/", "tests/mebane/replication/", "output/mebane/replication/", "quality_reports/results/mebane_gates/G10/"],
+      "todos": [
+        {"id": "G10-T1", "task": "Escolher caso empírico dos autores com artigo/versão/tabela/figura ou células-alvo exatos; arquivar dados, código, ambiente, fontes e resultados de referência com hashes. Distinguir qbl, outras variantes e material de terceiros.", "status": "todo", "evidence": []},
+        {"id": "G10-T2", "task": "Fixar replication_contract.json antes de nova estimação: preparação dos dados, unidades, denominadores, fórmulas, priors, versão/modelo, sementes, outputs-alvo, tolerâncias determinísticas e Monte Carlo e regras pass/inconclusive/fail. Obter revisão independente desse contrato antes de G10-T3; falta de MCSE/draws de referência limita o que pode ser atestado.", "status": "todo", "evidence": []},
+        {"id": "G10-T3", "task": "Reexecutar o código dos autores em isolamento e reproduzir a saída escolhida; comparar também nossa implementação apenas se o alvo for o mesmo. Registrar qualquer adaptação necessária, tempo, memória, diagnósticos e falhas, sem ajustar o modelo ou critérios para coincidir com a publicação.", "status": "todo", "evidence": []},
+        {"id": "G10-T4", "task": "Revisor independente recompõe os resultados centrais a partir dos dados/draws e aplica o contrato congelado. Entregar tabela publicado versus replicado, diferenças, incerteza e limites; separar reprodução de artefatos antigos, nova estimação e validade para o Brasil.", "status": "todo", "evidence": []}
+      ],
+      "deliverables": ["Caso empírico e fontes dos autores arquivados", "Contrato de replicação aprovado antes da execução", "Script de reprodução e tabela publicado versus replicado", "Parecer independente com alcance da reprodução"],
+      "acceptance": ["Ao menos um alvo empírico publicado pelos próprios autores foi reproduzido; tutorial ou simulação nossa não encerra G10.", "Dados, transformações e especificação correspondem ao resultado-alvo, ou as diferenças permanecem explícitas e impedem uma alegação indevida de equivalência qbl.", "O contrato e seu parecer independente precedem a nova estimação por hashes e timestamps; tolerâncias são justificadas pela precisão publicada e incerteza Monte Carlo, não escolhidas depois dos resultados.", "O revisor confirma a comparação e a integridade das fontes. Concordância no caso externo não é usada como prova de fraude, ausência de fraude ou identificação no Brasil."],
+      "on_failure": "Investigar preparação, versão, semântica e cálculo; retornar a G2/G3 quando necessário. Não liberar G4 com incompatibilidade material não resolvida. Dados/código indisponíveis produzem impedimento documentado, não aprovação por substituto sintético.",
+      "records": null
+    },
+    {
       "id": "G4",
       "title": "Validação inferencial em pilotos",
       "goal": "Demonstrar recuperação e amostragem adequada das quantidades de interesse em simulações e pilotos brasileiros, ou delimitar onde a inferência permanece inconclusiva.",
-      "depends_on": ["G1", "G3"],
+      "depends_on": ["G1", "G3", "G10"],
       "external_prerequisites": [],
       "status": "queued",
       "executor": {"role": "SOL-DIAGNOSTICOS", "model": "gpt-6-sol", "effort": "xhigh"},
@@ -224,7 +257,7 @@
       "goal": "Deixar preparada e ensaiada a recepção de dados de cada turno de 2026, com validação, versões e execução parametrizada sem pressupor disponibilidade ou schema idêntico.",
       "depends_on": ["G1"],
       "external_prerequisites": [],
-      "status": "pass",
+      "status": "queued",
       "executor": {"role": "SOL-PRONTIDAO-2026", "model": "gpt-6-sol", "effort": "high"},
       "reviewer": {"role": "QA-PRONTIDAO-2026", "model": "gpt-6-sol", "effort": "xhigh", "independent": true},
       "write_scope": ["R/lib/mebane_2026_intake.R", "config/mebane/2026/", "tests/mebane/2026/", "quality_reports/results/mebane_gates/G7/"],

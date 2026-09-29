@@ -1,0 +1,49 @@
+{
+  "schema_version": "1.0",
+  "run_id": "AR-02-sentinel-2026-09-29-new",
+  "recorded_at_utc": "2026-09-29T13:38:26Z",
+  "run_kind": "NEW_DISPOSABLE_R_PROCESS",
+  "gate": "pre-G3 interface candidate; G3 not run or approved",
+  "command": "Rscript tests/mebane/likelihood/test_ar02_interface.R",
+  "working_directory": "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud",
+  "exit_code": 0,
+  "versions": {
+    "R": "4.4.2",
+    "eforensics": "0.0.4",
+    "eforensics_RemoteSha": "3017de537450f97a01872d0157462a68bea348ee",
+    "runjags": "2.2.2.5",
+    "rjags": "4.17"
+  },
+  "checks": {
+    "source_body_match": "installed eforensics, eforensics_main_par, getRegMatrix, and original order.formulas all.equal to archived source bodies",
+    "ast": "3 repaired calls in R/05 and 1 in R/07",
+    "sentinel": "N=(10,12), a=(2,5), w=(7,3); distinct x1.a and x1.w; four latent covariates",
+    "wrapper_capture": "All 4 actual call expressions evaluated through installed wrapper with each script's in-memory order.formulas patch; w, a, N, n, all six design matrices and dimensions matched a manually built direct list",
+    "negative_control": "Swapping formula1 and formula2 was detected in all 4 calls; synthetic covariate matrices also mismatched",
+    "sampling_intercepts": 8,
+    "original_run_jags_entries": 0,
+    "jags_model_entries": 0,
+    "namespace_restored": true,
+    "git_diff_check": "exit 0 for the two edited runner scripts"
+  },
+  "observed_stdout_excerpt": [
+    "AST PASS: 3 calls in R/05 and 1 in R/07 have the repaired formula mapping",
+    "WRAPPER PASS: call 1, direct-list match and swapped negative control",
+    "WRAPPER PASS: call 2, direct-list match and swapped negative control",
+    "WRAPPER PASS: call 3, direct-list match and swapped negative control",
+    "WRAPPER PASS: call 4, direct-list match and swapped negative control",
+    "MCMC BLOCKED: 8 captures in sampler stub, 0 compiler entries",
+    "AR-02 PASS: original namespace functions restored in this disposable R process"
+  ],
+  "log_notes": [
+    "The installed package prints 'MCMC in progress' before invoking run.jags; this was only pre-sampler text, not evidence of sampling.",
+    "The process emitted LC_* startup locale warnings; they did not affect the exit code or assertions.",
+    "ef_check_jags and run.jags were replaced in memory; jags.model was guarded in memory. No package file was modified.",
+    "An initial direct Rscript invocation failed to find packages because sandbox renv activation was skipped; the final test reuses the existing project library without installation. Earlier fixture/comparison assertions were corrected before this new successful run."
+  ],
+  "not_tested": [
+    "Posterior sampling, convergence, likelihood numerics, or model fit",
+    "Full runner execution, loaders, national data, or output persistence",
+    "G3 gate criteria or independent QA"
+  ]
+}

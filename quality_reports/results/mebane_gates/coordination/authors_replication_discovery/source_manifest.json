@@ -1,0 +1,87 @@
+{
+  "schema_version": "1.0",
+  "access_date": "2026-09-29",
+  "download_method": "curl -fL over HTTPS; no downloaded R code was executed",
+  "hash_algorithm": "SHA-256",
+  "paths_relative_to": "quality_reports/results/mebane_gates/coordination/authors_replication_discovery",
+  "sources": [
+    {
+      "id": "authors_github_commit",
+      "authors": "Diogo Ferrari; Kevin McAlister; Walter R. Mebane, Jr.; Patrick Y. Wu",
+      "title": "eforensics public R package",
+      "version": "0.0.4; commit 3017de537450f97a01872d0157462a68bea348ee (2019-10-27T04:11:09Z)",
+      "requested_url": "https://api.github.com/repos/UMeforensics/eforensics_public/tarball/3017de537450f97a01872d0157462a68bea348ee",
+      "effective_url_after_redirect": "https://codeload.github.com/UMeforensics/eforensics_public/legacy.tar.gz/3017de537450f97a01872d0157462a68bea348ee",
+      "path": "archive/eforensics_public_3017de537450f97a01872d0157462a68bea348ee.tar.gz",
+      "bytes": 3752552,
+      "sha256": "0785aa8d926f6065a4f997189a0cede6112ee59390ade461e2ebe8467380026d",
+      "extracted_dir": "archive/UMeforensics-eforensics_public-3017de5/",
+      "extraction": "tar -xzf into archive/; complete archive extracted, with pertinent members checksummed below"
+    },
+    {
+      "id": "authors_github_commit_api",
+      "title": "GitHub commit metadata",
+      "version": "3017de537450f97a01872d0157462a68bea348ee",
+      "requested_url": "https://api.github.com/repos/UMeforensics/eforensics_public/commits/3017de537450f97a01872d0157462a68bea348ee",
+      "path": "archive/eforensics_commit_3017de5.json",
+      "bytes": 8084,
+      "sha256": "f48694205d445c53c1525c33145b17aa339ec8bf957cf3a0bee14b3c594cdf0d"
+    },
+    {
+      "id": "measuring_frauds_2022",
+      "authors": "Walter R. Mebane, Jr.; Diogo Ferrari; Kevin McAlister; Patrick Y. Wu",
+      "title": "Measuring Election Frauds",
+      "version": "2022-03-06",
+      "requested_url": "https://public.websites.umich.edu/~wmebane/measfrauds.pdf",
+      "path": "archive/measfrauds_2022-03-06.pdf",
+      "bytes": 524478,
+      "sha256": "ad3b1cd473d48540877fb00cdffaaa09df1a21a98e4a2b4fa0a03c227ec50d76",
+      "g0_hash_match": true
+    },
+    {
+      "id": "lost_votes_2023",
+      "authors": "Walter R. Mebane, Jr.",
+      "title": "Lost Votes and Posterior Multimodality in the eforensics Model",
+      "version": "2023-07-02",
+      "requested_url": "https://public.websites.umich.edu/~wmebane/pm23.pdf",
+      "path": "archive/pm23_2023-07-02.pdf",
+      "bytes": 5123025,
+      "sha256": "615ddab21034e22ca55d891e01f14b85a2e7d80e12238bfbfb142ff214531431",
+      "g0_hash_match": true
+    },
+    {
+      "id": "pennsylvania_2024_application",
+      "authors": "Walter R. Mebane, Jr.",
+      "title": "eforensics Analysis of the 2024 President Election in Pennsylvania",
+      "version": "2025-06-02",
+      "requested_url": "https://websites.umich.edu/~wmebane/PA2024.pdf",
+      "path": "archive/PA2024_2025-06-02.pdf",
+      "bytes": 2153684,
+      "sha256": "9de271cf21f13001c0ce6af5cdffc80594fe7365085aedf3e1f9fd02fef2b4c1",
+      "g0_hash_match": true
+    },
+    {
+      "id": "bolivia_2019_application",
+      "authors": "Walter R. Mebane, Jr.",
+      "title": "Evidence Against Fraudulent Votes Being Decisive in the Bolivia 2019 Election",
+      "version": "2019-11-13",
+      "requested_url": "https://websites.umich.edu/~wmebane/Bolivia2019.pdf",
+      "path": "archive/Bolivia2019.pdf",
+      "bytes": 6174103,
+      "sha256": "ddcdb42bebf8160abf80b6c189db37951db8ead7f0f763d5469423778f870fb7"
+    }
+  ],
+  "pertinent_extracted_members": [
+    {"path": "archive/UMeforensics-eforensics_public-3017de5/DESCRIPTION", "bytes": 1115, "sha256": "4bbb33f8765b132ddac991c67eab01e59e699f82390c759a841768852fb46df9"},
+    {"path": "archive/UMeforensics-eforensics_public-3017de5/data/dc2010.rda", "bytes": 2010, "sha256": "0386dcc86155e543382c2725e9eb61ebf365b2e6f96a2b037324dbee80005196"},
+    {"path": "archive/UMeforensics-eforensics_public-3017de5/vignettes/eforensics.Rmd", "bytes": 11932, "sha256": "1d5f6894c66cd9a7882adb52f13b31d6fa87d363d2cce30dcf2e54e071c4c7a6"},
+    {"path": "archive/UMeforensics-eforensics_public-3017de5/R/ef_main.R", "bytes": 50459, "sha256": "ee626c0c939f84567c0ee74a100954229567911711193716a46837e1d6e3ce8b"},
+    {"path": "archive/UMeforensics-eforensics_public-3017de5/R/ef_models.R", "bytes": 106392, "sha256": "7140c70f03cdc01cffc32b29f18b8ccbc785b9f460282b518df4bf3625910b4a"},
+    {"path": "archive/UMeforensics-eforensics_public-3017de5/man/dc2010.Rd", "bytes": 792, "sha256": "36668fe6f8c1bf933d1f749849569887e7c9c190fa718afd838ed7d498ce5873"}
+  ],
+  "not_acquired": [
+    {"id": "bolivia_clean_csv", "reference": "Bolivia2019.pdf p. 24: ~/wxchg/data/Bolivia/Bolivia2019Clean.csv", "reason": "private local author path, no direct public package link found"},
+    {"id": "pennsylvania_author_sheet", "reference": "PA2024.pdf bibliography: McGregor (2025), PA All Counties Total Votes ETA-Corrected Spreadsheet May 31..xlsx", "reason": "cited as supplied by email; no public matching input located"},
+    {"id": "dc2010_rendered_numeric_results", "reference": "eforensics.Rmd eforensics_demonstration", "reason": "computed dynamically during rendering; no immutable numeric result located at fixed commit"}
+  ]
+}

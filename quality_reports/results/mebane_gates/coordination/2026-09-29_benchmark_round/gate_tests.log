@@ -1,0 +1,37 @@
+test_completed_but_unreviewed_replication_does_not_unlock_inference (test_mebane_author_replication_gate.AuthorReplicationGateTests.test_completed_but_unreviewed_replication_does_not_unlock_inference) ... ok
+test_engine_approval_does_not_unlock_inference (test_mebane_author_replication_gate.AuthorReplicationGateTests.test_engine_approval_does_not_unlock_inference) ... ok
+test_replication_approval_is_bound_to_engine_artifacts (test_mebane_author_replication_gate.AuthorReplicationGateTests.test_replication_approval_is_bound_to_engine_artifacts) ... ok
+test_replication_approval_unlocks_inference_execution_only (test_mebane_author_replication_gate.AuthorReplicationGateTests.test_replication_approval_unlocks_inference_execution_only) ... ok
+test_replication_cannot_execute_before_engine_approval (test_mebane_author_replication_gate.AuthorReplicationGateTests.test_replication_cannot_execute_before_engine_approval) ... ok
+test_replication_is_required_before_inference (test_mebane_author_replication_gate.AuthorReplicationGateTests.test_replication_is_required_before_inference) ... ok
+test_alias_ids_and_self_review_are_rejected (test_mebane_gates.GateTests.test_alias_ids_and_self_review_are_rejected) ... ok
+test_changed_candidate_and_old_review_are_rejected (test_mebane_gates.GateTests.test_changed_candidate_and_old_review_are_rejected) ... ok
+test_changed_parent_review_or_adjudication_invalidates_child (test_mebane_gates.GateTests.test_changed_parent_review_or_adjudication_invalidates_child) ... ok
+test_changed_review_and_unresolved_finding (test_mebane_gates.GateTests.test_changed_review_and_unresolved_finding) ... ok
+test_complete_independent_records_are_accepted (test_mebane_gates.GateTests.test_complete_independent_records_are_accepted) ... ok
+test_cross_gate_round_and_contract_are_rejected (test_mebane_gates.GateTests.test_cross_gate_round_and_contract_are_rejected) ... ok
+test_current_ledger_migrates_without_records (test_mebane_gates.GateTests.test_current_ledger_migrates_without_records) ... ok
+test_cycle_and_unknown_dependency_are_rejected (test_mebane_gates.GateTests.test_cycle_and_unknown_dependency_are_rejected) ... ok
+test_dependency_approval_schema_is_required (test_mebane_gates.GateTests.test_dependency_approval_schema_is_required) ... ok
+test_done_todo_needs_real_evidence (test_mebane_gates.GateTests.test_done_todo_needs_real_evidence) ... ok
+test_duplicate_gate_id_and_path_escape (test_mebane_gates.GateTests.test_duplicate_gate_id_and_path_escape) ... ok
+test_execution_cannot_skip_dependency (test_mebane_gates.GateTests.test_execution_cannot_skip_dependency) ... ok
+test_external_pass_requires_attestation_and_snapshot_in_manifest (test_mebane_gates.GateTests.test_external_pass_requires_attestation_and_snapshot_in_manifest) ... ok
+test_external_requires_attestation_before_execution (test_mebane_gates.GateTests.test_external_requires_attestation_before_execution) ... ok
+test_external_temporal_and_exact_types (test_mebane_gates.GateTests.test_external_temporal_and_exact_types) ... ok
+test_missing_finding_reconciliation_is_rejected (test_mebane_gates.GateTests.test_missing_finding_reconciliation_is_rejected) ... ok
+test_pass_without_evidence_is_rejected (test_mebane_gates.GateTests.test_pass_without_evidence_is_rejected) ... ok
+test_queued_plan_is_valid (test_mebane_gates.GateTests.test_queued_plan_is_valid) ... ok
+test_render_is_deterministic (test_mebane_gates.GateTests.test_render_is_deterministic) ... ok
+test_run_and_dependency_manifest_staleness (test_mebane_gates.GateTests.test_run_and_dependency_manifest_staleness) ... ok
+test_run_cannot_count_itself_as_an_input (test_mebane_gates.GateTests.test_run_cannot_count_itself_as_an_input) ... ok
+test_run_files_and_manifest_complete_are_required (test_mebane_gates.GateTests.test_run_files_and_manifest_complete_are_required) ... ok
+test_schema_and_mermaid_title_fail_without_traceback (test_mebane_gates.GateTests.test_schema_and_mermaid_title_fail_without_traceback) ... ok
+test_static_contract_ignores_status_but_detects_scope_change (test_mebane_gates.GateTests.test_static_contract_ignores_status_but_detects_scope_change) ... ok
+test_t1_pass_t2_waiting_and_inconclusive (test_mebane_gates.GateTests.test_t1_pass_t2_waiting_and_inconclusive) ... ok
+test_t2_not_applicable_requires_official_nonoccurrence (test_mebane_gates.GateTests.test_t2_not_applicable_requires_official_nonoccurrence) ... ok
+
+----------------------------------------------------------------------
+Ran 32 tests in 5.922s
+
+OK

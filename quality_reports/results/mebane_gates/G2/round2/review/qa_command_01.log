@@ -1,0 +1,40 @@
+Independent closure: 59/59 passed. No MCMC or RNG.
+Warning messages:
+1: In model.matrix.default(mt1, reg.matrix, contrasts) :
+  non-list contrasts argument ignored
+2: In model.matrix.default(mt1, reg.matrix, contrasts) :
+  non-list contrasts argument ignored
+3: In model.matrix.default(mt1, reg.matrix, contrasts) :
+  non-list contrasts argument ignored
+4: In model.matrix.default(mt1, reg.matrix, contrasts) :
+  non-list contrasts argument ignored
+5: In model.matrix.default(mt1, reg.matrix, contrasts) :
+  non-list contrasts argument ignored
+6: In model.matrix.default(mt1, reg.matrix, contrasts) :
+  non-list contrasts argument ignored
+Warning messages:
+1: In model.matrix.default(mt1, reg.matrix, contrasts) :
+  non-list contrasts argument ignored
+2: In model.matrix.default(mt1, reg.matrix, contrasts) :
+  non-list contrasts argument ignored
+3: In model.matrix.default(mt1, reg.matrix, contrasts) :
+  non-list contrasts argument ignored
+4: In model.matrix.default(mt1, reg.matrix, contrasts) :
+  non-list contrasts argument ignored
+5: In model.matrix.default(mt1, reg.matrix, contrasts) :
+  non-list contrasts argument ignored
+6: In model.matrix.default(mt1, reg.matrix, contrasts) :
+  non-list contrasts argument ignored
+Warning messages:
+1: In model.matrix.default(mt1, reg.matrix, contrasts) :
+  non-list contrasts argument ignored
+2: In model.matrix.default(mt1, reg.matrix, contrasts) :
+  non-list contrasts argument ignored
+3: In model.matrix.default(mt1, reg.matrix, contrasts) :
+  non-list contrasts argument ignored
+4: In model.matrix.default(mt1, reg.matrix, contrasts) :
+  non-list contrasts argument ignored
+5: In model.matrix.default(mt1, reg.matrix, contrasts) :
+  non-list contrasts argument ignored
+6: In model.matrix.default(mt1, reg.matrix, contrasts) :
+  non-list contrasts argument ignored

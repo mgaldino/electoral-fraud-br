@@ -1,0 +1,18 @@
+{
+  "status": "fail",
+  "passed": 719,
+  "total": 720,
+  "candidate_files": 163,
+  "failures": [
+    {
+      "id": "G0_dependency_manifest:ssrn-4073770.pdf.download/ssrn-4073770.pdf",
+      "pass": false,
+      "detail": {
+        "resolved_path": "ssrn-4073770.pdf.download/ssrn-4073770.pdf",
+        "expected": "524dc82c59612ec91b3a6ab475dd34f0607546a37823c9a9b1fd652677a8acdf",
+        "actual": null,
+        "bytes": null
+      }
+    }
+  ]
+}

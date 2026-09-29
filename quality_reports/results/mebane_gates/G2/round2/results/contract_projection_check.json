@@ -1,0 +1,15 @@
+{
+  "matches_current_static_projection": true,
+  "contract_sha256": "f834bc1d12d88b4bc82fb2ada95120a838451c5809332630a75cd9abf03cf4d1",
+  "mutable_ledger_excluded": true,
+  "checked_at_utc": "2026-09-29T12:53:03.614310+00:00",
+  "dependency_manifests": {
+    "G0": "f71333db477385fc78dad8a7a1a7ca78e48479226dcdbde80ce97d724409fec7"
+  },
+  "dependency_approvals": {
+    "G0": {
+      "review_sha256": "ef624cb4b2d8ad098b87e196d87add358ce1eba93165d44fcc1939ff303f5376",
+      "adjudication_sha256": "ea1b4905fdfa14f6e3f36c41974ea948ba0c39d1f81f87d6eaf479782216267b"
+    }
+  }
+}

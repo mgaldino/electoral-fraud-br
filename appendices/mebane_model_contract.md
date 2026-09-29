@@ -1,8 +1,8 @@
 ---
 title: "Contrato matemático do qbl"
-subtitle: "G2, round1: candidato para revisão independente"
+subtitle: "G2, round2: benchmark literal autorizado; candidato pendente de QA"
 author: "METODO-PRINCIPAL"
-date: "28 de setembro de 2026"
+date: "29 de setembro de 2026"
 lang: pt-BR
 fontsize: 11pt
 geometry: margin=25mm
@@ -10,9 +10,13 @@ geometry: margin=25mm
 
 # 1. Resultado e alcance
 
-**Não há equivalência integral entre os artigos, o JAGS congelado e o Stan histórico.** O JAGS contém estados de massa positiva em que `p.w` excede 1; o Stan os transforma por `clamp`. O produto de binomiais dos artigos é normalizado no retângulo de contagens, mas atribui probabilidade a combinações eleitoralmente impossíveis. Também diferem a hierarquia de escala, o uso da abstenção observada e a presença de contagens latentes. Estes achados exigem decisão sobre o alvo antes de uma portagem certificada em G3.
+**O alvo autorizado para o primeiro benchmark é a reprodução literal do qbl/JAGS, não sua correção científica nem sua aprovação inferencial.** Preservam-se o commit `3017de537450f97a01872d0157462a68bea348ee`, JAGS 4.3.2, a hierarquia completa e as diferenças em relação aos artigos e ao Stan histórico. O primeiro desenho será intercept-only; a geografia de produção permanece hipótese a aprovar em G4 antes de G6.
 
-Este documento estabelece o que está escrito e implementado, deriva equivalências delimitadas e oferece alternativas **não aprovadas**. Não estima modelos, não modifica produção, não aprova G2 nem incorpora G1. Os testes são do implementador. A rederivação por QA-MATEMATICA, a adjudicação e qualquer aprovação continuam pendentes.
+**Não há equivalência integral entre os artigos, o JAGS congelado e o Stan histórico.** O JAGS contém estados de massa positiva em que `p.w` excede 1; o Stan os transforma por `clamp`. O produto de binomiais dos artigos é normalizado no retângulo de contagens, mas atribui probabilidade a combinações eleitoralmente impossíveis. Também diferem a hierarquia de escala, o uso da abstenção observada e a presença de contagens latentes. Escolher o benchmark literal não refuta esses achados: G3 deverá observar sua semântica runtime, inclusive falhas, sem transformá-la silenciosamente em um gerador válido.
+
+A QA independente e a adjudicação de round1 confirmaram as derivações e três decisões pendentes, D1–D3. A autorização do usuário agora seleciona as escolhas documentadas na seção 9; **a nova candidatura ainda requer revisão independente e adjudicação**. Não se estima, não se modifica produção nem se aprova G2/G3. As alternativas gerativas discutidas abaixo continuam não aprovadas. Os testes de round2 são delimitados ao fechamento do contrato e dos funcionais, não uma nova rederivação independente.
+
+Antes desta edição, os bytes de round1 foram preservados em `quality_reports/results/mebane_gates/G2/round2/inherited/appendix_round1.md`, SHA-256 `ec0046bd386d048aec4ef5652ad149f5d7276455a6bf6d662878ded30cc59567`. O mapa `round1_recovery_map.json`, nessa rodada, resolve o antigo caminho do appendix para essa cópia ao verificar os manifestos de round1; os originais e a QA não foram reescritos. `benchmark_contract.json` registra as decisões autorizadas e os limites mantidos.
 
 O executor é `01a0eaee-01df-7773-bd63-d321db26a47c`, também identificador do goal nativo. Modelo e esforço efetivos não são expostos pelo runtime. O papel solicitado é METODO-PRINCIPAL, configuração solicitada `inherit/xhigh`.
 
@@ -23,13 +27,14 @@ Os caminhos desta seção são relativos à raiz do projeto. Todos os inputs efe
 * **P22:** `quality_reports/results/mebane_gates/coordination/measfrauds_2022-03-06.pdf`, Mebane, Ferrari, McAlister e Wu, *Measuring Election Frauds*, 6/3/2022. Foram examinadas a especificação, pp. impressas 3–7 (PDF 5–9), e suas equações. SHA-256: `ad3b1cd473d48540877fb00cdffaaa09df1a21a98e4a2b4fa0a03c227ec50d76`.
 * **P23:** `quality_reports/results/mebane_gates/coordination/pm23_2023-07-02.pdf`, Mebane, *Lost Votes and Posterior Multimodality in the eforensics Model*, 2/7/2023. Foram examinadas a especificação, pp. 5–8 (PDF 7–10), a discussão de ambiguidades e votos perdidos, e o exemplo argentino, p. 31 (PDF 33). SHA-256: `615ddab21034e22ca55d891e01f14b85a2e7d80e12238bfbfb142ff214531431`.
 * **J:** `quality_reports/results/mebane_gates/G0/round1/qbl_installed_3017de5.jags`. O teste `source_qbl_exact` compara esse literal com `qbl()` em `ef_models_3017de5.R`, mesmo diretório, commit `3017de537450f97a01872d0157462a68bea348ee`. A linha 1 de J corresponde à linha 985 desse R; os números subsequentes diferem por 984.
+* **Interface J:** `quality_reports/results/mebane_gates/G2/round2/sources/ef_main_3017de5.R`, cópia do arquivo primário arquivado na descoberta de replicação, mesmo commit. SHA-256: `ee626c0c939f84567c0ee74a100954229567911711193716a46837e1d6e3ce8b`. A proveniência e o manifesto da fonte estão congelados nesta rodada. Essa fonte adicional é usada somente para verificar a interface, não para adotar resultados de replicação externos.
 * **S:** `quality_reports/results/mebane_gates/G0/round1/final_state/stan/eforensics_qbl.stan`.
 * **R-F, R-Z, R-S:** respectivamente `05_eforensics_qbl_fresh_diagnostic.R`, `05_jags_qbl_zone_fe.R` e `05_stan_eforensics_qbl_calibrate.R`, sob `quality_reports/results/mebane_gates/G0/round1/final_state/R/`.
 * **JAGS:** manual 4.3.0 de Martyn Plummer, seções de distribuições Normal, Exponential, Binomial e Multivariate Normal. O manual define `dnorm`/`dmnorm` por precisão, `dexp` por taxa e `dbin(p,N)` por probabilidade e tentativas. A cópia pública consultada é do manual primário do autor, hospedada na [Universidade de Edimburgo](https://webhomes.maths.ed.ac.uk/~swood34/TOI/jags_user_manual.pdf); não se afirma que a versão instalada seja 4.3.0. G0 identifica JAGS 4.3.2.
 
-A extração textual das duas fontes está na rodada. As páginas com a especificação foram também renderizadas e inspecionadas. Há uma omissão tipográfica visível em P23, equação (4d): falta o `k` antes do sinal `+`. P22 (2d) imprime `k+`, e J/S implementam `k+`. Não se apresenta a fórmula corrigida como transcrição literal de P23.
+A extração textual das duas fontes está em G2/round1. As páginas com a especificação foram também renderizadas e inspecionadas nessa rodada, com rederivação independente posterior. Round2 herda essa evidência por hash, sem repetir os testes ou alterar seus outputs. Há uma omissão tipográfica visível em P23, equação (4d): falta o `k` antes do sinal `+`. P22 (2d) imprime `k+`, e J/S implementam `k+`. Não se apresenta a fórmula corrigida como transcrição literal de P23.
 
-A nota lateral de denominadores foi preservada e congelada como contexto separado em `sources/denominadores_contexto.md`. A afirmação sobre votos em branco foi conferida diretamente em P23, p. 31; a codificação foi conferida em R-F/R-S. Não foram herdadas instruções da nota, nem revalidados seus totais, nem consultada a fonte turca por ela mencionada. Sua existência não constitui aprovação G0.
+A nota lateral de denominadores foi preservada e congelada como contexto separado em `G2/round1/sources/denominadores_contexto.md`, sob o diretório de resultados dos gates. A afirmação sobre votos em branco foi conferida diretamente em P23, p. 31; a codificação foi conferida em R-F/R-S. Não foram herdadas instruções da nota, nem revalidados seus totais, nem consultada a fonte turca por ela mencionada. Sua existência não constitui aprovação G0.
 
 # 2. Dados, unidades e alvo escrito nos artigos
 
@@ -38,6 +43,8 @@ Uma unidade $i$ é uma agregação eleitoral em um turno. $N_i$ é o número int
 $$N_i\geq1,\qquad A_i,W_i\in\{0,\ldots,N_i\},\qquad A_i+W_i\leq N_i.\tag{G2.1}$$
 
 Escreva $q_i=A_i/N_i$. A escolha de líder é fixa para a análise; não se escolhe automaticamente o vencedor de cada seção. Nos runners de Brasília auditados, líder é Lula, $N$ vem de `QT_APTOS`, A é N menos `QT_COMPARECIMENTO` e $W$ soma votos do código 13; logo, o resíduo inclui o outro candidato, brancos e nulos. R-F verifica $N>0$, mas não todas as condições (G2.1); R-S verifica os limites individuais, não $A+W\leq N$. Esta é inspeção de código, não certificação G1 dos dados.
+
+**Contrato da interface:** `eforensics_main_par` em `ef_main.R:667–675` usa `formula_number=1` para construir `w/Xw` e `formula_number=2` para construir `a/Xa`. Portanto, o wrapper exige `formula1=w~...`, `formula2=a~...`; no primeiro harness, ambas têm apenas intercepto. As fórmulas 3–6 seguem manufactured incremental, stolen incremental, manufactured extrema e stolen extrema. Os snapshots G0 de `R/05_eforensics_umeforensics_qbl.R:103–104,153–154,187–188` e `R/07_brasil_full_qbl.R:150–151` invertem as duas primeiras respostas. É bug de interface desses scripts, não uma diferença de modelo. Já fresh_v2 e zoneFE usam listas diretas com `w=bsb$w,a=bsb$a`, corretamente mapeadas nos snapshots R-F:68–76 e R-Z:64–72. Não se atribui a elas essa inversão, nem se deduz desse achado que priors causaram divergência. Nenhum script histórico foi editado.
 
 P22/P23 definem $\tau_i\in(0,1)$ como participação verdadeira e $\nu_i\in(0,1)$ como escolha do líder entre participantes. $Z_i\in\{1,2,3\}$ indica sem fraude, incremental e extrema. Para uma classe ativa, $m_i$ representa a fração manufactured de abstenções verdadeiras e $s_i$ a fração stolen do resíduo verdadeiro. Para $Z=1$, ponha $m=s=0$. A contabilidade esperada dos artigos é
 
@@ -222,15 +229,15 @@ Em um draw conjunto $d$, com classe e parâmetros latentes definidos pelo alvo e
 $$M_i^{(d)}=N_i m_{i,Z_i^{(d)}}^{(d)}(1-\tau_i^{(d)}),\qquad
 S_i^{(d)}=N_i s_{i,Z_i^{(d)}}^{(d)}\tau_i^{(d)}(1-\nu_i^{(d)}),\tag{G2.19}$$
 
-zero em $Z=1$. $M_i$ são manufactured esperados, $S_i$ stolen esperados, $F_{t,i}=M_i$, $F_{w,i}=M_i+S_i$. São intensidades/contagens esperadas, possivelmente fracionárias, não uma reconstrução observada de cédulas. As contagens auxiliares (G2.11) não são esses valores. Uma distribuição de números inteiros realmente transferidos precisaria de um mecanismo gerador adicional; não deve ser inventada no pós-processamento.
+zero em $Z=1$. $M_i$ são manufactured esperados, $S_i$ stolen esperados, $F_{t,i}=M_i$, $F_{w,i}=M_i+S_i$. O alvo autorizado é sua **distribuição conjunta completa por draw**, incluindo Z e as magnitudes latentes compatíveis com esse mesmo draw. São funcionais do modelo em unidades de votos esperados, possivelmente fracionários, não contagens observadas de cédulas fraudulentas. As contagens auxiliares (G2.11) não são esses valores. Uma distribuição de números inteiros realmente transferidos precisaria de um mecanismo gerador adicional; **não se autoriza acrescentar uma Binomial extra no pós-processamento**.
 
 É necessário somar **no mesmo draw**: $M^{(d)}=\sum_i M_i^{(d)}$, $S^{(d)}=\sum_i S_i^{(d)}$, $F_w^{(d)}=M^{(d)}+S^{(d)}$. Calcular quantis depois preserva dependências. Somar quantis por seção ou multiplicar médias de parâmetros não produz o quantil/esperança do total em geral. O teste usa duas unidades perfeitamente anticorrelacionadas cujos totais sempre valem 100.
 
 Com classes marginalizadas, as responsabilidades são $r_{iz}(\theta)=P(Z_i=z\mid A_i,W_i,\theta)$, obtidas pelos pesos de (G2.17) com normalização apropriada ao alvo. S:228–265 soma $r_{i2}g_{i2}(\theta)+r_{i3}g_{i3}(\theta)$. Assim `Ft`, `Fw` e as contagens de unidades do Stan são **esperanças condicionais às magnitudes contínuas daquele draw**, não sorteios das classes nem a distribuição completa de (G2.19).
 
-A esperança posterior dessas quantidades pode ser estimada por Rao–Blackwellização. Seus quantis entre draws não são, porém, quantis do total com Z incerto. Pela variância total, falta $E[\mathrm{Var}(F\mid\theta,D)]$. Exemplo: uma unidade com $P(Z=2\mid\theta,D)=0,25$ e quantidade 100 nessa classe tem média 25 e variância condicional 1875; guardar só 25 elimina essa incerteza. Para totais completos, pode-se amostrar a classe condicional e, no alvo discreto, o par de contagens condicional compatível, ou integrar suas distribuições conjuntas. Isto é definição, não implementação G3.
+A esperança posterior dessas quantidades pode ser estimada por Rao–Blackwellização. Seus quantis entre draws não são, porém, quantis do total com Z incerto. Pela variância total, falta $E[\mathrm{Var}(F\mid\theta,D)]$. Exemplo: uma unidade com $P(Z=2\mid\theta,D)=0,25$ e quantidade 100 nessa classe tem média 25 e variância condicional 1875; guardar só 25 elimina essa incerteza. Para totais completos, pode-se conservar os latentes do draw conjunto ou reconstruir classe e contagens de sua distribuição condicional conjunta correta, nunca sorteá-las novamente da prior. A reconstrução sob marginalização dependerá do alvo e da semântica runtime verificada em G3: o kernel diagnóstico da seção 5 não a certifica para JAGS. Médias condicionais ficam separadas, como resumo auxiliar/sensibilidade. Isto é definição, não implementação G3.
 
-P22 p. 7 e P23 p. 8 classificam unidades pelo maior número de draws em cada classe. Isso define $\widetilde Z_i=\arg\max_z P(Z_i=z\mid D)$, com desempate a especificar. $\sum_i\mathbf1(\widetilde Z_i\neq1)$, $\sum_i P(Z_i\neq1\mid D)$ e $\sum_i\mathbf1(Z_i^{(d)}\neq1)$ são três objetos diferentes. Nenhum é uma contagem observada de fraudes comprovadas.
+P22 p. 7 e P23 p. 8 classificam unidades pelo maior número de draws em cada classe. Isso define $\widetilde Z_i=\arg\max_z P(Z_i=z\mid D)$. No benchmark, conservar os draws de Z e informar empates entre modas sem atribuição silenciosa. $\sum_i\mathbf1(\widetilde Z_i\neq1)$ quando a moda é única, $\sum_i P(Z_i\neq1\mid D)$ e $\sum_i\mathbf1(Z_i^{(d)}\neq1)$ são três objetos diferentes. Nenhum é uma contagem observada de fraudes comprovadas.
 
 Os runners históricos fresh_v2 monitoram hiperparâmetros, não os quatro pares completos de magnitude por unidade; zoneFE acrescenta Z, `mu.tau` e `mu.nu`, mas não as frações latentes necessárias a (G2.19). Não é possível reconstruir exatamente todos esses totais a partir apenas dos monitores declarados, sem informação adicional. Esta constatação não autoriza nova estimação.
 
@@ -261,7 +268,7 @@ Uma magnitude incremental com preditor zero vale 0,35; extrema vale 0,85. Um `al
 
 A hipótese “JAGS rodou direito, então não acho que seja prioris; HMC deveria ser melhor” permanece hipótese, não resultado. HMC é também MCMC; não fornece dominância universal sobre outros samplers, especialmente com misturas, multimodalidade e alvos diferentes.
 
-O resumo fresh_v2, congelado por hash em G0 e copiado sem alteração para esta rodada, registra término em 11/4/2026, 1921,9 s (32,03 min), 6748 seções, quatro cadeias, adaptação 1500, burn-in 5000 e 5000 draws por cadeia. G0 recarregou o fit e recalculou R-hat clássico: `pi[2]` 1,2468 e `iota.s.alpha` 1,7138. O resumo também reporta `iota.m.alpha` aproximadamente 4,170. O resumo zoneFE registra `pi[2]` 4,615 e `iota.s.alpha` 13,506. Nesta rodada os fits não foram recarregados; estes são resultados históricos inspecionados, com a checagem G0 distinguida da inspeção G2.
+O resumo fresh_v2, congelado por hash em G0 e copiado sem alteração para G2/round1, registra término em 11/4/2026, 1921,9 s (32,03 min), 6748 seções, quatro cadeias, adaptação 1500, burn-in 5000 e 5000 draws por cadeia. G0 recarregou o fit e recalculou R-hat clássico: `pi[2]` 1,2468 e `iota.s.alpha` 1,7138. O resumo também reporta `iota.m.alpha` aproximadamente 4,170. O resumo zoneFE registra `pi[2]` 4,615 e `iota.s.alpha` 13,506. Em G2 os fits não foram recarregados; estes são resultados históricos inspecionados, com a checagem G0 distinguida da inspeção G2.
 
 O Stan n2000 registra 541,7433 s de sampling/warmup e 9,62 s de compilação, duas cadeias, warmup 500, amostragem 250, `rhat_max=1,2294` e `ess_bulk_min=8,2398`. Amostra, número de iterações, número de cadeias e alvo diferem de fresh_v2. Não há comparação controlada de desempenho nem evidência para excluir priors como fator. O runner seleciona as primeiras `n_keep` linhas, não uma amostra aleatória; esses timings não são extrapolação nacional validada. Não foi demonstrado nesta auditoria que todo detalhe da versão final do snapshot Stan seja idêntico ao binário que produziu cada fit histórico; o log identifica explicitamente sua aproximação.
 
@@ -289,17 +296,53 @@ Tabela 1. Mapa completo dos blocos executáveis de J e das partes correspondente
 | Clamp e piso | Ausentes | Ausentes | 27–44, 188–193 | Mudança de alvo |
 | Totais e classes | P22 p. 7; P23 p. 8 | Não definidos em J literal | 222–265 | Esperanças condicionais, não draws completos |
 | Dummies e dados | Aplicação/runner, não prior universal do paper | R-F, R-Z | R-S | Codificação e alcance geográfico específicos |
+| Interface das respostas | `ef_main.R:667–675` do commit fixado | `formula1` → `w/Xw`; `formula2` → `a/Xa` | Não é mudança de equação | Dois wrappers antigos invertidos; listas diretas R-F/R-Z corretas |
 
 As linhas J:1, 22–68, 123–154, 198–199 de abertura/fechamento delimitam os blocos acima. Comentários sobre Dirichlet, Uniformes, `N.tau`, `N.nu` e contagens duplicadas (J:10–12, 73, 81–84, 93–98, 114–119, 155–156, 169–172, 178–183) são inativos. O nome histórico “qbl” não torna (G2.11) dispensável.
 
-# 9. Decisões pendentes e critério de entrega
+# 9. Decisões autorizadas e critérios de uso
 
-**D1, alvo:** escolher entre fidelidade literal ao kernel J documentando sua política de estados inválidos, uma likelihood normalizada em domínio declarado, o produto de marginais dos artigos, ou um gerador multinomial fisicamente coerente. As últimas escolhas alteram o modelo; nenhuma é autorizada silenciosamente por esta auditoria. Se o objetivo for primeiro reproduzir o software, o kernel deve ser rotulado como tal e sua semântica runtime verificada em G3, sem apresentá-lo automaticamente como distribuição geradora válida.
+As três decisões CONFIRMED na adjudicação de round1 recebem escolhas explícitas do usuário, não refutação. O registro estruturado é `quality_reports/results/mebane_gates/G2/round2/benchmark_contract.json`, com `authorization.status=authorized_by_user`, `inferential_approval=false` e QA de round2 pendente. As escolhas fecham o escopo deste candidato; somente a revisão independente e a adjudicação do coordenador podem aprovar o gate.
 
-**D2, priors e geografia:** escolher explicitamente a escala Exp (variância J ou desvio-padrão do texto), o tratamento do intercepto fixo e a parametrização de covariáveis. A prior parcial de mistura está derivada; impor ordem total exigiria decisão adicional.
+## 9.1. D1: benchmark literal, sem reparo implícito
 
-**D3, estimandos:** definir se o alvo de incerteza é a quantidade completa por draw ou sua esperança condicional; para efeito na margem, aprovar hipótese sobre origem de S ou conservar limites. Não alterar o denominador de A sob o rótulo de mera limpeza de dados.
+Reproduzir primeiro o software qbl do commit fixado com JAGS 4.3.2, $k=0,7$, as quatro Binomiais de (G2.11), o mapa de átomo $m=1\mapsto0,999$ e as duas respostas com N tentativas. Manter A observado em (G2.13). São proibidos clamp, plug-in das médias latentes, piso de denominador, truncamento ou normalização silenciosos e correções de F1/F2. As distribuições alternativas das seções 2.1 e 4.2 permanecem alternativas, não o alvo autorizado.
 
-A entrega implementadora cobre G2-T1 a T4 com derivações e testes. G2-T5 contém marginalização, custo e contraexemplos, mas **não está done enquanto faltar sua rederivação independente**. Também não se satisfaz ainda o último critério de aceitação do gate. Os achados F1/F2 e as divergências P/J/S não desaparecem porque os testes do diagnóstico passaram: eles são precisamente resultados esperados nesses testes.
+O comportamento de JAGS com `p.w` inválido é **desconhecido nesta rodada**. G3 deverá testar o exemplo F1, um controle válido e situações de classe ativa/inativa, registrando condições de inicialização, avaliação e geração, a fase da falha e os logs reais. Tratar estado inválido como kernel zero no teste algébrico não comprova rejeição de propostas pelo JAGS, nem normaliza a distribuição geradora.
 
-Reprodução: `Rscript --vanilla tests/mebane/algebra/run_tests.R`. Os resultados ficam em `quality_reports/results/mebane_gates/G2/round1/results/`. Foram executados testes determinísticos R/base, sem RNG, MCMC ou instalação. Eles verificam álgebra, constantes, densidades, fronteiras, enumerações pequenas e definições de estimandos; não medem identificação empírica, potência, calibração, convergência ou viabilidade nacional. O manifesto congela os bytes deste contrato e do código de auditoria. **Completar o goal de entrega do candidato não aprova G2.**
+Se a especificação literal falhar ao gerar dados, o resultado é uma falha documentada com relatório de suporte, preservando todas as tentativas. **Não descartar ou repetir dados até obter um conjunto válido.** Condicionar à validade exigiria um normalizador explícito e um alvo novo. Uma falha reproduzida pode ser evidência de fidelidade de software; não é aprovação de um gerador ou autorização para calibração inferencial.
+
+## 9.2. D2: priors literais e primeiro desenho
+
+Manter $\pi_1\geq\max(\pi_2,\pi_3)$, sem impor $\pi_2\geq\pi_3$; variâncias $v_b\sim\mathrm{Exp}(5)$ com precisão $1/v_b$; $\alpha_b\sim N(0,1)$; interceptos fixos de variância $10^{-4}$ e inclinações de variância 1; os seis efeitos por observação. Não substituir a soma $\alpha+b_0$ por $\alpha$ nem adotar a prior textual de desvio-padrão exponencial.
+
+O primeiro harness terá as seis matrizes fixas `Xa`, `Xw`, `X.iota.m`, `X.iota.s`, `X.chi.m`, `X.chi.s` com uma coluna de uns e dimensão de coeficientes igual a 1. Isso fixa o desenho, **não os valores dos coeficientes ou efeitos**: toda a hierarquia e $\alpha+b_0$ permanecem. Testes com inclinações e dummies geográficas verificam apenas fidelidade e a não invariância descrita na seção 3.3; não selecionam geografia nacional. Essa hipótese de produção deverá ser aprovada em G4 antes de G6. Uma escolha diferente de prior, desenho ou alvo reabre a decisão G2 afetada antes do uso.
+
+## 9.3. D3: funcionais completos e limites de margem
+
+Conservar a distribuição conjunta completa de (G2.19), com Z e latentes, agregando dentro de cada draw. Rotular M/S como funcionais do modelo em unidades de votos esperados, nunca contagens observadas. Não adicionar sorteio binomial de cédulas não especificado. Médias condicionais ficam separadas e não fornecem os quantis da distribuição completa.
+
+Para o segundo colocado fixado, conservar (G2.20–21): limites $D_{obs}-M-2S$ a $D_{obs}-M-S$, condicionados à hipótese $0\leq S_R\leq S$, à ausência dos mecanismos adicionais ali enumerados e à viabilidade da reconstrução. Registrar violações de viabilidade e restrições de capacidade, sem clipping ou descarte silencioso. Não supor que todo stolen veio do segundo colocado, nem afirmar vencedor contrafactual pontualmente identificado.
+
+## 9.4. Evidência e go/no-go de G3
+
+Tabela 2. Critérios adicionais de fidelidade para G3; não substituem seu contrato nem constituem execução ou aprovação nesta rodada.
+
+| Verificação | Evidência exigida e limite |
+|:--|:--|
+| Versão e fonte | Hash do literal consumido, JAGS 4.3.2 efetivo, hashes de wrappers/dados/configuração; divergência é no-go para fidelidade |
+| Priors e desenho | Seis colunas de uns e hierarquia completa; constantes, precisões, prior parcial, quatro contagens e mapa 0,999 preservados |
+| Interface assimétrica | Antes de estimar, sentinela com $a\neq w$ no wrapper e nas listas diretas; conferir dados/matrizes efetivamente enviados ao JAGS e controle negativo com troca deliberada |
+| Estados válidos | Casos pequenos, constantes e somas condicionais conferidos para alvo nomeado; tolerâncias fixadas antes dos resultados |
+| Estados inválidos | F1 e controle válido; pais, classes, fase e logs runtime preservados; nenhum comportamento presumido |
+| Geração e suporte | Todas as tentativas contabilizadas, probabilidades inválidas, não finitas e $A+W>N$ reportados; nenhuma repetição até validade |
+| Pós-processamento | Latentes conjuntos, funcionais completos e agregação por draw; médias condicionais separadas, margem e inviabilidades rotuladas |
+| Decisão | Incompatibilidade ou semântica desconhecida impede alegação irrestrita de portagem exata; necessidade de reparar F1/F2 reabre G2 |
+
+As evidências anteriores de G2-T1/T2/T3/T5, inclusive a rederivação independente de 75 testes e 162 enumerações pequenas, são herdadas por hash. A adjudicação de round1 registra G2-T5 concluído nesse sentido; não se afirma ter obtido nova QA do fechamento de round2. O mapa todos→evidências e o manifesto distinguem resultados históricos, inspeção e testes executados agora. Todos implementadores concluídos não significam gate PASS.
+
+Os testes novos estão em `tests/mebane/algebra/test_benchmark_round2.R`, com saída exclusivamente em `quality_reports/results/mebane_gates/G2/round2/results/`. O comando reproduzível está em `implementation.md` da rodada. Não reexecutar o runner antigo com seu diretório padrão, pois sobrescreveria resultados congelados de round1. Não foram executados MCMC, JAGS, Stan ou downloads nesta rodada, nem medidos identificação, potência, convergência ou desempenho nacional.
+
+Exemplo da sentinela de interface: $N=(10,12)$, $a=(2,5)$, $w=(7,3)$. A formação das respostas deve preservar esses vetores distintos; um teste com $a=w$ não detectaria a troca. Round2 confere a configuração, o texto da fonte e esse exemplo com funções base de R, **não executa o wrapper completo**. A validação da interface efetivamente consumida continua obrigatória em G3.
+
+O usuário autorizou também replicar um caso dos autores. O coordenador incorporará essa etapa em G10 antes de G4; a escolha do caso e a execução cabem a outro agente. Aqui se registra somente essa decisão, sem buscar uma replicação ou alterar o ledger. **Completar o goal de entrega do candidato não aprova G2 nem libera os próximos gates.**

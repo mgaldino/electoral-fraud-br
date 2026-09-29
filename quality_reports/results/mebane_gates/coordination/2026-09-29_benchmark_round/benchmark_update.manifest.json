@@ -1,0 +1,16 @@
+{
+  "source": {
+    "path": "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/coordination/2026-09-29_benchmark_round/benchmark_update.md",
+    "sha256": "cb0c2511598c333a6b31f74963e4cea4a4d8cddfd94e34c833dad6c4f07a69ce"
+  },
+  "builder": {
+    "path": "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/coordination/render_benchmark_note.py",
+    "sha256": "efa29f87d4330a45363bf9cfe6c0f449626c950d5d2450b487a973fcc6f1ac0a"
+  },
+  "output": {
+    "path": "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/coordination/2026-09-29_benchmark_round/benchmark_update.pdf",
+    "sha256": "42470469b487f646887b8a955ee5abd7fa5da0ecd7e30ec884afc939c4e50d6f"
+  },
+  "reportlab_version": "4.4.9",
+  "visual_qa": "pending; separate record required"
+}

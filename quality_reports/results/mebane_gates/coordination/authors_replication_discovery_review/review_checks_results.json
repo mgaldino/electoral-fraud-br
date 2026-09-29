@@ -1,0 +1,15 @@
+{
+  "reviewer_id": "01a0ed3f-7e0a-7dc2-be9c-6831e6924991",
+  "source_records_checked": 12,
+  "all_sizes_match": true,
+  "all_hashes_match": true,
+  "tar_file_members": 50,
+  "all_extracted_files_match_tar": true,
+  "gate_counterexamples": {
+    "g10_running_without_g3": true,
+    "g4_running_without_g10": true,
+    "g4_running_with_unreviewed_g10": true,
+    "synthetic_pass_without_t2_t3_timestamps_accepted": true
+  },
+  "scope": "No inference, package installation, or changes to source or ledger."
+}

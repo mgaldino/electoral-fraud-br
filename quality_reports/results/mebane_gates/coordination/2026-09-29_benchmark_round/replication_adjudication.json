@@ -1,0 +1,88 @@
+{
+  "schema_version": "1.0",
+  "adjudication_id": "authors-replication-preparation:1aa30d2587a3:round1",
+  "source": {
+    "reviewed_artifact": "quality_reports/results/mebane_gates/coordination/authors_replication_discovery_review/review_manifest.json",
+    "sha256": "1aa30d2587a3b194c316526a8193cfa71dcab1de9467f48c553e0dc3acdc152d",
+    "artifact_intact": true
+  },
+  "contract": {
+    "required": false, "path": null, "sha256": null, "contract_id": null,
+    "artifact_sha256": null, "status": null, "stale": false
+  },
+  "contract_scope_note": "Preparação de replicação e inspeção de código, não revisão de argumento de manuscrito. G10 não executado nem aprovado; seu contrato de replicação permanece proposto.",
+  "review_sources": [{
+    "review_id": "QA-AUTHORS-PREP",
+    "path": "quality_reports/results/mebane_gates/coordination/authors_replication_discovery_review/review.json",
+    "sha256": "9a5d4044d12344937f97b174b67f3467763c1d67bc2124b82608387a0d90c1a4"
+  }],
+  "findings": [
+    {
+      "finding_id": "AR-01", "source_review": "QA-AUTHORS-PREP",
+      "quoted_finding": "D.C. archived vignette lacks immutable published numeric output; proposed contract cannot establish external quantitative replication or G10 PASS.",
+      "type": "scope_or_consistency", "severity": "major",
+      "scientific_dimension": "external_replication", "held_decision": false,
+      "status": "CONFIRMED", "resolved": false,
+      "source_locations": ["quality_reports/results/mebane_gates/coordination/authors_replication_discovery/archive/UMeforensics-eforensics_public-3017de5/vignettes/eforensics.Rmd:74", "quality_reports/results/mebane_gates/coordination/authors_replication_discovery/replication_contract.json"],
+      "defect_evidence": ["O arquivo arquivado computa resultados ao renderizar e não contém os valores numéricos externos para comparação; o contrato marca os valores como ausentes.", "A busca documentada não localizou uma referência congelada; não demonstra inexistência global do material."],
+      "refuting_evidence": [],
+      "mechanical_checks": ["Inspeção da árvore do tarball e contrato; 28 inputs de QA conferidos por hash."],
+      "reasoning": "É uma pendência para a comparação externa, já reconhecida no candidato, não uma alegação falsa de replicação concluída. Preparação pode ser aceita sem declarar G10 PASS.",
+      "proposed_fix_assessment": "needs_design",
+      "disposition": "Localizar referência externa verificável e fechar contrato G10, ou selecionar outro caso com dados/código e resultados suficientes. Não ajustar tolerâncias após ver novas estimativas.",
+      "resolution": "G10 permanece queued, sem liberação inferencial."
+    },
+    {
+      "finding_id": "AR-02", "source_review": "QA-AUTHORS-PREP",
+      "quoted_finding": "Historical Brazilian eforensics wrapper calls reverse the archived package's formula1=w and formula2=a mapping; direct-list JAGS fresh_v2 and zoneFE calls are not affected by that particular reversal.",
+      "type": "method", "severity": "major",
+      "scientific_dimension": "implementation_fidelity", "held_decision": false,
+      "status": "CONFIRMED", "resolved": false,
+      "source_locations": ["quality_reports/results/mebane_gates/coordination/authors_replication_discovery/archive/UMeforensics-eforensics_public-3017de5/R/ef_main.R:667", "R/05_eforensics_umeforensics_qbl.R:103", "R/07_brasil_full_qbl.R:150", "R/05_eforensics_qbl_fresh_diagnostic.R:69", "R/05_jags_qbl_zone_fe.R:65"],
+      "defect_evidence": ["A fonte do pacote atribui a resposta da primeira fórmula a w e a da segunda a a; três chamadas do script de calibração e uma do nacional fazem o inverso."],
+      "refuting_evidence": [],
+      "mechanical_checks": ["Coordenação abriu ef_main.R:655-710, conferiu as quatro chamadas e as listas diretas dos dois scripts posteriores.", "Scripts anteriores preservados por hash em replication_review_inputs antes de qualquer reparo."],
+      "reasoning": "O reparo é estritamente de interface e não troca a especificação matemática. Não explica automaticamente convergência ou qualquer resultado do fresh_v2, cuja lista está correta.",
+      "proposed_fix_assessment": "safe",
+      "disposition": "Corrigir apenas as quatro chamadas invertidas em G3 e testar sentinelas assimétricas, preservando fontes anteriores e todos os fits. Trabalho já autorizado pelo usuário; não executar os runners históricos.",
+      "resolution": "Encaminhado ao G3, ainda não reparado na data desta adjudicação."
+    },
+    {
+      "finding_id": "AR-03", "source_review": "QA-AUTHORS-PREP",
+      "quoted_finding": "Bolivia summary command is on printed p.29; Chain 1 numeric table begins on printed p.30, physical PDF p.31.",
+      "type": "artifact", "severity": "minor",
+      "scientific_dimension": "source_traceability", "held_decision": false,
+      "status": "CONFIRMED", "resolved": true,
+      "source_locations": ["quality_reports/results/mebane_gates/coordination/authors_replication_discovery/discovery.md", "quality_reports/results/mebane_gates/coordination/authors_replication_discovery/candidates.csv", "quality_reports/results/mebane_gates/coordination/authors_replication_discovery/archive/Bolivia2019.pdf:physical-page-31"],
+      "defect_evidence": ["A tabela com pi[1] médio 0.9924773465 tem rodapé 30; o comando summary está na página anterior."],
+      "refuting_evidence": [],
+      "mechanical_checks": ["pdftotext -layout -f 31 -l 31 Bolivia2019.pdf - confirmou valores e rodapé 30."],
+      "reasoning": "Erro de localizador, sem alteração dos valores transcritos.",
+      "proposed_fix_assessment": "safe",
+      "disposition": "Aplicar a errata neste registro sem sobrescrever o candidato revisado.",
+      "resolution": "Referência correta: página impressa 30, página física 31 do PDF. Esta errata acompanha a descoberta nas entregas posteriores."
+    },
+    {
+      "finding_id": "AR-04", "source_review": "QA-AUTHORS-PREP",
+      "quoted_finding": "Local hashes and archived commit metadata do not independently attest current remote provenance or original election-data construction.",
+      "type": "scope_or_consistency", "severity": "minor",
+      "scientific_dimension": "data_provenance", "held_decision": false,
+      "status": "CONFIRMED", "resolved": true,
+      "source_locations": ["quality_reports/results/mebane_gates/coordination/authors_replication_discovery/source_manifest.json", "quality_reports/results/mebane_gates/coordination/authors_replication_discovery/discovery.md"],
+      "defect_evidence": ["A QA conferiu arquivos locais, sem atualizar a fonte remota; a base empacotada não documenta toda a construção eleitoral original."],
+      "refuting_evidence": [],
+      "mechanical_checks": ["Inspeção de fontes, registro de download e limites explícitos no parecer."],
+      "reasoning": "Limite de alcance já documentado, não prova de download incorreto ou de dados falsos.",
+      "proposed_fix_assessment": "not_provided",
+      "disposition": "Conservar a distinção entre integridade local, origem do download e validação da construção dos dados.",
+      "resolution": "Mantido como limitação explícita; nenhuma afirmação de autenticação eleitoral foi feita."
+    }
+  ],
+  "summary": {"total": 4, "confirmed": 4, "partial": 0, "refuted": 0, "unresolved": 0, "held_decisions": 0},
+  "unresolved_material_findings": 2,
+  "adjudication": {
+    "verdict": "BLOCKED", "checked_at": "2026-09-29T13:10:39+00:00",
+    "reasons": ["A preparação é rastreável e tem uma errata menor, mas a comparação numérica externa permanece pendente.", "O reparo de interface é independente dessa pendência e será tratado no G3; não libera inferência.", "BLOCKED refere-se à liberação global da replicação, não ao goal nativo nem a impedimento do trabalho independente G2/G3."]
+  },
+  "evidence": {"input_recovery_map": "quality_reports/results/mebane_gates/coordination/2026-09-29_benchmark_round/replication_review_recovery.json"}
+}

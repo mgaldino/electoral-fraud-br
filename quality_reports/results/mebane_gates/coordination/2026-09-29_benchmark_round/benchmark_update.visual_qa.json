@@ -1,0 +1,17 @@
+{
+  "status": "pass",
+  "date": "2026-09-29",
+  "reviewer": "019d795a-acfa-72c2-a210-d55a46c606c2",
+  "pdf": "benchmark_update.pdf",
+  "pdf_sha256": "42470469b487f646887b8a955ee5abd7fa5da0ecd7e30ec884afc939c4e50d6f",
+  "source_sha256": "cb0c2511598c333a6b31f74963e4cea4a4d8cddfd94e34c833dad6c4f07a69ce",
+  "render": "pdftoppm -r 120 -png benchmark_update.pdf rendered/page",
+  "inspected_final_pages": [1, 2, 3],
+  "checks": [
+    "Três páginas finais inspecionadas visualmente após a atualização do resultado da QA de interface.",
+    "Sem cortes, sobreposições, glifos ausentes ou invasão dos rodapés.",
+    "Cabeçalhos, referências e links legíveis; seis destinos HTTPS em sete anotações por quebra de linha.",
+    "Geometria conferida separadamente, com zero caracteres fora da página."
+  ],
+  "scientific_scope": "QA visual não substitui os pareceres metodológicos; G3 e a replicação externa não foram executados."
+}

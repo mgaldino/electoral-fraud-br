@@ -1,0 +1,73 @@
+{
+  "schema_version": "1.0",
+  "adjudication_id": "AR-02:4e08a91ba47e:closure1",
+  "source": {
+    "reviewed_artifact": "quality_reports/results/mebane_gates/coordination/2026-09-29_benchmark_round/interface_repair/candidate_manifest.json",
+    "sha256": "4e08a91ba47e8091d87adf1a07f0fb670af975f6f265480f5caa57865686a73c",
+    "artifact_intact": true
+  },
+  "contract": {
+    "required": false,
+    "path": null,
+    "sha256": null,
+    "contract_id": null,
+    "artifact_sha256": null,
+    "status": null,
+    "stale": false
+  },
+  "contract_scope_note": "Reparo de código/interface pré-G3. Não exige contrato de argumento; a especificação de interface é o commit fixado e a adjudicação AR-02.",
+  "review_sources": [
+    {
+      "review_id": "QA-INTERFACE-AR-02-2026-09-29",
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-29_benchmark_round/interface_repair_review/review.json",
+      "sha256": "8a7fc048462ec04cf847b52313da9371630c9c31b1f4a496de71ff21fb224b37"
+    }
+  ],
+  "findings": [],
+  "verified_observations": [
+    "AR02-QA-01",
+    "AR02-QA-02",
+    "AR02-QA-03"
+  ],
+  "resolved_prior_findings": [
+    {
+      "id": "AR-02",
+      "status": "CONFIRMED",
+      "resolved": true,
+      "source_adjudication": "quality_reports/results/mebane_gates/coordination/2026-09-29_benchmark_round/interface_repair_adjudication.json",
+      "resolution": "Quatro pares formula1/formula2 reparados, covariáveis preservadas, fontes anteriores íntegras. QA executou as chamadas reais até stub de amostragem, controles de respostas invertidas e probe independente com apenas covariáveis trocadas.",
+      "scope": "Não estende o achado às listas fresh_v2/zoneFE nem reinterpreta fits como reestimados."
+    }
+  ],
+  "summary": {
+    "total": 0,
+    "confirmed": 0,
+    "partial": 0,
+    "refuted": 0,
+    "unresolved": 0,
+    "held_decisions": 0
+  },
+  "adjudication": {
+    "verdict": "NO_CONFIRMED_DEFECTS",
+    "checked_at": "2026-09-29T13:50:08.360731+00:00",
+    "reasons": [
+      "Nenhum novo defeito no reparo delimitado; AR-02 permanece confirmado, agora resolvido.",
+      "Coordenação inspecionou o diff, os stubs instalados antes de eval, restauração de namespaces, probe independente e logs finais. Recalculou os 20 hashes da QA e hashes before/after dos dois scripts.",
+      "Observações info/verified da QA são verificações positivas, não findings de defeito artificialmente reclassificados.",
+      "Aceitação somente da interface; G3 não executado nem aprovado, G10 não replicado, inferência não liberada.",
+      "Pendência de integridade G0 continua aguardando escolha do usuário; nada foi restaurado ou excluído por este reparo."
+    ]
+  },
+  "scope": "AR-02 interface only, pre-G3",
+  "G3_pass": false,
+  "inferential_approval": false,
+  "evidence": {
+    "qa_manifest_sha256": "1cd344ba7a54f3490b285cb3ff2cdd21aee434d122f05ec7f92ebdd28e5b1925",
+    "qa_hashes_verified": 20,
+    "candidate_sha256": "4e08a91ba47e8091d87adf1a07f0fb670af975f6f265480f5caa57865686a73c",
+    "MCMC_executed": false,
+    "independent_wrapper_stub_captures": 8,
+    "independent_covariate_stub_captures": 2,
+    "compiler_entries": 0
+  }
+}

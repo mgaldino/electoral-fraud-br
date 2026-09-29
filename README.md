@@ -4,7 +4,11 @@ Reconstrucao metodologica do parecer sobre a research note "Is there evidence of
 
 ## Estado e protocolo vigentes
 
-O plano [Mebane 2022-2026](quality_reports/plans/mebane_2022_2026_gates.json) inclui a análise presidencial de 2022 e a preparação para dados oficiais de 2026. G0, G1 e G7 foram aprovados após revisão independente e adjudicação em suas pastas `round2/`. G7 aprova somente a prontidão ensaiada do staging de CSV normalizado; ainda faltam conversor auditado dos arquivos oficiais brutos e atestação dos dados reais. A auditoria matemática G2 foi rederivada, mas a escolha do alvo, das priors e dos estimandos continua pendente; o [contrato matemático](appendices/mebane_model_contract.md) e a [adjudicação](quality_reports/results/mebane_gates/G2/round1/adjudication.md) registram as diferenças entre paper, JAGS e Stan. O ledger é a fonte do estado atualizado. Não há resultado nacional qbl validado nem inferência de 2026 neste repositório. Os fits históricos de Brasília e os testes suplementares não demonstram fraude nem sua ausência.
+O plano [Mebane 2022-2026](quality_reports/plans/mebane_2022_2026_gates.json) inclui a análise presidencial de 2022 e a preparação para dados oficiais de 2026. O usuário escolheu primeiro o benchmark literal qbl/JAGS, preservando suas priors e os funcionais conjuntos por draw. G2 round2 passou em 59 checagens metodológicas independentes; isso não certifica o modelo para inferência nem a equivalência do Stan histórico. O [contrato matemático](appendices/mebane_model_contract.md) e o [contrato do benchmark](quality_reports/results/mebane_gates/G2/round2/benchmark_contract.json) fixam o alcance.
+
+Em 29/09, um arquivo de download já classificado como incompleto foi removido por ação concorrente. Ele não fundamenta o modelo, mas integra o inventário congelado G0. As aprovações anteriores G0/G1/G7 estão preservadas em `round2/`, com liberação atual suspensa até reconciliar essa integridade. A [adjudicação inicial de G2](quality_reports/results/mebane_gates/G2/round2/adjudication_initial.json) registra a pendência e a consulta ao usuário, sem restaurar arquivos automaticamente. Os dados e as fontes científicas continuam íntegros; não se requer nova análise matemática por esse motivo. O ledger prevalece sobre os resumos históricos.
+
+A replicação externa dos autores é agora G10, obrigatório entre G3 e G4. A [descoberta de fontes](quality_reports/results/mebane_gates/coordination/authors_replication_discovery/discovery.md) tem revisão independente, mas o contrato de comparação permanece proposto, sem nova estimação ou PASS de G10. Consulte também a [adjudicação e errata](quality_reports/results/mebane_gates/coordination/2026-09-29_benchmark_round/replication_adjudication.md). Não há resultado nacional qbl validado nem inferência de 2026. G7 cobre apenas staging ensaiado de CSV normalizado: ainda faltam conversor auditado dos arquivos oficiais brutos e atestação dos dados reais. Os fits históricos e os testes suplementares não demonstram fraude nem sua ausência.
 
 ## Replicacao
 
@@ -67,6 +71,15 @@ depende dos gates posteriores, e os scripts de análise podem escrever sobre
 suas próprias saídas históricas. Não os executar como continuação automática
 da carga acima.
 
+No pacote UMeforensics do commit fixado, `formula1` alimenta `w` e `formula2`
+alimenta `a`. Foram encontradas chamadas invertidas nos runners antigos
+`R/05_eforensics_umeforensics_qbl.R` e `R/07_brasil_full_qbl.R`. As quatro
+chamadas foram corrigidas e passaram em teste sentinela pelo wrapper real,
+revisão independente e [adjudicação delimitada](quality_reports/results/mebane_gates/coordination/2026-09-29_benchmark_round/interface_repair_closure.md),
+sem MCMC ou reestimação de fits. Essa aceitação pré-G3 não aprova o gate inteiro.
+As listas diretas de `fresh_v2` e `zone_fe` não têm essa inversão. Não atribuir
+seus diagnósticos de convergência a esse erro de outros scripts.
+
 ```bash
 # Bloco 2: fingerprint visual (baseline)
 Rscript R/03_fingerprint_base.R   # → output/figures/fig1_fingerprint_*.pdf
@@ -109,7 +122,7 @@ Os seguintes blocos ainda nao estao implementados:
 ## Estrutura
 
 ```
-R/                    Scripts do pipeline (executar em ordem numerica)
+R/                    Scripts históricos e pipeline versionado; seguir o ledger
 stan/                 Modelos Stan (.stan)
 data/processed/       Dados processados (parquet, gerados pelo pipeline)
 output/figures/       Figuras (PDFs)

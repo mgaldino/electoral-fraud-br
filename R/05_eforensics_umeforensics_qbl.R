@@ -100,8 +100,8 @@ log_step("Synthetic data (gerado via bl): {nrow(sim$data)} rows, {ncol(sim$data)
 
 smoke <- timeit("Phase 1 qbl fit (sintetico)", quote({
   eforensics(
-    formula1 = a ~ x1.a,
-    formula2 = w ~ x1.w,
+    formula1 = w ~ x1.w,
+    formula2 = a ~ x1.a,
     formula3 = mu.iota.m ~ x1.iota.m,
     formula4 = mu.iota.s ~ x1.iota.s,
     formula5 = mu.chi.m  ~ x1.chi.m,
@@ -150,8 +150,8 @@ log_section("Phase 3 -- Brasilia qbl compilation test")
 
 phase3 <- timeit("Phase 3 qbl compile Brasilia", quote({
   eforensics(
-    formula1 = a ~ 1,
-    formula2 = w ~ 1,
+    formula1 = w ~ 1,
+    formula2 = a ~ 1,
     formula3 = mu.iota.m ~ 1,
     formula4 = mu.iota.s ~ 1,
     formula5 = mu.chi.m  ~ 1,
@@ -184,8 +184,8 @@ if (run_full) {
 
   phase4 <- timeit("Phase 4 qbl full Brasilia", quote({
     eforensics(
-      formula1 = a ~ 1,
-      formula2 = w ~ 1,
+      formula1 = w ~ 1,
+      formula2 = a ~ 1,
       formula3 = mu.iota.m ~ 1,
       formula4 = mu.iota.s ~ 1,
       formula5 = mu.chi.m  ~ 1,

@@ -1,0 +1,32 @@
+{
+  "created_at_utc": "2026-09-29T12:53:03.565436+00:00",
+  "gate_id": "G2",
+  "round": "round2",
+  "purpose": "Read-only path substitution for historical verification; never rewrite old manifests or restore over the current appendix automatically.",
+  "original_manifest_files": [
+    {
+      "path": "quality_reports/results/mebane_gates/G2/round1/candidate_manifest.json",
+      "sha256": "783cfb036f8f26bf894c36782df4fb94e20351e4df015ca6e24330021d04a5a9",
+      "bytes": 15179
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G2/round1/review/review_manifest.json",
+      "sha256": "2584c1fb80cf52ab811baf09827a1054a7c5cf890f2347f081d6ad38bbb46af9",
+      "bytes": 10553
+    }
+  ],
+  "old_adjudication": {
+    "path": "quality_reports/results/mebane_gates/G2/round1/adjudication.json",
+    "sha256": "8f4ba0334c84b32f36e4f6e32751c688cbdff6788c82f314fa833e67498c32af",
+    "bytes": 10071
+  },
+  "replacements": [
+    {
+      "original_path": "appendices/mebane_model_contract.md",
+      "snapshot_path": "quality_reports/results/mebane_gates/G2/round2/inherited/appendix_round1.md",
+      "sha256": "ec0046bd386d048aec4ef5652ad149f5d7276455a6bf6d662878ded30cc59567",
+      "bytes": 37852
+    }
+  ],
+  "recovery": "Resolve original_path to snapshot_path only when verifying round1; the original appendix bytes are the snapshot. Any actual restoration is a separate authorized operation."
+}

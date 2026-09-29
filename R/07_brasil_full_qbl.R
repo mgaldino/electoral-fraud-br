@@ -147,8 +147,8 @@ t0 <- Sys.time()
 log_step("Inicio: {format(t0, '%Y-%m-%d %H:%M:%S %Z')}")
 
 fit <- eforensics(
-  formula1 = a ~ 1,
-  formula2 = w ~ 1,
+  formula1 = w ~ 1,
+  formula2 = a ~ 1,
   formula3 = mu.iota.m ~ 1,
   formula4 = mu.iota.s ~ 1,
   formula5 = mu.chi.m  ~ 1,

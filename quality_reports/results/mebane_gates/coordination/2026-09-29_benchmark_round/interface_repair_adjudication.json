@@ -1,0 +1,84 @@
+{
+  "schema_version": "1.0",
+  "adjudication_id": "authors-replication-interface:AR-02:round1",
+  "source": {
+    "reviewed_artifact": "quality_reports/results/mebane_gates/coordination/authors_replication_discovery_review/review_manifest.json",
+    "sha256": "1aa30d2587a3b194c316526a8193cfa71dcab1de9467f48c553e0dc3acdc152d",
+    "artifact_intact": true
+  },
+  "contract": {
+    "required": false,
+    "path": null,
+    "sha256": null,
+    "contract_id": null,
+    "artifact_sha256": null,
+    "status": null,
+    "stale": false
+  },
+  "contract_scope_note": "Preparação de replicação e inspeção de código, não revisão de argumento de manuscrito. G10 não executado nem aprovado; seu contrato de replicação permanece proposto.",
+  "review_sources": [
+    {
+      "review_id": "QA-AUTHORS-PREP",
+      "path": "quality_reports/results/mebane_gates/coordination/authors_replication_discovery_review/review.json",
+      "sha256": "9a5d4044d12344937f97b174b67f3467763c1d67bc2124b82608387a0d90c1a4"
+    }
+  ],
+  "findings": [
+    {
+      "finding_id": "AR-02",
+      "source_review": "QA-AUTHORS-PREP",
+      "quoted_finding": "Historical Brazilian eforensics wrapper calls reverse the archived package's formula1=w and formula2=a mapping; direct-list JAGS fresh_v2 and zoneFE calls are not affected by that particular reversal.",
+      "type": "method",
+      "severity": "major",
+      "scientific_dimension": "implementation_fidelity",
+      "held_decision": false,
+      "status": "CONFIRMED",
+      "resolved": false,
+      "source_locations": [
+        "quality_reports/results/mebane_gates/coordination/authors_replication_discovery/archive/UMeforensics-eforensics_public-3017de5/R/ef_main.R:667",
+        "R/05_eforensics_umeforensics_qbl.R:103",
+        "R/07_brasil_full_qbl.R:150",
+        "R/05_eforensics_qbl_fresh_diagnostic.R:69",
+        "R/05_jags_qbl_zone_fe.R:65"
+      ],
+      "defect_evidence": [
+        "A fonte do pacote atribui a resposta da primeira fórmula a w e a da segunda a a; três chamadas do script de calibração e uma do nacional fazem o inverso."
+      ],
+      "refuting_evidence": [],
+      "mechanical_checks": [
+        "Coordenação abriu ef_main.R:655-710, conferiu as quatro chamadas e as listas diretas dos dois scripts posteriores.",
+        "Scripts anteriores preservados por hash em replication_review_inputs antes de qualquer reparo."
+      ],
+      "reasoning": "O reparo é estritamente de interface e não troca a especificação matemática. Não explica automaticamente convergência ou qualquer resultado do fresh_v2, cuja lista está correta.",
+      "proposed_fix_assessment": "safe",
+      "disposition": "Corrigir apenas as quatro chamadas invertidas em G3 e testar sentinelas assimétricas, preservando fontes anteriores e todos os fits. Trabalho já autorizado pelo usuário; não executar os runners históricos.",
+      "resolution": "Encaminhado ao G3, ainda não reparado na data desta adjudicação."
+    }
+  ],
+  "summary": {
+    "total": 1,
+    "confirmed": 1,
+    "partial": 0,
+    "refuted": 0,
+    "unresolved": 0,
+    "held_decisions": 0
+  },
+  "adjudication": {
+    "verdict": "READY_FOR_IMPLEMENTATION",
+    "checked_at": "2026-09-29T13:11:21.724213+00:00",
+    "reasons": [
+      "AR-02 é defeito de interface com fonte e reparo inequívocos, independente de localizar valores numéricos externos para G10.",
+      "Escopo: somente quatro chamadas invertidas, snapshots prévios e teste sentinela; não rodar scripts históricos nem alterar fits ou modelo.",
+      "As demais pendências do registro global permanecem; este encaminhamento não aprova G2, G3, G10 ou inferência.",
+      "A autorização já existe no pedido de prosseguir com G2/G3; reparo sujeito à QA independente de G3."
+    ]
+  },
+  "evidence": {
+    "input_recovery_map": "quality_reports/results/mebane_gates/coordination/2026-09-29_benchmark_round/replication_review_recovery.json"
+  },
+  "global_adjudication": {
+    "path": "quality_reports/results/mebane_gates/coordination/2026-09-29_benchmark_round/replication_adjudication.json",
+    "sha256": "214edd358111227c60c5f370c3e8ccbab77e0c1361d1a289312292c742ba4d16",
+    "verdict": "BLOCKED"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "status": "pass_for_accurate_inconclusive_review",
+  "candidate_unchanged": true,
+  "known_missing_dependency_count": 1,
+  "json_syntax_checked": true,
+  "own_text_files_whitespace_checked": [
+    "quality_reports/results/mebane_gates/G2/round2/review/execute_qa.py",
+    "quality_reports/results/mebane_gates/G2/round2/review/independent_closure.R",
+    "quality_reports/results/mebane_gates/G2/round2/review/review.md",
+    "quality_reports/results/mebane_gates/G2/round2/review/seal_review.py",
+    "quality_reports/results/mebane_gates/G2/round2/review/verify_integrity.py"
+  ],
+  "independent_checks": 59,
+  "reviewer_executor_distinct": true,
+  "candidate_file_count": 163,
+  "review_status_not_gate_approval": true
+}

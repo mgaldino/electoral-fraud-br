@@ -1,0 +1,8 @@
+{
+  "checked_at_utc": "2026-09-29T13:07:51.767636+00:00",
+  "matches_current_static_projection": true,
+  "contract_sha256": "f834bc1d12d88b4bc82fb2ada95120a838451c5809332630a75cd9abf03cf4d1",
+  "ledger_included_in_manifest": false,
+  "consumed_baseline_and_interface_hashes_verified": true,
+  "todos_complete_candidate_only": true
+}

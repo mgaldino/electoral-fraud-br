@@ -1,0 +1,70 @@
+renv: autoloader pulado dentro do sandbox do Codex
+During startup - Warning messages:
+1: Setting LC_CTYPE failed, using "C" 
+2: Setting LC_COLLATE failed, using "C" 
+3: Setting LC_TIME failed, using "C" 
+4: Setting LC_MESSAGES failed, using "C" 
+5: Setting LC_MONETARY failed, using "C" 
+AST PASS: 3 calls in R/05 and 1 in R/07 have the repaired formula mapping
+
+Burn-in: 50
+
+Number of MCMC samples per chain: 150
+
+MCMC in progress ....
+
+
+Burn-in: 50
+
+Number of MCMC samples per chain: 150
+
+MCMC in progress ....
+
+WRAPPER PASS: call 1, direct-list match and swapped negative control
+
+Burn-in: 50
+
+Number of MCMC samples per chain: 150
+
+MCMC in progress ....
+
+
+Burn-in: 50
+
+Number of MCMC samples per chain: 150
+
+MCMC in progress ....
+
+WRAPPER PASS: call 2, direct-list match and swapped negative control
+
+Burn-in: 2000
+
+Number of MCMC samples per chain: 5000
+
+MCMC in progress ....
+
+
+Burn-in: 2000
+
+Number of MCMC samples per chain: 5000
+
+MCMC in progress ....
+
+WRAPPER PASS: call 3, direct-list match and swapped negative control
+
+Burn-in: 0
+
+Number of MCMC samples per chain: 1
+
+MCMC in progress ....
+
+
+Burn-in: 0
+
+Number of MCMC samples per chain: 1
+
+MCMC in progress ....
+
+WRAPPER PASS: call 4, direct-list match and swapped negative control
+MCMC BLOCKED: 8 captures in sampler stub, 0 compiler entries
+AR-02 PASS: original namespace functions restored in this disposable R process
