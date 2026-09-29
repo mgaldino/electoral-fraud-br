@@ -1,0 +1,214 @@
+{
+  "synthetic_in_memory_only": true,
+  "changed_field": "G0.todos[0].evidence[0].path",
+  "original_path": "quality_reports/results/mebane_gates/G0/round1/inventory.json",
+  "mutated_path": "quality_reports/results/mebane_gates/G0/round3/tombstone.json",
+  "same_static_contract_accepted": true,
+  "todo_output_changed": true,
+  "baseline_matches_frozen_todo": true,
+  "emitted_outputs": [
+    {
+      "gate_id": "G0",
+      "round": "round3",
+      "todos": [
+        {
+          "id": "G0-T1",
+          "status": "done",
+          "evidence": [
+            {
+              "path": "quality_reports/results/mebane_gates/G0/round1/inventory.json",
+              "basis": "historical",
+              "locator": "inventário base e integridade ZIP/PDF; bytes reverified now, calculation not rerun"
+            },
+            {
+              "path": "quality_reports/results/mebane_gates/G0/round2/inventory_additions.json",
+              "basis": "historical",
+              "locator": "manuscrito e quatro tabelas; bytes reverified now, calculation not rerun"
+            },
+            {
+              "path": "quality_reports/results/mebane_gates/G0/round2/final_state_map.json",
+              "basis": "historical",
+              "locator": "37 snapshots; bytes reverified now, calculation not rerun"
+            },
+            {
+              "path": "quality_reports/results/mebane_gates/G0/round3/inventory_current.json",
+              "basis": "executed",
+              "locator": "157 direct files rehashed; one invalid PDF excluded"
+            },
+            {
+              "path": "quality_reports/results/mebane_gates/G0/round3/tombstone.json",
+              "basis": "inspected",
+              "locator": "authorized retained absence, unknown actor/cause"
+            }
+          ]
+        },
+        {
+          "id": "G0-T2",
+          "status": "done",
+          "evidence": [
+            {
+              "path": "quality_reports/results/mebane_gates/G0/round1/loads_environment.json",
+              "basis": "historical",
+              "locator": "versões e RemoteSha; bytes reverified now, calculation not rerun"
+            },
+            {
+              "path": "quality_reports/results/mebane_gates/G0/round2/lock_verification.json",
+              "basis": "historical",
+              "locator": "174 preservados, 180 finais e versões; bytes reverified now, calculation not rerun"
+            },
+            {
+              "path": "quality_reports/results/mebane_gates/G0/round2/final_state/renv.lock",
+              "basis": "historical",
+              "locator": "lock reconciliado; bytes reverified now, calculation not rerun"
+            }
+          ]
+        },
+        {
+          "id": "G0-T3",
+          "status": "done",
+          "evidence": [
+            {
+              "path": "quality_reports/results/mebane_gates/G0/round1/claims.md",
+              "basis": "historical",
+              "locator": "alegações versus logs/cadeias; bytes reverified now, calculation not rerun"
+            },
+            {
+              "path": "quality_reports/results/mebane_gates/G0/round1/loads_environment.json",
+              "basis": "historical",
+              "locator": "diagnósticos clássicos do fresh_v2; bytes reverified now, calculation not rerun"
+            },
+            {
+              "path": "quality_reports/results/mebane_gates/G0/round2/final_state/README.md",
+              "basis": "historical",
+              "locator": "limites de aquisição e reprodução; bytes reverified now, calculation not rerun"
+            }
+          ]
+        },
+        {
+          "id": "G0-T4",
+          "status": "done",
+          "evidence": [
+            {
+              "path": "quality_reports/results/mebane_gates/G0/round1/sources.md",
+              "basis": "historical",
+              "locator": "versões, URLs e hashes; bytes reverified now, calculation not rerun"
+            },
+            {
+              "path": "quality_reports/results/mebane_gates/G0/round1/eforensics_commit_api.json",
+              "basis": "historical",
+              "locator": "commit 3017de5; bytes reverified now, calculation not rerun"
+            },
+            {
+              "path": "quality_reports/results/mebane_gates/G0/round1/loads_environment.json",
+              "basis": "historical",
+              "locator": "loads e igualdade do qbl; bytes reverified now, calculation not rerun"
+            }
+          ]
+        }
+      ],
+      "note": "Historical calculations and loads not rerun. Current execution is hash/byte verification only."
+    },
+    {
+      "gate_id": "G0",
+      "round": "round3",
+      "todos": [
+        {
+          "id": "G0-T1",
+          "status": "done",
+          "evidence": [
+            {
+              "path": "quality_reports/results/mebane_gates/G0/round3/tombstone.json",
+              "basis": "historical",
+              "locator": "inventário base e integridade ZIP/PDF; bytes reverified now, calculation not rerun"
+            },
+            {
+              "path": "quality_reports/results/mebane_gates/G0/round2/inventory_additions.json",
+              "basis": "historical",
+              "locator": "manuscrito e quatro tabelas; bytes reverified now, calculation not rerun"
+            },
+            {
+              "path": "quality_reports/results/mebane_gates/G0/round2/final_state_map.json",
+              "basis": "historical",
+              "locator": "37 snapshots; bytes reverified now, calculation not rerun"
+            },
+            {
+              "path": "quality_reports/results/mebane_gates/G0/round3/inventory_current.json",
+              "basis": "executed",
+              "locator": "157 direct files rehashed; one invalid PDF excluded"
+            },
+            {
+              "path": "quality_reports/results/mebane_gates/G0/round3/tombstone.json",
+              "basis": "inspected",
+              "locator": "authorized retained absence, unknown actor/cause"
+            }
+          ]
+        },
+        {
+          "id": "G0-T2",
+          "status": "done",
+          "evidence": [
+            {
+              "path": "quality_reports/results/mebane_gates/G0/round1/loads_environment.json",
+              "basis": "historical",
+              "locator": "versões e RemoteSha; bytes reverified now, calculation not rerun"
+            },
+            {
+              "path": "quality_reports/results/mebane_gates/G0/round2/lock_verification.json",
+              "basis": "historical",
+              "locator": "174 preservados, 180 finais e versões; bytes reverified now, calculation not rerun"
+            },
+            {
+              "path": "quality_reports/results/mebane_gates/G0/round2/final_state/renv.lock",
+              "basis": "historical",
+              "locator": "lock reconciliado; bytes reverified now, calculation not rerun"
+            }
+          ]
+        },
+        {
+          "id": "G0-T3",
+          "status": "done",
+          "evidence": [
+            {
+              "path": "quality_reports/results/mebane_gates/G0/round1/claims.md",
+              "basis": "historical",
+              "locator": "alegações versus logs/cadeias; bytes reverified now, calculation not rerun"
+            },
+            {
+              "path": "quality_reports/results/mebane_gates/G0/round1/loads_environment.json",
+              "basis": "historical",
+              "locator": "diagnósticos clássicos do fresh_v2; bytes reverified now, calculation not rerun"
+            },
+            {
+              "path": "quality_reports/results/mebane_gates/G0/round2/final_state/README.md",
+              "basis": "historical",
+              "locator": "limites de aquisição e reprodução; bytes reverified now, calculation not rerun"
+            }
+          ]
+        },
+        {
+          "id": "G0-T4",
+          "status": "done",
+          "evidence": [
+            {
+              "path": "quality_reports/results/mebane_gates/G0/round1/sources.md",
+              "basis": "historical",
+              "locator": "versões, URLs e hashes; bytes reverified now, calculation not rerun"
+            },
+            {
+              "path": "quality_reports/results/mebane_gates/G0/round1/eforensics_commit_api.json",
+              "basis": "historical",
+              "locator": "commit 3017de5; bytes reverified now, calculation not rerun"
+            },
+            {
+              "path": "quality_reports/results/mebane_gates/G0/round1/loads_environment.json",
+              "basis": "historical",
+              "locator": "loads e igualdade do qbl; bytes reverified now, calculation not rerun"
+            }
+          ]
+        }
+      ],
+      "note": "Historical calculations and loads not rerun. Current execution is hash/byte verification only."
+    }
+  ],
+  "candidate_build_executed": false
+}

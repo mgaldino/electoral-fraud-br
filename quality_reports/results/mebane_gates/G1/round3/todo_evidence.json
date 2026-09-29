@@ -1,0 +1,134 @@
+{
+  "todos": [
+    {
+      "id": "G1-T1",
+      "status": "done",
+      "evidence": [
+        {
+          "path": "quality_reports/results/mebane_gates/G1/round3/snapshots/config/mebane/2022.json",
+          "basis": "historical",
+          "locator": "configuração consumida nas execuções completas; SHA-256/bytes rechecked in round3; no scientific rerun"
+        },
+        {
+          "path": "quality_reports/results/mebane_gates/G1/round2/outputs/2022_final/deterministic_replay.csv",
+          "basis": "historical",
+          "locator": "nove produtos centrais byte-idênticos; SHA-256/bytes rechecked in round3; no scientific rerun"
+        },
+        {
+          "path": "quality_reports/results/mebane_gates/G1/round3/inherited_map.json",
+          "basis": "executed",
+          "locator": "All direct round2 manifest entries rechecked by SHA-256 and byte count"
+        }
+      ]
+    },
+    {
+      "id": "G1-T2",
+      "status": "done",
+      "evidence": [
+        {
+          "path": "quality_reports/results/mebane_gates/G1/round3/snapshots/R/lib/mebane_data.R",
+          "basis": "historical",
+          "locator": "identidade, schema, contagens, elegibilidade e controles; SHA-256/bytes rechecked in round3; no scientific rerun"
+        },
+        {
+          "path": "quality_reports/results/mebane_gates/G1/round2/checks/repair_regressions.csv",
+          "basis": "historical",
+          "locator": "64 regressões; SHA-256/bytes rechecked in round3; no scientific rerun"
+        },
+        {
+          "path": "quality_reports/results/mebane_gates/G1/round2/checks/identity_official_anchors.csv",
+          "basis": "historical",
+          "locator": "; SHA-256/bytes rechecked in round3; no scientific rerun"
+        },
+        {
+          "path": "quality_reports/results/mebane_gates/G1/round3/inherited_map.json",
+          "basis": "executed",
+          "locator": "All direct round2 manifest entries rechecked by SHA-256 and byte count"
+        }
+      ]
+    },
+    {
+      "id": "G1-T3",
+      "status": "done",
+      "evidence": [
+        {
+          "path": "quality_reports/results/mebane_gates/G1/round2/outputs/2022_final/official_history_reconciliation.csv",
+          "basis": "historical",
+          "locator": "; SHA-256/bytes rechecked in round3; no scientific rerun"
+        },
+        {
+          "path": "quality_reports/results/mebane_gates/G1/round2/outputs/2022_final/official_munzona_uf_turn_reconciliation.csv",
+          "basis": "historical",
+          "locator": "; SHA-256/bytes rechecked in round3; no scientific rerun"
+        },
+        {
+          "path": "quality_reports/results/mebane_gates/G1/round2/outputs/2022_final/rule_log.csv",
+          "basis": "historical",
+          "locator": "99 nominais zero retidos; 94 registros não instalados sinalizados; SHA-256/bytes rechecked in round3; no scientific rerun"
+        },
+        {
+          "path": "quality_reports/results/mebane_gates/G1/round3/inherited_map.json",
+          "basis": "executed",
+          "locator": "All direct round2 manifest entries rechecked by SHA-256 and byte count"
+        }
+      ]
+    },
+    {
+      "id": "G1-T4",
+      "status": "done",
+      "evidence": [
+        {
+          "path": "quality_reports/results/mebane_gates/G1/round2/implementation.md",
+          "basis": "historical",
+          "locator": "invariância e limites; SHA-256/bytes rechecked in round3; no scientific rerun"
+        },
+        {
+          "path": "quality_reports/results/mebane_gates/G1/round2/outputs/2022_final/candidate_coalition_metadata.csv",
+          "basis": "historical",
+          "locator": "; SHA-256/bytes rechecked in round3; no scientific rerun"
+        },
+        {
+          "path": "quality_reports/results/mebane_gates/G1/round2/outputs/2022_final/rule_log.csv",
+          "basis": "historical",
+          "locator": "; SHA-256/bytes rechecked in round3; no scientific rerun"
+        },
+        {
+          "path": "quality_reports/results/mebane_gates/G1/round3/inherited_map.json",
+          "basis": "executed",
+          "locator": "All direct round2 manifest entries rechecked by SHA-256 and byte count"
+        }
+      ]
+    },
+    {
+      "id": "G1-T5",
+      "status": "done",
+      "evidence": [
+        {
+          "path": "quality_reports/results/mebane_gates/G1/round3/snapshots/tests/mebane/data/test_round2_repairs.R",
+          "basis": "historical",
+          "locator": "; SHA-256/bytes rechecked in round3; no scientific rerun"
+        },
+        {
+          "path": "quality_reports/results/mebane_gates/G1/round2/outputs/2022_final/independent_raw_uf_turn.csv",
+          "basis": "historical",
+          "locator": "; SHA-256/bytes rechecked in round3; no scientific rerun"
+        },
+        {
+          "path": "quality_reports/results/mebane_gates/G1/round2/outputs/2022_final/official_munzona_candidate_uf_turn.csv",
+          "basis": "historical",
+          "locator": "; SHA-256/bytes rechecked in round3; no scientific rerun"
+        },
+        {
+          "path": "quality_reports/results/mebane_gates/G1/round2/outputs/2022_final/deterministic_replay.csv",
+          "basis": "historical",
+          "locator": "; SHA-256/bytes rechecked in round3; no scientific rerun"
+        },
+        {
+          "path": "quality_reports/results/mebane_gates/G1/round3/inherited_map.json",
+          "basis": "executed",
+          "locator": "All direct round2 manifest entries rechecked by SHA-256 and byte count"
+        }
+      ]
+    }
+  ]
+}

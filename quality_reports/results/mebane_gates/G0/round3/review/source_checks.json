@@ -1,0 +1,100 @@
+{
+  "gate_id": "G0",
+  "round": "round3",
+  "function_consumed": "contract_sha256",
+  "current_checker_sha256": "15601b30477b940bda011a7370d3a2edc269c7ffd89fe92e09d8dd9d34a93480",
+  "frozen_checker_sha256": "15601b30477b940bda011a7370d3a2edc269c7ffd89fe92e09d8dd9d34a93480",
+  "function_AST_equal": true,
+  "checker_equivalence_interpretation": "No defect in the consumed hash function was demonstrated; identical AST is counterevidence against such a claim. The live import remains unbound operationally, but is not a separate material finding.",
+  "ledger_sha256": "b451175679d670a570b0fe2b34c5b09c0354f6582da385515493b5e4d23573ef",
+  "ledger_unchanged_since_read_trace": true,
+  "consumed_live_todo_projection": [
+    {
+      "id": "G0-T1",
+      "status": "done",
+      "evidence": [
+        {
+          "path": "quality_reports/results/mebane_gates/G0/round1/inventory.json",
+          "locator": "inventário base e integridade ZIP/PDF"
+        },
+        {
+          "path": "quality_reports/results/mebane_gates/G0/round2/inventory_additions.json",
+          "locator": "manuscrito e quatro tabelas"
+        },
+        {
+          "path": "quality_reports/results/mebane_gates/G0/round2/final_state_map.json",
+          "locator": "37 snapshots"
+        }
+      ]
+    },
+    {
+      "id": "G0-T2",
+      "status": "done",
+      "evidence": [
+        {
+          "path": "quality_reports/results/mebane_gates/G0/round1/loads_environment.json",
+          "locator": "versões e RemoteSha"
+        },
+        {
+          "path": "quality_reports/results/mebane_gates/G0/round2/lock_verification.json",
+          "locator": "174 preservados, 180 finais e versões"
+        },
+        {
+          "path": "quality_reports/results/mebane_gates/G0/round2/final_state/renv.lock",
+          "locator": "lock reconciliado"
+        }
+      ]
+    },
+    {
+      "id": "G0-T3",
+      "status": "done",
+      "evidence": [
+        {
+          "path": "quality_reports/results/mebane_gates/G0/round1/claims.md",
+          "locator": "alegações versus logs/cadeias"
+        },
+        {
+          "path": "quality_reports/results/mebane_gates/G0/round1/loads_environment.json",
+          "locator": "diagnósticos clássicos do fresh_v2"
+        },
+        {
+          "path": "quality_reports/results/mebane_gates/G0/round2/final_state/README.md",
+          "locator": "limites de aquisição e reprodução"
+        }
+      ]
+    },
+    {
+      "id": "G0-T4",
+      "status": "done",
+      "evidence": [
+        {
+          "path": "quality_reports/results/mebane_gates/G0/round1/sources.md",
+          "locator": "versões, URLs e hashes"
+        },
+        {
+          "path": "quality_reports/results/mebane_gates/G0/round1/eforensics_commit_api.json",
+          "locator": "commit 3017de5"
+        },
+        {
+          "path": "quality_reports/results/mebane_gates/G0/round1/loads_environment.json",
+          "locator": "loads e igualdade do qbl"
+        }
+      ]
+    }
+  ],
+  "prior_frozen_ledger_comparisons": [
+    {
+      "path": "quality_reports/results/mebane_gates/G0/round1/final_state/quality_reports/plans/mebane_2022_2026_gates.json",
+      "sha256": "288ba910a67dd3a8bfaa3c046bd1b1e0374d5b995eac88ea1ba976eb7f068013",
+      "consumed_todo_projection_equals_live": false
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G0/round2/final_state/quality_reports/plans/mebane_2022_2026_gates.json",
+      "sha256": "8372c57bcfeb28d3b2899b1eaa9c29cc092927e70c683202fbfd4ba2fa2768ac",
+      "consumed_todo_projection_equals_live": false
+    }
+  ],
+  "round2_todo_evidence_consumed_projection_equals_live": false,
+  "static_contract_excludes_todo_status_and_evidence": true,
+  "narrow_finding": "The static hash cannot bind todo status/evidence actually consumed by build; the counterexample changes output while passing check_contract. This is provenance, not invalid scientific data or mathematics."
+}

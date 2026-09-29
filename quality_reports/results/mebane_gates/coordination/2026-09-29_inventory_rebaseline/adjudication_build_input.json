@@ -1,0 +1,75 @@
+{
+  "schema_version": "1.0",
+  "adjudication_id": "G0-round3-build-input-repair",
+  "source": {
+    "reviewed_artifact": "quality_reports/results/mebane_gates/G0/round3/candidate_manifest.json",
+    "sha256": "42406b1ecb8ee843c95ef75a902ab15e6468c7bb7900b5ac8717d6476afd08bf",
+    "artifact_intact": true
+  },
+  "contract": {
+    "required": false,
+    "path": null,
+    "sha256": null,
+    "contract_id": null,
+    "artifact_sha256": null,
+    "status": null,
+    "stale": false
+  },
+  "review_sources": [
+    {
+      "review_id": "QA-G0-R3-source-checks",
+      "path": "quality_reports/results/mebane_gates/G0/round3/review/source_checks.json",
+      "sha256": "70a0334241fa33fdb564514ffc7b65e7382ec9f999e451d70d7c9e8c7138c62b"
+    },
+    {
+      "review_id": "QA-G0-R3-counterexample",
+      "path": "quality_reports/results/mebane_gates/G0/round3/review/run01/ledger_counterexample.json",
+      "sha256": "605be0c94c17c4c6513e1978ae88b06b60fc5ceea3516c37bbee25b32e5b1df4"
+    }
+  ],
+  "findings": [
+    {
+      "finding_id": "G0-R3-COORD-F01",
+      "source_review": "QA-G0-R3-source-checks",
+      "quoted_finding": "The static hash cannot bind todo status/evidence actually consumed by build; the counterexample changes output while passing check_contract. This is provenance, not invalid scientific data or mathematics.",
+      "type": "artifact",
+      "severity": "major",
+      "scientific_dimension": "construction_metadata_provenance",
+      "held_decision": false,
+      "status": "CONFIRMED",
+      "source_locations": [
+        "quality_reports/results/mebane_gates/G0/round3/build_candidate.py",
+        "quality_reports/results/mebane_gates/G0/round3/review/run01/ledger_counterexample.json"
+      ],
+      "defect_evidence": [
+        "O construtor consome status/evidence do ledger vivo, que o contrato estático não fixa.",
+        "A contraprova independente muda o output de evidências sem mudar o contrato aceito."
+      ],
+      "refuting_evidence": [],
+      "mechanical_checks": [
+        "Contraprova sintética em memória inspecionada; baseline reproduz todo_evidence congelado.",
+        "G0 completo do ledger atual é igual ao snapshot before preservado pela coordenação.",
+        "Checker atual e snapshot têm o mesmo SHA-256; não é um segundo defeito material."
+      ],
+      "reasoning": "O inventário e seus 157 arquivos presentes permanecem corretos. A lacuna está na reprodução dos metadados da construção, não na matemática ou nos dados. O snapshot existente fornece a entrada exata sem nova escolha do usuário.",
+      "proposed_fix_assessment": "safe",
+      "disposition": "Construir G0 round4 com snapshot vinculado dos metadados efetivamente consumidos, ler esse snapshot e preservá-lo no manifesto. Preservar round3 integralmente; não repetir análise científica, excluir ou restaurar arquivos. Rechecagem independente limitada do reparo."
+    }
+  ],
+  "summary": {
+    "total": 1,
+    "confirmed": 1,
+    "partial": 0,
+    "refuted": 0,
+    "unresolved": 0,
+    "held_decisions": 0
+  },
+  "adjudication": {
+    "verdict": "READY_FOR_IMPLEMENTATION",
+    "checked_at": "2026-09-29T15:53:37.088403+00:00",
+    "reasons": [
+      "Reparo documental delimitado, já coberto pela autorização para atualizar o inventário.",
+      "Parecer parcial independente e fonte diretamente conferidos; nenhuma conclusão científica nova."
+    ]
+  }
+}

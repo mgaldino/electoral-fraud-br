@@ -1,0 +1,12 @@
+{
+  "gate_id": "G0",
+  "round": "round3",
+  "contract_sha256": "dcf2756de9c970b5ab8797cf2a086f4c329e0da21d1555167f107ad242e6fa5e",
+  "candidate_manifest_sha256": "ac6765d1ee957a8bf9b2aa5ad2c003df63bfba1df70c9ec8a591218ba0d3140d",
+  "executor_id": "01a0edcd-cd1f-70f0-b9f5-95fb470b6c40",
+  "reviewer_id": "01a0edd1-ae42-7973-8cf9-2fda610d33cf",
+  "manifest_complete": true,
+  "status": "pass",
+  "findings": [],
+  "synthetic": true
+}

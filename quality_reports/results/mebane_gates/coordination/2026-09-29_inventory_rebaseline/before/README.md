@@ -6,7 +6,7 @@ Reconstrucao metodologica do parecer sobre a research note "Is there evidence of
 
 O plano [Mebane 2022-2026](quality_reports/plans/mebane_2022_2026_gates.json) inclui a análise presidencial de 2022 e a preparação para dados oficiais de 2026. O usuário escolheu primeiro o benchmark literal qbl/JAGS, preservando suas priors e os funcionais conjuntos por draw. G2 round2 passou em 59 checagens metodológicas independentes; isso não certifica o modelo para inferência nem a equivalência do Stan histórico. O [contrato matemático](appendices/mebane_model_contract.md) e o [contrato do benchmark](quality_reports/results/mebane_gates/G2/round2/benchmark_contract.json) fixam o alcance.
 
-Em 29/09, o usuário decidiu manter a ausência de um download já classificado como incompleto e atualizar o inventário. O arquivo não fundamenta o modelo; a autoria e a causa de sua remoção permanecem desconhecidas. O [inventário vigente](quality_reports/results/mebane_gates/G0/round4/inventory_current.json) e os vínculos G0/G1/G2/G7 foram reconferidos, revisados independentemente e adjudicados. A [pendência documental foi encerrada](quality_reports/results/mebane_gates/coordination/2026-09-29_inventory_rebaseline/completion.json) conforme a [decisão registrada](quality_reports/results/mebane_gates/coordination/2026-09-29_inventory_rebaseline/decision.md), sem excluir ou restaurar arquivos nem repetir análises científicas. Os inventários e pareceres anteriores permanecem preservados; o ledger registra o estado efetivo dos gates e prevalece sobre os resumos históricos. Nenhum arquivo deve ser excluído sem autorização explícita prévia do usuário.
+Em 29/09, um arquivo de download já classificado como incompleto foi removido por ação concorrente. Ele não fundamenta o modelo, mas integra o inventário congelado G0. As aprovações anteriores G0/G1/G7 estão preservadas em `round2/`, com liberação atual suspensa até reconciliar essa integridade. A [adjudicação inicial de G2](quality_reports/results/mebane_gates/G2/round2/adjudication_initial.json) registra a pendência e a consulta ao usuário, sem restaurar arquivos automaticamente. Os dados e as fontes científicas continuam íntegros; não se requer nova análise matemática por esse motivo. O ledger prevalece sobre os resumos históricos.
 
 A replicação externa dos autores é agora G10, obrigatório entre G3 e G4. A [descoberta de fontes](quality_reports/results/mebane_gates/coordination/authors_replication_discovery/discovery.md) tem revisão independente, mas o contrato de comparação permanece proposto, sem nova estimação ou PASS de G10. Consulte também a [adjudicação e errata](quality_reports/results/mebane_gates/coordination/2026-09-29_benchmark_round/replication_adjudication.md). Não há resultado nacional qbl validado nem inferência de 2026. G7 cobre apenas staging ensaiado de CSV normalizado: ainda faltam conversor auditado dos arquivos oficiais brutos e atestação dos dados reais. Os fits históricos e os testes suplementares não demonstram fraude nem sua ausência.
 
@@ -58,10 +58,8 @@ Rscript --vanilla tests/mebane/data/test_g1.R --full output/mebane/data/2022/run
 
 Para cada repetição, usar outro diretório novo. A configuração identifica fontes,
 ano, cargo, turnos, identidade eleitoral e controles. As saídas da validação
-estão preservadas em `quality_reports/results/mebane_gates/G1/round2/`; a
-revalidação documental vigente está em `quality_reports/results/mebane_gates/G1/round3/`,
-com hashes reconferidos, revisão independente e adjudicação aprovadas, sem
-reexecutar os cálculos. A aprovação de dados não libera estimação sem os gates
+vigente estão em `quality_reports/results/mebane_gates/G1/round2/`, com revisão
+e adjudicação aprovadas. A aprovação de dados não libera estimação sem os gates
 metodológicos e de recursos correspondentes.
 
 ### Scripts históricos

@@ -1,0 +1,1052 @@
+{
+  "gate_id": "G1",
+  "round": "round3",
+  "contract_sha256": "f985ab97469aa66755b977a09781b30608afa6e245896d9d9788b4461190975d",
+  "files": [
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round3/snapshots/R/01_load_tse.R",
+      "sha256": "05d7322118ac30281a2baf58da907393caae67995fe0e9be790c07705f42f6d1",
+      "bytes": 344
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round3/snapshots/R/02_build_vars.R",
+      "sha256": "a22f06b70e0e9afcf3121c397af8df5e14eedb9182f96d0a638d1b1bf55f1cd0",
+      "bytes": 310
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round3/snapshots/R/lib/mebane_data.R",
+      "sha256": "ddbf270eb13e67efa434701509c1dfd22a7355e66be7245ff895a527daf9f1a1",
+      "bytes": 20027
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round3/snapshots/config/mebane/2022.json",
+      "sha256": "3dd289d0173e5258e8b81ddaf51c0028341b6a3653c607723b27fa63a956109c",
+      "bytes": 1920
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round3/snapshots/quality_reports/results/2026-09-28_mebane_denominadores_brancos_nulos.md",
+      "sha256": "f84f6aad9d24169bab66f7684c582ae375c50adb4492d796acf3e1b08dffdeb2",
+      "bytes": 15132
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G0/round1/snapshots/R/01_load_tse.R",
+      "sha256": "fdd8c9278d73b85a7782c300f15e1931fb0f28e667feccb138a36e593d6fbce8",
+      "bytes": 38631
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G0/round1/snapshots/R/02_build_vars.R",
+      "sha256": "a18c49dc037de4ddf4a0d0e4ef7423a04522a963900d886bc86eca875c41dde5",
+      "bytes": 25775
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G0/round2/adjudication.json",
+      "sha256": "ea1b4905fdfa14f6e3f36c41974ea948ba0c39d1f81f87d6eaf479782216267b",
+      "bytes": 3138
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G0/round2/candidate_manifest.json",
+      "sha256": "f71333db477385fc78dad8a7a1a7ca78e48479226dcdbde80ce97d724409fec7",
+      "bytes": 33300
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G0/round2/review/review.json",
+      "sha256": "ef624cb4b2d8ad098b87e196d87add358ce1eba93165d44fcc1939ff303f5376",
+      "bytes": 8536
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round1/adjudication.json",
+      "sha256": "5838d9d65f302872215441164bf6faa04dc5cb98ab0701e2343587f4df1bcd11",
+      "bytes": 5325
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round1/adjudication.md",
+      "sha256": "b625ccf76b4cac9ad9b74cee2d53a7bdf27c1ccfd6121bf244cae05abe30d5e9",
+      "bytes": 1959
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round1/adjudication_addendum.json",
+      "sha256": "949cf6cbd3b53bcf1178c84ef1e45a187a8f7404116b44624e21781a05206e9a",
+      "bytes": 3492
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round1/adjudication_addendum.md",
+      "sha256": "8091504932b40d5770b5d61ac1365319073ac9b9ddf18faf476b4c4e5fda6d7b",
+      "bytes": 1053
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round1/adjudication_candidate_controls.R",
+      "sha256": "1c240b98c0bd0ba3e5236cc3c8ee28751d19d4ce1ce006f703978a333592f794",
+      "bytes": 1768
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round1/adjudication_candidate_controls.csv",
+      "sha256": "2b7e2b71a040ca329dc591c489e31edb3db9fefa6d3cfac6f2beb92130609f79",
+      "bytes": 76
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round1/adjudication_checks.R",
+      "sha256": "c4d87b2f9fa340d9b322568e22e88d5fde469ea47f4262a62c83c5db4402a61e",
+      "bytes": 1875
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round1/adjudication_checks.csv",
+      "sha256": "e94b0e3c1c66d833f99065da797435a7901e4abac2868c3c195d310a9f3bf8a0",
+      "bytes": 76
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round1/adjudication_integrity.json",
+      "sha256": "fb06e71200f3245b0059d7ae0ebf7118915433ee15205d166addcbcdbc5e4372",
+      "bytes": 286
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round1/adjudication_integrity.py",
+      "sha256": "3bad0b0cc5480f0599b667a8d097c9931540e78a07681eee6ecb2db4f02fc5eb",
+      "bytes": 1481
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round1/candidate_manifest.json",
+      "sha256": "009e0fd39f8ab495e52fcb214476fcc7b6095f895381006a924df6a2ffbd7003",
+      "bytes": 11340
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round1/freeze_candidate.py",
+      "sha256": "14115ecb30bae255f89e3355da9c2c64fb97aebdbfe8a0c6cd290c569b3181cb",
+      "bytes": 9137
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round1/gate_contract.json",
+      "sha256": "2364acc589da079d44687c79c9fb35561816cfe7fd34ad7431f7c18386c1ae4d",
+      "bytes": 2643
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round1/implementation.md",
+      "sha256": "6d5076bab255e7c762b7b933f8ebbc6242817ae422e3f6ab7b1bb866442ce867",
+      "bytes": 7909
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round1/outputs/2022_final/abstention_exceptions.csv",
+      "sha256": "0ad2e732e4d601d9dec5123648ed2c894274452b6680bdfbb137bafbd85c4dc2",
+      "bytes": 7979
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round1/outputs/2022_final/candidate_coalition_metadata.csv",
+      "sha256": "1e39ad4948fcfb17603b21b29f472b2ba3ba8db48b5bf688ba5508c37ec263ff",
+      "bytes": 471
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round1/outputs/2022_final/candidate_turn_totals.csv",
+      "sha256": "e8d23d38e6e997a5b19880ed66611b96cf8225d2f296e0a7be92bac84c6e8cea",
+      "bytes": 190
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round1/outputs/2022_final/deterministic_replay.csv",
+      "sha256": "bffe16c83e437862bcd6c98dd6c4064e51e8152306693dfe3aec81120f22240b",
+      "bytes": 1464
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round1/outputs/2022_final/independent_raw_uf_turn.csv",
+      "sha256": "7ad2fc3bc2325db4c5c14f4d56aa0016a4bd28126a6a93d692608472e88d2dcc",
+      "bytes": 3670
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round1/outputs/2022_final/load_config_sha256.txt",
+      "sha256": "f1cb8128358af6f5b2c02b44bb2f2addfecb9a0dc365eddab981868e66ba6f4e",
+      "bytes": 65
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round1/outputs/2022_final/model_counts.parquet",
+      "sha256": "b8d6a40e7820e865c0e209e8af8051ef1cc5f5f6e2c665f42f6a9aeedbe3df60",
+      "bytes": 14102122
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round1/outputs/2022_final/official_history_reconciliation.csv",
+      "sha256": "9ea368b50879f16a399835e3c39bbad2e586de7e9053c94905dbc0223ff04b33",
+      "bytes": 554
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round1/outputs/2022_final/official_munzona_candidate_uf_turn.csv",
+      "sha256": "837283f67d5005f1ff332cdbb5e47112803eaa83690e5dc7e4e814aba155bc44",
+      "bytes": 7929
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round1/outputs/2022_final/official_munzona_uf_turn_reconciliation.csv",
+      "sha256": "89e102f3835afd52259d51f469155a06ceb44f1e8e89e0a839871ab4f2242bb3",
+      "bytes": 13871
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round1/outputs/2022_final/official_noninstalled_zone.csv",
+      "sha256": "15ae1644478abb3c9143555c2c691ce34128c408bce5cd5b38e497c2da789f3e",
+      "bytes": 1680
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round1/outputs/2022_final/rule_log.csv",
+      "sha256": "43ffd6d7e68d6d1e37e1af8f2496350d550cd9b79f00c3ebc0f60620140f12ad",
+      "bytes": 249
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round1/outputs/2022_final/sections_validated.parquet",
+      "sha256": "f4964fb257a2afcbbbdcc5616a07a9287158ecb5c9964b25a33e2e3cde66a1cd",
+      "bytes": 9562678
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round1/outputs/2022_final/source_metadata.csv",
+      "sha256": "e8a8dcfe33d1b4d4d784acfbaa841120c2e9cce301578e48a42f9a29de173927",
+      "bytes": 220
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round1/outputs/2022_final/uf_turn_reconciliation.csv",
+      "sha256": "7ad2fc3bc2325db4c5c14f4d56aa0016a4bd28126a6a93d692608472e88d2dcc",
+      "bytes": 3670
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round1/outputs/2022_final/votes_validated.parquet",
+      "sha256": "b3d98d899af7f0624686b56e7e20b2f8ff9e8139ed467ad01cd2a6bff01eaa2b",
+      "bytes": 11299515
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round1/outputs/2022_primary/SUPERSEDED.md",
+      "sha256": "6841845129753083698cc1da5c0fdca06c4c930c45861e36c26c56aa5e701fb8",
+      "bytes": 238
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round1/outputs/2022_primary/abstention_exceptions.csv",
+      "sha256": "d8ae2e975540ea5d751614fe59f438dee2209ac53e13b7773450bbffbfb554cb",
+      "bytes": 7108
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round1/outputs/2022_primary/candidate_turn_totals.csv",
+      "sha256": "e8d23d38e6e997a5b19880ed66611b96cf8225d2f296e0a7be92bac84c6e8cea",
+      "bytes": 190
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round1/outputs/2022_primary/independent_raw_uf_turn.csv",
+      "sha256": "7ad2fc3bc2325db4c5c14f4d56aa0016a4bd28126a6a93d692608472e88d2dcc",
+      "bytes": 3670
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round1/outputs/2022_primary/load_config_sha256.txt",
+      "sha256": "f1cb8128358af6f5b2c02b44bb2f2addfecb9a0dc365eddab981868e66ba6f4e",
+      "bytes": 65
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round1/outputs/2022_primary/model_counts.parquet",
+      "sha256": "54c4e8bc1ee8861b89f4f545f60af2975b7ab17f84d7d97de953758aa248c3d2",
+      "bytes": 14008222
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round1/outputs/2022_primary/rule_log.csv",
+      "sha256": "43ffd6d7e68d6d1e37e1af8f2496350d550cd9b79f00c3ebc0f60620140f12ad",
+      "bytes": 249
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round1/outputs/2022_primary/sections_validated.parquet",
+      "sha256": "13f18795d05227a2d843d5fe7bc812b793c489e1f8ae3052d07d5e0bd2f78d44",
+      "bytes": 9468766
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round1/outputs/2022_primary/source_metadata.csv",
+      "sha256": "e8a8dcfe33d1b4d4d784acfbaa841120c2e9cce301578e48a42f9a29de173927",
+      "bytes": 220
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round1/outputs/2022_primary/uf_turn_reconciliation.csv",
+      "sha256": "7ad2fc3bc2325db4c5c14f4d56aa0016a4bd28126a6a93d692608472e88d2dcc",
+      "bytes": 3670
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round1/outputs/2022_primary/votes_validated.parquet",
+      "sha256": "208849786a44d8035168f2d7b5d7e9c26c1b25f1ec4fc83bbad10f30e18a5823",
+      "bytes": 10285389
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round1/outputs/2022_replay/abstention_exceptions.csv",
+      "sha256": "0ad2e732e4d601d9dec5123648ed2c894274452b6680bdfbb137bafbd85c4dc2",
+      "bytes": 7979
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round1/outputs/2022_replay/candidate_turn_totals.csv",
+      "sha256": "e8d23d38e6e997a5b19880ed66611b96cf8225d2f296e0a7be92bac84c6e8cea",
+      "bytes": 190
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round1/outputs/2022_replay/load_config_sha256.txt",
+      "sha256": "f1cb8128358af6f5b2c02b44bb2f2addfecb9a0dc365eddab981868e66ba6f4e",
+      "bytes": 65
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round1/outputs/2022_replay/model_counts.parquet",
+      "sha256": "b8d6a40e7820e865c0e209e8af8051ef1cc5f5f6e2c665f42f6a9aeedbe3df60",
+      "bytes": 14102122
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round1/outputs/2022_replay/rule_log.csv",
+      "sha256": "43ffd6d7e68d6d1e37e1af8f2496350d550cd9b79f00c3ebc0f60620140f12ad",
+      "bytes": 249
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round1/outputs/2022_replay/sections_validated.parquet",
+      "sha256": "f4964fb257a2afcbbbdcc5616a07a9287158ecb5c9964b25a33e2e3cde66a1cd",
+      "bytes": 9562678
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round1/outputs/2022_replay/source_metadata.csv",
+      "sha256": "e8a8dcfe33d1b4d4d784acfbaa841120c2e9cce301578e48a42f9a29de173927",
+      "bytes": 220
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round1/outputs/2022_replay/uf_turn_reconciliation.csv",
+      "sha256": "7ad2fc3bc2325db4c5c14f4d56aa0016a4bd28126a6a93d692608472e88d2dcc",
+      "bytes": 3670
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round1/outputs/2022_replay/votes_validated.parquet",
+      "sha256": "b3d98d899af7f0624686b56e7e20b2f8ff9e8139ed467ad01cd2a6bff01eaa2b",
+      "bytes": 11299515
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round1/review/adversarial_results.csv",
+      "sha256": "435371eb9bf1ff8873193d8737fed6906e94138159020066cf580a3ceadecb6d",
+      "bytes": 463
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round1/review/adversarial_review.R",
+      "sha256": "14a1a1246e80d4e2ae09d9f27be9b7402a4134286c516c75abb11c9b43d8805c",
+      "bytes": 3451
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round1/review/cli_2022/abstention_exceptions.csv",
+      "sha256": "0ad2e732e4d601d9dec5123648ed2c894274452b6680bdfbb137bafbd85c4dc2",
+      "bytes": 7979
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round1/review/cli_2022/candidate_coalition_metadata.csv",
+      "sha256": "1e39ad4948fcfb17603b21b29f472b2ba3ba8db48b5bf688ba5508c37ec263ff",
+      "bytes": 471
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round1/review/cli_2022/candidate_turn_totals.csv",
+      "sha256": "e8d23d38e6e997a5b19880ed66611b96cf8225d2f296e0a7be92bac84c6e8cea",
+      "bytes": 190
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round1/review/cli_2022/independent_raw_uf_turn.csv",
+      "sha256": "7ad2fc3bc2325db4c5c14f4d56aa0016a4bd28126a6a93d692608472e88d2dcc",
+      "bytes": 3670
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round1/review/cli_2022/load_config_sha256.txt",
+      "sha256": "f1cb8128358af6f5b2c02b44bb2f2addfecb9a0dc365eddab981868e66ba6f4e",
+      "bytes": 65
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round1/review/cli_2022/model_counts.parquet",
+      "sha256": "b8d6a40e7820e865c0e209e8af8051ef1cc5f5f6e2c665f42f6a9aeedbe3df60",
+      "bytes": 14102122
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round1/review/cli_2022/official_history_reconciliation.csv",
+      "sha256": "9ea368b50879f16a399835e3c39bbad2e586de7e9053c94905dbc0223ff04b33",
+      "bytes": 554
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round1/review/cli_2022/official_munzona_candidate_uf_turn.csv",
+      "sha256": "837283f67d5005f1ff332cdbb5e47112803eaa83690e5dc7e4e814aba155bc44",
+      "bytes": 7929
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round1/review/cli_2022/official_munzona_uf_turn_reconciliation.csv",
+      "sha256": "89e102f3835afd52259d51f469155a06ceb44f1e8e89e0a839871ab4f2242bb3",
+      "bytes": 13871
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round1/review/cli_2022/official_noninstalled_zone.csv",
+      "sha256": "15ae1644478abb3c9143555c2c691ce34128c408bce5cd5b38e497c2da789f3e",
+      "bytes": 1680
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round1/review/cli_2022/rule_log.csv",
+      "sha256": "43ffd6d7e68d6d1e37e1af8f2496350d550cd9b79f00c3ebc0f60620140f12ad",
+      "bytes": 249
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round1/review/cli_2022/sections_validated.parquet",
+      "sha256": "f4964fb257a2afcbbbdcc5616a07a9287158ecb5c9964b25a33e2e3cde66a1cd",
+      "bytes": 9562678
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round1/review/cli_2022/source_metadata.csv",
+      "sha256": "e8a8dcfe33d1b4d4d784acfbaa841120c2e9cce301578e48a42f9a29de173927",
+      "bytes": 220
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round1/review/cli_2022/uf_turn_reconciliation.csv",
+      "sha256": "7ad2fc3bc2325db4c5c14f4d56aa0016a4bd28126a6a93d692608472e88d2dcc",
+      "bytes": 3670
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round1/review/cli_2022/votes_validated.parquet",
+      "sha256": "b3d98d899af7f0624686b56e7e20b2f8ff9e8139ed467ad01cd2a6bff01eaa2b",
+      "bytes": 11299515
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round1/review/cli_byte_comparison.csv",
+      "sha256": "12d0b6ebf29d75f8c1927755e1865222b7797d7cddff3fcdec51a1c5fe7e1e35",
+      "bytes": 1526
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round1/review/independent_controls.csv",
+      "sha256": "1297b456710b28c2e2ccd651881cdbd25bf7e447b7f15b8b90417c0a99c86367",
+      "bytes": 760
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round1/review/independent_national.csv",
+      "sha256": "ed84403897af220cbd3a31b0ac2c739e2907a8b204e394618aa0e4821a9ef620",
+      "bytes": 279
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round1/review/independent_summary.json",
+      "sha256": "e19054481c02084acdccabb2e5ffdc73bb2911eb4ac1df54e0e4b53e6af87969",
+      "bytes": 508
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round1/review/independent_uf_turn.csv",
+      "sha256": "7ad2fc3bc2325db4c5c14f4d56aa0016a4bd28126a6a93d692608472e88d2dcc",
+      "bytes": 3670
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round1/review/manifest_bytes.txt",
+      "sha256": "7f6d0220568e1dea938b559eab6de3aa5e2454afc0c19e54c090c3813c9f6e50",
+      "bytes": 61
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round1/review/review.json",
+      "sha256": "5702f2bf4dd306bdfb7af86e81477faceecd54a4b3b4024cdfdf1d048b5d2c5f",
+      "bytes": 7522
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round1/review/review.md",
+      "sha256": "041572da94f2b54b59239e247d0bd7f3dbc7298defab5425c4c14c6011bac1d6",
+      "bytes": 6064
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round1/review/review_checks.R",
+      "sha256": "fd6056888f4225184a7aa5811833df7db46991fcb7aaa663a6f4ee3e98ff33c3",
+      "bytes": 12933
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round1/run.json",
+      "sha256": "f16d96c40bed78c72bf685ba0bb4d4f7dc39703ac5c0dd1521382aacb599fb11",
+      "bytes": 16145
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round1/todo_evidence.json",
+      "sha256": "73ef62a2fc6b3960db3be1e71d6396c715af108329f9b2c48cc41aa8c3c86441",
+      "bytes": 1472
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round2/capture_runtime.R",
+      "sha256": "5e8765cc570617bdab89f46ad41fd13a0287e1dd31a6626f97316e76e3644885",
+      "bytes": 411
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round2/checks/freeze_record.json",
+      "sha256": "b3af6ec4497e9ee78823cbf0944c49aee971010bd20b0fbdfbabf8ba76916a6e",
+      "bytes": 681
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round2/checks/identity_official_anchors.csv",
+      "sha256": "36b9da8e5d010830b58ae0cf4e6a3e6c558c1c59ed9a78baadd349f261ec4813",
+      "bytes": 2634
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round2/checks/repair_regressions.csv",
+      "sha256": "cedfb60e27d517bf6c7c974440b4451919bbc19aca2f5fd0751f53a44a78d616",
+      "bytes": 6504
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round2/checks/round1_aggregate_invariance.csv",
+      "sha256": "870181d1e88202fdd9af449e62034b29b51c8f5d6ce8d63fe1b8cf164412b619",
+      "bytes": 1526
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round2/checks/round1_preservation.json",
+      "sha256": "ea19f90b86b82b7449e18dc370063af126f718db6ceb9dbd0fd72a4b02327e53",
+      "bytes": 19743
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round2/checks/round1_rowwise_invariance.csv",
+      "sha256": "fa3af03c1b01b14dda691bae192cf0e47e74e9dfa755bfb311cc86fb587478e8",
+      "bytes": 1154
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round2/checks/runtime.json",
+      "sha256": "8128552d9e17a162a82285712610be3a9a03d9c76c3b999e53023973f7e3678c",
+      "bytes": 202
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round2/freeze_candidate.py",
+      "sha256": "a5bebde97b569ff784947bd07cb3964e296129a518aa1d87eef4e3c63e5ad128",
+      "bytes": 9478
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round2/gate_contract.json",
+      "sha256": "2364acc589da079d44687c79c9fb35561816cfe7fd34ad7431f7c18386c1ae4d",
+      "bytes": 2643
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round2/implementation.md",
+      "sha256": "a972242d2eeb18a01022a9fc0201a7c56fcfbc01ffbb8d92b6be21bf9a56c83d",
+      "bytes": 9960
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round2/logs/diff_check.json",
+      "sha256": "bbec803518da92ab9a97a3b7ae2b7f7c1831b8aafe1664d5d8bbd011a7726942",
+      "bytes": 764
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round2/logs/diff_check.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round2/logs/evidence_metadata.json",
+      "sha256": "86f9a62f61d0874adb7e3669235669212b9d6ba62a11fdc302053c55dfbe0048",
+      "bytes": 2630
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round2/logs/evidence_metadata.txt",
+      "sha256": "a4a1c4567b09ca367b9e34436dcd835f4c20f8f35d310d7e9015b1e7e33f74c4",
+      "bytes": 158
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round2/logs/existing_fixtures.json",
+      "sha256": "d36996d51a28c99d641b1ef3f9f087361f8659906d136933176299342aa99186",
+      "bytes": 498
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round2/logs/existing_fixtures.txt",
+      "sha256": "c991439947155748f0f4712b1e1210f31b84178e08a05fb3e4d098467f1ff7b7",
+      "bytes": 270
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round2/logs/full_build.json",
+      "sha256": "ef5f54b531ebcb59dd66787082b0bdbe7539a8ecf67f512e38a9e8bc8d930221",
+      "bytes": 676
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round2/logs/full_build.txt",
+      "sha256": "5b4dc8cad10503e8f44298c2f40a4f63a181daba0c2b84d4167af782bb315bea",
+      "bytes": 1062
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round2/logs/full_load.json",
+      "sha256": "ab6c97d10e8ddd8a7f38dc64fd0d6b75f5225b5ebf03c435b909a5eed81b7f62",
+      "bytes": 662
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round2/logs/full_load.txt",
+      "sha256": "3cf40c37b1865bbb3223f11a541fef586b0c8348864aeaa31520923b40add438",
+      "bytes": 309
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round2/logs/full_raw_controls.json",
+      "sha256": "4cac87fadf5db3ce6cf7fd70d192ea8bbf785affdba246497e9e08ccb883fb2a",
+      "bytes": 656
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round2/logs/full_raw_controls.txt",
+      "sha256": "dbcb411f58c50e54a5304e33116abbad7a1645297409fd673c6a73cf0aac936e",
+      "bytes": 1105
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round2/logs/official_histories.json",
+      "sha256": "20d85c9f2caaf2c133e81539310209a3b419be93735f547ddb6d51c318f5eed7",
+      "bytes": 662
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round2/logs/official_histories.txt",
+      "sha256": "e2fb30485d340b5a3983c56a86c5fbb552b1b0db82862ec839368d23bacbe1b6",
+      "bytes": 304
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round2/logs/official_identity.json",
+      "sha256": "33a12c4e53a0f29820e1402526114a71e195e394fe4f0412e162c23748a96685",
+      "bytes": 654
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round2/logs/official_identity.txt",
+      "sha256": "a6031293956c8acd26f4b86312937c098ed92e317672e459695b2afdbd255484",
+      "bytes": 311
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round2/logs/official_munzona.json",
+      "sha256": "aa668dc915bfc553fa758a452158f3f24d51fc764e279d577a6ccbd51574f75c",
+      "bytes": 673
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round2/logs/official_munzona.txt",
+      "sha256": "6e1e62cc755a2cda35090bba33a8c8542abd8a622402e03e1fff584ac4fa00b0",
+      "bytes": 387
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round2/logs/preservation_check.json",
+      "sha256": "35745e315fab8d559c6ee5c16cabfcfd863d418a0bc7f14aa7e85699da9bab91",
+      "bytes": 575
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round2/logs/preservation_check.txt",
+      "sha256": "0b3ab3e7b62e70e6a9bb1cf56928992c73dab65d0e3ae7f1b9ca1045f096f2f7",
+      "bytes": 90
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round2/logs/preserve_sources.json",
+      "sha256": "ef4eafc40089a36bc8aa3a356f8de0e21a354f8b125c38e246a8ab2583cc8187",
+      "bytes": 529
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round2/logs/preserve_sources.txt",
+      "sha256": "9d740c0f67f27fd7d28e20be5f06268a2077c368f38cbd2ab7c32e0e74368935",
+      "bytes": 80
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round2/logs/repair_regressions.json",
+      "sha256": "65f8a600464c1eb7c0d6be7473a829f0541d6d3e03dfbbe7a1bfa09ace8110c7",
+      "bytes": 660
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round2/logs/repair_regressions.txt",
+      "sha256": "ca93033c80cd80fa62fc0c7ed5497a409178c65cc51cdee38fba38ecc8248dbf",
+      "bytes": 405
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round2/logs/replay_build.json",
+      "sha256": "31f1e78131c8aa8e8ed647ca8241d3ada1bc2e0e635435fd099bf82ad85fa651",
+      "bytes": 652
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round2/logs/replay_build.txt",
+      "sha256": "5b4dc8cad10503e8f44298c2f40a4f63a181daba0c2b84d4167af782bb315bea",
+      "bytes": 1062
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round2/logs/replay_check.json",
+      "sha256": "9ccc6461406033f6aa874d1a3fcce6a597aedcf95ab152399a1338c7ff1853aa",
+      "bytes": 766
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round2/logs/replay_check.txt",
+      "sha256": "8dbbf8b77fb0408e601783e09b8d82b5d7107cc38d3fa79632dd78f602fcdb67",
+      "bytes": 282
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round2/logs/replay_load.json",
+      "sha256": "0c058fea9644350cdbc23be8953c48b717b15b6104ba8d78bd8684621e244e66",
+      "bytes": 656
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round2/logs/replay_load.txt",
+      "sha256": "3cf40c37b1865bbb3223f11a541fef586b0c8348864aeaa31520923b40add438",
+      "bytes": 309
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round2/logs/round1_invariance.json",
+      "sha256": "167d9e69e8b10a6ce06f29a91abe3ba76ef29bdf101b874399b8c6489c88230a",
+      "bytes": 943
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round2/logs/round1_invariance.txt",
+      "sha256": "b188a0bd5665d2602cc49918b0e6f76f2063ed39bba8a1df2f1944d46c8c0d6d",
+      "bytes": 1175
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round2/logs/runtime.json",
+      "sha256": "acdae158933125ba597b5445f1ce2ff2248a16e55b96c69a0fdbb3eea02ca199",
+      "bytes": 548
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round2/logs/runtime.txt",
+      "sha256": "1087263211c5ee5a10c73f73fbddbf3441d20d17062c990a9ad2256e5004eaf6",
+      "bytes": 327
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round2/logs/static_contract_test.json",
+      "sha256": "7d07907f729ec4e44b0c5c08416432f5c51d8d6180934c5e65a88a8a05571103",
+      "bytes": 481
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round2/logs/static_contract_test.txt",
+      "sha256": "126d2ed6ad11fb2bffe8fc505776e8482f320e55a4d451974ceda1653030d463",
+      "bytes": 107
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round2/outputs/2022_final/abstention_exceptions.csv",
+      "sha256": "288e32f775a35c8468ae2e7a632ccb745f1e2abccfafc109e8e095444976f7ab",
+      "bytes": 8183
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round2/outputs/2022_final/candidate_coalition_metadata.csv",
+      "sha256": "1e39ad4948fcfb17603b21b29f472b2ba3ba8db48b5bf688ba5508c37ec263ff",
+      "bytes": 471
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round2/outputs/2022_final/candidate_turn_totals.csv",
+      "sha256": "e8d23d38e6e997a5b19880ed66611b96cf8225d2f296e0a7be92bac84c6e8cea",
+      "bytes": 190
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round2/outputs/2022_final/deterministic_replay.csv",
+      "sha256": "67e27e9ca031cb87861d41bc5ce1252244340622148e02ef9cd5bade452b6c9a",
+      "bytes": 1464
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round2/outputs/2022_final/independent_raw_uf_turn.csv",
+      "sha256": "7ad2fc3bc2325db4c5c14f4d56aa0016a4bd28126a6a93d692608472e88d2dcc",
+      "bytes": 3670
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round2/outputs/2022_final/load_config_sha256.txt",
+      "sha256": "0081f9ab74c908ce416c45d9fcb6673791f90a62adecb7b0937409efbd78d8e9",
+      "bytes": 65
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round2/outputs/2022_final/model_counts.parquet",
+      "sha256": "fba1ad27c76fc8aa6f63e4622a3632454618a30d6ab36190342b1d8ba07e81f9",
+      "bytes": 14102518
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round2/outputs/2022_final/official_history_reconciliation.csv",
+      "sha256": "9ea368b50879f16a399835e3c39bbad2e586de7e9053c94905dbc0223ff04b33",
+      "bytes": 554
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round2/outputs/2022_final/official_munzona_candidate_uf_turn.csv",
+      "sha256": "837283f67d5005f1ff332cdbb5e47112803eaa83690e5dc7e4e814aba155bc44",
+      "bytes": 7929
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round2/outputs/2022_final/official_munzona_uf_turn_reconciliation.csv",
+      "sha256": "89e102f3835afd52259d51f469155a06ceb44f1e8e89e0a839871ab4f2242bb3",
+      "bytes": 13871
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round2/outputs/2022_final/official_noninstalled_zone.csv",
+      "sha256": "15ae1644478abb3c9143555c2c691ce34128c408bce5cd5b38e497c2da789f3e",
+      "bytes": 1680
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round2/outputs/2022_final/rule_log.csv",
+      "sha256": "43ffd6d7e68d6d1e37e1af8f2496350d550cd9b79f00c3ebc0f60620140f12ad",
+      "bytes": 249
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round2/outputs/2022_final/sections_validated.parquet",
+      "sha256": "d706ce77bbb462eed14405f24a553ace54e75348e0280590014459b9258de339",
+      "bytes": 9563074
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round2/outputs/2022_final/source_metadata.csv",
+      "sha256": "a2ff00e42f9dc3707b88b87ce904ec77ea25b3031bacf04da11b1fc5f173d9c9",
+      "bytes": 244
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round2/outputs/2022_final/uf_turn_reconciliation.csv",
+      "sha256": "7ad2fc3bc2325db4c5c14f4d56aa0016a4bd28126a6a93d692608472e88d2dcc",
+      "bytes": 3670
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round2/outputs/2022_final/votes_validated.parquet",
+      "sha256": "38a9701fb8ffe734989841059dda6db5e11b269067b0403ef0fb2fdfd6940069",
+      "bytes": 11301013
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round2/outputs/2022_replay/abstention_exceptions.csv",
+      "sha256": "288e32f775a35c8468ae2e7a632ccb745f1e2abccfafc109e8e095444976f7ab",
+      "bytes": 8183
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round2/outputs/2022_replay/candidate_turn_totals.csv",
+      "sha256": "e8d23d38e6e997a5b19880ed66611b96cf8225d2f296e0a7be92bac84c6e8cea",
+      "bytes": 190
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round2/outputs/2022_replay/load_config_sha256.txt",
+      "sha256": "0081f9ab74c908ce416c45d9fcb6673791f90a62adecb7b0937409efbd78d8e9",
+      "bytes": 65
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round2/outputs/2022_replay/model_counts.parquet",
+      "sha256": "fba1ad27c76fc8aa6f63e4622a3632454618a30d6ab36190342b1d8ba07e81f9",
+      "bytes": 14102518
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round2/outputs/2022_replay/rule_log.csv",
+      "sha256": "43ffd6d7e68d6d1e37e1af8f2496350d550cd9b79f00c3ebc0f60620140f12ad",
+      "bytes": 249
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round2/outputs/2022_replay/sections_validated.parquet",
+      "sha256": "d706ce77bbb462eed14405f24a553ace54e75348e0280590014459b9258de339",
+      "bytes": 9563074
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round2/outputs/2022_replay/source_metadata.csv",
+      "sha256": "a2ff00e42f9dc3707b88b87ce904ec77ea25b3031bacf04da11b1fc5f173d9c9",
+      "bytes": 244
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round2/outputs/2022_replay/uf_turn_reconciliation.csv",
+      "sha256": "7ad2fc3bc2325db4c5c14f4d56aa0016a4bd28126a6a93d692608472e88d2dcc",
+      "bytes": 3670
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round2/outputs/2022_replay/votes_validated.parquet",
+      "sha256": "38a9701fb8ffe734989841059dda6db5e11b269067b0403ef0fb2fdfd6940069",
+      "bytes": 11301013
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round2/prepare_round.py",
+      "sha256": "846863fd85c93b686064f83f48afc812590c07bf879f8b7870dd27393aef54be",
+      "bytes": 2571
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round2/previous_candidate_sources/R/01_load_tse.R",
+      "sha256": "05d7322118ac30281a2baf58da907393caae67995fe0e9be790c07705f42f6d1",
+      "bytes": 344
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round2/previous_candidate_sources/R/02_build_vars.R",
+      "sha256": "a22f06b70e0e9afcf3121c397af8df5e14eedb9182f96d0a638d1b1bf55f1cd0",
+      "bytes": 310
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round2/previous_candidate_sources/R/lib/mebane_data.R",
+      "sha256": "73b03828da6e49f7b958ac42dc09fdef0ae332a79012b7291f1de608b1081942",
+      "bytes": 14761
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round2/previous_candidate_sources/config/mebane/2022.json",
+      "sha256": "f8b33def917ed3885df71dd68284bb0e70be7d830747b56422a3f8ed225b2c86",
+      "bytes": 1731
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round2/previous_candidate_sources/quality_reports/results/mebane_gates/G1/round1/freeze_candidate.py",
+      "sha256": "14115ecb30bae255f89e3355da9c2c64fb97aebdbfe8a0c6cd290c569b3181cb",
+      "bytes": 9137
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round2/previous_candidate_sources/quality_reports/results/mebane_gates/G1/round1/gate_contract.json",
+      "sha256": "2364acc589da079d44687c79c9fb35561816cfe7fd34ad7431f7c18386c1ae4d",
+      "bytes": 2643
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round2/previous_candidate_sources/tests/mebane/data/check_official_histories.R",
+      "sha256": "d49bee41e686e03b606126c28712627d4fb16eca30a51254c5c00ae7efbc9cac",
+      "bytes": 3065
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round2/previous_candidate_sources/tests/mebane/data/check_official_munzona.R",
+      "sha256": "c1a9d01a2339639a732756d2d81e4632ca8be1a6082f1dd3227965df2b049771",
+      "bytes": 6491
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round2/previous_candidate_sources/tests/mebane/data/check_replay.R",
+      "sha256": "f98614e78781d40cab771b3c176749d500f731d8e4c810f6bf7ec0bdc540fbfc",
+      "bytes": 1008
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round2/previous_candidate_sources/tests/mebane/data/test_g1.R",
+      "sha256": "4094915c1fd8594bf81cf9b676c52304c88bc6345c098580065f6a441c5aa416",
+      "bytes": 5768
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round2/previous_candidate_sources_map.json",
+      "sha256": "930524ebe33ece0ad3bfcf4a0dc2da91830ec3f26f4ec641b7e2f84c3a948384",
+      "bytes": 3575
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round2/repair_evidence.json",
+      "sha256": "bc098b02d0dc3dea01d9bd22f71740ed11615dee80bbf5dc89d5b2a63c165611",
+      "bytes": 3292
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round2/round1_tree_before.json",
+      "sha256": "87f738c383e4cb7bedfb2286b268d17b18322f4c50afae4f3d36cd1ce0932256",
+      "bytes": 16246
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round2/run.json",
+      "sha256": "c5c9f30ef796b1511316d127e6b5e7393522d0080b03d60007fca197b9d07221",
+      "bytes": 64097
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round2/run_logged.py",
+      "sha256": "7be91496b9a83e34ec055e3cd6a80452a1ec961507dfc9c433a9c2664ce48c8f",
+      "bytes": 1589
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round2/todo_evidence.json",
+      "sha256": "1459edab24aaadb436ed3d1cd0120473a09f31b3cb554f58ba0efa6c42f12eee",
+      "bytes": 3417
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round2/verify_preservation.py",
+      "sha256": "1be18217514afa8f0286d18b77b2c6fe2fe61d2a0adff49b90c5f41315bf0535",
+      "bytes": 2318
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/Historico_Totalizacao_Presidente_BR_1T_2022.zip",
+      "sha256": "55961aa1ecc87d0fd9c02730864f1b69a9f2eb3456327542dfc507217cd74a05",
+      "bytes": 1625754
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/Historico_Totalizacao_Presidente_BR_2T_2022.zip",
+      "sha256": "1f12128fbcfacab755e0e83d9c0a350ed99ae68ea3d024aaa7bc58fe0c1dda3c",
+      "bytes": 825276
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/detalhe_votacao_munzona_2022.zip",
+      "sha256": "c4d5b6eb679e0c22ecc2842052d3472324101b0632b9c0820b4c18206c25f930",
+      "bytes": 4409303
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/pm23_2023-07-02.pdf",
+      "sha256": "615ddab21034e22ca55d891e01f14b85a2e7d80e12238bfbfb142ff214531431",
+      "bytes": 5123025
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/tse2022_control_sources.md",
+      "sha256": "f7992d9442a2dadc37240a52a2af5138c7e8d1cac3e5554154775693a17e0e9c",
+      "bytes": 8271
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/votacao_candidato_munzona_2022.zip",
+      "sha256": "319bd123d933e04c23c5920abe8455f48890b561e6dad98c1003cfd461ab8fd1",
+      "bytes": 659610562
+    },
+    {
+      "path": "replication_authors/extracted/fingerprint_brazil/raw-data/detalhe_votacao_secao_2022_BR.csv",
+      "sha256": "24a272ea64f4c90d0de229cffc050f1b69b632315025446440fa9944cd3bee9c",
+      "bytes": 276224141
+    },
+    {
+      "path": "replication_authors/extracted/fingerprint_brazil/raw-data/votacao_secao_2022_BR.csv",
+      "sha256": "1a9e0feffe026c62b7e9559e9d3dbeb442a2df87f54cbed7a5a67c56abfc10e3",
+      "bytes": 1591148802
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round3/snapshots/tests/mebane/data/check_official_histories.R",
+      "sha256": "d49bee41e686e03b606126c28712627d4fb16eca30a51254c5c00ae7efbc9cac",
+      "bytes": 3065
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round3/snapshots/tests/mebane/data/check_official_munzona.R",
+      "sha256": "c1a9d01a2339639a732756d2d81e4632ca8be1a6082f1dd3227965df2b049771",
+      "bytes": 6491
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round3/snapshots/tests/mebane/data/check_replay.R",
+      "sha256": "f98614e78781d40cab771b3c176749d500f731d8e4c810f6bf7ec0bdc540fbfc",
+      "bytes": 1008
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round3/snapshots/tests/mebane/data/check_round1_invariance.R",
+      "sha256": "ecfc0517c46c56ed7b8abbb0507aa21b3cd35caf43810a3e3187f0c1ae8ca7d6",
+      "bytes": 3278
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round3/snapshots/tests/mebane/data/check_round2_identity_sources.R",
+      "sha256": "7ad92c83a57724592d134081f5fc656c8e60e0ea9c0eca4695593509de662260",
+      "bytes": 1807
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round3/snapshots/tests/mebane/data/test_g1.R",
+      "sha256": "f9a280d10dc69524edc139eb8a799b232f68a7a3b974535b1d14d591591788ba",
+      "bytes": 5792
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round3/snapshots/tests/mebane/data/test_round2_freeze.py",
+      "sha256": "3da057c8dd42fbf488d235c9c3579d959c81f23187bc2b72d9c68b4b95c6f88c",
+      "bytes": 2031
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round3/snapshots/tests/mebane/data/test_round2_repairs.R",
+      "sha256": "3cc410a2131d720503feb3d9c5f1d2cd4cda906b848273da3c6fd6a6b8f3115c",
+      "bytes": 9330
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round2/candidate_manifest.json",
+      "sha256": "517c17c724cca82a820519c476981d47c8892c7383dd2c3dded9373eba6d31e8",
+      "bytes": 41634
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round2/review/review.json",
+      "sha256": "727f6b234e3a580c329cc5e898018bb68c02063717c292b6d91e4fbe12d86941",
+      "bytes": 7220
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round2/adjudication.json",
+      "sha256": "fe21ce5ebaf107027b6cf64f72eb06f9f2549df8f65ccbbd3eeee2067807735e",
+      "bytes": 4754
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-29_inventory_rebaseline/decision.md",
+      "sha256": "fe62bfd30ffd6e985a6070fb6f575770e5097f6c96de543eed145df3df75007a",
+      "bytes": 2340
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round3/ledger_input_snapshot.json",
+      "sha256": "f729008b8179805acda7c24a6c9cb2669cfa767fa76bd48edfb1b320141af0a9",
+      "bytes": 15653
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G0/round4/run.json",
+      "sha256": "1a565af625e63559864a82cc64cf15263012c32cae02fdecbdeeb72dfac8bf20",
+      "bytes": 17036
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G0/round4/candidate_manifest.json",
+      "sha256": "d73ecc86824fd5eaa66ece7cad41d6c21d913d455af864d32c11c5331fa5bb57",
+      "bytes": 39168
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G0/round4/review/review.json",
+      "sha256": "e6d5bc5e7019a592cdea6ca9c302b50b792607516d20de630ef4d83b83763b38",
+      "bytes": 6399
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G0/round4/adjudication.json",
+      "sha256": "51782700132bacb6b57019117fce65c5ac6b4f2ee0f683ca80cda7dd9d0bfcfd",
+      "bytes": 3589
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round3/build_candidate.py",
+      "sha256": "b4dec43ffda368d8ed6bff3cbac9c9dd30452d3fb04f451631639f9fcd777922",
+      "bytes": 23695
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round3/gate_contract.json",
+      "sha256": "2364acc589da079d44687c79c9fb35561816cfe7fd34ad7431f7c18386c1ae4d",
+      "bytes": 2643
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round3/inherited_map.json",
+      "sha256": "d2ecfafb170da2f74e433493f9c9ca05c309406ad04ad580e8cb8419c7a1514f",
+      "bytes": 3881
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round3/todo_evidence.json",
+      "sha256": "69bdb2c81656d4e7f28694a5b68169ccf028675b4e540f27d6cbfa3a7c2c2d26",
+      "bytes": 5512
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round3/implementation.md",
+      "sha256": "10be7f1aee641f14e6af5dbe660b0564d0cc2f128001761d19dd168cee0377cc",
+      "bytes": 1503
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round3/run.json",
+      "sha256": "8244a0923e1e03893c799bc083753d0abeb695558e601b4b9edbe6175ee6095b",
+      "bytes": 20879
+    }
+  ]
+}

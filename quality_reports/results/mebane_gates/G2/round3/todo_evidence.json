@@ -1,0 +1,114 @@
+{
+  "todos": [
+    {
+      "id": "G2-T1",
+      "status": "done",
+      "evidence": [
+        {
+          "path": "quality_reports/results/mebane_gates/G2/round3/snapshots/appendices/mebane_model_contract.md",
+          "basis": "historical",
+          "locator": "seções 1 e 8; snapshots P22/P23/J/S e mapa de blocos; SHA-256/bytes rechecked in round3; no scientific rerun"
+        },
+        {
+          "path": "quality_reports/results/mebane_gates/G2/round1/review/review.json",
+          "basis": "historical",
+          "locator": "coverage_confirmed de G2-T1; SHA-256/bytes rechecked in round3; no scientific rerun"
+        },
+        {
+          "path": "quality_reports/results/mebane_gates/G2/round3/inherited_map.json",
+          "basis": "executed",
+          "locator": "All direct round2 manifest entries rechecked by SHA-256 and byte count"
+        }
+      ]
+    },
+    {
+      "id": "G2-T2",
+      "status": "done",
+      "evidence": [
+        {
+          "path": "quality_reports/results/mebane_gates/G2/round3/snapshots/appendices/mebane_model_contract.md",
+          "basis": "historical",
+          "locator": "seção 2; escolha da prior de produção ainda pendente; SHA-256/bytes rechecked in round3; no scientific rerun"
+        },
+        {
+          "path": "quality_reports/results/mebane_gates/G2/round1/review/independent_checks.csv",
+          "basis": "historical",
+          "locator": "priors, Jacobiano, variância/SD e interceptos; SHA-256/bytes rechecked in round3; no scientific rerun"
+        },
+        {
+          "path": "quality_reports/results/mebane_gates/G2/round3/inherited_map.json",
+          "basis": "executed",
+          "locator": "All direct round2 manifest entries rechecked by SHA-256 and byte count"
+        }
+      ]
+    },
+    {
+      "id": "G2-T3",
+      "status": "done",
+      "evidence": [
+        {
+          "path": "quality_reports/results/mebane_gates/G2/round3/snapshots/appendices/mebane_model_contract.md",
+          "basis": "historical",
+          "locator": "seções 3-5; sem certificar semântica runtime do JAGS; SHA-256/bytes rechecked in round3; no scientific rerun"
+        },
+        {
+          "path": "quality_reports/results/mebane_gates/G2/round1/adjudication_checks.csv",
+          "basis": "historical",
+          "locator": "contraexemplos de suporte e substituição plug-in; SHA-256/bytes rechecked in round3; no scientific rerun"
+        },
+        {
+          "path": "quality_reports/results/mebane_gates/G2/round3/inherited_map.json",
+          "basis": "executed",
+          "locator": "All direct round2 manifest entries rechecked by SHA-256 and byte count"
+        }
+      ]
+    },
+    {
+      "id": "G2-T4",
+      "status": "done",
+      "evidence": [
+        {
+          "path": "quality_reports/results/mebane_gates/G2/round2/benchmark_contract.json",
+          "basis": "historical",
+          "locator": "D3; estimands e margin; SHA-256/bytes rechecked in round3; no scientific rerun"
+        },
+        {
+          "path": "quality_reports/results/mebane_gates/G2/round2/results/joint_functionals.csv",
+          "basis": "historical",
+          "locator": "funcionais sintéticos completos por draw; SHA-256/bytes rechecked in round3; no scientific rerun"
+        },
+        {
+          "path": "quality_reports/results/mebane_gates/G2/round2/results/joint_totals.csv",
+          "basis": "historical",
+          "locator": "agregação conjunta e limites condicionais; não são resultados eleitorais; SHA-256/bytes rechecked in round3; no scientific rerun"
+        },
+        {
+          "path": "quality_reports/results/mebane_gates/G2/round3/inherited_map.json",
+          "basis": "executed",
+          "locator": "All direct round2 manifest entries rechecked by SHA-256 and byte count"
+        }
+      ]
+    },
+    {
+      "id": "G2-T5",
+      "status": "done",
+      "evidence": [
+        {
+          "path": "quality_reports/results/mebane_gates/G2/round1/review/review.json",
+          "basis": "historical",
+          "locator": "162 enumerações, 75 testes; independent_rederivation_completed; SHA-256/bytes rechecked in round3; no scientific rerun"
+        },
+        {
+          "path": "quality_reports/results/mebane_gates/G2/round1/review/independent_metrics.csv",
+          "basis": "historical",
+          "locator": "erro máximo 4.44e-16; custo teórico, não benchmark; SHA-256/bytes rechecked in round3; no scientific rerun"
+        },
+        {
+          "path": "quality_reports/results/mebane_gates/G2/round3/inherited_map.json",
+          "basis": "executed",
+          "locator": "All direct round2 manifest entries rechecked by SHA-256 and byte count"
+        }
+      ]
+    }
+  ]
+}

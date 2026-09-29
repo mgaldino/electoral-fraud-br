@@ -1,0 +1,349 @@
+{
+  "schema_version": "1.0",
+  "target_gate_id": "G1",
+  "captured_at_utc": "2026-09-29T16:09:52.367437+00:00",
+  "source_ledger_path": "quality_reports/plans/mebane_2022_2026_gates.json",
+  "source_ledger_sha256": "8da48b5e657f0277fe03ea2454c6224f7b74a4f7d40a9f72451838b0e595fe10",
+  "source_decision": {
+    "path": "quality_reports/results/mebane_gates/coordination/2026-09-29_inventory_rebaseline/decision.md",
+    "sha256": "fe62bfd30ffd6e985a6070fb6f575770e5097f6c96de543eed145df3df75007a",
+    "bytes": 2340
+  },
+  "source_round2_manifest": {
+    "path": "quality_reports/results/mebane_gates/G1/round2/candidate_manifest.json",
+    "sha256": "517c17c724cca82a820519c476981d47c8892c7383dd2c3dded9373eba6d31e8",
+    "bytes": 41634
+  },
+  "gates": {
+    "G0": {
+      "id": "G0",
+      "title": "Baseline reprodutível e fontes",
+      "goal": "Entregar inventário verificável de dados, documentos, código, fits e ambiente, distinguindo execução histórica de validação atual e tornando possível reproduzir o baseline.",
+      "depends_on": [],
+      "external_prerequisites": [],
+      "status": "pass",
+      "executor": {
+        "role": "SOL-BASELINE",
+        "model": "gpt-6-sol",
+        "effort": "high"
+      },
+      "reviewer": {
+        "role": "QA-BASELINE",
+        "model": "gpt-6-sol",
+        "effort": "high",
+        "independent": true
+      },
+      "write_scope": [
+        "quality_reports/results/mebane_gates/G0/",
+        "renv.lock",
+        "README.md",
+        "CLAUDE.md"
+      ],
+      "todos": [
+        {
+          "id": "G0-T1",
+          "task": "Inventariar Git, arquivos brutos/processados, fits, logs e PDFs; registrar integridade, hashes e proveniência sem alterar os originais.",
+          "status": "done",
+          "evidence": [
+            {
+              "path": "quality_reports/results/mebane_gates/G0/round1/inventory.json",
+              "basis": "historical",
+              "locator": "inventário base e integridade ZIP/PDF; bytes reverified; calculation not rerun"
+            },
+            {
+              "path": "quality_reports/results/mebane_gates/G0/round2/inventory_additions.json",
+              "basis": "historical",
+              "locator": "manuscrito e quatro tabelas; bytes reverified; calculation not rerun"
+            },
+            {
+              "path": "quality_reports/results/mebane_gates/G0/round2/final_state_map.json",
+              "basis": "historical",
+              "locator": "37 snapshots; bytes reverified; calculation not rerun"
+            },
+            {
+              "path": "quality_reports/results/mebane_gates/G0/round4/inventory_current.json",
+              "basis": "executed",
+              "locator": "157 active direct entries retained from verified round3 inventory"
+            },
+            {
+              "path": "quality_reports/results/mebane_gates/G0/round4/tombstone.json",
+              "basis": "inspected",
+              "locator": "authorized absence remains explicit; actor/cause unknown"
+            },
+            {
+              "path": "quality_reports/results/mebane_gates/G0/round4/construction_input.json",
+              "basis": "inspected",
+              "locator": "status and todo evidence consumed from frozen before-ledger projection"
+            }
+          ]
+        },
+        {
+          "id": "G0-T2",
+          "task": "Extrair versões efetivas de R, pacotes, JAGS e CmdStan e o commit de eforensics; reconciliar renv.lock com os componentes usados sem atualizar o ambiente silenciosamente.",
+          "status": "done",
+          "evidence": [
+            {
+              "path": "quality_reports/results/mebane_gates/G0/round1/loads_environment.json",
+              "basis": "historical",
+              "locator": "versões e RemoteSha; bytes reverified; calculation not rerun"
+            },
+            {
+              "path": "quality_reports/results/mebane_gates/G0/round2/lock_verification.json",
+              "basis": "historical",
+              "locator": "174 preservados, 180 finais e versões; bytes reverified; calculation not rerun"
+            },
+            {
+              "path": "quality_reports/results/mebane_gates/G0/round2/final_state/renv.lock",
+              "basis": "historical",
+              "locator": "lock reconciliado; bytes reverified; calculation not rerun"
+            }
+          ]
+        },
+        {
+          "id": "G0-T3",
+          "task": "Reconciliar README/CLAUDE/handoffs com a evidência: registrar falhas JAGS/Stan, a aproximação Stan e a ausência de resultado nacional, mantendo os logs históricos.",
+          "status": "done",
+          "evidence": [
+            {
+              "path": "quality_reports/results/mebane_gates/G0/round1/claims.md",
+              "basis": "historical",
+              "locator": "alegações versus logs/cadeias; bytes reverified; calculation not rerun"
+            },
+            {
+              "path": "quality_reports/results/mebane_gates/G0/round1/loads_environment.json",
+              "basis": "historical",
+              "locator": "diagnósticos clássicos do fresh_v2; bytes reverified; calculation not rerun"
+            },
+            {
+              "path": "quality_reports/results/mebane_gates/G0/round2/final_state/README.md",
+              "basis": "historical",
+              "locator": "limites de aquisição e reprodução; bytes reverified; calculation not rerun"
+            }
+          ]
+        },
+        {
+          "id": "G0-T4",
+          "task": "Fixar fontes bibliográficas e versão exata do código de referência; testar carregamento não destrutivo dos artefatos necessários e documentar faltantes.",
+          "status": "done",
+          "evidence": [
+            {
+              "path": "quality_reports/results/mebane_gates/G0/round1/sources.md",
+              "basis": "historical",
+              "locator": "versões, URLs e hashes; bytes reverified; calculation not rerun"
+            },
+            {
+              "path": "quality_reports/results/mebane_gates/G0/round1/eforensics_commit_api.json",
+              "basis": "historical",
+              "locator": "commit 3017de5; bytes reverified; calculation not rerun"
+            },
+            {
+              "path": "quality_reports/results/mebane_gates/G0/round1/loads_environment.json",
+              "basis": "historical",
+              "locator": "loads e igualdade do qbl; bytes reverified; calculation not rerun"
+            }
+          ]
+        }
+      ],
+      "deliverables": [
+        "Inventário e manifestos de fontes/ambiente",
+        "Lockfile reconciliado",
+        "Mapa de alegações históricas versus evidência"
+      ],
+      "acceptance": [
+        "Todo artefato usado nos próximos gates tem versão e proveniência identificáveis.",
+        "Artefatos em download/incompletos não são tratados como fontes válidas.",
+        "Restauração do ambiente é verificável com o material disponível; dependência ausente permanece explícita e impede alegar reprodução completa.",
+        "QA recalcula hashes de uma amostra material, verifica o commit do pacote e carrega ao menos um fit e um conjunto de dados necessários."
+      ],
+      "on_failure": "Corrigir inventário ou dependência faltante; preservar o estado existente. Trabalho documental independente pode continuar.",
+      "records": {
+        "executor_id": "01a0edcd-cd1f-70f0-b9f5-95fb470b6c40",
+        "reviewer_id": "01a0edd1-ae42-7973-8cf9-2fda610d33cf",
+        "run": "quality_reports/results/mebane_gates/G0/round4/run.json",
+        "candidate_manifest": "quality_reports/results/mebane_gates/G0/round4/candidate_manifest.json",
+        "review": "quality_reports/results/mebane_gates/G0/round4/review/review.json",
+        "adjudication": "quality_reports/results/mebane_gates/G0/round4/adjudication.json"
+      }
+    },
+    "G1": {
+      "id": "G1",
+      "title": "Pipeline TSE e contrato de dados",
+      "goal": "Construir uma entrada parametrizada por ano, turno, cargo e candidato, reproduzindo os totais de 2022 e explicitando todas as regras de limpeza necessárias ao modelo.",
+      "depends_on": [
+        "G0"
+      ],
+      "external_prerequisites": [],
+      "status": "queued",
+      "executor": {
+        "role": "SOL-DADOS",
+        "model": "gpt-6-sol",
+        "effort": "high"
+      },
+      "reviewer": {
+        "role": "QA-DADOS",
+        "model": "gpt-6-sol",
+        "effort": "xhigh",
+        "independent": true
+      },
+      "write_scope": [
+        "R/01_load_tse.R",
+        "R/02_build_vars.R",
+        "R/lib/mebane_data.R",
+        "config/mebane/",
+        "tests/mebane/data/",
+        "quality_reports/results/mebane_gates/G1/"
+      ],
+      "todos": [
+        {
+          "id": "G1-T1",
+          "task": "Separar configuração de ano/turno/cargo/candidato dos scripts e do espelho Nexo específico de 2022; criar saída versionada por execução.",
+          "status": "done",
+          "evidence": [
+            {
+              "path": "config/mebane/2022.json",
+              "basis": "executed",
+              "locator": "configuração consumida nas execuções completas"
+            },
+            {
+              "path": "quality_reports/results/mebane_gates/G1/round2/outputs/2022_final/deterministic_replay.csv",
+              "basis": "executed",
+              "locator": "nove produtos centrais byte-idênticos"
+            }
+          ]
+        },
+        {
+          "id": "G1-T2",
+          "task": "Validar tipos, encoding, chaves com ano/turno, duplicatas, cardinalidades dos joins, ausência versus voto zero e elegibilidade de candidato por turno; rejeitar duplicata divergente sem deduplicar pela primeira ocorrência.",
+          "status": "done",
+          "evidence": [
+            {
+              "path": "R/lib/mebane_data.R",
+              "basis": "executed",
+              "locator": "identidade, schema, contagens, elegibilidade e controles"
+            },
+            {
+              "path": "quality_reports/results/mebane_gates/G1/round2/checks/repair_regressions.csv",
+              "basis": "executed",
+              "locator": "64 regressões"
+            },
+            {
+              "path": "quality_reports/results/mebane_gates/G1/round2/checks/identity_official_anchors.csv",
+              "basis": "executed"
+            }
+          ]
+        },
+        {
+          "id": "G1-T3",
+          "task": "Reconciliar aptos, comparecimento, abstenções, brancos, nulos e votos nominais com totais oficiais; testar limites N/a/w e reavaliar as 99 exclusões por votos nominais zero para o alvo de contagens.",
+          "status": "done",
+          "evidence": [
+            {
+              "path": "quality_reports/results/mebane_gates/G1/round2/outputs/2022_final/official_history_reconciliation.csv",
+              "basis": "executed"
+            },
+            {
+              "path": "quality_reports/results/mebane_gates/G1/round2/outputs/2022_final/official_munzona_uf_turn_reconciliation.csv",
+              "basis": "executed"
+            },
+            {
+              "path": "quality_reports/results/mebane_gates/G1/round2/outputs/2022_final/rule_log.csv",
+              "basis": "executed",
+              "locator": "99 nominais zero retidos; 94 registros não instalados sinalizados"
+            }
+          ]
+        },
+        {
+          "id": "G1-T4",
+          "task": "Fixar regras para exterior, seções pequenas, líder nacional por turno, coligações/candidaturas e revisões do TSE; registrar perdas por regra e denominador.",
+          "status": "done",
+          "evidence": [
+            {
+              "path": "quality_reports/results/mebane_gates/G1/round2/implementation.md",
+              "basis": "inspected",
+              "locator": "invariância e limites"
+            },
+            {
+              "path": "quality_reports/results/mebane_gates/G1/round2/outputs/2022_final/candidate_coalition_metadata.csv",
+              "basis": "executed"
+            },
+            {
+              "path": "quality_reports/results/mebane_gates/G1/round2/outputs/2022_final/rule_log.csv",
+              "basis": "executed"
+            }
+          ]
+        },
+        {
+          "id": "G1-T5",
+          "task": "Criar fixtures adversariais e reproduzir 2022 de ponta a ponta com agregações independentes por UF e turno; bloquear totais inconsistentes em vez de corrigi-los silenciosamente.",
+          "status": "done",
+          "evidence": [
+            {
+              "path": "tests/mebane/data/test_round2_repairs.R",
+              "basis": "executed"
+            },
+            {
+              "path": "quality_reports/results/mebane_gates/G1/round2/outputs/2022_final/independent_raw_uf_turn.csv",
+              "basis": "executed"
+            },
+            {
+              "path": "quality_reports/results/mebane_gates/G1/round2/outputs/2022_final/official_munzona_candidate_uf_turn.csv",
+              "basis": "executed"
+            },
+            {
+              "path": "quality_reports/results/mebane_gates/G1/round2/outputs/2022_final/deterministic_replay.csv",
+              "basis": "executed"
+            }
+          ]
+        }
+      ],
+      "deliverables": [
+        "Loader e configuração genéricos",
+        "Contrato de dados e log de exclusões",
+        "Testes e reconciliação nacional/UF/turno"
+      ],
+      "acceptance": [
+        "Uma execução com a mesma entrada e configuração produz os mesmos totais e chaves.",
+        "Fixtures detectam duplicatas, zeros omitidos, missing, candidato/turno incorreto e mudança incompatível de schema.",
+        "Revisor reproduz totais de controle por código independente, sem consumir apenas a tabela já agregada pelo executor.",
+        "Nenhuma amostra do modelo depende de exclusão pensada somente para gráficos sem justificativa documentada."
+      ],
+      "on_failure": "Suspender estimações que usam a base afetada e corrigir a transformação responsável.",
+      "records": {
+        "executor_id": "01a0eaee-0164-7530-884d-adec564a8327",
+        "reviewer_id": "01a0eb01-0a01-7a10-b432-d1f2cdbd12f8",
+        "run": "quality_reports/results/mebane_gates/G1/round2/run.json",
+        "candidate_manifest": "quality_reports/results/mebane_gates/G1/round2/candidate_manifest.json",
+        "review": "quality_reports/results/mebane_gates/G1/round2/review/review.json",
+        "adjudication": "quality_reports/results/mebane_gates/G1/round2/adjudication.json"
+      }
+    }
+  },
+  "approved_predecessors": {
+    "G0": {
+      "round": "round4",
+      "records": {
+        "run": {
+          "path": "quality_reports/results/mebane_gates/G0/round4/run.json",
+          "sha256": "1a565af625e63559864a82cc64cf15263012c32cae02fdecbdeeb72dfac8bf20",
+          "bytes": 17036
+        },
+        "candidate_manifest": {
+          "path": "quality_reports/results/mebane_gates/G0/round4/candidate_manifest.json",
+          "sha256": "d73ecc86824fd5eaa66ece7cad41d6c21d913d455af864d32c11c5331fa5bb57",
+          "bytes": 39168
+        },
+        "review": {
+          "path": "quality_reports/results/mebane_gates/G0/round4/review/review.json",
+          "sha256": "e6d5bc5e7019a592cdea6ca9c302b50b792607516d20de630ef4d83b83763b38",
+          "bytes": 6399
+        },
+        "adjudication": {
+          "path": "quality_reports/results/mebane_gates/G0/round4/adjudication.json",
+          "sha256": "51782700132bacb6b57019117fce65c5ac6b4f2ee0f683ca80cda7dd9d0bfcfd",
+          "bytes": 3589
+        }
+      },
+      "contract_sha256": "e5ba78d6f8d314c2bf94738df85fce0a31d8e9986ef974f6c69ee9e30ee06ca3"
+    }
+  }
+}

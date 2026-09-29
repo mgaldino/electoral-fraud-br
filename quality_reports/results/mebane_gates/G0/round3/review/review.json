@@ -1,0 +1,107 @@
+{
+  "schema_version": "1.0",
+  "gate_id": "G0",
+  "round": "round3",
+  "contract_sha256": "e5ba78d6f8d314c2bf94738df85fce0a31d8e9986ef974f6c69ee9e30ee06ca3",
+  "candidate_manifest_sha256": "42406b1ecb8ee843c95ef75a902ab15e6468c7bb7900b5ac8717d6476afd08bf",
+  "run_sha256": "1fc7b0caebecf87044331f5d2fadb16418e47e228d0b0a0da9a9ad0bd7b05f56",
+  "inventory_current_sha256": "8b47e9a0c7939dc60a927e2a885f8e5fc0db19dd150685f94da0aca6081decd1",
+  "tombstone_sha256": "e219e61c0b6a1ffc1d7b16cbda666945bb223dc9c8adbdc73b0d2ccdef082842",
+  "executor_id": "01a0edcd-cd1f-70f0-b9f5-95fb470b6c40",
+  "reviewer_id": "01a0edd1-ae42-7973-8cf9-2fda610d33cf",
+  "independent": true,
+  "participated_in_implementation": false,
+  "status": "changes_requested",
+  "manifest_complete": false,
+  "listed_files_integrity_verified": true,
+  "declared_run_and_todo_paths_covered": true,
+  "scope": "Revisão independente limitada da reconciliação documental G0 round3. Não reavalia matemática, dados eleitorais, ambiente instalado ou inferência. Não altera o gate.",
+  "summary": "Os 171 arquivos listados estão íntegros; os 157 arquivos anteriores presentes somam 4.247.644.144 bytes, e somente o PDF inválido autorizado saiu da relação ativa. Tombstone, contrato, reutilização histórica e cobertura declarada estão corretos. Há um finding material restrito à proveniência do construtor: ele consome status/evidências do ledger vivo, que não foram congelados como entrada e não são protegidos pelo hash estático. O checker importado é byte-idêntico ao snapshot, portanto não constitui defeito independente.",
+  "findings": [
+    {
+      "id": "G0-R3-QA-F01",
+      "severity": "major",
+      "classification": "CONFIRMED",
+      "category": "constructor_input_provenance",
+      "title": "Construção dos todos depende de campos não congelados do ledger vivo",
+      "blocks_current_signoff": true,
+      "locations": [
+        {"path": "quality_reports/results/mebane_gates/G0/round3/build_candidate.py", "line": 79},
+        {"path": "quality_reports/results/mebane_gates/G0/round3/build_candidate.py", "line": 82},
+        {"path": "quality_reports/results/mebane_gates/G0/round3/build_candidate.py", "line": 169},
+        {"path": "quality_reports/results/mebane_gates/G0/round3/build_candidate.py", "line": 219}
+      ],
+      "defect_evidence": "check_contract lê o ledger canônico e retorna gate completo. O hash e a igualdade estática excluem status/evidence dos todos. build usa justamente status, path e locator desses campos para produzir todo_evidence.json, sem congelar o ledger ou a projeção consumida em run/manifest. O trace de verify confirmou a leitura real do ledger; source_checks.json mostrou que a projeção consumida não coincide com os snapshots de ledger round1/round2 nem com todo_evidence round2. Na contraprova isolada, trocar apenas G0.todos[0].evidence[0].path por um caminho já ativo manteve o contrato aceito e mudou o JSON emitido. O controle sem mutação reproduziu exatamente os todos congelados. Nenhum build foi executado.",
+      "evidence": [
+        "quality_reports/results/mebane_gates/G0/round3/review/run01/executor_reads.json",
+        "quality_reports/results/mebane_gates/G0/round3/review/run01/ledger_counterexample.json",
+        "quality_reports/results/mebane_gates/G0/round3/review/source_checks.json"
+      ],
+      "counterevidence_and_scope": "Não há divergência nos 171 arquivos, perda extra de dado/modelo ou defeito demonstrado no conteúdo atual dos todos. O contrato estático é correto e idêntico ao anterior. O checker canônico completo tem o mesmo SHA-256 do snapshot incluído; a função contract_sha256 também tem AST idêntica. Essa equivalência resolve a suspeita de código diferente, mas não vincula os campos dinâmicos do ledger. Classificar os cálculos científicos como históricos não torna histórico o ledger efetivamente consumido nesta construção.",
+      "consequence": "Não é possível atestar manifest_complete=true para a proveniência integral do construtor somente com a igualdade do contrato. O defeito é documental e não invalida a manutenção autorizada da ausência, os hashes dos dados ou os testes científicos anteriores.",
+      "requested_resolution": "Em candidato sucessor, preservar este congelamento e vincular uma entrada imutável contendo exatamente o contrato e a projeção de todos efetivamente consumida, com hash e tamanho em run/manifest. Fazer build/verify lerem essa entrada congelada, mantendo o contrato e o checker sem relaxamento; o snapshot já byte-idêntico do checker pode ser reutilizado. Alternativamente, derivar explicitamente os todos de fonte histórica congelada apropriada, documentando a correspondência. Revalidar somente integridade, vínculos e ausência de leituras materiais não declaradas, sem R/MCMC ou repetição dos testes científicos.",
+      "proposal_safety": "safe",
+      "implementation_performed": false
+    }
+  ],
+  "reviewed_concerns": [
+    {
+      "id": "G0-R3-QA-CHECKER",
+      "classification": "REFUTED",
+      "claim_reviewed": "A importação do checker canônico implica por si código diferente ou relaxamento do contrato.",
+      "evidence": "O checker canônico e o snapshot round1 incluído têm SHA-256 15601b30477b940bda011a7370d3a2edc269c7ffd89fe92e09d8dd9d34a93480. A AST de contract_sha256 também é idêntica. Nenhum defeito autônomo da função ou relaxamento foi demonstrado.",
+      "disposition": "Não é um segundo finding. A lacuna material remanescente é a entrada dinâmica do ledger."
+    }
+  ],
+  "verification": {
+    "candidate_files_fully_hashed": 171,
+    "candidate_bytes": 4248559025,
+    "candidate_hash_or_size_mismatches": 0,
+    "predecessor_files_retained": 157,
+    "predecessor_bytes_retained": 4247644144,
+    "authorized_absent_entries": 1,
+    "unauthorized_extra_omissions": 0,
+    "round1_transitive_files_fully_hashed": 22,
+    "round1_transitive_mismatches": 0,
+    "todo_ids_covered": ["G0-T1", "G0-T2", "G0-T3", "G0-T4"],
+    "g0_dependency_manifests_and_approvals": "Ambos vazios, exatamente conforme depends_on=[]; não há aprovação herdada automática.",
+    "contract_unchanged": true,
+    "checker_unchanged": true,
+    "historical_approvals_bindings_verified": true,
+    "audit_checks_passed": 39,
+    "audit_checks_total": 40,
+    "audit_failed_check": "actual_executor_input_code_closure_complete",
+    "audit_failed_check_interpretation": "O trace lista ledger e checker fora dos caminhos diretos. O checker é recuperável byte a byte pelo snapshot; somente a projeção dinâmica do ledger fundamenta F01.",
+    "extra_omission_counterexamples_rejected": 2,
+    "checker_dependency_negative_cases_rejected": 3,
+    "checker_dependency_positive_control_passed": true,
+    "hidden_ledger_dependency_counterexample_confirmed": true,
+    "executor_verify_rerun": true,
+    "executor_verify_result": "PASS nominal; não cobre a lacuna de proveniência demonstrada pela QA.",
+    "executor_build_rerun": false,
+    "candidate_write_attempts_during_verify": 0,
+    "r_or_scientific_tests_rerun": false
+  },
+  "historical_preservation": {
+    "authorized_absence": "ssrn-4073770.pdf.download/ssrn-4073770.pdf",
+    "historical_bytes": 1360,
+    "historical_sha256": "524dc82c59612ec91b3a6ab475dd34f0607546a37823c9a9b1fd652677a8acdf",
+    "info_plist_not_direct_manifest_item": true,
+    "tombstone_actor_and_cause": "unknown",
+    "old_manifests_still_reference_absent_pdf": "Histórico intencional, não defeito adicional nem arquivo exigido na relação ativa.",
+    "transitive_material_preserved": "Inclui qbl_installed_3017de5.jags, DESCRIPTION e os demais 20 itens round1 não diretamente listados; todos conferidos por hash e tamanho.",
+    "prior_tests": "Loads de fits/parquets, comparação qbl, versões/dependências e cálculos de rounds anteriores permanecem históricos. Não foram reexecutados nem apresentados como validação atual do ambiente."
+  },
+  "tests": [
+    {"command": "python3 -B quality_reports/results/mebane_gates/G0/round3/review/audit_g0.py run01", "exit_code": 1, "meaning": "Auditoria completada; saída não zero pelo finding documental de fechamento. Resultados e contraprovas preservados em run01/."},
+    {"command": "python3 -B quality_reports/results/mebane_gates/G0/round3/review/source_checks.py", "exit_code": 0, "meaning": "Comparação byte a byte e AST do checker, projeções dos todos e estabilidade do ledger lido; resultados em source_checks.json."}
+  ],
+  "limits": [
+    "Parecer limitado ao G0 entregue; nenhuma adjudicação, promoção de gate ou espera pelos candidatos G1/G2/G7.",
+    "Nenhuma instalação, rede, R, MCMC, análise eleitoral, auditoria matemática, PDF ou nova conclusão inferencial.",
+    "A QA não atribui autoria/causa à remoção, não excluiu nem restaurou arquivos, e escreveu apenas em G0/round3/review/.",
+    "Os registros sintéticos de aprovação são fixtures exclusivas da QA, não aprovações reais.",
+    "O snapshot do ledger na QA preserva a evidência do achado; não sana retroativamente o candidato."
+  ],
+  "review_manifest": "review_manifest.json"
+}

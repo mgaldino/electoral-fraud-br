@@ -1,0 +1,79 @@
+{
+  "schema_version": "1.0",
+  "adjudication_id": "mebane-G0:inventory-rebaseline:round4",
+  "gate_id": "G0",
+  "round": "round4",
+  "contract_sha256": "e5ba78d6f8d314c2bf94738df85fce0a31d8e9986ef974f6c69ee9e30ee06ca3",
+  "candidate_manifest_sha256": "d73ecc86824fd5eaa66ece7cad41d6c21d913d455af864d32c11c5331fa5bb57",
+  "review_sha256": "e6d5bc5e7019a592cdea6ca9c302b50b792607516d20de630ef4d83b83763b38",
+  "status": "pass",
+  "unresolved_material_findings": 0,
+  "coordinator_id": "019d795a-acfa-72c2-a210-d55a46c606c2",
+  "source": {
+    "reviewed_artifact": "quality_reports/results/mebane_gates/G0/round4/candidate_manifest.json",
+    "sha256": "d73ecc86824fd5eaa66ece7cad41d6c21d913d455af864d32c11c5331fa5bb57",
+    "artifact_intact": true
+  },
+  "contract": {
+    "required": false,
+    "path": null,
+    "sha256": null,
+    "contract_id": null,
+    "artifact_sha256": null,
+    "status": null,
+    "stale": false
+  },
+  "review_sources": [
+    {
+      "review_id": "QA-G0-round4",
+      "path": "quality_reports/results/mebane_gates/G0/round4/review/review.json",
+      "sha256": "e6d5bc5e7019a592cdea6ca9c302b50b792607516d20de630ef4d83b83763b38"
+    }
+  ],
+  "findings": [],
+  "summary": {
+    "total": 0,
+    "confirmed": 0,
+    "partial": 0,
+    "refuted": 0,
+    "unresolved": 0,
+    "held_decisions": 0
+  },
+  "adjudication": {
+    "verdict": "NO_CONFIRMED_DEFECTS",
+    "checked_at": "2026-09-29T16:08:34.419752+00:00",
+    "reasons": [
+      "Independent review and all candidate hashes checked.",
+      "Documentary revalidation only; prior scientific tests not rerun.",
+      "User-authorized removal from active inventory, not file deletion."
+    ]
+  },
+  "resolved_prior_incident": {
+    "id": "G2-R2-QA-I1",
+    "status": "CONFIRMED",
+    "resolved": true,
+    "decision": "quality_reports/results/mebane_gates/coordination/2026-09-29_inventory_rebaseline/decision.md",
+    "resolution": "Keep both files absent; use new inventory and dependency bindings; preserve prior records.",
+    "deletion_actor": "unknown",
+    "deletion_cause": "unknown"
+  },
+  "resolved_prior_findings": [
+    {
+      "id": "G0-R3-QA-F01",
+      "coordinator_id": "G0-R3-COORD-F01",
+      "same_finding_not_two_defects": true,
+      "prior_status": "CONFIRMED",
+      "severity": "major",
+      "resolution_status": "resolved_in_adjudicated_scope",
+      "resolved": true,
+      "resolution": "construction_input.json preserva contrato e projeção dinâmica de status/todos/evidence, exatamente correspondentes ao before congelado. A entrada completa, a fonte before e o checker arquivado estão fixados por hash e incluídos no manifesto/run. O construtor lê essas fontes congeladas. O trace real de source_preflight/verify, com barreira contra leitura dos caminhos canônicos e contra escrita, não registrou violações ou leituras materiais não declaradas. A mutação de evidence sem atualizar seu hash foi rejeitada; atualizar também o hash dinâmico continuou insuficiente, pois o vínculo do run com o hash completo da entrada rejeitou a alteração.",
+      "evidence": [
+        "quality_reports/results/mebane_gates/G0/round4/construction_input.json",
+        "quality_reports/results/mebane_gates/G0/round4/run.json",
+        "quality_reports/results/mebane_gates/G0/round4/review/checks.json"
+      ],
+      "historical_classification_preserved": "O reparo não refuta o defeito confirmado em round3; encerra-o somente para o candidato round4 identificado neste parecer."
+    }
+  ],
+  "scope": "No model change, no new analysis or MCMC, no G3/G10 or inferential approval."
+}

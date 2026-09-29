@@ -1,0 +1,28 @@
+[
+  {
+    "case": "valid_control",
+    "passed": true,
+    "errors": []
+  },
+  {
+    "case": "wrong_dependency_manifest",
+    "passed": true,
+    "errors": [
+      "G0: stale dependency manifest G1"
+    ]
+  },
+  {
+    "case": "wrong_dependency_review",
+    "passed": true,
+    "errors": [
+      "G0: stale dependency approval G1 review"
+    ]
+  },
+  {
+    "case": "wrong_dependency_keys",
+    "passed": true,
+    "errors": [
+      "G0: run.dependency_manifests must match dependencies"
+    ]
+  }
+]

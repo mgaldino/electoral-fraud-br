@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0",
+  "adjudication_id": "mebane-G1:inventory-rebaseline:round3",
+  "gate_id": "G1",
+  "round": "round3",
+  "contract_sha256": "f985ab97469aa66755b977a09781b30608afa6e245896d9d9788b4461190975d",
+  "candidate_manifest_sha256": "abfca9053b1023ceceab6504c12f9774f36d085727f47118418ea3f87cf5dfcd",
+  "review_sha256": "58578f06f7ee7a7b4081834b6b52af149bec2e98712692cb219313017ac07589",
+  "status": "pass",
+  "unresolved_material_findings": 0,
+  "coordinator_id": "019d795a-acfa-72c2-a210-d55a46c606c2",
+  "source": {
+    "reviewed_artifact": "quality_reports/results/mebane_gates/G1/round3/candidate_manifest.json",
+    "sha256": "abfca9053b1023ceceab6504c12f9774f36d085727f47118418ea3f87cf5dfcd",
+    "artifact_intact": true
+  },
+  "contract": {
+    "required": false,
+    "path": null,
+    "sha256": null,
+    "contract_id": null,
+    "artifact_sha256": null,
+    "status": null,
+    "stale": false
+  },
+  "review_sources": [
+    {
+      "review_id": "QA-G1-round3",
+      "path": "quality_reports/results/mebane_gates/G1/round3/review/review.json",
+      "sha256": "58578f06f7ee7a7b4081834b6b52af149bec2e98712692cb219313017ac07589"
+    }
+  ],
+  "findings": [],
+  "summary": {
+    "total": 0,
+    "confirmed": 0,
+    "partial": 0,
+    "refuted": 0,
+    "unresolved": 0,
+    "held_decisions": 0
+  },
+  "adjudication": {
+    "verdict": "NO_CONFIRMED_DEFECTS",
+    "checked_at": "2026-09-29T16:18:36.295373+00:00",
+    "reasons": [
+      "Independent review and all candidate hashes checked.",
+      "Documentary revalidation only; prior scientific tests not rerun.",
+      "User-authorized removal from active inventory, not file deletion."
+    ]
+  },
+  "resolved_prior_incident": {
+    "id": "G2-R2-QA-I1",
+    "status": "CONFIRMED",
+    "resolved": true,
+    "decision": "quality_reports/results/mebane_gates/coordination/2026-09-29_inventory_rebaseline/decision.md",
+    "resolution": "Keep both files absent; use new inventory and dependency bindings; preserve prior records.",
+    "deletion_actor": "unknown",
+    "deletion_cause": "unknown"
+  },
+  "resolved_prior_findings": [],
+  "scope": "No model change, no new analysis or MCMC, no G3/G10 or inferential approval."
+}

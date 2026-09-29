@@ -1,0 +1,34 @@
+{
+  "gate_id": "G0",
+  "round": "round3",
+  "record_type": "authorized_retained_absence",
+  "path": "ssrn-4073770.pdf.download/ssrn-4073770.pdf",
+  "historical_sha256": "524dc82c59612ec91b3a6ab475dd34f0607546a37823c9a9b1fd652677a8acdf",
+  "historical_bytes": 1360,
+  "historical_quality": "invalid_or_incomplete",
+  "scientific_source": false,
+  "qa_last_present_at_utc": "2026-09-29T13:13:46.688626+00:00",
+  "qa_first_absent_at_utc": "2026-09-29T13:19:25.178896+00:00",
+  "deletion_actor": "unknown",
+  "deletion_cause": "unknown",
+  "git_checkpoint": "122e74a",
+  "git_checkpoint_scope": "Records deletion in Git history, not the actor or cause of the filesystem operation.",
+  "user_decision": "Keep the deletion and update the inventory; do not delete files without asking the user first.",
+  "user_decision_timestamp": null,
+  "current_status": "absent; authorized to remain absent; not an active input or valid source",
+  "other_absence": {
+    "path": "ssrn-4073770.pdf.download/Info.plist",
+    "status": "absent; remains absent",
+    "round2_g0_manifest_entry": false,
+    "git_checkpoint": "122e74a",
+    "note": "No deletion actor or filesystem cause is inferred."
+  },
+  "evidence_paths": [
+    "quality_reports/results/mebane_gates/coordination/2026-09-29_inventory_rebaseline/decision.md",
+    "quality_reports/results/mebane_gates/G0/round1/inventory.json",
+    "quality_reports/results/mebane_gates/G0/round2/candidate_manifest.json",
+    "quality_reports/results/mebane_gates/G2/round2/review/integrity_initial.json",
+    "quality_reports/results/mebane_gates/G2/round2/review/integrity_final.json",
+    "quality_reports/results/mebane_gates/G2/round2/adjudication_initial.json"
+  ]
+}

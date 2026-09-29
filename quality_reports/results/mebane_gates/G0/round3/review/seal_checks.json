@@ -1,0 +1,12 @@
+{
+  "review_required_fields_and_identities_valid": true,
+  "review_status_intentionally_blocks_approval": true,
+  "json_and_python_syntax_valid": true,
+  "direct_files_rehashed_at_seal": 171,
+  "transitive_files_rehashed_at_seal": 22,
+  "mismatches": 0,
+  "candidate_manifest_sha256": "42406b1ecb8ee843c95ef75a902ab15e6468c7bb7900b5ac8717d6476afd08bf",
+  "ledger_snapshot_sha256": "b451175679d670a570b0fe2b34c5b09c0354f6582da385515493b5e4d23573ef",
+  "checker_equivalence_confirmed": true,
+  "limits": "No actual gate adjudication created; synthetic fixtures stay synthetic."
+}

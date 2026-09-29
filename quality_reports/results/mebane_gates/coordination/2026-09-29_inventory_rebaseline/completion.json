@@ -1,0 +1,68 @@
+{
+  "checked_at": "2026-09-29T16:31:46.716005+00:00",
+  "scope": "Documentary inventory reconciliation only",
+  "integrity_hold_resolved": true,
+  "all_static_contracts_unchanged": true,
+  "prior_document_snapshots_intact": true,
+  "absent_paths": [
+    "ssrn-4073770.pdf.download/ssrn-4073770.pdf",
+    "ssrn-4073770.pdf.download/Info.plist"
+  ],
+  "files_deleted_or_restored_by_this_update": false,
+  "deletion_actor": "unknown",
+  "deletion_cause": "unknown",
+  "gate_statuses": {
+    "G0": "pass",
+    "G1": "pass",
+    "G2": "pass",
+    "G3": "queued",
+    "G10": "queued",
+    "G4": "queued",
+    "G5": "queued",
+    "G6": "queued",
+    "G7": "pass",
+    "G8": "waiting_external",
+    "G9": "waiting_external"
+  },
+  "gate_records": {
+    "G0": {
+      "executor_id": "01a0edcd-cd1f-70f0-b9f5-95fb470b6c40",
+      "reviewer_id": "01a0edd1-ae42-7973-8cf9-2fda610d33cf",
+      "run": "quality_reports/results/mebane_gates/G0/round4/run.json",
+      "candidate_manifest": "quality_reports/results/mebane_gates/G0/round4/candidate_manifest.json",
+      "review": "quality_reports/results/mebane_gates/G0/round4/review/review.json",
+      "adjudication": "quality_reports/results/mebane_gates/G0/round4/adjudication.json"
+    },
+    "G1": {
+      "executor_id": "01a0edcd-cd1f-70f0-b9f5-95fb470b6c40",
+      "reviewer_id": "01a0edd1-ae42-7973-8cf9-2fda610d33cf",
+      "run": "quality_reports/results/mebane_gates/G1/round3/run.json",
+      "candidate_manifest": "quality_reports/results/mebane_gates/G1/round3/candidate_manifest.json",
+      "review": "quality_reports/results/mebane_gates/G1/round3/review/review.json",
+      "adjudication": "quality_reports/results/mebane_gates/G1/round3/adjudication.json"
+    },
+    "G2": {
+      "executor_id": "01a0edcd-cd1f-70f0-b9f5-95fb470b6c40",
+      "reviewer_id": "01a0edd1-ae42-7973-8cf9-2fda610d33cf",
+      "run": "quality_reports/results/mebane_gates/G2/round3/run.json",
+      "candidate_manifest": "quality_reports/results/mebane_gates/G2/round3/candidate_manifest.json",
+      "review": "quality_reports/results/mebane_gates/G2/round3/review/review.json",
+      "adjudication": "quality_reports/results/mebane_gates/G2/round3/adjudication.json"
+    },
+    "G7": {
+      "executor_id": "01a0edcd-cd1f-70f0-b9f5-95fb470b6c40",
+      "reviewer_id": "01a0edd1-ae42-7973-8cf9-2fda610d33cf",
+      "run": "quality_reports/results/mebane_gates/G7/round3/run.json",
+      "candidate_manifest": "quality_reports/results/mebane_gates/G7/round3/candidate_manifest.json",
+      "review": "quality_reports/results/mebane_gates/G7/round3/review/review.json",
+      "adjudication": "quality_reports/results/mebane_gates/G7/round3/adjudication.json"
+    }
+  },
+  "scientific_analyses_rerun": false,
+  "G3_executed": false,
+  "G10_executed": false,
+  "overall_goal_complete": false,
+  "remaining_goal_work": "G3 implementation/engine tests and decision have not run.",
+  "coordinator_script_sha256": "54a4539cf85be3a49493b1a0fd95735c98ef9d44901d40d6171e51dc4d78619c",
+  "ledger_sha256": "5cc011f7c4c85c2bbb0caab359a894fdb03dc2b87d2cf9d5a368cf9ee79329e2"
+}

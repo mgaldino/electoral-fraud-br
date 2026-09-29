@@ -1,0 +1,330 @@
+{
+  "gate_id": "G0",
+  "round": "round3",
+  "reviewer_id": "01a0edd1-ae42-7973-8cf9-2fda610d33cf",
+  "started_at_utc": "2026-09-29T15:46:55.797835+00:00",
+  "finished_at_utc": "2026-09-29T15:47:06.802075+00:00",
+  "command": [
+    "python3",
+    "-B",
+    "quality_reports/results/mebane_gates/G0/round3/review/audit_g0.py",
+    "run01"
+  ],
+  "checks": [
+    {
+      "id": "delivered_or_preparation_hash:quality_reports/results/mebane_gates/G0/round3/candidate_manifest.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "id": "delivered_or_preparation_hash:quality_reports/results/mebane_gates/G0/round3/inventory_current.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "id": "delivered_or_preparation_hash:quality_reports/results/mebane_gates/G0/round3/tombstone.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "id": "delivered_or_preparation_hash:quality_reports/results/mebane_gates/G0/round2/candidate_manifest.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "id": "delivered_or_preparation_hash:quality_reports/results/mebane_gates/G0/round2/review/review.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "id": "delivered_or_preparation_hash:scripts/mebane_gates.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "id": "delivered_or_preparation_hash:tests/test_mebane_gates.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "id": "delivered_or_preparation_hash:quality_reports/results/mebane_gates/coordination/2026-09-29_inventory_rebaseline/decision.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "id": "static_contract",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "id": "static_contract_bytes_retained",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "id": "contract_unchanged_since_authorization",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "id": "manifest_identity",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "id": "run_identity",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "id": "identities_independent",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "id": "g0_dependencies_exactly_empty",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "id": "unique_paths_no_self",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "id": "all_171_active_files_full_hash_and_bytes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "id": "predecessor_and_inventory_exact",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "id": "only_authorized_entry_removed",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "id": "157_retained_bytes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "id": "absence_not_restored",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "id": "absence_not_active",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "id": "tombstone_identity",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "id": "tombstone_limits",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "id": "tombstone_evidence_bound",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "id": "historical_invalid_status",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "id": "historical_original_paths_explicit",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "id": "historical_calculations_not_rerun",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "id": "todo_ids_exact",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "id": "todos_nonempty_and_bound",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "id": "all_run_fields_complete",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "id": "predecessor_binding",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "id": "prior_approval_bindings_historical_only",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "id": "22_transitive_round1_artifacts_retained",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "id": "executor_verify_completed_read_only",
+      "passed": true,
+      "detail": {
+        "stdout": "PASS G0 round3: 157/158 prior entries retained; 171 candidate files verified; manifest SHA-256 42406b1ecb8ee843c95ef75a902ab15e6468c7bb7900b5ac8717d6476afd08bf\n",
+        "error": null
+      }
+    },
+    {
+      "id": "actual_executor_input_code_closure_complete",
+      "passed": false,
+      "detail": [
+        "quality_reports/plans/mebane_2022_2026_gates.json",
+        "scripts/mebane_gates.py"
+      ]
+    },
+    {
+      "id": "hidden_ledger_dependency_counterexample_confirmed",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "id": "extra_omission_counterexamples_rejected",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "id": "checker_dependency_probes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "id": "frozen_and_checker_hashes_unchanged_at_end",
+      "passed": true,
+      "detail": null
+    }
+  ],
+  "failed_checks": [
+    "actual_executor_input_code_closure_complete"
+  ],
+  "counts": {
+    "candidate_files": 171,
+    "candidate_bytes": 4248559025,
+    "retained_predecessor_files": 157,
+    "retained_predecessor_bytes": 4247644144,
+    "transitive_round1_files": 22,
+    "checks": 40
+  },
+  "actual_executor_reads_not_frozen": [
+    "quality_reports/plans/mebane_2022_2026_gates.json",
+    "scripts/mebane_gates.py"
+  ],
+  "executor_verify_stdout": "PASS G0 round3: 157/158 prior entries retained; 171 candidate files verified; manifest SHA-256 42406b1ecb8ee843c95ef75a902ab15e6468c7bb7900b5ac8717d6476afd08bf\n",
+  "executor_verify_error": null,
+  "executor_write_attempts": [],
+  "closure_policy": "Historical manifests remain immutable records. Their authorized absent PDF is not active. All other inherited active/transitive bytes are checked, including qbl and DESCRIPTION.",
+  "limits": [
+    "No R, MCMC, installation, network or electoral analysis.",
+    "Only verify and the isolated todo-emission block executed; build never executed.",
+    "Synthetic checker approvals confer no gate approval.",
+    "Prior scientific tests inspected as historical, not rerun."
+  ],
+  "fingerprints_initial": {
+    "quality_reports/results/mebane_gates/G0/round3/candidate_manifest.json": {
+      "path": "quality_reports/results/mebane_gates/G0/round3/candidate_manifest.json",
+      "sha256": "42406b1ecb8ee843c95ef75a902ab15e6468c7bb7900b5ac8717d6476afd08bf",
+      "bytes": 35979
+    },
+    "quality_reports/results/mebane_gates/G0/round3/inventory_current.json": {
+      "path": "quality_reports/results/mebane_gates/G0/round3/inventory_current.json",
+      "sha256": "8b47e9a0c7939dc60a927e2a885f8e5fc0db19dd150685f94da0aca6081decd1",
+      "bytes": 35660
+    },
+    "quality_reports/results/mebane_gates/G0/round3/tombstone.json": {
+      "path": "quality_reports/results/mebane_gates/G0/round3/tombstone.json",
+      "sha256": "e219e61c0b6a1ffc1d7b16cbda666945bb223dc9c8adbdc73b0d2ccdef082842",
+      "bytes": 1703
+    },
+    "quality_reports/results/mebane_gates/G0/round2/candidate_manifest.json": {
+      "path": "quality_reports/results/mebane_gates/G0/round2/candidate_manifest.json",
+      "sha256": "f71333db477385fc78dad8a7a1a7ca78e48479226dcdbde80ce97d724409fec7",
+      "bytes": 33300
+    },
+    "quality_reports/results/mebane_gates/G0/round2/review/review.json": {
+      "path": "quality_reports/results/mebane_gates/G0/round2/review/review.json",
+      "sha256": "ef624cb4b2d8ad098b87e196d87add358ce1eba93165d44fcc1939ff303f5376",
+      "bytes": 8536
+    },
+    "scripts/mebane_gates.py": {
+      "path": "scripts/mebane_gates.py",
+      "sha256": "15601b30477b940bda011a7370d3a2edc269c7ffd89fe92e09d8dd9d34a93480",
+      "bytes": 28810
+    },
+    "tests/test_mebane_gates.py": {
+      "path": "tests/test_mebane_gates.py",
+      "sha256": "2509b41b2cea142f2a4e17e64e2f3842ead8abff71409f3cf8462f50cd5d169e",
+      "bytes": 20046
+    },
+    "quality_reports/results/mebane_gates/coordination/2026-09-29_inventory_rebaseline/decision.md": {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-29_inventory_rebaseline/decision.md",
+      "sha256": "fe62bfd30ffd6e985a6070fb6f575770e5097f6c96de543eed145df3df75007a",
+      "bytes": 2340
+    }
+  },
+  "fingerprints_final": {
+    "quality_reports/results/mebane_gates/G0/round3/candidate_manifest.json": {
+      "path": "quality_reports/results/mebane_gates/G0/round3/candidate_manifest.json",
+      "sha256": "42406b1ecb8ee843c95ef75a902ab15e6468c7bb7900b5ac8717d6476afd08bf",
+      "bytes": 35979
+    },
+    "quality_reports/results/mebane_gates/G0/round3/inventory_current.json": {
+      "path": "quality_reports/results/mebane_gates/G0/round3/inventory_current.json",
+      "sha256": "8b47e9a0c7939dc60a927e2a885f8e5fc0db19dd150685f94da0aca6081decd1",
+      "bytes": 35660
+    },
+    "quality_reports/results/mebane_gates/G0/round3/tombstone.json": {
+      "path": "quality_reports/results/mebane_gates/G0/round3/tombstone.json",
+      "sha256": "e219e61c0b6a1ffc1d7b16cbda666945bb223dc9c8adbdc73b0d2ccdef082842",
+      "bytes": 1703
+    },
+    "quality_reports/results/mebane_gates/G0/round2/candidate_manifest.json": {
+      "path": "quality_reports/results/mebane_gates/G0/round2/candidate_manifest.json",
+      "sha256": "f71333db477385fc78dad8a7a1a7ca78e48479226dcdbde80ce97d724409fec7",
+      "bytes": 33300
+    },
+    "quality_reports/results/mebane_gates/G0/round2/review/review.json": {
+      "path": "quality_reports/results/mebane_gates/G0/round2/review/review.json",
+      "sha256": "ef624cb4b2d8ad098b87e196d87add358ce1eba93165d44fcc1939ff303f5376",
+      "bytes": 8536
+    },
+    "scripts/mebane_gates.py": {
+      "path": "scripts/mebane_gates.py",
+      "sha256": "15601b30477b940bda011a7370d3a2edc269c7ffd89fe92e09d8dd9d34a93480",
+      "bytes": 28810
+    },
+    "tests/test_mebane_gates.py": {
+      "path": "tests/test_mebane_gates.py",
+      "sha256": "2509b41b2cea142f2a4e17e64e2f3842ead8abff71409f3cf8462f50cd5d169e",
+      "bytes": 20046
+    },
+    "quality_reports/results/mebane_gates/coordination/2026-09-29_inventory_rebaseline/decision.md": {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-29_inventory_rebaseline/decision.md",
+      "sha256": "fe62bfd30ffd6e985a6070fb6f575770e5097f6c96de543eed145df3df75007a",
+      "bytes": 2340
+    }
+  }
+}

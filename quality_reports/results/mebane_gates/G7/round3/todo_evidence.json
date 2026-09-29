@@ -1,0 +1,98 @@
+{
+  "todos": [
+    {
+      "id": "G7-T1",
+      "status": "done",
+      "evidence": [
+        {
+          "path": "quality_reports/results/mebane_gates/G7/round3/snapshots/config/mebane/2026/intake.json",
+          "basis": "historical",
+          "locator": "datas e escopo declarados; candidatos null; T2 condicional; SHA-256/bytes rechecked in round3; no scientific rerun"
+        },
+        {
+          "path": "quality_reports/results/mebane_gates/coordination/tse2026_source_preflight.md",
+          "basis": "historical",
+          "locator": "fontes oficiais e calendário; SHA-256/bytes rechecked in round3; no scientific rerun"
+        },
+        {
+          "path": "quality_reports/results/mebane_gates/G7/round3/inherited_map.json",
+          "basis": "executed",
+          "locator": "All direct round2 manifest entries rechecked by SHA-256 and byte count"
+        }
+      ]
+    },
+    {
+      "id": "G7-T2",
+      "status": "done",
+      "evidence": [
+        {
+          "path": "quality_reports/results/mebane_gates/G7/round2/executions/final1/execution.json",
+          "basis": "historical",
+          "locator": "regressões em três ambientes; SHA-256/bytes rechecked in round3; no scientific rerun"
+        },
+        {
+          "path": "quality_reports/results/mebane_gates/G7/round2/executions/final1/C_repairs/repair_results.json",
+          "basis": "historical",
+          "locator": "UTF-8, datas e escopo; SHA-256/bytes rechecked in round3; no scientific rerun"
+        },
+        {
+          "path": "quality_reports/results/mebane_gates/G7/round2/executions/final1/UTF8_repairs/repair_results.json",
+          "basis": "historical",
+          "locator": "bytes e locale preservados; SHA-256/bytes rechecked in round3; no scientific rerun"
+        },
+        {
+          "path": "quality_reports/results/mebane_gates/G7/round3/inherited_map.json",
+          "basis": "executed",
+          "locator": "All direct round2 manifest entries rechecked by SHA-256 and byte count"
+        }
+      ]
+    },
+    {
+      "id": "G7-T3",
+      "status": "done",
+      "evidence": [
+        {
+          "path": "quality_reports/results/mebane_gates/G7/round2/recovery_map.json",
+          "basis": "historical",
+          "locator": "1094 cópias de recuperação; SHA-256/bytes rechecked in round3; no scientific rerun"
+        },
+        {
+          "path": "quality_reports/results/mebane_gates/G7/round2/integrity_final.json",
+          "basis": "historical",
+          "locator": "round1 preservada; flags falsas; SHA-256/bytes rechecked in round3; no scientific rerun"
+        },
+        {
+          "path": "quality_reports/results/mebane_gates/G7/round2/executions/final1/C_legacy/test_summary.json",
+          "basis": "historical",
+          "locator": "revisões, recibos, políticas, turnos e candidato; SHA-256/bytes rechecked in round3; no scientific rerun"
+        },
+        {
+          "path": "quality_reports/results/mebane_gates/G7/round3/inherited_map.json",
+          "basis": "executed",
+          "locator": "All direct round2 manifest entries rechecked by SHA-256 and byte count"
+        }
+      ]
+    },
+    {
+      "id": "G7-T4",
+      "status": "done",
+      "evidence": [
+        {
+          "path": "quality_reports/results/mebane_gates/G7/round2/implementation.md",
+          "basis": "historical",
+          "locator": "roteiro e limites; SHA-256/bytes rechecked in round3; no scientific rerun"
+        },
+        {
+          "path": "quality_reports/results/mebane_gates/G7/round2/executions/final1/DAG_checker.log",
+          "basis": "historical",
+          "locator": "26 testes e dependência G6; SHA-256/bytes rechecked in round3; no scientific rerun"
+        },
+        {
+          "path": "quality_reports/results/mebane_gates/G7/round3/inherited_map.json",
+          "basis": "executed",
+          "locator": "All direct round2 manifest entries rechecked by SHA-256 and byte count"
+        }
+      ]
+    }
+  ]
+}

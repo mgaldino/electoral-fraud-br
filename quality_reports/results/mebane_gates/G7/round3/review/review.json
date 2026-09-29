@@ -1,0 +1,88 @@
+{
+  "schema_version": "1.0",
+  "gate_id": "G7",
+  "round": "round3",
+  "contract_sha256": "fc071a8664d04ba6a0a4ca91298d333ee1ca89868a26b23e705946fef1c2f94d",
+  "candidate_manifest_sha256": "7cd76163b6092cbde5b25dfc0bbb5386f001a456e7982018f7cf57fbc558bd92",
+  "ledger_input_snapshot_sha256": "ef836760b1f885b2f383b81521cea6ca65b4b8ac469c0475b0dbc768feddc5e2",
+  "run_sha256": "4652fe932557a0810f8a39a71cf2e69fe86d7793336c5e6a83b85b225a7bef9d",
+  "executor_id": "01a0edcd-cd1f-70f0-b9f5-95fb470b6c40",
+  "reviewer_id": "01a0edd1-ae42-7973-8cf9-2fda610d33cf",
+  "independent": true,
+  "participated_in_implementation": false,
+  "status": "pass",
+  "manifest_complete": true,
+  "findings": [],
+  "scope": "Última revalidação estritamente documental: integridade, snapshots, contrato, todos e cadeia ativa G7 round3 -> G1 round3 -> G0 round4. Preserva o escopo histórico de staging de CSV normalizado por seção/candidato; não é conversor oficial bruto nem aprovação de dados ou inferência de 2026.",
+  "summary": "26/26 checks passaram. Os 1.878 arquivos do candidato e 395 registros de arquivos da cadeia predecessora conferem por hash e tamanho. Todas as 1.859 entradas round2 permanecem recuperáveis, 18 em snapshots byte-idênticos. As aprovações reais de G1/G0 e os metadados congelados conferem. Nenhum defeito vigente foi identificado no escopo documental.",
+  "dependency_approvals_verified": {
+    "G1": {
+      "role": "direct",
+      "round": "round3",
+      "candidate_manifest_sha256": "abfca9053b1023ceceab6504c12f9774f36d085727f47118418ea3f87cf5dfcd",
+      "review_sha256": "58578f06f7ee7a7b4081834b6b52af149bec2e98712692cb219313017ac07589",
+      "adjudication_sha256": "728feeb87136fa957abe67b7957d15e843e9b4f36f15d4e6d267b1a9a7222916"
+    },
+    "G0": {
+      "role": "transitive",
+      "round": "round4",
+      "candidate_manifest_sha256": "d73ecc86824fd5eaa66ece7cad41d6c21d913d455af864d32c11c5331fa5bb57",
+      "review_sha256": "e6d5bc5e7019a592cdea6ca9c302b50b792607516d20de630ef4d83b83763b38",
+      "adjudication_sha256": "51782700132bacb6b57019117fce65c5ac6b4f2ee0f683ca80cda7dd9d0bfcfd"
+    }
+  },
+  "verification": {
+    "checks_passed": 26,
+    "checks_total": 26,
+    "candidate_files_fully_hashed": 1878,
+    "candidate_bytes": 6249859,
+    "prior_entries_preserved": 1859,
+    "prior_bytes_preserved": 5119223,
+    "byte_identical_remapped_paths": 18,
+    "active_G1_dependency_files_fully_hashed": 209,
+    "active_G0_dependency_files_fully_hashed": 186,
+    "hash_or_size_mismatches": 0,
+    "unexpected_material_reads": [],
+    "static_contract_unchanged": true,
+    "run_and_todo_paths_covered": true,
+    "todo_projection_exact": true,
+    "direct_and_transitive_approval_bindings_exact": true,
+    "extra_omission_counterexample_rejected": true,
+    "wrong_dependency_hash_counterexample_rejected": true,
+    "wrong_parent_record_rejected_by_executor": true,
+    "counterexamples_in_memory_only": true,
+    "executor_verify_executed": true,
+    "executor_build_executed": false,
+    "command": "python3 -B quality_reports/results/mebane_gates/G7/round3/review/check_documentary.py",
+    "exit_code": 0,
+    "qa_reuse": "Funções de hash, leitura e contrato reutilizadas do script G1 selado, com hash fixado. Mesmo padrão documental de trace e contraprovas, adaptado apenas à cadeia de dois predecessores. Nenhum script anterior modificado.",
+    "evidence": "checks.json"
+  },
+  "prior_test_reuse": {
+    "review_path": "quality_reports/results/mebane_gates/G7/round2/review/review.json",
+    "review_sha256": "9fb58b9afb0d4aac73a56989a232ac005d4f3ff4f415504d4cb11b58a815f6b7",
+    "historical_status": "pass",
+    "reexecuted_in_round3": false,
+    "scope": "Ensaios de staging, encoding/locale, datas, cobertura relativa, fixtures, recibos e DAG de round2 permanecem evidência histórica, sem nova execução.",
+    "basis": "As 1.859 entradas do manifesto round2 mantêm hashes e bytes nos caminhos ativos ou snapshots mapeados. O parecer round2 está congelado no novo candidato e seu hash foi conferido. A cadeia ativa G1/G0 recebeu checagem nova e não foi presumida válida a partir dos vínculos antigos.",
+    "prior_resolved_findings": "G7-R1-COORD-F03, G7-R1-QA-F01 e G7-R1-QA-F02 permanecem resolvidos conforme round2, com classificação histórica CONFIRMED preservada, sem nova adjudicação científica."
+  },
+  "readiness_limits": {
+    "normalized_csv_staging_only": true,
+    "official_raw_converter_certified": false,
+    "real_2026_data_attested": false,
+    "national_coverage_attested_by_this_review": false,
+    "inferential_approval": false,
+    "G3_execution": false
+  },
+  "limits": [
+    "PASS somente do candidato documental identificado; não altera o ledger, não substitui adjudicação e não libera execução de outros gates.",
+    "Sem R, MCMC, instalação, rede, nova ciência, coleta, estimativa ou análise eleitoral.",
+    "Build/captura do ledger foram inspecionados, não executados. Verify foi executado com bloqueio de escrita e dos caminhos canônicos do ledger/checker.",
+    "O snapshot é a projeção congelada dos gates consumidos, com hash de origem do ledger integral; não é descrito como cópia integral desse ledger.",
+    "Referências antigas às aprovações round2 são históricas. A cadeia ativa é G1 round3/G0 round4, conferida integralmente, sem restaurar a ausência autorizada nem dispensar dados usados como meramente históricos.",
+    "Cobertura continua relativa à referência fornecida; o conversor auditado dos arquivos oficiais brutos e a validação de publicações reais não são entregues por esta rodada.",
+    "Escritas desta etapa somente em G7/round3/review/. Nenhum arquivo existente foi alterado, excluído ou restaurado."
+  ],
+  "review_manifest": "review_manifest.json"
+}

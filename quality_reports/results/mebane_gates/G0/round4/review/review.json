@@ -1,0 +1,88 @@
+{
+  "schema_version": "1.0",
+  "gate_id": "G0",
+  "round": "round4",
+  "contract_sha256": "e5ba78d6f8d314c2bf94738df85fce0a31d8e9986ef974f6c69ee9e30ee06ca3",
+  "candidate_manifest_sha256": "d73ecc86824fd5eaa66ece7cad41d6c21d913d455af864d32c11c5331fa5bb57",
+  "construction_input_sha256": "bee1e870b49052601c5e5c574edf87d5d0811f75940a57a82cbac389a7be8a74",
+  "run_sha256": "1a565af625e63559864a82cc64cf15263012c32cae02fdecbdeeb72dfac8bf20",
+  "executor_id": "01a0edcd-cd1f-70f0-b9f5-95fb470b6c40",
+  "reviewer_id": "01a0edd1-ae42-7973-8cf9-2fda610d33cf",
+  "independent": true,
+  "participated_in_implementation": false,
+  "status": "pass",
+  "manifest_complete": true,
+  "findings": [],
+  "scope": "Rechecagem documental limitada do reparo F01, hashes, vínculos e contraprovas de G0 round4. Preserva e reutiliza historicamente os demais checks de round3. Não altera o gate nem aprova inferência.",
+  "summary": "O snapshot fixa exatamente os metadados consumidos da fonte before e está vinculado ao run e ao manifesto. A execução observada de source_preflight/verify não leu ledger ou checker canônicos, não tentou escritas e não teve leituras materiais fora do fechamento. Os 186 arquivos conferem, os 171 itens round3 foram preservados e as duas contraprovas foram rejeitadas. Nenhum defeito vigente foi encontrado no escopo delimitado.",
+  "prior_review_sha256": "058f951892a72fd8b76b6d811c22c614aa12fc57d01ce923f2aeae95d6e0dcc7",
+  "prior_adjudication_sha256": "a805be5754f7bf39df900f1c756ec48d82dbe8b5117f0d7bf576b7a05551c56e",
+  "finding_map_sha256": "0eccb19899dca1ce5ebcec734e791a262f4b2176313f10146b8dfa636a8e8b84",
+  "resolved_prior_findings": [
+    {
+      "id": "G0-R3-QA-F01",
+      "coordinator_id": "G0-R3-COORD-F01",
+      "same_finding_not_two_defects": true,
+      "prior_status": "CONFIRMED",
+      "severity": "major",
+      "resolution_status": "resolved_in_adjudicated_scope",
+      "resolved": true,
+      "resolution": "construction_input.json preserva contrato e projeção dinâmica de status/todos/evidence, exatamente correspondentes ao before congelado. A entrada completa, a fonte before e o checker arquivado estão fixados por hash e incluídos no manifesto/run. O construtor lê essas fontes congeladas. O trace real de source_preflight/verify, com barreira contra leitura dos caminhos canônicos e contra escrita, não registrou violações ou leituras materiais não declaradas. A mutação de evidence sem atualizar seu hash foi rejeitada; atualizar também o hash dinâmico continuou insuficiente, pois o vínculo do run com o hash completo da entrada rejeitou a alteração.",
+      "evidence": [
+        "quality_reports/results/mebane_gates/G0/round4/construction_input.json",
+        "quality_reports/results/mebane_gates/G0/round4/run.json",
+        "quality_reports/results/mebane_gates/G0/round4/review/checks.json"
+      ],
+      "historical_classification_preserved": "O reparo não refuta o defeito confirmado em round3; encerra-o somente para o candidato round4 identificado neste parecer."
+    }
+  ],
+  "verification": {
+    "checks_passed": 20,
+    "checks_total": 20,
+    "failed_checks": [],
+    "candidate_files_fully_hashed": 186,
+    "candidate_bytes": 4248758603,
+    "hash_or_size_mismatches": 0,
+    "round3_entries_retained_exactly": 171,
+    "byte_identical_round3_documents": ["gate_contract.json", "inventory_current.json", "tombstone.json"],
+    "construction_projection_exactly_matches_before": true,
+    "static_contract_unchanged": true,
+    "dependencies": "G0 depends_on=[], dependency_manifests={} e dependency_approvals={}, sem aprovação herdada automática.",
+    "declared_run_and_todo_paths_covered": true,
+    "unexpected_material_project_reads": [],
+    "forbidden_live_read_attempts": [],
+    "executor_verify_executed": true,
+    "executor_build_executed": false,
+    "counterexamples": [
+      {"mutation": "evidence do input alterado somente em memória", "result": "rejected", "message": "dynamic construction metadata drift"},
+      {"mutation": "evidence e hash dinâmico alterados em memória, mantendo vínculo original do run", "result": "rejected", "message": "construction input hash drift"}
+    ],
+    "counterexample_limit": "No segundo caso, old_files foi substituído apenas por seu resultado já integralmente conferido, para testar especificamente o vínculo sem repetir a leitura dos dados. Nenhum arquivo foi modificado.",
+    "command": "python3 -B quality_reports/results/mebane_gates/G0/round4/review/check_repair.py",
+    "exit_code": 0,
+    "evidence": "checks.json"
+  },
+  "prior_test_reuse": [
+    {
+      "execution_round": "round3",
+      "reexecuted_in_round4": false,
+      "scope": "Análise do conteúdo do inventário/tombstone, contraprovas de omissão extra e vínculos de dependência, e checagem dos 22 artefatos transitivos round1.",
+      "basis": "Reutilização histórica expressa do parecer round3. Nesta rodada foram recalculados os hashes dos 186 itens diretos, incluindo todos os 171 itens round3; inventário, tombstone e contrato são byte-idênticos. Os 22 transitivos não foram novamente recalculados e não são apresentados como nova execução."
+    },
+    {
+      "execution_round": "round1/round2",
+      "reexecuted_in_round4": false,
+      "scope": "Loads de dados/fits, versões/dependências, comparação qbl, estrutura de fontes e cálculos científicos.",
+      "basis": "Evidência histórica preservada; nenhuma nova certificação de ambiente, modelo ou inferência."
+    }
+  ],
+  "limits": [
+    "PASS restrito ao candidato e reparo documental identificados; a adjudicação e a mudança de estado do gate pertencem à coordenação.",
+    "Nenhuma matemática, análise eleitoral, instalação, rede, R, MCMC ou teste científico novo.",
+    "prepare-input/build foram inspecionados, não reexecutados; source_preflight/verify foram executados com barreiras de leitura/escrita e as contraprovas foram somente em memória.",
+    "O PDF inválido e Info.plist continuam ausentes; o rótulo round3 nos documentos copiados byte a byte preserva sua identidade histórica e não representa novo tombstone.",
+    "Nenhum candidato, ledger, arquivo anterior ou aprovação foi alterado. Nenhum arquivo foi excluído ou restaurado.",
+    "Não foram examinados novos candidatos G1/G2/G7 nesta etapa."
+  ],
+  "review_manifest": "review_manifest.json"
+}

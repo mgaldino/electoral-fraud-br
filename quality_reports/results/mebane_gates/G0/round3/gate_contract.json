@@ -1,0 +1,54 @@
+{
+  "id": "G0",
+  "title": "Baseline reprodutível e fontes",
+  "goal": "Entregar inventário verificável de dados, documentos, código, fits e ambiente, distinguindo execução histórica de validação atual e tornando possível reproduzir o baseline.",
+  "depends_on": [],
+  "external_prerequisites": [],
+  "executor": {
+    "role": "SOL-BASELINE",
+    "model": "gpt-6-sol",
+    "effort": "high"
+  },
+  "reviewer": {
+    "role": "QA-BASELINE",
+    "model": "gpt-6-sol",
+    "effort": "high",
+    "independent": true
+  },
+  "write_scope": [
+    "quality_reports/results/mebane_gates/G0/",
+    "renv.lock",
+    "README.md",
+    "CLAUDE.md"
+  ],
+  "todos": [
+    {
+      "id": "G0-T1",
+      "task": "Inventariar Git, arquivos brutos/processados, fits, logs e PDFs; registrar integridade, hashes e proveniência sem alterar os originais."
+    },
+    {
+      "id": "G0-T2",
+      "task": "Extrair versões efetivas de R, pacotes, JAGS e CmdStan e o commit de eforensics; reconciliar renv.lock com os componentes usados sem atualizar o ambiente silenciosamente."
+    },
+    {
+      "id": "G0-T3",
+      "task": "Reconciliar README/CLAUDE/handoffs com a evidência: registrar falhas JAGS/Stan, a aproximação Stan e a ausência de resultado nacional, mantendo os logs históricos."
+    },
+    {
+      "id": "G0-T4",
+      "task": "Fixar fontes bibliográficas e versão exata do código de referência; testar carregamento não destrutivo dos artefatos necessários e documentar faltantes."
+    }
+  ],
+  "deliverables": [
+    "Inventário e manifestos de fontes/ambiente",
+    "Lockfile reconciliado",
+    "Mapa de alegações históricas versus evidência"
+  ],
+  "acceptance": [
+    "Todo artefato usado nos próximos gates tem versão e proveniência identificáveis.",
+    "Artefatos em download/incompletos não são tratados como fontes válidas.",
+    "Restauração do ambiente é verificável com o material disponível; dependência ausente permanece explícita e impede alegar reprodução completa.",
+    "QA recalcula hashes de uma amostra material, verifica o commit do pacote e carrega ao menos um fit e um conjunto de dados necessários."
+  ],
+  "on_failure": "Corrigir inventário ou dependência faltante; preservar o estado existente. Trabalho documental independente pode continuar."
+}

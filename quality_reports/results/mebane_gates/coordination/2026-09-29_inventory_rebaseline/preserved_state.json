@@ -1,0 +1,28 @@
+{
+  "files": [
+    {
+      "original": "README.md",
+      "snapshot": "quality_reports/results/mebane_gates/coordination/2026-09-29_inventory_rebaseline/before/README.md",
+      "sha256": "c915133d7be163551dc279322a55fad08cb3399222f6304d1a9d1581f504048d",
+      "bytes": 9165
+    },
+    {
+      "original": "CLAUDE.md",
+      "snapshot": "quality_reports/results/mebane_gates/coordination/2026-09-29_inventory_rebaseline/before/CLAUDE.md",
+      "sha256": "dd8473a2d852bbadef0e38e34206f215b7efa5439d3c1bf005ed2653892444e0",
+      "bytes": 6418
+    },
+    {
+      "original": "quality_reports/plans/mebane_2022_2026_gates.json",
+      "snapshot": "quality_reports/results/mebane_gates/coordination/2026-09-29_inventory_rebaseline/before/quality_reports/plans/mebane_2022_2026_gates.json",
+      "sha256": "f32c2a1fbb40e29fe8a52944969222ce67a7581f516149c7a27cd57d5019eb66",
+      "bytes": 52657
+    },
+    {
+      "original": "quality_reports/plans/2026-09-28_mebane_2022_2026_gates.md",
+      "snapshot": "quality_reports/results/mebane_gates/coordination/2026-09-29_inventory_rebaseline/before/quality_reports/plans/2026-09-28_mebane_2022_2026_gates.md",
+      "sha256": "074c5a17106dd32f62de46fd30e17910a5a727022d7c9fe52c3f9dad0ce8d9a9",
+      "bytes": 38152
+    }
+  ]
+}

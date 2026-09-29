@@ -1,0 +1,160 @@
+{
+  "schema_version": "1.0",
+  "gate_id": "G0",
+  "round": "round4",
+  "source_before": {
+    "path": "quality_reports/results/mebane_gates/coordination/2026-09-29_inventory_rebaseline/before/quality_reports/plans/mebane_2022_2026_gates.json",
+    "sha256": "f32c2a1fbb40e29fe8a52944969222ce67a7581f516149c7a27cd57d5019eb66",
+    "bytes": 52657
+  },
+  "checker_snapshot": {
+    "path": "quality_reports/results/mebane_gates/G0/round1/final_state/scripts/mebane_gates.py",
+    "sha256": "15601b30477b940bda011a7370d3a2edc269c7ffd89fe92e09d8dd9d34a93480",
+    "bytes": 28810
+  },
+  "static_contract": {
+    "id": "G0",
+    "title": "Baseline reprodutível e fontes",
+    "goal": "Entregar inventário verificável de dados, documentos, código, fits e ambiente, distinguindo execução histórica de validação atual e tornando possível reproduzir o baseline.",
+    "depends_on": [],
+    "external_prerequisites": [],
+    "executor": {
+      "role": "SOL-BASELINE",
+      "model": "gpt-6-sol",
+      "effort": "high"
+    },
+    "reviewer": {
+      "role": "QA-BASELINE",
+      "model": "gpt-6-sol",
+      "effort": "high",
+      "independent": true
+    },
+    "write_scope": [
+      "quality_reports/results/mebane_gates/G0/",
+      "renv.lock",
+      "README.md",
+      "CLAUDE.md"
+    ],
+    "todos": [
+      {
+        "id": "G0-T1",
+        "task": "Inventariar Git, arquivos brutos/processados, fits, logs e PDFs; registrar integridade, hashes e proveniência sem alterar os originais."
+      },
+      {
+        "id": "G0-T2",
+        "task": "Extrair versões efetivas de R, pacotes, JAGS e CmdStan e o commit de eforensics; reconciliar renv.lock com os componentes usados sem atualizar o ambiente silenciosamente."
+      },
+      {
+        "id": "G0-T3",
+        "task": "Reconciliar README/CLAUDE/handoffs com a evidência: registrar falhas JAGS/Stan, a aproximação Stan e a ausência de resultado nacional, mantendo os logs históricos."
+      },
+      {
+        "id": "G0-T4",
+        "task": "Fixar fontes bibliográficas e versão exata do código de referência; testar carregamento não destrutivo dos artefatos necessários e documentar faltantes."
+      }
+    ],
+    "deliverables": [
+      "Inventário e manifestos de fontes/ambiente",
+      "Lockfile reconciliado",
+      "Mapa de alegações históricas versus evidência"
+    ],
+    "acceptance": [
+      "Todo artefato usado nos próximos gates tem versão e proveniência identificáveis.",
+      "Artefatos em download/incompletos não são tratados como fontes válidas.",
+      "Restauração do ambiente é verificável com o material disponível; dependência ausente permanece explícita e impede alegar reprodução completa.",
+      "QA recalcula hashes de uma amostra material, verifica o commit do pacote e carrega ao menos um fit e um conjunto de dados necessários."
+    ],
+    "on_failure": "Corrigir inventário ou dependência faltante; preservar o estado existente. Trabalho documental independente pode continuar."
+  },
+  "contract_sha256": "e5ba78d6f8d314c2bf94738df85fce0a31d8e9986ef974f6c69ee9e30ee06ca3",
+  "consumed_dynamic": {
+    "status": "changes_requested",
+    "todos": [
+      {
+        "id": "G0-T1",
+        "status": "done",
+        "evidence": [
+          {
+            "path": "quality_reports/results/mebane_gates/G0/round1/inventory.json",
+            "basis": "executed",
+            "locator": "inventário base e integridade ZIP/PDF"
+          },
+          {
+            "path": "quality_reports/results/mebane_gates/G0/round2/inventory_additions.json",
+            "basis": "executed",
+            "locator": "manuscrito e quatro tabelas"
+          },
+          {
+            "path": "quality_reports/results/mebane_gates/G0/round2/final_state_map.json",
+            "basis": "executed",
+            "locator": "37 snapshots"
+          }
+        ]
+      },
+      {
+        "id": "G0-T2",
+        "status": "done",
+        "evidence": [
+          {
+            "path": "quality_reports/results/mebane_gates/G0/round1/loads_environment.json",
+            "basis": "executed",
+            "locator": "versões e RemoteSha"
+          },
+          {
+            "path": "quality_reports/results/mebane_gates/G0/round2/lock_verification.json",
+            "basis": "executed",
+            "locator": "174 preservados, 180 finais e versões"
+          },
+          {
+            "path": "quality_reports/results/mebane_gates/G0/round2/final_state/renv.lock",
+            "basis": "inspected",
+            "locator": "lock reconciliado"
+          }
+        ]
+      },
+      {
+        "id": "G0-T3",
+        "status": "done",
+        "evidence": [
+          {
+            "path": "quality_reports/results/mebane_gates/G0/round1/claims.md",
+            "basis": "inspected",
+            "locator": "alegações versus logs/cadeias"
+          },
+          {
+            "path": "quality_reports/results/mebane_gates/G0/round1/loads_environment.json",
+            "basis": "executed",
+            "locator": "diagnósticos clássicos do fresh_v2"
+          },
+          {
+            "path": "quality_reports/results/mebane_gates/G0/round2/final_state/README.md",
+            "basis": "inspected",
+            "locator": "limites de aquisição e reprodução"
+          }
+        ]
+      },
+      {
+        "id": "G0-T4",
+        "status": "done",
+        "evidence": [
+          {
+            "path": "quality_reports/results/mebane_gates/G0/round1/sources.md",
+            "basis": "inspected",
+            "locator": "versões, URLs e hashes"
+          },
+          {
+            "path": "quality_reports/results/mebane_gates/G0/round1/eforensics_commit_api.json",
+            "basis": "executed",
+            "locator": "commit 3017de5"
+          },
+          {
+            "path": "quality_reports/results/mebane_gates/G0/round1/loads_environment.json",
+            "basis": "executed",
+            "locator": "loads e igualdade do qbl"
+          }
+        ]
+      }
+    ]
+  },
+  "consumed_dynamic_sha256": "0962f4710af3111bab033650b99b345fac3a4e7a0e5ad1cc7283d4e971b178e2"
+}

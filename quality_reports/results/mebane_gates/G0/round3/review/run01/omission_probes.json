@@ -1,0 +1,22 @@
+[
+  {
+    "target": "replication_authors/extracted/fingerprint_brazil/raw-data/votacao_secao_2022_BR.csv",
+    "coordinated_removal": false,
+    "rejected": true,
+    "errors": [
+      "extra_omission_from_predecessor",
+      "predecessor_entry_changed_or_missing",
+      "declared_path_outside_manifest"
+    ]
+  },
+  {
+    "target": "replication_authors/extracted/fingerprint_brazil/raw-data/votacao_secao_2022_BR.csv",
+    "coordinated_removal": true,
+    "rejected": true,
+    "errors": [
+      "extra_omission_from_predecessor",
+      "predecessor_entry_changed_or_missing",
+      "inventory_not_exact_predecessor_minus_authorized_absence"
+    ]
+  }
+]

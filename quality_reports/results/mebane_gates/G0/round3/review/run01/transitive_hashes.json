@@ -1,0 +1,288 @@
+[
+  {
+    "expected": {
+      "path": "quality_reports/results/mebane_gates/G0/round1/eforensics_installed_DESCRIPTION",
+      "sha256": "b7b608eef2ad208595f2d508391f137398e76a97b87c683af640407bfa014b72",
+      "bytes": 1399
+    },
+    "actual": {
+      "path": "quality_reports/results/mebane_gates/G0/round1/eforensics_installed_DESCRIPTION",
+      "sha256": "b7b608eef2ad208595f2d508391f137398e76a97b87c683af640407bfa014b72",
+      "bytes": 1399
+    },
+    "passed": true
+  },
+  {
+    "expected": {
+      "path": "quality_reports/results/mebane_gates/G0/round1/implementation.md",
+      "sha256": "9300f9f454b21514a102868020c500df2735942c4f915f41c44a993adba103be",
+      "bytes": 4428
+    },
+    "actual": {
+      "path": "quality_reports/results/mebane_gates/G0/round1/implementation.md",
+      "sha256": "9300f9f454b21514a102868020c500df2735942c4f915f41c44a993adba103be",
+      "bytes": 4428
+    },
+    "passed": true
+  },
+  {
+    "expected": {
+      "path": "quality_reports/results/mebane_gates/G0/round1/installed_records.lock",
+      "sha256": "d03fd5ba8f1502c8e49d014b53fb4a6dcd7596cad5e9229fd22b523a617ab2d8",
+      "bytes": 246686
+    },
+    "actual": {
+      "path": "quality_reports/results/mebane_gates/G0/round1/installed_records.lock",
+      "sha256": "d03fd5ba8f1502c8e49d014b53fb4a6dcd7596cad5e9229fd22b523a617ab2d8",
+      "bytes": 246686
+    },
+    "passed": true
+  },
+  {
+    "expected": {
+      "path": "quality_reports/results/mebane_gates/G0/round1/lock_reconciliation.json",
+      "sha256": "91bc9b8dcae2aa3d96774a2195b6974e1f1117b36380d15882123b0d830d3caa",
+      "bytes": 1359
+    },
+    "actual": {
+      "path": "quality_reports/results/mebane_gates/G0/round1/lock_reconciliation.json",
+      "sha256": "91bc9b8dcae2aa3d96774a2195b6974e1f1117b36380d15882123b0d830d3caa",
+      "bytes": 1359
+    },
+    "passed": true
+  },
+  {
+    "expected": {
+      "path": "quality_reports/results/mebane_gates/G0/round1/qbl_installed_3017de5.jags",
+      "sha256": "f8360126424b7a463f76a1c99efc89a8a5cb81339213bd4931559f14595fbab6",
+      "bytes": 6761
+    },
+    "actual": {
+      "path": "quality_reports/results/mebane_gates/G0/round1/qbl_installed_3017de5.jags",
+      "sha256": "f8360126424b7a463f76a1c99efc89a8a5cb81339213bd4931559f14595fbab6",
+      "bytes": 6761
+    },
+    "passed": true
+  },
+  {
+    "expected": {
+      "path": "quality_reports/results/mebane_gates/G0/round1/renv_before.lock",
+      "sha256": "a6705c3684a3f4250c6189066033d0ec5bc0d782614ec1e9a5cf5f88f7bc8aac",
+      "bytes": 291793
+    },
+    "actual": {
+      "path": "quality_reports/results/mebane_gates/G0/round1/renv_before.lock",
+      "sha256": "a6705c3684a3f4250c6189066033d0ec5bc0d782614ec1e9a5cf5f88f7bc8aac",
+      "bytes": 291793
+    },
+    "passed": true
+  },
+  {
+    "expected": {
+      "path": "quality_reports/results/mebane_gates/G0/round1/snapshot_map.json",
+      "sha256": "95456f1df4fcb185d3d5ac65608814a9e3535558f5aae6358ba9622eeb88ae3c",
+      "bytes": 3525
+    },
+    "actual": {
+      "path": "quality_reports/results/mebane_gates/G0/round1/snapshot_map.json",
+      "sha256": "95456f1df4fcb185d3d5ac65608814a9e3535558f5aae6358ba9622eeb88ae3c",
+      "bytes": 3525
+    },
+    "passed": true
+  },
+  {
+    "expected": {
+      "path": "quality_reports/results/mebane_gates/G0/round1/snapshots/CLAUDE.md",
+      "sha256": "99379af671c1f23babd6ffa7094e4f036ebd8e62c67cf616a8c5b1337e388e32",
+      "bytes": 3216
+    },
+    "actual": {
+      "path": "quality_reports/results/mebane_gates/G0/round1/snapshots/CLAUDE.md",
+      "sha256": "99379af671c1f23babd6ffa7094e4f036ebd8e62c67cf616a8c5b1337e388e32",
+      "bytes": 3216
+    },
+    "passed": true
+  },
+  {
+    "expected": {
+      "path": "quality_reports/results/mebane_gates/G0/round1/snapshots/R/00_setup.R",
+      "sha256": "0d06aa4471d90cbf9f41fca859e23b366d08ccb8bb3562fbf23ea835753b87dd",
+      "bytes": 2429
+    },
+    "actual": {
+      "path": "quality_reports/results/mebane_gates/G0/round1/snapshots/R/00_setup.R",
+      "sha256": "0d06aa4471d90cbf9f41fca859e23b366d08ccb8bb3562fbf23ea835753b87dd",
+      "bytes": 2429
+    },
+    "passed": true
+  },
+  {
+    "expected": {
+      "path": "quality_reports/results/mebane_gates/G0/round1/snapshots/R/01_load_tse.R",
+      "sha256": "fdd8c9278d73b85a7782c300f15e1931fb0f28e667feccb138a36e593d6fbce8",
+      "bytes": 38631
+    },
+    "actual": {
+      "path": "quality_reports/results/mebane_gates/G0/round1/snapshots/R/01_load_tse.R",
+      "sha256": "fdd8c9278d73b85a7782c300f15e1931fb0f28e667feccb138a36e593d6fbce8",
+      "bytes": 38631
+    },
+    "passed": true
+  },
+  {
+    "expected": {
+      "path": "quality_reports/results/mebane_gates/G0/round1/snapshots/R/02_build_vars.R",
+      "sha256": "a18c49dc037de4ddf4a0d0e4ef7423a04522a963900d886bc86eca875c41dde5",
+      "bytes": 25775
+    },
+    "actual": {
+      "path": "quality_reports/results/mebane_gates/G0/round1/snapshots/R/02_build_vars.R",
+      "sha256": "a18c49dc037de4ddf4a0d0e4ef7423a04522a963900d886bc86eca875c41dde5",
+      "bytes": 25775
+    },
+    "passed": true
+  },
+  {
+    "expected": {
+      "path": "quality_reports/results/mebane_gates/G0/round1/snapshots/R/05_compare_fits.R",
+      "sha256": "3f5e11c975f74b3fb5d3dfe70894c861c9cbc5e4f79cc37b94f72f50afc2f8d5",
+      "bytes": 7323
+    },
+    "actual": {
+      "path": "quality_reports/results/mebane_gates/G0/round1/snapshots/R/05_compare_fits.R",
+      "sha256": "3f5e11c975f74b3fb5d3dfe70894c861c9cbc5e4f79cc37b94f72f50afc2f8d5",
+      "bytes": 7323
+    },
+    "passed": true
+  },
+  {
+    "expected": {
+      "path": "quality_reports/results/mebane_gates/G0/round1/snapshots/R/05_dip_test_diagnostics.R",
+      "sha256": "1b6f2fedaabdd0b8448a48147068c4ca2fdf50d12a40742f67a1964e35e032b1",
+      "bytes": 7150
+    },
+    "actual": {
+      "path": "quality_reports/results/mebane_gates/G0/round1/snapshots/R/05_dip_test_diagnostics.R",
+      "sha256": "1b6f2fedaabdd0b8448a48147068c4ca2fdf50d12a40742f67a1964e35e032b1",
+      "bytes": 7150
+    },
+    "passed": true
+  },
+  {
+    "expected": {
+      "path": "quality_reports/results/mebane_gates/G0/round1/snapshots/R/05_eforensics_qbl_fresh_diagnostic.R",
+      "sha256": "9faf09a91562adef904d94192c734de76e8741a172f68b73e7f1c095c0823a87",
+      "bytes": 6930
+    },
+    "actual": {
+      "path": "quality_reports/results/mebane_gates/G0/round1/snapshots/R/05_eforensics_qbl_fresh_diagnostic.R",
+      "sha256": "9faf09a91562adef904d94192c734de76e8741a172f68b73e7f1c095c0823a87",
+      "bytes": 6930
+    },
+    "passed": true
+  },
+  {
+    "expected": {
+      "path": "quality_reports/results/mebane_gates/G0/round1/snapshots/R/05_eforensics_umeforensics_qbl.R",
+      "sha256": "659c12cdf1881b7a5b9dcdf9d463799f93362c0ae1744302128c4b6577b7b5c5",
+      "bytes": 8833
+    },
+    "actual": {
+      "path": "quality_reports/results/mebane_gates/G0/round1/snapshots/R/05_eforensics_umeforensics_qbl.R",
+      "sha256": "659c12cdf1881b7a5b9dcdf9d463799f93362c0ae1744302128c4b6577b7b5c5",
+      "bytes": 8833
+    },
+    "passed": true
+  },
+  {
+    "expected": {
+      "path": "quality_reports/results/mebane_gates/G0/round1/snapshots/R/05_jags_qbl_zone_fe.R",
+      "sha256": "a72118c328d1cce96ba2226b33da5d13d6608a42e34259b25208b14f823ed983",
+      "bytes": 7950
+    },
+    "actual": {
+      "path": "quality_reports/results/mebane_gates/G0/round1/snapshots/R/05_jags_qbl_zone_fe.R",
+      "sha256": "a72118c328d1cce96ba2226b33da5d13d6608a42e34259b25208b14f823ed983",
+      "bytes": 7950
+    },
+    "passed": true
+  },
+  {
+    "expected": {
+      "path": "quality_reports/results/mebane_gates/G0/round1/snapshots/R/05_stan_eforensics_qbl_calibrate.R",
+      "sha256": "1892b565f942e247fb5a6a2d5f2cfa4e53bc99f064d9a6216df202c8e611ebf9",
+      "bytes": 17371
+    },
+    "actual": {
+      "path": "quality_reports/results/mebane_gates/G0/round1/snapshots/R/05_stan_eforensics_qbl_calibrate.R",
+      "sha256": "1892b565f942e247fb5a6a2d5f2cfa4e53bc99f064d9a6216df202c8e611ebf9",
+      "bytes": 17371
+    },
+    "passed": true
+  },
+  {
+    "expected": {
+      "path": "quality_reports/results/mebane_gates/G0/round1/snapshots/R/06_sp_linearity_check.R",
+      "sha256": "743eedb8570c7d5e74e991e16cbce3f447497b0e24a85c848f487f76ef298628",
+      "bytes": 5366
+    },
+    "actual": {
+      "path": "quality_reports/results/mebane_gates/G0/round1/snapshots/R/06_sp_linearity_check.R",
+      "sha256": "743eedb8570c7d5e74e991e16cbce3f447497b0e24a85c848f487f76ef298628",
+      "bytes": 5366
+    },
+    "passed": true
+  },
+  {
+    "expected": {
+      "path": "quality_reports/results/mebane_gates/G0/round1/snapshots/R/07_brasil_full_qbl.R",
+      "sha256": "1244e5f6e49c5842ef109f8ded2a1caa3ba7ddd0a83eeeaa4694f7d08775d862",
+      "bytes": 10090
+    },
+    "actual": {
+      "path": "quality_reports/results/mebane_gates/G0/round1/snapshots/R/07_brasil_full_qbl.R",
+      "sha256": "1244e5f6e49c5842ef109f8ded2a1caa3ba7ddd0a83eeeaa4694f7d08775d862",
+      "bytes": 10090
+    },
+    "passed": true
+  },
+  {
+    "expected": {
+      "path": "quality_reports/results/mebane_gates/G0/round1/snapshots/README.md",
+      "sha256": "d1ea8ff6427b4560040b322152c6fe247ca492130329256bcfff35cab1786b69",
+      "bytes": 3205
+    },
+    "actual": {
+      "path": "quality_reports/results/mebane_gates/G0/round1/snapshots/README.md",
+      "sha256": "d1ea8ff6427b4560040b322152c6fe247ca492130329256bcfff35cab1786b69",
+      "bytes": 3205
+    },
+    "passed": true
+  },
+  {
+    "expected": {
+      "path": "quality_reports/results/mebane_gates/G0/round1/snapshots/stan/eforensics_qbl.stan",
+      "sha256": "7c2d23fcebcc020c16d4779f8fffe26f6c588461c9655fe34187690581764541",
+      "bytes": 8874
+    },
+    "actual": {
+      "path": "quality_reports/results/mebane_gates/G0/round1/snapshots/stan/eforensics_qbl.stan",
+      "sha256": "7c2d23fcebcc020c16d4779f8fffe26f6c588461c9655fe34187690581764541",
+      "bytes": 8874
+    },
+    "passed": true
+  },
+  {
+    "expected": {
+      "path": "quality_reports/results/mebane_gates/G0/round1/todo_evidence.json",
+      "sha256": "516722f478c7ed8858845d6ca9cac9c10420c78d21c9afeb8096537b92c5831e",
+      "bytes": 3472
+    },
+    "actual": {
+      "path": "quality_reports/results/mebane_gates/G0/round1/todo_evidence.json",
+      "sha256": "516722f478c7ed8858845d6ca9cac9c10420c78d21c9afeb8096537b92c5831e",
+      "bytes": 3472
+    },
+    "passed": true
+  }
+]
