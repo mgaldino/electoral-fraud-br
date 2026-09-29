@@ -52,6 +52,13 @@ class GateTests(unittest.TestCase):
                 dep: GATES.sha256(self.root / self.gate(dep)["records"]["candidate_manifest"])
                 for dep in gate["depends_on"]
             },
+            "dependency_approvals": {
+                dep: {
+                    field + "_sha256": GATES.sha256(self.root / self.gate(dep)["records"][field])
+                    for field in ("review", "adjudication")
+                }
+                for dep in gate["depends_on"]
+            },
         }
         self.write_json(f"{key}-run.json", run)
         paths = [f"{key}-input.txt", f"{key}-output.txt", f"{key}-run.json", *extra_paths]
@@ -226,6 +233,37 @@ class GateTests(unittest.TestCase):
         adjudication["findings"][0].update(status="CONFIRMED", resolved=True, resolution="Fixed and rechecked")
         self.write_json("G0-adjudication.json", adjudication)
         self.assertEqual([], GATES.validate(self.plan, self.root))
+
+    def test_changed_parent_review_or_adjudication_invalidates_child(self):
+        for change in ("review", "adjudication"):
+            with self.subTest(change=change):
+                self.approval("G0")
+                self.approval("G1")
+                self.assertEqual([], GATES.validate(self.plan, self.root))
+                adjudication = GATES.read_json(self.root / "G0-adjudication.json")
+                if change == "review":
+                    review = GATES.read_json(self.root / "G0-review.json")
+                    review["reviewer_id"] = "33333333-3333-4333-8333-333333333333"
+                    self.gate("G0")["records"]["reviewer_id"] = review["reviewer_id"]
+                    self.write_json("G0-review.json", review)
+                    adjudication["review_sha256"] = GATES.sha256(self.root / "G0-review.json")
+                else:
+                    adjudication["note"] = "Replacement approval"
+                self.write_json("G0-adjudication.json", adjudication)
+                errors = GATES.validate(self.plan, self.root)
+                self.assertFalse(any(error.startswith("G0:") for error in errors), errors)
+                self.assert_rejected(f"stale dependency approval G0 {change}")
+
+    def test_dependency_approval_schema_is_required(self):
+        self.approval("G0")
+        self.approval("G1")
+        run = GATES.read_json(self.root / "G1-run.json")
+        for value in (None, [], {}, {"G0": []}, {"G0": {"review_sha256": "0" * 64}}):
+            with self.subTest(value=value):
+                run["dependency_approvals"] = value
+                self.write_json("G1-run.json", run)
+                errors = GATES.validate(self.plan, self.root)
+                self.assertTrue(any("dependency_approvals" in error or "invalid dependency approval" in error for error in errors), errors)
 
     def test_missing_finding_reconciliation_is_rejected(self):
         self.approval()

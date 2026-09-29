@@ -1,0 +1,11 @@
+{
+  "candidate_id": "mebane-gates-checker-round3",
+  "date": "2026-09-28",
+  "executor_id": "019d795a-acfa-72c2-a210-d55a46c606c2",
+  "scope": "Reparo mecânico delimitado C-F009. Os três documentos científicos continuam com os hashes já aprovados.",
+  "files": [
+    {"path": "scripts/mebane_gates.py", "sha256": "15601b30477b940bda011a7370d3a2edc269c7ffd89fe92e09d8dd9d34a93480"},
+    {"path": "tests/test_mebane_gates.py", "sha256": "2509b41b2cea142f2a4e17e64e2f3842ead8abff71409f3cf8462f50cd5d169e"},
+    {"path": "quality_reports/results/2026-09-28_gate_design/implementation_checker_round3.md", "sha256": "a9364ea45b4b85490372ecb76abbfe61cf6459c4f9a2886ffd7d1f8c14eb35b3"}
+  ]
+}

@@ -188,6 +188,10 @@ def check_records(gate, root, by_id):
             errors.append(f"{prefix}: inconsistent run executor identity")
         dependencies = gate["depends_on"]
         dependency_hashes = run.get("dependency_manifests")
+        dependency_approvals = run.get("dependency_approvals")
+        approvals_valid = isinstance(dependency_approvals, dict) and set(dependency_approvals) == set(dependencies)
+        if not approvals_valid:
+            errors.append(f"{prefix}: run.dependency_approvals must match dependencies")
         if not isinstance(dependency_hashes, dict) or set(dependency_hashes) != set(dependencies):
             errors.append(f"{prefix}: run.dependency_manifests must match dependencies")
         else:
@@ -199,6 +203,15 @@ def check_records(gate, root, by_id):
                     current_hash = sha256(project_file(root, parent_manifest))
                     if dependency_hashes[dependency] != current_hash:
                         errors.append(f"{prefix}: stale dependency manifest {dependency}")
+                    if approvals_valid:
+                        approval = dependency_approvals[dependency]
+                        if not isinstance(approval, dict) or set(approval) != {"review_sha256", "adjudication_sha256"}:
+                            errors.append(f"{prefix}: invalid dependency approval {dependency}")
+                        else:
+                            for field in ("review", "adjudication"):
+                                approved_hash = sha256(project_file(root, parent_record.get(field)))
+                                if approval[field + "_sha256"] != approved_hash:
+                                    errors.append(f"{prefix}: stale dependency approval {dependency} {field}")
                 except (ValueError, OSError) as error:
                     errors.append(f"{prefix}: missing dependency manifest {dependency}: {error}")
         files = manifest.get("files")

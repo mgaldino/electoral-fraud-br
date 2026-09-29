@@ -1,0 +1,36 @@
+{
+  "reviewer_id": "01a0ea8e-acec-7211-a061-220d8547fc6c",
+  "reviewer_role": "QA-LEDGER-SOL",
+  "executor_id": "019d795a-acfa-72c2-a210-d55a46c606c2",
+  "candidate_manifest": "quality_reports/results/2026-09-28_gate_design/candidate_checker_round3.json",
+  "candidate_manifest_sha256": "d96172668ad59c705167e46aa6031bd5f3a87f13fe87188e1d75b82cc6ebb024",
+  "status": "pass",
+  "scope": "Rechecagem focada do reparo C-F009; sem reabrir auditoria estatistica ou findings C-F001..008.",
+  "hashes_verified": {
+    "scripts/mebane_gates.py": "15601b30477b940bda011a7370d3a2edc269c7ffd89fe92e09d8dd9d34a93480",
+    "tests/test_mebane_gates.py": "2509b41b2cea142f2a4e17e64e2f3842ead8abff71409f3cf8462f50cd5d169e",
+    "quality_reports/results/2026-09-28_gate_design/implementation_checker_round3.md": "a9364ea45b4b85490372ecb76abbfe61cf6459c4f9a2886ffd7d1f8c14eb35b3"
+  },
+  "unchanged_context_hashes": {
+    "quality_reports/plans/mebane_2022_2026_gates.json": "fc44b2c192b432f0b8754adf974ffc582f7f942fa091df0edef14b081b6a0e39",
+    "quality_reports/plans/mebane_gate_agent_prompts.md": "793063d3e74be4d8b49535f3ade07da4a440f3ccc22a306fb846bf84f505bc2c"
+  },
+  "finding_closure": {
+    "id": "C-F009",
+    "status": "closed",
+    "location": "scripts/mebane_gates.py:191-216",
+    "independent_counterexample": "G0/G1 valid baseline: validate == []. Replace G0 reviewer/review and update its adjudication without changing manifests or G1 run: G1 stale dependency approval G0 review and adjudication. Restore baseline: validate == []. Change only G0 adjudication: G1 stale dependency approval G0 adjudication.",
+    "new_material_findings": []
+  },
+  "checks": [
+    {"command": "PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tests -p 'test_mebane_gates.py' -v", "result": "26 tests passed"},
+    {"command": "PYTHONDONTWRITEBYTECODE=1 python3 scripts/mebane_gates.py check", "result": "PASS: 10 gates, 45 todos; structural checks only"},
+    {"command": "PYTHONDONTWRITEBYTECODE=1 python3 - <<'PY' (independent G0/G1 fixtures in tempfile.TemporaryDirectory(dir='/tmp'); call validate before/after parent review and isolated adjudication changes) PY", "result": "Both stale predecessor approvals rejected; baseline accepted"},
+    {"command": "git diff --check -- scripts/mebane_gates.py tests/test_mebane_gates.py", "result": "exit 0"}
+  ],
+  "limits": [
+    "Inherited C-F003/C-F004 semantic checks require human review of official source and completeness of files actually used.",
+    "No analytical gate, statistical inference, R, MCMC, installation or previous findings were re-audited.",
+    "Candidate files and previously approved documents were not edited by this review."
+  ]
+}

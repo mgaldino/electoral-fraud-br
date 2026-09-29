@@ -1,0 +1,21 @@
+{
+  "schema_version": "1.0",
+  "adjudication_id": "mebane-gates-checker:2effb4bc7769:round2",
+  "source": {"reviewed_artifact": "scripts/mebane_gates.py", "sha256": "2effb4bc77697ba4a60b108de42b797d7b211268e0209f1000c93baddb7b13aa", "artifact_intact": true},
+  "contract": {"required": false, "path": null, "sha256": null, "contract_id": null, "artifact_sha256": null, "status": null, "stale": false},
+  "review_sources": [{"review_id": "C-R2", "path": "quality_reports/results/2026-09-28_gate_design/review_checker_round2.json", "sha256": "140869ea3c08b904d34ae9b8a584fdf94d95eb9cc2564307b8185e2f0b3557ac"}],
+  "findings": [{
+    "finding_id": "C-F009", "source_review": "C-R2",
+    "quoted_finding": "Substituir a revisão e adjudicação de G0 sem mudar seu manifesto deixa G1 aprovado.",
+    "type": "scope_or_consistency", "severity": "major", "scientific_dimension": "rastreabilidade de aprovação", "held_decision": false,
+    "status": "CONFIRMED", "source_locations": ["scripts/mebane_gates.py:189", "quality_reports/plans/mebane_gate_agent_prompts.md:224"],
+    "defect_evidence": ["O coordenador reproduziu o contraexemplo com as fixtures G0/G1: validate retornou lista vazia antes e depois da troca de revisor/parecer do predecessor."],
+    "refuting_evidence": [],
+    "mechanical_checks": [{"command": "PYTHONDONTWRITEBYTECODE=1 python3: importar GateTests; aprovar G0/G1; trocar reviewer_id de G0, sincronizar adjudication.review_sha256; executar validate.", "result": "before: []; after parent approval replaced: []"}],
+    "reasoning": "O hash do manifesto não inclui pareceres posteriores; logo ele não identifica a aprovação concreta exigida pelo contrato.",
+    "proposed_fix_assessment": "safe",
+    "disposition": "Adicionar run.dependency_approvals com hashes de review e adjudication por predecessor; comparar aos records vigentes e testar alteração isolada de ambos. Não alterar o contrato científico aprovado."
+  }],
+  "summary": {"total": 1, "confirmed": 1, "partial": 0, "refuted": 0, "unresolved": 0, "held_decisions": 0},
+  "adjudication": {"verdict": "READY_FOR_IMPLEMENTATION", "checked_at": "2026-09-28", "reasons": ["Contraexemplo reproduzido no candidato congelado.", "Reparo preserva a regra de reabertura já aprovada e não muda alvo ou estimando."]}
+}
