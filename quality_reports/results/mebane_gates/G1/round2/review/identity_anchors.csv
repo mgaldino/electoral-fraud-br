@@ -1,0 +1,9 @@
+source,NR_TURNO,CD_ELEICAO,DT_ELEICAO,CD_TIPO_ELEICAO
+raw_detail,1,544,02/10/2022,2
+raw_detail,2,545,30/10/2022,2
+raw_vote,1,544,02/10/2022,2
+raw_vote,2,545,30/10/2022,2
+official_detail,1,544,02/10/2022,2
+official_detail,2,545,30/10/2022,2
+official_vote,1,544,02/10/2022,2
+official_vote,2,545,30/10/2022,2

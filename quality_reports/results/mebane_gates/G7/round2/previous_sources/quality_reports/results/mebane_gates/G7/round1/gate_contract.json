@@ -1,0 +1,24 @@
+{
+  "id": "G7",
+  "title": "Prontidão operacional para 2026",
+  "goal": "Deixar preparada e ensaiada a recepção de dados de cada turno de 2026, com validação, versões e execução parametrizada sem pressupor disponibilidade ou schema idêntico.",
+  "depends_on": ["G1"],
+  "external_prerequisites": [],
+  "executor": {"role": "SOL-PRONTIDAO-2026", "model": "gpt-6-sol", "effort": "high"},
+  "reviewer": {"role": "QA-PRONTIDAO-2026", "model": "gpt-6-sol", "effort": "xhigh", "independent": true},
+  "write_scope": ["R/lib/mebane_2026_intake.R", "config/mebane/2026/", "tests/mebane/2026/", "quality_reports/results/mebane_gates/G7/"],
+  "todos": [
+    {"id": "G7-T1", "task": "Configurar fontes oficiais, cargo, turnos e regras de seleção do candidato; registrar data da fonte sem adivinhar resultado eleitoral nem URL de arquivo ainda inexistente."},
+    {"id": "G7-T2", "task": "Ensaiar recepção, checksums, versionamento imutável, cobertura e validação com fixtures de 2022 e schemas deliberadamente alterados."},
+    {"id": "G7-T3", "task": "Testar revisões de arquivos, duplicação de downloads, dados parciais, ausência de segundo turno e conflito de códigos de candidatos; impedir mistura de saídas entre anos/turnos."},
+    {"id": "G7-T4", "task": "Entregar roteiro de recepção por turno e snapshot oficial, preservando registros anteriores. Testar G8 pass/G9 waiting_external, G8 pass/G9 inconclusive e G9 not_applicable apenas por não ocorrência oficial; explicitar liberação inferencial após G6 e o que depende dos dados reais."}
+  ],
+  "deliverables": ["Configuração e intake 2026", "Fixtures e teste de ensaio", "Roteiro de execução por turno"],
+  "acceptance": [
+    "QA executa ensaio limpo e prova que revisões preservam a entrada anterior e não alteram 2022.",
+    "Schema incompatível e cobertura incompleta geram falha identificável.",
+    "Data-ready está separado de inference-ready: G7 não libera inferência sem G6.",
+    "Segundo turno é condicional à ocorrência oficial e disponibilidade dos dados."
+  ],
+  "on_failure": "Reparar intake ou validações; não bloquear o ramo metodológico independente."
+}

@@ -1,0 +1,61 @@
+{
+  "year": 2022,
+  "turn": 2,
+  "election_date": "30/10/2022",
+  "candidate": {
+    "code": 22,
+    "name": "CANDIDATO"
+  },
+  "version": "80095f4cdad715c418306461908e74d478e7f246a0beda082530c15235cfdf2e",
+  "policy_sha256": "c19be1f560e4f8498556554e41fe9f5ea90d14bc808df09a84919687e30c8fd3",
+  "input_hashes": {
+    "votes": "47fc94706f5f31f85b57954a3b1560d4e587273a3affb26c33f19a7acfc09232",
+    "ea11": "2199ced2754a0c31a84f8f5682e9c687ec7c552a01ed1b95dc2a91b1f5df1792",
+    "ea16_1": "c1e432d8dd777c466922d97ba2489dbc088d6df64df73b9b9b978ca7c467a3a6",
+    "controls": "58904ecb6cf16f82e9083352e45934783e683a00fc363cd89c27fa2694fc709f",
+    "config": "49f2e7db031b3eead784a68950c51a09a0288731feebcc702ee49c59d10a380b"
+  },
+  "provenance": "fixture",
+  "phase": "s",
+  "source_url": "",
+  "validation": {
+    "reference_complete": true,
+    "national_coverage_attested": false,
+    "territorial_scope": {
+      "universe": "Synthetic SP principal sections listed in the supplied EA16; not a statewide census",
+      "expected_ufs": [
+        "SP"
+      ],
+      "reference_ufs": [
+        "SP"
+      ],
+      "observed_ufs": [
+        "SP"
+      ],
+      "coverage_basis": "supplied_EA16_principal_sections"
+    },
+    "by_uf": [
+      {
+        "uf": "SP",
+        "reference_sections": 2,
+        "observed_sections": 2,
+        "missing_sections": 0
+      }
+    ],
+    "expected_sections": 2,
+    "observed_sections": 2,
+    "missing_sections": [],
+    "totals": {
+      "aptos": 18,
+      "turnout": 11,
+      "candidate_votes": 7,
+      "blank": 2,
+      "null": 2
+    },
+    "controls_pass": true,
+    "status": "staging_validated"
+  },
+  "data_ready": false,
+  "inference_ready": false,
+  "release_condition": "independent official-source and coverage attestation; G6 pass for inference"
+}

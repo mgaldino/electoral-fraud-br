@@ -1,0 +1,20 @@
+{
+  "artifact": "quality_reports/results/mebane_gates/coordination/2026-09-29_resumo_execucao.pdf",
+  "pdf_sha256": "2b204678f10c4c86e4efc212f525f50d47e86a4caefc308d3642f27bb0cab41a",
+  "status": "pass",
+  "scope": "Final PDF visual inspection by the coordinator, separate from scientific gate approval",
+  "render_command": "pdftoppm -r 95 -png quality_reports/results/mebane_gates/coordination/2026-09-29_resumo_execucao.pdf /tmp/mebane_execution_brief_final",
+  "pages_inspected": [1, 2, 3, 4],
+  "checks": {
+    "no_clipping_or_overlap": true,
+    "readable_text_and_accents": true,
+    "table_header_and_caption_present": true,
+    "numbered_pages_and_footer": true,
+    "eight_source_links_in_pdf": true,
+    "states_match_final_ledger": true,
+    "historical_results_distinguished_from_new_execution": true,
+    "limitations_and_owner_decision_visible": true
+  },
+  "geometry_record": "quality_reports/results/mebane_gates/coordination/2026-09-29_resumo_execucao_geometry.json",
+  "notes": "All four final PNGs were opened with view_image. No layout repair required. PNGs are scratch files, not delivery artifacts."
+}

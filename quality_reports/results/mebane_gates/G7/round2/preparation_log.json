@@ -1,0 +1,9 @@
+{
+  "command": "python3 quality_reports/results/mebane_gates/G7/round2/prepare_round.py",
+  "exit_code": 0,
+  "wall_seconds": 0.3422645829850808,
+  "candidate_files": 275,
+  "qa_files": 809,
+  "round1_files": 1066,
+  "preserved_files": 1094
+}

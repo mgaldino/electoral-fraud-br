@@ -1,0 +1,17 @@
+zip_path,member,generation,NR_TURNO,field,configured,official,matches
+quality_reports/results/mebane_gates/coordination/detalhe_votacao_munzona_2022.zip,detalhe_votacao_munzona_2022_BR.csv,28/09/2026,1,NR_TURNO,1,1,TRUE
+quality_reports/results/mebane_gates/coordination/detalhe_votacao_munzona_2022.zip,detalhe_votacao_munzona_2022_BR.csv,28/09/2026,2,NR_TURNO,2,2,TRUE
+quality_reports/results/mebane_gates/coordination/detalhe_votacao_munzona_2022.zip,detalhe_votacao_munzona_2022_BR.csv,28/09/2026,1,CD_ELEICAO,544,544,TRUE
+quality_reports/results/mebane_gates/coordination/detalhe_votacao_munzona_2022.zip,detalhe_votacao_munzona_2022_BR.csv,28/09/2026,2,CD_ELEICAO,545,545,TRUE
+quality_reports/results/mebane_gates/coordination/detalhe_votacao_munzona_2022.zip,detalhe_votacao_munzona_2022_BR.csv,28/09/2026,1,DT_ELEICAO,02/10/2022,02/10/2022,TRUE
+quality_reports/results/mebane_gates/coordination/detalhe_votacao_munzona_2022.zip,detalhe_votacao_munzona_2022_BR.csv,28/09/2026,2,DT_ELEICAO,30/10/2022,30/10/2022,TRUE
+quality_reports/results/mebane_gates/coordination/detalhe_votacao_munzona_2022.zip,detalhe_votacao_munzona_2022_BR.csv,28/09/2026,1,CD_TIPO_ELEICAO,2,2,TRUE
+quality_reports/results/mebane_gates/coordination/detalhe_votacao_munzona_2022.zip,detalhe_votacao_munzona_2022_BR.csv,28/09/2026,2,CD_TIPO_ELEICAO,2,2,TRUE
+quality_reports/results/mebane_gates/coordination/votacao_candidato_munzona_2022.zip,votacao_candidato_munzona_2022_BR.csv,28/09/2026,1,NR_TURNO,1,1,TRUE
+quality_reports/results/mebane_gates/coordination/votacao_candidato_munzona_2022.zip,votacao_candidato_munzona_2022_BR.csv,28/09/2026,2,NR_TURNO,2,2,TRUE
+quality_reports/results/mebane_gates/coordination/votacao_candidato_munzona_2022.zip,votacao_candidato_munzona_2022_BR.csv,28/09/2026,1,CD_ELEICAO,544,544,TRUE
+quality_reports/results/mebane_gates/coordination/votacao_candidato_munzona_2022.zip,votacao_candidato_munzona_2022_BR.csv,28/09/2026,2,CD_ELEICAO,545,545,TRUE
+quality_reports/results/mebane_gates/coordination/votacao_candidato_munzona_2022.zip,votacao_candidato_munzona_2022_BR.csv,28/09/2026,1,DT_ELEICAO,02/10/2022,02/10/2022,TRUE
+quality_reports/results/mebane_gates/coordination/votacao_candidato_munzona_2022.zip,votacao_candidato_munzona_2022_BR.csv,28/09/2026,2,DT_ELEICAO,30/10/2022,30/10/2022,TRUE
+quality_reports/results/mebane_gates/coordination/votacao_candidato_munzona_2022.zip,votacao_candidato_munzona_2022_BR.csv,28/09/2026,1,CD_TIPO_ELEICAO,2,2,TRUE
+quality_reports/results/mebane_gates/coordination/votacao_candidato_munzona_2022.zip,votacao_candidato_munzona_2022_BR.csv,28/09/2026,2,CD_TIPO_ELEICAO,2,2,TRUE

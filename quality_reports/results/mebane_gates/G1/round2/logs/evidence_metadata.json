@@ -1,0 +1,14 @@
+{
+  "command": [
+    "python3",
+    "-c",
+    "import json; from pathlib import Path; root=Path.cwd(); r=root/\"quality_reports/results/mebane_gates/G1/round2\"; todos=json.loads((r/\"todo_evidence.json\").read_text()); contract=json.loads((root/\"quality_reports/results/mebane_gates/G1/round1/gate_contract.json\").read_text()); assert set(todos)=={t[\"id\"] for t in contract[\"todos\"]}; repairs=json.loads((r/\"repair_evidence.json\").read_text()); assert len(repairs[\"findings\"])==3 and repairs[\"gate_approval\"] is False; entries=[e for t in todos.values() for e in t[\"evidence\"]]+[e for f in repairs[\"findings\"] for e in f[\"evidence\"]]; assert all(e[\"basis\"] in {\"executed\",\"inspected\",\"historical\"} and (root/e[\"path\"]).is_file() for e in entries); assert all((root/f[\"authorization\"]).is_file() and f[\"independent_recheck\"]==\"pending\" for f in repairs[\"findings\"]); assert len({f[\"authorization\"] for f in repairs[\"findings\"]})==2; print(\"PASS: five todos and three repair mappings with existing evidence paths; both adjudications preserved as distinct authorizations; independent review pending.\")"
+  ],
+  "command_display": "python3 -c 'import json; from pathlib import Path; root=Path.cwd(); r=root/\"quality_reports/results/mebane_gates/G1/round2\"; todos=json.loads((r/\"todo_evidence.json\").read_text()); contract=json.loads((root/\"quality_reports/results/mebane_gates/G1/round1/gate_contract.json\").read_text()); assert set(todos)=={t[\"id\"] for t in contract[\"todos\"]}; repairs=json.loads((r/\"repair_evidence.json\").read_text()); assert len(repairs[\"findings\"])==3 and repairs[\"gate_approval\"] is False; entries=[e for t in todos.values() for e in t[\"evidence\"]]+[e for f in repairs[\"findings\"] for e in f[\"evidence\"]]; assert all(e[\"basis\"] in {\"executed\",\"inspected\",\"historical\"} and (root/e[\"path\"]).is_file() for e in entries); assert all((root/f[\"authorization\"]).is_file() and f[\"independent_recheck\"]==\"pending\" for f in repairs[\"findings\"]); assert len({f[\"authorization\"] for f in repairs[\"findings\"]})==2; print(\"PASS: five todos and three repair mappings with existing evidence paths; both adjudications preserved as distinct authorizations; independent review pending.\")'",
+  "scope": "Validate todo/repair evidence references and authorization attribution before freezing",
+  "started_at_utc": "2026-09-29T03:09:55.477459+00:00",
+  "ended_at_utc": "2026-09-29T03:09:55.498920+00:00",
+  "elapsed_seconds": 0.021413,
+  "exit_code": 0,
+  "output": "quality_reports/results/mebane_gates/G1/round2/logs/evidence_metadata.txt"
+}

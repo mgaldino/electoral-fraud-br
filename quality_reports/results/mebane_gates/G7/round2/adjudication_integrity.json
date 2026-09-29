@@ -1,0 +1,23 @@
+{
+  "identities": {
+    "candidate_manifest.json": "2593c78b5687c883aff6441f09b5d2e67cd319c1ceae723d043dee44a36e62a6",
+    "review/review.json": "9fb58b9afb0d4aac73a56989a232ac005d4f3ff4f415504d4cb11b58a815f6b7",
+    "review/review_manifest.json": "ac267cf285ce751c53b37bea838659058451b2cb4a8bb0df97790e7c711479c1"
+  },
+  "verified_files": {
+    "candidate_manifest.json": 1859,
+    "review/review_manifest.json": 1173
+  },
+  "coordinator_checks": [
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/g7_round2_coordinator_C.json",
+      "sha256": "4d78d96a8b0c56b9bb84e0e8ae64d834ad202c6ec65c57d5c567a3e090046a50",
+      "locale": "C"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/g7_round2_coordinator_UTF8.json",
+      "sha256": "4837f83b1c1e3ad081355b28887ac3669b89688c672307d140252df1a7045b54",
+      "locale": "pt_BR.UTF-8"
+    }
+  ]
+}

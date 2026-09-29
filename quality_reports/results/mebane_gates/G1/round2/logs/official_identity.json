@@ -1,0 +1,15 @@
+{
+  "command": [
+    "Rscript",
+    "--vanilla",
+    "tests/mebane/data/check_round2_identity_sources.R",
+    "quality_reports/results/mebane_gates/G1/round2/checks"
+  ],
+  "command_display": "Rscript --vanilla tests/mebane/data/check_round2_identity_sources.R quality_reports/results/mebane_gates/G1/round2/checks",
+  "scope": "Expected code/date/type per turn against both official BR archive members",
+  "started_at_utc": "2026-09-29T02:57:53.432302+00:00",
+  "ended_at_utc": "2026-09-29T02:57:53.729642+00:00",
+  "elapsed_seconds": 0.297271,
+  "exit_code": 0,
+  "output": "quality_reports/results/mebane_gates/G1/round2/logs/official_identity.txt"
+}

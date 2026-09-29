@@ -1,0 +1,221 @@
+--- round1/R/lib/mebane_2026_intake.R
++++ round2/R/lib/mebane_2026_intake.R
+@@ -3,10 +3,11 @@
+ g7_fail <- function(message) stop(message, call. = FALSE)
+ g7_sha <- function(path) digest::digest(file = path, algo = "sha256")
+ g7_json <- function(path) jsonlite::fromJSON(path, simplifyVector = FALSE)
+-g7_policy_version <- "g7-intake-v2"
++g7_policy_version <- "g7-intake-v3-round2"
+ g7_policy_fingerprint <- function() {
+   functions <- c("g7_fail", "g7_sha", "g7_json", "g7_policy_fingerprint",
+-                 "g7_scalar", "g7_int", "g7_doc_int", "g7_keys", "g7_read_config", "g7_election",
++                 "g7_scalar", "g7_int", "g7_doc_int", "g7_keys", "g7_date",
++                 "g7_check_utf8", "g7_read_config", "g7_election",
+                  "g7_sections", "g7_read_votes", "g7_validate", "g7_controls",
+                  "g7_stage", "g7_gate_route")
+   digest::digest(list(version = g7_policy_version,
+@@ -27,16 +28,45 @@
+ }
+ g7_keys <- function(x, required) is.list(x) && !is.null(names(x)) &&
+   !anyDuplicated(names(x)) && all(required %in% names(x))
++g7_date <- function(x, year) {
++  if (!is.character(x) || !g7_scalar(x) ||
++      !grepl("^[0-9]{2}/[0-9]{2}/[0-9]{4}$", x)) return(FALSE)
++  parsed <- as.Date(x, "%d/%m/%Y")
++  !is.na(parsed) && format(parsed, "%d/%m/%Y") == x &&
++    as.integer(format(parsed, "%Y")) == year
++}
++g7_check_utf8 <- function(path) {
++  bytes <- readBin(path, "raw", n = file.info(path)$size)
++  if (any(bytes == as.raw(0))) g7_fail("Invalid UTF-8 CSV: embedded NUL")
++  if (!validUTF8(rawToChar(bytes))) g7_fail("Invalid UTF-8 CSV bytes")
++  invisible(NULL)
++}
+ 
+ g7_read_config <- function(path) {
+   x <- g7_json(path)
+   needed <- c("schema", "year", "cargo", "pleito_t1_documented",
+-              "election_t1_documented", "turns", "candidate_selection")
+-  if (!g7_keys(x, needed) || x$schema != "g7-intake-v1" ||
++              "election_t1_documented", "turns", "candidate_selection",
++              "election_dates", "territorial_scope")
++  if (!g7_keys(x, needed) || x$schema != "g7-intake-v2" ||
+       !g7_int(x$year, TRUE) || !g7_int(x$cargo, TRUE) ||
+       !g7_int(x$pleito_t1_documented, TRUE) ||
+       !g7_int(x$election_t1_documented, TRUE) ||
+       !identical(unlist(x$turns), c(1L, 2L))) g7_fail("Invalid intake configuration")
++  if (!g7_keys(x$election_dates, c("1", "2")) ||
++      !setequal(names(x$election_dates), c("1", "2")) ||
++      !all(vapply(x$election_dates, g7_date, logical(1), year = x$year)) ||
++      as.Date(x$election_dates[["1"]], "%d/%m/%Y") >=
++      as.Date(x$election_dates[["2"]], "%d/%m/%Y"))
++    g7_fail("Invalid configured election dates")
++  scope <- x$territorial_scope
++  if (!g7_keys(scope, c("universe", "expected_ufs")) ||
++      !is.character(scope$universe) || !g7_scalar(scope$universe) || !nzchar(scope$universe) ||
++      !is.list(scope$expected_ufs) || !is.null(names(scope$expected_ufs)) ||
++      !length(scope$expected_ufs) ||
++      !all(vapply(scope$expected_ufs, function(uf) is.character(uf) && g7_scalar(uf) &&
++                    grepl("^[A-Z]{2}$", uf), logical(1))) ||
++      anyDuplicated(unlist(scope$expected_ufs)))
++    g7_fail("Invalid configured territorial scope")
+   x
+ }
+ 
+@@ -68,11 +98,10 @@
+   }
+   if (length(matches) != 1L) g7_fail("EA11 election/cargo/turn not unique")
+   m <- matches[[1L]]
+-  if (!is.character(m$date) || !g7_scalar(m$date) ||
+-      !grepl("^[0-9]{2}/[0-9]{2}/[0-9]{4}$", m$date) ||
+-      is.na(as.Date(m$date, "%d/%m/%Y")) ||
+-      as.integer(format(as.Date(m$date, "%d/%m/%Y"), "%Y")) != cfg$year)
++  if (!g7_date(m$date, cfg$year))
+     g7_fail("EA11 identity/date invalid")
++  if (!identical(m$date, cfg$election_dates[[as.character(turn)]]))
++    g7_fail("EA11 date differs from configured turn date")
+   if (turn == 1L && (m$pleito != cfg$pleito_t1_documented ||
+                      m$election != cfg$election_t1_documented))
+     g7_fail("EA11 conflicts with documented T1 identifiers")
+@@ -123,10 +152,13 @@
+   fields <- c("year", "turn", "pleito", "election", "cargo", "uf", "municipio",
+               "zona", "secao", "candidate_code", "candidate_name", "votes",
+               "aptos", "turnout", "blank", "null")
+-  header <- names(read.csv(path, nrows = 0L, check.names = FALSE))
++  g7_check_utf8(path)
++  # encoding marks validated bytes; fileEncoding would transcode to LC_CTYPE.
++  header <- names(read.csv(path, nrows = 0L, check.names = FALSE,
++                           encoding = "UTF-8", fileEncoding = ""))
+   if (!identical(header, fields)) g7_fail("Unknown normalized CSV schema")
+   v <- read.csv(path, colClasses = "character", check.names = FALSE,
+-                na.strings = character(), fileEncoding = "UTF-8")
++                na.strings = character(), encoding = "UTF-8", fileEncoding = "")
+   if (!nrow(v) || anyNA(v) || any(!nzchar(as.matrix(v)))) g7_fail("Empty/missing vote values")
+   number <- c("year", "turn", "pleito", "election", "cargo", "candidate_code",
+               "votes", "aptos", "turnout", "blank", "null")
+@@ -143,6 +175,10 @@
+ }
+ 
+ g7_validate <- function(v, cfg, election, expected, turn) {
++  expected_ufs <- sort(unlist(cfg$territorial_scope$expected_ufs, use.names = FALSE))
++  reference_ufs <- sort(unique(substr(expected, 1L, 2L)))
++  if (length(setdiff(expected_ufs, reference_ufs))) g7_fail("EA16 missing configured UFs")
++  if (length(setdiff(reference_ufs, expected_ufs))) g7_fail("EA16 unexpected UFs")
+   for (field in c("year", "turn", "pleito", "election", "cargo")) {
+     target <- switch(field, year = cfg$year, turn = turn, pleito = election$pleito,
+                      election = election$election, cargo = cfg$cargo)
+@@ -161,7 +197,19 @@
+   if (any(v$turnout > v$aptos) || any(v$votes + v$blank + v$null > v$turnout))
+     g7_fail("Impossible section totals")
+   missing <- setdiff(expected, key)
+-  list(complete = !length(missing), expected_sections = length(expected),
++  by_uf <- lapply(expected_ufs, function(uf) {
++    ref <- expected[substr(expected, 1L, 2L) == uf]
++    observed <- key[v$uf == uf]
++    list(uf = uf, reference_sections = length(ref), observed_sections = length(observed),
++         missing_sections = length(setdiff(ref, observed)))
++  })
++  list(reference_complete = !length(missing), national_coverage_attested = FALSE,
++       territorial_scope = list(universe = cfg$territorial_scope$universe,
++                                 expected_ufs = as.list(expected_ufs),
++                                 reference_ufs = as.list(reference_ufs),
++                                 observed_ufs = as.list(sort(unique(v$uf))),
++                                 coverage_basis = "supplied_EA16_principal_sections"),
++       by_uf = by_uf, expected_sections = length(expected),
+        observed_sections = length(key), missing_sections = missing,
+        totals = list(aptos = sum(v$aptos), turnout = sum(v$turnout),
+                      candidate_votes = sum(v$votes), blank = sum(v$blank), null = sum(v$null)))
+@@ -175,7 +223,7 @@
+       x$year != cfg$year || x$turn != turn || x$pleito != election$pleito ||
+       x$election != election$election || x$sections != result$expected_sections)
+     g7_fail("Independent controls schema/scope mismatch")
+-  if (!result$complete) return(FALSE)
++  if (!result$reference_complete) return(FALSE)
+   all(vapply(c("aptos", "turnout", "candidate_votes", "blank", "null"),
+              function(field) identical(as.numeric(x[[field]]), as.numeric(result$totals[[field]])),
+              logical(1)))
+@@ -198,7 +246,7 @@
+   v <- g7_read_votes(vote_path)
+   result <- g7_validate(v, cfg, election, expected, turn)
+   result$controls_pass <- g7_controls(controls_path, cfg, election, turn, result)
+-  result$status <- if (!result$complete) "incomplete_coverage" else
++  result$status <- if (!result$reference_complete) "incomplete_coverage" else
+     if (!result$controls_pass) "control_mismatch" else "staging_validated"
+   if (provenance == "official" && (election$phase != "o" ||
+       !is.character(source_url) || length(source_url) != 1L ||
+@@ -211,7 +259,8 @@
+   version <- digest::digest(paste(c(hashes, provenance, source_url, policy_sha256), collapse = ":"),
+                             algo = "sha256", serialize = FALSE)
+   root <- file.path(store, as.character(cfg$year), paste0("turn", turn), version)
+-  receipt <- list(year = cfg$year, turn = turn, version = version,
++  receipt <- list(year = cfg$year, turn = turn, election_date = election$date,
++                  candidate = cfg$candidate_selection[[as.character(turn)]], version = version,
+                   policy_sha256 = policy_sha256, input_hashes = as.list(hashes),
+                   provenance = provenance, phase = election$phase, source_url = source_url,
+                   validation = result,
+--- round1/config/mebane/2026/intake.json
++++ round2/config/mebane/2026/intake.json
+@@ -1,10 +1,21 @@
+ {
+-  "schema": "g7-intake-v1",
++  "schema": "g7-intake-v2",
+   "year": 2026,
+   "cargo": 1,
+   "pleito_t1_documented": 3220,
+   "election_t1_documented": 6257,
+   "turns": [1, 2],
++  "election_dates": {"1": "04/10/2026", "2": "25/10/2026"},
++  "calendar_source": {
++    "url": "https://www.tse.jus.br/comunicacao/noticias/2026/Marco/eleicoes-2026-confira-as-principais-datas-do-calendario-eleitoral",
++    "accessed": "2026-09-28",
++    "local_evidence": "quality_reports/results/mebane_gates/coordination/tse2026_source_preflight.md",
++    "turn_2_date_is_conditional": true
++  },
++  "territorial_scope": {
++    "universe": "Presidential Brazil including exterior; section universe must be independently attested",
++    "expected_ufs": ["AC", "AL", "AM", "AP", "BA", "CE", "DF", "ES", "GO", "MA", "MG", "MS", "MT", "PA", "PB", "PE", "PI", "PR", "RJ", "RN", "RO", "RR", "RS", "SC", "SE", "SP", "TO", "ZZ"]
++  },
+   "candidate_selection": {"1": null, "2": null},
+   "turn_2": "conditional_on_official_occurrence",
+   "technical_sources_accessed": "2026-09-28",
+--- round1/tests/mebane/2026/check_dag.py
++++ round2/tests/mebane/2026/check_dag.py
+@@ -11,7 +11,7 @@
+ sys.path.insert(0, str(ROOT / "scripts"))
+ import mebane_gates  # noqa: E402
+ 
+-snapshot = ROOT / "quality_reports/results/mebane_gates/G7/round1/ledger_dag_snapshot.json"
++snapshot = ROOT / "quality_reports/results/mebane_gates/G7/round2/ledger_dag_snapshot.json"
+ base = json.loads(snapshot.read_text())
+ for target in ("G8", "G9"):
+     plan = copy.deepcopy(base)
+--- round1/tests/mebane/2026/fixtures/config2022.json
++++ round2/tests/mebane/2026/fixtures/config2022.json
+@@ -1 +1 @@
+-{"schema":"g7-intake-v1","year":2022,"cargo":1,"pleito_t1_documented":544,"election_t1_documented":544,"turns":[1,2],"candidate_selection":{"1":{"code":22,"name":"CANDIDATO"},"2":{"code":22,"name":"CANDIDATO"}}}
++{"schema":"g7-intake-v2","year":2022,"cargo":1,"pleito_t1_documented":544,"election_t1_documented":544,"turns":[1,2],"election_dates":{"1":"02/10/2022","2":"30/10/2022"},"territorial_scope":{"universe":"Synthetic SP principal sections listed in the supplied EA16; not a statewide census","expected_ufs":["SP"]},"candidate_selection":{"1":{"code":22,"name":"CANDIDATO"},"2":{"code":22,"name":"CANDIDATO"}}}
+--- round1/tests/mebane/2026/run_tests.R
++++ round2/tests/mebane/2026/run_tests.R
+@@ -43,7 +43,7 @@
+ receipt_hash <- g7_sha(receipt_path)
+ for (field in c("validation", "data_ready", "inference_ready", "year", "turn", "version")) {
+   forged <- g7_json(receipt_backup)
+-  if (field == "validation") forged$validation$complete <- FALSE
++  if (field == "validation") forged$validation$reference_complete <- FALSE
+   if (field == "data_ready") forged$data_ready <- TRUE
+   if (field == "inference_ready") forged$inference_ready <- TRUE
+   if (field == "year") forged$year <- 2026L
+@@ -88,7 +88,12 @@
+ control_multi <- g7_json(control1)
+ control_multi$sections <- 4L
+ jsonlite::write_json(control_multi, multi_uf_controls, auto_unbox = TRUE)
+-multi_uf <- stage(vote1, reference = c(ea16_1, other_uf), controls = multi_uf_controls)
++multi_uf_config <- file.path(out, "multi_uf_config.json")
++cfg_multi <- g7_json(cfg)
++cfg_multi$territorial_scope$expected_ufs <- list("SP", "AM")
++jsonlite::write_json(cfg_multi, multi_uf_config, auto_unbox = TRUE)
++multi_uf <- stage(vote1, reference = c(ea16_1, other_uf), controls = multi_uf_controls,
++                  config = multi_uf_config)
+ stopifnot(multi_uf$validation$status == "incomplete_coverage",
+           multi_uf$validation$expected_sections == 4L)
+ copied_uf <- file.path(out, "ea16_duplicate.json")

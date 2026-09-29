@@ -1,0 +1,11 @@
+{
+  "identities": {
+    "candidate_manifest.json": "62f7a5c4907c9d39b75fe5cd88224bddb4796e015f69f004469e51df7ae493c8",
+    "review/review.json": "a0232205b424c747f354fa5c950c7286370bd168070c51858945e0ff33886297",
+    "review/review_manifest.json": "b8192cd30f8decf6f7be761f0dfd5f809dc6bc43cf1f67464769dffd725dd10f"
+  },
+  "verified_files": {
+    "candidate_manifest.json": 275,
+    "review/review_manifest.json": 809
+  }
+}

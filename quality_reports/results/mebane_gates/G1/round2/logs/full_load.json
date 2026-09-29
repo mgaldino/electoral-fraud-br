@@ -1,0 +1,16 @@
+{
+  "command": [
+    "Rscript",
+    "--vanilla",
+    "R/01_load_tse.R",
+    "config/mebane/2022.json",
+    "quality_reports/results/mebane_gates/G1/round2/outputs/2022_final"
+  ],
+  "command_display": "Rscript --vanilla R/01_load_tse.R config/mebane/2022.json quality_reports/results/mebane_gates/G1/round2/outputs/2022_final",
+  "scope": "Complete 2022 section and vote load with configured election identity per turn",
+  "started_at_utc": "2026-09-29T02:56:52.376209+00:00",
+  "ended_at_utc": "2026-09-29T02:57:02.312660+00:00",
+  "elapsed_seconds": 9.936325,
+  "exit_code": 0,
+  "output": "quality_reports/results/mebane_gates/G1/round2/logs/full_load.txt"
+}

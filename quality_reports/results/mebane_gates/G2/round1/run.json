@@ -1,0 +1,213 @@
+{
+  "gate_id": "G2",
+  "round": "round1",
+  "contract_sha256": "f834bc1d12d88b4bc82fb2ada95120a838451c5809332630a75cd9abf03cf4d1",
+  "executor_id": "01a0eaee-01df-7773-bd63-d321db26a47c",
+  "executor_role": "METODO-PRINCIPAL",
+  "goal_id": "01a0eaee-01df-7773-bd63-d321db26a47c",
+  "goal_objective": "Entregar candidato revisável delimitado da auditoria matemática exata G2; completar entrega não aprova gate",
+  "requested_model": "inherit",
+  "requested_effort": "xhigh",
+  "effective_model": "unknown_not_exposed_by_runtime",
+  "effective_effort": "unknown_not_exposed_by_runtime",
+  "started_at_utc": "2026-09-29T02:11:15+00:00",
+  "candidate_created_at_utc": "2026-09-29T02:43:02.987069+00:00",
+  "outcome": "candidate_delivered_with_material_decisions_pending",
+  "gate_approved": false,
+  "independent_review_obtained": false,
+  "dependency_manifests": {
+    "G0": "f71333db477385fc78dad8a7a1a7ca78e48479226dcdbde80ce97d724409fec7"
+  },
+  "dependency_approvals": {
+    "G0": {
+      "review_sha256": "ef624cb4b2d8ad098b87e196d87add358ce1eba93165d44fcc1939ff303f5376",
+      "adjudication_sha256": "ea1b4905fdfa14f6e3f36c41974ea948ba0c39d1f81f87d6eaf479782216267b"
+    }
+  },
+  "inputs": [
+    "quality_reports/results/mebane_gates/G0/round1/candidate_manifest.json",
+    "quality_reports/results/mebane_gates/G0/round1/claims.md",
+    "quality_reports/results/mebane_gates/G0/round1/inventory.json",
+    "quality_reports/results/mebane_gates/G0/round1/loads_environment.json",
+    "quality_reports/results/mebane_gates/G0/round1/snapshot_map.json",
+    "quality_reports/results/mebane_gates/G0/round2/adjudication.json",
+    "quality_reports/results/mebane_gates/G0/round2/candidate_manifest.json",
+    "quality_reports/results/mebane_gates/G0/round2/review/review.json",
+    "quality_reports/results/mebane_gates/G2/round1/sources/05_eforensics_qbl_brasilia_fresh_v2_summary.txt",
+    "quality_reports/results/mebane_gates/G2/round1/sources/05_jags_qbl_zone_fe_summary.txt",
+    "quality_reports/results/mebane_gates/G2/round1/sources/05_stan_qbl_brasilia_log_n2000.md",
+    "quality_reports/results/mebane_gates/G2/round1/sources/05_stan_qbl_brasilia_timings_n2000.csv",
+    "quality_reports/results/mebane_gates/G2/round1/sources/denominadores_contexto.md",
+    "quality_reports/results/mebane_gates/G2/round1/sources/jags_user_manual_4.3.0.pdf",
+    "quality_reports/results/mebane_gates/G2/round1/sources/jags_user_manual_4.3.0.txt",
+    "quality_reports/results/mebane_gates/G2/round1/sources/measfrauds_2022.txt",
+    "quality_reports/results/mebane_gates/G2/round1/sources/measfrauds_page8.png",
+    "quality_reports/results/mebane_gates/G2/round1/sources/pm23_2023.txt",
+    "quality_reports/results/mebane_gates/G2/round1/sources/pm23_page9.png",
+    "quality_reports/results/mebane_gates/coordination/measfrauds_2022-03-06.pdf",
+    "quality_reports/results/mebane_gates/coordination/method_sources_download.md",
+    "quality_reports/results/mebane_gates/coordination/pm23_2023-07-02.pdf"
+  ],
+  "code": [
+    "quality_reports/results/mebane_gates/G0/round1/ef_models_3017de5.R",
+    "quality_reports/results/mebane_gates/G0/round1/final_state/R/05_eforensics_qbl_fresh_diagnostic.R",
+    "quality_reports/results/mebane_gates/G0/round1/final_state/R/05_jags_qbl_zone_fe.R",
+    "quality_reports/results/mebane_gates/G0/round1/final_state/R/05_stan_eforensics_qbl_calibrate.R",
+    "quality_reports/results/mebane_gates/G0/round1/final_state/stan/eforensics_qbl.stan",
+    "quality_reports/results/mebane_gates/G0/round1/qbl_installed_3017de5.jags",
+    "quality_reports/results/mebane_gates/G2/round1/build_candidate.py",
+    "quality_reports/results/mebane_gates/G2/round1/inspect_pdf.py",
+    "quality_reports/results/mebane_gates/G2/round1/prepare_sources.py",
+    "quality_reports/results/mebane_gates/G2/round1/render_code.lua",
+    "tests/mebane/algebra/qbl_algebra.R",
+    "tests/mebane/algebra/run_tests.R"
+  ],
+  "configuration": [
+    "quality_reports/results/mebane_gates/G2/round1/gate_contract.json"
+  ],
+  "outputs": [
+    "appendices/mebane_model_contract.md",
+    "quality_reports/results/mebane_gates/G2/round1/commands.json",
+    "quality_reports/results/mebane_gates/G2/round1/implementation.md",
+    "quality_reports/results/mebane_gates/G2/round1/mebane_model_contract.pdf",
+    "quality_reports/results/mebane_gates/G2/round1/rendered/contact-1.png",
+    "quality_reports/results/mebane_gates/G2/round1/rendered/contact-2.png",
+    "quality_reports/results/mebane_gates/G2/round1/rendered/contact-3.png",
+    "quality_reports/results/mebane_gates/G2/round1/rendered/detail-p12.png",
+    "quality_reports/results/mebane_gates/G2/round1/rendered/detail-p6.png",
+    "quality_reports/results/mebane_gates/G2/round1/rendered/page-01.png",
+    "quality_reports/results/mebane_gates/G2/round1/rendered/page-02.png",
+    "quality_reports/results/mebane_gates/G2/round1/rendered/page-03.png",
+    "quality_reports/results/mebane_gates/G2/round1/rendered/page-04.png",
+    "quality_reports/results/mebane_gates/G2/round1/rendered/page-05.png",
+    "quality_reports/results/mebane_gates/G2/round1/rendered/page-06.png",
+    "quality_reports/results/mebane_gates/G2/round1/rendered/page-07.png",
+    "quality_reports/results/mebane_gates/G2/round1/rendered/page-08.png",
+    "quality_reports/results/mebane_gates/G2/round1/rendered/page-09.png",
+    "quality_reports/results/mebane_gates/G2/round1/rendered/page-10.png",
+    "quality_reports/results/mebane_gates/G2/round1/rendered/page-11.png",
+    "quality_reports/results/mebane_gates/G2/round1/rendered/page-12.png",
+    "quality_reports/results/mebane_gates/G2/round1/rendered/page-13.png",
+    "quality_reports/results/mebane_gates/G2/round1/results/checks.csv",
+    "quality_reports/results/mebane_gates/G2/round1/results/command_1.log",
+    "quality_reports/results/mebane_gates/G2/round1/results/command_2.log",
+    "quality_reports/results/mebane_gates/G2/round1/results/command_3.log",
+    "quality_reports/results/mebane_gates/G2/round1/results/command_4.log",
+    "quality_reports/results/mebane_gates/G2/round1/results/command_5.log",
+    "quality_reports/results/mebane_gates/G2/round1/results/contract_projection_check.json",
+    "quality_reports/results/mebane_gates/G2/round1/results/execution.txt",
+    "quality_reports/results/mebane_gates/G2/round1/results/marginalization.csv",
+    "quality_reports/results/mebane_gates/G2/round1/results/metrics.csv",
+    "quality_reports/results/mebane_gates/G2/round1/results/pdf_geometry.json",
+    "quality_reports/results/mebane_gates/G2/round1/results/rendered_contract.txt",
+    "quality_reports/results/mebane_gates/G2/round1/results/visual_qa.json",
+    "quality_reports/results/mebane_gates/G2/round1/source_provenance.json",
+    "quality_reports/results/mebane_gates/G2/round1/todo_evidence.json"
+  ],
+  "production_code_read_only": [
+    "quality_reports/results/mebane_gates/G0/round1/qbl_installed_3017de5.jags",
+    "quality_reports/results/mebane_gates/G0/round1/ef_models_3017de5.R",
+    "quality_reports/results/mebane_gates/G0/round1/final_state/stan/eforensics_qbl.stan",
+    "quality_reports/results/mebane_gates/G0/round1/final_state/R/05_eforensics_qbl_fresh_diagnostic.R",
+    "quality_reports/results/mebane_gates/G0/round1/final_state/R/05_jags_qbl_zone_fe.R",
+    "quality_reports/results/mebane_gates/G0/round1/final_state/R/05_stan_eforensics_qbl_calibrate.R"
+  ],
+  "production_code_execution": "none; R qbl function evaluated only to compare its literal model string",
+  "commands": [
+    {
+      "argv": [
+        "Rscript",
+        "--vanilla",
+        "tests/mebane/algebra/run_tests.R"
+      ],
+      "started_at_utc": "2026-09-29T02:40:59.596262+00:00",
+      "elapsed_seconds": 0.23987562497495674,
+      "exit_code": 0,
+      "log": "quality_reports/results/mebane_gates/G2/round1/results/command_1.log"
+    },
+    {
+      "argv": [
+        "pandoc",
+        "appendices/mebane_model_contract.md",
+        "--standalone",
+        "--pdf-engine=pdflatex",
+        "--lua-filter=quality_reports/results/mebane_gates/G2/round1/render_code.lua",
+        "-V",
+        "colorlinks=true",
+        "-V",
+        "urlcolor=blue",
+        "-o",
+        "quality_reports/results/mebane_gates/G2/round1/mebane_model_contract.pdf"
+      ],
+      "started_at_utc": "2026-09-29T02:40:59.836307+00:00",
+      "elapsed_seconds": 0.718551917001605,
+      "exit_code": 0,
+      "log": "quality_reports/results/mebane_gates/G2/round1/results/command_2.log"
+    },
+    {
+      "argv": [
+        "pdftotext",
+        "-layout",
+        "quality_reports/results/mebane_gates/G2/round1/mebane_model_contract.pdf",
+        "quality_reports/results/mebane_gates/G2/round1/results/rendered_contract.txt"
+      ],
+      "started_at_utc": "2026-09-29T02:41:00.555098+00:00",
+      "elapsed_seconds": 0.046787125000264496,
+      "exit_code": 0,
+      "log": "quality_reports/results/mebane_gates/G2/round1/results/command_3.log"
+    },
+    {
+      "argv": [
+        "pdftoppm",
+        "-r",
+        "65",
+        "-png",
+        "quality_reports/results/mebane_gates/G2/round1/mebane_model_contract.pdf",
+        "quality_reports/results/mebane_gates/G2/round1/rendered/page"
+      ],
+      "started_at_utc": "2026-09-29T02:41:00.602051+00:00",
+      "elapsed_seconds": 0.8112486250174697,
+      "exit_code": 0,
+      "log": "quality_reports/results/mebane_gates/G2/round1/results/command_4.log"
+    },
+    {
+      "argv": [
+        "/Users/manoelgaldino/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "quality_reports/results/mebane_gates/G2/round1/inspect_pdf.py"
+      ],
+      "started_at_utc": "2026-09-29T02:41:01.413765+00:00",
+      "elapsed_seconds": 0.6334411249845289,
+      "exit_code": 0,
+      "log": "quality_reports/results/mebane_gates/G2/round1/results/command_5.log"
+    }
+  ],
+  "seeds": [],
+  "rng": "none; deterministic finite sums and quadrature",
+  "runtime_evidence": "quality_reports/results/mebane_gates/G2/round1/results/execution.txt",
+  "tests": {
+    "passed": 51,
+    "total": 51,
+    "scope": "implementer algebra tests, no independent QA"
+  },
+  "pending": [
+    "G2-T5 independent rederivation",
+    "substantive target/normalization choice",
+    "explicit prior/intercept decision",
+    "estimand and stolen-origin assumptions"
+  ],
+  "write_scope_used": [
+    "appendices/mebane_model_contract.md",
+    "tests/mebane/algebra/",
+    "quality_reports/results/mebane_gates/G2/round1/"
+  ],
+  "excluded": [
+    "mutable ledger",
+    "G1 implementation",
+    "raw datasets",
+    "fits",
+    "production edits",
+    "MCMC",
+    "G3",
+    "installations"
+  ]
+}

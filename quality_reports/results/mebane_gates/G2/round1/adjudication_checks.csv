@@ -1,0 +1,10 @@
+"check","value","expected","pass"
+"qbl_invalid_probability",499.5,499.5,TRUE
+"paper_physical_mass_N1",0.875,0.875,TRUE
+"qbl_physical_mass_N2",0.96875,0.96875,TRUE
+"exact_discrete_likelihood",0.4116,0.4116,TRUE
+"plugin_likelihood",0.4872,0.4872,TRUE
+"J_mean_residual_variance",0.2,0.2,TRUE
+"paper_mean_residual_variance",0.08,0.08,TRUE
+"full_functional_variance",25,25,TRUE
+"conditional_expectation_variance",9,9,TRUE

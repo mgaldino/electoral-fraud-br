@@ -1,0 +1,255 @@
+{
+  "gate_id": "G2",
+  "round": "round1",
+  "reviewer_id": "01a0eb0d-15b5-7c51-8e6f-c5b5b93f6011",
+  "candidate_manifest_sha256": "783cfb036f8f26bf894c36782df4fb94e20351e4df015ca6e24330021d04a5a9",
+  "review_json_sha256": "a027cd5ad0875ffbb92e3b983c2907700fe6e8b4dbfc776df141ef9f5f80ba7c",
+  "sealed_at_utc": "2026-09-29T03:04:44.942222+00:00",
+  "files": [
+    {
+      "path": "quality_reports/results/mebane_gates/G2/round1/review/candidate-page-06.png",
+      "sha256": "b120d120193e2ddb85abdb69c71a44c6fb66399d6e5a2849b2f2727f86770a2a",
+      "bytes": 322165
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G2/round1/review/candidate-page-08.png",
+      "sha256": "16af1993ac208f3c1cc6e645f5ddf5e473e4d21827a99a2415464b6f32b35ce6",
+      "bytes": 284552
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G2/round1/review/candidate-page-12.png",
+      "sha256": "cb704b97218249e0393e48d8ba3619b4820e0e38bc2c683a58de71eddfc7c7bb",
+      "bytes": 233818
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G2/round1/review/candidate.txt",
+      "sha256": "6e30ee3b03b42652d7538703493bdbf8359f88c134fc38cf624ffa3935271c62",
+      "bytes": 43916
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G2/round1/review/candidate_pdfinfo.txt",
+      "sha256": "29768959c7b90c3d187aa514f122b5048fa4570c0eb361de5f43ca967c983677",
+      "bytes": 586
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G2/round1/review/extract_review.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G2/round1/review/first_run/independent_checks.csv",
+      "sha256": "90ca4c817cab42e1eb4135b85a6712b6e72f6d56e5766d90b05381e9344c8d18",
+      "bytes": 3626
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G2/round1/review/first_run/independent_metrics.csv",
+      "sha256": "1a54f137fc33657a85952abc07258c537956aca003cddb7be6a62d3074f10b91",
+      "bytes": 472
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G2/round1/review/first_run/independent_session.txt",
+      "sha256": "f741b6d8ddb693f4a7e1ff78dc10372f1e7c64c25ae811253b8ae10444842a4e",
+      "bytes": 713
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G2/round1/review/independent_checks.R",
+      "sha256": "990bd2378adbfb831c7e66acc68dfe4af35773137ae49cb35e9db0595934c5e9",
+      "bytes": 14382
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G2/round1/review/independent_checks.csv",
+      "sha256": "2c12bbd60545bad04f9ea36ef4bb90d0a033b4c9fffce298c29eddb39e2756b9",
+      "bytes": 3869
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G2/round1/review/independent_enumeration.csv",
+      "sha256": "1c744858dc095fb7ac66ab6d188b24a79d3452bb15e755cfe08adef4739bd138",
+      "bytes": 10469
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G2/round1/review/independent_execution.log",
+      "sha256": "2afbe9d94abbfaafdaa434bced14bfc2e58258b32ca8989607a6510e9096b49a",
+      "bytes": 6070
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G2/round1/review/independent_metrics.csv",
+      "sha256": "1a54f137fc33657a85952abc07258c537956aca003cddb7be6a62d3074f10b91",
+      "bytes": 472
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G2/round1/review/independent_session.txt",
+      "sha256": "3a05c8e06904be0229e5838f26632c84549ab9b83d9b2594412880def96e2b38",
+      "bytes": 713
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G2/round1/review/inspect_review_pdf.log",
+      "sha256": "81f8fc5221795dc421681290f0fd8493052ff9b1f7ea1a19aae049affe7e861a",
+      "bytes": 52
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G2/round1/review/inspect_review_pdf.py",
+      "sha256": "f9c0d53f3c45525c59de372caea345faa8907873d14a38b97f4952e9b94eb7a1",
+      "bytes": 1479
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G2/round1/review/integrity.json",
+      "sha256": "1442f4969be258179263bbf1277489757a3dcdd677ca0ec16d6c2a8c61603215",
+      "bytes": 18574
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G2/round1/review/jags_manual.txt",
+      "sha256": "e2db0cc3c85ef65e18033d94d8c1f7132c03247f753311bb8b64f44dd00c526e",
+      "bytes": 142485
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G2/round1/review/jags_manual_pdfinfo.txt",
+      "sha256": "2a875ff43baa89c08df7b1230556a10c4fd8cc0ed01e1ac20149c13488ed0618",
+      "bytes": 461
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G2/round1/review/p22-page-08.png",
+      "sha256": "91f840c8830b75952226d461d7d894882df91017cf42a8de888df210359842be",
+      "bytes": 175407
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G2/round1/review/p22.txt",
+      "sha256": "0cb79e9a9c46495f4d17d2dfd5985a3bf4401ef9c6b57419ceef47576a4352ff",
+      "bytes": 165505
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G2/round1/review/p22_pdfinfo.txt",
+      "sha256": "45d381d7f2b94d0e27fa7e7a11908bcea8a9fbd2305bc271f09c9dff9f0cd438",
+      "bytes": 458
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G2/round1/review/p23-page-009.png",
+      "sha256": "ed62793c4dd066ebc55f9739e6d94384da8eccf8c07acb87d37b907f984a6c90",
+      "bytes": 182272
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G2/round1/review/p23.txt",
+      "sha256": "d793aa5167e40140d6809441b2ca735efe13cdf5b9f3f2aa9777bbbf23e722d8",
+      "bytes": 387372
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G2/round1/review/p23_pdfinfo.txt",
+      "sha256": "866a35b69babbc7c786ce783acaf63ff3b541c1f2c635a45f135bb750738816a",
+      "bytes": 460
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G2/round1/review/package_review.py",
+      "sha256": "c8ea46a3d6fdb12e016dc33e8db70c74ffce2ff8cacf0fbb8fab2bc98537151f",
+      "bytes": 4476
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G2/round1/review/render_review.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G2/round1/review/review-contact-1.png",
+      "sha256": "8f724f80ffb470b8a4299636d277dccf14aa62064437e81ecfd47615e89dc403",
+      "bytes": 847664
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G2/round1/review/review-contact-2.png",
+      "sha256": "b56e91477436986fd972acec12dfb4d9aa7f2f50de12c36923eff333277ee941",
+      "bytes": 885496
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G2/round1/review/review-page-01.png",
+      "sha256": "aaec055f3fda385fd241363f01989e0624b06fed1e5afb34ef843913a4b0c9f3",
+      "bytes": 239413
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G2/round1/review/review-page-02.png",
+      "sha256": "77fadcd0fc80275f0ee5eef631bd3c5520a0533e4358a2dae75bc3c6c81dea51",
+      "bytes": 231490
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G2/round1/review/review-page-03.png",
+      "sha256": "58312fd8c0b55a32c5ac371ad16a44a8958ba1134e2b8a892917a631b722fb59",
+      "bytes": 191533
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G2/round1/review/review-page-04.png",
+      "sha256": "83b0f4bd5f4c1ba988ddc25d76a26a6363a10abbadfe3b81d2b5d13c3b103dac",
+      "bytes": 201995
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G2/round1/review/review-page-05.png",
+      "sha256": "49a1d15906da2565a5bbb6cc04dceb280bb221201185dd6b2c144a491bb5c41d",
+      "bytes": 202631
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G2/round1/review/review-page-06.png",
+      "sha256": "d028763e85ccd0b4e5326cb66b044ff095c6d22c657485463d7df74b5da2e322",
+      "bytes": 241880
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G2/round1/review/review-page-07.png",
+      "sha256": "241693e827bc53addba72b86ef644a2d35ed339544a05f2e1abf48b325e0b4b9",
+      "bytes": 215354
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G2/round1/review/review-page-08.png",
+      "sha256": "1dfca5ad6d551c2eca5cc3c37fcfc3ae730b69d271702baffbb8ff2dbeac3ba4",
+      "bytes": 219629
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G2/round1/review/review.json",
+      "sha256": "a027cd5ad0875ffbb92e3b983c2907700fe6e8b4dbfc776df141ef9f5f80ba7c",
+      "bytes": 13224
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G2/round1/review/review.md",
+      "sha256": "628fe868b085d13449e3cce9cc405367b6c7fe8179ce6c9bd324fac18193bf2a",
+      "bytes": 27137
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G2/round1/review/review.pdf",
+      "sha256": "3a1bb7bf12dc492939f2faad6606ac5f471b4a63922656a56cd4318d4a41ca1b",
+      "bytes": 323660
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G2/round1/review/review_code.lua",
+      "sha256": "e8a8692c487079aa7dc9b07bf2e5d79f10b4a4a897aea2d7a09bcc20171465fb",
+      "bytes": 384
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G2/round1/review/review_pdf.txt",
+      "sha256": "842a6f6961cc962b01ffa3e28c6e5e4ee8bf778662c895204de727822c0afca2",
+      "bytes": 32687
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G2/round1/review/review_pdf_geometry.json",
+      "sha256": "3c123828339b0ef802f89018b10f30861000e9c07a7a7e8556d6521772595c67",
+      "bytes": 732
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G2/round1/review/review_run.json",
+      "sha256": "516809b272feb074ae218d338083afe520992a9ae3fa064bea335f3cc683bc33",
+      "bytes": 3599
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G2/round1/review/seal_review.py",
+      "sha256": "7519e9bd30623de2e212c0c1efb621f7596d3929c5ac76b50bdd708f9826f581",
+      "bytes": 2892
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G2/round1/review/verify_evidence.log",
+      "sha256": "c862f82214eef28833b1d444d1e6a7224e7340938c606883b62fbc9e10a2446b",
+      "bytes": 225
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G2/round1/review/verify_evidence.py",
+      "sha256": "fc933a4744e7eff603a09855bfa4933aa0e613aa9a46027a7524b7796c0b32cd",
+      "bytes": 4282
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G2/round1/review/visual_qa.json",
+      "sha256": "6fac298663f099f319d976106e7428700fa39be7be44798092203783f7300563",
+      "bytes": 890
+    }
+  ]
+}

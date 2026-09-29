@@ -1,0 +1,18 @@
+{
+  "exact_identities": {
+    "candidate_manifest.json": "517c17c724cca82a820519c476981d47c8892c7383dd2c3dded9373eba6d31e8",
+    "review/review.json": "727f6b234e3a580c329cc5e898018bb68c02063717c292b6d91e4fbe12d86941",
+    "review/qa_manifest.json": "694664f05d53c7d2bf839d19e074beb0736ee72d3be268c3cf091134e2eb5b0f"
+  },
+  "verified_manifests": {
+    "candidate_manifest.json": {
+      "files": 194
+    },
+    "review/qa_manifest.json": {
+      "inputs": 197,
+      "files": 89
+    }
+  },
+  "review_and_prior_closure_consistent": true,
+  "scope": "Integrity and review binding; substantive judgment recorded separately"
+}

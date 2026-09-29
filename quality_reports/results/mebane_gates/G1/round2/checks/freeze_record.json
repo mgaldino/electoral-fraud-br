@@ -1,0 +1,14 @@
+{
+  "command": [
+    "python3",
+    "quality_reports/results/mebane_gates/G1/round2/freeze_candidate.py"
+  ],
+  "scope": "Freeze candidate from the exact reviewed static contract and declared local artifacts",
+  "started_at_utc": "2026-09-29T03:10:30.549871+00:00",
+  "validation_finished_at_utc": "2026-09-29T03:10:30.551658+00:00",
+  "elapsed_validation_seconds": 0.001708,
+  "contract_input": "quality_reports/results/mebane_gates/G1/round1/gate_contract.json",
+  "contract_file_sha256": "2364acc589da079d44687c79c9fb35561816cfe7fd34ad7431f7c18386c1ae4d",
+  "contract_sha256": "f985ab97469aa66755b977a09781b30608afa6e245896d9d9788b4461190975d",
+  "uses_mutable_ledger": false
+}

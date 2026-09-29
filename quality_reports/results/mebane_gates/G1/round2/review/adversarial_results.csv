@@ -1,0 +1,44 @@
+case,expected_acceptance,actual_acceptance,error,passed
+valid_all_declared_candidates_and_omitted_zero_sections,TRUE,TRUE,,TRUE
+identity_CD_ELEICAO_both,FALSE,FALSE,Election identity mismatch: detail turn 1 CD_ELEICAO,TRUE
+identity_CD_ELEICAO_detail,FALSE,FALSE,Election identity mismatch: detail turn 1 CD_ELEICAO,TRUE
+identity_CD_ELEICAO_vote,FALSE,FALSE,Election identity mismatch: vote turn 1 CD_ELEICAO,TRUE
+identity_DT_ELEICAO_both,FALSE,FALSE,Election identity mismatch: detail turn 1 DT_ELEICAO,TRUE
+identity_DT_ELEICAO_detail,FALSE,FALSE,Election identity mismatch: detail turn 1 DT_ELEICAO,TRUE
+identity_DT_ELEICAO_vote,FALSE,FALSE,Election identity mismatch: vote turn 1 DT_ELEICAO,TRUE
+identity_CD_TIPO_ELEICAO_both,FALSE,FALSE,Election identity mismatch: detail turn 1 CD_TIPO_ELEICAO,TRUE
+identity_CD_TIPO_ELEICAO_detail,FALSE,FALSE,Election identity mismatch: detail turn 1 CD_TIPO_ELEICAO,TRUE
+identity_CD_TIPO_ELEICAO_vote,FALSE,FALSE,Election identity mismatch: vote turn 1 CD_TIPO_ELEICAO,TRUE
+identity_wrong_year_concordant,FALSE,FALSE,Election identity mismatch: detail turn 1 DT_ELEICAO,TRUE
+identity_type_missing_from_both,FALSE,FALSE,Incompatible in-memory schema,TRUE
+candidate_12_wrong_positive_control,FALSE,FALSE,Official candidate control disagreement: turn 1 candidate_12,TRUE
+candidate_13_wrong_positive_control,FALSE,FALSE,Official candidate control disagreement: turn 1 candidate_13,TRUE
+candidate_15_wrong_positive_control,FALSE,FALSE,Official candidate control disagreement: turn 1 candidate_15,TRUE
+candidate_22_wrong_positive_control,FALSE,FALSE,Official candidate control disagreement: turn 1 candidate_22,TRUE
+candidate_30_wrong_positive_control,FALSE,FALSE,Official candidate control disagreement: turn 1 candidate_30,TRUE
+candidate_30_wrong_zero_control,FALSE,FALSE,Official candidate control disagreement: turn 1 candidate_30,TRUE
+invalid_name_candidate_012,FALSE,FALSE,Configuration has invalid candidate control name in turn 1,TRUE
+invalid_name_candidate_13_0,FALSE,FALSE,Configuration has invalid candidate control name in turn 1,TRUE
+invalid_name_candidate_1e1,FALSE,FALSE,Configuration has invalid candidate control name in turn 1,TRUE
+invalid_name_candidate_,FALSE,FALSE,Configuration has invalid candidate control name in turn 1,TRUE
+invalid_name_candidate_0,FALSE,FALSE,Configuration has invalid candidate control name in turn 1,TRUE
+invalid_name_candidate__12,FALSE,FALSE,Configuration has invalid candidate control name in turn 1,TRUE
+invalid_name_Candidate_12,FALSE,FALSE,Configuration has invalid candidate control name in turn 1,TRUE
+invalid_name_candidate_12x,FALSE,FALSE,Configuration has invalid candidate control name in turn 1,TRUE
+invalid_value_string,FALSE,FALSE,Configuration requires scalar nonnegative integer control: 1 candidate_12,TRUE
+invalid_value_negative,FALSE,FALSE,Configuration requires scalar nonnegative integer control: 1 candidate_12,TRUE
+invalid_value_fractional,FALSE,FALSE,Configuration requires scalar nonnegative integer control: 1 candidate_12,TRUE
+invalid_value_boolean,FALSE,FALSE,Configuration requires scalar nonnegative integer control: 1 candidate_12,TRUE
+invalid_value_null,FALSE,FALSE,Configuration requires scalar nonnegative integer control: 1 candidate_12,TRUE
+invalid_value_array,FALSE,FALSE,Configuration requires scalar nonnegative integer control: 1 candidate_12,TRUE
+invalid_value_vector,FALSE,FALSE,Configuration requires scalar nonnegative integer control: 1 candidate_12,TRUE
+invalid_value_infinity,FALSE,FALSE,Configuration requires scalar nonnegative integer control: 1 candidate_12,TRUE
+invalid_value_too_large,FALSE,FALSE,Configuration requires scalar nonnegative integer control: 1 candidate_12,TRUE
+duplicate_candidate_control,FALSE,FALSE,Configuration has invalid candidate control name in turn 1,TRUE
+candidate_ineligible_turn2,FALSE,FALSE,Configuration has ineligible candidate control in turn 2,TRUE
+pseudo_candidate_control,FALSE,FALSE,Configuration has ineligible candidate control in turn 1,TRUE
+identity_duplicate_code_config,FALSE,FALSE,Configuration election codes must be unique and dates ordered by turn,TRUE
+identity_wrong_config_year,FALSE,FALSE,Configuration has malformed election identity for turn 1,TRUE
+divergent_duplicate_vote,FALSE,FALSE,vote: missing or duplicate key (including divergent duplicates),TRUE
+omitted_positive_candidate,FALSE,FALSE,Missing vote row cannot be distinguished from zero: category totals disagree,TRUE
+missing_detail_count,FALSE,FALSE,detail: invalid integer count/key in QT_APTOS,TRUE

@@ -1,0 +1,19 @@
+{
+  "gate_id": "G3",
+  "round": "round1",
+  "contract_sha256": "091819bdd84f2a424c0550d3dab38ba44d50c0bcbfcc73fffe02c56ed0ded1c0",
+  "files": [
+    {
+      "path": "G3-input.txt",
+      "sha256": "3099b6c8cfec72b28f3150fc80c97025ae313d03dc9c72dc9a5556523b939456"
+    },
+    {
+      "path": "G3-output.txt",
+      "sha256": "b1aeaf4a9990b7d310bad67703fdfb2adf841ec746f041563432efcf256a1a0e"
+    },
+    {
+      "path": "G3-run.json",
+      "sha256": "b2313bd61f8375d519e135d2e17e032a8330566bd966e4218e886e150eb14850"
+    }
+  ]
+}

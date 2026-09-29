@@ -1,0 +1,87 @@
+{
+  "reviewer_id": "01a0eb0d-15b5-7c51-8e6f-c5b5b93f6011",
+  "gate_id": "G2",
+  "round": "round1",
+  "candidate_manifest_sha256": "783cfb036f8f26bf894c36782df4fb94e20351e4df015ca6e24330021d04a5a9",
+  "commands": [
+    {
+      "argv": [
+        "/opt/homebrew/opt/python@3.13/bin/python3.13",
+        "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/G2/round1/review/verify_evidence.py"
+      ],
+      "started_at_utc": "2026-09-29T03:03:35.513614+00:00",
+      "elapsed_seconds": 0.6052717920101713,
+      "exit_code": 0,
+      "log": "quality_reports/results/mebane_gates/G2/round1/review/verify_evidence.log"
+    },
+    {
+      "argv": [
+        "Rscript",
+        "--vanilla",
+        "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/G2/round1/review/independent_checks.R"
+      ],
+      "started_at_utc": "2026-09-29T03:03:36.119223+00:00",
+      "elapsed_seconds": 1.9838399160071276,
+      "exit_code": 0,
+      "log": "quality_reports/results/mebane_gates/G2/round1/review/independent_execution.log"
+    },
+    {
+      "argv": [
+        "pandoc",
+        "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/G2/round1/review/review.md",
+        "--standalone",
+        "--pdf-engine=pdflatex",
+        "--lua-filter=/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/G2/round1/review/review_code.lua",
+        "-o",
+        "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/G2/round1/review/review.pdf"
+      ],
+      "started_at_utc": "2026-09-29T03:03:38.103445+00:00",
+      "elapsed_seconds": 0.6616868340061046,
+      "exit_code": 0,
+      "log": "quality_reports/results/mebane_gates/G2/round1/review/render_review.log"
+    },
+    {
+      "argv": [
+        "pdftotext",
+        "-layout",
+        "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/G2/round1/review/review.pdf",
+        "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/G2/round1/review/review_pdf.txt"
+      ],
+      "started_at_utc": "2026-09-29T03:03:38.765411+00:00",
+      "elapsed_seconds": 0.0328227499849163,
+      "exit_code": 0,
+      "log": "quality_reports/results/mebane_gates/G2/round1/review/extract_review.log"
+    },
+    {
+      "argv": [
+        "/Users/manoelgaldino/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/G2/round1/review/inspect_review_pdf.py"
+      ],
+      "started_at_utc": "2026-09-29T03:03:38.798441+00:00",
+      "elapsed_seconds": 0.6983582499960903,
+      "exit_code": 0,
+      "log": "quality_reports/results/mebane_gates/G2/round1/review/inspect_review_pdf.log"
+    }
+  ],
+  "versions": {
+    "pandoc": [
+      "pandoc 3.7.0.2",
+      "Features: +server +lua"
+    ],
+    "pdflatex": [
+      "pdfTeX 3.141592653-2.6-1.40.28 (TeX Live 2025)",
+      "kpathsea version 6.4.1"
+    ],
+    "pdftoppm": [
+      "pdftoppm version 26.01.0",
+      "Copyright 2005-2026 The Poppler Developers - http://poppler.freedesktop.org"
+    ],
+    "/Users/manoelgaldino/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3": [
+      "Python 3.12.14"
+    ]
+  },
+  "mcmc": false,
+  "rng": "none",
+  "writes_confined_to": "quality_reports/results/mebane_gates/G2/round1/review",
+  "finalized_at_utc": "2026-09-29T03:03:39.538978+00:00"
+}

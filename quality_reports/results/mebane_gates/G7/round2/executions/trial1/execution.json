@@ -1,0 +1,174 @@
+{
+  "finished_at_utc": "2026-09-29T04:19:29.776138+00:00",
+  "status": "PASS",
+  "selected_utf8_locale": "pt_BR.UTF-8",
+  "commands": [
+    {
+      "label": "locales",
+      "command": [
+        "locale",
+        "-a"
+      ],
+      "environment_overrides": {},
+      "locale_environment": {
+        "LANG": "C.UTF-8",
+        "LC_ALL": "C.UTF-8",
+        "LC_CTYPE": "C.UTF-8"
+      },
+      "exit_code": 0,
+      "wall_seconds": 0.005528333014808595,
+      "log": "quality_reports/results/mebane_gates/G7/round2/executions/trial1/locales.log"
+    },
+    {
+      "label": "C_legacy",
+      "command": [
+        "Rscript",
+        "--vanilla",
+        "tests/mebane/2026/run_tests.R",
+        "quality_reports/results/mebane_gates/G7/round2/executions/trial1/C_legacy"
+      ],
+      "environment_overrides": {
+        "LC_ALL": "C"
+      },
+      "locale_environment": {
+        "LANG": "C.UTF-8",
+        "LC_ALL": "C",
+        "LC_CTYPE": "C.UTF-8"
+      },
+      "exit_code": 0,
+      "wall_seconds": 0.29492249997565523,
+      "log": "quality_reports/results/mebane_gates/G7/round2/executions/trial1/C_legacy.log"
+    },
+    {
+      "label": "C_repairs",
+      "command": [
+        "Rscript",
+        "--vanilla",
+        "tests/mebane/2026/test_round2.R",
+        "quality_reports/results/mebane_gates/G7/round2/executions/trial1/C_repairs"
+      ],
+      "environment_overrides": {
+        "LC_ALL": "C"
+      },
+      "locale_environment": {
+        "LANG": "C.UTF-8",
+        "LC_ALL": "C",
+        "LC_CTYPE": "C.UTF-8"
+      },
+      "exit_code": 0,
+      "wall_seconds": 0.25252954199095257,
+      "log": "quality_reports/results/mebane_gates/G7/round2/executions/trial1/C_repairs.log"
+    },
+    {
+      "label": "default_legacy",
+      "command": [
+        "Rscript",
+        "--vanilla",
+        "tests/mebane/2026/run_tests.R",
+        "quality_reports/results/mebane_gates/G7/round2/executions/trial1/default_legacy"
+      ],
+      "environment_overrides": {},
+      "locale_environment": {
+        "LANG": "C.UTF-8",
+        "LC_ALL": "C.UTF-8",
+        "LC_CTYPE": "C.UTF-8"
+      },
+      "exit_code": 0,
+      "wall_seconds": 0.2907849580224138,
+      "log": "quality_reports/results/mebane_gates/G7/round2/executions/trial1/default_legacy.log"
+    },
+    {
+      "label": "default_repairs",
+      "command": [
+        "Rscript",
+        "--vanilla",
+        "tests/mebane/2026/test_round2.R",
+        "quality_reports/results/mebane_gates/G7/round2/executions/trial1/default_repairs"
+      ],
+      "environment_overrides": {},
+      "locale_environment": {
+        "LANG": "C.UTF-8",
+        "LC_ALL": "C.UTF-8",
+        "LC_CTYPE": "C.UTF-8"
+      },
+      "exit_code": 0,
+      "wall_seconds": 0.25736645801225677,
+      "log": "quality_reports/results/mebane_gates/G7/round2/executions/trial1/default_repairs.log"
+    },
+    {
+      "label": "UTF8_legacy",
+      "command": [
+        "Rscript",
+        "--vanilla",
+        "tests/mebane/2026/run_tests.R",
+        "quality_reports/results/mebane_gates/G7/round2/executions/trial1/UTF8_legacy"
+      ],
+      "environment_overrides": {
+        "LC_ALL": "pt_BR.UTF-8"
+      },
+      "locale_environment": {
+        "LANG": "C.UTF-8",
+        "LC_ALL": "pt_BR.UTF-8",
+        "LC_CTYPE": "C.UTF-8"
+      },
+      "exit_code": 0,
+      "wall_seconds": 0.3175077079795301,
+      "log": "quality_reports/results/mebane_gates/G7/round2/executions/trial1/UTF8_legacy.log"
+    },
+    {
+      "label": "UTF8_repairs",
+      "command": [
+        "Rscript",
+        "--vanilla",
+        "tests/mebane/2026/test_round2.R",
+        "quality_reports/results/mebane_gates/G7/round2/executions/trial1/UTF8_repairs"
+      ],
+      "environment_overrides": {
+        "LC_ALL": "pt_BR.UTF-8"
+      },
+      "locale_environment": {
+        "LANG": "C.UTF-8",
+        "LC_ALL": "pt_BR.UTF-8",
+        "LC_CTYPE": "C.UTF-8"
+      },
+      "exit_code": 0,
+      "wall_seconds": 0.259530708019156,
+      "log": "quality_reports/results/mebane_gates/G7/round2/executions/trial1/UTF8_repairs.log"
+    },
+    {
+      "label": "G1_fixtures",
+      "command": [
+        "Rscript",
+        "--vanilla",
+        "tests/mebane/data/test_g1.R"
+      ],
+      "environment_overrides": {
+        "LC_ALL": "C"
+      },
+      "locale_environment": {
+        "LANG": "C.UTF-8",
+        "LC_ALL": "C",
+        "LC_CTYPE": "C.UTF-8"
+      },
+      "exit_code": 0,
+      "wall_seconds": 0.2259886660031043,
+      "log": "quality_reports/results/mebane_gates/G7/round2/executions/trial1/G1_fixtures.log"
+    },
+    {
+      "label": "DAG_checker",
+      "command": [
+        "/opt/homebrew/opt/python@3.13/bin/python3.13",
+        "tests/mebane/2026/check_dag.py"
+      ],
+      "environment_overrides": {},
+      "locale_environment": {
+        "LANG": "C.UTF-8",
+        "LC_ALL": "C.UTF-8",
+        "LC_CTYPE": "C.UTF-8"
+      },
+      "exit_code": 0,
+      "wall_seconds": 8.596305332990596,
+      "log": "quality_reports/results/mebane_gates/G7/round2/executions/trial1/DAG_checker.log"
+    }
+  ]
+}

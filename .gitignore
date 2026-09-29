@@ -24,9 +24,17 @@ replication_authors/extracted/fingerprint_brazil/raw-data/desktop.ini
 replication_authors/extracted/fingerprint_brazil/.Rproj.user/
 replication_authors/original_zip/*.zip
 
+# ---- snapshots oficiais TSE (preservados localmente, hashes documentados) ----
+quality_reports/results/mebane_gates/coordination/Historico_Totalizacao_Presidente_BR_1T_2022.zip
+quality_reports/results/mebane_gates/coordination/Historico_Totalizacao_Presidente_BR_2T_2022.zip
+quality_reports/results/mebane_gates/coordination/detalhe_votacao_munzona_2022.zip
+quality_reports/results/mebane_gates/coordination/votacao_candidato_munzona_2022.zip
+
 # ---- fits MCMC (grandes, reproduziveis via scripts) ----
 quality_reports/results/*.rds
 data/processed/*.rds
+quality_reports/results/mebane_gates/**/*.parquet
+quality_reports/results/mebane_gates/**/*.rds
 
 # ---- binarios Stan compilados ----
 stan/eforensics_bl

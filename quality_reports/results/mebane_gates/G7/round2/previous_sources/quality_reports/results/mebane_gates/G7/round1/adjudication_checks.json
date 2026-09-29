@@ -1,0 +1,25 @@
+{
+  "purpose": "Reproduce pre-repair defects, not approve the implementation",
+  "code_sha256": "013c36597a9e87144ec745885a5719750a7d7ad9f728bf4dbc293433f4f45e61",
+  "baseline_status": "staging_validated",
+  "wrong_date_status": "staging_validated",
+  "wrong_date_defect_confirmed": true,
+  "reduced_reference_validation": {
+    "complete": true,
+    "expected_sections": 1,
+    "observed_sections": 1,
+    "missing_sections": [],
+    "totals": {
+      "aptos": 10,
+      "turnout": 5,
+      "candidate_votes": 3,
+      "blank": 1,
+      "null": 1
+    },
+    "controls_pass": true,
+    "status": "staging_validated"
+  },
+  "reduced_reference_receipt_fields": ["year", "turn", "version", "policy_sha256", "input_hashes", "provenance", "phase", "source_url", "validation", "data_ready", "inference_ready", "release_condition"],
+  "national_approval_claimed": false,
+  "reduced_reference_is_complete": true
+}

@@ -1,0 +1,65 @@
+case,expected_acceptance,actual_acceptance,passed,error
+valid_identity_and_active_candidate_controls,TRUE,TRUE,TRUE,
+wrong_CD_ELEICAO_both,FALSE,FALSE,TRUE,Election identity mismatch: detail turn 1 CD_ELEICAO
+wrong_CD_ELEICAO_detail,FALSE,FALSE,TRUE,Election identity mismatch: detail turn 1 CD_ELEICAO
+wrong_CD_ELEICAO_vote,FALSE,FALSE,TRUE,Election identity mismatch: vote turn 1 CD_ELEICAO
+wrong_DT_ELEICAO_both,FALSE,FALSE,TRUE,Election identity mismatch: detail turn 1 DT_ELEICAO
+wrong_DT_ELEICAO_detail,FALSE,FALSE,TRUE,Election identity mismatch: detail turn 1 DT_ELEICAO
+wrong_DT_ELEICAO_vote,FALSE,FALSE,TRUE,Election identity mismatch: vote turn 1 DT_ELEICAO
+wrong_CD_TIPO_ELEICAO_both,FALSE,FALSE,TRUE,Election identity mismatch: detail turn 1 CD_TIPO_ELEICAO
+wrong_CD_TIPO_ELEICAO_detail,FALSE,FALSE,TRUE,Election identity mismatch: detail turn 1 CD_TIPO_ELEICAO
+wrong_CD_TIPO_ELEICAO_vote,FALSE,FALSE,TRUE,Election identity mismatch: vote turn 1 CD_TIPO_ELEICAO
+same_year_wrong_date_both,FALSE,FALSE,TRUE,Election identity mismatch: detail turn 1 DT_ELEICAO
+swapped_codes_both,FALSE,FALSE,TRUE,Election identity mismatch: detail turn 1 CD_ELEICAO
+source_type_column_missing,FALSE,FALSE,TRUE,Incompatible in-memory schema
+trailing_date_characters_both,FALSE,FALSE,TRUE,Invalid source dates
+nonleader_candidate_12_wrong_control_999,FALSE,FALSE,TRUE,Official candidate control disagreement: turn 1 candidate_12
+nonleader_candidate_12_wrong_control_zero,FALSE,FALSE,TRUE,Official candidate control disagreement: turn 1 candidate_12
+eligible_absent_candidate_15_correct_zero_control,TRUE,TRUE,TRUE,
+eligible_absent_candidate_15_wrong_control,FALSE,FALSE,TRUE,Official candidate control disagreement: turn 1 candidate_15
+malformed_control_name_candidate_012,FALSE,FALSE,TRUE,Configuration has invalid candidate control name in turn 1
+malformed_control_name_candidate_,FALSE,FALSE,TRUE,Configuration has invalid candidate control name in turn 1
+malformed_control_name_candidate_12x,FALSE,FALSE,TRUE,Configuration has invalid candidate control name in turn 1
+malformed_control_name_candiate_12,FALSE,FALSE,TRUE,Configuration has invalid candidate control name in turn 1
+candidate_ineligible_for_control_turn,FALSE,FALSE,TRUE,Configuration has ineligible candidate control in turn 2
+pseudo_candidate_control,FALSE,FALSE,TRUE,Configuration has ineligible candidate control in turn 1
+malformed_control_value_24,FALSE,FALSE,TRUE,Configuration requires scalar nonnegative integer control: 1 candidate_12
+malformed_control_value_25,FALSE,FALSE,TRUE,Configuration requires scalar nonnegative integer control: 1 candidate_12
+malformed_control_value_26,FALSE,FALSE,TRUE,Configuration requires scalar nonnegative integer control: 1 candidate_12
+malformed_control_value_27,FALSE,FALSE,TRUE,Configuration requires scalar nonnegative integer control: 1 candidate_12
+malformed_control_value_28,FALSE,FALSE,TRUE,Configuration requires scalar nonnegative integer control: 1 candidate_12
+malformed_control_value_29,FALSE,FALSE,TRUE,Configuration requires scalar nonnegative integer control: 1 candidate_12
+duplicate_candidate_control,FALSE,FALSE,TRUE,Configuration has incomplete or duplicate controls for turn 1
+config_valid,TRUE,TRUE,TRUE,
+config_identity_missing,FALSE,FALSE,TRUE,Configuration schema changed or duplicate object keys
+config_identity_turn_missing,FALSE,FALSE,TRUE,Configuration turn mapping is incomplete or duplicated: election_identity
+config_identity_turn_extra,FALSE,FALSE,TRUE,Configuration turn mapping is incomplete or duplicated: election_identity
+config_identity_turn_duplicate,FALSE,FALSE,TRUE,Configuration turn mapping is incomplete or duplicated: election_identity
+config_identity_field_duplicate,FALSE,FALSE,TRUE,Configuration has malformed election identity for turn 1
+config_identity_type_missing,FALSE,FALSE,TRUE,Configuration has malformed election identity for turn 1
+config_identity_type_string,FALSE,FALSE,TRUE,Configuration has malformed election identity for turn 1
+config_identity_type_array,FALSE,FALSE,TRUE,Configuration has malformed election identity for turn 1
+config_identity_code_fractional,FALSE,FALSE,TRUE,Configuration has malformed election identity for turn 1
+config_identity_code_duplicate,FALSE,FALSE,TRUE,Configuration election codes must be unique and dates ordered by turn
+config_identity_date_wrong_year,FALSE,FALSE,TRUE,Configuration has malformed election identity for turn 1
+config_identity_date_invalid_day,FALSE,FALSE,TRUE,Configuration has malformed election identity for turn 1
+config_identity_date_trailing,FALSE,FALSE,TRUE,Configuration has malformed election identity for turn 1
+config_identity_date_unpadded,FALSE,FALSE,TRUE,Configuration has malformed election identity for turn 1
+config_identity_date_reverse_turns,FALSE,FALSE,TRUE,Configuration election codes must be unique and dates ordered by turn
+config_year_string,FALSE,FALSE,TRUE,"Configuration requires scalar integer year, cargo and threshold"
+config_year_array,FALSE,FALSE,TRUE,"Configuration requires scalar integer year, cargo and threshold"
+config_year_null,FALSE,FALSE,TRUE,"Configuration requires scalar integer year, cargo and threshold"
+config_turns_empty,FALSE,FALSE,TRUE,Configuration requires a nonempty integer array: turns
+config_turns_scalar,FALSE,FALSE,TRUE,Configuration requires a nonempty integer array: turns
+config_turns_duplicate,FALSE,FALSE,TRUE,Configuration has invalid or duplicate turns
+config_turns_fractional,FALSE,FALSE,TRUE,Configuration requires a nonempty integer array: turns
+config_cargo_array,FALSE,FALSE,TRUE,"Configuration requires scalar integer year, cargo and threshold"
+config_eligible_empty,FALSE,FALSE,TRUE,Configuration requires a nonempty integer array: eligible_candidates.1
+config_eligible_fractional,FALSE,FALSE,TRUE,Configuration requires a nonempty integer array: eligible_candidates.1
+config_target_ineligible,FALSE,FALSE,TRUE,Ineligible target in turn 2
+config_control_name_malformed,FALSE,FALSE,TRUE,Configuration has invalid candidate control name in turn 1
+config_control_ineligible,FALSE,FALSE,TRUE,Configuration has ineligible candidate control in turn 2
+config_control_null,FALSE,FALSE,TRUE,Configuration requires scalar nonnegative integer control: 1 candidate_13
+config_control_turn_missing,FALSE,FALSE,TRUE,Configuration has malformed official control turn mapping
+config_control_extra_typo,FALSE,FALSE,TRUE,Configuration has invalid candidate control name in turn 1
+config_control_nonleader_correct_form,TRUE,TRUE,TRUE,

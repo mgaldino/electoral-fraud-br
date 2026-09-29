@@ -1,0 +1,10 @@
+During startup - Warning messages:
+1: Setting LC_CTYPE failed, using "C" 
+2: Setting LC_COLLATE failed, using "C" 
+3: Setting LC_TIME failed, using "C" 
+4: Setting LC_MESSAGES failed, using "C" 
+5: Setting LC_MONETARY failed, using "C" 
+Error in `[.data.table`(result, !passed) : 
+  'passed' is not found in calling scope, but it is a column of type logical. If you wish to select rows where that column contains TRUE, or perhaps that column contains row numbers of itself to select, try DT[(col)], DT[DT$col], or DT[col==TRUE] is particularly clear and is optimized. When the first argument inside DT[...] is a single symbol (e.g. DT[var]), data.table looks for var in calling scope.
+Calls: print ... [ -> [.data.table -> stopf -> raise_condition -> signal
+Execution halted

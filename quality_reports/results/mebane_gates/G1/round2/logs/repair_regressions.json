@@ -1,0 +1,15 @@
+{
+  "command": [
+    "Rscript",
+    "--vanilla",
+    "tests/mebane/data/test_round2_repairs.R",
+    "quality_reports/results/mebane_gates/G1/round2/checks"
+  ],
+  "command_display": "Rscript --vanilla tests/mebane/data/test_round2_repairs.R quality_reports/results/mebane_gates/G1/round2/checks",
+  "scope": "F01 and F03 concordant identity errors and generic candidate controls with numeric controls active",
+  "started_at_utc": "2026-09-29T02:56:19.216275+00:00",
+  "ended_at_utc": "2026-09-29T02:56:19.573026+00:00",
+  "elapsed_seconds": 0.356723,
+  "exit_code": 0,
+  "output": "quality_reports/results/mebane_gates/G1/round2/logs/repair_regressions.txt"
+}

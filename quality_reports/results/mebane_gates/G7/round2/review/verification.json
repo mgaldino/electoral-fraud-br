@@ -1,0 +1,116 @@
+{
+  "status": "PASS",
+  "verified_at_utc": "2026-09-29T04:42:11.909819+00:00",
+  "independent_cases_per_locale": 69,
+  "independent_case_executions": 138,
+  "dag_independent_cases": 8,
+  "cross_locale_identical_receipts": 25,
+  "receipt_comparisons": [
+    {
+      "path": "all_UFs_not_attestation/store/2026/turn1/0f9a8ebdb3118df928392d2927f47ae09a8953415605de833c5d326bf0587414/receipt.json",
+      "identical_bytes": true
+    },
+    {
+      "path": "ascii/store/2022/turn1/e79c05678039608dbacc724094418ab18480af87e8ae58095a5652c80cd0cebb/receipt.json",
+      "identical_bytes": true
+    },
+    {
+      "path": "conditional_T2_77777/store/2026/turn2/28c89bc2cd8ee420afefb7ff931344dadbdb518c55a304aeb650067cef847925/receipt.json",
+      "identical_bytes": true
+    },
+    {
+      "path": "conditional_T2_88002/store/2026/turn2/def48f0b8707c165b611036ed549e56216f1ab9e6c46d6a5b7478bd0d6ab08ff/receipt.json",
+      "identical_bytes": true
+    },
+    {
+      "path": "date_ok_1/store/2022/turn1/e79c05678039608dbacc724094418ab18480af87e8ae58095a5652c80cd0cebb/receipt.json",
+      "identical_bytes": true
+    },
+    {
+      "path": "date_ok_2/store/2022/turn2/4201daf48331791622a2adefe82196c33fa16314205c86c18e3d3d6ee880d9f9/receipt.json",
+      "identical_bytes": true
+    },
+    {
+      "path": "divergent_controls/store/2022/turn1/3db958c36c4ed05c9184d9d1cdcc1944cd5bbe33bb6adc3495384d6c3195c3ce/receipt.json",
+      "identical_bytes": true
+    },
+    {
+      "path": "idempotence_and_policy/store/2022/turn1/2d029ea621ac358402a16a1372b0f7e964cd0b8feb1fe3f977eedf88fde73920/receipt.json",
+      "identical_bytes": true
+    },
+    {
+      "path": "idempotence_and_policy/store/2022/turn1/71e9e2d4764580baa17540cdb9fbf4275c1a179fa1e8419c7708051ca71ffdaf/receipt.json",
+      "identical_bytes": true
+    },
+    {
+      "path": "idempotence_and_policy/store/2022/turn1/e56ee96fd15ced44ae5feaf707417141123ba57240ffb8904f00256fd8140a18/receipt.json",
+      "identical_bytes": true
+    },
+    {
+      "path": "idempotence_and_policy/store/2022/turn1/e79c05678039608dbacc724094418ab18480af87e8ae58095a5652c80cd0cebb/receipt.json",
+      "identical_bytes": true
+    },
+    {
+      "path": "one_section/store/2022/turn1/fb532e42c59b233966c79b0352c223459d688e992dc9689c0f1636cd05adb80f/receipt.json",
+      "identical_bytes": true
+    },
+    {
+      "path": "partial_by_UF/store/2022/turn1/21a9a34a579c6cc9868b8466ac46c8b6d0eb753788c59a8a9cc0c01be7c1c196/receipt.json",
+      "identical_bytes": true
+    },
+    {
+      "path": "snapshot_tamper/store/2022/turn1/e79c05678039608dbacc724094418ab18480af87e8ae58095a5652c80cd0cebb/receipt.json",
+      "identical_bytes": true
+    },
+    {
+      "path": "tamper_by_uf/store/2022/turn1/e79c05678039608dbacc724094418ab18480af87e8ae58095a5652c80cd0cebb/receipt.json",
+      "identical_bytes": true
+    },
+    {
+      "path": "tamper_candidate/store/2022/turn1/e79c05678039608dbacc724094418ab18480af87e8ae58095a5652c80cd0cebb/receipt.json",
+      "identical_bytes": true
+    },
+    {
+      "path": "tamper_data/store/2022/turn1/e79c05678039608dbacc724094418ab18480af87e8ae58095a5652c80cd0cebb/receipt.json",
+      "identical_bytes": true
+    },
+    {
+      "path": "tamper_date/store/2022/turn1/e79c05678039608dbacc724094418ab18480af87e8ae58095a5652c80cd0cebb/receipt.json",
+      "identical_bytes": true
+    },
+    {
+      "path": "tamper_inference/store/2022/turn1/e79c05678039608dbacc724094418ab18480af87e8ae58095a5652c80cd0cebb/receipt.json",
+      "identical_bytes": true
+    },
+    {
+      "path": "tamper_national/store/2022/turn1/e79c05678039608dbacc724094418ab18480af87e8ae58095a5652c80cd0cebb/receipt.json",
+      "identical_bytes": true
+    },
+    {
+      "path": "tamper_reference/store/2022/turn1/e79c05678039608dbacc724094418ab18480af87e8ae58095a5652c80cd0cebb/receipt.json",
+      "identical_bytes": true
+    },
+    {
+      "path": "tamper_territory/store/2022/turn1/e79c05678039608dbacc724094418ab18480af87e8ae58095a5652c80cd0cebb/receipt.json",
+      "identical_bytes": true
+    },
+    {
+      "path": "utf8_1/store/2022/turn1/abd54588c5b9f01d6eb1beda8c58f5d5fcadd326cb8032bc10126e6d604c22dc/receipt.json",
+      "identical_bytes": true
+    },
+    {
+      "path": "utf8_2/store/2022/turn1/824d0d71a96d7f526aaf287b6b4d54c86c8318e81dea7ffe928e303a7e6c53cd/receipt.json",
+      "identical_bytes": true
+    },
+    {
+      "path": "utf8_3/store/2022/turn1/32fea8f2cd0212cda6e2216026f480407ba1b6ad37f1b1e7ecf884fd1d896f7e/receipt.json",
+      "identical_bytes": true
+    }
+  ],
+  "mutable_ledger_sha256": "bda79597046a439c256109dec161548c01a9533938743c0cbecdea3463bb68c5",
+  "candidate_sha256": "2593c78b5687c883aff6441f09b5d2e67cd319c1ceae723d043dee44a36e62a6",
+  "executor_repair_cases_per_locale": 20,
+  "checker_suite_tests": 26,
+  "execution_wall_seconds_sum": 12.409240250912262,
+  "initial_trace_caveat": "Initial trace logged an unsuccessful open of an absent Python cache as uncovered. Final trace distinguishes absent attempts from bytes read. Both reports retained."
+}

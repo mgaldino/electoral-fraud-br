@@ -1,0 +1,95 @@
+{
+  "candidate_sha256": "62f7a5c4907c9d39b75fe5cd88224bddb4796e015f69f004469e51df7ae493c8",
+  "candidate_expected": "62f7a5c4907c9d39b75fe5cd88224bddb4796e015f69f004469e51df7ae493c8",
+  "contract_sha256": "fc071a8664d04ba6a0a4ca91298d333ee1ca89868a26b23e705946fef1c2f94d",
+  "file_count": 275,
+  "unique_paths": 275,
+  "bad_files": [],
+  "undeclared_manifest_files": [],
+  "declared_unmanifested_files": [],
+  "round_files_unmanifested": [
+    "quality_reports/results/mebane_gates/G7/round1/adjudication_encoding.R",
+    "quality_reports/results/mebane_gates/G7/round1/adjudication_encoding.json"
+  ],
+  "postfreeze_coordinator_evidence": [
+    "quality_reports/results/mebane_gates/G7/round1/adjudication_encoding.R",
+    "quality_reports/results/mebane_gates/G7/round1/adjudication_encoding.json"
+  ],
+  "g1_hashes": {
+    "candidate_manifest.json": "517c17c724cca82a820519c476981d47c8892c7383dd2c3dded9373eba6d31e8",
+    "review/review.json": "727f6b234e3a580c329cc5e898018bb68c02063717c292b6d91e4fbe12d86941",
+    "adjudication.json": "fe21ce5ebaf107027b6cf64f72eb06f9f2549df8f65ccbbd3eeee2067807735e"
+  },
+  "g1_expected": {
+    "candidate_manifest.json": "517c17c724cca82a820519c476981d47c8892c7383dd2c3dded9373eba6d31e8",
+    "review/review.json": "727f6b234e3a580c329cc5e898018bb68c02063717c292b6d91e4fbe12d86941",
+    "adjudication.json": "fe21ce5ebaf107027b6cf64f72eb06f9f2549df8f65ccbbd3eeee2067807735e"
+  },
+  "g1_review_status": "pass",
+  "g1_adjudication_status": "pass",
+  "g1_adjudication_review_bound": true,
+  "live_ledger_sha256": "b2af83785046d4062b1842e83a468ef63f9c719df2c4383478ca07c864e557ba",
+  "snapshot_sha256": "f3d6dd10cb3a4cc09e3df1ca360423b62e24b0b8aca82df3b4054de3117b5ded",
+  "live_states": {
+    "G0": "pass",
+    "G1": "pass",
+    "G2": "changes_requested",
+    "G3": "queued",
+    "G4": "queued",
+    "G5": "queued",
+    "G6": "queued",
+    "G7": "under_review",
+    "G8": "waiting_external",
+    "G9": "waiting_external"
+  },
+  "snapshot_states": {
+    "G0": "pass",
+    "G1": "pass",
+    "G2": "changes_requested",
+    "G3": "queued",
+    "G4": "queued",
+    "G5": "queued",
+    "G6": "queued",
+    "G7": "running",
+    "G8": "waiting_external",
+    "G9": "waiting_external"
+  },
+  "live_ledger_errors": [],
+  "snapshot_errors": [],
+  "dag_probes": [
+    {
+      "case": "G8_pass",
+      "expected_error": "G8: prerequisite G6 has not passed",
+      "matched": true,
+      "errors": [
+        "G8: prerequisite G6 has not passed",
+        "G8: prerequisite G7 has not passed",
+        "G8: pass requires every todo done",
+        "G8: pass requires approval records"
+      ]
+    },
+    {
+      "case": "G9_pass",
+      "expected_error": "G9: prerequisite G6 has not passed",
+      "matched": true,
+      "errors": [
+        "G9: prerequisite G6 has not passed",
+        "G9: prerequisite G7 has not passed",
+        "G9: pass requires every todo done",
+        "G9: pass requires approval records"
+      ]
+    },
+    {
+      "case": "G9_not_applicable",
+      "expected_error": "G9: applicability_evidence requires independent official attestation",
+      "matched": true,
+      "errors": [
+        "G9: applicability_evidence requires independent official attestation"
+      ]
+    }
+  ],
+  "g9_inconclusive_without_predecessors_errors": [],
+  "g9_inconclusive_without_predecessors_accepted": true,
+  "snapshot_matches_live_except_status": true,
+  "manifest_complete": true
+}

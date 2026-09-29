@@ -1,0 +1,61 @@
+{
+  "year": 2022,
+  "turn": 1,
+  "election_date": "02/10/2022",
+  "candidate": {
+    "code": 22,
+    "name": "JOSÉ DA CONCEIÇÃO"
+  },
+  "version": "5ba0b62cb1f413f8cbc2635d03942f5f1d1afb8ffec6fd29c9cbf31a4f4ccd25",
+  "policy_sha256": "c19be1f560e4f8498556554e41fe9f5ea90d14bc808df09a84919687e30c8fd3",
+  "input_hashes": {
+    "votes": "cd87dd1221bf6e9d95d239e894fe7f18f84c575c7d6508c97816c5dcb7e145c5",
+    "ea11": "2199ced2754a0c31a84f8f5682e9c687ec7c552a01ed1b95dc2a91b1f5df1792",
+    "ea16_1": "4e0ede33557e233e19f7e0a7f0d70b760c83b9fdb011a514effd344bad1bb0d9",
+    "controls": "c3567efcf671ff1c9cd0fe2c54069edb433f50c95418dded0b2cf9298f3d52d6",
+    "config": "34ee80da33956f295d7d0962c825c3d4605ae948a524ccad8f0b8196d8cce807"
+  },
+  "provenance": "fixture",
+  "phase": "s",
+  "source_url": "",
+  "validation": {
+    "reference_complete": true,
+    "national_coverage_attested": false,
+    "territorial_scope": {
+      "universe": "Synthetic SP principal sections listed in the supplied EA16; not a statewide census",
+      "expected_ufs": [
+        "SP"
+      ],
+      "reference_ufs": [
+        "SP"
+      ],
+      "observed_ufs": [
+        "SP"
+      ],
+      "coverage_basis": "supplied_EA16_principal_sections"
+    },
+    "by_uf": [
+      {
+        "uf": "SP",
+        "reference_sections": 2,
+        "observed_sections": 2,
+        "missing_sections": 0
+      }
+    ],
+    "expected_sections": 2,
+    "observed_sections": 2,
+    "missing_sections": [],
+    "totals": {
+      "aptos": 18,
+      "turnout": 9,
+      "candidate_votes": 5,
+      "blank": 2,
+      "null": 2
+    },
+    "controls_pass": true,
+    "status": "staging_validated"
+  },
+  "data_ready": false,
+  "inference_ready": false,
+  "release_condition": "independent official-source and coverage attestation; G6 pass for inference"
+}

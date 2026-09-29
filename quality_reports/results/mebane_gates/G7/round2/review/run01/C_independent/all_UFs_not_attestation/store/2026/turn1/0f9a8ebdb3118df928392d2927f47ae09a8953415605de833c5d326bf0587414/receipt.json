@@ -1,0 +1,304 @@
+{
+  "year": 2026,
+  "turn": 1,
+  "election_date": "04/10/2026",
+  "candidate": {
+    "code": 22,
+    "name": "JOSÉ DA CONCEIÇÃO"
+  },
+  "version": "0f9a8ebdb3118df928392d2927f47ae09a8953415605de833c5d326bf0587414",
+  "policy_sha256": "c19be1f560e4f8498556554e41fe9f5ea90d14bc808df09a84919687e30c8fd3",
+  "input_hashes": {
+    "votes": "3fff98edb3e246e651f6e31e5e5aff89923d0bdd4fd87540253b7d92cf8b3b22",
+    "ea11": "f5853dd810d34dee56f98b755b0f4db48828c9b7722351b55e7c711f3d8478ff",
+    "ea16_1": "ebdd1bb2b73c4db81e726ff4a68b262d4945a19c2e42592b4ad11925b30ceb1d",
+    "controls": "96796092d14559488cfcffc9b0d8ce4ec15e06b907c05ef0187ec5570277230e",
+    "config": "bfbebdeca0b6b1741e4c0428542288a5b04e5598d7d5b496a940a016dc681da1"
+  },
+  "provenance": "official",
+  "phase": "o",
+  "source_url": "https://resultados.tse.jus.br/qa-synthetic",
+  "validation": {
+    "reference_complete": true,
+    "national_coverage_attested": false,
+    "territorial_scope": {
+      "universe": "Presidential Brazil including exterior; section universe must be independently attested",
+      "expected_ufs": [
+        "AC",
+        "AL",
+        "AM",
+        "AP",
+        "BA",
+        "CE",
+        "DF",
+        "ES",
+        "GO",
+        "MA",
+        "MG",
+        "MS",
+        "MT",
+        "PA",
+        "PB",
+        "PE",
+        "PI",
+        "PR",
+        "RJ",
+        "RN",
+        "RO",
+        "RR",
+        "RS",
+        "SC",
+        "SE",
+        "SP",
+        "TO",
+        "ZZ"
+      ],
+      "reference_ufs": [
+        "AC",
+        "AL",
+        "AM",
+        "AP",
+        "BA",
+        "CE",
+        "DF",
+        "ES",
+        "GO",
+        "MA",
+        "MG",
+        "MS",
+        "MT",
+        "PA",
+        "PB",
+        "PE",
+        "PI",
+        "PR",
+        "RJ",
+        "RN",
+        "RO",
+        "RR",
+        "RS",
+        "SC",
+        "SE",
+        "SP",
+        "TO",
+        "ZZ"
+      ],
+      "observed_ufs": [
+        "AC",
+        "AL",
+        "AM",
+        "AP",
+        "BA",
+        "CE",
+        "DF",
+        "ES",
+        "GO",
+        "MA",
+        "MG",
+        "MS",
+        "MT",
+        "PA",
+        "PB",
+        "PE",
+        "PI",
+        "PR",
+        "RJ",
+        "RN",
+        "RO",
+        "RR",
+        "RS",
+        "SC",
+        "SE",
+        "SP",
+        "TO",
+        "ZZ"
+      ],
+      "coverage_basis": "supplied_EA16_principal_sections"
+    },
+    "by_uf": [
+      {
+        "uf": "AC",
+        "reference_sections": 1,
+        "observed_sections": 1,
+        "missing_sections": 0
+      },
+      {
+        "uf": "AL",
+        "reference_sections": 1,
+        "observed_sections": 1,
+        "missing_sections": 0
+      },
+      {
+        "uf": "AM",
+        "reference_sections": 1,
+        "observed_sections": 1,
+        "missing_sections": 0
+      },
+      {
+        "uf": "AP",
+        "reference_sections": 1,
+        "observed_sections": 1,
+        "missing_sections": 0
+      },
+      {
+        "uf": "BA",
+        "reference_sections": 1,
+        "observed_sections": 1,
+        "missing_sections": 0
+      },
+      {
+        "uf": "CE",
+        "reference_sections": 1,
+        "observed_sections": 1,
+        "missing_sections": 0
+      },
+      {
+        "uf": "DF",
+        "reference_sections": 1,
+        "observed_sections": 1,
+        "missing_sections": 0
+      },
+      {
+        "uf": "ES",
+        "reference_sections": 1,
+        "observed_sections": 1,
+        "missing_sections": 0
+      },
+      {
+        "uf": "GO",
+        "reference_sections": 1,
+        "observed_sections": 1,
+        "missing_sections": 0
+      },
+      {
+        "uf": "MA",
+        "reference_sections": 1,
+        "observed_sections": 1,
+        "missing_sections": 0
+      },
+      {
+        "uf": "MG",
+        "reference_sections": 1,
+        "observed_sections": 1,
+        "missing_sections": 0
+      },
+      {
+        "uf": "MS",
+        "reference_sections": 1,
+        "observed_sections": 1,
+        "missing_sections": 0
+      },
+      {
+        "uf": "MT",
+        "reference_sections": 1,
+        "observed_sections": 1,
+        "missing_sections": 0
+      },
+      {
+        "uf": "PA",
+        "reference_sections": 1,
+        "observed_sections": 1,
+        "missing_sections": 0
+      },
+      {
+        "uf": "PB",
+        "reference_sections": 1,
+        "observed_sections": 1,
+        "missing_sections": 0
+      },
+      {
+        "uf": "PE",
+        "reference_sections": 1,
+        "observed_sections": 1,
+        "missing_sections": 0
+      },
+      {
+        "uf": "PI",
+        "reference_sections": 1,
+        "observed_sections": 1,
+        "missing_sections": 0
+      },
+      {
+        "uf": "PR",
+        "reference_sections": 1,
+        "observed_sections": 1,
+        "missing_sections": 0
+      },
+      {
+        "uf": "RJ",
+        "reference_sections": 1,
+        "observed_sections": 1,
+        "missing_sections": 0
+      },
+      {
+        "uf": "RN",
+        "reference_sections": 1,
+        "observed_sections": 1,
+        "missing_sections": 0
+      },
+      {
+        "uf": "RO",
+        "reference_sections": 1,
+        "observed_sections": 1,
+        "missing_sections": 0
+      },
+      {
+        "uf": "RR",
+        "reference_sections": 1,
+        "observed_sections": 1,
+        "missing_sections": 0
+      },
+      {
+        "uf": "RS",
+        "reference_sections": 1,
+        "observed_sections": 1,
+        "missing_sections": 0
+      },
+      {
+        "uf": "SC",
+        "reference_sections": 1,
+        "observed_sections": 1,
+        "missing_sections": 0
+      },
+      {
+        "uf": "SE",
+        "reference_sections": 1,
+        "observed_sections": 1,
+        "missing_sections": 0
+      },
+      {
+        "uf": "SP",
+        "reference_sections": 1,
+        "observed_sections": 1,
+        "missing_sections": 0
+      },
+      {
+        "uf": "TO",
+        "reference_sections": 1,
+        "observed_sections": 1,
+        "missing_sections": 0
+      },
+      {
+        "uf": "ZZ",
+        "reference_sections": 1,
+        "observed_sections": 1,
+        "missing_sections": 0
+      }
+    ],
+    "expected_sections": 28,
+    "observed_sections": 28,
+    "missing_sections": [],
+    "totals": {
+      "aptos": 336,
+      "turnout": 196,
+      "candidate_votes": 84,
+      "blank": 28,
+      "null": 28
+    },
+    "controls_pass": true,
+    "status": "staging_validated"
+  },
+  "data_ready": false,
+  "inference_ready": false,
+  "release_condition": "independent official-source and coverage attestation; G6 pass for inference"
+}

@@ -1,0 +1,30 @@
+{
+  "locale": "C",
+  "expected_name": "JOSÉ DA CONCEIÇÃO",
+  "utf8_name_bytes": "4a4f53c38920444120434f4e434549c387c3834f",
+  "input_sha256": {
+    "ascii": "db92ef19e588054ff0dbfb72db91b49d158d98378bd75ccb3813bb45a38f17d3",
+    "utf8": "0dd5d735e253a884720e11e6e56458bf6cce4fc0310c64c20b5f6ca812c8f4a5"
+  },
+  "utf8_input_contains_expected_bytes": true,
+  "utf8_valid": true,
+  "total_input_bytes": 258,
+  "ascii": {
+    "ok": true,
+    "rows": 2,
+    "names": [
+      "CANDIDATO",
+      "CANDIDATO"
+    ],
+    "error": {},
+    "warnings": []
+  },
+  "utf8": {
+    "ok": false,
+    "rows": {},
+    "names": {},
+    "error": "Empty/missing vote values",
+    "warnings": ["invalid input found on input connection 'quality_reports/results/mebane_gates/G7/round1/review/encoding_probe_01/utf8.csv'", "incomplete final line found by readTableHeader on 'quality_reports/results/mebane_gates/G7/round1/review/encoding_probe_01/utf8.csv'"]
+  },
+  "defect_confirmed": true
+}

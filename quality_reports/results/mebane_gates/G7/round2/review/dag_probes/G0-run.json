@@ -1,0 +1,16 @@
+{
+  "gate_id": "G0",
+  "round": "round1",
+  "contract_sha256": "e5ba78d6f8d314c2bf94738df85fce0a31d8e9986ef974f6c69ee9e30ee06ca3",
+  "executor_id": "11111111-1111-4111-8111-111111111111",
+  "inputs": [
+    "G0-input.txt"
+  ],
+  "code": [],
+  "configuration": [],
+  "outputs": [
+    "G0-output.txt"
+  ],
+  "dependency_manifests": {},
+  "dependency_approvals": {}
+}

@@ -1,0 +1,13 @@
+{
+  "command": [
+    "python3",
+    "-B",
+    "tests/mebane/data/test_round2_freeze.py"
+  ],
+  "command_display": "python3 -B tests/mebane/data/test_round2_freeze.py",
+  "started_at_utc": "2026-09-29T03:20:48.158979+00:00",
+  "ended_at_utc": "2026-09-29T03:20:48.223426+00:00",
+  "elapsed_seconds": 0.064,
+  "exit_code": 0,
+  "output": "quality_reports/results/mebane_gates/G1/round2/review/logs/static_contract_fixtures.txt"
+}

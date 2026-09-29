@@ -1,0 +1,14 @@
+{
+  "command": [
+    "Rscript",
+    "--vanilla",
+    "-e",
+    "cat(R.version.string,\"\\n\"); print(vapply(c(\"data.table\",\"arrow\",\"jsonlite\",\"digest\"),function(p) as.character(utils::packageVersion(p)),character(1)))"
+  ],
+  "command_display": "Rscript --vanilla -e 'cat(R.version.string,\"\\n\"); print(vapply(c(\"data.table\",\"arrow\",\"jsonlite\",\"digest\"),function(p) as.character(utils::packageVersion(p)),character(1)))'",
+  "started_at_utc": "2026-09-29T03:24:18.100824+00:00",
+  "ended_at_utc": "2026-09-29T03:24:18.186348+00:00",
+  "elapsed_seconds": 0.085,
+  "exit_code": 0,
+  "output": "quality_reports/results/mebane_gates/G1/round2/review/logs/runtime.txt"
+}

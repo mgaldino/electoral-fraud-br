@@ -1,0 +1,25 @@
+{
+  "raw_detail_rows": 944150,
+  "raw_vote_rows": 5380736,
+  "raw_uf_turn_rows": 56,
+  "raw_candidate_uf_turn_rows": 364,
+  "absent_all_vote_categories": 94,
+  "nominal_zero_sections": [
+    {
+      "NR_TURNO": 2,
+      "V1": 48
+    },
+    {
+      "NR_TURNO": 1,
+      "V1": 51
+    }
+  ],
+  "source_dates": {
+    "raw_detail": "01/11/2022",
+    "raw_vote": "01/11/2022",
+    "official_detail": "28/09/2026",
+    "official_vote": "28/09/2026"
+  },
+  "noninstalled_rows": 94,
+  "noninstalled_electors": 1314
+}

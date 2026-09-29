@@ -1,0 +1,10 @@
+{
+  "locale": "C",
+  "expected_name": "JOSÉ DA CONCEIÇÃO",
+  "rows_expected": 2,
+  "rows_read": {},
+  "names_read": {},
+  "error": "Empty/missing vote values",
+  "warnings": ["invalid input found on input connection '/var/folders/_7/m0js68194rsd8xswh57rn_kh0000gn/T//RtmpUO3Kem/file10e915d1b85b4.csv'", "incomplete final line found by readTableHeader on '/var/folders/_7/m0js68194rsd8xswh57rn_kh0000gn/T//RtmpUO3Kem/file10e915d1b85b4.csv'"],
+  "passed": false
+}

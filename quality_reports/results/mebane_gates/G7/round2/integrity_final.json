@@ -1,0 +1,60 @@
+{
+  "status": "PASS",
+  "preserved_files": 1094,
+  "unchanged_round1_files": 1066,
+  "source_changes": [
+    {
+      "path": "R/lib/mebane_2026_intake.R",
+      "before_sha256": "013c36597a9e87144ec745885a5719750a7d7ad9f728bf4dbc293433f4f45e61",
+      "after_sha256": "1d76e84be45a0ef65bda342e4c1efb42c0b8692590fe354b9edd0803ee9daf30"
+    },
+    {
+      "path": "config/mebane/2026/intake.json",
+      "before_sha256": "5dadb41e90e50c0489da0849545537d675d9671e18ab094cf201ab3d1abf7cba",
+      "after_sha256": "f245be4f951dbc229283149ee9403eea42e2ff9b043f9a2eb734ef4d41242cb6"
+    },
+    {
+      "path": "tests/mebane/2026/check_dag.py",
+      "before_sha256": "5fcdb6ec6bc61f27fb697886794ef460de642d28d4f78800d493969b6343b1db",
+      "after_sha256": "009497ea5d4c151546794f129e9b02275f200a33b9ad2e79ede0bf7b2f8b69d6"
+    },
+    {
+      "path": "tests/mebane/2026/fixtures/config2022.json",
+      "before_sha256": "1f8eddd0835b61a9bfacebdf2fe9b03239b7adcf5d8ed605c12d79aa8420c981",
+      "after_sha256": "49f2e7db031b3eead784a68950c51a09a0288731feebcc702ee49c59d10a380b"
+    },
+    {
+      "path": "tests/mebane/2026/run_tests.R",
+      "before_sha256": "353e4c36ccd14e2091e9086ca9db2765fd45daac26e11fe7911cacf3cd82c5b1",
+      "after_sha256": "b2263a1de408966774288546a6d78c963c7ee7c6bd021b989a59dbceb7df0028"
+    }
+  ],
+  "contract_sha256": "fc071a8664d04ba6a0a4ca91298d333ee1ca89868a26b23e705946fef1c2f94d",
+  "dependency_hashes": {
+    "candidate_manifest.json": "517c17c724cca82a820519c476981d47c8892c7383dd2c3dded9373eba6d31e8",
+    "review/review.json": "727f6b234e3a580c329cc5e898018bb68c02063717c292b6d91e4fbe12d86941",
+    "adjudication.json": "fe21ce5ebaf107027b6cf64f72eb06f9f2549df8f65ccbbd3eeee2067807735e"
+  },
+  "locales": [
+    {
+      "mode": "C",
+      "effective_ctype": "C",
+      "cases": 20
+    },
+    {
+      "mode": "default",
+      "effective_ctype": "C",
+      "cases": 20
+    },
+    {
+      "mode": "UTF8",
+      "effective_ctype": "pt_BR.UTF-8",
+      "cases": 20
+    }
+  ],
+  "new_receipts_checked": 39,
+  "command": "python3 quality_reports/results/mebane_gates/G7/round2/audit_integrity.py",
+  "exit_code": 0,
+  "wall_seconds": 0.10892058399622329,
+  "checked_at_utc": "2026-09-29T04:25:36.760028+00:00"
+}

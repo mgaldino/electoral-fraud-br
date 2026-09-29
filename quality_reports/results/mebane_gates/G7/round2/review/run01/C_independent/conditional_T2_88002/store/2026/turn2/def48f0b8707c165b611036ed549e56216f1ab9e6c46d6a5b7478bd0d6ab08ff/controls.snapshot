@@ -1,0 +1,12 @@
+{
+  "year": 2026,
+  "turn": 2,
+  "pleito": 99001,
+  "election": 88002,
+  "sections": 4,
+  "aptos": 48,
+  "turnout": 28,
+  "candidate_votes": 12,
+  "blank": 4,
+  "null": 4
+}

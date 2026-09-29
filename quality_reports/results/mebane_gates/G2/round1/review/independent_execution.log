@@ -1,0 +1,84 @@
+                                           id passed        error tolerance
+             qbl_literal_matches_fixed_commit   TRUE 0.000000e+00     1e-10
+                     prior_forward_jacobian_1   TRUE 6.784850e-12     1e-09
+                     prior_forward_jacobian_2   TRUE 1.100606e-11     1e-09
+                     prior_forward_jacobian_3   TRUE 1.527597e-12     1e-09
+                  prior_E_pi1_square_integral   TRUE 2.220446e-16     1e-10
+                  prior_simplex_normalization   TRUE 2.220446e-16     1e-10
+                   prior_largest_not_majority   TRUE 0.000000e+00     1e-10
+                prior_partial_not_total_order   TRUE 0.000000e+00     1e-10
+                    prior_not_uniform_simplex   TRUE 0.000000e+00     1e-10
+                                    Exp5_mean   TRUE 0.000000e+00     1e-09
+                                Exp5_variance   TRUE 2.081668e-17     1e-09
+                        sd_density_normalizes   TRUE 5.206946e-13     1e-08
+                                      sd_mean   TRUE 1.512124e-13     1e-08
+                 precision_density_normalizes   TRUE 2.064793e-12     1e-08
+           paper_sd_Exp5_implies_variance_008   TRUE 1.387779e-17     1e-09
+                          laplace_marginal_x0   TRUE 2.170042e-12     1e-07
+                        laplace_marginal_x0.4   TRUE 0.000000e+00     1e-07
+                        laplace_marginal_x1.2   TRUE 2.081668e-17     1e-07
+                  intercept_precision_inverse   TRUE 0.000000e+00     1e-10
+                 collapsed_intercept_variance   TRUE 0.000000e+00     1e-10
+                  collapsed_intercept_density   TRUE 2.147338e-12     1e-09
+                 noncentered_density_jacobian   TRUE 5.551115e-17     1e-10
+                  reference_contrast_variance   TRUE 4.440892e-16     1e-10
+                        logistic_jacobian_0_1   TRUE 2.317035e-13     1e-08
+                      logistic_jacobian_0_0.7   TRUE 2.318146e-13     1e-08
+                      logistic_jacobian_0.7_1   TRUE 2.315925e-13     1e-08
+         pw_literal_vs_turnout_reconstruction   TRUE 1.705303e-13     1e-10
+                     pw_nonnegative_400_cases   TRUE 0.000000e+00     1e-10
+                       physical_mean_identity   TRUE 2.273737e-13     1e-10
+                            all_q_support_iff   TRUE 0.000000e+00     1e-10
+               all_component_pa_probabilities   TRUE 5.551115e-17     1e-10
+            paper_identity_at_mean_abstention   TRUE 0.000000e+00     1e-10
+                 invalid_positive_mass_parent   TRUE 4.547474e-13     1e-09
+           continuous_incremental_raw_invalid   TRUE 0.000000e+00     1e-10
+                    stan_clamp_changes_target   TRUE 0.000000e+00     1e-10
+                   stan_zero_becomes_positive   TRUE 0.000000e+00     1e-10
+ stan_clamp_can_hide_denominator_floor_change   TRUE 0.000000e+00     1e-10
+   stan_floor_changes_unsaturated_probability   TRUE 0.000000e+00     1e-10
+                                 atom_mean_N1   TRUE 0.000000e+00     1e-09
+                               atom_second_N1   TRUE 0.000000e+00     1e-09
+                                 atom_mean_N2   TRUE 0.000000e+00     1e-09
+                               atom_second_N2   TRUE 0.000000e+00     1e-09
+                                 atom_mean_N4   TRUE 0.000000e+00     1e-09
+                               atom_second_N4   TRUE 0.000000e+00     1e-09
+                               atom_mean_N999   TRUE 7.771561e-16     1e-09
+                             atom_second_N999   TRUE 1.110223e-16     1e-09
+                              atom_mean_N1000   TRUE 3.330669e-16     1e-09
+                            atom_second_N1000   TRUE 1.110223e-16     1e-09
+                              atom_mean_N1001   TRUE 2.220446e-16     1e-09
+                            atom_second_N1001   TRUE 2.220446e-16     1e-09
+                         atom_collision_N1000   TRUE 0.000000e+00     1e-10
+                         atom_decreases_N1001   TRUE 0.000000e+00     1e-10
+     T5_four_latents_vs_active_pair_162_cases   TRUE 4.440892e-16     1e-12
+          T5_CDF_normalizer_N1_physical_FALSE   TRUE 0.000000e+00     1e-10
+          T5_CDF_normalizer_N2_physical_FALSE   TRUE 2.220446e-16     1e-10
+          T5_CDF_normalizer_N3_physical_FALSE   TRUE 1.110223e-16     1e-10
+          T5_CDF_normalizer_N4_physical_FALSE   TRUE 2.220446e-16     1e-10
+           T5_CDF_normalizer_N1_physical_TRUE   TRUE 0.000000e+00     1e-10
+           T5_CDF_normalizer_N2_physical_TRUE   TRUE 2.220446e-16     1e-10
+           T5_CDF_normalizer_N3_physical_TRUE   TRUE 3.330669e-16     1e-10
+           T5_CDF_normalizer_N4_physical_TRUE   TRUE 1.110223e-16     1e-10
+                 executor_example_exact_value   TRUE 0.000000e+00     1e-12
+                   plugin_not_marginalization   TRUE 0.000000e+00     1e-10
+       plugin_failure_without_invalid_or_atom   TRUE 5.551115e-17     1e-10
+                          paper_physical_mass   TRUE 0.000000e+00     1e-10
+                  JAGS_no_fraud_physical_mass   TRUE 0.000000e+00     1e-10
+     source_invalid_normalizer_depends_on_tau   TRUE 0.000000e+00     1e-10
+                          Stan_rectangle_mass   TRUE 1.110223e-16     1e-10
+                  Stan_not_physical_generator   TRUE 0.000000e+00     1e-10
+  global_vs_component_normalization_different   TRUE 0.000000e+00     1e-10
+                      total_variance_identity   TRUE 2.842171e-14     1e-10
+            joint_totals_not_sum_of_quantiles   TRUE 0.000000e+00     1e-10
+                  T1_T2_fixed_opponent_bounds   TRUE 0.000000e+00     1e-10
+        T2_residual_blank_null_counterexample   TRUE 0.000000e+00     1e-10
+                    T1_majority_margin_bounds   TRUE 0.000000e+00     1e-10
+
+75/75 checks passed; 162 full/reduced enumeration cases
+During startup - Warning messages:
+1: Setting LC_CTYPE failed, using "C" 
+2: Setting LC_COLLATE failed, using "C" 
+3: Setting LC_TIME failed, using "C" 
+4: Setting LC_MESSAGES failed, using "C" 
+5: Setting LC_MONETARY failed, using "C" 

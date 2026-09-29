@@ -1,0 +1,78 @@
+{
+  "schema_version": "1.0",
+  "adjudication_id": "mebane-G1:009e0fd39f8a:round1:addendum1",
+  "gate_id": "G1",
+  "round": "round1",
+  "contract_sha256": "f985ab97469aa66755b977a09781b30608afa6e245896d9d9788b4461190975d",
+  "candidate_manifest_sha256": "009e0fd39f8ab495e52fcb214476fcc7b6095f895381006a924df6a2ffbd7003",
+  "status": "changes_requested",
+  "unresolved_material_findings": 1,
+  "source": {
+    "reviewed_artifact": "quality_reports/results/mebane_gates/G1/round1/candidate_manifest.json",
+    "sha256": "009e0fd39f8ab495e52fcb214476fcc7b6095f895381006a924df6a2ffbd7003",
+    "artifact_intact": true
+  },
+  "contract": {
+    "required": false,
+    "path": null,
+    "sha256": null,
+    "contract_id": null,
+    "artifact_sha256": null,
+    "status": null,
+    "stale": false
+  },
+  "review_sources": [
+    {
+      "review_id": "COORD-G1-R1",
+      "path": "quality_reports/results/mebane_gates/G1/round1/adjudication_candidate_controls.csv",
+      "sha256": "2b7e2b71a040ca329dc591c489e31edb3db9fefa6d3cfac6f2beb92130609f79"
+    }
+  ],
+  "findings": [
+    {
+      "id": "G1-R1-COORD-F03",
+      "finding_id": "G1-R1-COORD-F03",
+      "source_review": "COORD-G1-R1",
+      "quoted_finding": "Controles por candidato sao hard-coded para13e22; um controle configurado para outro candidato e silenciosamente ignorado.",
+      "type": "method",
+      "severity": "major",
+      "scientific_dimension": "data_integrity",
+      "held_decision": false,
+      "status": "CONFIRMED",
+      "resolved": false,
+      "source_locations": [
+        "R/lib/mebane_data.R:167-173",
+        "quality_reports/results/mebane_gates/G1/round1/adjudication_candidate_controls.R"
+      ],
+      "defect_evidence": [
+        "O loop usa for(candidate in c(13L,22L)), nao os controles configurados.",
+        "Fixture com candidato12 elegivel e um voto aceita tanto controle1 quanto controle999. Fonte testado SHA73b03828da6e49f7b958ac42dc09fdef0ae332a79012b7291f1de608b1081942 coincide com o manifesto congelado."
+      ],
+      "refuting_evidence": [],
+      "mechanical_checks": [
+        "Rscript --vanilla quality_reports/results/mebane_gates/G1/round1/adjudication_candidate_controls.R: exit0; confirmou defeito, nao e aprovacao de regressao.",
+        "Recalculado SHA256 do helper apos a contraprova; igual ao manifesto G1round1."
+      ],
+      "reasoning": "O contrato G1 exige parametrizacao por candidato. Controles oficiais declarados para candidatos diferentes de13ou22 nao podem ser aceitos sem verificacao. O defeito nao altera os totais2022 ja conferidos, mas invalida a promessa de interface generica.",
+      "proposed_fix_assessment": "safe",
+      "disposition": "Iterar todos os controles de candidato efetivamente configurados, validar nomes e elegibilidade, e rejeitar discrepancias. Incluir regressao para candidato fora de13/22 com controle correto e incorreto; nao fixar nomes/numeros de2026 por suposicao.",
+      "resolution": "Pendente de implementacao e revisao independente."
+    }
+  ],
+  "summary": {
+    "total": 1,
+    "confirmed": 1,
+    "partial": 0,
+    "refuted": 0,
+    "unresolved": 0,
+    "held_decisions": 0
+  },
+  "adjudication": {
+    "verdict": "READY_FOR_IMPLEMENTATION",
+    "checked_at": "2026-09-29T02:51:01+00:00",
+    "reasons": [
+      "Adendo delimitado aos controles de candidato; preserva a adjudicacao anterior de F01/F02.",
+      "Fonte exato e contraprova verificadas. Reparo parametrico seguro abrangido pela autorizacao vigente."
+    ]
+  }
+}

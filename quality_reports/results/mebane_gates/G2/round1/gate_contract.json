@@ -1,0 +1,25 @@
+{
+  "id": "G2",
+  "title": "Contrato matemático do qbl",
+  "goal": "Estabelecer o alvo estatístico preciso, o que o código JAGS implementa e as diferenças do Stan, com equações, domínios, priors e estimandos verificáveis.",
+  "depends_on": ["G0"],
+  "external_prerequisites": [],
+  "executor": {"role": "METODO-PRINCIPAL", "model": "inherit", "effort": "xhigh"},
+  "reviewer": {"role": "QA-MATEMATICA", "model": "inherit", "effort": "xhigh", "independent": true},
+  "write_scope": ["appendices/mebane_model_contract.md", "tests/mebane/algebra/", "quality_reports/results/mebane_gates/G2/"],
+  "todos": [
+    {"id": "G2-T1", "task": "Mapear artigo de 2022, discussão de 2023, qbl do commit fixado e Stan atual linha por linha, distinguindo paper, implementação e aproximação."},
+    {"id": "G2-T2", "task": "Derivar priors induzidas ordenadas, interceptos, efeitos geográficos e hierárquicos; conferir a parametrização JAGS de precisão e a distinção entre variância e desvio-padrão."},
+    {"id": "G2-T3", "task": "Verificar p.a e p.w, suporte físico e probabilístico, contagens binomiais latentes, condicionamentos, truncamentos e o efeito do clamp no Stan em casos de fronteira."},
+    {"id": "G2-T4", "task": "Definir votos manufactured/stolen, classes, totais conjuntos por draw e efeito contrafactual na margem; explicitar que a origem dos votos stolen pode exigir hipóteses adicionais ou limites de identificação parcial, pois não-leaders são agregados. Distinguir identificação, convergência e interpretação substantiva."},
+    {"id": "G2-T5", "task": "Derivar a marginalização exata em casos pequenos ou delimitar formalmente a aproximação e o custo; obter rederivação independente com contraexemplos."}
+  ],
+  "deliverables": ["Contrato matemático e tabela de diferenças", "Testes de identidades e fronteiras", "Definições de estimandos e limitações"],
+  "acceptance": [
+    "Cada equivalência afirmada tem derivação ou teste pertinente, e cada divergência permanece rotulada.",
+    "O significado de Exp(5) e dos parâmetros de escala corresponde à expressão efetiva no código congelado.",
+    "Suporte, contagens discretas, constantes e transformações das priors são auditados; concordância entre médias não prova equivalência.",
+    "Revisor não participante rederiva as partes críticas e não deixa questão material UNRESOLVED."
+  ],
+  "on_failure": "Reparar a derivação ou especificar a decisão substantiva necessária. Sol pode produzir testes auxiliares, mas não substituir a checagem matemática."
+}

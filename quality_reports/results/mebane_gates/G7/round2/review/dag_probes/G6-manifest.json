@@ -1,0 +1,19 @@
+{
+  "gate_id": "G6",
+  "round": "round1",
+  "contract_sha256": "7bfae61605036b0ed41b0f07a14dec3fe5771c8ec23d7fec93492c14654597a9",
+  "files": [
+    {
+      "path": "G6-input.txt",
+      "sha256": "3099b6c8cfec72b28f3150fc80c97025ae313d03dc9c72dc9a5556523b939456"
+    },
+    {
+      "path": "G6-output.txt",
+      "sha256": "b1aeaf4a9990b7d310bad67703fdfb2adf841ec746f041563432efcf256a1a0e"
+    },
+    {
+      "path": "G6-run.json",
+      "sha256": "a12f260bc87e81db8583e62b42698026e2a91dec6891b8ca5147008fc927c055"
+    }
+  ]
+}

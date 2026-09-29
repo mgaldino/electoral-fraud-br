@@ -1,0 +1,18 @@
+Creator:         TeX
+Producer:        pdfTeX-1.40.17
+CreationDate:    Wed Jul 19 05:58:52 2017 -03
+ModDate:         Wed Jul 19 05:58:52 2017 -03
+Custom Metadata: yes
+Metadata Stream: no
+Tagged:          no
+UserProperties:  no
+Suspects:        no
+Form:            none
+JavaScript:      no
+Pages:           74
+Encrypted:       no
+Page size:       595.276 x 841.89 pts (A4)
+Page rot:        0
+File size:       429729 bytes
+Optimized:       no
+PDF version:     1.5

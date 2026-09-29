@@ -1,0 +1,13 @@
+{
+  "command": [
+    "Rscript",
+    "--vanilla",
+    "quality_reports/results/mebane_gates/G1/round2/review/adversarial_review.R"
+  ],
+  "command_display": "Rscript --vanilla quality_reports/results/mebane_gates/G1/round2/review/adversarial_review.R",
+  "started_at_utc": "2026-09-29T03:21:15.831812+00:00",
+  "ended_at_utc": "2026-09-29T03:21:16.222638+00:00",
+  "elapsed_seconds": 0.391,
+  "exit_code": 0,
+  "output": "quality_reports/results/mebane_gates/G1/round2/review/logs/adversarial_final.txt"
+}

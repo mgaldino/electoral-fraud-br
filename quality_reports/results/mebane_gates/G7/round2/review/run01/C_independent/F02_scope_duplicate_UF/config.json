@@ -1,0 +1,32 @@
+{
+  "schema": "g7-intake-v2",
+  "year": 2022,
+  "cargo": 1,
+  "pleito_t1_documented": 901,
+  "election_t1_documented": 1901,
+  "turns": [
+    1,
+    2
+  ],
+  "election_dates": {
+    "1": "02/10/2022",
+    "2": "30/10/2022"
+  },
+  "territorial_scope": {
+    "universe": "Independent synthetic reference, not national attestation",
+    "expected_ufs": [
+      "SP",
+      "SP"
+    ]
+  },
+  "candidate_selection": {
+    "1": {
+      "code": 22,
+      "name": "CANDIDATO QA"
+    },
+    "2": {
+      "code": 22,
+      "name": "CANDIDATO QA"
+    }
+  }
+}

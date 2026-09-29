@@ -1,0 +1,112 @@
+                                 id pass
+                   source_qbl_exact TRUE
+              pi_density_normalizes TRUE
+           pi_majority_not_required TRUE
+                            pi_mean TRUE
+                   pi_partial_order TRUE
+             pi_not_uniform_simplex TRUE
+                   pi_scale_cancels TRUE
+                        pi_jacobian TRUE
+                   normal_precision TRUE
+               noncentered_jacobian TRUE
+           sigma_density_normalizes TRUE
+             scale_prior_divergence TRUE
+                    laplace_induced TRUE
+      intercept_not_exactly_removed TRUE
+                 logistic_jacobians TRUE
+                pw_algebra_identity TRUE
+              pw_nonnegative_domain TRUE
+            pw_physical_mean_region TRUE
+           paper_identity_at_mean_a TRUE
+             paper_not_qbl_off_mean TRUE
+            minimal_invalid_support TRUE
+          stan_clamp_changes_target TRUE
+         stan_boundary_zero_changed TRUE
+                 stan_clamp_plateau TRUE
+                   endpoint_mean_N1 TRUE
+                 endpoint_second_N1 TRUE
+                   endpoint_mean_N2 TRUE
+                 endpoint_second_N2 TRUE
+                   endpoint_mean_N5 TRUE
+                 endpoint_second_N5 TRUE
+                  endpoint_mean_N20 TRUE
+                endpoint_second_N20 TRUE
+    latent_support_overlaps_classes TRUE
+                 endpoint_collision TRUE
+               endpoint_nonmonotone TRUE
+       paper_rectangular_normalized TRUE
+      paper_physical_not_normalized TRUE
+        qbl_physical_not_normalized TRUE
+          rejection_C_depends_theta TRUE
+        stan_rectangular_normalized TRUE
+ alternative_multinomial_normalized TRUE
+       same_mean_different_variance TRUE
+   finite_marginalization_all_small TRUE
+               normalizer_cdf_FALSE TRUE
+                normalizer_cdf_TRUE TRUE
+         plugin_not_marginalization TRUE
+          binomial_constants_matter TRUE
+             estimand_decomposition TRUE
+                      margin_bounds TRUE
+     rao_blackwell_variance_missing TRUE
+   sum_draws_not_marginal_quantiles TRUE
+                                                                                                     detail
+                Installed JAGS literal equals qbl at the fixed commit, ignoring surrounding whitespace only
+                                                               Integral on largest-component simplex is one
+                                                                                P(pi1 > 1/2) = 1/2, not one
+                                                                                               Exact E(pi1)
+                                                                                         pi3 can exceed pi2
+                                                           Not uniform Dirichlet conditioned on pi1 largest
+                                                                                   Exact scale cancellation
+                                                            Finite difference cross-check of ratio Jacobian
+                                                              JAGS precision=25 implies variance=.04, sd=.2
+                                                              Normal density times dh/dz is standard normal
+                                                           Variance Exp(5) induces density 10*s*exp(-5*s^2)
+                                                  Variance-Exp and sd-Exp have different residual variances
+                                                     Normal with exponential variance integrates to Laplace
+                                                        Exact collapsed intercept variance is 1.0001, not 1
+                                                           All three transformed densities integrate to one
+                                        Literal and reduced formulas agree over 180 boundary/interior cases
+                                                       No negative pw for valid q,nu,s in [0,1], m in [0,1)
+                                                                     q <= 1-m ensures pa-observed + pw <= 1
+                                                Equality holds when observed A/N equals expected abstention
+                                                            Not the same likelihood at general observations
+                                                                  N=A=count_m=1,count_s=0 produces pw=499.5
+                                               Invalid continuous incremental state is retained after clamp
+                                                               Impossible success gets positive probability
+                                                  Saturated region is locally flat for this likelihood term
+                                                                          Exact endpoint correction to E(m)
+                                                                 Exact second moment after .999 replacement
+                                                                          Exact endpoint correction to E(m)
+                                                                 Exact second moment after .999 replacement
+                                                                          Exact endpoint correction to E(m)
+                                                                 Exact second moment after .999 replacement
+                                                                          Exact endpoint correction to E(m)
+                                                                 Exact second moment after .999 replacement
+                                                 k restricts binomial probabilities, not realized fractions
+                                                                          Two counts map to .999 for N=1000
+                                                                          Endpoint map decreases for N>1000
+                                                                         Paper product normalized on square
+                                                                           Paper assigns .125 mass to A+W>N
+                                                           No-fraud JAGS still assigns .03125 mass to A+W>N
+                                                   Zeroing invalid parents induces parameter-dependent mass
+                              Clamp defines a normalized conditional model on square, not physical triangle
+                                                         Illustrative alternative only, not approved target
+                                      N=2,A=1: Bin(2,.25) and Bin(1,.5) have equal means, unequal variances
+ 29 (A,W,N) cases including impossible physical counts; four-count brute force vs active-pair factorization
+                                                    Summing W via binomial CDF matches explicit enumeration
+                                                    Summing W via binomial CDF matches explicit enumeration
+                                                   Likelihood of mean fraction differs from mean likelihood
+                                               Dropping count-dependent choose(N,r) changes marginalization
+                                                                Expected manufactured=8, stolen=3, total=11
+                                            Without origin information, counterfactual margin lies in [6,9]
+                                      Conditional-mean estimand omits class variance 1875 in simple example
+                                   Anti-correlated units: total is always 100, sum of unit quantiles is not
+
+51/51 assertions passed
+During startup - Warning messages:
+1: Setting LC_CTYPE failed, using "C" 
+2: Setting LC_COLLATE failed, using "C" 
+3: Setting LC_TIME failed, using "C" 
+4: Setting LC_MESSAGES failed, using "C" 
+5: Setting LC_MONETARY failed, using "C" 

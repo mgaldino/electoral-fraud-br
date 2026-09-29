@@ -1,0 +1,6 @@
+case,accepted,passed,error
+valid_including_candidate12,TRUE,TRUE,
+wrong_code_both,FALSE,TRUE,Election identity mismatch: detail turn 1 CD_ELEICAO
+wrong_date_both,FALSE,TRUE,Election identity mismatch: detail turn 1 DT_ELEICAO
+wrong_type_both,FALSE,TRUE,Election identity mismatch: detail turn 1 CD_TIPO_ELEICAO
+wrong_candidate12_control,FALSE,TRUE,Official candidate control disagreement: turn 1 candidate_12

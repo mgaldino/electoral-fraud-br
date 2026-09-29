@@ -4,7 +4,7 @@ Reconstrucao metodologica do parecer sobre a research note "Is there evidence of
 
 ## Estado e protocolo vigentes
 
-O plano [Mebane 2022-2026](quality_reports/plans/mebane_2022_2026_gates.json) inclui a analise presidencial de 2022 e a preparacao para dados oficiais de 2026. Os gates analiticos ainda exigem execucao e revisao independente. O candidato reparado do baseline G0 esta em `quality_reports/results/mebane_gates/G0/round2/`; a entrega de um candidato nao significa gate aprovado. Nao ha resultado nacional qbl validado nem inferencia de 2026 neste repositorio. Os fits historicos de Brasilia e os testes suplementares nao demonstram fraude nem sua ausencia.
+O plano [Mebane 2022-2026](quality_reports/plans/mebane_2022_2026_gates.json) inclui a análise presidencial de 2022 e a preparação para dados oficiais de 2026. G0, G1 e G7 foram aprovados após revisão independente e adjudicação em suas pastas `round2/`. G7 aprova somente a prontidão ensaiada do staging de CSV normalizado; ainda faltam conversor auditado dos arquivos oficiais brutos e atestação dos dados reais. A auditoria matemática G2 foi rederivada, mas a escolha do alvo, das priors e dos estimandos continua pendente; o [contrato matemático](appendices/mebane_model_contract.md) e a [adjudicação](quality_reports/results/mebane_gates/G2/round1/adjudication.md) registram as diferenças entre paper, JAGS e Stan. O ledger é a fonte do estado atualizado. Não há resultado nacional qbl validado nem inferência de 2026 neste repositório. Os fits históricos de Brasília e os testes suplementares não demonstram fraude nem sua ausência.
 
 ## Replicacao
 
@@ -40,16 +40,34 @@ cd electoral-fraud-br
 Rscript -e 'renv::restore()'  # somente apos revisar as dependencias externas; nao executado no G0
 ```
 
-### Pipeline
+### Pipeline de dados vigente
 
-Executar os scripts em ordem:
+Executar na raiz com um diretório de saída ainda inexistente. O loader recusa
+sobrescrita; o builder exige a mesma configuração usada na carga. Estes
+comandos não alteram `data/processed/` nem iniciam estimação:
 
 ```bash
-# Bloco 0-1: infraestrutura + construcao de variaveis
-Rscript R/00_setup.R          # carregado automaticamente pelos demais
-Rscript R/01_load_tse.R       # carrega CSVs → parquet
-Rscript R/02_build_vars.R     # turnout, vote shares, flags
+Rscript --vanilla R/01_load_tse.R config/mebane/2022.json output/mebane/data/2022/run_novo
+Rscript --vanilla R/02_build_vars.R config/mebane/2022.json output/mebane/data/2022/run_novo
+Rscript --vanilla tests/mebane/data/test_g1.R --full output/mebane/data/2022/run_novo
+```
 
+Para cada repetição, usar outro diretório novo. A configuração identifica fontes,
+ano, cargo, turnos, identidade eleitoral e controles. As saídas da validação
+vigente estão em `quality_reports/results/mebane_gates/G1/round2/`, com revisão
+e adjudicação aprovadas. A aprovação de dados não libera estimação sem os gates
+metodológicos e de recursos correspondentes.
+
+### Scripts históricos
+
+Os comandos abaixo descrevem o pipeline de abril, não uma sequência aprovada
+para nova estimação. Usam os dados históricos preservados em `data/processed/`;
+não consomem automaticamente as saídas versionadas do G1. A integração ao modelo
+depende dos gates posteriores, e os scripts de análise podem escrever sobre
+suas próprias saídas históricas. Não os executar como continuação automática
+da carga acima.
+
+```bash
 # Bloco 2: fingerprint visual (baseline)
 Rscript R/03_fingerprint_base.R   # → output/figures/fig1_fingerprint_*.pdf
 

@@ -1,0 +1,9 @@
+G8: prerequisite G6 has not passed
+G9: prerequisite G6 has not passed
+G6 predecessor negative checks: PASS
+Frozen-ledger checker suite: PASS
+..........................
+----------------------------------------------------------------------
+Ran 26 tests in 3.056s
+
+OK

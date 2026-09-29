@@ -1,0 +1,102 @@
+{
+  "gate_id": "G0",
+  "round": "round2",
+  "contract_sha256": "e5ba78d6f8d314c2bf94738df85fce0a31d8e9986ef974f6c69ee9e30ee06ca3",
+  "candidate_manifest_sha256": "f71333db477385fc78dad8a7a1a7ca78e48479226dcdbde80ce97d724409fec7",
+  "executor_id": "01a0eaba-2cec-74f3-bca0-8c27b736567e",
+  "reviewer_id": "01a0eace-749b-7490-994c-2cb3b39c9a26",
+  "status": "pass",
+  "manifest_complete": true,
+  "findings": [],
+  "scope": "Parecer independente de G0: inventário, ambiente, fontes e reparos. Este status é do parecer sobre o candidato congelado; não altera nem aprova o gate no ledger.",
+  "prior_review_sha256": "0396d243250471cdf9db8e4c0ea8f80cf0bbe9830ddd4629feb0dec2ddb175b0",
+  "prior_adjudication_sha256": "19488904da5d64f743a89616d0becf01cff8af4423a5670d19c556a6d1660ab4",
+  "resolved_prior_findings": [
+    {
+      "id": "G0-R1-F1",
+      "adjudicated_status": "CONFIRMED",
+      "resolution_status": "resolved",
+      "resolved": true,
+      "localização": "round2/inventory_additions.json; round2/final_state_map.json; round2/run.json inputs; round2/final_state/research_note.md e output/tables/*.csv",
+      "evidência": "Os cinco arquivos omitidos foram acrescentados com papéis explícitos, tamanho e SHA-256. Recalculei seus hashes e comparei snapshots com os originais: cinco identidades exatas. Os cinco caminhos congelados constam em run.inputs, no mapa final e no manifesto. Inspecionei o título/autoria do manuscrito e o conteúdo dos quatro CSVs, sem recalcular seus resultados.",
+      "resolução": "A omissão histórica confirmada foi corrigida. O manifesto fixa agora o manuscrito e as quatro tabelas usados nas alegações."
+    },
+    {
+      "id": "G0-R1-F2",
+      "adjudicated_status": "CONFIRMED",
+      "resolution_status": "resolved",
+      "resolved": true,
+      "localização": "round2/renv_before.lock; round2/final_state/renv.lock; scripts R congelados em round1/final_state/R/",
+      "evidência": "O renv_before.lock é byte a byte igual ao lock final de round1. O lock final contém 180 registros, preserva integralmente os 174 anteriores e todos os metadados externos a Packages, e acrescenta somente bbmle 1.0.25.1, bdsmatrix 1.3-7, diptest 0.77-2, emdbook 1.3.14, plyr 1.8.9 e spikes 1.1. Os seis registros têm Source=Repository e Repository=CRAN e coincidem com DESCRIPTION$Version instalado. Meu parser de 18 scripts R congelados encontrou 31 pacotes diretamente referidos e fechamento recursivo de 179 pacotes não-base; nenhum está ausente ou tem versão literal divergente do lock.",
+      "resolução": "A lacuna de dependências foi corrigida por inclusão dos registros instalados. A conclusão não exige nem implica restauração fria."
+    },
+    {
+      "id": "G0-R1-F3",
+      "adjudicated_status": "PARTIAL",
+      "resolution_status": "resolved_in_adjudicated_scope",
+      "resolved": true,
+      "localização": "round2/final_state/README.md:21; round1/sources.md, linha do ZIP de replicação",
+      "evidência": "Comparei os READMEs congelados de round1 e round2 e li sources.md. A receita genérica de recuperação foi retirada. O novo texto declara URL, data e método de aquisição desconhecidos, condiciona restauração exata a cópia íntegra do ZIP SHA-256 88857251458aceecf6a8fdb2501a1e38d4f0f9aeda7c6693bb986464521c4422, limita a disponibilidade atestada a este checkout e distingue a futura obtenção oficial G1. Não inventa proveniência nem afirma perda universal do ZIP.",
+      "resolução": "Corrigida a promessa excessiva de recuperação externa, conforme adjudicação PARTIAL. A origem externa continua desconhecida e explícita; o parecer não atesta sua recuperação ou restauração completa."
+    }
+  ],
+  "manifest_completeness": {
+    "direct_files_checked": 158,
+    "direct_hash_or_size_mismatches": 0,
+    "inherited_same_path_records": 129,
+    "inherited_record_changes": 0,
+    "prior_files_retained_transitively": 22,
+    "prior_transitive_hash_or_size_mismatches": 0,
+    "snapshot_count": 37,
+    "basis": "Conferi todas as listas inputs/code/configuration/outputs do run e todas as referências de todo_evidence, o código de criação do candidato, os reparos e as fontes. Todos os inputs e códigos de round1 permanecem no manifesto round2. Vinte e dois produtos históricos de round1, incluindo DESCRIPTION e qbl JAGS, ficam vinculados pelo manifesto anterior, cujo hash consta no novo candidato; também recalculei esses 22 arquivos. Nenhum caminho canônico do mapa de snapshots está diretamente vinculado ao novo manifesto. O contrato derivado do ledger congelado coincide com o contrato esperado."
+  },
+  "tests": [
+    {
+      "id": "QA-G0-R2-T1",
+      "command": "python3 quality_reports/results/mebane_gates/G0/round2/review/audit_round2.py",
+      "exit_code": 0,
+      "execution_round": "round2",
+      "result": "Identidades, vínculos da adjudicação/revisão anterior, 158 arquivos diretos, 22 arquivos herdados indiretamente, 37 snapshots, cinco inclusões F1, preservação de 174 registros e inclusão exata de seis: todos conferidos. Resultado detalhado em audit_results.json."
+    },
+    {
+      "id": "QA-G0-R2-T2",
+      "command": "Rscript --vanilla quality_reports/results/mebane_gates/G0/round2/review/check_dependencies.R",
+      "exit_code": 0,
+      "execution_round": "round2",
+      "result": "18 scripts congelados analisados sem execução; 31 pacotes diretos e fechamento Depends/Imports/LinkingTo de 179 pacotes. Zero ausências e zero diferenças de versão literal. As seis inclusões têm versões e fontes registradas. Resultado em dependencies_results.json."
+    },
+    {
+      "id": "QA-G0-R2-T3",
+      "command": "diff -u entre os snapshots de README.md e CLAUDE.md de round1 e round2; leitura direta dos snapshots, sources.md e novos scripts de congelamento/reconciliação",
+      "execution_round": "round2",
+      "result": "Reparo documental F3 confirmado; CLAUDE apenas atualiza a rodada. Os novos scripts obtêm snapshots e registros de pacotes existentes. Não usei implementation.md como validação."
+    }
+  ],
+  "prior_test_reuse": [
+    {
+      "test": "Carregamento do fresh_v2 e dos quatro parquet; reprodução dos R-hat clássicos",
+      "execution_round": "round1",
+      "reexecuted_in_round2": false,
+      "basis": "Os cinco artefatos mantêm os hashes verificados na primeira revisão, recalculados agora. A execução anterior carregou quatro cadeias de 5.000 draws e reproduziu pi[2]=1.246802 e iota.s.alpha=1.713809."
+    },
+    {
+      "test": "Identidade do commit eforensics, DESCRIPTION e strings qbl instalado/fonte/snapshot",
+      "execution_round": "round1",
+      "reexecuted_in_round2": false,
+      "basis": "As fontes, metadados e qbl congelados permanecem com os mesmos hashes. Reutilizada a comparação executada no round1 para o commit 3017de537450f97a01872d0157462a68bea348ee; não apresentada como nova comparação do qbl instalado."
+    },
+    {
+      "test": "Estrutura/identificação dos PDFs e correspondência ZIP→extraídos",
+      "execution_round": "round1",
+      "reexecuted_in_round2": false,
+      "basis": "Hashes do ZIP, raw, PDFs primários, SSRN e PDF incompleto recalculados e inalterados. Reutilizados os testes anteriores de pdfinfo, primeiras páginas e igualdade dos quatro membros raw-data; o SSRN válido continua identificado como Kalinin e o .download como inválido."
+    }
+  ],
+  "limits": [
+    "A aquisição histórica externa do ZIP não foi reconstruída; sua disponibilidade fora deste checkout não foi verificada. A aprovação do parecer se limita ao G0 com essa ausência explícita, conforme a adjudicação.",
+    "Não executei restauração fria, instalação, MCMC, transformação G1 ou auditoria matemática G2. Não validei inferência nem recalculei as tabelas históricas.",
+    "Os testes de carregamento, comparação qbl e estrutura PDF são da primeira revisão; esta rodada recalculou os hashes que permitem reutilizar essas evidências.",
+    "Durante a revisão, o README canônico recebeu uma seção posterior sobre denominadores. O diff foi inspecionado para identificar a mudança; essa seção e a nota nela referida não integram o candidato congelado nem foram avaliadas neste parecer. O snapshot README SHA-256 994b6aa2b95a9d49b1b6e8e516ab3e2bbd82c76d2012236033a6a7f7b402cc2e permaneceu íntegro.",
+    "findings contém apenas defeitos vigentes. As classificações históricas CONFIRMED/CONFIRMED/PARTIAL foram preservadas em resolved_prior_findings."
+  ]
+}

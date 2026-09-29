@@ -1,0 +1,13 @@
+{
+  "command": [
+    "python3",
+    "-B",
+    "quality_reports/results/mebane_gates/G1/round2/review/audit_integrity.py"
+  ],
+  "command_display": "python3 -B quality_reports/results/mebane_gates/G1/round2/review/audit_integrity.py",
+  "started_at_utc": "2026-09-29T03:20:48.141055+00:00",
+  "ended_at_utc": "2026-09-29T03:20:50.391427+00:00",
+  "elapsed_seconds": 2.25,
+  "exit_code": 0,
+  "output": "quality_reports/results/mebane_gates/G1/round2/review/logs/integrity.txt"
+}

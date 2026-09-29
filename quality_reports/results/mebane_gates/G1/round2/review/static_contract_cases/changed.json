@@ -1,0 +1,63 @@
+{
+  "id": "G1",
+  "title": "Pipeline TSE e contrato de dados",
+  "goal": "Construir uma entrada parametrizada por ano, turno, cargo e candidato, reproduzindo os totais de 2022 e explicitando todas as regras de limpeza necessárias ao modelo.",
+  "depends_on": [
+    "G0"
+  ],
+  "external_prerequisites": [],
+  "executor": {
+    "role": "SOL-DADOS",
+    "model": "gpt-6-sol",
+    "effort": "high"
+  },
+  "reviewer": {
+    "role": "QA-DADOS",
+    "model": "gpt-6-sol",
+    "effort": "xhigh",
+    "independent": true
+  },
+  "write_scope": [
+    "R/01_load_tse.R",
+    "R/02_build_vars.R",
+    "R/lib/mebane_data.R",
+    "config/mebane/",
+    "tests/mebane/data/",
+    "quality_reports/results/mebane_gates/G1/"
+  ],
+  "todos": [
+    {
+      "id": "G1-T1",
+      "task": "Separar configuração de ano/turno/cargo/candidato dos scripts e do espelho Nexo específico de 2022; criar saída versionada por execução."
+    },
+    {
+      "id": "G1-T2",
+      "task": "Validar tipos, encoding, chaves com ano/turno, duplicatas, cardinalidades dos joins, ausência versus voto zero e elegibilidade de candidato por turno; rejeitar duplicata divergente sem deduplicar pela primeira ocorrência."
+    },
+    {
+      "id": "G1-T3",
+      "task": "Reconciliar aptos, comparecimento, abstenções, brancos, nulos e votos nominais com totais oficiais; testar limites N/a/w e reavaliar as 99 exclusões por votos nominais zero para o alvo de contagens."
+    },
+    {
+      "id": "G1-T4",
+      "task": "Fixar regras para exterior, seções pequenas, líder nacional por turno, coligações/candidaturas e revisões do TSE; registrar perdas por regra e denominador."
+    },
+    {
+      "id": "G1-T5",
+      "task": "Criar fixtures adversariais e reproduzir 2022 de ponta a ponta com agregações independentes por UF e turno; bloquear totais inconsistentes em vez de corrigi-los silenciosamente."
+    }
+  ],
+  "deliverables": [
+    "Loader e configuração genéricos",
+    "Contrato de dados e log de exclusões",
+    "Testes e reconciliação nacional/UF/turno"
+  ],
+  "acceptance": [
+    "Uma execução com a mesma entrada e configuração produz os mesmos totais e chaves.",
+    "Fixtures detectam duplicatas, zeros omitidos, missing, candidato/turno incorreto e mudança incompatível de schema.",
+    "Revisor reproduz totais de controle por código independente, sem consumir apenas a tabela já agregada pelo executor.",
+    "Nenhuma amostra do modelo depende de exclusão pensada somente para gráficos sem justificativa documentada."
+  ],
+  "on_failure": "Suspender estimações que usam a base afetada e corrigir a transformação responsável."
+}
+ 

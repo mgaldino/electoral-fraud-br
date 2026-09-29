@@ -1,0 +1,51 @@
+{
+  "gate_id": "G1",
+  "round": "round2",
+  "executor_id": "01a0eaee-0164-7530-884d-adec564a8327",
+  "delivery_status": "candidate_for_independent_review",
+  "gate_approval": false,
+  "findings": [
+    {
+      "id": "G1-R1-QAD-F01",
+      "origin": "QA-DADOS Curie; counterexample reproduced by coordinator",
+      "authorization": "quality_reports/results/mebane_gates/G1/round1/adjudication.json",
+      "implementation_status": "implemented_and_regression_tested",
+      "changes": ["R/lib/mebane_data.R", "config/mebane/2022.json", "tests/mebane/data/test_g1.R"],
+      "evidence": [
+        {"path": "quality_reports/results/mebane_gates/G1/round2/checks/repair_regressions.csv", "basis": "executed", "locator": "wrong_CD_ELEICAO_both; wrong_DT_ELEICAO_both; wrong_CD_TIPO_ELEICAO_both and one-source/configuration cases"},
+        {"path": "quality_reports/results/mebane_gates/G1/round2/checks/identity_official_anchors.csv", "basis": "executed"},
+        {"path": "quality_reports/results/mebane_gates/G1/round2/checks/round1_rowwise_invariance.csv", "basis": "executed"}
+      ],
+      "independent_recheck": "pending"
+    },
+    {
+      "id": "G1-R1-QAD-F02",
+      "origin": "QA-DADOS Curie; dependency omission confirmed by coordinator",
+      "authorization": "quality_reports/results/mebane_gates/G1/round1/adjudication.json",
+      "implementation_status": "implemented_and_regression_tested",
+      "changes": ["quality_reports/results/mebane_gates/G1/round2/freeze_candidate.py", "tests/mebane/data/test_round2_freeze.py"],
+      "static_input": "quality_reports/results/mebane_gates/G1/round1/gate_contract.json",
+      "static_input_sha256": "2364acc589da079d44687c79c9fb35561816cfe7fd34ad7431f7c18386c1ae4d",
+      "canonical_contract_sha256": "f985ab97469aa66755b977a09781b30608afa6e245896d9d9788b4461190975d",
+      "evidence": [
+        {"path": "quality_reports/results/mebane_gates/G1/round2/logs/static_contract_test.txt", "basis": "executed"},
+        {"path": "quality_reports/results/mebane_gates/G1/round2/checks/round1_preservation.json", "basis": "executed"}
+      ],
+      "independent_recheck": "pending"
+    },
+    {
+      "id": "G1-R1-COORD-F03",
+      "origin": "COORD-G1-R1; not a finding of the original QA-DADOS Curie review",
+      "authorization": "quality_reports/results/mebane_gates/G1/round1/adjudication_addendum.json",
+      "counterexample": "quality_reports/results/mebane_gates/G1/round1/adjudication_candidate_controls.csv",
+      "implementation_status": "implemented_and_regression_tested",
+      "changes": ["R/lib/mebane_data.R", "tests/mebane/data/test_round2_repairs.R"],
+      "evidence": [
+        {"path": "quality_reports/results/mebane_gates/G1/round2/checks/repair_regressions.csv", "basis": "executed", "locator": "valid_identity_and_active_candidate_controls; nonleader_candidate_12_wrong_control_999; nonleader_candidate_12_wrong_control_zero; malformed/ineligible/absent candidate cases"},
+        {"path": "quality_reports/results/mebane_gates/G1/round2/outputs/2022_final/official_munzona_candidate_uf_turn.csv", "basis": "executed"},
+        {"path": "quality_reports/results/mebane_gates/G1/round2/checks/round1_aggregate_invariance.csv", "basis": "executed"}
+      ],
+      "independent_recheck": "pending"
+    }
+  ]
+}

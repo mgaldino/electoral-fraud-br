@@ -1,0 +1,68 @@
+[
+  {
+    "argv": [
+      "Rscript",
+      "--vanilla",
+      "tests/mebane/algebra/run_tests.R"
+    ],
+    "started_at_utc": "2026-09-29T02:40:59.596262+00:00",
+    "elapsed_seconds": 0.23987562497495674,
+    "exit_code": 0,
+    "log": "quality_reports/results/mebane_gates/G2/round1/results/command_1.log"
+  },
+  {
+    "argv": [
+      "pandoc",
+      "appendices/mebane_model_contract.md",
+      "--standalone",
+      "--pdf-engine=pdflatex",
+      "--lua-filter=quality_reports/results/mebane_gates/G2/round1/render_code.lua",
+      "-V",
+      "colorlinks=true",
+      "-V",
+      "urlcolor=blue",
+      "-o",
+      "quality_reports/results/mebane_gates/G2/round1/mebane_model_contract.pdf"
+    ],
+    "started_at_utc": "2026-09-29T02:40:59.836307+00:00",
+    "elapsed_seconds": 0.718551917001605,
+    "exit_code": 0,
+    "log": "quality_reports/results/mebane_gates/G2/round1/results/command_2.log"
+  },
+  {
+    "argv": [
+      "pdftotext",
+      "-layout",
+      "quality_reports/results/mebane_gates/G2/round1/mebane_model_contract.pdf",
+      "quality_reports/results/mebane_gates/G2/round1/results/rendered_contract.txt"
+    ],
+    "started_at_utc": "2026-09-29T02:41:00.555098+00:00",
+    "elapsed_seconds": 0.046787125000264496,
+    "exit_code": 0,
+    "log": "quality_reports/results/mebane_gates/G2/round1/results/command_3.log"
+  },
+  {
+    "argv": [
+      "pdftoppm",
+      "-r",
+      "65",
+      "-png",
+      "quality_reports/results/mebane_gates/G2/round1/mebane_model_contract.pdf",
+      "quality_reports/results/mebane_gates/G2/round1/rendered/page"
+    ],
+    "started_at_utc": "2026-09-29T02:41:00.602051+00:00",
+    "elapsed_seconds": 0.8112486250174697,
+    "exit_code": 0,
+    "log": "quality_reports/results/mebane_gates/G2/round1/results/command_4.log"
+  },
+  {
+    "argv": [
+      "/Users/manoelgaldino/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+      "quality_reports/results/mebane_gates/G2/round1/inspect_pdf.py"
+    ],
+    "started_at_utc": "2026-09-29T02:41:01.413765+00:00",
+    "elapsed_seconds": 0.6334411249845289,
+    "exit_code": 0,
+    "log": "quality_reports/results/mebane_gates/G2/round1/results/command_5.log"
+  }
+]

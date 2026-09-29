@@ -1,0 +1,7 @@
+{
+  "manifest_sha256": "009e0fd39f8ab495e52fcb214476fcc7b6095f895381006a924df6a2ffbd7003",
+  "review_sha256": "5702f2bf4dd306bdfb7af86e81477faceecd54a4b3b4024cdfdf1d048b5d2c5f",
+  "declared_files_verified": 53,
+  "undeclared_ledger_read_confirmed": true,
+  "finding": "G1-R1-QAD-F02"
+}

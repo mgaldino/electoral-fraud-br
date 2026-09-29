@@ -1,0 +1,62 @@
+{
+  "frozen_at_utc": "2026-09-29T02:34:07.096880+00:00",
+  "copies": [
+    {
+      "original": "quality_reports/results/05_eforensics_qbl_brasilia_fresh_v2_summary.txt",
+      "snapshot": "quality_reports/results/mebane_gates/G2/round1/sources/05_eforensics_qbl_brasilia_fresh_v2_summary.txt",
+      "sha256": "3a2f7c427341c38ced861f2ff64a2d540d466374ec1835e991cc06ef32fabe6b",
+      "bytes": 6195,
+      "basis": "historical",
+      "G0_approved_baseline": true
+    },
+    {
+      "original": "quality_reports/results/05_jags_qbl_zone_fe_summary.txt",
+      "snapshot": "quality_reports/results/mebane_gates/G2/round1/sources/05_jags_qbl_zone_fe_summary.txt",
+      "sha256": "64d916baaef4dacc7fea45dd59a20692024b498079389e087b4b4ebc41b6236d",
+      "bytes": 7616,
+      "basis": "historical",
+      "G0_approved_baseline": true
+    },
+    {
+      "original": "quality_reports/results/05_stan_qbl_brasilia_log_n2000.md",
+      "snapshot": "quality_reports/results/mebane_gates/G2/round1/sources/05_stan_qbl_brasilia_log_n2000.md",
+      "sha256": "0ea876b005c3b9e8a9522ef8d3fe8edfb091aec444767bbfcd7ca20bfc273dd0",
+      "bytes": 3659,
+      "basis": "historical",
+      "G0_approved_baseline": true
+    },
+    {
+      "original": "quality_reports/results/05_stan_qbl_brasilia_timings_n2000.csv",
+      "snapshot": "quality_reports/results/mebane_gates/G2/round1/sources/05_stan_qbl_brasilia_timings_n2000.csv",
+      "sha256": "d46549108f895755b95510a7f9e15ce67d162dbfe03048a6af3092152297aab9",
+      "bytes": 349,
+      "basis": "historical",
+      "G0_approved_baseline": true
+    },
+    {
+      "original": "quality_reports/results/2026-09-28_mebane_denominadores_brancos_nulos.md",
+      "snapshot": "quality_reports/results/mebane_gates/G2/round1/sources/denominadores_contexto.md",
+      "sha256": "f84f6aad9d24169bab66f7684c582ae375c50adb4492d796acf3e1b08dffdeb2",
+      "bytes": 15132,
+      "basis": "inspected",
+      "G0_approved_baseline": false
+    }
+  ],
+  "manual": {
+    "author": "Martyn Plummer",
+    "version": "4.3.0",
+    "date": "2017-06-28",
+    "consulted_url": "https://webhomes.maths.ed.ac.uk/~swood34/TOI/jags_user_manual.pdf",
+    "download_url": "https://mfasiolo.github.io/TOI/jags_user_manual.pdf",
+    "download_status": "complete; curl exit 0; pdfinfo 74 pages, 429729 bytes",
+    "download_sha256": "d73a023dc87654e6ae56eb27cc6dba25097e00ddd2d8f7ca2639f27d55e581a3",
+    "earlier_attempts": "Edinburgh curl failed in sandbox DNS; escalated 40s and 240s attempts timed out. Partial bytes replaced by complete academic mirror copy.",
+    "consulted_pages_printed": [
+      45,
+      47,
+      50,
+      53
+    ],
+    "scope": "Primary author manual mirrored at academic hosts; parameter semantics only, not empirical validation"
+  }
+}

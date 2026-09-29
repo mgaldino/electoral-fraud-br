@@ -1,0 +1,87 @@
+{
+  "gate_id": "G7",
+  "round": "round1",
+  "candidate_manifest_sha256": "62f7a5c4907c9d39b75fe5cd88224bddb4796e015f69f004469e51df7ae493c8",
+  "execution_window_utc": "2026-09-29T03:51:00Z/2026-09-29T04:07:53Z",
+  "commands": [
+    {
+      "cmd": "LC_ALL=C Rscript quality_reports/results/mebane_gates/G7/round1/review/adversarial_intake.R",
+      "exit_code": 0,
+      "observed_wall_seconds": 0.426,
+      "basis": "executed final 47-case independent suite; earlier 45-case runs were superseded by the 47-case run",
+      "log": "adversarial_results.json"
+    },
+    {
+      "cmd": "G7_QA_DIR=quality_reports/results/mebane_gates/G7/round1/review/independent_replay_02 LC_ALL=C Rscript quality_reports/results/mebane_gates/G7/round1/review/adversarial_intake.R",
+      "exit_code": 0,
+      "observed_wall_seconds": 0.461,
+      "basis": "executed current script in fresh preserved QA namespace; 47/47 cases matched",
+      "log": "independent_replay_02/adversarial_results.json"
+    },
+    {
+      "cmd": "LC_ALL=C Rscript quality_reports/results/mebane_gates/G7/round1/review/test_null_selection.R quality_reports/results/mebane_gates/G7/round1/review/null_selection_strict_01",
+      "exit_code": 0,
+      "observed_wall_seconds": 0.047,
+      "basis": "executed exact-error 2026 null-selection probe",
+      "log": "null_selection_strict_01/result.json"
+    },
+    {
+      "cmd": "LC_ALL=C Rscript --vanilla quality_reports/results/mebane_gates/G7/round1/review/test_encoding.R quality_reports/results/mebane_gates/G7/round1/review/encoding_probe_02",
+      "exit_code": 0,
+      "observed_wall_seconds": null,
+      "basis": "executed independent ASCII versus valid UTF-8 diagnostic; subsecond tool measurement not precise enough to report; the diagnostic exit 0 means the defect was reproduced, not that the adapter passed",
+      "log": "encoding_probe_02/result.json"
+    },
+    {
+      "cmd": "python3 quality_reports/results/mebane_gates/G7/round1/review/audit_freeze.py",
+      "exit_code": 0,
+      "observed_wall_seconds": 16.499,
+      "basis": "executed final 275-file inventory, G1 bindings and frozen/live ledger checks; initial draft audit exited 1 because its own completeness comparison included external paths, corrected before final run",
+      "log": "freeze_audit.json"
+    },
+    {
+      "cmd": "python3 quality_reports/results/mebane_gates/G7/round1/review/audit_freeze.py",
+      "exit_code": 0,
+      "observed_wall_seconds": 16.434,
+      "basis": "executed after coordinator's postfreeze encoding evidence appeared; 275 frozen candidate files remain intact and the two later files are classified separately",
+      "log": "freeze_audit.json"
+    },
+    {
+      "cmd": "LC_ALL=C Rscript tests/mebane/2026/run_tests.R quality_reports/results/mebane_gates/G7/round1/review/executor_replay",
+      "exit_code": 0,
+      "observed_wall_seconds": 0.134,
+      "basis": "executed executor suite in separate review namespace; supporting check, not independent evidence by itself",
+      "log": "executor_replay/test_summary.json"
+    },
+    {
+      "cmd": "python3 tests/mebane/2026/check_dag.py",
+      "exit_code": 0,
+      "observed_wall_seconds": 8.479,
+      "basis": "executed executor checker suite, 26 tests and G6 negative cases; supporting check",
+      "log": "terminal output observed: Ran 26 tests; OK; G6 predecessor negative checks PASS"
+    },
+    {
+      "cmd": "python3 quality_reports/results/mebane_gates/G7/round1/review/build_review_manifest.py",
+      "exit_code": 0,
+      "observed_wall_seconds": null,
+      "basis": "executed manifest generation; 809 unique QA-owned files, self excluded; verified independently after generation",
+      "log": "review_manifest.json"
+    }
+  ],
+  "inspected_only": [
+    "R/lib/mebane_2026_intake.R and scripts/mebane_gates.py source",
+    "G7 gate_contract.json, run.json, candidate_manifest.json, freeze_candidate.py, implementation.md and todo_evidence.json",
+    "G1 round2 review and adjudication records",
+    "local official EA11, EA16, EA18, EA20 and 2026 download-instructions PDFs with pdftotext; online official EA11/EA16/EA18/EA20 pages also opened",
+    "coordination/tse2026_source_preflight.md",
+    "G7/round1/adjudication_encoding.R and .json, postfreeze coordinator evidence inspected but not counted among the frozen 275",
+    "live and frozen ledger structures"
+  ],
+  "not_executed": [
+    "real 2026 data ingestion, external attestation or national coverage proof",
+    "official raw-file to normalized section/candidate CSV conversion",
+    "MCMC or inference",
+    "package installation or real vote downloads",
+    "real gate-state changes"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "command": [
+    "Rscript",
+    "--vanilla",
+    "tests/mebane/data/test_g1.R"
+  ],
+  "command_display": "Rscript --vanilla tests/mebane/data/test_g1.R",
+  "scope": "Previously existing adversarial data fixtures after identity-schema extension",
+  "started_at_utc": "2026-09-29T02:56:19.200685+00:00",
+  "ended_at_utc": "2026-09-29T02:56:19.449532+00:00",
+  "elapsed_seconds": 0.24881,
+  "exit_code": 0,
+  "output": "quality_reports/results/mebane_gates/G1/round2/logs/existing_fixtures.txt"
+}

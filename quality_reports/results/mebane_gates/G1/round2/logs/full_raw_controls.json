@@ -1,0 +1,16 @@
+{
+  "command": [
+    "Rscript",
+    "--vanilla",
+    "tests/mebane/data/test_g1.R",
+    "--full",
+    "quality_reports/results/mebane_gates/G1/round2/outputs/2022_final"
+  ],
+  "command_display": "Rscript --vanilla tests/mebane/data/test_g1.R --full quality_reports/results/mebane_gates/G1/round2/outputs/2022_final",
+  "scope": "Re-read author CSVs independently and compare UF/turn and candidate totals",
+  "started_at_utc": "2026-09-29T02:59:26.126745+00:00",
+  "ended_at_utc": "2026-09-29T02:59:27.919617+00:00",
+  "elapsed_seconds": 1.792826,
+  "exit_code": 0,
+  "output": "quality_reports/results/mebane_gates/G1/round2/logs/full_raw_controls.txt"
+}

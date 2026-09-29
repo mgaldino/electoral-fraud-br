@@ -1,0 +1,20 @@
+{
+  "case": "2026_null_candidate_selection",
+  "year": 2026,
+  "date": "04/10/2026",
+  "pleito": 3220,
+  "election": 6257,
+  "cargo": 1,
+  "sections": 2,
+  "input_hashes": {
+    "votes": "453865c096d8d83da8b82dc89280ea236ac3f7b96c39c05991d459e48a063edd",
+    "ea11": "d07850a8d08171c8aca7fb0701d1f1f8abad469ffc764f96077ef768db92f93a",
+    "ea16": "9fae722be0551bec79e8e114e3d6f7401c8c90b6dba45990da95bb0d8f96c02d",
+    "controls": "a0eabbaa3f20f7ecc47a9b0ed85a4de30ead1c5c8ba389450f455abc5fb49690",
+    "config": "5dadb41e90e50c0489da0849545537d675d9671e18ab094cf201ab3d1abf7cba"
+  },
+  "expected_error": "Candidate selection unresolved for turn",
+  "at_validate": "Candidate selection unresolved for turn",
+  "at_stage": "Candidate selection unresolved for turn",
+  "pass": true
+}

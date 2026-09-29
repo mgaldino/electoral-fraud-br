@@ -1,0 +1,12 @@
+During startup - Warning messages:
+1: Setting LC_CTYPE failed, using "C" 
+2: Setting LC_COLLATE failed, using "C" 
+3: Setting LC_TIME failed, using "C" 
+4: Setting LC_MESSAGES failed, using "C" 
+5: Setting LC_MONETARY failed, using "C" 
+/Volumes/Temp/tmp/RtmpU9slMA/R.INSTALLc6064a8928fb/arrow/tools/cpp/src/arrow/util/cpu_info.cc:239: IOError: sysctlbyname failed for 'hw.l1dcachesize'. Detail: [errno 1] Operation not permitted
+/Volumes/Temp/tmp/RtmpU9slMA/R.INSTALLc6064a8928fb/arrow/tools/cpp/src/arrow/util/cpu_info.cc:239: IOError: sysctlbyname failed for 'hw.l2cachesize'. Detail: [errno 1] Operation not permitted
+/Volumes/Temp/tmp/RtmpU9slMA/R.INSTALLc6064a8928fb/arrow/tools/cpp/src/arrow/util/cpu_info.cc:239: IOError: sysctlbyname failed for 'hw.l3cachesize'. Detail: [errno 1] Operation not permitted
+/Volumes/Temp/tmp/RtmpU9slMA/R.INSTALLc6064a8928fb/arrow/tools/cpp/src/arrow/util/cpu_info.cc:239: IOError: sysctlbyname failed for 'hw.optional.neon'. Detail: [errno 1] Operation not permitted
+Round1 versus round2: keys and every prior parquet column unchanged; only CD_TIPO_ELEICAO added.
+All nine aggregate/control reports byte-identical across rounds: PASS

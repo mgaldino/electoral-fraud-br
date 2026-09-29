@@ -1,0 +1,4 @@
+case,accepted,error
+valid,TRUE,
+wrong_code_both,TRUE,
+wrong_date_both,TRUE,

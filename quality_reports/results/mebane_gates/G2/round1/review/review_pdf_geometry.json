@@ -1,0 +1,44 @@
+{
+  "pages": [
+    {
+      "page": 1,
+      "characters": 2964,
+      "outside_safety_bounds": 0
+    },
+    {
+      "page": 2,
+      "characters": 2633,
+      "outside_safety_bounds": 0
+    },
+    {
+      "page": 3,
+      "characters": 2041,
+      "outside_safety_bounds": 0
+    },
+    {
+      "page": 4,
+      "characters": 2386,
+      "outside_safety_bounds": 0
+    },
+    {
+      "page": 5,
+      "characters": 2403,
+      "outside_safety_bounds": 0
+    },
+    {
+      "page": 6,
+      "characters": 2958,
+      "outside_safety_bounds": 0
+    },
+    {
+      "page": 7,
+      "characters": 2711,
+      "outside_safety_bounds": 0
+    },
+    {
+      "page": 8,
+      "characters": 2723,
+      "outside_safety_bounds": 0
+    }
+  ]
+}

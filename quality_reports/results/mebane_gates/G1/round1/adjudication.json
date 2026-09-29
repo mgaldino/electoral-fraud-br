@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.0",
+  "adjudication_id": "mebane-G1:009e0fd39f8a:round1",
+  "gate_id": "G1",
+  "round": "round1",
+  "contract_sha256": "f985ab97469aa66755b977a09781b30608afa6e245896d9d9788b4461190975d",
+  "candidate_manifest_sha256": "009e0fd39f8ab495e52fcb214476fcc7b6095f895381006a924df6a2ffbd7003",
+  "review_sha256": "5702f2bf4dd306bdfb7af86e81477faceecd54a4b3b4024cdfdf1d048b5d2c5f",
+  "status": "changes_requested",
+  "unresolved_material_findings": 2,
+  "source": {
+    "reviewed_artifact": "quality_reports/results/mebane_gates/G1/round1/candidate_manifest.json",
+    "sha256": "009e0fd39f8ab495e52fcb214476fcc7b6095f895381006a924df6a2ffbd7003",
+    "artifact_intact": true
+  },
+  "contract": {
+    "required": false, "path": null, "sha256": null, "contract_id": null,
+    "artifact_sha256": null, "status": null, "stale": false
+  },
+  "contract_scope_note": "Revisao de codigo e dados, sem contrato de argumento de manuscrito. O contrato operacional G1 esta vinculado pelo hash canonico acima.",
+  "review_sources": [{
+    "review_id": "QA-G1-R1",
+    "path": "quality_reports/results/mebane_gates/G1/round1/review/review.json",
+    "sha256": "5702f2bf4dd306bdfb7af86e81477faceecd54a4b3b4024cdfdf1d048b5d2c5f"
+  }],
+  "findings": [
+    {
+      "id": "G1-R1-QAD-F01",
+      "finding_id": "G1-R1-QAD-F01",
+      "source_review": "QA-G1-R1",
+      "quoted_finding": "Identidade e data da eleicao nao sao vinculadas a configuracao: o mesmo codigo ou data errados nos dois CSVs e aceito.",
+      "type": "method",
+      "severity": "major",
+      "scientific_dimension": "data_integrity",
+      "held_decision": false,
+      "status": "CONFIRMED",
+      "resolved": false,
+      "source_locations": ["R/lib/mebane_data.R:100-115", "R/lib/mebane_data.R:179-184", "config/mebane/2022.json:2-8"],
+      "defect_evidence": [
+        "O codigo confere somente parse de datas, filtro ano/turno/cargo e igualdade de metadados entre fontes; nao vincula CD_ELEICAO ou DT_ELEICAO a valores esperados.",
+        "adjudication_checks.csv mostra accepted=TRUE para codigo999 e data02/10/2020 em ambas as fontes, sob controles numericos ativos."
+      ],
+      "refuting_evidence": [],
+      "mechanical_checks": ["Rscript --vanilla quality_reports/results/mebane_gates/G1/round1/adjudication_checks.R: exit0; os dois defeitos foram reproduzidos, nao corrigidos."],
+      "reasoning": "Concordancia interna de dois arquivos nao prova identidade eleitoral. As fixtures preservam totais validos para isolar o erro de identificacao; o reparo deve validar atributos esperados por turno e rejeitar identidades inconsistentes antes das agregacoes.",
+      "proposed_fix_assessment": "safe",
+      "disposition": "Adicionar identidade esperada por turno no config (codigo, data, tipo), ler/validar esses campos e criar regressoes em que ambas as fontes compartilham o mesmo erro. Reexecutar 2022 e provar ausencia de mudanca dos totais.",
+      "resolution": "Pendente de implementacao e nova revisao."
+    },
+    {
+      "id": "G1-R1-QAD-F02",
+      "finding_id": "G1-R1-QAD-F02",
+      "source_review": "QA-G1-R1",
+      "quoted_finding": "Ledger efetivamente lido no congelamento nao integra o run nem o manifesto.",
+      "type": "artifact",
+      "severity": "major",
+      "scientific_dimension": "reproducibility",
+      "held_decision": false,
+      "status": "CONFIRMED",
+      "resolved": false,
+      "source_locations": ["quality_reports/results/mebane_gates/G1/round1/freeze_candidate.py:39-47", "quality_reports/results/mebane_gates/G1/round1/freeze_candidate.py:63-85"],
+      "defect_evidence": ["freeze_candidate.py le o ledger mutavel e extrai o contrato; o ledger nao aparece em run.inputs ou candidate_manifest.files.", "adjudication_integrity.json confirma 53 arquivos integres e a omissao declarada do ledger."],
+      "refuting_evidence": [],
+      "mechanical_checks": ["python3 quality_reports/results/mebane_gates/G1/round1/adjudication_integrity.py: exit0; manifesto/review e todos os hashes/tamanhos declarados conferidos."],
+      "reasoning": "O contrato canonico coincide, mas o protocolo exige rastrear insumos efetivamente lidos. Omitir o ledger torna incompleta a trilha do congelamento. Nao se deve hashear o ledger mutavel como dependencia futura: congelar sua copia ou remover a leitura em favor de contrato estatico ja vinculado.",
+      "proposed_fix_assessment": "safe",
+      "disposition": "Em round2, usar entrada estatica vinculada ou snapshot imutavel do ledger, declarar todos os insumos lidos e registrar o comando. Preservar round1 e copiar os fontes que serao alterados para permitir recuperar os bytes revisados.",
+      "resolution": "Pendente de implementacao e nova revisao."
+    }
+  ],
+  "summary": {"total": 2, "confirmed": 2, "partial": 0, "refuted": 0, "unresolved": 0, "held_decisions": 0},
+  "adjudication": {
+    "verdict": "READY_FOR_IMPLEMENTATION",
+    "checked_at": "2026-09-29T02:47:42+00:00",
+    "reasons": ["Dois defeitos confirmados contra os bytes exatos e com contraprovas executadas pelo coordenador.", "Reparos de validacao e rastreabilidade preservam dados e estimando; estao abrangidos pela autorizacao vigente.", "O gate continua changes_requested ate novo candidato, revisao e adjudicacao. Totais conferidos nao substituem validacao de identidade."]
+  }
+}

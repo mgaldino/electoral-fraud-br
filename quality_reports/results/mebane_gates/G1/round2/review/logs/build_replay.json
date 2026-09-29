@@ -1,0 +1,15 @@
+{
+  "command": [
+    "Rscript",
+    "--vanilla",
+    "R/02_build_vars.R",
+    "config/mebane/2022.json",
+    "quality_reports/results/mebane_gates/G1/round2/review/cli_replay"
+  ],
+  "command_display": "Rscript --vanilla R/02_build_vars.R config/mebane/2022.json quality_reports/results/mebane_gates/G1/round2/review/cli_replay",
+  "started_at_utc": "2026-09-29T03:21:56.341552+00:00",
+  "ended_at_utc": "2026-09-29T03:21:59.020631+00:00",
+  "elapsed_seconds": 2.679,
+  "exit_code": 0,
+  "output": "quality_reports/results/mebane_gates/G1/round2/review/logs/build_replay.txt"
+}

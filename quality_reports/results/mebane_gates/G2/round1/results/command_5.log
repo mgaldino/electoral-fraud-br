@@ -1,0 +1,83 @@
+{
+  "pages": [
+    {
+      "page": 1,
+      "characters": 2151,
+      "outside_safety_bounds": 0,
+      "rightmost": 541.1408353300009
+    },
+    {
+      "page": 2,
+      "characters": 2331,
+      "outside_safety_bounds": 0,
+      "rightmost": 541.1398464399997
+    },
+    {
+      "page": 3,
+      "characters": 1763,
+      "outside_safety_bounds": 0,
+      "rightmost": 541.1398464399996
+    },
+    {
+      "page": 4,
+      "characters": 2181,
+      "outside_safety_bounds": 0,
+      "rightmost": 541.1398464399996
+    },
+    {
+      "page": 5,
+      "characters": 2483,
+      "outside_safety_bounds": 0,
+      "rightmost": 541.1398464399998
+    },
+    {
+      "page": 6,
+      "characters": 2057,
+      "outside_safety_bounds": 0,
+      "rightmost": 541.1398464399998
+    },
+    {
+      "page": 7,
+      "characters": 2732,
+      "outside_safety_bounds": 0,
+      "rightmost": 541.1398464399997
+    },
+    {
+      "page": 8,
+      "characters": 2185,
+      "outside_safety_bounds": 0,
+      "rightmost": 541.1392695300002
+    },
+    {
+      "page": 9,
+      "characters": 2726,
+      "outside_safety_bounds": 0,
+      "rightmost": 541.1398464399997
+    },
+    {
+      "page": 10,
+      "characters": 2553,
+      "outside_safety_bounds": 0,
+      "rightmost": 541.1387555299997
+    },
+    {
+      "page": 11,
+      "characters": 2135,
+      "outside_safety_bounds": 0,
+      "rightmost": 541.1387555299997
+    },
+    {
+      "page": 12,
+      "characters": 1452,
+      "outside_safety_bounds": 0,
+      "rightmost": 541.1398464399996
+    },
+    {
+      "page": 13,
+      "characters": 1757,
+      "outside_safety_bounds": 0,
+      "rightmost": 541.1387555299995
+    }
+  ],
+  "visual_check": "requires implementer inspection of contact sheets and equations; not independent QA"
+}

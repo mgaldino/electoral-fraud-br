@@ -1,0 +1,20 @@
+{
+  "gate_id": "G7",
+  "round": "round1",
+  "todos": [
+    {"id": "G7-T1", "status": "done", "evidence": [
+      {"path": "config/mebane/2026/intake.json", "basis": "executed", "locator": "source URLs, accessed date, cargo, documented T1 IDs and unresolved candidate selection"},
+      {"path": "quality_reports/results/mebane_gates/G7/round1/implementation.md", "basis": "executed", "locator": "Contrato implementado; Roteiro por snapshot e turno"},
+      {"path": "quality_reports/results/mebane_gates/coordination/tse2026_source_preflight.md", "basis": "inspected", "locator": "PDFs oficiais arquivados"}]},
+    {"id": "G7-T2", "status": "done", "evidence": [
+      {"path": "tests/mebane/2026/run_tests.R", "basis": "executed", "locator": "stage, checksum, schema, cobertura e controles"},
+      {"path": "quality_reports/results/mebane_gates/G7/round1/rehearsal_v6/test_summary.json", "basis": "executed", "locator": "status PASS e versões"}]},
+    {"id": "G7-T3", "status": "done", "evidence": [
+      {"path": "tests/mebane/2026/run_tests.R", "basis": "executed", "locator": "revision, partial, wrong schema, candidate conflict, wrong turn, gate routes"},
+      {"path": "quality_reports/results/mebane_gates/G7/round1/rehearsal_v6/test_summary.json", "basis": "executed", "locator": "assertions and preserved_2022"},
+      {"path": "tests/mebane/2026/check_dag.py", "basis": "executed", "locator": "G6 prerequisite negative tests and frozen-ledger checker suite"}]},
+    {"id": "G7-T4", "status": "done", "evidence": [
+      {"path": "quality_reports/results/mebane_gates/G7/round1/implementation.md", "basis": "executed", "locator": "Roteiro por snapshot e turno; limites"},
+      {"path": "R/lib/mebane_2026_intake.R", "basis": "executed", "locator": "g7_gate_route and g7_stage release_condition"}]}
+  ]
+}

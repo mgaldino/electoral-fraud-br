@@ -1,0 +1,495 @@
+{
+  "status": "PASS",
+  "locale_before": "pt_BR.UTF-8/pt_BR.UTF-8/pt_BR.UTF-8/C/pt_BR.UTF-8/pt_BR.UTF-8",
+  "locale_after": "pt_BR.UTF-8/pt_BR.UTF-8/pt_BR.UTF-8/C/pt_BR.UTF-8/pt_BR.UTF-8",
+  "locale_ctype": "pt_BR.UTF-8",
+  "count": 69,
+  "passed": 69,
+  "cases": [
+    {
+      "id": "F03_ASCII_e2e",
+      "expected_error": null,
+      "observed_error": null,
+      "warnings": [],
+      "passed": true
+    },
+    {
+      "id": "F03_UTF8_exact_e2e_1",
+      "expected_error": null,
+      "observed_error": null,
+      "warnings": [],
+      "passed": true
+    },
+    {
+      "id": "F03_UTF8_exact_e2e_2",
+      "expected_error": null,
+      "observed_error": null,
+      "warnings": [],
+      "passed": true
+    },
+    {
+      "id": "F03_UTF8_exact_e2e_3",
+      "expected_error": null,
+      "observed_error": null,
+      "warnings": [],
+      "passed": true
+    },
+    {
+      "id": "F03_unicode_identity_mismatch",
+      "expected_error": "Candidate code/name conflict",
+      "observed_error": "Candidate code/name conflict",
+      "warnings": [],
+      "passed": true
+    },
+    {
+      "id": "F03_invalid_ff",
+      "expected_error": "Invalid UTF-8 CSV bytes",
+      "observed_error": "Invalid UTF-8 CSV bytes",
+      "warnings": [],
+      "passed": true
+    },
+    {
+      "id": "F03_truncated",
+      "expected_error": "Invalid UTF-8 CSV bytes",
+      "observed_error": "Invalid UTF-8 CSV bytes",
+      "warnings": [],
+      "passed": true
+    },
+    {
+      "id": "F03_overlong",
+      "expected_error": "Invalid UTF-8 CSV bytes",
+      "observed_error": "Invalid UTF-8 CSV bytes",
+      "warnings": [],
+      "passed": true
+    },
+    {
+      "id": "F03_nul",
+      "expected_error": "Invalid UTF-8 CSV: embedded NUL",
+      "observed_error": "Invalid UTF-8 CSV: embedded NUL",
+      "warnings": [],
+      "passed": true
+    },
+    {
+      "id": "F01_date_correct_T1",
+      "expected_error": null,
+      "observed_error": null,
+      "warnings": [],
+      "passed": true
+    },
+    {
+      "id": "F01_wrong_same_year_T1",
+      "expected_error": "EA11 date differs from configured turn date",
+      "observed_error": "EA11 date differs from configured turn date",
+      "warnings": [],
+      "passed": true
+    },
+    {
+      "id": "F01_date_correct_T2",
+      "expected_error": null,
+      "observed_error": null,
+      "warnings": [],
+      "passed": true
+    },
+    {
+      "id": "F01_wrong_same_year_T2",
+      "expected_error": "EA11 date differs from configured turn date",
+      "observed_error": "EA11 date differs from configured turn date",
+      "warnings": [],
+      "passed": true
+    },
+    {
+      "id": "F01_config_missing",
+      "expected_error": "Invalid configured election dates",
+      "observed_error": "Invalid configured election dates",
+      "warnings": [],
+      "passed": true
+    },
+    {
+      "id": "F01_config_impossible",
+      "expected_error": "Invalid configured election dates",
+      "observed_error": "Invalid configured election dates",
+      "warnings": [],
+      "passed": true
+    },
+    {
+      "id": "F01_config_reverse",
+      "expected_error": "Invalid configured election dates",
+      "observed_error": "Invalid configured election dates",
+      "warnings": [],
+      "passed": true
+    },
+    {
+      "id": "F01_config_numeric",
+      "expected_error": "Invalid configured election dates",
+      "observed_error": "Invalid configured election dates",
+      "warnings": [],
+      "passed": true
+    },
+    {
+      "id": "F01_config_vector",
+      "expected_error": "Invalid configured election dates",
+      "observed_error": "Invalid configured election dates",
+      "warnings": [],
+      "passed": true
+    },
+    {
+      "id": "F01_config_extra_turn",
+      "expected_error": "Invalid configured election dates",
+      "observed_error": "Invalid configured election dates",
+      "warnings": [],
+      "passed": true
+    },
+    {
+      "id": "schema_v1_rejected",
+      "expected_error": "Invalid intake configuration",
+      "observed_error": "Invalid intake configuration",
+      "warnings": [],
+      "passed": true
+    },
+    {
+      "id": "F01_EA11_wrong_year",
+      "expected_error": "EA11 identity/date invalid",
+      "observed_error": "EA11 identity/date invalid",
+      "warnings": [],
+      "passed": true
+    },
+    {
+      "id": "F01_2026_anchor_metadata",
+      "expected_error": null,
+      "observed_error": null,
+      "warnings": [],
+      "passed": true
+    },
+    {
+      "id": "F01_null2026_coherent_T1",
+      "expected_error": "Candidate selection unresolved for turn",
+      "observed_error": "Candidate selection unresolved for turn",
+      "warnings": [],
+      "passed": true
+    },
+    {
+      "id": "F01_null2026_coherent_T2",
+      "expected_error": "Candidate selection unresolved for turn",
+      "observed_error": "Candidate selection unresolved for turn",
+      "warnings": [],
+      "passed": true
+    },
+    {
+      "id": "F02_all28_UFs_not_national_attestation",
+      "expected_error": null,
+      "observed_error": null,
+      "warnings": [],
+      "passed": true
+    },
+    {
+      "id": "F01_T2_absent_does_not_imply_not_held",
+      "expected_error": "EA11 election/cargo/turn not unique",
+      "observed_error": "EA11 election/cargo/turn not unique",
+      "warnings": [],
+      "passed": true
+    },
+    {
+      "id": "F01_T2_received_code_88002",
+      "expected_error": null,
+      "observed_error": null,
+      "warnings": [],
+      "passed": true
+    },
+    {
+      "id": "F01_T2_received_code_77777",
+      "expected_error": null,
+      "observed_error": null,
+      "warnings": [],
+      "passed": true
+    },
+    {
+      "id": "F02_missing_reference_UF",
+      "expected_error": "EA16 missing configured UFs",
+      "observed_error": "EA16 missing configured UFs",
+      "warnings": [],
+      "passed": true
+    },
+    {
+      "id": "F02_extra_reference_UF",
+      "expected_error": "EA16 unexpected UFs",
+      "observed_error": "EA16 unexpected UFs",
+      "warnings": [],
+      "passed": true
+    },
+    {
+      "id": "F02_extra_vote_UF",
+      "expected_error": "Unexpected section outside independent EA16",
+      "observed_error": "Unexpected section outside independent EA16",
+      "warnings": [],
+      "passed": true
+    },
+    {
+      "id": "F02_partial_counts_by_UF",
+      "expected_error": null,
+      "observed_error": null,
+      "warnings": [],
+      "passed": true
+    },
+    {
+      "id": "F02_one_section_relative_complete",
+      "expected_error": null,
+      "observed_error": null,
+      "warnings": [],
+      "passed": true
+    },
+    {
+      "id": "F02_scope_duplicate_UF",
+      "expected_error": "Invalid configured territorial scope",
+      "observed_error": "Invalid configured territorial scope",
+      "warnings": [],
+      "passed": true
+    },
+    {
+      "id": "F02_scope_scalar_UF",
+      "expected_error": "Invalid configured territorial scope",
+      "observed_error": "Invalid configured territorial scope",
+      "warnings": [],
+      "passed": true
+    },
+    {
+      "id": "F02_scope_missing",
+      "expected_error": "Invalid intake configuration",
+      "observed_error": "Invalid intake configuration",
+      "warnings": [],
+      "passed": true
+    },
+    {
+      "id": "quoted_codes_and_padded_keys",
+      "expected_error": null,
+      "observed_error": null,
+      "warnings": [],
+      "passed": true
+    },
+    {
+      "id": "unquoted_EA11_code",
+      "expected_error": "Invalid documented code EA11 pl.cd",
+      "observed_error": "Invalid documented code EA11 pl.cd",
+      "warnings": [],
+      "passed": true
+    },
+    {
+      "id": "unquoted_EA11_turn",
+      "expected_error": "Invalid documented code EA11 e.t",
+      "observed_error": "Invalid documented code EA11 e.t",
+      "warnings": [],
+      "passed": true
+    },
+    {
+      "id": "unquoted_EA16_code",
+      "expected_error": "Invalid documented code EA16 cdp",
+      "observed_error": "Invalid documented code EA16 cdp",
+      "warnings": [],
+      "passed": true
+    },
+    {
+      "id": "unpadded_section",
+      "expected_error": "Invalid section key",
+      "observed_error": "Invalid section key",
+      "warnings": [],
+      "passed": true
+    },
+    {
+      "id": "duplicate_rows",
+      "expected_error": "Duplicate section/candidate row",
+      "observed_error": "Duplicate section/candidate row",
+      "warnings": [],
+      "passed": true
+    },
+    {
+      "id": "fractional_votes",
+      "expected_error": "Invalid integer votes",
+      "observed_error": "Invalid integer votes",
+      "warnings": [],
+      "passed": true
+    },
+    {
+      "id": "candidate_wrong_code",
+      "expected_error": "Candidate code/name conflict",
+      "observed_error": "Candidate code/name conflict",
+      "warnings": [],
+      "passed": true
+    },
+    {
+      "id": "divergent_controls",
+      "expected_error": null,
+      "observed_error": null,
+      "warnings": [],
+      "passed": true
+    },
+    {
+      "id": "divergent_controls_status",
+      "expected_error": null,
+      "observed_error": null,
+      "warnings": [],
+      "passed": true
+    },
+    {
+      "id": "wrong_csv_schema",
+      "expected_error": "Unknown normalized CSV schema",
+      "observed_error": "Unknown normalized CSV schema",
+      "warnings": [],
+      "passed": true
+    },
+    {
+      "id": "same_inputs_same_version",
+      "expected_error": null,
+      "observed_error": null,
+      "warnings": [],
+      "passed": true
+    },
+    {
+      "id": "policy_changes_version",
+      "expected_error": null,
+      "observed_error": null,
+      "warnings": [],
+      "passed": true
+    },
+    {
+      "id": "function_body_changes_version",
+      "expected_error": null,
+      "observed_error": null,
+      "warnings": [],
+      "passed": true
+    },
+    {
+      "id": "restored_policy_keeps_prior_bytes",
+      "expected_error": null,
+      "observed_error": null,
+      "warnings": [],
+      "passed": true
+    },
+    {
+      "id": "revision_new_namespace_preserves_old",
+      "expected_error": null,
+      "observed_error": null,
+      "warnings": [],
+      "passed": true
+    },
+    {
+      "id": "receipt_tamper_date",
+      "expected_error": "Staged receipt differs from recomputed validation or policy",
+      "observed_error": "Staged receipt differs from recomputed validation or policy",
+      "warnings": [],
+      "passed": true
+    },
+    {
+      "id": "receipt_tamper_candidate",
+      "expected_error": "Staged receipt differs from recomputed validation or policy",
+      "observed_error": "Staged receipt differs from recomputed validation or policy",
+      "warnings": [],
+      "passed": true
+    },
+    {
+      "id": "receipt_tamper_territory",
+      "expected_error": "Staged receipt differs from recomputed validation or policy",
+      "observed_error": "Staged receipt differs from recomputed validation or policy",
+      "warnings": [],
+      "passed": true
+    },
+    {
+      "id": "receipt_tamper_by_uf",
+      "expected_error": "Staged receipt differs from recomputed validation or policy",
+      "observed_error": "Staged receipt differs from recomputed validation or policy",
+      "warnings": [],
+      "passed": true
+    },
+    {
+      "id": "receipt_tamper_reference",
+      "expected_error": "Staged receipt differs from recomputed validation or policy",
+      "observed_error": "Staged receipt differs from recomputed validation or policy",
+      "warnings": [],
+      "passed": true
+    },
+    {
+      "id": "receipt_tamper_national",
+      "expected_error": "Staged receipt differs from recomputed validation or policy",
+      "observed_error": "Staged receipt differs from recomputed validation or policy",
+      "warnings": [],
+      "passed": true
+    },
+    {
+      "id": "receipt_tamper_data",
+      "expected_error": "Staged receipt differs from recomputed validation or policy",
+      "observed_error": "Staged receipt differs from recomputed validation or policy",
+      "warnings": [],
+      "passed": true
+    },
+    {
+      "id": "receipt_tamper_inference",
+      "expected_error": "Staged receipt differs from recomputed validation or policy",
+      "observed_error": "Staged receipt differs from recomputed validation or policy",
+      "warnings": [],
+      "passed": true
+    },
+    {
+      "id": "snapshot_tamper_rejected",
+      "expected_error": "Previously staged snapshot changed",
+      "observed_error": "Previously staged snapshot changed",
+      "warnings": [],
+      "passed": true
+    },
+    {
+      "id": "route_waiting_external",
+      "expected_error": null,
+      "observed_error": null,
+      "warnings": [],
+      "passed": true
+    },
+    {
+      "id": "route_inconclusive",
+      "expected_error": null,
+      "observed_error": null,
+      "warnings": [],
+      "passed": true
+    },
+    {
+      "id": "route_G6_guard",
+      "expected_error": "Invalid gate route",
+      "observed_error": "Invalid gate route",
+      "warnings": [],
+      "passed": true
+    },
+    {
+      "id": "route_G7_guard",
+      "expected_error": "Invalid gate route",
+      "observed_error": "Invalid gate route",
+      "warnings": [],
+      "passed": true
+    },
+    {
+      "id": "route_G8_guard",
+      "expected_error": "Invalid gate route",
+      "observed_error": "Invalid gate route",
+      "warnings": [],
+      "passed": true
+    },
+    {
+      "id": "route_not_applicable_guard",
+      "expected_error": "T2 not_applicable requires independent official non-occurrence attestation",
+      "observed_error": "T2 not_applicable requires independent official non-occurrence attestation",
+      "warnings": [],
+      "passed": true
+    },
+    {
+      "id": "route_not_applicable_example_only",
+      "expected_error": null,
+      "observed_error": null,
+      "warnings": [],
+      "passed": true
+    },
+    {
+      "id": "helper_preserves_locale",
+      "expected_error": null,
+      "observed_error": null,
+      "warnings": [],
+      "passed": true
+    }
+  ],
+  "R": "R version 4.4.2 (2024-10-31)",
+  "source_sha256": "1d76e84be45a0ef65bda342e4c1efb42c0b8692590fe354b9edd0803ee9daf30"
+}

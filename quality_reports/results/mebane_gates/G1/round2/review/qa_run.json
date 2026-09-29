@@ -1,0 +1,210 @@
+{
+  "gate_id": "G1",
+  "round": "round2",
+  "reviewer_id": "01a0eb01-0a01-7a10-b432-d1f2cdbd12f8",
+  "executor_id": "01a0eaee-0164-7530-884d-adec564a8327",
+  "goal_created_at_unix": 1790651619,
+  "candidate_manifest_sha256": "517c17c724cca82a820519c476981d47c8892c7383dd2c3dded9373eba6d31e8",
+  "contract_sha256": "f985ab97469aa66755b977a09781b30608afa6e245896d9d9788b4461190975d",
+  "completed_at_utc": "2026-09-29T03:28:39.217072+00:00",
+  "review_elapsed_seconds_to_freeze": 900,
+  "required_commands_passed": true,
+  "superseded_qa_failure": "logs/adversarial.json: reviewer-only table-printing error; corrected and rerun in adversarial_final",
+  "commands": [
+    {
+      "command": [
+        "python3",
+        "-B",
+        "quality_reports/results/mebane_gates/G1/round2/review/audit_integrity.py"
+      ],
+      "command_display": "python3 -B quality_reports/results/mebane_gates/G1/round2/review/audit_integrity.py",
+      "started_at_utc": "2026-09-29T03:20:48.141055+00:00",
+      "ended_at_utc": "2026-09-29T03:20:50.391427+00:00",
+      "elapsed_seconds": 2.25,
+      "exit_code": 0,
+      "output": "quality_reports/results/mebane_gates/G1/round2/review/logs/integrity.txt"
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "tests/mebane/data/test_round2_freeze.py"
+      ],
+      "command_display": "python3 -B tests/mebane/data/test_round2_freeze.py",
+      "started_at_utc": "2026-09-29T03:20:48.158979+00:00",
+      "ended_at_utc": "2026-09-29T03:20:48.223426+00:00",
+      "elapsed_seconds": 0.064,
+      "exit_code": 0,
+      "output": "quality_reports/results/mebane_gates/G1/round2/review/logs/static_contract_fixtures.txt"
+    },
+    {
+      "command": [
+        "Rscript",
+        "--vanilla",
+        "quality_reports/results/mebane_gates/G1/round2/review/adversarial_review.R"
+      ],
+      "command_display": "Rscript --vanilla quality_reports/results/mebane_gates/G1/round2/review/adversarial_review.R",
+      "started_at_utc": "2026-09-29T03:20:48.180641+00:00",
+      "ended_at_utc": "2026-09-29T03:20:48.574229+00:00",
+      "elapsed_seconds": 0.394,
+      "exit_code": 1,
+      "output": "quality_reports/results/mebane_gates/G1/round2/review/logs/adversarial.txt"
+    },
+    {
+      "command": [
+        "Rscript",
+        "--vanilla",
+        "tests/mebane/data/test_g1.R"
+      ],
+      "command_display": "Rscript --vanilla tests/mebane/data/test_g1.R",
+      "started_at_utc": "2026-09-29T03:20:48.205408+00:00",
+      "ended_at_utc": "2026-09-29T03:20:48.467336+00:00",
+      "elapsed_seconds": 0.262,
+      "exit_code": 0,
+      "output": "quality_reports/results/mebane_gates/G1/round2/review/logs/existing_fixtures.txt"
+    },
+    {
+      "command": [
+        "Rscript",
+        "--vanilla",
+        "tests/mebane/data/test_round2_repairs.R",
+        "quality_reports/results/mebane_gates/G1/round2/review/executor_fixtures"
+      ],
+      "command_display": "Rscript --vanilla tests/mebane/data/test_round2_repairs.R quality_reports/results/mebane_gates/G1/round2/review/executor_fixtures",
+      "started_at_utc": "2026-09-29T03:20:48.225796+00:00",
+      "ended_at_utc": "2026-09-29T03:20:48.628492+00:00",
+      "elapsed_seconds": 0.403,
+      "exit_code": 0,
+      "output": "quality_reports/results/mebane_gates/G1/round2/review/logs/repair_fixtures.txt"
+    },
+    {
+      "command": [
+        "Rscript",
+        "--vanilla",
+        "R/01_load_tse.R",
+        "config/mebane/2022.json",
+        "quality_reports/results/mebane_gates/G1/round2/review/cli_2022"
+      ],
+      "command_display": "Rscript --vanilla R/01_load_tse.R config/mebane/2022.json quality_reports/results/mebane_gates/G1/round2/review/cli_2022",
+      "started_at_utc": "2026-09-29T03:21:15.813659+00:00",
+      "ended_at_utc": "2026-09-29T03:21:26.350903+00:00",
+      "elapsed_seconds": 10.537,
+      "exit_code": 0,
+      "output": "quality_reports/results/mebane_gates/G1/round2/review/logs/load_clean.txt"
+    },
+    {
+      "command": [
+        "Rscript",
+        "--vanilla",
+        "quality_reports/results/mebane_gates/G1/round2/review/adversarial_review.R"
+      ],
+      "command_display": "Rscript --vanilla quality_reports/results/mebane_gates/G1/round2/review/adversarial_review.R",
+      "started_at_utc": "2026-09-29T03:21:15.831812+00:00",
+      "ended_at_utc": "2026-09-29T03:21:16.222638+00:00",
+      "elapsed_seconds": 0.391,
+      "exit_code": 0,
+      "output": "quality_reports/results/mebane_gates/G1/round2/review/logs/adversarial_final.txt"
+    },
+    {
+      "command": [
+        "Rscript",
+        "--vanilla",
+        "R/01_load_tse.R",
+        "config/mebane/2022.json",
+        "quality_reports/results/mebane_gates/G1/round2/review/cli_replay"
+      ],
+      "command_display": "Rscript --vanilla R/01_load_tse.R config/mebane/2022.json quality_reports/results/mebane_gates/G1/round2/review/cli_replay",
+      "started_at_utc": "2026-09-29T03:21:15.855536+00:00",
+      "ended_at_utc": "2026-09-29T03:21:26.360850+00:00",
+      "elapsed_seconds": 10.505,
+      "exit_code": 0,
+      "output": "quality_reports/results/mebane_gates/G1/round2/review/logs/load_replay.txt"
+    },
+    {
+      "command": [
+        "Rscript",
+        "--vanilla",
+        "R/02_build_vars.R",
+        "config/mebane/2022.json",
+        "quality_reports/results/mebane_gates/G1/round2/review/cli_2022"
+      ],
+      "command_display": "Rscript --vanilla R/02_build_vars.R config/mebane/2022.json quality_reports/results/mebane_gates/G1/round2/review/cli_2022",
+      "started_at_utc": "2026-09-29T03:21:56.321158+00:00",
+      "ended_at_utc": "2026-09-29T03:21:59.004090+00:00",
+      "elapsed_seconds": 2.683,
+      "exit_code": 0,
+      "output": "quality_reports/results/mebane_gates/G1/round2/review/logs/build_clean.txt"
+    },
+    {
+      "command": [
+        "Rscript",
+        "--vanilla",
+        "R/02_build_vars.R",
+        "config/mebane/2022.json",
+        "quality_reports/results/mebane_gates/G1/round2/review/cli_replay"
+      ],
+      "command_display": "Rscript --vanilla R/02_build_vars.R config/mebane/2022.json quality_reports/results/mebane_gates/G1/round2/review/cli_replay",
+      "started_at_utc": "2026-09-29T03:21:56.341552+00:00",
+      "ended_at_utc": "2026-09-29T03:21:59.020631+00:00",
+      "elapsed_seconds": 2.679,
+      "exit_code": 0,
+      "output": "quality_reports/results/mebane_gates/G1/round2/review/logs/build_replay.txt"
+    },
+    {
+      "command": [
+        "Rscript",
+        "--vanilla",
+        "quality_reports/results/mebane_gates/G1/round2/review/independent_data.R"
+      ],
+      "command_display": "Rscript --vanilla quality_reports/results/mebane_gates/G1/round2/review/independent_data.R",
+      "started_at_utc": "2026-09-29T03:22:19.799429+00:00",
+      "ended_at_utc": "2026-09-29T03:22:37.782520+00:00",
+      "elapsed_seconds": 17.983,
+      "exit_code": 0,
+      "output": "quality_reports/results/mebane_gates/G1/round2/review/logs/independent_data.txt"
+    },
+    {
+      "command": [
+        "Rscript",
+        "--vanilla",
+        "-e",
+        "cat(R.version.string,\"\\n\"); print(vapply(c(\"data.table\",\"arrow\",\"jsonlite\",\"digest\"),function(p) as.character(utils::packageVersion(p)),character(1)))"
+      ],
+      "command_display": "Rscript --vanilla -e 'cat(R.version.string,\"\\n\"); print(vapply(c(\"data.table\",\"arrow\",\"jsonlite\",\"digest\"),function(p) as.character(utils::packageVersion(p)),character(1)))'",
+      "started_at_utc": "2026-09-29T03:24:18.100824+00:00",
+      "ended_at_utc": "2026-09-29T03:24:18.186348+00:00",
+      "elapsed_seconds": 0.085,
+      "exit_code": 0,
+      "output": "quality_reports/results/mebane_gates/G1/round2/review/logs/runtime.txt"
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "quality_reports/results/mebane_gates/G1/round2/review/audit_integrity.py"
+      ],
+      "command_display": "python3 -B quality_reports/results/mebane_gates/G1/round2/review/audit_integrity.py",
+      "started_at_utc": "2026-09-29T03:24:18.126738+00:00",
+      "ended_at_utc": "2026-09-29T03:24:20.342572+00:00",
+      "elapsed_seconds": 2.216,
+      "exit_code": 0,
+      "output": "quality_reports/results/mebane_gates/G1/round2/review/logs/integrity_final.txt"
+    }
+  ],
+  "csv_validation_counts": {
+    "adversarial_results.csv": 43,
+    "independent_controls.csv": 8,
+    "round1_column_invariance.csv": 70,
+    "replay_hashes.csv": 9
+  },
+  "runtime": {
+    "R": "4.4.2",
+    "data.table": "1.17.0",
+    "arrow": "22.0.0",
+    "jsonlite": "2.0.0",
+    "digest": "0.6.37"
+  },
+  "runtime_evidence": "logs/runtime.txt",
+  "source_read_audit": "source_audit.md",
+  "network_installation_mcmc": false
+}

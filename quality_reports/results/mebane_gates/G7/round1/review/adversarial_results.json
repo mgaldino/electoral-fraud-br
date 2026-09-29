@@ -1,0 +1,335 @@
+{
+  "cases": [
+    {
+      "case": "clean_stage",
+      "expected": "staging_validated",
+      "observed": "staging_validated",
+      "error": "",
+      "pass": true
+    },
+    {
+      "case": "idempotent",
+      "expected": "same_version",
+      "observed": "same_version",
+      "error": "",
+      "pass": true
+    },
+    {
+      "case": "simulated_not_ready",
+      "expected": "false_false",
+      "observed": "false_false",
+      "error": "",
+      "pass": true
+    },
+    {
+      "case": "revision_new_version",
+      "expected": "different",
+      "observed": "different",
+      "error": "",
+      "pass": true
+    },
+    {
+      "case": "old_snapshot_preserved",
+      "expected": "unchanged",
+      "observed": "unchanged",
+      "error": "",
+      "pass": true
+    },
+    {
+      "case": "review_namespace",
+      "expected": "isolated",
+      "observed": "isolated",
+      "error": "",
+      "pass": true
+    },
+    {
+      "case": "partial_votes",
+      "expected": "incomplete_coverage",
+      "observed": "incomplete_coverage",
+      "error": "",
+      "pass": true
+    },
+    {
+      "case": "control_mismatch",
+      "expected": "control_mismatch",
+      "observed": "control_mismatch",
+      "error": "",
+      "pass": true
+    },
+    {
+      "case": "unknown_schema",
+      "expected": "error",
+      "observed": "error",
+      "error": "error: Unknown normalized CSV schema",
+      "pass": true
+    },
+    {
+      "case": "wrong_year",
+      "expected": "error",
+      "observed": "error",
+      "error": "error: Election scope mismatch year",
+      "pass": true
+    },
+    {
+      "case": "wrong_turn",
+      "expected": "error",
+      "observed": "error",
+      "error": "error: Election scope mismatch turn",
+      "pass": true
+    },
+    {
+      "case": "candidate_conflict",
+      "expected": "error",
+      "observed": "error",
+      "error": "error: Candidate code/name conflict",
+      "pass": true
+    },
+    {
+      "case": "missing_value",
+      "expected": "error",
+      "observed": "error",
+      "error": "error: Empty/missing vote values",
+      "pass": true
+    },
+    {
+      "case": "negative_votes",
+      "expected": "error",
+      "observed": "error",
+      "error": "error: Invalid integer votes",
+      "pass": true
+    },
+    {
+      "case": "fractional_votes",
+      "expected": "error",
+      "observed": "error",
+      "error": "error: Invalid integer votes",
+      "pass": true
+    },
+    {
+      "case": "turnout_over_aptos",
+      "expected": "error",
+      "observed": "error",
+      "error": "error: Impossible section totals",
+      "pass": true
+    },
+    {
+      "case": "duplicate_row",
+      "expected": "error",
+      "observed": "error",
+      "error": "error: Duplicate section/candidate row",
+      "pass": true
+    },
+    {
+      "case": "lost_leading_zero",
+      "expected": "error",
+      "observed": "error",
+      "error": "error: Invalid section key",
+      "pass": true
+    },
+    {
+      "case": "wrong_ea11_date_year",
+      "expected": "error",
+      "observed": "error",
+      "error": "error: EA11 identity/date invalid",
+      "pass": true
+    },
+    {
+      "case": "impossible_ea11_date",
+      "expected": "error",
+      "observed": "error",
+      "error": "error: EA11 identity/date invalid",
+      "pass": true
+    },
+    {
+      "case": "changed_ea11_date_same_year",
+      "expected": "staging_validated",
+      "observed": "staging_validated",
+      "error": "",
+      "pass": true
+    },
+    {
+      "case": "wrong_documented_pleito",
+      "expected": "error",
+      "observed": "error",
+      "error": "error: EA11 conflicts with documented T1 identifiers",
+      "pass": true
+    },
+    {
+      "case": "numeric_document_code",
+      "expected": "error",
+      "observed": "error",
+      "error": "error: Invalid documented code EA11 pl.cd",
+      "pass": true
+    },
+    {
+      "case": "fractional_document_code",
+      "expected": "error",
+      "observed": "error",
+      "error": "error: Invalid documented code EA11 pl.cd",
+      "pass": true
+    },
+    {
+      "case": "vector_document_code",
+      "expected": "error",
+      "observed": "error",
+      "error": "error: Invalid documented code EA11 pl.cd",
+      "pass": true
+    },
+    {
+      "case": "phase_mismatch",
+      "expected": "error",
+      "observed": "error",
+      "error": "error: EA16 pleito/phase/schema mismatch",
+      "pass": true
+    },
+    {
+      "case": "bad_ea16_section",
+      "expected": "error",
+      "observed": "error",
+      "error": "error: Invalid EA16 section",
+      "pass": true
+    },
+    {
+      "case": "duplicate_ea16_files",
+      "expected": "error",
+      "observed": "error",
+      "error": "error: Missing or reused reference/input file",
+      "pass": true
+    },
+    {
+      "case": "simulated_official_label",
+      "expected": "error",
+      "observed": "error",
+      "error": "error: Official provenance requires official phase and TSE source",
+      "pass": true
+    },
+    {
+      "case": "official_phase_forged",
+      "expected": "staging_validated",
+      "observed": "staging_validated",
+      "error": "",
+      "pass": true
+    },
+    {
+      "case": "forged_official_not_ready",
+      "expected": "false_false",
+      "observed": "false_false",
+      "error": "",
+      "pass": true
+    },
+    {
+      "case": "partial_ea16_scope",
+      "expected": "staging_validated",
+      "observed": "staging_validated",
+      "error": "",
+      "pass": true
+    },
+    {
+      "case": "unresolved_2026_selection",
+      "expected": "error",
+      "observed": "error",
+      "error": "error: Candidate selection unresolved for turn",
+      "pass": true
+    },
+    {
+      "case": "turn2_separate_namespace",
+      "expected": "2022/turn2",
+      "observed": "2022/turn2",
+      "error": "",
+      "pass": true
+    },
+    {
+      "case": "turn2_not_ready",
+      "expected": "false_false",
+      "observed": "false_false",
+      "error": "",
+      "pass": true
+    },
+    {
+      "case": "tampered_receipt_validation",
+      "expected": "error",
+      "observed": "error",
+      "error": "",
+      "pass": true
+    },
+    {
+      "case": "tampered_receipt_data_ready",
+      "expected": "error",
+      "observed": "error",
+      "error": "",
+      "pass": true
+    },
+    {
+      "case": "tampered_receipt_inference_ready",
+      "expected": "error",
+      "observed": "error",
+      "error": "",
+      "pass": true
+    },
+    {
+      "case": "tampered_receipt_year",
+      "expected": "error",
+      "observed": "error",
+      "error": "",
+      "pass": true
+    },
+    {
+      "case": "tampered_receipt_version",
+      "expected": "error",
+      "observed": "error",
+      "error": "",
+      "pass": true
+    },
+    {
+      "case": "tampered_snapshot",
+      "expected": "error",
+      "observed": "error",
+      "error": "",
+      "pass": true
+    },
+    {
+      "case": "policy_changes_version",
+      "expected": "different",
+      "observed": "different",
+      "error": "",
+      "pass": true
+    },
+    {
+      "case": "G8pass_G9waiting",
+      "expected": "example_only",
+      "observed": "example_only",
+      "error": "",
+      "pass": true
+    },
+    {
+      "case": "G8pass_G9inconclusive",
+      "expected": "example_only",
+      "observed": "example_only",
+      "error": "",
+      "pass": true
+    },
+    {
+      "case": "G6pending_route",
+      "expected": "error",
+      "observed": "error",
+      "error": "",
+      "pass": true
+    },
+    {
+      "case": "G9NA_without_attestation",
+      "expected": "error",
+      "observed": "error",
+      "error": "",
+      "pass": true
+    },
+    {
+      "case": "G9NA_attested_scenario",
+      "expected": "example_only",
+      "observed": "example_only",
+      "error": "",
+      "pass": true
+    }
+  ],
+  "total": 47,
+  "passed": 47
+}

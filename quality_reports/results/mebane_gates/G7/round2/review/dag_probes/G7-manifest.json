@@ -1,0 +1,19 @@
+{
+  "gate_id": "G7",
+  "round": "round1",
+  "contract_sha256": "fc071a8664d04ba6a0a4ca91298d333ee1ca89868a26b23e705946fef1c2f94d",
+  "files": [
+    {
+      "path": "G7-input.txt",
+      "sha256": "3099b6c8cfec72b28f3150fc80c97025ae313d03dc9c72dc9a5556523b939456"
+    },
+    {
+      "path": "G7-output.txt",
+      "sha256": "b1aeaf4a9990b7d310bad67703fdfb2adf841ec746f041563432efcf256a1a0e"
+    },
+    {
+      "path": "G7-run.json",
+      "sha256": "21ebcd5a387d0dad7ab6ed28128d3a276c7b82e0a36703a6620dd1f77beeb90f"
+    }
+  ]
+}

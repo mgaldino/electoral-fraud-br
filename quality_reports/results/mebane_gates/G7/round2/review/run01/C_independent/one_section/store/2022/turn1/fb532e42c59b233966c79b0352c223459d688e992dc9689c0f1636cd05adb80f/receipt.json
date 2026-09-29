@@ -1,0 +1,61 @@
+{
+  "year": 2022,
+  "turn": 1,
+  "election_date": "02/10/2022",
+  "candidate": {
+    "code": 22,
+    "name": "CANDIDATO QA"
+  },
+  "version": "fb532e42c59b233966c79b0352c223459d688e992dc9689c0f1636cd05adb80f",
+  "policy_sha256": "c19be1f560e4f8498556554e41fe9f5ea90d14bc808df09a84919687e30c8fd3",
+  "input_hashes": {
+    "votes": "95bcb2a5495442139fb27de2fc68f9c0eaaa7710d84da56c62ad4c31f794dd87",
+    "ea11": "46b17a247a69e95f84bd4662f3bdee8c0ce3bb06b07a5892f3e3f16e6fda348b",
+    "ea16_1": "daeb33d454d230849c2d3e2bc9068ab184a3e3c7bed58c159bb6c01ee7afb11f",
+    "controls": "da1bd37fe2fdc7be749c2d22849af4d8e5b9b4cf3901cac842e4bdb79e2aec62",
+    "config": "652abdaf7bd3aa4a360aab0ed0148d9324e097289545b96469af657c576acef7"
+  },
+  "provenance": "fixture",
+  "phase": "s",
+  "source_url": "",
+  "validation": {
+    "reference_complete": true,
+    "national_coverage_attested": false,
+    "territorial_scope": {
+      "universe": "Independent synthetic reference, not national attestation",
+      "expected_ufs": [
+        "SP"
+      ],
+      "reference_ufs": [
+        "SP"
+      ],
+      "observed_ufs": [
+        "SP"
+      ],
+      "coverage_basis": "supplied_EA16_principal_sections"
+    },
+    "by_uf": [
+      {
+        "uf": "SP",
+        "reference_sections": 1,
+        "observed_sections": 1,
+        "missing_sections": 0
+      }
+    ],
+    "expected_sections": 1,
+    "observed_sections": 1,
+    "missing_sections": [],
+    "totals": {
+      "aptos": 12,
+      "turnout": 7,
+      "candidate_votes": 3,
+      "blank": 1,
+      "null": 1
+    },
+    "controls_pass": true,
+    "status": "staging_validated"
+  },
+  "data_ready": false,
+  "inference_ready": false,
+  "release_condition": "independent official-source and coverage attestation; G6 pass for inference"
+}

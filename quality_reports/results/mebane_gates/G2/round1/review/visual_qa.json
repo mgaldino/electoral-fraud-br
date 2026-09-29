@@ -1,0 +1,45 @@
+{
+  "reviewer_id": "01a0eb0d-15b5-7c51-8e6f-c5b5b93f6011",
+  "checked_at_utc": "2026-09-29T03:04:44.941005+00:00",
+  "candidate_pdf_sha256": "6e55a3a5f3ebd88a4f47b353ba4bad99ed418379ac4698d490291979d5e126cf",
+  "candidate_pages": 13,
+  "candidate_contact_pages_inspected": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13
+  ],
+  "candidate_fresh_detail_pages": [
+    6,
+    8,
+    12
+  ],
+  "review_pdf_sha256": "3a1bb7bf12dc492939f2faad6606ac5f471b4a63922656a56cd4318d4a41ca1b",
+  "review_pages": 8,
+  "review_contact_pages_inspected": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "review_final_detail_pages": [
+    4,
+    6
+  ],
+  "status": "pass_spot_check",
+  "basis": "Human-model visual inspection via view_image; geometry is auxiliary only.",
+  "limitations": "Not character-by-character typography certification."
+}

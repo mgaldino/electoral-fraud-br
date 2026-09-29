@@ -1,0 +1,119 @@
+{
+  "schema_version": "1.0",
+  "adjudication_id": "mebane-G7:2593c78b5687:round2",
+  "gate_id": "G7",
+  "round": "round2",
+  "contract_sha256": "fc071a8664d04ba6a0a4ca91298d333ee1ca89868a26b23e705946fef1c2f94d",
+  "candidate_manifest_sha256": "2593c78b5687c883aff6441f09b5d2e67cd319c1ceae723d043dee44a36e62a6",
+  "review_sha256": "9fb58b9afb0d4aac73a56989a232ac005d4f3ff4f415504d4cb11b58a815f6b7",
+  "status": "pass",
+  "unresolved_material_findings": 0,
+  "source": {
+    "reviewed_artifact": "quality_reports/results/mebane_gates/G7/round2/candidate_manifest.json",
+    "sha256": "2593c78b5687c883aff6441f09b5d2e67cd319c1ceae723d043dee44a36e62a6",
+    "artifact_intact": true
+  },
+  "contract": {
+    "required": false,
+    "path": null,
+    "sha256": null,
+    "contract_id": null,
+    "artifact_sha256": null,
+    "status": null,
+    "stale": false
+  },
+  "contract_scope_note": "Aprovação de código/dados sob contrato operacional G7; não é revisão de argumento de manuscrito nem aprovação de inferência.",
+  "review_sources": [
+    {
+      "review_id": "QA-G7-R2",
+      "path": "quality_reports/results/mebane_gates/G7/round2/review/review.json",
+      "sha256": "9fb58b9afb0d4aac73a56989a232ac005d4f3ff4f415504d4cb11b58a815f6b7"
+    }
+  ],
+  "findings": [],
+  "resolved_prior_findings": [
+    {
+      "id": "G7-R1-COORD-F03",
+      "status": "CONFIRMED",
+      "resolved": true,
+      "source_review": "QA-G7-R1/R2",
+      "resolution": "Leitura preserva bytes UTF-8 após validação explícita, sem mudar locale. Controle ASCII, nome acentuado NFC, sequência decomposta e nome com vírgula/apóstrofo passaram ponta a ponta em C e pt_BR.UTF-8. CSV, seleção em configuração, recibo e snapshots preservam identidade exata; byte inválido, sequência truncada/overlong e NUL falham por mensagem específica.",
+      "source_locations": [
+        "R/lib/mebane_2026_intake.R:38",
+        "R/lib/mebane_2026_intake.R:151",
+        "R/lib/mebane_2026_intake.R:262"
+      ],
+      "evidence": [
+        "quality_reports/results/mebane_gates/G7/round2/review/review.json",
+        "quality_reports/results/mebane_gates/G7/round2/review/verification.json",
+        "quality_reports/results/mebane_gates/coordination/g7_round2_coordinator_C.json",
+        "quality_reports/results/mebane_gates/coordination/g7_round2_coordinator_UTF8.json"
+      ]
+    },
+    {
+      "id": "G7-R1-QA-F01",
+      "status": "CONFIRMED",
+      "resolved": true,
+      "source_review": "QA-G7-R1/R2",
+      "resolution": "Datas configuradas por turno são válidas, ordenadas e comparadas exatamente ao EA11. Datas erradas no mesmo ano são recusadas em T1/T2. Configurações incompletas, impossíveis, numéricas, vetoriais ou com turno extra falham pela guarda de datas. A configuração 2026 corresponde à nota arquivada e à URL oficial do calendário; a data T2 permanece condicional e seu código vem do EA11 recebido. Casos 2026 T1/T2 com datas, códigos, cargo, controles e 28 UFs coerentes chegam ao erro específico Candidate selection unresolved for turn.",
+      "source_locations": [
+        "R/lib/mebane_2026_intake.R:31",
+        "R/lib/mebane_2026_intake.R:55",
+        "R/lib/mebane_2026_intake.R:102",
+        "config/mebane/2026/intake.json:8"
+      ],
+      "evidence": [
+        "quality_reports/results/mebane_gates/G7/round2/review/review.json",
+        "quality_reports/results/mebane_gates/G7/round2/review/verification.json",
+        "quality_reports/results/mebane_gates/coordination/g7_round2_coordinator_C.json",
+        "quality_reports/results/mebane_gates/coordination/g7_round2_coordinator_UTF8.json"
+      ]
+    },
+    {
+      "id": "G7-R1-QA-F02",
+      "status": "CONFIRMED",
+      "resolved": true,
+      "source_review": "QA-G7-R1/R2",
+      "resolution": "O recibo declara universo territorial, UFs esperadas/referenciadas/observadas e contagens por UF. Referência sem UF esperada ou com UF extra falha especificamente; ausência de votos em uma UF aparece como incomplete_coverage e na contagem local. Uma seção e uma referência mínima cobrindo as 28 siglas podem ser completas somente em relação ao EA16 fornecido. national_coverage_attested, data_ready e inference_ready permanecem false, inclusive com fase/URL/rótulo oficial sintéticos.",
+      "source_locations": [
+        "R/lib/mebane_2026_intake.R:177",
+        "R/lib/mebane_2026_intake.R:200",
+        "R/lib/mebane_2026_intake.R:206"
+      ],
+      "evidence": [
+        "quality_reports/results/mebane_gates/G7/round2/review/review.json",
+        "quality_reports/results/mebane_gates/G7/round2/review/verification.json",
+        "quality_reports/results/mebane_gates/coordination/g7_round2_coordinator_C.json",
+        "quality_reports/results/mebane_gates/coordination/g7_round2_coordinator_UTF8.json"
+      ]
+    }
+  ],
+  "summary": {
+    "total": 0,
+    "confirmed": 0,
+    "partial": 0,
+    "refuted": 0,
+    "unresolved": 0,
+    "held_decisions": 0
+  },
+  "summary_note": "Três defeitos anteriores continuam CONFIRMED, agora reparados e independentemente verificados; nenhum novo finding.",
+  "adjudication": {
+    "verdict": "NO_CONFIRMED_DEFECTS",
+    "checked_at": "2026-09-29T04:48:27.420668+00:00",
+    "reasons": [
+      "Os três reparos foram rechecados por QA independente e oito testes próprios em cada um de dois locales.",
+      "A coordenação verificou todos os 1859 arquivos do candidato e 1173 da QA e leu os reparos, o parecer e os limites.",
+      "A QA passou 69 casos por locale, oito probes do DAG e suítes afetadas; 25 recibos são byte-idênticos entre locales.",
+      "G7-T1 a T4 atendidos para prontidão ensaiada. G8/G9 permanecem dependentes de publicação oficial e G6; G2 permanece changes_requested."
+    ]
+  },
+  "limits": [
+    "Todas as entradas novas são sintéticas. Não houve aquisição de votos 2026, instalação, MCMC ou revisão metodológica ampliada.",
+    "O intake aceita CSV normalizado por seção/candidato. O conversor auditado de arquivos oficiais brutos permanece dependência concreta para uso real.",
+    "Completude é relativa aos EA16 fornecidos; presença das 28 siglas não constitui atestação nacional.",
+    "Calendário 2026 confrontado com nota e URL oficiais previamente registradas. O HTML integral do calendário não está arquivado e não foi novamente obtido nesta QA.",
+    "Os registros do DAG gerados pela QA são explicitamente sintéticos e demonstram apenas validação estrutural. Nenhum registro real foi criado ou alterado.",
+    "Ingestão requer serialização ou lock externo. Concorrência e escala nacional não foram reensaiadas nesta rodada delimitada; a validação UTF-8 lê o arquivo inteiro em memória.",
+    "A primeira instrumentação de leitura classificou uma tentativa frustrada de abrir cache Python inexistente como input descoberto. O traço final distingue tentativas sem arquivo de leituras efetivas; ambos foram preservados."
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "year": 2022,
+  "turns": [1, 2],
+  "cargo": 1,
+  "vote_file": "replication_authors/extracted/fingerprint_brazil/raw-data/votacao_secao_2022_BR.csv",
+  "detail_file": "replication_authors/extracted/fingerprint_brazil/raw-data/detalhe_votacao_secao_2022_BR.csv",
+  "encoding": "Latin-1",
+  "eligible_candidates": {"1": [12, 13, 14, 15, 16, 21, 22, 27, 30, 44, 80], "2": [13, 22]},
+  "target_candidates": {"1": [13], "2": [13]},
+  "pseudo_candidates": {"blank": 95, "null": 96},
+  "small_section_threshold": 10,
+  "exterior_policy": "include_flagged",
+  "zero_vote_policy": "infer_only_after_complete_category_reconciliation",
+  "abstention_exception": "zero_turnout_zero_reported_abstentions_flagged_not_model_eligible",
+  "official_controls": {
+    "status": "transcribed_news_not_archived_official_snapshot",
+    "first_turn_url": "https://www.tse.jus.br/comunicacao/noticias/2022/Outubro/100-das-secoes-totalizadas-confira-como-ficou-o-quadro-eleitoral-apos-o-1o-turno",
+    "second_turn_url": "https://www.tse.jus.br/comunicacao/noticias/2022/Outubro/100-das-secoes-totalizadas-confira-como-ficou-o-quadro-eleitoral-apos-o-2o-turno",
+    "first_turn_published": "2022-10-04",
+    "second_turn_published": "2022-10-31",
+    "first_turn_last_updated": "2026-07-08",
+    "2": {"sections": 472075, "aptos": 156454011, "comparecimento": 124252796, "abstencoes_reportadas": 32200558, "nominais": 118552353, "brancos": 1769678, "nulos": 3930765, "candidate_13": 60345999, "candidate_22": 58206354},
+    "1": {"sections": 472075, "aptos": 156454011, "comparecimento": 123682372, "abstencoes_reportadas": 32770982, "nominais": 118229719, "brancos": 1964779, "nulos": 3487874, "candidate_13": 57259504, "candidate_22": 51072345}
+  }
+}

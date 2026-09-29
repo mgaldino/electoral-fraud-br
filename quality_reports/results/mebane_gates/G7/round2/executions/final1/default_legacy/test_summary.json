@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "fixture": "2022-derived synthetic only",
+  "assertions": ["idempotence", "immutable_revision", "partial_coverage", "receipt_tamper_all_state_fields", "policy_change_new_version", "multi_uf_EA16", "duplicate_EA16", "documented_string_codes", "invalid_documented_codes", "zero_padded_section_keys", "unknown_schema", "control_mismatch", "candidate_conflict", "scope", "simulated_not_official", "official_label_not_authorization", "year_turn_isolation", "t2_nonoccurrence_attestation", "G6_inference_gate"],
+  "original_version": "3ac36e48f85fdfaa888cdaa964c7b9d95496e11c0f6a296a5e64595c5b0cb181",
+  "revised_version": "2238bfde348fc32f70342d6f541648fa925e2cea208fb3d756c04a81d3ca398d",
+  "turn2_version": "80095f4cdad715c418306461908e74d478e7f246a0beda082530c15235cfdf2e",
+  "preserved_2022": {
+    "config_sha256": "3dd289d0173e5258e8b81ddaf51c0028341b6a3653c607723b27fa63a956109c",
+    "fixture_sha256": "f9a280d10dc69524edc139eb8a799b232f68a7a3b974535b1d14d591591788ba"
+  }
+}

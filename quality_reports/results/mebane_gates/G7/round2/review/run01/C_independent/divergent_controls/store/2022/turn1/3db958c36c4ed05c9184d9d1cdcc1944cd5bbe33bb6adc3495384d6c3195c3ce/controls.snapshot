@@ -1,0 +1,12 @@
+{
+  "year": 2022,
+  "turn": 1,
+  "pleito": 901,
+  "election": 1901,
+  "sections": 4,
+  "aptos": 48,
+  "turnout": 28,
+  "candidate_votes": 999,
+  "blank": 4,
+  "null": 4
+}

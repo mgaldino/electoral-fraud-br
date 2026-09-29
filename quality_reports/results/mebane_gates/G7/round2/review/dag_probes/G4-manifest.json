@@ -1,0 +1,19 @@
+{
+  "gate_id": "G4",
+  "round": "round1",
+  "contract_sha256": "9b3955d2a43a370b418ceac010aa27ec441c868c6e6a06a938eb6e7759773bed",
+  "files": [
+    {
+      "path": "G4-input.txt",
+      "sha256": "3099b6c8cfec72b28f3150fc80c97025ae313d03dc9c72dc9a5556523b939456"
+    },
+    {
+      "path": "G4-output.txt",
+      "sha256": "b1aeaf4a9990b7d310bad67703fdfb2adf841ec746f041563432efcf256a1a0e"
+    },
+    {
+      "path": "G4-run.json",
+      "sha256": "25884c8d92c30e284576016fd5e17a5316e7596d8197f36fde786e6c8b772606"
+    }
+  ]
+}

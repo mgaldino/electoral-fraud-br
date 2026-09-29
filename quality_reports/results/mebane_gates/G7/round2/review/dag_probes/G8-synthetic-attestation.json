@@ -1,0 +1,13 @@
+{
+  "gate_id": "G8",
+  "requirement": "Dados oficiais do TSE do primeiro turno de 2026, publicados e com cobertura suficiente para a análise definida.",
+  "election_year": 2026,
+  "turn": 1,
+  "source_url": "https://www.tse.jus.br/qa-synthetic",
+  "publication_date": "2026-09-29",
+  "checked_at": "2026-09-29T04:39:31.733111+00:00",
+  "reviewer_id": "22222222-2222-4222-8222-222222222222",
+  "snapshot_path": "G8-synthetic-snapshot.txt",
+  "snapshot_sha256": "d4e61aaff19eae9222b734b26b9b1fda31021a744ba19809945cfc6d89430057",
+  "coverage_pass": true
+}

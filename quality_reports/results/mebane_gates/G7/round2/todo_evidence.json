@@ -1,0 +1,21 @@
+{
+  "gate_id": "G7", "round": "round2",
+  "repair_scope": ["G7-R1-COORD-F03", "G7-R1-QA-F01", "G7-R1-QA-F02"],
+  "disposition": "executor implemented; independent verification pending",
+  "todos": [
+    {"id": "G7-T1", "status": "done", "evidence": [
+      {"path": "config/mebane/2026/intake.json", "basis": "executed", "locator": "election_dates, calendar_source, territorial_scope; candidates remain null"},
+      {"path": "quality_reports/results/mebane_gates/coordination/tse2026_source_preflight.md", "basis": "inspected", "locator": "Calendar source and conditional turn dates"}]},
+    {"id": "G7-T2", "status": "done", "evidence": [
+      {"path": "quality_reports/results/mebane_gates/G7/round2/executions/final1/execution.json", "basis": "executed", "locator": "Three-locale legacy and repair regressions; all commands exit 0"},
+      {"path": "quality_reports/results/mebane_gates/G7/round2/executions/final1/C_repairs/repair_results.json", "basis": "executed", "locator": "F03 UTF-8, F01 dates, F02 declared scope cases"},
+      {"path": "quality_reports/results/mebane_gates/G7/round2/executions/final1/UTF8_repairs/repair_results.json", "basis": "executed", "locator": "Byte equality and unchanged locale under pt_BR.UTF-8"}]},
+    {"id": "G7-T3", "status": "done", "evidence": [
+      {"path": "quality_reports/results/mebane_gates/G7/round2/recovery_map.json", "basis": "executed", "locator": "1094 preserved paths with SHA-256 and recovery paths"},
+      {"path": "quality_reports/results/mebane_gates/G7/round2/integrity_final.json", "basis": "executed", "locator": "Unchanged round1/QA and approved dependencies; 39 receipts"},
+      {"path": "quality_reports/results/mebane_gates/G7/round2/executions/final1/C_legacy/test_summary.json", "basis": "executed", "locator": "Revisions, idempotence, policy changes, schema, turns and candidate conflicts"}]},
+    {"id": "G7-T4", "status": "done", "evidence": [
+      {"path": "quality_reports/results/mebane_gates/G7/round2/implementation.md", "basis": "executed", "locator": "Roteiro e limites mantidos"},
+      {"path": "quality_reports/results/mebane_gates/G7/round2/executions/final1/DAG_checker.log", "basis": "executed", "locator": "26 tests and G6 prerequisite rejection"}]}
+  ]
+}

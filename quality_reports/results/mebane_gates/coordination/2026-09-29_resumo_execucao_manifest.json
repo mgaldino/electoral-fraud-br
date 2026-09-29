@@ -1,0 +1,79 @@
+{
+  "generated_at_utc": "2026-09-29T04:50:17.063718+00:00",
+  "reportlab_version": "4.4.9",
+  "status": "rendered_and_visual_qa_passed",
+  "visual_qa": "quality_reports/results/mebane_gates/coordination/2026-09-29_resumo_execucao_visual_qa.json",
+  "scope": "Operational summary of inspected and executed gate evidence, no new estimation",
+  "files": [
+    {
+      "path": "quality_reports/plans/mebane_2022_2026_gates.json",
+      "bytes": 46366,
+      "sha256": "f9af885868d7982986df9b88ae3215c07a6690258bb80961109af17b230047c8"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/build_execution_brief.py",
+      "bytes": 16102,
+      "sha256": "2e3a7a8f377276f7c7fd79b540cd49ef124e7fbbb3f60a918d9d6ff5871307cf"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round2/review/review.json",
+      "bytes": 7220,
+      "sha256": "727f6b234e3a580c329cc5e898018bb68c02063717c292b6d91e4fbe12d86941"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round2/review/review.md",
+      "bytes": 6275,
+      "sha256": "ed71a1d6b8467707705666d599c4cb4db8c0eb232acc970ab18b0fc05aa4cca0"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G1/round2/adjudication.json",
+      "bytes": 4754,
+      "sha256": "fe21ce5ebaf107027b6cf64f72eb06f9f2549df8f65ccbbd3eeee2067807735e"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G2/round1/review/review.json",
+      "bytes": 13224,
+      "sha256": "a027cd5ad0875ffbb92e3b983c2907700fe6e8b4dbfc776df141ef9f5f80ba7c"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G2/round1/adjudication.json",
+      "bytes": 10071,
+      "sha256": "8f4ba0334c84b32f36e4f6e32751c688cbdff6788c82f314fa833e67498c32af"
+    },
+    {
+      "path": "appendices/mebane_model_contract.md",
+      "bytes": 37852,
+      "sha256": "ec0046bd386d048aec4ef5652ad149f5d7276455a6bf6d662878ded30cc59567"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G7/round2/implementation.md",
+      "bytes": 7620,
+      "sha256": "68285c643cc3404b647ffb7b1f9724793b327e5b183efe1f71d1b8d5b354a822"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G7/round2/candidate_manifest.json",
+      "bytes": 572207,
+      "sha256": "2593c78b5687c883aff6441f09b5d2e67cd319c1ceae723d043dee44a36e62a6"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G7/round2/review/review.json",
+      "bytes": 6346,
+      "sha256": "9fb58b9afb0d4aac73a56989a232ac005d4f3ff4f415504d4cb11b58a815f6b7"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G7/round2/adjudication.json",
+      "bytes": 6956,
+      "sha256": "28a12c50055251ef59c899dcda390c84bfbcfe6628c747e1060ac78f92b99cc8"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-29_resumo_execucao.md",
+      "bytes": 10523,
+      "sha256": "0ba9e33a4af281c6358573f630d49bb889963ff350ed8a5da0f13bb5fd676b47"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-29_resumo_execucao.pdf",
+      "bytes": 13606,
+      "sha256": "2b204678f10c4c86e4efc212f525f50d47e86a4caefc308d3642f27bb0cab41a"
+    }
+  ]
+}

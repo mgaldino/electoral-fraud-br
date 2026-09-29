@@ -1,0 +1,146 @@
+{
+  "schema_version": "1.0",
+  "adjudication_id": "mebane-G7:62f7a5c4907c:round1",
+  "gate_id": "G7",
+  "round": "round1",
+  "contract_sha256": "fc071a8664d04ba6a0a4ca91298d333ee1ca89868a26b23e705946fef1c2f94d",
+  "candidate_manifest_sha256": "62f7a5c4907c9d39b75fe5cd88224bddb4796e015f69f004469e51df7ae493c8",
+  "review_sha256": "a0232205b424c747f354fa5c950c7286370bd168070c51858945e0ff33886297",
+  "status": "changes_requested",
+  "unresolved_material_findings": 2,
+  "source": {
+    "reviewed_artifact": "quality_reports/results/mebane_gates/G7/round1/candidate_manifest.json",
+    "sha256": "62f7a5c4907c9d39b75fe5cd88224bddb4796e015f69f004469e51df7ae493c8",
+    "artifact_intact": true
+  },
+  "contract": {
+    "required": false,
+    "path": null,
+    "sha256": null,
+    "contract_id": null,
+    "artifact_sha256": null,
+    "status": null,
+    "stale": false
+  },
+  "contract_scope_note": "Código/dados sob contrato operacional G7 canônico, não revisão de argumento de manuscrito.",
+  "review_sources": [
+    {
+      "review_id": "QA-G7-R1",
+      "path": "quality_reports/results/mebane_gates/G7/round1/review/review.json",
+      "sha256": "a0232205b424c747f354fa5c950c7286370bd168070c51858945e0ff33886297"
+    }
+  ],
+  "findings": [
+    {
+      "id": "G7-R1-COORD-F03",
+      "finding_id": "G7-R1-COORD-F03",
+      "source_review": "QA-G7-R1",
+      "quoted_finding": "Valid UTF-8 candidate names are rejected under the candidate's LC_ALL=C execution locale: The ASCII control CSV returns two rows. A CSV with identical fields except the valid UTF-8 candidate name JOSÉ DA CONCEIÇÃO returns Empty/missing vote values under LC_CTYPE=C, with invalid input found on input connection. A byte-preserving read plus explicit UTF-8 validation reads both rows under the same locale.",
+      "type": "artifact",
+      "severity": "major",
+      "scientific_dimension": "reprodutibilidade e escopo de validação de dados",
+      "held_decision": false,
+      "status": "CONFIRMED",
+      "source_locations": [
+        "R/lib/mebane_2026_intake.R:129",
+        "R/lib/mebane_2026_intake.R:130",
+        "quality_reports/results/mebane_gates/G7/round1/adjudication_encoding.R:1"
+      ],
+      "defect_evidence": [
+        "quality_reports/results/mebane_gates/G7/round1/adjudication_encoding.json",
+        "quality_reports/results/mebane_gates/G7/round1/review/encoding_probe_02/result.json"
+      ],
+      "refuting_evidence": [],
+      "mechanical_checks": [
+        "275 arquivos do candidato e 809 arquivos da QA verificados por SHA-256 e tamanho.",
+        "Contraprovas executadas pela coordenação e reprodução independente da QA."
+      ],
+      "reasoning": "A coordenação reproduziu a rejeição do UTF-8 válido e a QA confirmou com arquivos próprios, controle ASCII e comparação de bytes. read.csv(fileEncoding='UTF-8') converte para o locale C. O contrato promete CSV UTF-8, portanto a falha é material. Reparar a leitura sem alterar locale global, preservar o nome exato e rejeitar bytes inválidos.",
+      "proposed_fix_assessment": "safe",
+      "disposition": "Reparar em round2 e submeter novo hash à QA independente; preservar bytes anteriores.",
+      "resolved": false,
+      "resolution": null
+    },
+    {
+      "id": "G7-R1-QA-F01",
+      "finding_id": "G7-R1-QA-F01",
+      "source_review": "QA-G7-R1",
+      "quoted_finding": "Election date is checked only for year, not against the declared turn date: With all other fixture 2022 T1 identifiers, votes and controls unchanged, replacing EA11 pl.dt=02/10/2022 with 03/10/2022 produces staging_validated. The 2026 intake configuration likewise has no expected date for the documented T1 election.",
+      "type": "artifact",
+      "severity": "major",
+      "scientific_dimension": "reprodutibilidade e escopo de validação de dados",
+      "held_decision": false,
+      "status": "CONFIRMED",
+      "source_locations": [
+        "R/lib/mebane_2026_intake.R:71",
+        "config/mebane/2026/intake.json:4"
+      ],
+      "defect_evidence": [
+        "quality_reports/results/mebane_gates/G7/round1/review/review.json",
+        "quality_reports/results/mebane_gates/G7/round1/adjudication_checks.json"
+      ],
+      "refuting_evidence": [],
+      "mechanical_checks": [
+        "275 arquivos do candidato e 809 arquivos da QA verificados por SHA-256 e tamanho.",
+        "Contraprovas executadas pela coordenação e reprodução independente da QA."
+      ],
+      "reasoning": "Código e contraprova própria confirmam que 03/10/2022 é aceito como T1, embora a data correta do fixture seja 02/10/2022. A data deve ser ancorada por turno. O calendário TSE arquivado documenta 04/10/2026 e eventual 25/10/2026; fixar a data condicional de T2 não presume sua ocorrência nem seu código de eleição.",
+      "proposed_fix_assessment": "safe",
+      "disposition": "Reparar em round2 e submeter novo hash à QA independente; preservar bytes anteriores.",
+      "resolved": false,
+      "resolution": null
+    },
+    {
+      "id": "G7-R1-QA-F02",
+      "finding_id": "G7-R1-QA-F02",
+      "source_review": "QA-G7-R1",
+      "quoted_finding": "The receipt does not state the territorial universe behind 100 percent EA16 coverage: A one-section EA16 roster, matching one-section vote file and one-section controls return staging_validated and complete=true, while omitting another fixture section. The receipt does not declare UF set or expected national universe.",
+      "type": "scope_or_consistency",
+      "severity": "minor",
+      "scientific_dimension": "reprodutibilidade e escopo de validação de dados",
+      "held_decision": false,
+      "status": "CONFIRMED",
+      "source_locations": [
+        "R/lib/mebane_2026_intake.R:195",
+        "R/lib/mebane_2026_intake.R:201",
+        "R/lib/mebane_2026_intake.R:214"
+      ],
+      "defect_evidence": [
+        "quality_reports/results/mebane_gates/G7/round1/review/review.json",
+        "quality_reports/results/mebane_gates/G7/round1/adjudication_checks.json"
+      ],
+      "refuting_evidence": [],
+      "mechanical_checks": [
+        "275 arquivos do candidato e 809 arquivos da QA verificados por SHA-256 e tamanho.",
+        "Contraprovas executadas pela coordenação e reprodução independente da QA."
+      ],
+      "reasoning": "O recibo omite abrangência e chama complete à completude relativa aos EA16 fornecidos. Uma única seção recebe complete=true. Isso não é aprovação nacional: ambas as flags de liberação continuam falsas. Confirmado somente como omissão de escopo/denominador; corrigir nomes/metadados e declarar UFs esperadas, sem fingir que presença de UFs prova cobertura nacional.",
+      "proposed_fix_assessment": "safe",
+      "disposition": "Reparar em round2 e submeter novo hash à QA independente; preservar bytes anteriores.",
+      "resolved": false,
+      "resolution": null
+    }
+  ],
+  "summary": {
+    "total": 3,
+    "confirmed": 3,
+    "partial": 0,
+    "refuted": 0,
+    "unresolved": 0,
+    "held_decisions": 0
+  },
+  "adjudication": {
+    "verdict": "READY_FOR_IMPLEMENTATION",
+    "checked_at": "2026-09-29T04:10:53.488289+00:00",
+    "reasons": [
+      "Os três defeitos foram confirmados contra o candidato exato e têm reparo seguro autorizado pelo pedido atual.",
+      "Dois defeitos materiais e uma omissão de escopo permanecem abertos; este veredicto autoriza encaminhamento de reparo, não aprovação de G7.",
+      "A escolha do modelo em G2 é independente; este reparo não decide priors, engines ou estimandos."
+    ]
+  },
+  "limits": [
+    "Nenhum dado real de votos de 2026 foi adquirido.",
+    "Falta conversor auditado de arquivos brutos oficiais para o CSV normalizado.",
+    "Ingestão serial ou lock externo; não há garantia concorrente. Flags de liberação permanecem falsas."
+  ]
+}

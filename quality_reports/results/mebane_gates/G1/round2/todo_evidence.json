@@ -1,0 +1,47 @@
+{
+  "G1-T1": {
+    "status": "done",
+    "evidence": [
+      {"path": "config/mebane/2022.json", "basis": "executed", "locator": "Configuração validada e consumida nos dois loads e builds completos"},
+      {"path": "quality_reports/results/mebane_gates/G1/round2/outputs/2022_final/deterministic_replay.csv", "basis": "executed", "locator": "Nove produtos centrais byte-idênticos na mesma versão"},
+      {"path": "quality_reports/results/mebane_gates/G1/round2/logs/static_contract_test.txt", "basis": "executed", "locator": "Contrato estático sem leitura do ledger"}
+    ]
+  },
+  "G1-T2": {
+    "status": "done",
+    "evidence": [
+      {"path": "R/lib/mebane_data.R", "basis": "executed", "locator": "Validação por turno de identidade, schema, contagens, elegibilidade, controles e joins"},
+      {"path": "quality_reports/results/mebane_gates/G1/round2/checks/repair_regressions.csv", "basis": "executed", "locator": "64 casos, incluindo erros concordantes e controles de candidato não líder"},
+      {"path": "quality_reports/results/mebane_gates/G1/round2/logs/existing_fixtures.txt", "basis": "executed"},
+      {"path": "quality_reports/results/mebane_gates/G1/round2/checks/identity_official_anchors.csv", "basis": "executed"}
+    ]
+  },
+  "G1-T3": {
+    "status": "done",
+    "evidence": [
+      {"path": "quality_reports/results/mebane_gates/G1/round2/outputs/2022_final/official_history_reconciliation.csv", "basis": "executed"},
+      {"path": "quality_reports/results/mebane_gates/G1/round2/outputs/2022_final/official_munzona_uf_turn_reconciliation.csv", "basis": "executed"},
+      {"path": "quality_reports/results/mebane_gates/G1/round2/outputs/2022_final/rule_log.csv", "basis": "executed", "locator": "99 casos de nominais zero preservados; 94 discrepâncias presentes e inelegíveis para modelo"},
+      {"path": "quality_reports/results/mebane_gates/G1/round2/checks/round1_rowwise_invariance.csv", "basis": "executed", "locator": "Contagens e chaves iguais à round1; somente tipo eleitoral adicionado"}
+    ]
+  },
+  "G1-T4": {
+    "status": "done",
+    "evidence": [
+      {"path": "quality_reports/results/mebane_gates/G1/round2/implementation.md", "basis": "inspected", "locator": "Execução e invariância; Reprodução e limites"},
+      {"path": "quality_reports/results/mebane_gates/G1/round2/outputs/2022_final/candidate_coalition_metadata.csv", "basis": "executed"},
+      {"path": "quality_reports/results/mebane_gates/G1/round2/outputs/2022_final/rule_log.csv", "basis": "executed"},
+      {"path": "quality_reports/results/mebane_gates/G1/round2/checks/round1_aggregate_invariance.csv", "basis": "executed", "locator": "Nove relatórios anteriores inalterados"}
+    ]
+  },
+  "G1-T5": {
+    "status": "done",
+    "evidence": [
+      {"path": "tests/mebane/data/test_round2_repairs.R", "basis": "executed"},
+      {"path": "tests/mebane/data/test_g1.R", "basis": "executed", "locator": "Fixtures e agregação alternativa a partir dos dois CSVs raw"},
+      {"path": "quality_reports/results/mebane_gates/G1/round2/outputs/2022_final/independent_raw_uf_turn.csv", "basis": "executed"},
+      {"path": "quality_reports/results/mebane_gates/G1/round2/outputs/2022_final/official_munzona_candidate_uf_turn.csv", "basis": "executed"},
+      {"path": "quality_reports/results/mebane_gates/G1/round2/outputs/2022_final/deterministic_replay.csv", "basis": "executed"}
+    ]
+  }
+}

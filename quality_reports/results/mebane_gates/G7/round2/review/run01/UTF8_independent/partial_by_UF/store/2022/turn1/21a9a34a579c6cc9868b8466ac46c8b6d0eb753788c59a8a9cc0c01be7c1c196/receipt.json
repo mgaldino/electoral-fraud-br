@@ -1,0 +1,69 @@
+{
+  "year": 2022,
+  "turn": 1,
+  "election_date": "02/10/2022",
+  "candidate": {
+    "code": 22,
+    "name": "CANDIDATO QA"
+  },
+  "version": "21a9a34a579c6cc9868b8466ac46c8b6d0eb753788c59a8a9cc0c01be7c1c196",
+  "policy_sha256": "c19be1f560e4f8498556554e41fe9f5ea90d14bc808df09a84919687e30c8fd3",
+  "input_hashes": {
+    "votes": "6c1a8b420327f31ebca039121efd5f6ee61d6b105262e767209331738bc78336",
+    "ea11": "46b17a247a69e95f84bd4662f3bdee8c0ce3bb06b07a5892f3e3f16e6fda348b",
+    "ea16_1": "cdd424d30291c897baa33d31252756dd7dd0c0921b039a8027bd6a909c218fc4",
+    "controls": "15adbdfc60b584cb7af905609e5a295c1f30cc0357e5b15a5b39f685197f0319",
+    "config": "52f42a52c8b6840f907d800c2fc41a8c3103a46d2697f9a0d08585bf33840a9f"
+  },
+  "provenance": "fixture",
+  "phase": "s",
+  "source_url": "",
+  "validation": {
+    "reference_complete": false,
+    "national_coverage_attested": false,
+    "territorial_scope": {
+      "universe": "Independent synthetic reference, not national attestation",
+      "expected_ufs": [
+        "AM",
+        "SP"
+      ],
+      "reference_ufs": [
+        "AM",
+        "SP"
+      ],
+      "observed_ufs": [
+        "SP"
+      ],
+      "coverage_basis": "supplied_EA16_principal_sections"
+    },
+    "by_uf": [
+      {
+        "uf": "AM",
+        "reference_sections": 2,
+        "observed_sections": 0,
+        "missing_sections": 2
+      },
+      {
+        "uf": "SP",
+        "reference_sections": 2,
+        "observed_sections": 2,
+        "missing_sections": 0
+      }
+    ],
+    "expected_sections": 4,
+    "observed_sections": 2,
+    "missing_sections": ["AM:00009:0003:0001", "AM:00009:0003:0002"],
+    "totals": {
+      "aptos": 24,
+      "turnout": 14,
+      "candidate_votes": 6,
+      "blank": 2,
+      "null": 2
+    },
+    "controls_pass": false,
+    "status": "incomplete_coverage"
+  },
+  "data_ready": false,
+  "inference_ready": false,
+  "release_condition": "independent official-source and coverage attestation; G6 pass for inference"
+}

@@ -1,0 +1,139 @@
+{
+  "status": "PASS",
+  "locale_before": "pt_BR.UTF-8/pt_BR.UTF-8/pt_BR.UTF-8/C/pt_BR.UTF-8/pt_BR.UTF-8",
+  "locale_after": "pt_BR.UTF-8/pt_BR.UTF-8/pt_BR.UTF-8/C/pt_BR.UTF-8/pt_BR.UTF-8",
+  "locale_ctype": "pt_BR.UTF-8",
+  "locale_environment": {
+    "LANG": "C.UTF-8",
+    "LC_ALL": "pt_BR.UTF-8",
+    "LC_CTYPE": "C.UTF-8"
+  },
+  "candidate_utf8_hex": "4a4f53c38920444120434f4e434549c387c3834f",
+  "R": "R version 4.4.2 (2024-10-31)",
+  "package_versions": [
+    "2.0.0",
+    "0.6.37"
+  ],
+  "cases": [
+    {
+      "id": "F03_utf8_read_bytes",
+      "passed": true,
+      "expected_error": null,
+      "observed_error": null
+    },
+    {
+      "id": "F03_utf8_stage_snapshot_receipt_idempotence",
+      "passed": true,
+      "expected_error": null,
+      "observed_error": null
+    },
+    {
+      "id": "F03_decomposed_utf8_preserved",
+      "passed": true,
+      "expected_error": null,
+      "observed_error": null
+    },
+    {
+      "id": "F03_invalid_utf8_read",
+      "passed": true,
+      "expected_error": "Invalid UTF-8 CSV bytes",
+      "observed_error": "Invalid UTF-8 CSV bytes"
+    },
+    {
+      "id": "F03_invalid_utf8_stage",
+      "passed": true,
+      "expected_error": "Invalid UTF-8 CSV bytes",
+      "observed_error": "Invalid UTF-8 CSV bytes"
+    },
+    {
+      "id": "F03_nul_rejected",
+      "passed": true,
+      "expected_error": "Invalid UTF-8 CSV: embedded NUL",
+      "observed_error": "Invalid UTF-8 CSV: embedded NUL"
+    },
+    {
+      "id": "F01_dates_correct_both_turns",
+      "passed": true,
+      "expected_error": null,
+      "observed_error": null
+    },
+    {
+      "id": "F01_wrong_date_t1",
+      "passed": true,
+      "expected_error": "EA11 date differs from configured turn date",
+      "observed_error": "EA11 date differs from configured turn date"
+    },
+    {
+      "id": "F01_wrong_date_t2",
+      "passed": true,
+      "expected_error": "EA11 date differs from configured turn date",
+      "observed_error": "EA11 date differs from configured turn date"
+    },
+    {
+      "id": "F01_invalid_config_date",
+      "passed": true,
+      "expected_error": "Invalid configured election dates",
+      "observed_error": "Invalid configured election dates"
+    },
+    {
+      "id": "F01_missing_config_date",
+      "passed": true,
+      "expected_error": "Invalid configured election dates",
+      "observed_error": "Invalid configured election dates"
+    },
+    {
+      "id": "F01_2026_calendar_conditional_not_occurrence",
+      "passed": true,
+      "expected_error": null,
+      "observed_error": null
+    },
+    {
+      "id": "F02_declared_fixture_scope_receipt",
+      "passed": true,
+      "expected_error": null,
+      "observed_error": null
+    },
+    {
+      "id": "F02_one_section_reference_not_national",
+      "passed": true,
+      "expected_error": null,
+      "observed_error": null
+    },
+    {
+      "id": "F02_missing_reference_uf",
+      "passed": true,
+      "expected_error": "EA16 missing configured UFs",
+      "observed_error": "EA16 missing configured UFs"
+    },
+    {
+      "id": "F02_extra_reference_uf",
+      "passed": true,
+      "expected_error": "EA16 unexpected UFs",
+      "observed_error": "EA16 unexpected UFs"
+    },
+    {
+      "id": "F02_missing_votes_per_uf",
+      "passed": true,
+      "expected_error": null,
+      "observed_error": null
+    },
+    {
+      "id": "F02_extra_vote_uf",
+      "passed": true,
+      "expected_error": "Unexpected section outside independent EA16",
+      "observed_error": "Unexpected section outside independent EA16"
+    },
+    {
+      "id": "F02_receipt_scope_tamper_rejected",
+      "passed": true,
+      "expected_error": null,
+      "observed_error": null
+    },
+    {
+      "id": "locale_unchanged",
+      "passed": true,
+      "expected_error": null,
+      "observed_error": null
+    }
+  ]
+}

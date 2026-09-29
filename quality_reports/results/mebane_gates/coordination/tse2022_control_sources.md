@@ -49,7 +49,9 @@ publicada em 03/10/2022, com esta notícia de totalização completa de 04/10/20
 Os metadados acima foram abertos pelo navegador de pesquisa. O fetch de ZIP por
 esse mecanismo não expôs o conteúdo (tipo ZIP não suportado). A consulta HEAD
 via curl, com permissão de rede escalada, retornou HTTP 403 nos dois recursos;
-nenhum ZIP foi arquivado ou analisado. Não é falta de autorização do usuário.
+nenhum ZIP foi arquivado nessa tentativa. Não era falta de autorização do
+usuário. O download posterior pelo navegador foi bem-sucedido, conforme o
+registro abaixo; o 403 não é mais um impedimento de aquisição dessas fontes.
 
 Tentativas posteriores de arquivar o HTML das três notícias acima por
 `curl -fL --max-time 30`, com rede escalada, também retornaram HTTP 403
@@ -72,3 +74,48 @@ exclusões, conferir datas/versões e resolver diferenças. Os controles por UF
 ainda precisam de fonte adequada; T1 e T2 acima são referências documentais
 nacionais, não substituem a reconciliação dos arquivos oficiais de apuração.
 Preservar explicitamente lacunas de acesso.
+
+## Aquisição posterior pelo navegador
+
+Em 28/09/2026, entre 23:19 e 23:22 (America/Sao_Paulo), o coordenador abriu os
+recursos no navegador integrado do Codex e acionou o link publicado
+"Ir para recurso" via `locator.downloadMedia`. Não houve CAPTCHA, login,
+aceitação de termos ou alteração de segurança. Os downloads retornaram caminhos
+em `~/Downloads`; cópias sem sobrescrita (`cp -n`) foram preservadas nesta pasta.
+Nenhum dado do projeto foi enviado ao TSE. A aquisição não é ainda validação
+semântica dos totais nem aprovação de G1.
+
+| Arquivo local nesta pasta | Bytes | SHA-256 |
+|---|---:|---|
+| `Historico_Totalizacao_Presidente_BR_1T_2022.zip` | 1625754 | `55961aa1ecc87d0fd9c02730864f1b69a9f2eb3456327542dfc507217cd74a05` |
+| `Historico_Totalizacao_Presidente_BR_2T_2022.zip` | 825276 | `1f12128fbcfacab755e0e83d9c0a350ed99ae68ea3d024aaa7bc58fe0c1dda3c` |
+| `detalhe_votacao_munzona_2022.zip` | 4409303 | `c4d5b6eb679e0c22ecc2842052d3472324101b0632b9c0820b4c18206c25f930` |
+| `votacao_candidato_munzona_2022.zip` | 659610562 | `319bd123d933e04c23c5920abe8455f48890b561e6dad98c1003cfd461ab8fd1` |
+
+Os dois históricos usam os links registrados acima. Os recursos adicionais são:
+
+- [Detalhe da apuração por município e zona](https://dadosabertos.tse.jus.br/dataset/resultados-2022/resource/0e59001a-3c9f-4a0d-a8db-7befdba22330),
+  download `https://cdn.tse.jus.br/estatistica/sead/odsele/detalhe_votacao_munzona/detalhe_votacao_munzona_2022.zip`.
+- [Votação nominal por município e zona](https://dadosabertos.tse.jus.br/dataset/resultados-2022/resource/40fdcf49-256a-4c81-87cf-711545bd1528),
+  download `https://cdn.tse.jus.br/estatistica/sead/odsele/votacao_candidato_munzona/votacao_candidato_munzona_2022.zip`.
+
+Ambos informam atualização frequente, inclusive por decisões judiciais; os
+metadados da página datam de 05/11/2022, mas os CSVs do ZIP são gerados em
+28/09/2026. Essa distinção é obrigatória na reconciliação com os brutos antigos.
+O arquivo de detalhe `_BR.csv` exibe `DT_GERACAO=28/09/2026` e
+`HH_GERACAO=04:18:05` na primeira linha inspecionada. Datas dos membros ZIP
+não substituem o campo de geração nem a data da última totalização.
+
+Os quatro ZIPs passaram `unzip -t` (todos os membros, zero erros), inclusive
+o arquivo nominal completo, que terminou com exit 0. Os quatro hashes foram
+calculados com `shasum -a 256`; os tamanhos, com `stat -f '%N %z'`.
+
+Para processamento, evitar extrair tudo: o ZIP nominal contém cerca de 8,64 GB
+descompactados e duplica abrangências. Seu membro
+`votacao_candidato_munzona_2022_BR.csv` tem 38.289.147 bytes; o correspondente
+do detalhe, `detalhe_votacao_munzona_2022_BR.csv`, tem 3.451.986 bytes. G1 deve
+verificar a abrangência e cargo de cada membro, especialmente `BR` versus
+`BRASIL`, em vez de concatená-los e duplicar votos. A política de Git exclui
+somente os quatro ZIPs grandes desta aquisição; permanecem disponíveis
+localmente e vinculados por hash. Não substituir os dados dos autores por
+esses snapshots sem tornar explícita a mudança de versão.

@@ -1,0 +1,219 @@
+{
+  "started_at_utc": "2026-09-29T04:36:56.935233+00:00",
+  "finished_at_utc": "2026-09-29T04:37:09.344721+00:00",
+  "commands": [
+    {
+      "id": "integrity_before",
+      "command": [
+        "/opt/homebrew/opt/python@3.13/bin/python3.13",
+        "-B",
+        "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/G7/round2/review/audit_inputs.py",
+        "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/G7/round2/review/run01/integrity_before.json"
+      ],
+      "LC_ALL": "C.UTF-8",
+      "exit_code": 0,
+      "wall_seconds": 0.36301000000094064,
+      "log": "quality_reports/results/mebane_gates/G7/round2/review/run01/integrity_before.log"
+    },
+    {
+      "id": "locales",
+      "command": [
+        "locale",
+        "-a"
+      ],
+      "LC_ALL": "C.UTF-8",
+      "exit_code": 0,
+      "wall_seconds": 0.00551545899361372,
+      "log": "quality_reports/results/mebane_gates/G7/round2/review/run01/locales.log"
+    },
+    {
+      "id": "C_independent",
+      "command": [
+        "Rscript",
+        "--vanilla",
+        "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/G7/round2/review/probes.R",
+        "quality_reports/results/mebane_gates/G7/round2/review/run01/C_independent"
+      ],
+      "LC_ALL": "C",
+      "exit_code": 0,
+      "wall_seconds": 0.7146587499883026,
+      "log": "quality_reports/results/mebane_gates/G7/round2/review/run01/C_independent.log"
+    },
+    {
+      "id": "C_legacy",
+      "command": [
+        "Rscript",
+        "--vanilla",
+        "tests/mebane/2026/run_tests.R",
+        "quality_reports/results/mebane_gates/G7/round2/review/run01/C_legacy"
+      ],
+      "LC_ALL": "C",
+      "exit_code": 0,
+      "wall_seconds": 0.30213799999910407,
+      "log": "quality_reports/results/mebane_gates/G7/round2/review/run01/C_legacy.log"
+    },
+    {
+      "id": "C_repairs",
+      "command": [
+        "Rscript",
+        "--vanilla",
+        "tests/mebane/2026/test_round2.R",
+        "quality_reports/results/mebane_gates/G7/round2/review/run01/C_repairs"
+      ],
+      "LC_ALL": "C",
+      "exit_code": 0,
+      "wall_seconds": 0.25397654197877273,
+      "log": "quality_reports/results/mebane_gates/G7/round2/review/run01/C_repairs.log"
+    },
+    {
+      "id": "UTF8_independent",
+      "command": [
+        "Rscript",
+        "--vanilla",
+        "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/G7/round2/review/probes.R",
+        "quality_reports/results/mebane_gates/G7/round2/review/run01/UTF8_independent"
+      ],
+      "LC_ALL": "pt_BR.UTF-8",
+      "exit_code": 0,
+      "wall_seconds": 0.761269499984337,
+      "log": "quality_reports/results/mebane_gates/G7/round2/review/run01/UTF8_independent.log"
+    },
+    {
+      "id": "UTF8_legacy",
+      "command": [
+        "Rscript",
+        "--vanilla",
+        "tests/mebane/2026/run_tests.R",
+        "quality_reports/results/mebane_gates/G7/round2/review/run01/UTF8_legacy"
+      ],
+      "LC_ALL": "pt_BR.UTF-8",
+      "exit_code": 0,
+      "wall_seconds": 0.30367695799213834,
+      "log": "quality_reports/results/mebane_gates/G7/round2/review/run01/UTF8_legacy.log"
+    },
+    {
+      "id": "UTF8_repairs",
+      "command": [
+        "Rscript",
+        "--vanilla",
+        "tests/mebane/2026/test_round2.R",
+        "quality_reports/results/mebane_gates/G7/round2/review/run01/UTF8_repairs"
+      ],
+      "LC_ALL": "pt_BR.UTF-8",
+      "exit_code": 0,
+      "wall_seconds": 0.25536870799260214,
+      "log": "quality_reports/results/mebane_gates/G7/round2/review/run01/UTF8_repairs.log"
+    },
+    {
+      "id": "G1_fixtures",
+      "command": [
+        "Rscript",
+        "--vanilla",
+        "tests/mebane/data/test_g1.R"
+      ],
+      "LC_ALL": "C",
+      "exit_code": 0,
+      "wall_seconds": 0.2263752500002738,
+      "log": "quality_reports/results/mebane_gates/G7/round2/review/run01/G1_fixtures.log"
+    },
+    {
+      "id": "DAG_checker",
+      "command": [
+        "/opt/homebrew/opt/python@3.13/bin/python3.13",
+        "-B",
+        "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/G7/round2/review/trace_checker.py",
+        "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/G7/round2/review/run01/checker_reads.json"
+      ],
+      "LC_ALL": "C.UTF-8",
+      "exit_code": 0,
+      "wall_seconds": 8.728909750003368,
+      "log": "quality_reports/results/mebane_gates/G7/round2/review/run01/DAG_checker.log"
+    },
+    {
+      "id": "tse-ea11-arquivo-de-configuracao-de-eleicoes",
+      "command": [
+        "pdftotext",
+        "-layout",
+        "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/G7/round2/previous_sources/quality_reports/results/mebane_gates/coordination/tse-ea11-arquivo-de-configuracao-de-eleicoes.pdf",
+        "-"
+      ],
+      "LC_ALL": "C.UTF-8",
+      "exit_code": 0,
+      "wall_seconds": 0.015193083992926404,
+      "log": "quality_reports/results/mebane_gates/G7/round2/review/run01/tse-ea11-arquivo-de-configuracao-de-eleicoes.log"
+    },
+    {
+      "id": "tse-ea16-arquivo-de-configuracao-de-secoes-eleitorais",
+      "command": [
+        "pdftotext",
+        "-layout",
+        "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/G7/round2/previous_sources/quality_reports/results/mebane_gates/coordination/tse-ea16-arquivo-de-configuracao-de-secoes-eleitorais.pdf",
+        "-"
+      ],
+      "LC_ALL": "C.UTF-8",
+      "exit_code": 0,
+      "wall_seconds": 0.01217520801583305,
+      "log": "quality_reports/results/mebane_gates/G7/round2/review/run01/tse-ea16-arquivo-de-configuracao-de-secoes-eleitorais.log"
+    },
+    {
+      "id": "tse-ea18-arquivo-auxiliar-de-secao",
+      "command": [
+        "pdftotext",
+        "-layout",
+        "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/G7/round2/previous_sources/quality_reports/results/mebane_gates/coordination/tse-ea18-arquivo-auxiliar-de-secao.pdf",
+        "-"
+      ],
+      "LC_ALL": "C.UTF-8",
+      "exit_code": 0,
+      "wall_seconds": 0.011411416984628886,
+      "log": "quality_reports/results/mebane_gates/G7/round2/review/run01/tse-ea18-arquivo-auxiliar-de-secao.log"
+    },
+    {
+      "id": "tse-ea20-arquivo-de-resultado-unificado",
+      "command": [
+        "pdftotext",
+        "-layout",
+        "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/G7/round2/previous_sources/quality_reports/results/mebane_gates/coordination/tse-ea20-arquivo-de-resultado-unificado.pdf",
+        "-"
+      ],
+      "LC_ALL": "C.UTF-8",
+      "exit_code": 0,
+      "wall_seconds": 0.0319297079986427,
+      "log": "quality_reports/results/mebane_gates/G7/round2/review/run01/tse-ea20-arquivo-de-resultado-unificado.log"
+    },
+    {
+      "id": "tse-instrucoes-para-download-dos-arquivos-da-divulgacao-2026",
+      "command": [
+        "pdftotext",
+        "-layout",
+        "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/G7/round2/previous_sources/quality_reports/results/mebane_gates/coordination/tse-instrucoes-para-download-dos-arquivos-da-divulgacao-2026.pdf",
+        "-"
+      ],
+      "LC_ALL": "C.UTF-8",
+      "exit_code": 0,
+      "wall_seconds": 0.02543683399562724,
+      "log": "quality_reports/results/mebane_gates/G7/round2/review/run01/tse-instrucoes-para-download-dos-arquivos-da-divulgacao-2026.log"
+    },
+    {
+      "id": "integrity_after",
+      "command": [
+        "/opt/homebrew/opt/python@3.13/bin/python3.13",
+        "-B",
+        "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/G7/round2/review/audit_inputs.py",
+        "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/G7/round2/review/run01/integrity_after.json"
+      ],
+      "LC_ALL": "C.UTF-8",
+      "exit_code": 0,
+      "wall_seconds": 0.39819508299115114,
+      "log": "quality_reports/results/mebane_gates/G7/round2/review/run01/integrity_after.log"
+    }
+  ],
+  "selected_utf8_locale": "pt_BR.UTF-8",
+  "ledger_unchanged": true,
+  "status": "PASS",
+  "script_hashes": {
+    "run_qa.py": "0b55f5ebf4d91ec2f84b8baf8d8763f85f157c58a2e6a8ae4e9f51d18cf92e95",
+    "trace_checker.py": "dfcbd0734c3a864b8ce1d0f242f9b2cc17df5d9de5984d73f646d977df79be7d",
+    "audit_inputs.py": "20ad43fb1c0269fc3808cde2378ed60035d651d5c002c7899358a92da80949ea"
+  }
+}

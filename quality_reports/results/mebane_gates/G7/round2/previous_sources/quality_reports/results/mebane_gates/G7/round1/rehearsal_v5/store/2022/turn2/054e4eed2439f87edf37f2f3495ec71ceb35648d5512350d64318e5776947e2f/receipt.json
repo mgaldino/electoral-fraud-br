@@ -1,0 +1,34 @@
+{
+  "year": 2022,
+  "turn": 2,
+  "version": "054e4eed2439f87edf37f2f3495ec71ceb35648d5512350d64318e5776947e2f",
+  "policy_sha256": "af27370a4649726b90ed0bfe562383600fdad912cecd03a8e24b1ad2323f4094",
+  "input_hashes": {
+    "votes": "47fc94706f5f31f85b57954a3b1560d4e587273a3affb26c33f19a7acfc09232",
+    "ea11": "91d3e814b851b9b86cdbc1f6d7569a674f6e2193205998b38444a9215a23aa5d",
+    "ea16_1": "ca54dee19aa19c8a9919258a003393514e8848008370d7eebc8dc79d895ce0d2",
+    "controls": "58904ecb6cf16f82e9083352e45934783e683a00fc363cd89c27fa2694fc709f",
+    "config": "1f8eddd0835b61a9bfacebdf2fe9b03239b7adcf5d8ed605c12d79aa8420c981"
+  },
+  "provenance": "fixture",
+  "phase": "s",
+  "source_url": "",
+  "validation": {
+    "complete": true,
+    "expected_sections": 2,
+    "observed_sections": 2,
+    "missing_sections": [],
+    "totals": {
+      "aptos": 18,
+      "turnout": 11,
+      "candidate_votes": 7,
+      "blank": 2,
+      "null": 2
+    },
+    "controls_pass": true,
+    "status": "staging_validated"
+  },
+  "data_ready": false,
+  "inference_ready": false,
+  "release_condition": "independent official-source and coverage attestation; G6 pass for inference"
+}

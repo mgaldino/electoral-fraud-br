@@ -1,0 +1,12 @@
+During startup - Warning messages:
+1: Setting LC_CTYPE failed, using "C" 
+2: Setting LC_COLLATE failed, using "C" 
+3: Setting LC_TIME failed, using "C" 
+4: Setting LC_MESSAGES failed, using "C" 
+5: Setting LC_MONETARY failed, using "C" 
+independent raw/official controls PASS; 944150 sections; 5380736 vote rows; 8 control groups
+/Volumes/Temp/tmp/RtmpU9slMA/R.INSTALLc6064a8928fb/arrow/tools/cpp/src/arrow/util/cpu_info.cc:239: IOError: sysctlbyname failed for 'hw.l1dcachesize'. Detail: [errno 1] Operation not permitted
+/Volumes/Temp/tmp/RtmpU9slMA/R.INSTALLc6064a8928fb/arrow/tools/cpp/src/arrow/util/cpu_info.cc:239: IOError: sysctlbyname failed for 'hw.l2cachesize'. Detail: [errno 1] Operation not permitted
+/Volumes/Temp/tmp/RtmpU9slMA/R.INSTALLc6064a8928fb/arrow/tools/cpp/src/arrow/util/cpu_info.cc:239: IOError: sysctlbyname failed for 'hw.l3cachesize'. Detail: [errno 1] Operation not permitted
+/Volumes/Temp/tmp/RtmpU9slMA/R.INSTALLc6064a8928fb/arrow/tools/cpp/src/arrow/util/cpu_info.cc:239: IOError: sysctlbyname failed for 'hw.optional.neon'. Detail: [errno 1] Operation not permitted
+Identity anchors, independent N/a/w reconstruction, all prior parquet columns, and four-way byte replay PASS.

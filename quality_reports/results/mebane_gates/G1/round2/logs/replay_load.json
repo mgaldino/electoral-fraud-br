@@ -1,0 +1,16 @@
+{
+  "command": [
+    "Rscript",
+    "--vanilla",
+    "R/01_load_tse.R",
+    "config/mebane/2022.json",
+    "quality_reports/results/mebane_gates/G1/round2/outputs/2022_replay"
+  ],
+  "command_display": "Rscript --vanilla R/01_load_tse.R config/mebane/2022.json quality_reports/results/mebane_gates/G1/round2/outputs/2022_replay",
+  "scope": "Second complete load with identical round2 inputs and configuration",
+  "started_at_utc": "2026-09-29T02:58:07.750096+00:00",
+  "ended_at_utc": "2026-09-29T02:58:17.793804+00:00",
+  "elapsed_seconds": 10.043768,
+  "exit_code": 0,
+  "output": "quality_reports/results/mebane_gates/G1/round2/logs/replay_load.txt"
+}

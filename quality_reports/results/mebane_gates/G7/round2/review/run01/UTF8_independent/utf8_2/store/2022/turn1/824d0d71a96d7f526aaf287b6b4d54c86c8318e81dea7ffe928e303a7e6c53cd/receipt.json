@@ -1,0 +1,70 @@
+{
+  "year": 2022,
+  "turn": 1,
+  "election_date": "02/10/2022",
+  "candidate": {
+    "code": 22,
+    "name": "JOSÉ DA CONCEIÇÃO"
+  },
+  "version": "824d0d71a96d7f526aaf287b6b4d54c86c8318e81dea7ffe928e303a7e6c53cd",
+  "policy_sha256": "c19be1f560e4f8498556554e41fe9f5ea90d14bc808df09a84919687e30c8fd3",
+  "input_hashes": {
+    "votes": "6c3c05a5da448d3f8424f46d66dd04dbcfbd86dd53950183929c05864325bea0",
+    "ea11": "46b17a247a69e95f84bd4662f3bdee8c0ce3bb06b07a5892f3e3f16e6fda348b",
+    "ea16_1": "cdd424d30291c897baa33d31252756dd7dd0c0921b039a8027bd6a909c218fc4",
+    "controls": "15adbdfc60b584cb7af905609e5a295c1f30cc0357e5b15a5b39f685197f0319",
+    "config": "a305601825fd0ccb5582cbb2e4da24cf35f236235e48f548674bc3a2f994e242"
+  },
+  "provenance": "fixture",
+  "phase": "s",
+  "source_url": "",
+  "validation": {
+    "reference_complete": true,
+    "national_coverage_attested": false,
+    "territorial_scope": {
+      "universe": "Independent synthetic reference, not national attestation",
+      "expected_ufs": [
+        "AM",
+        "SP"
+      ],
+      "reference_ufs": [
+        "AM",
+        "SP"
+      ],
+      "observed_ufs": [
+        "AM",
+        "SP"
+      ],
+      "coverage_basis": "supplied_EA16_principal_sections"
+    },
+    "by_uf": [
+      {
+        "uf": "AM",
+        "reference_sections": 2,
+        "observed_sections": 2,
+        "missing_sections": 0
+      },
+      {
+        "uf": "SP",
+        "reference_sections": 2,
+        "observed_sections": 2,
+        "missing_sections": 0
+      }
+    ],
+    "expected_sections": 4,
+    "observed_sections": 4,
+    "missing_sections": [],
+    "totals": {
+      "aptos": 48,
+      "turnout": 28,
+      "candidate_votes": 12,
+      "blank": 4,
+      "null": 4
+    },
+    "controls_pass": true,
+    "status": "staging_validated"
+  },
+  "data_ready": false,
+  "inference_ready": false,
+  "release_condition": "independent official-source and coverage attestation; G6 pass for inference"
+}

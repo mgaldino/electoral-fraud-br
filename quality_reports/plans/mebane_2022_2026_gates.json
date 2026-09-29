@@ -51,20 +51,27 @@
       "goal": "Entregar inventário verificável de dados, documentos, código, fits e ambiente, distinguindo execução histórica de validação atual e tornando possível reproduzir o baseline.",
       "depends_on": [],
       "external_prerequisites": [],
-      "status": "under_review",
+      "status": "pass",
       "executor": {"role": "SOL-BASELINE", "model": "gpt-6-sol", "effort": "high"},
       "reviewer": {"role": "QA-BASELINE", "model": "gpt-6-sol", "effort": "high", "independent": true},
       "write_scope": ["quality_reports/results/mebane_gates/G0/", "renv.lock", "README.md", "CLAUDE.md"],
       "todos": [
-        {"id": "G0-T1", "task": "Inventariar Git, arquivos brutos/processados, fits, logs e PDFs; registrar integridade, hashes e proveniência sem alterar os originais.", "status": "in_progress", "evidence": []},
-        {"id": "G0-T2", "task": "Extrair versões efetivas de R, pacotes, JAGS e CmdStan e o commit de eforensics; reconciliar renv.lock com os componentes usados sem atualizar o ambiente silenciosamente.", "status": "in_progress", "evidence": []},
-        {"id": "G0-T3", "task": "Reconciliar README/CLAUDE/handoffs com a evidência: registrar falhas JAGS/Stan, a aproximação Stan e a ausência de resultado nacional, mantendo os logs históricos.", "status": "in_progress", "evidence": []},
-        {"id": "G0-T4", "task": "Fixar fontes bibliográficas e versão exata do código de referência; testar carregamento não destrutivo dos artefatos necessários e documentar faltantes.", "status": "in_progress", "evidence": []}
+        {"id": "G0-T1", "task": "Inventariar Git, arquivos brutos/processados, fits, logs e PDFs; registrar integridade, hashes e proveniência sem alterar os originais.", "status": "done", "evidence": [{"path": "quality_reports/results/mebane_gates/G0/round1/inventory.json", "basis": "executed", "locator": "inventário base e integridade ZIP/PDF"}, {"path": "quality_reports/results/mebane_gates/G0/round2/inventory_additions.json", "basis": "executed", "locator": "manuscrito e quatro tabelas"}, {"path": "quality_reports/results/mebane_gates/G0/round2/final_state_map.json", "basis": "executed", "locator": "37 snapshots"}]},
+        {"id": "G0-T2", "task": "Extrair versões efetivas de R, pacotes, JAGS e CmdStan e o commit de eforensics; reconciliar renv.lock com os componentes usados sem atualizar o ambiente silenciosamente.", "status": "done", "evidence": [{"path": "quality_reports/results/mebane_gates/G0/round1/loads_environment.json", "basis": "executed", "locator": "versões e RemoteSha"}, {"path": "quality_reports/results/mebane_gates/G0/round2/lock_verification.json", "basis": "executed", "locator": "174 preservados, 180 finais e versões"}, {"path": "quality_reports/results/mebane_gates/G0/round2/final_state/renv.lock", "basis": "inspected", "locator": "lock reconciliado"}]},
+        {"id": "G0-T3", "task": "Reconciliar README/CLAUDE/handoffs com a evidência: registrar falhas JAGS/Stan, a aproximação Stan e a ausência de resultado nacional, mantendo os logs históricos.", "status": "done", "evidence": [{"path": "quality_reports/results/mebane_gates/G0/round1/claims.md", "basis": "inspected", "locator": "alegações versus logs/cadeias"}, {"path": "quality_reports/results/mebane_gates/G0/round1/loads_environment.json", "basis": "executed", "locator": "diagnósticos clássicos do fresh_v2"}, {"path": "quality_reports/results/mebane_gates/G0/round2/final_state/README.md", "basis": "inspected", "locator": "limites de aquisição e reprodução"}]},
+        {"id": "G0-T4", "task": "Fixar fontes bibliográficas e versão exata do código de referência; testar carregamento não destrutivo dos artefatos necessários e documentar faltantes.", "status": "done", "evidence": [{"path": "quality_reports/results/mebane_gates/G0/round1/sources.md", "basis": "inspected", "locator": "versões, URLs e hashes"}, {"path": "quality_reports/results/mebane_gates/G0/round1/eforensics_commit_api.json", "basis": "executed", "locator": "commit 3017de5"}, {"path": "quality_reports/results/mebane_gates/G0/round1/loads_environment.json", "basis": "executed", "locator": "loads e igualdade do qbl"}]}
       ],
       "deliverables": ["Inventário e manifestos de fontes/ambiente", "Lockfile reconciliado", "Mapa de alegações históricas versus evidência"],
       "acceptance": ["Todo artefato usado nos próximos gates tem versão e proveniência identificáveis.", "Artefatos em download/incompletos não são tratados como fontes válidas.", "Restauração do ambiente é verificável com o material disponível; dependência ausente permanece explícita e impede alegar reprodução completa.", "QA recalcula hashes de uma amostra material, verifica o commit do pacote e carrega ao menos um fit e um conjunto de dados necessários."],
       "on_failure": "Corrigir inventário ou dependência faltante; preservar o estado existente. Trabalho documental independente pode continuar.",
-      "records": null
+      "records": {
+        "executor_id": "01a0eaba-2cec-74f3-bca0-8c27b736567e",
+        "reviewer_id": "01a0eace-749b-7490-994c-2cb3b39c9a26",
+        "run": "quality_reports/results/mebane_gates/G0/round2/run.json",
+        "candidate_manifest": "quality_reports/results/mebane_gates/G0/round2/candidate_manifest.json",
+        "review": "quality_reports/results/mebane_gates/G0/round2/review/review.json",
+        "adjudication": "quality_reports/results/mebane_gates/G0/round2/adjudication.json"
+      }
     },
     {
       "id": "G1",
@@ -72,21 +79,28 @@
       "goal": "Construir uma entrada parametrizada por ano, turno, cargo e candidato, reproduzindo os totais de 2022 e explicitando todas as regras de limpeza necessárias ao modelo.",
       "depends_on": ["G0"],
       "external_prerequisites": [],
-      "status": "queued",
+      "status": "pass",
       "executor": {"role": "SOL-DADOS", "model": "gpt-6-sol", "effort": "high"},
       "reviewer": {"role": "QA-DADOS", "model": "gpt-6-sol", "effort": "xhigh", "independent": true},
       "write_scope": ["R/01_load_tse.R", "R/02_build_vars.R", "R/lib/mebane_data.R", "config/mebane/", "tests/mebane/data/", "quality_reports/results/mebane_gates/G1/"],
       "todos": [
-        {"id": "G1-T1", "task": "Separar configuração de ano/turno/cargo/candidato dos scripts e do espelho Nexo específico de 2022; criar saída versionada por execução.", "status": "todo", "evidence": []},
-        {"id": "G1-T2", "task": "Validar tipos, encoding, chaves com ano/turno, duplicatas, cardinalidades dos joins, ausência versus voto zero e elegibilidade de candidato por turno; rejeitar duplicata divergente sem deduplicar pela primeira ocorrência.", "status": "todo", "evidence": []},
-        {"id": "G1-T3", "task": "Reconciliar aptos, comparecimento, abstenções, brancos, nulos e votos nominais com totais oficiais; testar limites N/a/w e reavaliar as 99 exclusões por votos nominais zero para o alvo de contagens.", "status": "todo", "evidence": []},
-        {"id": "G1-T4", "task": "Fixar regras para exterior, seções pequenas, líder nacional por turno, coligações/candidaturas e revisões do TSE; registrar perdas por regra e denominador.", "status": "todo", "evidence": []},
-        {"id": "G1-T5", "task": "Criar fixtures adversariais e reproduzir 2022 de ponta a ponta com agregações independentes por UF e turno; bloquear totais inconsistentes em vez de corrigi-los silenciosamente.", "status": "todo", "evidence": []}
+        {"id": "G1-T1", "task": "Separar configuração de ano/turno/cargo/candidato dos scripts e do espelho Nexo específico de 2022; criar saída versionada por execução.", "status": "done", "evidence": [{"path": "config/mebane/2022.json", "basis": "executed", "locator": "configuração consumida nas execuções completas"}, {"path": "quality_reports/results/mebane_gates/G1/round2/outputs/2022_final/deterministic_replay.csv", "basis": "executed", "locator": "nove produtos centrais byte-idênticos"}]},
+        {"id": "G1-T2", "task": "Validar tipos, encoding, chaves com ano/turno, duplicatas, cardinalidades dos joins, ausência versus voto zero e elegibilidade de candidato por turno; rejeitar duplicata divergente sem deduplicar pela primeira ocorrência.", "status": "done", "evidence": [{"path": "R/lib/mebane_data.R", "basis": "executed", "locator": "identidade, schema, contagens, elegibilidade e controles"}, {"path": "quality_reports/results/mebane_gates/G1/round2/checks/repair_regressions.csv", "basis": "executed", "locator": "64 regressões"}, {"path": "quality_reports/results/mebane_gates/G1/round2/checks/identity_official_anchors.csv", "basis": "executed"}]},
+        {"id": "G1-T3", "task": "Reconciliar aptos, comparecimento, abstenções, brancos, nulos e votos nominais com totais oficiais; testar limites N/a/w e reavaliar as 99 exclusões por votos nominais zero para o alvo de contagens.", "status": "done", "evidence": [{"path": "quality_reports/results/mebane_gates/G1/round2/outputs/2022_final/official_history_reconciliation.csv", "basis": "executed"}, {"path": "quality_reports/results/mebane_gates/G1/round2/outputs/2022_final/official_munzona_uf_turn_reconciliation.csv", "basis": "executed"}, {"path": "quality_reports/results/mebane_gates/G1/round2/outputs/2022_final/rule_log.csv", "basis": "executed", "locator": "99 nominais zero retidos; 94 registros não instalados sinalizados"}]},
+        {"id": "G1-T4", "task": "Fixar regras para exterior, seções pequenas, líder nacional por turno, coligações/candidaturas e revisões do TSE; registrar perdas por regra e denominador.", "status": "done", "evidence": [{"path": "quality_reports/results/mebane_gates/G1/round2/implementation.md", "basis": "inspected", "locator": "invariância e limites"}, {"path": "quality_reports/results/mebane_gates/G1/round2/outputs/2022_final/candidate_coalition_metadata.csv", "basis": "executed"}, {"path": "quality_reports/results/mebane_gates/G1/round2/outputs/2022_final/rule_log.csv", "basis": "executed"}]},
+        {"id": "G1-T5", "task": "Criar fixtures adversariais e reproduzir 2022 de ponta a ponta com agregações independentes por UF e turno; bloquear totais inconsistentes em vez de corrigi-los silenciosamente.", "status": "done", "evidence": [{"path": "tests/mebane/data/test_round2_repairs.R", "basis": "executed"}, {"path": "quality_reports/results/mebane_gates/G1/round2/outputs/2022_final/independent_raw_uf_turn.csv", "basis": "executed"}, {"path": "quality_reports/results/mebane_gates/G1/round2/outputs/2022_final/official_munzona_candidate_uf_turn.csv", "basis": "executed"}, {"path": "quality_reports/results/mebane_gates/G1/round2/outputs/2022_final/deterministic_replay.csv", "basis": "executed"}]}
       ],
       "deliverables": ["Loader e configuração genéricos", "Contrato de dados e log de exclusões", "Testes e reconciliação nacional/UF/turno"],
       "acceptance": ["Uma execução com a mesma entrada e configuração produz os mesmos totais e chaves.", "Fixtures detectam duplicatas, zeros omitidos, missing, candidato/turno incorreto e mudança incompatível de schema.", "Revisor reproduz totais de controle por código independente, sem consumir apenas a tabela já agregada pelo executor.", "Nenhuma amostra do modelo depende de exclusão pensada somente para gráficos sem justificativa documentada."],
       "on_failure": "Suspender estimações que usam a base afetada e corrigir a transformação responsável.",
-      "records": null
+      "records": {
+        "executor_id": "01a0eaee-0164-7530-884d-adec564a8327",
+        "reviewer_id": "01a0eb01-0a01-7a10-b432-d1f2cdbd12f8",
+        "run": "quality_reports/results/mebane_gates/G1/round2/run.json",
+        "candidate_manifest": "quality_reports/results/mebane_gates/G1/round2/candidate_manifest.json",
+        "review": "quality_reports/results/mebane_gates/G1/round2/review/review.json",
+        "adjudication": "quality_reports/results/mebane_gates/G1/round2/adjudication.json"
+      }
     },
     {
       "id": "G2",
@@ -94,21 +108,28 @@
       "goal": "Estabelecer o alvo estatístico preciso, o que o código JAGS implementa e as diferenças do Stan, com equações, domínios, priors e estimandos verificáveis.",
       "depends_on": ["G0"],
       "external_prerequisites": [],
-      "status": "queued",
+      "status": "changes_requested",
       "executor": {"role": "METODO-PRINCIPAL", "model": "inherit", "effort": "xhigh"},
       "reviewer": {"role": "QA-MATEMATICA", "model": "inherit", "effort": "xhigh", "independent": true},
       "write_scope": ["appendices/mebane_model_contract.md", "tests/mebane/algebra/", "quality_reports/results/mebane_gates/G2/"],
       "todos": [
-        {"id": "G2-T1", "task": "Mapear artigo de 2022, discussão de 2023, qbl do commit fixado e Stan atual linha por linha, distinguindo paper, implementação e aproximação.", "status": "todo", "evidence": []},
-        {"id": "G2-T2", "task": "Derivar priors induzidas ordenadas, interceptos, efeitos geográficos e hierárquicos; conferir a parametrização JAGS de precisão e a distinção entre variância e desvio-padrão.", "status": "todo", "evidence": []},
-        {"id": "G2-T3", "task": "Verificar p.a e p.w, suporte físico e probabilístico, contagens binomiais latentes, condicionamentos, truncamentos e o efeito do clamp no Stan em casos de fronteira.", "status": "todo", "evidence": []},
-        {"id": "G2-T4", "task": "Definir votos manufactured/stolen, classes, totais conjuntos por draw e efeito contrafactual na margem; explicitar que a origem dos votos stolen pode exigir hipóteses adicionais ou limites de identificação parcial, pois não-leaders são agregados. Distinguir identificação, convergência e interpretação substantiva.", "status": "todo", "evidence": []},
-        {"id": "G2-T5", "task": "Derivar a marginalização exata em casos pequenos ou delimitar formalmente a aproximação e o custo; obter rederivação independente com contraexemplos.", "status": "todo", "evidence": []}
+        {"id": "G2-T1", "task": "Mapear artigo de 2022, discussão de 2023, qbl do commit fixado e Stan atual linha por linha, distinguindo paper, implementação e aproximação.", "status": "done", "evidence": [{"path": "appendices/mebane_model_contract.md", "basis": "inspected", "locator": "seções 1 e 8; snapshots P22/P23/J/S e mapa de blocos"}, {"path": "quality_reports/results/mebane_gates/G2/round1/review/review.json", "basis": "inspected", "locator": "coverage_confirmed de G2-T1"}]},
+        {"id": "G2-T2", "task": "Derivar priors induzidas ordenadas, interceptos, efeitos geográficos e hierárquicos; conferir a parametrização JAGS de precisão e a distinção entre variância e desvio-padrão.", "status": "done", "evidence": [{"path": "appendices/mebane_model_contract.md", "basis": "inspected", "locator": "seção 2; escolha da prior de produção ainda pendente"}, {"path": "quality_reports/results/mebane_gates/G2/round1/review/independent_checks.csv", "basis": "executed", "locator": "priors, Jacobiano, variância/SD e interceptos"}]},
+        {"id": "G2-T3", "task": "Verificar p.a e p.w, suporte físico e probabilístico, contagens binomiais latentes, condicionamentos, truncamentos e o efeito do clamp no Stan em casos de fronteira.", "status": "done", "evidence": [{"path": "appendices/mebane_model_contract.md", "basis": "inspected", "locator": "seções 3-5; sem certificar semântica runtime do JAGS"}, {"path": "quality_reports/results/mebane_gates/G2/round1/adjudication_checks.csv", "basis": "executed", "locator": "contraexemplos de suporte e substituição plug-in"}]},
+        {"id": "G2-T4", "task": "Definir votos manufactured/stolen, classes, totais conjuntos por draw e efeito contrafactual na margem; explicitar que a origem dos votos stolen pode exigir hipóteses adicionais ou limites de identificação parcial, pois não-leaders são agregados. Distinguir identificação, convergência e interpretação substantiva.", "status": "in_progress", "evidence": []},
+        {"id": "G2-T5", "task": "Derivar a marginalização exata em casos pequenos ou delimitar formalmente a aproximação e o custo; obter rederivação independente com contraexemplos.", "status": "done", "evidence": [{"path": "quality_reports/results/mebane_gates/G2/round1/review/review.json", "basis": "executed", "locator": "162 enumerações, 75 testes; independent_rederivation_completed"}, {"path": "quality_reports/results/mebane_gates/G2/round1/review/independent_metrics.csv", "basis": "executed", "locator": "erro máximo 4.44e-16; custo teórico, não benchmark"}]}
       ],
       "deliverables": ["Contrato matemático e tabela de diferenças", "Testes de identidades e fronteiras", "Definições de estimandos e limitações"],
       "acceptance": ["Cada equivalência afirmada tem derivação ou teste pertinente, e cada divergência permanece rotulada.", "O significado de Exp(5) e dos parâmetros de escala corresponde à expressão efetiva no código congelado.", "Suporte, contagens discretas, constantes e transformações das priors são auditados; concordância entre médias não prova equivalência.", "Revisor não participante rederiva as partes críticas e não deixa questão material UNRESOLVED."],
       "on_failure": "Reparar a derivação ou especificar a decisão substantiva necessária. Sol pode produzir testes auxiliares, mas não substituir a checagem matemática.",
-      "records": null
+      "records": {
+        "executor_id": "01a0eaee-01df-7773-bd63-d321db26a47c",
+        "reviewer_id": "01a0eb0d-15b5-7c51-8e6f-c5b5b93f6011",
+        "run": "quality_reports/results/mebane_gates/G2/round1/run.json",
+        "candidate_manifest": "quality_reports/results/mebane_gates/G2/round1/candidate_manifest.json",
+        "review": "quality_reports/results/mebane_gates/G2/round1/review/review.json",
+        "adjudication": "quality_reports/results/mebane_gates/G2/round1/adjudication.json"
+      }
     },
     {
       "id": "G3",
@@ -203,20 +224,27 @@
       "goal": "Deixar preparada e ensaiada a recepção de dados de cada turno de 2026, com validação, versões e execução parametrizada sem pressupor disponibilidade ou schema idêntico.",
       "depends_on": ["G1"],
       "external_prerequisites": [],
-      "status": "queued",
+      "status": "pass",
       "executor": {"role": "SOL-PRONTIDAO-2026", "model": "gpt-6-sol", "effort": "high"},
       "reviewer": {"role": "QA-PRONTIDAO-2026", "model": "gpt-6-sol", "effort": "xhigh", "independent": true},
       "write_scope": ["R/lib/mebane_2026_intake.R", "config/mebane/2026/", "tests/mebane/2026/", "quality_reports/results/mebane_gates/G7/"],
       "todos": [
-        {"id": "G7-T1", "task": "Configurar fontes oficiais, cargo, turnos e regras de seleção do candidato; registrar data da fonte sem adivinhar resultado eleitoral nem URL de arquivo ainda inexistente.", "status": "todo", "evidence": []},
-        {"id": "G7-T2", "task": "Ensaiar recepção, checksums, versionamento imutável, cobertura e validação com fixtures de 2022 e schemas deliberadamente alterados.", "status": "todo", "evidence": []},
-        {"id": "G7-T3", "task": "Testar revisões de arquivos, duplicação de downloads, dados parciais, ausência de segundo turno e conflito de códigos de candidatos; impedir mistura de saídas entre anos/turnos.", "status": "todo", "evidence": []},
-        {"id": "G7-T4", "task": "Entregar roteiro de recepção por turno e snapshot oficial, preservando registros anteriores. Testar G8 pass/G9 waiting_external, G8 pass/G9 inconclusive e G9 not_applicable apenas por não ocorrência oficial; explicitar liberação inferencial após G6 e o que depende dos dados reais.", "status": "todo", "evidence": []}
+        {"id": "G7-T1", "task": "Configurar fontes oficiais, cargo, turnos e regras de seleção do candidato; registrar data da fonte sem adivinhar resultado eleitoral nem URL de arquivo ainda inexistente.", "status": "done", "evidence": [{"path": "config/mebane/2026/intake.json", "basis": "executed", "locator": "datas e escopo declarados; candidatos null; T2 condicional"}, {"path": "quality_reports/results/mebane_gates/coordination/tse2026_source_preflight.md", "basis": "inspected", "locator": "fontes oficiais e calendário"}]},
+        {"id": "G7-T2", "task": "Ensaiar recepção, checksums, versionamento imutável, cobertura e validação com fixtures de 2022 e schemas deliberadamente alterados.", "status": "done", "evidence": [{"path": "quality_reports/results/mebane_gates/G7/round2/executions/final1/execution.json", "basis": "executed", "locator": "regressões em três ambientes"}, {"path": "quality_reports/results/mebane_gates/G7/round2/executions/final1/C_repairs/repair_results.json", "basis": "executed", "locator": "UTF-8, datas e escopo"}, {"path": "quality_reports/results/mebane_gates/G7/round2/executions/final1/UTF8_repairs/repair_results.json", "basis": "executed", "locator": "bytes e locale preservados"}]},
+        {"id": "G7-T3", "task": "Testar revisões de arquivos, duplicação de downloads, dados parciais, ausência de segundo turno e conflito de códigos de candidatos; impedir mistura de saídas entre anos/turnos.", "status": "done", "evidence": [{"path": "quality_reports/results/mebane_gates/G7/round2/recovery_map.json", "basis": "executed", "locator": "1094 cópias de recuperação"}, {"path": "quality_reports/results/mebane_gates/G7/round2/integrity_final.json", "basis": "executed", "locator": "round1 preservada; flags falsas"}, {"path": "quality_reports/results/mebane_gates/G7/round2/executions/final1/C_legacy/test_summary.json", "basis": "executed", "locator": "revisões, recibos, políticas, turnos e candidato"}]},
+        {"id": "G7-T4", "task": "Entregar roteiro de recepção por turno e snapshot oficial, preservando registros anteriores. Testar G8 pass/G9 waiting_external, G8 pass/G9 inconclusive e G9 not_applicable apenas por não ocorrência oficial; explicitar liberação inferencial após G6 e o que depende dos dados reais.", "status": "done", "evidence": [{"path": "quality_reports/results/mebane_gates/G7/round2/implementation.md", "basis": "inspected", "locator": "roteiro e limites"}, {"path": "quality_reports/results/mebane_gates/G7/round2/executions/final1/DAG_checker.log", "basis": "executed", "locator": "26 testes e dependência G6"}]}
       ],
       "deliverables": ["Configuração e intake 2026", "Fixtures e teste de ensaio", "Roteiro de execução por turno"],
       "acceptance": ["QA executa ensaio limpo e prova que revisões preservam a entrada anterior e não alteram 2022.", "Schema incompatível e cobertura incompleta geram falha identificável.", "Data-ready está separado de inference-ready: G7 não libera inferência sem G6.", "Segundo turno é condicional à ocorrência oficial e disponibilidade dos dados."],
       "on_failure": "Reparar intake ou validações; não bloquear o ramo metodológico independente.",
-      "records": null
+      "records": {
+        "executor_id": "01a0eb3a-6ea4-7f61-a66d-2805e495d1d0",
+        "reviewer_id": "01a0eb4a-fa6d-7463-9d5a-bad4dd08b3c0",
+        "run": "quality_reports/results/mebane_gates/G7/round2/run.json",
+        "candidate_manifest": "quality_reports/results/mebane_gates/G7/round2/candidate_manifest.json",
+        "review": "quality_reports/results/mebane_gates/G7/round2/review/review.json",
+        "adjudication": "quality_reports/results/mebane_gates/G7/round2/adjudication.json"
+      }
     },
     {
       "id": "G8",

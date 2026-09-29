@@ -1,0 +1,24 @@
+{
+  "gate_id": "G2",
+  "round": "round1",
+  "inspector_id": "01a0eaee-01df-7773-bd63-d321db26a47c",
+  "independent": false,
+  "status": "pass_implementer_visual_only",
+  "pdf_sha256": "6e55a3a5f3ebd88a4f47b353ba4bad99ed418379ac4698d490291979d5e126cf",
+  "source_sha256": {
+    "appendices/mebane_model_contract.md": "ec0046bd386d048aec4ef5652ad149f5d7276455a6bf6d662878ded30cc59567"
+  },
+  "pages": 13,
+  "inspection": [
+    "Inspected final contact sheets containing all 13 pages after final render.",
+    "Inspected final pages 6 and 12 at 1600px: probability equations and continued source-mapping table legible, no overlap or clipping.",
+    "Geometry check found zero characters outside safety bounds on all 13 pages; all text fits the intended horizontal margins after code wrapping repair.",
+    "Numbered equations, table caption, page numbers and Portuguese accents preserved. Text extraction confirms presence of all numbered equations.",
+    "Original P22 PDF page 8 and P23 PDF page 9 inspected visually to check scale wording and missing k in P23 equation 4d."
+  ],
+  "additional_render_commands": [
+    {"command": "pdftoppm -f 6 -l 6 -scale-to 1600 -png -singlefile quality_reports/results/mebane_gates/G2/round1/mebane_model_contract.pdf quality_reports/results/mebane_gates/G2/round1/rendered/detail-p6", "exit_code": 0},
+    {"command": "pdftoppm -f 12 -l 12 -scale-to 1600 -png -singlefile quality_reports/results/mebane_gates/G2/round1/mebane_model_contract.pdf quality_reports/results/mebane_gates/G2/round1/rendered/detail-p12", "exit_code": 0}
+  ],
+  "limitations": "This is implementer artifact/layout QA, not independent mathematical review, adjudication or gate approval."
+}

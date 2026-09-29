@@ -1,0 +1,1 @@
+PASS: five todos and three repair mappings with existing evidence paths; both adjudications preserved as distinct authorizations; independent review pending.

@@ -1,0 +1,19 @@
+{
+  "gate_id": "G5",
+  "round": "round1",
+  "contract_sha256": "7dae5f305de606a5d79988498dbe3da891762048ab9bebf217e22d02c85a7998",
+  "files": [
+    {
+      "path": "G5-input.txt",
+      "sha256": "3099b6c8cfec72b28f3150fc80c97025ae313d03dc9c72dc9a5556523b939456"
+    },
+    {
+      "path": "G5-output.txt",
+      "sha256": "b1aeaf4a9990b7d310bad67703fdfb2adf841ec746f041563432efcf256a1a0e"
+    },
+    {
+      "path": "G5-run.json",
+      "sha256": "51f676f70e22cbfccbc510759044f0385fac24660e1632f9334ac5d39d77fded"
+    }
+  ]
+}

@@ -1,0 +1,95 @@
+{
+  "schema_version": "1.0",
+  "adjudication_id": "mebane-G1:517c17c724cc:round2",
+  "gate_id": "G1",
+  "round": "round2",
+  "contract_sha256": "f985ab97469aa66755b977a09781b30608afa6e245896d9d9788b4461190975d",
+  "candidate_manifest_sha256": "517c17c724cca82a820519c476981d47c8892c7383dd2c3dded9373eba6d31e8",
+  "review_sha256": "727f6b234e3a580c329cc5e898018bb68c02063717c292b6d91e4fbe12d86941",
+  "status": "pass",
+  "unresolved_material_findings": 0,
+  "source": {
+    "reviewed_artifact": "quality_reports/results/mebane_gates/G1/round2/candidate_manifest.json",
+    "sha256": "517c17c724cca82a820519c476981d47c8892c7383dd2c3dded9373eba6d31e8",
+    "artifact_intact": true
+  },
+  "contract": {
+    "required": false,
+    "path": null,
+    "sha256": null,
+    "contract_id": null,
+    "artifact_sha256": null,
+    "status": null,
+    "stale": false
+  },
+  "contract_scope_note": "Revisão de código e dados, não de argumento de manuscrito. Contrato operacional G1 vinculado pelo hash canônico.",
+  "review_sources": [
+    {
+      "review_id": "QA-G1-R2",
+      "path": "quality_reports/results/mebane_gates/G1/round2/review/review.json",
+      "sha256": "727f6b234e3a580c329cc5e898018bb68c02063717c292b6d91e4fbe12d86941"
+    }
+  ],
+  "findings": [],
+  "resolved_prior_findings": [
+    {
+      "id": "G1-R1-QAD-F01",
+      "status": "CONFIRMED",
+      "resolved": true,
+      "source_review": "QA-G1-R1",
+      "resolution": "A identidade eleitoral esperada é fixada e validada separadamente em ambas as fontes. QA independente e cinco probes da coordenação confirmam rejeição correta de erros concordantes de código/data/tipo; referências oficiais conferidas pela QA.",
+      "evidence": [
+        "quality_reports/results/mebane_gates/G1/round2/adjudication_checks.csv",
+        "quality_reports/results/mebane_gates/G1/round2/review/adversarial_results.csv",
+        "quality_reports/results/mebane_gates/G1/round2/review/identity_anchors.csv"
+      ]
+    },
+    {
+      "id": "G1-R1-QAD-F02",
+      "status": "CONFIRMED",
+      "resolved": true,
+      "source_review": "QA-G1-R1",
+      "resolution": "Congelador passou a usar contrato estático com hash de bytes e canônico, sem ledger mutável. Código inspecionado pela coordenação e QA; 194 arquivos do candidato e 197 inputs/89 artefatos da QA conferidos. Fontes round1 preservados recuperáveis.",
+      "evidence": [
+        "quality_reports/results/mebane_gates/G1/round2/adjudication_integrity.json",
+        "quality_reports/results/mebane_gates/G1/round2/review/source_audit.md",
+        "quality_reports/results/mebane_gates/G1/round2/review/integrity_results.json"
+      ]
+    },
+    {
+      "id": "G1-R1-COORD-F03",
+      "status": "CONFIRMED",
+      "resolved": true,
+      "source_review": "COORD-G1-R1",
+      "resolution": "Todos os controles de candidatos declarados são verificados. A contraprova original da coordenação agora rejeita o controle 999 para candidato12 com erro específico; QA verificou outros candidatos, formas inválidas, duplicação e elegibilidade.",
+      "evidence": [
+        "quality_reports/results/mebane_gates/G1/round2/adjudication_checks.csv",
+        "quality_reports/results/mebane_gates/G1/round2/review/adversarial_results.csv"
+      ]
+    }
+  ],
+  "summary": {
+    "total": 0,
+    "confirmed": 0,
+    "partial": 0,
+    "refuted": 0,
+    "unresolved": 0,
+    "held_decisions": 0
+  },
+  "summary_note": "Nenhum novo finding na round2. Três findings anteriores permanecem CONFIRMED, com reparo verificado, sem reclassificação como REFUTED.",
+  "adjudication": {
+    "verdict": "NO_CONFIRMED_DEFECTS",
+    "checked_at": "2026-09-29T03:32:57+00:00",
+    "reasons": [
+      "As três falhas materiais foram reparadas e independentemente verificadas; não há achado material vigente.",
+      "A coordenação leu o parecer e o código alterado, reexecutou cinco probes próprios e verificou os hashes do candidato e da QA.",
+      "A QA reproduziu controles oficiais e brutos, nove produtos byte-idênticos e as 70 colunas anteriores invariantes. Todos G1-T1 a G1-T5 cobertos.",
+      "Aprovação restrita ao contrato de dados e pipeline versionado de 2022. Não autentica aquisição externa dos autores nem constitui validação inferencial. G7 pode iniciar; G3/G4 dependem das demais aprovações."
+    ]
+  },
+  "limits": [
+    "Os 99 casos de nominais zero foram preservados; 94 registros de seções não instaladas ficam presentes e sinalizados como não elegíveis ao modelo.",
+    "Igualdade com controles oficiais foi demonstrada nos agregados e identidades testados, não em todos os campos de snapshots gerados em datas distintas.",
+    "Não houve instalação, MCMC ou alteração de estimando nesta rodada."
+  ]
+}

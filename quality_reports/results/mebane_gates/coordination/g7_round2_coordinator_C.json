@@ -1,0 +1,48 @@
+{
+  "locale": "C",
+  "code_sha256": "1d76e84be45a0ef65bda342e4c1efb42c0b8692590fe354b9edd0803ee9daf30",
+  "script_sha256": "9560adde8ba5f7d292baa17a59fbab7b47df3bf4992d95a919e2bbc06604de8a",
+  "tests": [
+    {
+      "case": "ascii_control",
+      "passed": true,
+      "detail": {}
+    },
+    {
+      "case": "utf8_exact_end_to_end",
+      "passed": true,
+      "detail": {}
+    },
+    {
+      "case": "invalid_utf8_rejected",
+      "passed": true,
+      "detail": "Invalid UTF-8 CSV bytes"
+    },
+    {
+      "case": "exact_date_turn1",
+      "passed": true,
+      "detail": "EA11 date differs from configured turn date"
+    },
+    {
+      "case": "exact_date_turn2",
+      "passed": true,
+      "detail": "EA11 date differs from configured turn date"
+    },
+    {
+      "case": "missing_configured_uf",
+      "passed": true,
+      "detail": "EA16 missing configured UFs"
+    },
+    {
+      "case": "unexpected_uf",
+      "passed": true,
+      "detail": "EA16 unexpected UFs"
+    },
+    {
+      "case": "reference_not_national_scope",
+      "passed": true,
+      "detail": {}
+    }
+  ],
+  "all_passed": true
+}

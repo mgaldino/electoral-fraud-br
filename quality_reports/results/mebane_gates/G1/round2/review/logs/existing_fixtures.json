@@ -1,0 +1,13 @@
+{
+  "command": [
+    "Rscript",
+    "--vanilla",
+    "tests/mebane/data/test_g1.R"
+  ],
+  "command_display": "Rscript --vanilla tests/mebane/data/test_g1.R",
+  "started_at_utc": "2026-09-29T03:20:48.205408+00:00",
+  "ended_at_utc": "2026-09-29T03:20:48.467336+00:00",
+  "elapsed_seconds": 0.262,
+  "exit_code": 0,
+  "output": "quality_reports/results/mebane_gates/G1/round2/review/logs/existing_fixtures.txt"
+}

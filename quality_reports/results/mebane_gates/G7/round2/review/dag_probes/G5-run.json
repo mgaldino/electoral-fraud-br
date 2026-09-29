@@ -1,0 +1,23 @@
+{
+  "gate_id": "G5",
+  "round": "round1",
+  "contract_sha256": "7dae5f305de606a5d79988498dbe3da891762048ab9bebf217e22d02c85a7998",
+  "executor_id": "11111111-1111-4111-8111-111111111111",
+  "inputs": [
+    "G5-input.txt"
+  ],
+  "code": [],
+  "configuration": [],
+  "outputs": [
+    "G5-output.txt"
+  ],
+  "dependency_manifests": {
+    "G4": "7f362cee23306c8c1ff28aaa1124602ba378c0fe3c11e6aa55a5ba3de163c510"
+  },
+  "dependency_approvals": {
+    "G4": {
+      "review_sha256": "f0f79f9686889eef22dd9bdedaaeadf5120fa6b33a375e229600fe9db8134597",
+      "adjudication_sha256": "d60b68ea154368b10a69e708b383c7f64b571cb2a81e8992c751610f9272e63a"
+    }
+  }
+}

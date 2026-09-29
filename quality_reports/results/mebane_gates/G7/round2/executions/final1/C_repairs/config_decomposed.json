@@ -1,0 +1,31 @@
+{
+  "schema": "g7-intake-v2",
+  "year": 2022,
+  "cargo": 1,
+  "pleito_t1_documented": 544,
+  "election_t1_documented": 544,
+  "turns": [
+    1,
+    2
+  ],
+  "election_dates": {
+    "1": "02/10/2022",
+    "2": "30/10/2022"
+  },
+  "territorial_scope": {
+    "universe": "Synthetic SP principal sections listed in the supplied EA16; not a statewide census",
+    "expected_ufs": [
+      "SP"
+    ]
+  },
+  "candidate_selection": {
+    "1": {
+      "code": 22,
+      "name": "JOSÉ DA CONCEIÇÃO"
+    },
+    "2": {
+      "code": 22,
+      "name": "CANDIDATO"
+    }
+  }
+}

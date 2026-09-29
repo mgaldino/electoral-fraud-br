@@ -1,0 +1,17 @@
+{
+  "exact_identities": {
+    "candidate_manifest.json": "783cfb036f8f26bf894c36782df4fb94e20351e4df015ca6e24330021d04a5a9",
+    "review/review.json": "a027cd5ad0875ffbb92e3b983c2907700fe6e8b4dbfc776df141ef9f5f80ba7c"
+  },
+  "verified_manifests": {
+    "candidate_manifest.json": {
+      "sha256": "783cfb036f8f26bf894c36782df4fb94e20351e4df015ca6e24330021d04a5a9",
+      "files_verified": 73
+    },
+    "review/review_manifest.json": {
+      "sha256": "2584c1fb80cf52ab811baf09827a1054a7c5cf890f2347f081d6ad38bbb46af9",
+      "files_verified": 49
+    }
+  },
+  "scope": "Integrity, not mathematical completeness or runtime semantics"
+}

@@ -1,0 +1,34 @@
+{
+  "year": 2022,
+  "turn": 1,
+  "version": "b817b340df8394b8c05e29b7ba2da6c8db9bfbdbbd8ec0b698a10ccd01ea1d3c",
+  "policy_sha256": "96bb446626d3d91db341a6f8b3df5acd69886697de007a8e4bafc2f942e4bb4c",
+  "input_hashes": {
+    "votes": "db92ef19e588054ff0dbfb72db91b49d158d98378bd75ccb3813bb45a38f17d3",
+    "ea11": "d05bfbf918bf6061301f87a4be6804fe0861c1c6590e177fa2b61b4d87f402c0",
+    "ea16_1": "a1dfcdda456fe7a5ba8dcc2fe88d5c4a97390f1cd2b9908127d4debb66477bf4",
+    "controls": "c3567efcf671ff1c9cd0fe2c54069edb433f50c95418dded0b2cf9298f3d52d6",
+    "config": "1f8eddd0835b61a9bfacebdf2fe9b03239b7adcf5d8ed605c12d79aa8420c981"
+  },
+  "provenance": "official",
+  "phase": "o",
+  "source_url": "https://resultados.tse.jus.br/example",
+  "validation": {
+    "complete": true,
+    "expected_sections": 2,
+    "observed_sections": 2,
+    "missing_sections": [],
+    "totals": {
+      "aptos": 18,
+      "turnout": 9,
+      "candidate_votes": 5,
+      "blank": 2,
+      "null": 2
+    },
+    "controls_pass": true,
+    "status": "staging_validated"
+  },
+  "data_ready": false,
+  "inference_ready": false,
+  "release_condition": "independent official-source and coverage attestation; G6 pass for inference"
+}

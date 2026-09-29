@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.0",
+  "gate_id": "G7",
+  "round": "round1",
+  "contract_sha256": "fc071a8664d04ba6a0a4ca91298d333ee1ca89868a26b23e705946fef1c2f94d",
+  "candidate_manifest_sha256": "62f7a5c4907c9d39b75fe5cd88224bddb4796e015f69f004469e51df7ae493c8",
+  "executor_id": "01a0eb3a-6ea4-7f61-a66d-2805e495d1d0",
+  "reviewer_id": "01a0eb4a-fa6d-7463-9d5a-bad4dd08b3c0",
+  "postfreeze_coordinator_evidence": {
+    "quality_reports/results/mebane_gates/G7/round1/adjudication_encoding.R": "a415b7438b609880ca24771ca24de0b42398ce4942d0a0d37a8ba94599be742e",
+    "quality_reports/results/mebane_gates/G7/round1/adjudication_encoding.json": "4bd9e41a30f46fa6195886bc70e18ebbc39693a22e515024aa628dd1d82b6cc0"
+  },
+  "reviewed_at_utc": "2026-09-29T04:07:53Z",
+  "status": "changes_requested",
+  "manifest_complete": true,
+  "scope": "Independent rehearsal of G7 staging readiness only; no real 2026 votes, national coverage attestation, data-ready or inference-ready approval.",
+  "findings": [
+    {
+      "id": "G7-R1-COORD-F03",
+      "origin": "COORD-G7-R1; independently reproduced by QA after candidate freeze",
+      "severity": "major",
+      "title": "Valid UTF-8 candidate names are rejected under the candidate's LC_ALL=C execution locale",
+      "locations": ["R/lib/mebane_2026_intake.R:129", "R/lib/mebane_2026_intake.R:130", "quality_reports/results/mebane_gates/G7/round1/adjudication_encoding.R:1"],
+      "counterexample": "The ASCII control CSV returns two rows. A CSV with identical fields except the valid UTF-8 candidate name JOSÉ DA CONCEIÇÃO returns Empty/missing vote values under LC_CTYPE=C, with invalid input found on input connection. A byte-preserving read plus explicit UTF-8 validation reads both rows under the same locale.",
+      "evidence": ["encoding_probe_02/result.json", "encoding_probe_02/ascii.csv", "encoding_probe_02/utf8.csv", "quality_reports/results/mebane_gates/G7/round1/adjudication_encoding.json"],
+      "evidence_boundary": "The coordinator script and result are later evidence outside the 275-file frozen candidate manifest; the QA reproduction and raw inputs are in review/.",
+      "impact": "The declared UTF-8 intake fails on legitimate Brazilian candidate names in the tested environment, blocking routine official-data staging even after a normalized CSV is prepared.",
+      "requested_change": "Use locale-independent byte-preserving input and explicit UTF-8 validation/conversion; add a regression with non-ASCII candidate names under LC_ALL=C."
+    },
+    {
+      "id": "G7-R1-QA-F01",
+      "severity": "major",
+      "title": "Election date is checked only for year, not against the declared turn date",
+      "locations": ["R/lib/mebane_2026_intake.R:71", "config/mebane/2026/intake.json:4"],
+      "counterexample": "With all other fixture 2022 T1 identifiers, votes and controls unchanged, replacing EA11 pl.dt=02/10/2022 with 03/10/2022 produces staging_validated. The 2026 intake configuration likewise has no expected date for the documented T1 election.",
+      "evidence": ["adversarial_results.json:changed_ea11_date_same_year", "scratch/changed_ea11_date_same_year/ea11.json"],
+      "impact": "An internally inconsistent election-date identity can be staged as validated; this does not mark data_ready, but violates the requested date preflight before external attestation.",
+      "requested_change": "Declare or independently resolve the expected election date by turn, compare EA11 pl.dt exactly, and test same-year wrong dates for T1 and conditional T2."
+    },
+    {
+      "id": "G7-R1-QA-F02",
+      "severity": "minor",
+      "title": "The receipt does not state the territorial universe behind 100 percent EA16 coverage",
+      "locations": ["R/lib/mebane_2026_intake.R:195", "R/lib/mebane_2026_intake.R:201", "R/lib/mebane_2026_intake.R:214"],
+      "counterexample": "A one-section EA16 roster, matching one-section vote file and one-section controls return staging_validated and complete=true, while omitting another fixture section. The receipt does not declare UF set or expected national universe.",
+      "evidence": ["adversarial_results.json:partial_ea16_scope", "scratch/partial_ea16_scope/store/2022/turn1"],
+      "impact": "Complete means complete relative to supplied EA16 references only. No national-real-coverage or data-ready claim was observed: both release booleans remain false.",
+      "requested_change": "Record the declared territorial scope and distinguish reference-relative completeness from independently attested national completeness in receipt and downstream instructions."
+    }
+  ],
+  "positive_controls": [
+    "275 distinct manifest files match bytes and SHA-256; run inventory is closed; static contract and DAG snapshot are frozen and the mutable ledger is not silently omitted from the declared freeze design.",
+    "G1 round2 manifest, review and adjudication match supplied hashes and both approvals are pass; G7 depends on G1 only while G2 remains changes_requested.",
+    "47 independent intake cases matched in the preserved final replay, including receipt/snapshot tampering, idempotence, revision, turn namespaces, invalid schema/codes/totals and forged official label with data_ready=false and inference_ready=false.",
+    "The strict coherent-2026 null-candidate case returned Candidate selection unresolved for turn at both validate and stage; it is not a helper bug.",
+    "G9 not_applicable without official non-occurrence attestation is rejected; gate-route labels return example_only and records_verified=false."
+  ],
+  "boundary_observations": [
+    "The DAG checker accepts a copied G9=inconclusive ledger with G6/G7 still pending; this neither passes G9 nor authorizes inference and is outside the present staging disposition. The reviewed scenario examples used coherent predecessor labels only.",
+    "Eight two-writer stress attempts in the review store yielded one successful writer and one identifiable race failure each; all subsequent serial replays passed. An external lock or serial intake remains a stated operational requirement, not a demonstrated concurrent guarantee.",
+    "No approved raw-2026-to-normalized-section/candidate converter exists. EA18 locates section ballot files; EA20 is aggregate through zone, not a substitute. The adapter cannot by itself receive official raw files."
+  ],
+  "verification_log": "qa_run.json",
+  "review_manifest": "review_manifest.json",
+  "gate_state_changed": false
+}

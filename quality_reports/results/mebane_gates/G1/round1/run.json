@@ -1,0 +1,205 @@
+{
+  "gate_id": "G1",
+  "round": "round1",
+  "contract_sha256": "f985ab97469aa66755b977a09781b30608afa6e245896d9d9788b4461190975d",
+  "executor_id": "01a0eaee-0164-7530-884d-adec564a8327",
+  "goal_id": "01a0eaee-0164-7530-884d-adec564a8327",
+  "goal_objective": "Entregar candidato revisável G1 do pipeline TSE parametrizado, com implementação, testes, execução completa 2022 e evidências delimitadas, sem aprovar o gate.",
+  "requested_model": "gpt-6-sol",
+  "requested_effort": "high",
+  "effective_model": null,
+  "effective_effort": null,
+  "recorded_at_utc": "2026-09-29T02:30:10.168040+00:00",
+  "dependency_manifests": {
+    "G0": "f71333db477385fc78dad8a7a1a7ca78e48479226dcdbde80ce97d724409fec7"
+  },
+  "dependency_approvals": {
+    "G0": {
+      "review_sha256": "ef624cb4b2d8ad098b87e196d87add358ce1eba93165d44fcc1939ff303f5376",
+      "adjudication_sha256": "ea1b4905fdfa14f6e3f36c41974ea948ba0c39d1f81f87d6eaf479782216267b"
+    }
+  },
+  "inputs": [
+    "replication_authors/extracted/fingerprint_brazil/raw-data/votacao_secao_2022_BR.csv",
+    "replication_authors/extracted/fingerprint_brazil/raw-data/detalhe_votacao_secao_2022_BR.csv",
+    "quality_reports/results/mebane_gates/coordination/Historico_Totalizacao_Presidente_BR_1T_2022.zip",
+    "quality_reports/results/mebane_gates/coordination/Historico_Totalizacao_Presidente_BR_2T_2022.zip",
+    "quality_reports/results/mebane_gates/coordination/detalhe_votacao_munzona_2022.zip",
+    "quality_reports/results/mebane_gates/coordination/votacao_candidato_munzona_2022.zip",
+    "quality_reports/results/mebane_gates/coordination/tse2022_control_sources.md",
+    "quality_reports/results/mebane_gates/coordination/pm23_2023-07-02.pdf",
+    "quality_reports/results/2026-09-28_mebane_denominadores_brancos_nulos.md",
+    "quality_reports/results/mebane_gates/G0/round1/snapshots/R/01_load_tse.R",
+    "quality_reports/results/mebane_gates/G0/round1/snapshots/R/02_build_vars.R",
+    "quality_reports/results/mebane_gates/G0/round2/candidate_manifest.json",
+    "quality_reports/results/mebane_gates/G0/round2/review/review.json",
+    "quality_reports/results/mebane_gates/G0/round2/adjudication.json"
+  ],
+  "code": [
+    "R/01_load_tse.R",
+    "R/02_build_vars.R",
+    "R/lib/mebane_data.R",
+    "tests/mebane/data/test_g1.R",
+    "tests/mebane/data/check_official_histories.R",
+    "tests/mebane/data/check_official_munzona.R",
+    "tests/mebane/data/check_replay.R",
+    "quality_reports/results/mebane_gates/G1/round1/freeze_candidate.py"
+  ],
+  "configuration": [
+    "config/mebane/2022.json",
+    "quality_reports/results/mebane_gates/G1/round1/gate_contract.json"
+  ],
+  "outputs": [
+    "quality_reports/results/mebane_gates/G1/round1/outputs/2022_final/sections_validated.parquet",
+    "quality_reports/results/mebane_gates/G1/round1/outputs/2022_final/votes_validated.parquet",
+    "quality_reports/results/mebane_gates/G1/round1/outputs/2022_final/abstention_exceptions.csv",
+    "quality_reports/results/mebane_gates/G1/round1/outputs/2022_final/source_metadata.csv",
+    "quality_reports/results/mebane_gates/G1/round1/outputs/2022_final/load_config_sha256.txt",
+    "quality_reports/results/mebane_gates/G1/round1/outputs/2022_final/model_counts.parquet",
+    "quality_reports/results/mebane_gates/G1/round1/outputs/2022_final/uf_turn_reconciliation.csv",
+    "quality_reports/results/mebane_gates/G1/round1/outputs/2022_final/candidate_turn_totals.csv",
+    "quality_reports/results/mebane_gates/G1/round1/outputs/2022_final/rule_log.csv",
+    "quality_reports/results/mebane_gates/G1/round1/outputs/2022_final/independent_raw_uf_turn.csv",
+    "quality_reports/results/mebane_gates/G1/round1/outputs/2022_final/official_history_reconciliation.csv",
+    "quality_reports/results/mebane_gates/G1/round1/outputs/2022_final/official_munzona_uf_turn_reconciliation.csv",
+    "quality_reports/results/mebane_gates/G1/round1/outputs/2022_final/official_munzona_candidate_uf_turn.csv",
+    "quality_reports/results/mebane_gates/G1/round1/outputs/2022_final/candidate_coalition_metadata.csv",
+    "quality_reports/results/mebane_gates/G1/round1/outputs/2022_final/official_noninstalled_zone.csv",
+    "quality_reports/results/mebane_gates/G1/round1/outputs/2022_final/deterministic_replay.csv",
+    "quality_reports/results/mebane_gates/G1/round1/outputs/2022_replay/sections_validated.parquet",
+    "quality_reports/results/mebane_gates/G1/round1/outputs/2022_replay/votes_validated.parquet",
+    "quality_reports/results/mebane_gates/G1/round1/outputs/2022_replay/abstention_exceptions.csv",
+    "quality_reports/results/mebane_gates/G1/round1/outputs/2022_replay/source_metadata.csv",
+    "quality_reports/results/mebane_gates/G1/round1/outputs/2022_replay/load_config_sha256.txt",
+    "quality_reports/results/mebane_gates/G1/round1/outputs/2022_replay/model_counts.parquet",
+    "quality_reports/results/mebane_gates/G1/round1/outputs/2022_replay/uf_turn_reconciliation.csv",
+    "quality_reports/results/mebane_gates/G1/round1/outputs/2022_replay/candidate_turn_totals.csv",
+    "quality_reports/results/mebane_gates/G1/round1/outputs/2022_replay/rule_log.csv",
+    "quality_reports/results/mebane_gates/G1/round1/implementation.md",
+    "quality_reports/results/mebane_gates/G1/round1/todo_evidence.json",
+    "quality_reports/results/mebane_gates/G1/round1/outputs/2022_primary/SUPERSEDED.md"
+  ],
+  "component_sha256": {
+    "inputs": {
+      "replication_authors/extracted/fingerprint_brazil/raw-data/votacao_secao_2022_BR.csv": "1a9e0feffe026c62b7e9559e9d3dbeb442a2df87f54cbed7a5a67c56abfc10e3",
+      "replication_authors/extracted/fingerprint_brazil/raw-data/detalhe_votacao_secao_2022_BR.csv": "24a272ea64f4c90d0de229cffc050f1b69b632315025446440fa9944cd3bee9c",
+      "quality_reports/results/mebane_gates/coordination/Historico_Totalizacao_Presidente_BR_1T_2022.zip": "55961aa1ecc87d0fd9c02730864f1b69a9f2eb3456327542dfc507217cd74a05",
+      "quality_reports/results/mebane_gates/coordination/Historico_Totalizacao_Presidente_BR_2T_2022.zip": "1f12128fbcfacab755e0e83d9c0a350ed99ae68ea3d024aaa7bc58fe0c1dda3c",
+      "quality_reports/results/mebane_gates/coordination/detalhe_votacao_munzona_2022.zip": "c4d5b6eb679e0c22ecc2842052d3472324101b0632b9c0820b4c18206c25f930",
+      "quality_reports/results/mebane_gates/coordination/votacao_candidato_munzona_2022.zip": "319bd123d933e04c23c5920abe8455f48890b561e6dad98c1003cfd461ab8fd1",
+      "quality_reports/results/mebane_gates/coordination/tse2022_control_sources.md": "f7992d9442a2dadc37240a52a2af5138c7e8d1cac3e5554154775693a17e0e9c",
+      "quality_reports/results/mebane_gates/coordination/pm23_2023-07-02.pdf": "615ddab21034e22ca55d891e01f14b85a2e7d80e12238bfbfb142ff214531431",
+      "quality_reports/results/2026-09-28_mebane_denominadores_brancos_nulos.md": "f84f6aad9d24169bab66f7684c582ae375c50adb4492d796acf3e1b08dffdeb2",
+      "quality_reports/results/mebane_gates/G0/round1/snapshots/R/01_load_tse.R": "fdd8c9278d73b85a7782c300f15e1931fb0f28e667feccb138a36e593d6fbce8",
+      "quality_reports/results/mebane_gates/G0/round1/snapshots/R/02_build_vars.R": "a18c49dc037de4ddf4a0d0e4ef7423a04522a963900d886bc86eca875c41dde5",
+      "quality_reports/results/mebane_gates/G0/round2/candidate_manifest.json": "f71333db477385fc78dad8a7a1a7ca78e48479226dcdbde80ce97d724409fec7",
+      "quality_reports/results/mebane_gates/G0/round2/review/review.json": "ef624cb4b2d8ad098b87e196d87add358ce1eba93165d44fcc1939ff303f5376",
+      "quality_reports/results/mebane_gates/G0/round2/adjudication.json": "ea1b4905fdfa14f6e3f36c41974ea948ba0c39d1f81f87d6eaf479782216267b"
+    },
+    "code": {
+      "R/01_load_tse.R": "05d7322118ac30281a2baf58da907393caae67995fe0e9be790c07705f42f6d1",
+      "R/02_build_vars.R": "a22f06b70e0e9afcf3121c397af8df5e14eedb9182f96d0a638d1b1bf55f1cd0",
+      "R/lib/mebane_data.R": "73b03828da6e49f7b958ac42dc09fdef0ae332a79012b7291f1de608b1081942",
+      "tests/mebane/data/test_g1.R": "4094915c1fd8594bf81cf9b676c52304c88bc6345c098580065f6a441c5aa416",
+      "tests/mebane/data/check_official_histories.R": "d49bee41e686e03b606126c28712627d4fb16eca30a51254c5c00ae7efbc9cac",
+      "tests/mebane/data/check_official_munzona.R": "c1a9d01a2339639a732756d2d81e4632ca8be1a6082f1dd3227965df2b049771",
+      "tests/mebane/data/check_replay.R": "f98614e78781d40cab771b3c176749d500f731d8e4c810f6bf7ec0bdc540fbfc",
+      "quality_reports/results/mebane_gates/G1/round1/freeze_candidate.py": "14115ecb30bae255f89e3355da9c2c64fb97aebdbfe8a0c6cd290c569b3181cb"
+    },
+    "configuration": {
+      "config/mebane/2022.json": "f8b33def917ed3885df71dd68284bb0e70be7d830747b56422a3f8ed225b2c86",
+      "quality_reports/results/mebane_gates/G1/round1/gate_contract.json": "2364acc589da079d44687c79c9fb35561816cfe7fd34ad7431f7c18386c1ae4d"
+    },
+    "outputs": {
+      "quality_reports/results/mebane_gates/G1/round1/outputs/2022_final/sections_validated.parquet": "f4964fb257a2afcbbbdcc5616a07a9287158ecb5c9964b25a33e2e3cde66a1cd",
+      "quality_reports/results/mebane_gates/G1/round1/outputs/2022_final/votes_validated.parquet": "b3d98d899af7f0624686b56e7e20b2f8ff9e8139ed467ad01cd2a6bff01eaa2b",
+      "quality_reports/results/mebane_gates/G1/round1/outputs/2022_final/abstention_exceptions.csv": "0ad2e732e4d601d9dec5123648ed2c894274452b6680bdfbb137bafbd85c4dc2",
+      "quality_reports/results/mebane_gates/G1/round1/outputs/2022_final/source_metadata.csv": "e8a8dcfe33d1b4d4d784acfbaa841120c2e9cce301578e48a42f9a29de173927",
+      "quality_reports/results/mebane_gates/G1/round1/outputs/2022_final/load_config_sha256.txt": "f1cb8128358af6f5b2c02b44bb2f2addfecb9a0dc365eddab981868e66ba6f4e",
+      "quality_reports/results/mebane_gates/G1/round1/outputs/2022_final/model_counts.parquet": "b8d6a40e7820e865c0e209e8af8051ef1cc5f5f6e2c665f42f6a9aeedbe3df60",
+      "quality_reports/results/mebane_gates/G1/round1/outputs/2022_final/uf_turn_reconciliation.csv": "7ad2fc3bc2325db4c5c14f4d56aa0016a4bd28126a6a93d692608472e88d2dcc",
+      "quality_reports/results/mebane_gates/G1/round1/outputs/2022_final/candidate_turn_totals.csv": "e8d23d38e6e997a5b19880ed66611b96cf8225d2f296e0a7be92bac84c6e8cea",
+      "quality_reports/results/mebane_gates/G1/round1/outputs/2022_final/rule_log.csv": "43ffd6d7e68d6d1e37e1af8f2496350d550cd9b79f00c3ebc0f60620140f12ad",
+      "quality_reports/results/mebane_gates/G1/round1/outputs/2022_final/independent_raw_uf_turn.csv": "7ad2fc3bc2325db4c5c14f4d56aa0016a4bd28126a6a93d692608472e88d2dcc",
+      "quality_reports/results/mebane_gates/G1/round1/outputs/2022_final/official_history_reconciliation.csv": "9ea368b50879f16a399835e3c39bbad2e586de7e9053c94905dbc0223ff04b33",
+      "quality_reports/results/mebane_gates/G1/round1/outputs/2022_final/official_munzona_uf_turn_reconciliation.csv": "89e102f3835afd52259d51f469155a06ceb44f1e8e89e0a839871ab4f2242bb3",
+      "quality_reports/results/mebane_gates/G1/round1/outputs/2022_final/official_munzona_candidate_uf_turn.csv": "837283f67d5005f1ff332cdbb5e47112803eaa83690e5dc7e4e814aba155bc44",
+      "quality_reports/results/mebane_gates/G1/round1/outputs/2022_final/candidate_coalition_metadata.csv": "1e39ad4948fcfb17603b21b29f472b2ba3ba8db48b5bf688ba5508c37ec263ff",
+      "quality_reports/results/mebane_gates/G1/round1/outputs/2022_final/official_noninstalled_zone.csv": "15ae1644478abb3c9143555c2c691ce34128c408bce5cd5b38e497c2da789f3e",
+      "quality_reports/results/mebane_gates/G1/round1/outputs/2022_final/deterministic_replay.csv": "bffe16c83e437862bcd6c98dd6c4064e51e8152306693dfe3aec81120f22240b",
+      "quality_reports/results/mebane_gates/G1/round1/outputs/2022_replay/sections_validated.parquet": "f4964fb257a2afcbbbdcc5616a07a9287158ecb5c9964b25a33e2e3cde66a1cd",
+      "quality_reports/results/mebane_gates/G1/round1/outputs/2022_replay/votes_validated.parquet": "b3d98d899af7f0624686b56e7e20b2f8ff9e8139ed467ad01cd2a6bff01eaa2b",
+      "quality_reports/results/mebane_gates/G1/round1/outputs/2022_replay/abstention_exceptions.csv": "0ad2e732e4d601d9dec5123648ed2c894274452b6680bdfbb137bafbd85c4dc2",
+      "quality_reports/results/mebane_gates/G1/round1/outputs/2022_replay/source_metadata.csv": "e8a8dcfe33d1b4d4d784acfbaa841120c2e9cce301578e48a42f9a29de173927",
+      "quality_reports/results/mebane_gates/G1/round1/outputs/2022_replay/load_config_sha256.txt": "f1cb8128358af6f5b2c02b44bb2f2addfecb9a0dc365eddab981868e66ba6f4e",
+      "quality_reports/results/mebane_gates/G1/round1/outputs/2022_replay/model_counts.parquet": "b8d6a40e7820e865c0e209e8af8051ef1cc5f5f6e2c665f42f6a9aeedbe3df60",
+      "quality_reports/results/mebane_gates/G1/round1/outputs/2022_replay/uf_turn_reconciliation.csv": "7ad2fc3bc2325db4c5c14f4d56aa0016a4bd28126a6a93d692608472e88d2dcc",
+      "quality_reports/results/mebane_gates/G1/round1/outputs/2022_replay/candidate_turn_totals.csv": "e8d23d38e6e997a5b19880ed66611b96cf8225d2f296e0a7be92bac84c6e8cea",
+      "quality_reports/results/mebane_gates/G1/round1/outputs/2022_replay/rule_log.csv": "43ffd6d7e68d6d1e37e1af8f2496350d550cd9b79f00c3ebc0f60620140f12ad",
+      "quality_reports/results/mebane_gates/G1/round1/implementation.md": "6d5076bab255e7c762b7b933f8ebbc6242817ae422e3f6ab7b1bb866442ce867",
+      "quality_reports/results/mebane_gates/G1/round1/todo_evidence.json": "73ef62a2fc6b3960db3be1e71d6396c715af108329f9b2c48cc41aa8c3c86441",
+      "quality_reports/results/mebane_gates/G1/round1/outputs/2022_primary/SUPERSEDED.md": "6841845129753083698cc1da5c0fdca06c4c930c45861e36c26c56aa5e701fb8"
+    }
+  },
+  "commands": [
+    {
+      "command": "Rscript --vanilla tests/mebane/data/test_g1.R",
+      "exit_code": 0,
+      "scope": "adversarial fixtures"
+    },
+    {
+      "command": "Rscript --vanilla R/01_load_tse.R config/mebane/2022.json quality_reports/results/mebane_gates/G1/round1/outputs/2022_final",
+      "exit_code": 0,
+      "scope": "full 2022 load"
+    },
+    {
+      "command": "Rscript --vanilla R/02_build_vars.R config/mebane/2022.json quality_reports/results/mebane_gates/G1/round1/outputs/2022_final",
+      "exit_code": 0,
+      "scope": "full 2022 build"
+    },
+    {
+      "command": "Rscript --vanilla tests/mebane/data/test_g1.R --full quality_reports/results/mebane_gates/G1/round1/outputs/2022_final",
+      "exit_code": 0,
+      "scope": "independent raw aggregation"
+    },
+    {
+      "command": "Rscript --vanilla tests/mebane/data/check_official_histories.R quality_reports/results/mebane_gates/G1/round1/outputs/2022_final",
+      "exit_code": 0,
+      "scope": "official historical national controls"
+    },
+    {
+      "command": "Rscript --vanilla tests/mebane/data/check_official_munzona.R quality_reports/results/mebane_gates/G1/round1/outputs/2022_final",
+      "exit_code": 0,
+      "scope": "official 2026-generation UF and candidate controls"
+    },
+    {
+      "command": "Rscript --vanilla R/01_load_tse.R config/mebane/2022.json quality_reports/results/mebane_gates/G1/round1/outputs/2022_replay",
+      "exit_code": 0,
+      "scope": "replay load"
+    },
+    {
+      "command": "Rscript --vanilla R/02_build_vars.R config/mebane/2022.json quality_reports/results/mebane_gates/G1/round1/outputs/2022_replay",
+      "exit_code": 0,
+      "scope": "replay build"
+    },
+    {
+      "command": "Rscript --vanilla tests/mebane/data/check_replay.R quality_reports/results/mebane_gates/G1/round1/outputs/2022_final quality_reports/results/mebane_gates/G1/round1/outputs/2022_replay",
+      "exit_code": 0,
+      "scope": "byte determinism"
+    }
+  ],
+  "versions": {
+    "R": "4.4.2",
+    "data.table": "1.17.0",
+    "arrow": "22.0.0",
+    "jsonlite": "2.0.0",
+    "digest": "0.6.37"
+  },
+  "seeds": null,
+  "execution_notes": [
+    "An initial fail-closed run detected the AM non-installed section; the final explicit exception is flagged and not model-eligible.",
+    "The superseded exploratory output is not a model input; only 2022_final is the candidate and 2022_replay is the deterministic replay.",
+    "The historical TSE ZIPs do not provide abstention fields or UF controls; the separately versioned 2026 munzona ZIPs provide UF controls.",
+    "No installation, update, or MCMC was run."
+  ]
+}

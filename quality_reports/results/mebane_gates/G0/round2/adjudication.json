@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.0",
+  "adjudication_id": "mebane-G0:f71333db4773:round2",
+  "gate_id": "G0",
+  "round": "round2",
+  "contract_sha256": "e5ba78d6f8d314c2bf94738df85fce0a31d8e9986ef974f6c69ee9e30ee06ca3",
+  "candidate_manifest_sha256": "f71333db477385fc78dad8a7a1a7ca78e48479226dcdbde80ce97d724409fec7",
+  "review_sha256": "ef624cb4b2d8ad098b87e196d87add358ce1eba93165d44fcc1939ff303f5376",
+  "status": "pass",
+  "unresolved_material_findings": 0,
+  "source": {
+    "reviewed_artifact": "quality_reports/results/mebane_gates/G0/round2/candidate_manifest.json",
+    "sha256": "f71333db477385fc78dad8a7a1a7ca78e48479226dcdbde80ce97d724409fec7",
+    "artifact_intact": true
+  },
+  "contract": {
+    "required": false, "path": null, "sha256": null, "contract_id": null,
+    "artifact_sha256": null, "status": null, "stale": false
+  },
+  "contract_scope_note": "Auditoria de baseline sem contrato de argumento de manuscrito. O contrato operacional G0 permanece vinculado pelo hash canonico acima e pelo checker dos gates.",
+  "review_sources": [{
+    "review_id": "QA-G0-R2",
+    "path": "quality_reports/results/mebane_gates/G0/round2/review/review.json",
+    "sha256": "ef624cb4b2d8ad098b87e196d87add358ce1eba93165d44fcc1939ff303f5376"
+  }],
+  "findings": [],
+  "resolved_prior_findings": [
+    {"id": "G0-R1-F1", "status": "CONFIRMED", "resolved": true, "resolution": "Cinco snapshots acrescentados e verificados independentemente; originais e tabelas nao alterados."},
+    {"id": "G0-R1-F2", "status": "CONFIRMED", "resolved": true, "resolution": "Seis registros instalados adicionados, 174 registros preservados, clausura independente de 179 pacotes sem ausencias ou desvios de versao."},
+    {"id": "G0-R1-F3", "status": "PARTIAL", "resolved": true, "resolution": "README congelado explicita aquisicao externa desconhecida, integridade local e condicao para restauracao exata; nao inventa origem nem prova recuperacao externa."}
+  ],
+  "coordinator_checks": [
+    "Recalculados os hashes do manifesto e review.json; coincidem com as identidades do parecer.",
+    "Inspecionados audit_results.json, dependencies_results.json, repair_map.md, todo_evidence.json e README congelado: reparos possuem localizadores e nao alteram o contrato.",
+    "cmp renv.lock G0/round2/final_state/renv.lock exit 0.",
+    "diff do README atual versus congelado mostrou apenas nova secao documental sobre denominadores; preservada, fora do candidato G0 e sem aprovacao inferencial por esta adjudicacao."
+  ],
+  "summary": {"total": 0, "confirmed": 0, "partial": 0, "refuted": 0, "unresolved": 0, "held_decisions": 0},
+  "adjudication": {
+    "verdict": "NO_CONFIRMED_DEFECTS",
+    "checked_at": "2026-09-29T02:06:35+00:00",
+    "reasons": ["O parecer independente round2 aprova o candidato congelado, atesta completude e nao apresenta achados vigentes.", "Os achados historicos foram reparados no alcance adjudicado; suas classificacoes e evidencia permanecem em round1.", "Pass limita-se a baseline, fontes e ambiente local documentado. Nao certifica restore frio, aquisicao externa do ZIP, fidelidade matematica, convergencia ou inferencia."]
+  }
+}

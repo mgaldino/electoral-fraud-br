@@ -1,0 +1,19 @@
+{
+  "gate_id": "G0",
+  "round": "round1",
+  "contract_sha256": "e5ba78d6f8d314c2bf94738df85fce0a31d8e9986ef974f6c69ee9e30ee06ca3",
+  "files": [
+    {
+      "path": "G0-input.txt",
+      "sha256": "3099b6c8cfec72b28f3150fc80c97025ae313d03dc9c72dc9a5556523b939456"
+    },
+    {
+      "path": "G0-output.txt",
+      "sha256": "b1aeaf4a9990b7d310bad67703fdfb2adf841ec746f041563432efcf256a1a0e"
+    },
+    {
+      "path": "G0-run.json",
+      "sha256": "f5680f3cdc037918fbfdf80a70d4630b969d59466dd76870322e767d0a24a915"
+    }
+  ]
+}

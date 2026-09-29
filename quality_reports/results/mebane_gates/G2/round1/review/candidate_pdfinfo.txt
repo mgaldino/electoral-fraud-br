@@ -1,0 +1,22 @@
+Title:           Contrato matemático do qbl
+Subject:         
+Keywords:        
+Author:          METODO-PRINCIPAL
+Creator:         LaTeX via pandoc
+Producer:        pdfTeX-1.40.28
+CreationDate:    Mon Sep 28 23:41:00 2026 -03
+ModDate:         Mon Sep 28 23:41:00 2026 -03
+Custom Metadata: yes
+Metadata Stream: no
+Tagged:          no
+UserProperties:  no
+Suspects:        no
+Form:            none
+JavaScript:      no
+Pages:           13
+Encrypted:       no
+Page size:       612 x 792 pts (letter)
+Page rot:        0
+File size:       345227 bytes
+Optimized:       no
+PDF version:     1.7

@@ -1,0 +1,37 @@
+{
+  "pdf_sha256": "2b204678f10c4c86e4efc212f525f50d47e86a4caefc308d3642f27bb0cab41a",
+  "pages": [
+    {
+      "page": 1,
+      "characters": 2270,
+      "outside_safety_bounds": 0
+    },
+    {
+      "page": 2,
+      "characters": 3023,
+      "outside_safety_bounds": 0
+    },
+    {
+      "page": 3,
+      "characters": 2730,
+      "outside_safety_bounds": 0
+    },
+    {
+      "page": 4,
+      "characters": 1662,
+      "outside_safety_bounds": 0
+    }
+  ],
+  "links": [
+    "https://public.websites.umich.edu/~wmebane/measfrauds.pdf",
+    "https://public.websites.umich.edu/~wmebane/pm23.pdf",
+    "https://websites.umich.edu/~wmebane/PA2024.pdf",
+    "https://github.com/UMeforensics/eforensics_public/commit/3017de537450f97a01872d0157462a68bea348ee",
+    "https://doi.org/10.1214/20-BA1221",
+    "https://mc-stan.org/docs/stan-users-guide/latent-discrete.html",
+    "https://dadosabertos.tse.jus.br/dataset/resultados-2022",
+    "https://www.tse.jus.br/legislacao/compilada/res/2026/resolucao-no-23-760-de-2-de-marco-de-2026"
+  ],
+  "geometry_status": "pass",
+  "visual_status": "requires_human_or_model_image_inspection"
+}

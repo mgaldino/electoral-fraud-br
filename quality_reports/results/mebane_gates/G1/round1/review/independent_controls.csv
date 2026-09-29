@@ -1,0 +1,9 @@
+control,rows,metrics,pass
+raw_vs_candidate_uf,56,"sections,aptos,comparecimento,abstencoes_reportadas,abstencoes_derivadas,nominais,brancos,nulos,nominal_zero_sections",TRUE
+raw_vs_candidate_totals,13,QT_VOTOS,TRUE
+raw_vs_official_uf,56,"sections,aptos,comparecimento,abstencoes_reportadas,nominais,brancos,nulos",TRUE
+raw_vs_official_candidate_uf,364,votes,TRUE
+raw_vs_official_noninstalled_uf,4,"not_installed,electors_not_installed",TRUE
+raw_vs_official_noninstalled_zone,84,"not_installed,electors_not_installed",TRUE
+raw_vs_official_history_turn_1,1,"sections,aptos,comparecimento,nominais,brancos,nulos,candidate_13,candidate_22",TRUE
+raw_vs_official_history_turn_2,1,"sections,aptos,comparecimento,nominais,brancos,nulos,candidate_13,candidate_22",TRUE

@@ -1,0 +1,14 @@
+"metric","value"
+"E_pi1",0.523248143764548
+"invalid_positive_mass_parent",499.5
+"T5_max_abs_error",4.44089209850063e-16
+"executor_example_exact",0.171900319424
+"executor_example_plugin",0.19600864
+"clean_plugin_exact",0.4116
+"clean_plugin_value",0.4872
+"Stan_triangle_mass_N3",0.843215947333333
+"globally_normalized_likelihood",0.154570976886595
+"component_normalized_likelihood",0.154568982518945
+"RB_variance",116.16
+"full_variance",208.96
+"omitted_class_variance",92.8

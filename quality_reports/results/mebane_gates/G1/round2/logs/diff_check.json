@@ -1,0 +1,21 @@
+{
+  "command": [
+    "git",
+    "diff",
+    "--check",
+    "--",
+    "R/01_load_tse.R",
+    "R/02_build_vars.R",
+    "R/lib/mebane_data.R",
+    "config/mebane",
+    "tests/mebane/data",
+    "quality_reports/results/mebane_gates/G1/round2"
+  ],
+  "command_display": "git diff --check -- R/01_load_tse.R R/02_build_vars.R R/lib/mebane_data.R config/mebane tests/mebane/data quality_reports/results/mebane_gates/G1/round2",
+  "scope": "Whitespace check of tracked production edits; source snapshots retain pre-repair bytes",
+  "started_at_utc": "2026-09-29T03:09:20.697927+00:00",
+  "ended_at_utc": "2026-09-29T03:09:20.707657+00:00",
+  "elapsed_seconds": 0.009686,
+  "exit_code": 0,
+  "output": "quality_reports/results/mebane_gates/G1/round2/logs/diff_check.txt"
+}

@@ -1,0 +1,77 @@
+{
+  "gate_id": "G1",
+  "round": "round1",
+  "contract_sha256": "f985ab97469aa66755b977a09781b30608afa6e245896d9d9788b4461190975d",
+  "candidate_manifest_sha256": "009e0fd39f8ab495e52fcb214476fcc7b6095f895381006a924df6a2ffbd7003",
+  "executor_id": "01a0eaee-0164-7530-884d-adec564a8327",
+  "reviewer_id": "01a0eb01-0a01-7a10-b432-d1f2cdbd12f8",
+  "status": "changes_requested",
+  "manifest_complete": false,
+  "reviewed_at_utc": "2026-09-29T02:40:28Z",
+  "dependency_g0": {
+    "candidate_manifest_sha256": "f71333db477385fc78dad8a7a1a7ca78e48479226dcdbde80ce97d724409fec7",
+    "review_sha256": "ef624cb4b2d8ad098b87e196d87add358ce1eba93165d44fcc1939ff303f5376",
+    "adjudication_sha256": "ea1b4905fdfa14f6e3f36c41974ea948ba0c39d1f81f87d6eaf479782216267b",
+    "adjudication_status": "pass"
+  },
+  "findings": [
+    {
+      "id": "G1-R1-QAD-F01",
+      "severity": "major",
+      "title": "Identidade e data da eleicao nao sao vinculadas a configuracao",
+      "location": [
+        "R/lib/mebane_data.R:100-115",
+        "R/lib/mebane_data.R:179-184",
+        "config/mebane/2022.json:2-8"
+      ],
+      "counterexample_evidence": {
+        "path": "quality_reports/results/mebane_gates/G1/round1/review/adversarial_results.csv",
+        "cases": ["wrong_election_code_both_sources", "wrong_election_year_both_sources"],
+        "result": "Ambos accepted=TRUE com ANO_ELEICAO=2022, NR_TURNO=1/2, cargo=1 e controles oficiais de totais ativos: CD_ELEICAO=999 ou DT_ELEICAO=02/10/2020 foram copiados para os dois lados."
+      },
+      "impact": "O pipeline pode rotular um snapshot ou pleito incorreto como o ano/turno configurado quando os dois arquivos concordam; isso e especialmente relevante para configuracoes futuras e eleicoes suplementares do mesmo ano.",
+      "suggested_repair": "Declarar e validar no config, por turno, CD_ELEICAO, DT_ELEICAO e tipo de eleicao esperado; ler o campo de tipo dos CSVs e falhar antes das agregacoes se qualquer identidade divergir. Acrescentar fixtures em que ambos os arquivos trazem o mesmo metadado errado."
+    },
+    {
+      "id": "G1-R1-QAD-F02",
+      "severity": "major",
+      "title": "Ledger efetivamente lido no congelamento nao integra o manifesto",
+      "location": [
+        "quality_reports/results/mebane_gates/G1/round1/freeze_candidate.py:39-47",
+        "quality_reports/results/mebane_gates/G1/round1/freeze_candidate.py:63-85",
+        "quality_reports/results/mebane_gates/G1/round1/run.json:22-39"
+      ],
+      "counterexample_evidence": {
+        "path": "quality_reports/results/mebane_gates/G1/round1/review/manifest_bytes.txt",
+        "result": "Os 53 arquivos declarados fecham e seus hashes/tamanhos coincidem, mas freeze_candidate.py le quality_reports/plans/mebane_2022_2026_gates.json em linha 39; esse caminho nao aparece em run.inputs nem em candidate_manifest.files. O contrato derivado atual ainda tem o hash canonico correto, mas os bytes do ledger na hora do congelamento nao estao vinculados."
+      },
+      "impact": "A trilha de proveniencia do contrato e incompleta e o congelamento nao pode ser reproduzido a partir de todos os insumos identificados no manifesto; manifest_complete nao pode ser true sob o protocolo.",
+      "suggested_repair": "Em nova rodada, preservar snapshot imutavel ou hash verificavel do ledger usado por freeze_candidate.py, declara-lo em run.inputs e candidate_manifest.files, e registrar o comando de congelamento. Nao reescrever a rodada congelada."
+    }
+  ],
+  "criteria_checked": [
+    {"criterion": "Hashes de candidato, contrato canonico e dependencia G0", "result": "pass", "basis": "shasum -a 256 e canonicalizacao JSON; 53 arquivos declarados hasheados e tamanhos conferidos"},
+    {"criterion": "Completude de inputs/code/configuration/outputs", "result": "fail", "basis": "Auditoria de leituras em scripts detectou ledger omitido; fechamento apenas dos caminhos declarados passou"},
+    {"criterion": "Chaves, tipos, duplicatas, schema, categoria zero versus omitida e elegibilidade de candidato", "result": "partial", "basis": "Brutos reais e fixtures existentes passaram; duas fixtures novas de identidade eleitoral foram indevidamente aceitas"},
+    {"criterion": "Totais nacionais, UF, turno, candidato, nao instaladas e denominadores", "result": "pass", "basis": "Codigo independente releu ambos CSVs brutos e membros oficiais _BR.csv e historicos; 56 UF-turnos, 364 candidato-UF-turnos e 84 zonas nao instaladas coincidem"},
+    {"criterion": "CLI isolada e determinismo", "result": "pass", "basis": "Load/build limpos em review/cli_2022; 9 produtos centrais byte-identicos ao candidato"},
+    {"criterion": "Regras de inclusao e limites N/a/w", "result": "pass", "basis": "Parquet limpo tem 944150 linhas, 99 secoes-turno com nominais zero retidas, 0 violacoes fisicas e 94 flags de discrepancia de abstencao"}
+  ],
+  "tests": [
+    {"command": "Rscript --vanilla tests/mebane/data/test_g1.R", "exit_code": 0, "result": "fixtures existentes PASS"},
+    {"command": "Rscript --vanilla quality_reports/results/mebane_gates/G1/round1/review/adversarial_review.R", "exit_code": 0, "result": "4 rejeicoes esperadas; 2 erros de identidade aceitos", "output": "quality_reports/results/mebane_gates/G1/round1/review/adversarial_results.csv"},
+    {"command": "Rscript --vanilla quality_reports/results/mebane_gates/G1/round1/review/review_checks.R", "exit_code": 0, "result": "8 grupos de controle independentes PASS", "output": "quality_reports/results/mebane_gates/G1/round1/review/independent_controls.csv"},
+    {"command": "Rscript --vanilla R/01_load_tse.R config/mebane/2022.json quality_reports/results/mebane_gates/G1/round1/review/cli_2022", "exit_code": 0, "result": "944150 secoes e 5380736 linhas de votos validadas"},
+    {"command": "Rscript --vanilla R/02_build_vars.R config/mebane/2022.json quality_reports/results/mebane_gates/G1/round1/review/cli_2022", "exit_code": 0, "result": "944150 linhas de contagens; lider 13 em ambos turnos"},
+    {"command": "Rscript --vanilla tests/mebane/data/test_g1.R --full quality_reports/results/mebane_gates/G1/round1/review/cli_2022", "exit_code": 0, "result": "reconciliacao bruta do executor repetida no diretorio isolado PASS"},
+    {"command": "Rscript --vanilla tests/mebane/data/check_official_histories.R quality_reports/results/mebane_gates/G1/round1/review/cli_2022", "exit_code": 0, "result": "historicos nacionais PASS"},
+    {"command": "Rscript --vanilla tests/mebane/data/check_official_munzona.R quality_reports/results/mebane_gates/G1/round1/review/cli_2022", "exit_code": 0, "result": "controles oficiais munzona PASS"},
+    {"command": "Rscript --vanilla -e '...digest::digest(file=TRUE)...'", "exit_code": 0, "result": "9 arquivos centrais byte-identicos", "output": "quality_reports/results/mebane_gates/G1/round1/review/cli_byte_comparison.csv"}
+  ],
+  "limits": [
+    "ZIPs oficiais foram verificados quanto a integridade e versao local, nao quanto a autenticidade externa da aquisicao; o ZIP nominal completo nao foi extraido.",
+    "Noticias TSE usadas para abstencoes em config nao possuem HTML arquivado; historicos ZIP nao contem controle de abstencoes. A comparacao local de 2026 por municipio/zona fornece esse controle, mas e snapshot posterior aos CSVs dos autores.",
+    "Coincidencia em agregados nao certifica igualdade de todas as linhas ou campos individuais entre snapshots de 2022 e 2026.",
+    "Nenhuma inferencia, estimacao ou MCMC foi executada; o parecer limita-se ao gate de dados."
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "gate_id": "G2",
+  "round": "round1",
+  "gate_approved": false,
+  "independent_review_obtained": false,
+  "todos": [
+    {
+      "id": "G2-T1", "status": "done",
+      "scope": "Mapeamento implementador dos blocos executáveis e especificações, não equivalência aprovada",
+      "evidence": [
+        {"path": "appendices/mebane_model_contract.md", "basis": "inspected", "locator": "Seções 1.1, 2, 7 e Tabela 1"},
+        {"path": "quality_reports/results/mebane_gates/G2/round1/results/checks.csv", "basis": "executed", "locator": "source_qbl_exact; paper_not_qbl_off_mean"},
+        {"path": "quality_reports/results/mebane_gates/G2/round1/source_provenance.json", "basis": "executed", "locator": "Hashes de cópias históricas e contexto lateral"}
+      ]
+    },
+    {
+      "id": "G2-T2", "status": "done",
+      "scope": "Priors derivadas; divergências e decisões materiais explicitadas",
+      "evidence": [
+        {"path": "appendices/mebane_model_contract.md", "basis": "inspected", "locator": "Seção 3; equações G2.5-G2.12"},
+        {"path": "quality_reports/results/mebane_gates/G2/round1/results/checks.csv", "basis": "executed", "locator": "pi_density_normalizes; pi_partial_order; pi_jacobian; scale_prior_divergence; noncentered_jacobian; logistic_jacobians; endpoint_*"}
+      ]
+    },
+    {
+      "id": "G2-T3", "status": "done",
+      "scope": "Suporte e normalização auditados com contraexemplos; não reparados nem certificados para produção",
+      "evidence": [
+        {"path": "appendices/mebane_model_contract.md", "basis": "inspected", "locator": "Seções 2.1 e 4; F1/F2; equações G2.13-G2.15"},
+        {"path": "quality_reports/results/mebane_gates/G2/round1/results/checks.csv", "basis": "executed", "locator": "minimal_invalid_support; *_physical_not_normalized; rejection_C_depends_theta; stan_*"}
+      ]
+    },
+    {
+      "id": "G2-T4", "status": "done",
+      "scope": "Estimandos e limites definidos, sem resultados inferenciais ou hipótese de origem aprovada",
+      "evidence": [
+        {"path": "appendices/mebane_model_contract.md", "basis": "inspected", "locator": "Seções 6 e 7; equações G2.19-G2.21"},
+        {"path": "quality_reports/results/mebane_gates/G2/round1/results/checks.csv", "basis": "executed", "locator": "estimand_decomposition; margin_bounds; rao_blackwell_variance_missing; sum_draws_not_marginal_quantiles"},
+        {"path": "quality_reports/results/mebane_gates/G2/round1/sources/05_eforensics_qbl_brasilia_fresh_v2_summary.txt", "basis": "historical", "locator": "Timing e diagnósticos de abril; G2 apenas inspecionou"}
+      ]
+    },
+    {
+      "id": "G2-T5", "status": "in_progress",
+      "scope": "Derivação, enumeração e custo entregues; rederivação independente cabe à QA despachada pelo coordenador",
+      "remaining": "Obter rederivação independente com contraexemplos e adjudicar questões materiais; não há reviewer_id nesta rodada implementadora",
+      "evidence": [
+        {"path": "appendices/mebane_model_contract.md", "basis": "inspected", "locator": "Seção 5; equações G2.16-G2.18"},
+        {"path": "quality_reports/results/mebane_gates/G2/round1/results/marginalization.csv", "basis": "executed", "locator": "29 casos: N=1,2,3, todos A e W"},
+        {"path": "quality_reports/results/mebane_gates/G2/round1/results/checks.csv", "basis": "executed", "locator": "finite_marginalization_all_small; normalizer_cdf_*; plugin_not_marginalization; binomial_constants_matter"}
+      ]
+    }
+  ]
+}

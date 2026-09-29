@@ -1,0 +1,27 @@
+{
+  "gate_id": "G8",
+  "round": "round1",
+  "contract_sha256": "8e1cb97cbd600156c743300b84d7ca541de47ad84c76bfbc900c81643a897317",
+  "files": [
+    {
+      "path": "G8-input.txt",
+      "sha256": "3099b6c8cfec72b28f3150fc80c97025ae313d03dc9c72dc9a5556523b939456"
+    },
+    {
+      "path": "G8-output.txt",
+      "sha256": "b1aeaf4a9990b7d310bad67703fdfb2adf841ec746f041563432efcf256a1a0e"
+    },
+    {
+      "path": "G8-run.json",
+      "sha256": "638b8cfc8b6a2fa041fcfb513551c8a0f973bf70203aa08d2c94478596c0e0f8"
+    },
+    {
+      "path": "G8-synthetic-attestation.json",
+      "sha256": "af0f7f779c2350318f76cfcb4308ac37cd998bb1c05a9de532229429c1c5aff2"
+    },
+    {
+      "path": "G8-synthetic-snapshot.txt",
+      "sha256": "d4e61aaff19eae9222b734b26b9b1fda31021a744ba19809945cfc6d89430057"
+    }
+  ]
+}

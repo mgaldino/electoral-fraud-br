@@ -1,0 +1,155 @@
+{
+  "schema_version": "1.0",
+  "gate_id": "G2",
+  "round": "round1",
+  "contract_sha256": "f834bc1d12d88b4bc82fb2ada95120a838451c5809332630a75cd9abf03cf4d1",
+  "candidate_manifest_sha256": "783cfb036f8f26bf894c36782df4fb94e20351e4df015ca6e24330021d04a5a9",
+  "executor_id": "01a0eaee-01df-7773-bd63-d321db26a47c",
+  "reviewer_id": "01a0eb0d-15b5-7c51-8e6f-c5b5b93f6011",
+  "reviewer_role": "QA-MATEMATICA",
+  "goal_id": "01a0eb0d-15b5-7c51-8e6f-c5b5b93f6011",
+  "status": "changes_requested",
+  "manifest_complete": true,
+  "independent": true,
+  "candidate_modified": false,
+  "coordinator_adjudication": false,
+  "summary": "Rederivação independente e 75 testes confirmam os cinco achados do executor no alcance declarado. Nenhum defeito material do contrato/derivação encontrado. G2 não pode passar: alvo estatístico, priors/desenho e distribuição dos estimandos/hipóteses de margem permanecem decisões materiais abertas.",
+  "dependency_approval": {
+    "gate_id": "G0",
+    "candidate_manifest_sha256": "f71333db477385fc78dad8a7a1a7ca78e48479226dcdbde80ce97d724409fec7",
+    "review_sha256": "ef624cb4b2d8ad098b87e196d87add358ce1eba93165d44fcc1939ff303f5376",
+    "adjudication_sha256": "ea1b4905fdfa14f6e3f36c41974ea948ba0c39d1f81f87d6eaf479782216267b",
+    "verified": true
+  },
+  "findings": [
+    {
+      "id": "G2-QA-D1",
+      "severity": "major",
+      "category": "owner_decision_statistical_target",
+      "status": "CONFIRMED",
+      "resolved": false,
+      "blocks_gate": true,
+      "contract_derivation_defect": false,
+      "title": "Alvo estatístico não selecionado",
+      "locations": [
+        {"path": "appendices/mebane_model_contract.md", "lines": [163, 169, 176, 184, 208, 297]},
+        {"path": "quality_reports/results/mebane_gates/G0/round1/qbl_installed_3017de5.jags", "lines": [157, 174, 187, 191, 196, 197]},
+        {"path": "quality_reports/results/mebane_gates/G0/round1/final_state/stan/eforensics_qbl.stan", "lines": [27, 31, 39, 188, 196]}
+      ],
+      "evidence": "O candidato registra D1 como pendente. Estado J com N=A=RM=1, RS=0 e nu=tau=.5 produz pW=499.5. Normalizador do kernel rejeita-inválidos depende de tau. Stan normaliza no retângulo, não no suporte eleitoral. Testes independentes confirmam.",
+      "counterevidence_and_scope": "Candidato descreve corretamente o problema. Produto do paper e Stan não são genericamente desnormalizados no retângulo; a crítica física não deve ser confundida com invalidade nesse domínio. Runtime JAGS não executado.",
+      "consequence": "Não existe alvo único aprovado para uma portagem certificada em G3.",
+      "options": ["Reprodução de software com semântica explicitada", "Kernel normalizado em domínio declarado", "Produto dos artigos com interpretação delimitada", "Modelo físico alternativo com nova decisão"],
+      "proposal_safety": "owner_decision"
+    },
+    {
+      "id": "G2-QA-D2",
+      "severity": "major",
+      "category": "owner_decision_prior_specification",
+      "status": "CONFIRMED",
+      "resolved": false,
+      "blocks_gate": true,
+      "contract_derivation_defect": false,
+      "title": "Priors, intercepto e parametrização geográfica não selecionados",
+      "locations": [
+        {"path": "appendices/mebane_model_contract.md", "lines": [85, 100, 104, 112, 118, 299]},
+        {"path": "quality_reports/results/mebane_gates/G0/round1/qbl_installed_3017de5.jags", "lines": [26, 74, 86, 100, 127, 134]},
+        {"path": "quality_reports/results/mebane_gates/G0/round1/final_state/stan/eforensics_qbl.stan", "lines": [120, 155, 162, 171]}
+      ],
+      "evidence": "D2 está explicitamente pendente. Normal com precisão 1/v e v~Exp(5) tem variância residual média .2; SD~Exp(5) implica .08. Colapso exato do intercepto exige variância 1.0001, não 1. Contrastes de dummies têm variâncias 1 ou 2 conforme referência.",
+      "counterevidence_and_scope": "As derivações e a redução de escala de mistura do candidato são corretas. Diferença pequena de intercepto não demonstra impacto prático relevante sem dados; não é motivo para alterar automaticamente a prior.",
+      "consequence": "Fidelidade paper/J/Stan depende de registrar especificação escolhida e eventuais tolerâncias de aproximação.",
+      "options": ["Preservar priors efetivas do JAGS e desenho fixado", "Adotar especificação textual dos artigos explicitamente", "Aceitar aproximação documentada sem alegar identidade"],
+      "proposal_safety": "owner_decision"
+    },
+    {
+      "id": "G2-QA-D3",
+      "severity": "major",
+      "category": "owner_decision_estimand_and_identification",
+      "status": "CONFIRMED",
+      "resolved": false,
+      "blocks_gate": true,
+      "contract_derivation_defect": false,
+      "title": "Distribuição-alvo dos totais e hipóteses de margem não selecionadas",
+      "locations": [
+        {"path": "appendices/mebane_model_contract.md", "lines": [220, 229, 231, 239, 248, 252, 301]},
+        {"path": "quality_reports/results/mebane_gates/G0/round1/final_state/stan/eforensics_qbl.stan", "lines": [240, 255, 259, 261, 265]},
+        {"path": "quality_reports/results/mebane_gates/G0/round1/final_state/R/05_jags_qbl_zone_fe.R", "lines": [41, 46, 78, 84]}
+      ],
+      "evidence": "D3 está pendente. Stan guarda expectativas condicionais em Z. Lei de variância total e distribuição discreta própria dão variância completa 208.96 versus 116.16 para esperanças condicionais. Sem origem de stolen, D0 fica entre Dobs-M-2S e Dobs-M-S.",
+      "counterevidence_and_scope": "Rao-Blackwellização estima corretamente a média posterior do funcional e não é defeito por si. Limites do candidato são condicionais à viabilidade e ao mecanismo. Não afirma ter identificado vencedor contrafactual.",
+      "consequence": "Quantis e conclusões de margem precisam de estimando explícito; T1 pode mudar segundo colocado e denominador válido, T2 ainda agrega brancos/nulos.",
+      "options": ["Distribuição completa do funcional por draw, preservando classes/contagens", "Distribuição de esperança condicional explicitamente rotulada", "Margem com limites de identificação parcial", "Hipóteses explícitas e sensibilidade para origens de stolen"],
+      "proposal_safety": "owner_decision"
+    }
+  ],
+  "executor_findings": [
+    {"id": "G2-F1", "classification": "CONFIRMED", "severity": "critical", "defect_location": "source_model_not_contract", "evidence": "J:157-177,191-197; C:163; independent_checks.csv invalid_positive_mass_parent = 499.5", "limit": "Defeito de suporte da especificação; comportamento runtime JAGS permanece não testado."},
+    {"id": "G2-F2", "classification": "CONFIRMED", "severity": "major", "defect_location": "source_physical_support_not_contract", "evidence": "P22 p.6; P23 eq.3; J:196-197; massas físicas .875 e .96875", "limit": "Produto dos papers e Stan continuam normalizados no retângulo; adequação como likelihood composta é decisão."},
+    {"id": "G2-F3", "classification": "CONFIRMED", "severity": "major", "defect_location": "cross_source_target_divergence_not_contract", "evidence": "C:128-216; S:139-144,185-206; soma exata .171900319424 versus plugin .19600864; contraexemplo limpo .4116 versus .4872", "limit": "Escala auxiliar de mistura e marginalização de Z são exatas isoladamente; não foi certificado ajuste empírico."},
+    {"id": "G2-F4", "classification": "CONFIRMED", "severity": "major", "defect_location": "cross_source_prior_divergence_not_contract", "evidence": "P22 p.6, P23 p.7, J:26,74,86,100,134; S:120,155,171; .2 versus .08 e 1.0001 versus 1", "limit": "A ambiguidade N(0,1/10000) textual não autoriza inferir intenção do autor; impacto prático não medido."},
+    {"id": "G2-F5", "classification": "CONFIRMED", "severity": "major", "defect_location": "estimand_distinction_and_identification_limit_not_contract", "evidence": "C:220-252; S:228-265; teste de variância total e limites T1/T2", "limit": "Expectativas condicionais são válidas como seu próprio estimando; origem de stolen exige hipóteses para margem pontual."}
+  ],
+  "criteria": [
+    {"criterion": "Cada equivalência tem derivação/teste e divergências permanecem rotuladas", "status": "pass", "evidence": "review.md seções 2-5; 75 testes independentes"},
+    {"criterion": "Exp(5) e escalas correspondem ao código congelado", "status": "pass", "evidence": "Manual primário e J/S; review.md seção 3"},
+    {"criterion": "Suporte, contagens, constantes e transformações auditados", "status": "pass", "evidence": "review.md seções 3-5; 400 casos de suporte; 162 casos de marginalização"},
+    {"criterion": "Rederivação independente sem questão material aberta", "status": "changes_requested", "evidence": "Rederivação efetiva concluída; G2-QA-D1, G2-QA-D2, G2-QA-D3 não resolvidos"}
+  ],
+  "todos": [
+    {"id": "G2-T1", "review_result": "coverage_confirmed", "scope": "Fontes primárias e blocos J/S/wrappers inspecionados; não revalidação empírica"},
+    {"id": "G2-T2", "review_result": "independently_rederived", "scope": "Jacobian, simplex, precisão/variância/SD, interceptos e dummies"},
+    {"id": "G2-T3", "review_result": "independently_rederived", "scope": "Probabilidades em três componentes, suportes, normalizadores, átomos e clamp"},
+    {"id": "G2-T4", "review_result": "independently_rederived", "scope": "Draw versus expectativa, margem de adversário fixado e limites adicionais T1/T2"},
+    {"id": "G2-T5", "review_result": "independent_rederivation_completed", "scope": "Prova de soma finita e 162 casos N=1..4; normalizadores por CDF; não certifica semântica runtime ou escolhe alvo", "ledger_modified": false}
+  ],
+  "tests": {
+    "independent_script": "quality_reports/results/mebane_gates/G2/round1/review/independent_checks.R",
+    "results": "quality_reports/results/mebane_gates/G2/round1/review/independent_checks.csv",
+    "metrics": "quality_reports/results/mebane_gates/G2/round1/review/independent_metrics.csv",
+    "passed": 75,
+    "total": 75,
+    "finite_enumeration_cases": 162,
+    "max_enumeration_absolute_error": 4.44089209850063e-16,
+    "enumeration_tolerance": 1e-12,
+    "rng": "none",
+    "mcmc": false,
+    "author_algebra_imported": false,
+    "author_assertions_executed": false,
+    "first_run": "68/70; two integrator-default precision failures. Preserved in first_run/. Tightened integration precision, unchanged assertion tolerances; added five checks."
+  },
+  "manifest_completeness_basis": {
+    "hashes_verified": 73,
+    "run_fields_crosschecked": ["inputs", "code", "configuration", "outputs", "commands", "dependency_manifests", "dependency_approvals"],
+    "read_audit": ["prepare_sources.py", "build_candidate.py", "inspect_pdf.py", "render_code.lua", "tests/mebane/algebra/qbl_algebra.R", "tests/mebane/algebra/run_tests.R", "qbl literal and fixed-commit function", "Stan model", "three frozen R wrappers", "P22/P23 specifications", "JAGS manual", "historical summaries and G0 claims"],
+    "snapshot_aliases_verified": 5,
+    "material_omitted_inputs_found": [],
+    "qualification": "Completeness for the mathematical audit, not execution of historical wrappers/fits or cold restoration of environment. Identical snapshot aliases represent original copied inputs; historical mutable-ledger projection is not the operative contract."
+  },
+  "visual_qa": {
+    "candidate_pdf_sha256": "6e55a3a5f3ebd88a4f47b353ba4bad99ed418379ac4698d490291979d5e126cf",
+    "pages": 13,
+    "contact_sheets_inspected_pages": [1,2,3,4,5,6,7,8,9,10,11,12,13],
+    "detail_pages": [6,8,12],
+    "status": "pass_spot_check",
+    "observations": "No material illegible equations, replacement boxes, clipping or unintended non-text. Table continues across pages 11-12. Primary-source P23 missing k visually confirmed against P22.",
+    "limit": "Spot QA, not character-by-character typography certification."
+  },
+  "commands": [
+    "python3 quality_reports/results/mebane_gates/G2/round1/review/verify_evidence.py",
+    "Rscript --vanilla quality_reports/results/mebane_gates/G2/round1/review/independent_checks.R",
+    "pdftotext -layout on candidate, P22, P23 and JAGS manual into review/",
+    "pdftoppm on candidate pages 6,8,12 and primary-source equation pages into review/",
+    "python3 quality_reports/results/mebane_gates/G2/round1/review/package_review.py"
+  ],
+  "limits": [
+    "No JAGS/Stan compilation or execution, no MCMC, no installation and no G3.",
+    "No fit reload, empirical identification, calibration, power or national performance validation.",
+    "Runtime policy for invalid JAGS parents not established; diagnostic zero-invalid kernel explicitly distinguished.",
+    "Historical timing and convergence outputs inspected, not recalculated.",
+    "Frozen-source fidelity checked; external authenticity/download provenance not independently reacquired.",
+    "T1/T2 arithmetic is conditional on specified intervention and feasible totals; no legal or official data certification.",
+    "No candidate, ledger, data, fits, G1 or G0 edits. Only review/ written.",
+    "Coordinator must adjudicate; no substantive decision approved by reviewer authority."
+  ]
+}

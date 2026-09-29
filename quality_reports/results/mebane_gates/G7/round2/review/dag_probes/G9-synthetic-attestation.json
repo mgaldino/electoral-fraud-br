@@ -1,0 +1,13 @@
+{
+  "gate_id": "G9",
+  "requirement": "turn_not_held",
+  "election_year": 2026,
+  "turn": 2,
+  "source_url": "https://www.tse.jus.br/qa-synthetic",
+  "publication_date": "2026-09-29",
+  "checked_at": "2026-09-29T04:39:31.832602+00:00",
+  "reviewer_id": "22222222-2222-4222-8222-222222222222",
+  "snapshot_path": "G9-synthetic-snapshot.txt",
+  "snapshot_sha256": "d4e61aaff19eae9222b734b26b9b1fda31021a744ba19809945cfc6d89430057",
+  "occurrence": "not_held"
+}

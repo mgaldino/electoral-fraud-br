@@ -1,0 +1,13 @@
+{
+  "command": [
+    "python3",
+    "quality_reports/results/mebane_gates/G1/round2/verify_preservation.py"
+  ],
+  "command_display": "python3 quality_reports/results/mebane_gates/G1/round2/verify_preservation.py",
+  "scope": "Verify prior round and QA preserved, recover reviewed source bytes, record coordinator addendum",
+  "started_at_utc": "2026-09-29T03:00:27.314660+00:00",
+  "ended_at_utc": "2026-09-29T03:00:29.649841+00:00",
+  "elapsed_seconds": 2.335174,
+  "exit_code": 0,
+  "output": "quality_reports/results/mebane_gates/G1/round2/logs/preservation_check.txt"
+}

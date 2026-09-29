@@ -1,0 +1,70 @@
+{
+  "year": 2022,
+  "turn": 1,
+  "election_date": "02/10/2022",
+  "candidate": {
+    "code": 22,
+    "name": "CANDIDATO"
+  },
+  "version": "2c5f110e07cb7b312e9b14fa5b9ce5e0edb0f69fff5b5c52b42171267c0ebabb",
+  "policy_sha256": "c19be1f560e4f8498556554e41fe9f5ea90d14bc808df09a84919687e30c8fd3",
+  "input_hashes": {
+    "votes": "db92ef19e588054ff0dbfb72db91b49d158d98378bd75ccb3813bb45a38f17d3",
+    "ea11": "2199ced2754a0c31a84f8f5682e9c687ec7c552a01ed1b95dc2a91b1f5df1792",
+    "ea16_1": "4e0ede33557e233e19f7e0a7f0d70b760c83b9fdb011a514effd344bad1bb0d9",
+    "ea16_2": "f80444ad22cfda6a98689bf0bedee99b1aa5c85bc65ac22bd30f191fa30e08fe",
+    "controls": "5d84f4653b295344838ea8b55b426fc9efb25a112df216e0291cab7c10d96fa8",
+    "config": "5df1da4e093b97cde736534c5bf934ef05e386bfddaadb2e3aa0d4ab00b8b001"
+  },
+  "provenance": "fixture",
+  "phase": "s",
+  "source_url": "",
+  "validation": {
+    "reference_complete": false,
+    "national_coverage_attested": false,
+    "territorial_scope": {
+      "universe": "Synthetic SP principal sections listed in the supplied EA16; not a statewide census",
+      "expected_ufs": [
+        "AM",
+        "SP"
+      ],
+      "reference_ufs": [
+        "AM",
+        "SP"
+      ],
+      "observed_ufs": [
+        "SP"
+      ],
+      "coverage_basis": "supplied_EA16_principal_sections"
+    },
+    "by_uf": [
+      {
+        "uf": "AM",
+        "reference_sections": 2,
+        "observed_sections": 0,
+        "missing_sections": 2
+      },
+      {
+        "uf": "SP",
+        "reference_sections": 2,
+        "observed_sections": 2,
+        "missing_sections": 0
+      }
+    ],
+    "expected_sections": 4,
+    "observed_sections": 2,
+    "missing_sections": ["AM:00001:0001:0001", "AM:00001:0001:0002"],
+    "totals": {
+      "aptos": 18,
+      "turnout": 9,
+      "candidate_votes": 5,
+      "blank": 2,
+      "null": 2
+    },
+    "controls_pass": false,
+    "status": "incomplete_coverage"
+  },
+  "data_ready": false,
+  "inference_ready": false,
+  "release_condition": "independent official-source and coverage attestation; G6 pass for inference"
+}

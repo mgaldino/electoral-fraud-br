@@ -1,0 +1,67 @@
+{
+  "synthetic_only": true,
+  "real_gate_authorized": false,
+  "status": "PASS",
+  "cases": [
+    {
+      "id": "G8_pass_G9_waiting_coherent_records",
+      "errors": [],
+      "expected_error": null,
+      "passed": true
+    },
+    {
+      "id": "G8_pass_G9_inconclusive_coherent_records",
+      "errors": [],
+      "expected_error": null,
+      "passed": true
+    },
+    {
+      "id": "G8_missing_G6",
+      "errors": [
+        "G8: prerequisite G6 has not passed"
+      ],
+      "expected_error": "G8: prerequisite G6 has not passed",
+      "passed": true
+    },
+    {
+      "id": "G8_missing_G7",
+      "errors": [
+        "G8: prerequisite G7 has not passed"
+      ],
+      "expected_error": "G8: prerequisite G7 has not passed",
+      "passed": true
+    },
+    {
+      "id": "G8_boolean_labels_not_approval",
+      "errors": [
+        "G8: pass requires approval records"
+      ],
+      "expected_error": "G8: pass requires approval records",
+      "passed": true
+    },
+    {
+      "id": "G9_no_attestation",
+      "errors": [
+        "G9: applicability_evidence requires independent official attestation"
+      ],
+      "expected_error": "G9: applicability_evidence requires independent official attestation",
+      "passed": true
+    },
+    {
+      "id": "G9_structural_nonoccurrence_attestation",
+      "errors": [],
+      "expected_error": null,
+      "passed": true
+    },
+    {
+      "id": "G9_unknown_occurrence_rejected",
+      "errors": [
+        "G9: invalid external evidence: non-occurrence attestation requires occurrence=not_held without coverage_pass"
+      ],
+      "expected_error": "G9: invalid external evidence: non-occurrence attestation requires occurrence=not_held without coverage_pass",
+      "passed": true
+    }
+  ],
+  "wall_seconds": 0.14555524999741465,
+  "command": "python3 -B quality_reports/results/mebane_gates/G7/round2/review/probe_dag.py"
+}

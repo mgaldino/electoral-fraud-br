@@ -8,7 +8,7 @@ Parecer sobre a research note de terceiros "Is there evidence of fraud in Brazil
 
 ## Estado atual
 
-O protocolo vigente e `quality_reports/plans/mebane_2022_2026_gates.json`: baseline G0, validacao de dados/modelo/inferencia de 2022 e preparacao separada para os turnos de 2026. Blocos 0-2 e testes suplementares tem artefatos historicos; nao equivalem a validacao atual. O pipeline qbl nacional e as conclusoes inferenciais continuam pendentes. O candidato reparado G0 encontra-se em `quality_reports/results/mebane_gates/G0/round2/` para revisao independente.
+O protocolo vigente é `quality_reports/plans/mebane_2022_2026_gates.json`: baseline G0, validação de dados/modelo/inferência de 2022 e preparação separada para os turnos de 2026. G0, G1 e G7 round2 estão aprovados. G7 cobre staging ensaiado de CSV normalizado, não conversor bruto oficial nem atestação de votos reais de 2026. G2 tem auditoria matemática e rederivação independente concluídas, mas permanece `changes_requested` por decisões de alvo, priors e estimandos. Consultar `appendices/mebane_model_contract.md` e `quality_reports/results/mebane_gates/G2/round1/adjudication.md`. Blocos 0-2 e testes suplementares têm artefatos históricos; não equivalem a validação atual. O pipeline qbl nacional e as conclusões inferenciais continuam pendentes; o ledger prevalece sobre este resumo.
 
 - Manuscrito: `research_note.md`
 - Plano metodologico aprovado: `quality_reports/plans/2026-04-10_reconstrucao-metodologica.md`
@@ -49,6 +49,7 @@ R. O baseline qbl usa `eforensics` 0.0.4 de `UMeforensics/eforensics_public` no 
 2. Checar `git log --oneline -10` e `git status`.
 3. Ler o ledger vigente e as evidencias congeladas da rodada G0 round2. Nao rodar a analise nacional antes de G1-G5 aprovados, sobretudo o preflight de recursos.
 4. Tratar escolhas de engine, especificacao e criterios inferenciais como pendentes dos gates G2-G4, nao como decisoes aprovadas pelos handoffs de abril.
+5. Os loaders G1 exigem `CONFIG_JSON` e diretório de saída explícitos. Não usar as chamadas antigas sem argumentos nem ligar automaticamente seus produtos aos scripts históricos. Ver comandos vigentes no README; preservar rounds congelados e `data/processed/`.
 
 ### Evidencia historica e limites
 - O pacote `eforensics` 0.0.4 instalado declara `RemoteSha` `3017de537450f97a01872d0157462a68bea348ee`; G0 arquiva o codigo `qbl` e o commit correspondente. O alvo de producao e sua fidelidade matematica serao decididos em G2-G3.

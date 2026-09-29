@@ -1,0 +1,66 @@
+{
+  "reviewed_manifest": "quality_reports/results/mebane_gates/G1/round1/candidate_manifest.json",
+  "reviewed_manifest_sha256": "009e0fd39f8ab495e52fcb214476fcc7b6095f895381006a924df6a2ffbd7003",
+  "files": [
+    {
+      "original_path": "R/01_load_tse.R",
+      "snapshot_path": "quality_reports/results/mebane_gates/G1/round2/previous_candidate_sources/R/01_load_tse.R",
+      "sha256": "05d7322118ac30281a2baf58da907393caae67995fe0e9be790c07705f42f6d1",
+      "snapshotmatchedoldmanifest": true
+    },
+    {
+      "original_path": "R/02_build_vars.R",
+      "snapshot_path": "quality_reports/results/mebane_gates/G1/round2/previous_candidate_sources/R/02_build_vars.R",
+      "sha256": "a22f06b70e0e9afcf3121c397af8df5e14eedb9182f96d0a638d1b1bf55f1cd0",
+      "snapshotmatchedoldmanifest": true
+    },
+    {
+      "original_path": "R/lib/mebane_data.R",
+      "snapshot_path": "quality_reports/results/mebane_gates/G1/round2/previous_candidate_sources/R/lib/mebane_data.R",
+      "sha256": "73b03828da6e49f7b958ac42dc09fdef0ae332a79012b7291f1de608b1081942",
+      "snapshotmatchedoldmanifest": true
+    },
+    {
+      "original_path": "config/mebane/2022.json",
+      "snapshot_path": "quality_reports/results/mebane_gates/G1/round2/previous_candidate_sources/config/mebane/2022.json",
+      "sha256": "f8b33def917ed3885df71dd68284bb0e70be7d830747b56422a3f8ed225b2c86",
+      "snapshotmatchedoldmanifest": true
+    },
+    {
+      "original_path": "quality_reports/results/mebane_gates/G1/round1/freeze_candidate.py",
+      "snapshot_path": "quality_reports/results/mebane_gates/G1/round2/previous_candidate_sources/quality_reports/results/mebane_gates/G1/round1/freeze_candidate.py",
+      "sha256": "14115ecb30bae255f89e3355da9c2c64fb97aebdbfe8a0c6cd290c569b3181cb",
+      "snapshotmatchedoldmanifest": true
+    },
+    {
+      "original_path": "quality_reports/results/mebane_gates/G1/round1/gate_contract.json",
+      "snapshot_path": "quality_reports/results/mebane_gates/G1/round2/previous_candidate_sources/quality_reports/results/mebane_gates/G1/round1/gate_contract.json",
+      "sha256": "2364acc589da079d44687c79c9fb35561816cfe7fd34ad7431f7c18386c1ae4d",
+      "snapshotmatchedoldmanifest": true
+    },
+    {
+      "original_path": "tests/mebane/data/check_official_histories.R",
+      "snapshot_path": "quality_reports/results/mebane_gates/G1/round2/previous_candidate_sources/tests/mebane/data/check_official_histories.R",
+      "sha256": "d49bee41e686e03b606126c28712627d4fb16eca30a51254c5c00ae7efbc9cac",
+      "snapshotmatchedoldmanifest": true
+    },
+    {
+      "original_path": "tests/mebane/data/check_official_munzona.R",
+      "snapshot_path": "quality_reports/results/mebane_gates/G1/round2/previous_candidate_sources/tests/mebane/data/check_official_munzona.R",
+      "sha256": "c1a9d01a2339639a732756d2d81e4632ca8be1a6082f1dd3227965df2b049771",
+      "snapshotmatchedoldmanifest": true
+    },
+    {
+      "original_path": "tests/mebane/data/check_replay.R",
+      "snapshot_path": "quality_reports/results/mebane_gates/G1/round2/previous_candidate_sources/tests/mebane/data/check_replay.R",
+      "sha256": "f98614e78781d40cab771b3c176749d500f731d8e4c810f6bf7ec0bdc540fbfc",
+      "snapshotmatchedoldmanifest": true
+    },
+    {
+      "original_path": "tests/mebane/data/test_g1.R",
+      "snapshot_path": "quality_reports/results/mebane_gates/G1/round2/previous_candidate_sources/tests/mebane/data/test_g1.R",
+      "sha256": "4094915c1fd8594bf81cf9b676c52304c88bc6345c098580065f6a441c5aa416",
+      "snapshotmatchedoldmanifest": true
+    }
+  ]
+}

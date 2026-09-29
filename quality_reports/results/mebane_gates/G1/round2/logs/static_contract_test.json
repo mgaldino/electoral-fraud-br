@@ -1,0 +1,13 @@
+{
+  "command": [
+    "python3",
+    "tests/mebane/data/test_round2_freeze.py"
+  ],
+  "command_display": "python3 tests/mebane/data/test_round2_freeze.py",
+  "scope": "F02 only the hashed static contract may supply gate content",
+  "started_at_utc": "2026-09-29T03:03:29.290394+00:00",
+  "ended_at_utc": "2026-09-29T03:03:29.373478+00:00",
+  "elapsed_seconds": 0.083016,
+  "exit_code": 0,
+  "output": "quality_reports/results/mebane_gates/G1/round2/logs/static_contract_test.txt"
+}

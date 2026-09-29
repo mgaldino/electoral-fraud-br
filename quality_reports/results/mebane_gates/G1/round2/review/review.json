@@ -1,0 +1,93 @@
+{
+  "schema_version": "1.0",
+  "gate_id": "G1",
+  "round": "round2",
+  "contract_sha256": "f985ab97469aa66755b977a09781b30608afa6e245896d9d9788b4461190975d",
+  "candidate_manifest_sha256": "517c17c724cca82a820519c476981d47c8892c7383dd2c3dded9373eba6d31e8",
+  "executor_id": "01a0eaee-0164-7530-884d-adec564a8327",
+  "reviewer_id": "01a0eb01-0a01-7a10-b432-d1f2cdbd12f8",
+  "goal_created_at_unix": 1790651619,
+  "reviewed_at_utc": "2026-09-29T03:24:18Z",
+  "status": "pass",
+  "manifest_complete": true,
+  "findings": [],
+  "resolved_prior_findings": [
+    {
+      "id": "G1-R1-QAD-F01",
+      "source_review": "QA-G1-R1",
+      "adjudication": "quality_reports/results/mebane_gates/G1/round1/adjudication.json",
+      "prior_status": "CONFIRMED",
+      "severity": "major",
+      "resolved": true,
+      "resolution": "Código, data e tipo eleitoral esperados são declarados por turno, conferidos contra os dois arquivos brutos e ancorados nos dois extratos oficiais arquivados. Erros concordantes em ambas as fontes são rejeitados.",
+      "locations": ["R/lib/mebane_data.R:132", "R/lib/mebane_data.R:153", "R/lib/mebane_data.R:236", "config/mebane/2022.json:5"],
+      "evidence": ["adversarial_results.csv", "identity_anchors.csv", "logs/adversarial_final.json", "logs/independent_data.json"]
+    },
+    {
+      "id": "G1-R1-QAD-F02",
+      "source_review": "QA-G1-R1",
+      "adjudication": "quality_reports/results/mebane_gates/G1/round1/adjudication.json",
+      "prior_status": "CONFIRMED",
+      "severity": "major",
+      "resolved": true,
+      "resolution": "O congelador lê um contrato estático previamente vinculado por hash de arquivo e hash canônico, sem leitura do ledger mutável. Auditoria independente conferiu 194 arquivos, fechamento declarado e leituras efetivas dos programas; 53 itens do manifesto anterior permanecem recuperáveis, incluindo dez cópias exatas dos fontes/configuração.",
+      "locations": ["quality_reports/results/mebane_gates/G1/round2/freeze_candidate.py:29", "quality_reports/results/mebane_gates/G1/round2/freeze_candidate.py:85"],
+      "evidence": ["source_audit.md", "integrity_results.json", "logs/integrity_final.json", "logs/static_contract_fixtures.json"]
+    },
+    {
+      "id": "G1-R1-COORD-F03",
+      "source_review": "COORD-G1-R1",
+      "adjudication": "quality_reports/results/mebane_gates/G1/round1/adjudication_addendum.json",
+      "prior_status": "CONFIRMED",
+      "severity": "major",
+      "resolved": true,
+      "resolution": "Todos os controles de candidatos declarados são validados. Contraprovas próprias para 12, 13, 15, 22 e 30 rejeitam totais errados; ausência com controle zero válido é aceita; nomes inválidos, valores inválidos, duplicidade, pseudo-candidato e candidato inelegível no turno são rejeitados.",
+      "locations": ["R/lib/mebane_data.R:42", "R/lib/mebane_data.R:289"],
+      "evidence": ["adversarial_results.csv", "logs/adversarial_final.json", "executor_fixtures/repair_regressions.csv"],
+      "attribution_note": "Achado da contraprova adicional da coordenação; não pertence ao parecer QA round1."
+    }
+  ],
+  "dependency_g0": {
+    "candidate_manifest_sha256": "f71333db477385fc78dad8a7a1a7ca78e48479226dcdbde80ce97d724409fec7",
+    "review_sha256": "ef624cb4b2d8ad098b87e196d87add358ce1eba93165d44fcc1939ff303f5376",
+    "adjudication_sha256": "ea1b4905fdfa14f6e3f36c41974ea948ba0c39d1f81f87d6eaf479782216267b",
+    "verified": true
+  },
+  "todos_covered": [
+    {"id": "G1-T1", "status": "pass", "basis": "Configuração externa e duas execuções limpas por CLI, ambas com saída própria em review/.", "evidence": ["logs/load_clean.json", "logs/build_clean.json", "logs/load_replay.json", "logs/build_replay.json"]},
+    {"id": "G1-T2", "status": "pass", "basis": "Fixtures existentes, 64 regressões do executor e 43 contraprovas próprias; releitura independente de chaves e categorias, ancoragem de identidade e conferência das colunas anteriores dos parquets.", "evidence": ["adversarial_results.csv", "executor_fixtures/repair_regressions.csv", "identity_anchors.csv", "round1_column_invariance.csv"]},
+    {"id": "G1-T3", "status": "pass", "basis": "Controles nacionais, 56 UF-turnos, 364 candidato-UF-turnos e 84 zonas com seções não instaladas; reconstrução independente de N/a/w e retenção das 99 linhas de nominais zero.", "evidence": ["independent_controls.csv", "independent_national.csv", "independent_uf_turn.csv", "model_summary.csv"]},
+    {"id": "G1-T4", "status": "pass", "basis": "Exterior e seções pequenas retidos, líder nacional 13 nos dois turnos, exclusões e flags invariantes, versões 2022/2026 distinguidas; número do candidato permanece a unidade de voto, sem somar coligações.", "evidence": ["model_summary.csv", "independent_summary.json", "round1_column_invariance.csv", "source_audit.md"]},
+    {"id": "G1-T5", "status": "pass", "basis": "Reexecução integral, contraprovas independentes e quatro vias de replay byte-idêntico para nove arquivos centrais.", "evidence": ["replay_hashes.csv", "logs/independent_data.json", "logs/adversarial_final.json"]}
+  ],
+  "verification": {
+    "manifest_files": 194,
+    "round1_manifest_entries_recoverable": 53,
+    "round1_source_copies": 10,
+    "round1_existing_files_unchanged": 74,
+    "round1_coordinator_additions_recorded": 4,
+    "independent_adversarial_cases": 43,
+    "independent_expected_rejections": 42,
+    "executor_repair_cases_rerun": 64,
+    "raw_detail_rows": 944150,
+    "raw_vote_rows": 5380736,
+    "uf_turn_controls": 56,
+    "candidate_uf_turn_controls": 364,
+    "noninstalled_zone_controls": 84,
+    "core_products_byte_identical_four_ways": 9,
+    "unchanged_prior_parquet_columns": 70,
+    "only_added_parquet_column": "CD_TIPO_ELEICAO",
+    "estimator_changed": false
+  },
+  "commands_and_timing": "qa_run.json",
+  "qa_manifest": "qa_manifest.json",
+  "reviewer_script_issue": "A primeira execução de adversarial_review.R falhou apenas ao imprimir a tabela de falhas por uma expressão data.table. O erro foi corrigido no script QA, a execução final passou e ambos os logs foram preservados.",
+  "limits": [
+    "Aprovação restrita à integridade, validação e reprodução do candidato G1 round2; a mudança de estado do gate depende da adjudicação da coordenação.",
+    "ZIPs oficiais locais gerados em 2026 controlam a eleição de 2022; igualdade de agregados não autentica externamente o ZIP dos autores nem prova igualdade de todos os campos entre snapshots.",
+    "Os históricos oficiais não trazem campo de abstenção; o controle independente desse campo usa os extratos oficiais posteriores de município/zona. Não há HTML arquivado das notícias citadas na configuração.",
+    "Somente os membros _BR.csv pertinentes foram lidos dos ZIPs de município/zona, sem extrair o arquivo nominal inteiro ou concatenar BR e BRASIL.",
+    "Não houve acesso à rede, instalação, MCMC ou validação inferencial; não se avaliou disponibilidade de resultados eleitorais de 2026.",
+    "Avisos de locale e de sondagem de CPU do Arrow apareceram no ambiente restrito; as execuções encerraram com código zero e os produtos coincidiram byte a byte."
+  ]
+}

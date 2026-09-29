@@ -1,0 +1,10 @@
+{
+  "gate_id": "G7",
+  "round": "round1",
+  "contract_sha256": "fc071a8664d04ba6a0a4ca91298d333ee1ca89868a26b23e705946fef1c2f94d",
+  "candidate_manifest_sha256": "aac55b228a152f309a6b2938f6575f5025b2c467cb0a70c47dca535f72cf9a0e",
+  "status": "pass",
+  "findings": [],
+  "review_sha256": "8ed8898aada91989f395ada67befecf2a69a99b613e7815502c6319b79196e58",
+  "unresolved_material_findings": 0
+}

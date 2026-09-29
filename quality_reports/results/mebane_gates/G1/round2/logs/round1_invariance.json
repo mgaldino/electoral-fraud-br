@@ -1,0 +1,17 @@
+{
+  "command": [
+    "Rscript",
+    "--vanilla",
+    "tests/mebane/data/check_round1_invariance.R",
+    "quality_reports/results/mebane_gates/G1/round1/outputs/2022_final",
+    "quality_reports/results/mebane_gates/G1/round2/outputs/2022_final",
+    "quality_reports/results/mebane_gates/G1/round2/checks"
+  ],
+  "command_display": "Rscript --vanilla tests/mebane/data/check_round1_invariance.R quality_reports/results/mebane_gates/G1/round1/outputs/2022_final quality_reports/results/mebane_gates/G1/round2/outputs/2022_final quality_reports/results/mebane_gates/G1/round2/checks",
+  "scope": "Rowwise key and all prior parquet columns plus aggregate report invariance against frozen round1",
+  "started_at_utc": "2026-09-29T03:00:27.295686+00:00",
+  "ended_at_utc": "2026-09-29T03:00:34.050828+00:00",
+  "elapsed_seconds": 6.755172,
+  "exit_code": 0,
+  "output": "quality_reports/results/mebane_gates/G1/round2/logs/round1_invariance.txt"
+}

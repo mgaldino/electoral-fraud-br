@@ -1,0 +1,18 @@
+{
+  "schema": "g7-intake-v1",
+  "year": 2026,
+  "cargo": 1,
+  "pleito_t1_documented": 3220,
+  "election_t1_documented": 6257,
+  "turns": [1, 2],
+  "candidate_selection": {"1": null, "2": null},
+  "turn_2": "conditional_on_official_occurrence",
+  "technical_sources_accessed": "2026-09-28",
+  "technical_sources": {
+    "landing": "https://www.tse.jus.br/eleicoes/informacoes-tecnicas-sobre-a-divulgacao-de-resultados",
+    "ea11": "https://www.tse.jus.br/eleicoes/eleicoes-2026-content/arquivos/divulgacao-de-resultados/tse-ea11-arquivo-de-configuracao-de-eleicoes",
+    "ea16": "https://www.tse.jus.br/eleicoes/eleicoes-2026-content/arquivos/divulgacao-de-resultados/tse-ea16-arquivo-de-configuracao-de-secoes-eleitorais",
+    "ea18": "https://www.tse.jus.br/eleicoes/eleicoes-2026-content/arquivos/divulgacao-de-resultados/tse-ea18-arquivo-auxiliar-de-secao",
+    "ea20": "https://www.tse.jus.br/eleicoes/eleicoes-2026-content/arquivos/divulgacao-de-resultados/tse-ea20-arquivo-de-resultado-unificado"
+  }
+}

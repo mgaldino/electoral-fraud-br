@@ -1,0 +1,45 @@
+{
+  "note": "Stress probe only; no cross-process lock or atomic directory transaction is implemented.",
+  "attempts": [
+    {
+      "attempt": 1,
+      "writers": ["ok", "error: Cannot create version"],
+      "serial_replay": "ok"
+    },
+    {
+      "attempt": 2,
+      "writers": ["error: Cannot create version", "ok"],
+      "serial_replay": "ok"
+    },
+    {
+      "attempt": 3,
+      "writers": ["ok", "error: Cannot create version"],
+      "serial_replay": "ok"
+    },
+    {
+      "attempt": 4,
+      "writers": ["error: Cannot create version", "ok"],
+      "serial_replay": "ok"
+    },
+    {
+      "attempt": 5,
+      "writers": ["error: Cannot create version", "ok"],
+      "serial_replay": "ok"
+    },
+    {
+      "attempt": 6,
+      "writers": ["error: Cannot create version", "ok"],
+      "serial_replay": "ok"
+    },
+    {
+      "attempt": 7,
+      "writers": ["ok", "error: Cannot create version"],
+      "serial_replay": "ok"
+    },
+    {
+      "attempt": 8,
+      "writers": ["error: Cannot create version", "ok"],
+      "serial_replay": "ok"
+    }
+  ]
+}

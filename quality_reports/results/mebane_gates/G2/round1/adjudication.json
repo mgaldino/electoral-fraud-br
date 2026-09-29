@@ -1,0 +1,162 @@
+{
+  "schema_version": "1.0",
+  "adjudication_id": "mebane-G2:783cfb036f8f:round1",
+  "gate_id": "G2",
+  "round": "round1",
+  "contract_sha256": "f834bc1d12d88b4bc82fb2ada95120a838451c5809332630a75cd9abf03cf4d1",
+  "candidate_manifest_sha256": "783cfb036f8f26bf894c36782df4fb94e20351e4df015ca6e24330021d04a5a9",
+  "review_sha256": "a027cd5ad0875ffbb92e3b983c2907700fe6e8b4dbfc776df141ef9f5f80ba7c",
+  "status": "changes_requested",
+  "unresolved_material_findings": 3,
+  "source": {
+    "reviewed_artifact": "quality_reports/results/mebane_gates/G2/round1/candidate_manifest.json",
+    "sha256": "783cfb036f8f26bf894c36782df4fb94e20351e4df015ca6e24330021d04a5a9",
+    "artifact_intact": true
+  },
+  "contract": {
+    "required": false,
+    "path": null,
+    "sha256": null,
+    "contract_id": null,
+    "artifact_sha256": null,
+    "status": null,
+    "stale": false
+  },
+  "contract_scope_note": "Auditoria de especificação matemática e código, sem transformação de argumento de manuscrito. O contrato operacional G2 está vinculado pelo hash canônico acima. As três pendências confirmadas são decisões de alvo, não erros de derivação do documento.",
+  "review_sources": [
+    {
+      "review_id": "QA-G2-R1",
+      "path": "quality_reports/results/mebane_gates/G2/round1/review/review.json",
+      "sha256": "a027cd5ad0875ffbb92e3b983c2907700fe6e8b4dbfc776df141ef9f5f80ba7c"
+    }
+  ],
+  "findings": [
+    {
+      "finding_id": "G2-QA-D1",
+      "id": "G2-QA-D1",
+      "source_review": "QA-G2-R1",
+      "quoted_finding": "Alvo estatístico não selecionado",
+      "type": "method",
+      "severity": "major",
+      "scientific_dimension": "statistical_target_and_implementation_fidelity",
+      "held_decision": false,
+      "status": "CONFIRMED",
+      "resolved": false,
+      "source_locations": [
+        "appendices/mebane_model_contract.md:163",
+        "appendices/mebane_model_contract.md:176",
+        "appendices/mebane_model_contract.md:297",
+        "quality_reports/results/mebane_gates/G0/round1/qbl_installed_3017de5.jags:191"
+      ],
+      "defect_evidence": [
+        "O contrato enumera alternativas para D1 e não seleciona uma delas.",
+        "Contraprova própria: N=A=R_M=1, R_S=0, nu=tau=0.5 produz pW=499.5 na expressão JAGS; massas físicas dos casos sem fraude são 0.875 no produto do paper (N=1) e 0.96875 no condicional JAGS (N=2).",
+        "A substituição de latentes pela média muda a likelihood mesmo em caso válido sem clamp: soma exata 0.4116 versus plug-in 0.4872."
+      ],
+      "refuting_evidence": [],
+      "mechanical_checks": [
+        "Rscript --vanilla quality_reports/results/mebane_gates/G2/round1/adjudication_checks.R: nove verificações próprias passaram.",
+        "python3 quality_reports/results/mebane_gates/G2/round1/adjudication_integrity.py: 73 arquivos do candidato e 49 da revisão conferidos."
+      ],
+      "reasoning": "Paper, JAGS e Stan histórico não definem o mesmo alvo. A confirmação diz respeito à lacuna de seleção do alvo e à divergência documentada; não reprova a derivação. A normalização no retângulo não resolve o suporte físico. O comportamento runtime do JAGS ainda é desconhecido, e não foi substituído por suposição de rejeição/renormalização.",
+      "proposed_fix_assessment": "owner_decision",
+      "disposition": "Submeter escolha entre primeiro reproduzir o software JAGS como benchmark, preservando e testando sua semântica, ou abrir um modelo gerador alternativo explicitamente distinto. Não inserir clamp, truncamento ou normalizador silenciosamente.",
+      "resolution": "Pendente da decisão substantiva do usuário. G3 não liberado."
+    },
+    {
+      "finding_id": "G2-QA-D2",
+      "id": "G2-QA-D2",
+      "source_review": "QA-G2-R1",
+      "quoted_finding": "Priors, intercepto e parametrização geográfica não selecionados",
+      "type": "method",
+      "severity": "major",
+      "scientific_dimension": "prior_fidelity_and_identification",
+      "held_decision": false,
+      "status": "CONFIRMED",
+      "resolved": false,
+      "source_locations": [
+        "appendices/mebane_model_contract.md:85",
+        "appendices/mebane_model_contract.md:100",
+        "appendices/mebane_model_contract.md:112",
+        "appendices/mebane_model_contract.md:299",
+        "quality_reports/results/mebane_gates/G0/round1/qbl_installed_3017de5.jags:134"
+      ],
+      "defect_evidence": [
+        "D2 permanece explicitamente pendente.",
+        "JAGS usa precisão 1/v com v~Exp(5); o texto dos artigos atribui Exp(5) ao desvio-padrão. As variâncias residuais médias são respectivamente 0.2 e 0.08, confirmadas por cálculo independente.",
+        "Somar os dois interceptos independentes do JAGS produz variância 1.0001; a prior de variância 1 do Stan não é exatamente idêntica. A codificação geográfica altera a prior dos contrastes."
+      ],
+      "refuting_evidence": [],
+      "mechanical_checks": [
+        "Integrais próprias de Exp(5) em adjudication_checks.R/CSV: 0.2 para variância exponencial e 0.08 para o quadrado de SD exponencial.",
+        "Inspeção do contrato e código JAGS congelado, cotejada com rederivação independente da QA."
+      ],
+      "reasoning": "Uma portagem fiel precisa preservar a parametrização efetiva, não somente o nome dos parâmetros. Isso não demonstra que a diferença pequena de intercepto explique problemas empíricos, nem identifica a intenção do autor. A ordenação parcial de pi está correta; impor ordem total mudaria a prior.",
+      "proposed_fix_assessment": "owner_decision",
+      "disposition": "Se a decisão for benchmark JAGS, preservar priors efetivas, intercepto e desenho explicitamente fixado. Qualquer adoção da prior textual ou mudança geográfica deve ser uma variante nomeada, não uma correção implícita.",
+      "resolution": "Pendente de fechamento do contrato para a rota escolhida; nenhum prior modificado."
+    },
+    {
+      "finding_id": "G2-QA-D3",
+      "id": "G2-QA-D3",
+      "source_review": "QA-G2-R1",
+      "quoted_finding": "Distribuição-alvo dos totais e hipóteses de margem não selecionadas",
+      "type": "method",
+      "severity": "major",
+      "scientific_dimension": "estimand_uncertainty_and_counterfactual_identification",
+      "held_decision": false,
+      "status": "CONFIRMED",
+      "resolved": false,
+      "source_locations": [
+        "appendices/mebane_model_contract.md:220",
+        "appendices/mebane_model_contract.md:229",
+        "appendices/mebane_model_contract.md:239",
+        "appendices/mebane_model_contract.md:301",
+        "quality_reports/results/mebane_gates/G0/round1/final_state/stan/eforensics_qbl.stan:240"
+      ],
+      "defect_evidence": [
+        "D3 permanece explicitamente pendente; o Stan guarda esperanças condicionais em Z, não a distribuição completa do funcional com classes incertas.",
+        "Exemplo próprio da lei da variância total: variância completa 25, contra 9 da esperança condicional. A QA obteve a mesma distinção em outro exemplo.",
+        "A identidade D0=Dobs-M-S-S_R exige conhecer a origem de stolen. Sem essa hipótese, 0<=S_R<=S produz limites, não uma margem contrafactual pontual; mesmo T2 contém brancos/nulos no grupo agregado."
+      ],
+      "refuting_evidence": [],
+      "mechanical_checks": [
+        "Exemplo independente executado em adjudication_checks.R, preservado no CSV.",
+        "Conferência algébrica de G2.20/G2.21 contra a definição de M, S e S_R e contra a revisão independente."
+      ],
+      "reasoning": "Rao-Blackwellização é válida para a média posterior e não é um bug em si; seus quantis são de outro objeto. Limites aritméticos da margem são condicionais ao mecanismo e à viabilidade das contagens. Não autorizam afirmar vencedor contrafactual ou tratar intensidades modeladas como votos comprovadamente manipulados.",
+      "proposed_fix_assessment": "owner_decision",
+      "disposition": "Recomendar distribuição completa do funcional por draw para incerteza, com esperanças condicionais rotuladas como resumo auxiliar; manter limites de margem enquanto não houver hipótese substantiva de origem de stolen. Fixar essa escolha no contrato antes de implementação.",
+      "resolution": "Recomendação ainda não promovida a decisão do usuário; nenhum resultado inferencial liberado."
+    }
+  ],
+  "summary": {
+    "total": 3,
+    "confirmed": 3,
+    "partial": 0,
+    "refuted": 0,
+    "unresolved": 0,
+    "held_decisions": 0
+  },
+  "summary_note": "unresolved=0 significa que a existência das três pendências foi adjudicada; unresolved_material_findings=3 significa que as decisões necessárias para liberar o gate continuam abertas.",
+  "evidence": {
+    "root_checks": "quality_reports/results/mebane_gates/G2/round1/adjudication_checks.csv",
+    "integrity": "quality_reports/results/mebane_gates/G2/round1/adjudication_integrity.json",
+    "review_manifest": "quality_reports/results/mebane_gates/G2/round1/review/review_manifest.json",
+    "review_manifest_sha256": "2584c1fb80cf52ab811baf09827a1054a7c5cf890f2347f081d6ad38bbb46af9",
+    "independent_tests_passed": 75,
+    "independent_enumeration_cases": 162,
+    "root_checks_passed": 9
+  },
+  "adjudication": {
+    "verdict": "BLOCKED",
+    "checked_at": "2026-09-29T03:13:49+00:00",
+    "reasons": [
+      "Nenhum defeito material de derivação encontrado no candidato; as divergências e limitações foram reproduzidas independentemente.",
+      "Escolher ou reparar o modelo altera o alvo estatístico e requer decisão substantiva. Pergunta encaminhada ao usuário; ausência de resposta não é aprovação.",
+      "G2-T5 tem rederivação independente concluída. Isso não seleciona o modelo nem aprova G2/G3.",
+      "BLOCKED é o veredicto desta adjudicação, não mudança do goal nativo. G1 e a futura preparação G7 podem continuar pelas dependências próprias.",
+      "Não houve execução JAGS/Stan, nova estimação ou instalação nesta adjudicação."
+    ]
+  }
+}

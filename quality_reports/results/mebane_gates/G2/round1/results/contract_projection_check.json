@@ -1,0 +1,12 @@
+{
+  "gate_id": "G2",
+  "round": "round1",
+  "checked_by": "01a0eaee-01df-7773-bd63-d321db26a47c",
+  "basis": "executed",
+  "result": "Static gate_contract.json equals current G2 after removing gate status/records and todo status/evidence.",
+  "contract_sha256": "f834bc1d12d88b4bc82fb2ada95120a838451c5809332630a75cd9abf03cf4d1",
+  "canonical_json": "sort_keys=true, ensure_ascii=false, separators=(',',':'), UTF-8",
+  "exit_code": 0,
+  "ledger_in_manifest": false,
+  "note": "One-time read-only equality check; the audited candidate consumes the static contract, not a mutable ledger."
+}

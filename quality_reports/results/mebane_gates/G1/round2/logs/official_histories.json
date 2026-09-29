@@ -1,0 +1,15 @@
+{
+  "command": [
+    "Rscript",
+    "--vanilla",
+    "tests/mebane/data/check_official_histories.R",
+    "quality_reports/results/mebane_gates/G1/round2/outputs/2022_final"
+  ],
+  "command_display": "Rscript --vanilla tests/mebane/data/check_official_histories.R quality_reports/results/mebane_gates/G1/round2/outputs/2022_final",
+  "scope": "National controls from the two archived official 2022 history ZIPs",
+  "started_at_utc": "2026-09-29T02:59:26.142457+00:00",
+  "ended_at_utc": "2026-09-29T02:59:26.409812+00:00",
+  "elapsed_seconds": 0.267317,
+  "exit_code": 0,
+  "output": "quality_reports/results/mebane_gates/G1/round2/logs/official_histories.txt"
+}

@@ -1,0 +1,93 @@
+{
+  "schema_version": "1.0",
+  "gate_id": "G7",
+  "round": "round2",
+  "contract_sha256": "fc071a8664d04ba6a0a4ca91298d333ee1ca89868a26b23e705946fef1c2f94d",
+  "candidate_manifest_sha256": "2593c78b5687c883aff6441f09b5d2e67cd319c1ceae723d043dee44a36e62a6",
+  "run_sha256": "795304f2422dfff2f34a923c4500cdf6df7247edd804f6ab1059494730ae7a1a",
+  "recovery_map_sha256": "31be6643a62ffacb19ad64c796c4373110491bd916aecfa1a5af161d235a91db",
+  "prior_adjudication_sha256": "882d1b4081df7d4443983e5b5709942076030b34f0edf1f18b68d45a6edc122a",
+  "executor_id": "01a0eb3a-6ea4-7f61-a66d-2805e495d1d0",
+  "reviewer_id": "01a0eb4a-fa6d-7463-9d5a-bad4dd08b3c0",
+  "goal_id": "01a0eb4a-fa6d-7463-9d5a-bad4dd08b3c0",
+  "reviewed_at_utc": "2026-09-29T04:42:11Z",
+  "status": "pass",
+  "manifest_complete": true,
+  "scope": "Prontidão operacional ensaiada do staging por seção/candidato, fechamento dos três reparos adjudicados e regressões afetadas. Não atesta votação real, cobertura nacional, conversor oficial bruto ou inferência.",
+  "findings": [],
+  "resolved_prior_findings": [
+    {
+      "id": "G7-R1-COORD-F03",
+      "origin": "COORD-G7-R1",
+      "prior_status": "CONFIRMED",
+      "severity": "major",
+      "status": "closed",
+      "resolved": true,
+      "closed": true,
+      "resolution": "Leitura preserva bytes UTF-8 após validação explícita, sem mudar locale. Controle ASCII, nome acentuado NFC, sequência decomposta e nome com vírgula/apóstrofo passaram ponta a ponta em C e pt_BR.UTF-8. CSV, seleção em configuração, recibo e snapshots preservam identidade exata; byte inválido, sequência truncada/overlong e NUL falham por mensagem específica.",
+      "locations": ["R/lib/mebane_2026_intake.R:38", "R/lib/mebane_2026_intake.R:151", "R/lib/mebane_2026_intake.R:262"],
+      "evidence": ["run01/C_independent/results.json:F03_*", "run01/UTF8_independent/results.json:F03_*", "verification.json:cross_locale_identical_receipts"]
+    },
+    {
+      "id": "G7-R1-QA-F01",
+      "origin": "QA-G7-R1",
+      "prior_status": "CONFIRMED",
+      "severity": "major",
+      "status": "closed",
+      "resolved": true,
+      "closed": true,
+      "resolution": "Datas configuradas por turno são válidas, ordenadas e comparadas exatamente ao EA11. Datas erradas no mesmo ano são recusadas em T1/T2. Configurações incompletas, impossíveis, numéricas, vetoriais ou com turno extra falham pela guarda de datas. A configuração 2026 corresponde à nota arquivada e à URL oficial do calendário; a data T2 permanece condicional e seu código vem do EA11 recebido. Casos 2026 T1/T2 com datas, códigos, cargo, controles e 28 UFs coerentes chegam ao erro específico Candidate selection unresolved for turn.",
+      "locations": ["R/lib/mebane_2026_intake.R:31", "R/lib/mebane_2026_intake.R:55", "R/lib/mebane_2026_intake.R:102", "config/mebane/2026/intake.json:8"],
+      "evidence": ["run01/C_independent/results.json:F01_*", "run01/UTF8_independent/results.json:F01_*", "source_audit.md"]
+    },
+    {
+      "id": "G7-R1-QA-F02",
+      "origin": "QA-G7-R1",
+      "prior_status": "CONFIRMED",
+      "severity": "minor",
+      "status": "closed",
+      "resolved": true,
+      "closed": true,
+      "resolution": "O recibo declara universo territorial, UFs esperadas/referenciadas/observadas e contagens por UF. Referência sem UF esperada ou com UF extra falha especificamente; ausência de votos em uma UF aparece como incomplete_coverage e na contagem local. Uma seção e uma referência mínima cobrindo as 28 siglas podem ser completas somente em relação ao EA16 fornecido. national_coverage_attested, data_ready e inference_ready permanecem false, inclusive com fase/URL/rótulo oficial sintéticos.",
+      "locations": ["R/lib/mebane_2026_intake.R:177", "R/lib/mebane_2026_intake.R:200", "R/lib/mebane_2026_intake.R:206"],
+      "evidence": ["run01/C_independent/results.json:F02_*", "run01/UTF8_independent/results.json:F02_*", "verification.json"]
+    }
+  ],
+  "verification": {
+    "candidate_files": 1859,
+    "candidate_hash_mismatches": 0,
+    "recovery_copies": 1094,
+    "unchanged_round1_files": 1066,
+    "recoverable_prior_candidate_entries": 275,
+    "recoverable_prior_qa_entries": 809,
+    "independent_cases_per_locale": 69,
+    "independent_case_executions": 138,
+    "independent_dag_cases": 8,
+    "cross_locale_byte_identical_receipts": 25,
+    "executor_repair_cases_per_locale": 20,
+    "checker_suite_tests": 26,
+    "G1_fixtures_rerun": true,
+    "G1_approval_hashes_unchanged": true,
+    "helper_locale_unchanged": true,
+    "frozen_inputs_read_audit_pass": true,
+    "mutable_ledger_read_by_candidate_audit_or_checker": false,
+    "gate_state_changed": false
+  },
+  "G1_approved": {
+    "candidate_manifest_sha256": "517c17c724cca82a820519c476981d47c8892c7383dd2c3dded9373eba6d31e8",
+    "review_sha256": "727f6b234e3a580c329cc5e898018bb68c02063717c292b6d91e4fbe12d86941",
+    "adjudication_sha256": "fe21ce5ebaf107027b6cf64f72eb06f9f2549df8f65ccbbd3eeee2067807735e"
+  },
+  "limits": [
+    "Todas as entradas novas são sintéticas. Não houve aquisição de votos 2026, instalação, MCMC ou revisão metodológica ampliada.",
+    "O intake aceita CSV normalizado por seção/candidato. O conversor auditado de arquivos oficiais brutos permanece dependência concreta para uso real.",
+    "Completude é relativa aos EA16 fornecidos; presença das 28 siglas não constitui atestação nacional.",
+    "Calendário 2026 confrontado com nota e URL oficiais previamente registradas. O HTML integral do calendário não está arquivado e não foi novamente obtido nesta QA.",
+    "Os registros do DAG gerados pela QA são explicitamente sintéticos e demonstram apenas validação estrutural. Nenhum registro real foi criado ou alterado.",
+    "Ingestão requer serialização ou lock externo. Concorrência e escala nacional não foram reensaiadas nesta rodada delimitada; a validação UTF-8 lê o arquivo inteiro em memória.",
+    "A primeira instrumentação de leitura classificou uma tentativa frustrada de abrir cache Python inexistente como input descoberto. O traço final distingue tentativas sem arquivo de leituras efetivas; ambos foram preservados."
+  ],
+  "execution_log": "qa_run.json",
+  "verification_log": "verification.json",
+  "review_manifest": "review_manifest.json"
+}

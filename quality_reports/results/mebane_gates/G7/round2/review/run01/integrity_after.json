@@ -1,0 +1,151 @@
+{
+  "checks": [
+    {
+      "id": "hash_candidate_manifest.json",
+      "pass": true,
+      "detail": "2593c78b5687c883aff6441f09b5d2e67cd319c1ceae723d043dee44a36e62a6"
+    },
+    {
+      "id": "hash_run.json",
+      "pass": true,
+      "detail": "795304f2422dfff2f34a923c4500cdf6df7247edd804f6ab1059494730ae7a1a"
+    },
+    {
+      "id": "hash_recovery_map.json",
+      "pass": true,
+      "detail": "31be6643a62ffacb19ad64c796c4373110491bd916aecfa1a5af161d235a91db"
+    },
+    {
+      "id": "candidate_count_unique",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "candidate_bytes",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "id": "declared_inventory_closure",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "round_output_inventory",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "id": "recovery_map_count_unique",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "all_snapshots_in_manifest",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "recovery_snapshot_bytes",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "id": "candidate_round1_recoverable",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "id": "qa_round1_recoverable",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "id": "round1_originals_intact",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "id": "previous_round1_inventory_matches",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "contract_unchanged",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "adjudication_bound",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "dag_snapshot_static",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "G1_candidate_manifest.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "G1_review/review.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "G1_adjudication.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "G1_pass",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "execution_hashes_current",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "execution_inputs_declared",
+      "pass": true,
+      "detail": null
+    }
+  ],
+  "pass": true,
+  "candidate_files": 1859,
+  "recovery_copies": 1094,
+  "round1_intact_files": 1066,
+  "previous_candidate_entries": 275,
+  "previous_qa_entries": 809,
+  "contract_sha256": "fc071a8664d04ba6a0a4ca91298d333ee1ca89868a26b23e705946fef1c2f94d",
+  "ledger_sha256": "bda79597046a439c256109dec161548c01a9533938743c0cbecdea3463bb68c5",
+  "ledger_states": {
+    "G0": "pass",
+    "G1": "pass",
+    "G2": "changes_requested",
+    "G3": "queued",
+    "G4": "queued",
+    "G5": "queued",
+    "G6": "queued",
+    "G7": "under_review",
+    "G8": "waiting_external",
+    "G9": "waiting_external"
+  },
+  "G1_hashes": {
+    "candidate_manifest.json": "517c17c724cca82a820519c476981d47c8892c7383dd2c3dded9373eba6d31e8",
+    "review/review.json": "727f6b234e3a580c329cc5e898018bb68c02063717c292b6d91e4fbe12d86941",
+    "adjudication.json": "fe21ce5ebaf107027b6cf64f72eb06f9f2549df8f65ccbbd3eeee2067807735e"
+  },
+  "source_changes": [
+    "R/lib/mebane_2026_intake.R",
+    "config/mebane/2026/intake.json",
+    "tests/mebane/2026/check_dag.py",
+    "tests/mebane/2026/fixtures/config2022.json",
+    "tests/mebane/2026/run_tests.R"
+  ]
+}

@@ -1,0 +1,8 @@
+case,accepted,message
+valid,TRUE,""
+wrong_election_code_both_sources,TRUE,""
+wrong_election_year_both_sources,TRUE,""
+divergent_duplicate_vote,FALSE,vote: missing or duplicate key (including divergent duplicates)
+omitted_positive_vote,FALSE,Missing vote row cannot be distinguished from zero: category totals disagree
+ineligible_candidate_turn,FALSE,Candidate in wrong turn or unknown category: 2
+missing_aptos,FALSE,detail: invalid integer count/key in QT_APTOS

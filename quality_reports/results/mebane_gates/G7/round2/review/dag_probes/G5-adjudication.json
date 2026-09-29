@@ -1,0 +1,10 @@
+{
+  "gate_id": "G5",
+  "round": "round1",
+  "contract_sha256": "7dae5f305de606a5d79988498dbe3da891762048ab9bebf217e22d02c85a7998",
+  "candidate_manifest_sha256": "e77af838cca0d029fb80cab1fd4e06f401a4f7af61de52edbb9a426609f8ff4d",
+  "status": "pass",
+  "findings": [],
+  "review_sha256": "905de9fcfdeca9510e5c7330fee362e6419b8e4d829d84bfe1b46169189cf9a1",
+  "unresolved_material_findings": 0
+}

@@ -1,0 +1,58 @@
+{
+  "schema": "g7-intake-v2",
+  "year": 2026,
+  "cargo": 1,
+  "pleito_t1_documented": 3220,
+  "election_t1_documented": 6257,
+  "turns": [
+    1,
+    2
+  ],
+  "election_dates": {
+    "1": "04/10/2026",
+    "2": "25/10/2026"
+  },
+  "territorial_scope": {
+    "universe": "Presidential Brazil including exterior; section universe must be independently attested",
+    "expected_ufs": [
+      "AC",
+      "AL",
+      "AM",
+      "AP",
+      "BA",
+      "CE",
+      "DF",
+      "ES",
+      "GO",
+      "MA",
+      "MG",
+      "MS",
+      "MT",
+      "PA",
+      "PB",
+      "PE",
+      "PI",
+      "PR",
+      "RJ",
+      "RN",
+      "RO",
+      "RR",
+      "RS",
+      "SC",
+      "SE",
+      "SP",
+      "TO",
+      "ZZ"
+    ]
+  },
+  "candidate_selection": {
+    "1": {
+      "code": 22,
+      "name": "JOSÉ DA CONCEIÇÃO"
+    },
+    "2": {
+      "code": 22,
+      "name": "JOSÉ DA CONCEIÇÃO"
+    }
+  }
+}

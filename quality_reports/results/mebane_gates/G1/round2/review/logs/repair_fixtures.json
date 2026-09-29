@@ -1,0 +1,14 @@
+{
+  "command": [
+    "Rscript",
+    "--vanilla",
+    "tests/mebane/data/test_round2_repairs.R",
+    "quality_reports/results/mebane_gates/G1/round2/review/executor_fixtures"
+  ],
+  "command_display": "Rscript --vanilla tests/mebane/data/test_round2_repairs.R quality_reports/results/mebane_gates/G1/round2/review/executor_fixtures",
+  "started_at_utc": "2026-09-29T03:20:48.225796+00:00",
+  "ended_at_utc": "2026-09-29T03:20:48.628492+00:00",
+  "elapsed_seconds": 0.403,
+  "exit_code": 0,
+  "output": "quality_reports/results/mebane_gates/G1/round2/review/logs/repair_fixtures.txt"
+}
