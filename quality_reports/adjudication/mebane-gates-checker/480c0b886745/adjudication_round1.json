@@ -1,0 +1,264 @@
+{
+  "schema_version": "1.0",
+  "adjudication_id": "mebane-gates-checker:480c0b886745:round1",
+  "source": {
+    "reviewed_artifact": "scripts/mebane_gates.py",
+    "sha256": "480c0b88674513f6cd4ffb1f34f59ab19efbf4cfaf50c0b403fd105aef8e33b6",
+    "artifact_intact": true
+  },
+  "contract": {
+    "required": false,
+    "path": null,
+    "sha256": null,
+    "contract_id": null,
+    "artifact_sha256": null,
+    "status": null,
+    "stale": false
+  },
+  "review_sources": [
+    {
+      "review_id": "C-R1",
+      "path": "quality_reports/results/2026-09-28_gate_design/review_checker_round1.json",
+      "sha256": "1870c6c03d712f1fffff072a36173ac34cf45afcbc377c303f7c97e69cc94f8a"
+    }
+  ],
+  "findings": [
+    {
+      "finding_id": "C-F001",
+      "source_review": "C-R1",
+      "quoted_finding": "Aprovação de G0 aceita para G1 sem vínculo ao gate/contrato/rodada.",
+      "type": "artifact",
+      "severity": "major",
+      "scientific_dimension": "rastreabilidade",
+      "held_decision": false,
+      "status": "CONFIRMED",
+      "source_locations": [
+        "scripts/mebane_gates.py:71"
+      ],
+      "defect_evidence": [
+        "cross_gate []",
+        "Contraexemplo reproduzido pelo coordenador em 2026-09-28 usando fixtures temporárias."
+      ],
+      "refuting_evidence": [],
+      "mechanical_checks": [
+        {
+          "command": "Importar tests/test_mebane_gates.py; criar fixture com approve_g0(); aplicar mutação descrita; chamar validate/render.",
+          "result": "cross_gate []"
+        }
+      ],
+      "reasoning": "O resultado reproduzido contradiz a condição de aceitação documentada.",
+      "proposed_fix_assessment": "safe",
+      "disposition": "Exigir gate_id, round e contract_sha256 em manifesto, revisão e adjudicação; hash determinístico do contrato estático exclui estados e records."
+    },
+    {
+      "finding_id": "C-F002",
+      "source_review": "C-R1",
+      "quoted_finding": "IDs com whitespace passam como agentes diferentes.",
+      "type": "artifact",
+      "severity": "minor",
+      "scientific_dimension": "rastreabilidade",
+      "held_decision": false,
+      "status": "CONFIRMED",
+      "source_locations": [
+        "scripts/mebane_gates.py:52"
+      ],
+      "defect_evidence": [
+        "identity_alias []",
+        "Contraexemplo reproduzido pelo coordenador em 2026-09-28 usando fixtures temporárias."
+      ],
+      "refuting_evidence": [],
+      "mechanical_checks": [
+        {
+          "command": "Importar tests/test_mebane_gates.py; criar fixture com approve_g0(); aplicar mutação descrita; chamar validate/render.",
+          "result": "identity_alias []"
+        }
+      ],
+      "reasoning": "O resultado reproduzido contradiz a condição de aceitação documentada.",
+      "proposed_fix_assessment": "safe",
+      "disposition": "Exigir UUID canônico de agente, tipo string e identidade coerente com run/records; recusar alias textual."
+    },
+    {
+      "finding_id": "C-F003",
+      "source_review": "C-R1",
+      "quoted_finding": "Qualquer arquivo existente satisfaz requisito externo.",
+      "type": "artifact",
+      "severity": "major",
+      "scientific_dimension": "rastreabilidade",
+      "held_decision": false,
+      "status": "PARTIAL",
+      "source_locations": [
+        "scripts/mebane_gates.py:144"
+      ],
+      "defect_evidence": [
+        "external_text []",
+        "Contraexemplo reproduzido pelo coordenador em 2026-09-28 usando fixtures temporárias."
+      ],
+      "refuting_evidence": [
+        "O contrato declara que o checker é estrutural e requer revisão semântica do coordenador. O caso não demonstra que hashes possam provar oficialidade ou descobrir código não declarado."
+      ],
+      "mechanical_checks": [
+        {
+          "command": "Importar tests/test_mebane_gates.py; criar fixture com approve_g0(); aplicar mutação descrita; chamar validate/render.",
+          "result": "external_text []"
+        }
+      ],
+      "reasoning": "A lacuna de rastreabilidade existe; a solução deve vincular evidência e atestação independente, não afirmar certificação semântica automática.",
+      "proposed_fix_assessment": "safe",
+      "disposition": "Exigir atestação estruturada por requisito, gate, turno, fonte oficial, snapshot/hash, cobertura e revisor independente. A ferramenta valida rastreabilidade; o revisor verifica o conteúdo oficial."
+    },
+    {
+      "finding_id": "C-F004",
+      "source_review": "C-R1",
+      "quoted_finding": "Arquivos usados mas omitidos do manifesto não invalidam aprovação.",
+      "type": "artifact",
+      "severity": "minor",
+      "scientific_dimension": "rastreabilidade",
+      "held_decision": false,
+      "status": "PARTIAL",
+      "source_locations": [
+        "scripts/mebane_gates.py:59"
+      ],
+      "defect_evidence": [
+        "omitted_code []",
+        "Contraexemplo reproduzido pelo coordenador em 2026-09-28 usando fixtures temporárias."
+      ],
+      "refuting_evidence": [
+        "O contrato declara que o checker é estrutural e requer revisão semântica do coordenador. O caso não demonstra que hashes possam provar oficialidade ou descobrir código não declarado."
+      ],
+      "mechanical_checks": [
+        {
+          "command": "Importar tests/test_mebane_gates.py; criar fixture com approve_g0(); aplicar mutação descrita; chamar validate/render.",
+          "result": "omitted_code []"
+        }
+      ],
+      "reasoning": "A lacuna de rastreabilidade existe; a solução deve vincular evidência e atestação independente, não afirmar certificação semântica automática.",
+      "proposed_fix_assessment": "safe",
+      "disposition": "Vincular run.json e suas entradas/código/configuração/saídas ao manifesto e exigir atestação do revisor sobre completude. Não prometer descobrir automaticamente dependências não declaradas."
+    },
+    {
+      "finding_id": "C-F005",
+      "source_review": "C-R1",
+      "quoted_finding": "Parecer modificado com novo finding não invalida adjudicação anterior.",
+      "type": "artifact",
+      "severity": "minor",
+      "scientific_dimension": "rastreabilidade",
+      "held_decision": false,
+      "status": "CONFIRMED",
+      "source_locations": [
+        "scripts/mebane_gates.py:70"
+      ],
+      "defect_evidence": [
+        "changed_review []",
+        "Contraexemplo reproduzido pelo coordenador em 2026-09-28 usando fixtures temporárias."
+      ],
+      "refuting_evidence": [],
+      "mechanical_checks": [
+        {
+          "command": "Importar tests/test_mebane_gates.py; criar fixture com approve_g0(); aplicar mutação descrita; chamar validate/render.",
+          "result": "changed_review []"
+        }
+      ],
+      "reasoning": "O resultado reproduzido contradiz a condição de aceitação documentada.",
+      "proposed_fix_assessment": "safe",
+      "disposition": "Vincular adjudicação ao SHA-256 da revisão; reconciliar IDs/classificações/resolução dos findings."
+    },
+    {
+      "finding_id": "C-F006",
+      "source_review": "C-R1",
+      "quoted_finding": "Checker aprova ledger sem campos/tipos exigidos pelo renderer.",
+      "type": "artifact",
+      "severity": "minor",
+      "scientific_dimension": "rastreabilidade",
+      "held_decision": false,
+      "status": "CONFIRMED",
+      "source_locations": [
+        "scripts/mebane_gates.py:100"
+      ],
+      "defect_evidence": [
+        "render_schema []; render_error KeyError",
+        "Contraexemplo reproduzido pelo coordenador em 2026-09-28 usando fixtures temporárias."
+      ],
+      "refuting_evidence": [],
+      "mechanical_checks": [
+        {
+          "command": "Importar tests/test_mebane_gates.py; criar fixture com approve_g0(); aplicar mutação descrita; chamar validate/render.",
+          "result": "render_schema []; render_error KeyError"
+        }
+      ],
+      "reasoning": "O resultado reproduzido contradiz a condição de aceitação documentada.",
+      "proposed_fix_assessment": "safe",
+      "disposition": "Validar todos os campos e tipos consumidos antes de renderizar."
+    },
+    {
+      "finding_id": "C-F007",
+      "source_review": "C-R1",
+      "quoted_finding": "Tipos malformados produzem traceback, sem FAIL controlado.",
+      "type": "artifact",
+      "severity": "minor",
+      "scientific_dimension": "rastreabilidade",
+      "held_decision": false,
+      "status": "CONFIRMED",
+      "source_locations": [
+        "scripts/mebane_gates.py:123"
+      ],
+      "defect_evidence": [
+        "bad_status unhandled TypeError",
+        "Contraexemplo reproduzido pelo coordenador em 2026-09-28 usando fixtures temporárias."
+      ],
+      "refuting_evidence": [],
+      "mechanical_checks": [
+        {
+          "command": "Importar tests/test_mebane_gates.py; criar fixture com approve_g0(); aplicar mutação descrita; chamar validate/render.",
+          "result": "bad_status unhandled TypeError"
+        }
+      ],
+      "reasoning": "O resultado reproduzido contradiz a condição de aceitação documentada.",
+      "proposed_fix_assessment": "safe",
+      "disposition": "Validar tipos antes de testes em sets e reportar falhas de schema sem traceback."
+    },
+    {
+      "finding_id": "C-F008",
+      "source_review": "C-R1",
+      "quoted_finding": "Título pode injetar aresta no Mermaid.",
+      "type": "artifact",
+      "severity": "minor",
+      "scientific_dimension": "rastreabilidade",
+      "held_decision": false,
+      "status": "CONFIRMED",
+      "source_locations": [
+        "scripts/mebane_gates.py:223"
+      ],
+      "defect_evidence": [
+        "diagram_title []",
+        "Contraexemplo reproduzido pelo coordenador em 2026-09-28 usando fixtures temporárias."
+      ],
+      "refuting_evidence": [],
+      "mechanical_checks": [
+        {
+          "command": "Importar tests/test_mebane_gates.py; criar fixture com approve_g0(); aplicar mutação descrita; chamar validate/render.",
+          "result": "diagram_title []"
+        }
+      ],
+      "reasoning": "O resultado reproduzido contradiz a condição de aceitação documentada.",
+      "proposed_fix_assessment": "safe",
+      "disposition": "Escapar rótulos Mermaid ou rejeitar caracteres que quebrem a sintaxe, mantendo o grafo fiel."
+    }
+  ],
+  "summary": {
+    "total": 8,
+    "confirmed": 6,
+    "partial": 2,
+    "refuted": 0,
+    "unresolved": 0,
+    "held_decisions": 0
+  },
+  "adjudication": {
+    "verdict": "READY_FOR_IMPLEMENTATION",
+    "checked_at": "2026-09-28",
+    "reasons": [
+      "Todos os casos foram reproduzidos no candidato exato.",
+      "Os reparos delimitados estão cobertos pelo pedido de protocolo com checagem independente.",
+      "Oficialidade e completude continuam exigindo julgamento independente sobre os artefatos."
+    ]
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "scope": "Protocolo de gates e ferramenta de ledger; não é validação empírica do modelo eleitoral.",
+  "files": [
+    {"path": "quality_reports/plans/mebane_2022_2026_gates.json", "sha256": "bcb3c384960d87924178128fe4c7ce3db0a841e4e7941df26864c1f35b2dab7f"},
+    {"path": "quality_reports/plans/mebane_gate_agent_prompts.md", "sha256": "173bf29b1a6bd21247591a49f2d9ce3b3475d2e7cf0c748a446d60ab69c40838"},
+    {"path": "scripts/mebane_gates.py", "sha256": "480c0b88674513f6cd4ffb1f34f59ab19efbf4cfaf50c0b403fd105aef8e33b6"},
+    {"path": "tests/test_mebane_gates.py", "sha256": "f192968af7d7988421541ea6a92f012ac357c7a4aa301c44b9fe469261232c74"},
+    {"path": "quality_reports/plans/2026-09-28_mebane_2022_2026_gates.md", "sha256": "59dc46f99f5ed059cd334f84cbdbb4952b1994870f96c653cf7c66a3c10af3bb"}
+  ]
+}

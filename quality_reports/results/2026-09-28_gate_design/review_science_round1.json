@@ -1,0 +1,663 @@
+{
+  "schema_version": "1.0",
+  "review_id": "QA-PLANO-science-round1",
+  "review_kind": "independent_scientific_and_coordination_protocol_review",
+  "date_local": "2026-09-28",
+  "timezone": "America/Sao_Paulo",
+  "status": "changes_requested",
+  "reviewer_id": "QA-PLANO",
+  "reviewer_context_thread_id": "01a0ea8e-ac85-76d1-8470-271c7dc6e6bd",
+  "executor_id": null,
+  "executor_identity_note": "O manifesto fornecido não identifica o autor por ID nativo; não foi inferido um ID.",
+  "goal": {
+    "context_thread_id": "01a0ea8e-ac85-76d1-8470-271c7dc6e6bd",
+    "objective": "Emitir revisão independente completa do protocolo round1, sem executar MCMC nem alterar candidato/código, entregando apenas review_science_round1.md e review_science_round1.json.",
+    "native_goal_created": true,
+    "created_after_get_goal_returned_null": true,
+    "token_budget_specified": false,
+    "other_context_goals_modified": false,
+    "completion_condition": "Entrega dos dois pareceres e sua verificação, inclusive quando o status for changes_requested.",
+    "state_at_serialization": "active; a conclusão nativa ocorre após a verificação final dos arquivos"
+  },
+  "independence": {
+    "authored_candidate": false,
+    "modified_candidate": false,
+    "read_sol_preparatory_notes": false,
+    "read_author_self_approval_note": false,
+    "read_separate_validator_review": false,
+    "independent_checks_performed": true,
+    "limitation": "A independência desta revisão é declarada pelo papel recebido e pelas ações executadas neste contexto; não foi auditado o histórico nativo de autoria dos demais agentes."
+  },
+  "scope": {
+    "included": [
+      "Conteúdo científico e operacional de G0-G8",
+      "DAG e precedência",
+      "Goals, todos e critérios de conclusão",
+      "Independência e adjudicação",
+      "Alocação Sol/modelo herdado",
+      "Aceite, parada, prontidão 2026 e governança"
+    ],
+    "excluded": [
+      "Execução de MCMC",
+      "Validação empírica do qbl",
+      "Auditoria integral das equações dos papers",
+      "Código e testes do validator",
+      "Instalações ou mudanças no ambiente",
+      "Execução de gates operacionais",
+      "Mudanças do candidato"
+    ],
+    "authority": "quality_reports/plans/mebane_2022_2026_gates.json",
+    "supplemental_candidate_sources": [
+      "quality_reports/plans/mebane_gate_agent_prompts.md",
+      "quality_reports/plans/2026-09-28_mebane_2022_2026_gates.md"
+    ]
+  },
+  "summary": "O protocolo exige revisão independente, não presume JAGS correto, não confunde Stan aproximado com equivalente e não presume resultados 2026. Requer alterações materiais para operacionalizar o aceite da calibração, vincular a aprovação ao contrato exato e representar G8 por turno. Todos os gates continuam pendentes.",
+  "candidate_manifest": "quality_reports/results/2026-09-28_gate_design/candidate_round1.json",
+  "candidate_manifest_sha256": "ae5f84bef1186ad1f6d1500e5a308bc7d500c0e447cb39bbfee07eed5027da7a",
+  "integrity": {
+    "algorithm": "SHA-256",
+    "initial_check": "5/5 arquivos e identidade do manifesto conferidos",
+    "delivery_check_at_utc": "2026-09-29T00:33:37.976770+00:00",
+    "delivery_check": "5/5 arquivos conferidos novamente antes da serialização; identidade do manifesto preservada",
+    "hash_mismatch": false,
+    "candidate_changed_detected": false,
+    "files": [
+      {
+        "path": "quality_reports/plans/mebane_2022_2026_gates.json",
+        "expected_sha256": "bcb3c384960d87924178128fe4c7ce3db0a841e4e7941df26864c1f35b2dab7f",
+        "observed_sha256": "bcb3c384960d87924178128fe4c7ce3db0a841e4e7941df26864c1f35b2dab7f",
+        "size_bytes": 31888,
+        "status": "match",
+        "content_reviewed": true
+      },
+      {
+        "path": "quality_reports/plans/mebane_gate_agent_prompts.md",
+        "expected_sha256": "173bf29b1a6bd21247591a49f2d9ce3b3475d2e7cf0c748a446d60ab69c40838",
+        "observed_sha256": "173bf29b1a6bd21247591a49f2d9ce3b3475d2e7cf0c748a446d60ab69c40838",
+        "size_bytes": 8971,
+        "status": "match",
+        "content_reviewed": true
+      },
+      {
+        "path": "scripts/mebane_gates.py",
+        "expected_sha256": "480c0b88674513f6cd4ffb1f34f59ab19efbf4cfaf50c0b403fd105aef8e33b6",
+        "observed_sha256": "480c0b88674513f6cd4ffb1f34f59ab19efbf4cfaf50c0b403fd105aef8e33b6",
+        "size_bytes": 13667,
+        "status": "match",
+        "content_reviewed": false
+      },
+      {
+        "path": "tests/test_mebane_gates.py",
+        "expected_sha256": "f192968af7d7988421541ea6a92f012ac357c7a4aa301c44b9fe469261232c74",
+        "observed_sha256": "f192968af7d7988421541ea6a92f012ac357c7a4aa301c44b9fe469261232c74",
+        "size_bytes": 6249,
+        "status": "match",
+        "content_reviewed": false
+      },
+      {
+        "path": "quality_reports/plans/2026-09-28_mebane_2022_2026_gates.md",
+        "expected_sha256": "59dc46f99f5ed059cd334f84cbdbb4952b1994870f96c653cf7c66a3c10af3bb",
+        "observed_sha256": "59dc46f99f5ed059cd334f84cbdbb4952b1994870f96c653cf7c66a3c10af3bb",
+        "size_bytes": 28161,
+        "status": "match",
+        "content_reviewed": true
+      }
+    ],
+    "notes": "scripts/mebane_gates.py e tests/test_mebane_gates.py foram apenas hasheados. A revisão de seu código pertence ao revisor separado."
+  },
+  "findings": [
+    {
+      "id": "S-F001",
+      "severity": "high",
+      "priority": "P1",
+      "category": "inference_acceptance",
+      "title": "Falta uma regra verificável de aceite da calibração",
+      "quoted_finding": "G4 exige medir recuperação, cobertura e falsos positivos, mas não exige congelar uma regra de detecção e critérios de aprovação dessas medidas antes da avaliação confirmatória; G6 herda essa lacuna ao concluir a análise de poder.",
+      "locator": [
+        {
+          "path": "quality_reports/plans/mebane_2022_2026_gates.json",
+          "line_start": 143,
+          "line_end": 146,
+          "json_pointer_or_selector": "gates[id=G4].todos[id=G4-T2|G4-T5]"
+        },
+        {
+          "path": "quality_reports/plans/mebane_2022_2026_gates.json",
+          "line_start": 149,
+          "line_end": 149,
+          "json_pointer_or_selector": "gates[id=G4].acceptance"
+        },
+        {
+          "path": "quality_reports/plans/mebane_2022_2026_gates.json",
+          "line_start": 188,
+          "line_end": 192,
+          "json_pointer_or_selector": "gates[id=G6].todos[id=G6-T4]; gates[id=G6].acceptance"
+        },
+        {
+          "path": "quality_reports/plans/mebane_gate_agent_prompts.md",
+          "line_start": 65,
+          "line_end": 76
+        }
+      ],
+      "evidence": [
+        {
+          "basis": "inspected",
+          "quote": "medir recuperação, cobertura e falso positivo com incerteza Monte Carlo",
+          "path": "quality_reports/plans/mebane_2022_2026_gates.json",
+          "line": 143
+        },
+        {
+          "basis": "inspected",
+          "quote": "Fixar, antes da escala nacional, especificações primária e de sensibilidade, quantidade de réplicas e precisão dos testes de poder conforme o piloto",
+          "path": "quality_reports/plans/mebane_2022_2026_gates.json",
+          "line": 146
+        },
+        {
+          "basis": "inspected",
+          "quote": "Esses limiares são necessários ao protocolo, mas não prova suficiente de convergência; checar inicializações, modos, predição e recuperação.",
+          "path": "quality_reports/plans/mebane_2022_2026_gates.json",
+          "line": 149
+        },
+        {
+          "basis": "inspected",
+          "quote": "Concluir a avaliação de recuperação/poder/falsos positivos dimensionada em G4",
+          "path": "quality_reports/plans/mebane_2022_2026_gates.json",
+          "line": 188
+        }
+      ],
+      "verified_gap": "Não há tarefa ou requisito que defina evento/regra de detecção, unidade, critérios de recuperação/cobertura/falso positivo e decisão quando uma tolerância for excedida. Critérios MCMC não determinam essas decisões.",
+      "concrete_failure_case": "Duas implementações medem poder e falso positivo com eventos de detecção diferentes; ambas completam as tarefas descritas, mas as taxas não têm interpretação comparável. Mesmo com cadeias adequadas, o futuro QA precisará criar um critério de falha material ao observar resultados.",
+      "failure_case_basis": "Contraexemplo documental do protocolo, não simulação executada nem resultado observado.",
+      "existing_safeguards_considered": [
+        "O prompt exige critérios anteriores aos resultados e proíbe relaxá-los.",
+        "G4 exige incerteza Monte Carlo e registro de fits falhos.",
+        "G6 proíbe prova automática de fraude/ausência."
+      ],
+      "why_safeguards_do_not_close_gap": "Não atribuem responsável, artefato e precedência à aprovação independente do contrato operacional de calibração. Medir e congelar precisão/número de réplicas não define o evento de detecção nem o critério de aprovação.",
+      "requested_change": "Exigir, antes da avaliação confirmatória, contrato versionado e revisado independentemente com regra de detecção/unidade, cenários/estimandos, tolerâncias justificadas de recuperação/cobertura/falso positivo, sua avaliação com incerteza Monte Carlo, tratamento de fits falhos e limites de interpretação por poder. Separar pilotos exploratórios da avaliação que decide o aceite.",
+      "repair_boundary": "Não é preciso escolher todos os valores numéricos agora, exigir alto poder para todo cenário ou impedir exploração de pilotos. É necessário definir quem os congela, em que artefato e antes de qual avaliação.",
+      "recheck_acceptance": "Um resultado pode ser classificado pelos critérios congelados sem inventar limiares após sua observação; baixo poder restringe claims e não fundamenta ausência de fraude.",
+      "gates_affected": [
+        "G4",
+        "G6",
+        "G8"
+      ]
+    },
+    {
+      "id": "S-F002",
+      "severity": "medium",
+      "priority": "P2",
+      "category": "scientific_contract_provenance",
+      "title": "O parecer não fica obrigatoriamente vinculado à versão do contrato",
+      "quoted_finding": "O contrato do gate é entregue ao revisor, mas o protocolo não exige arquivar seu snapshot e hash no vínculo de aprovação; mudanças de critérios ou dependências podem conservar um parecer cujo manifesto continua idêntico.",
+      "locator": [
+        {
+          "path": "quality_reports/plans/mebane_2022_2026_gates.json",
+          "line_start": 23,
+          "line_end": 23,
+          "json_pointer_or_selector": "operating_rules[6]"
+        },
+        {
+          "path": "quality_reports/plans/mebane_2022_2026_gates.json",
+          "line_start": 31,
+          "line_end": 37,
+          "json_pointer_or_selector": "evidence_contract"
+        },
+        {
+          "path": "quality_reports/plans/mebane_gate_agent_prompts.md",
+          "line_start": 87,
+          "line_end": 93
+        },
+        {
+          "path": "quality_reports/plans/mebane_gate_agent_prompts.md",
+          "line_start": 131,
+          "line_end": 159
+        }
+      ],
+      "evidence": [
+        {
+          "basis": "inspected",
+          "quote": "candidate_manifest.json: SHA-256 dos arquivos de código, configuração, dados usados e saídas; tamanhos e caminhos.",
+          "path": "quality_reports/plans/mebane_2022_2026_gates.json",
+          "line": 33
+        },
+        {
+          "basis": "inspected",
+          "quote": "verificável do candidato [manifest_sha256] contra [gate_contract].",
+          "path": "quality_reports/plans/mebane_gate_agent_prompts.md",
+          "line": 88
+        },
+        {
+          "basis": "inspected",
+          "quote": "Review e adjudication referenciam seu SHA-256 em",
+          "path": "quality_reports/plans/mebane_gate_agent_prompts.md",
+          "line": 145
+        },
+        {
+          "basis": "inspected",
+          "quote": "Se qualquer arquivo do manifesto mudou, invalidar pass antes de reutilizar o",
+          "path": "quality_reports/plans/mebane_gate_agent_prompts.md",
+          "line": 154
+        }
+      ],
+      "verified_gap": "O protocolo não exige snapshot/hash do contrato como artefato manifestado ou identidade equivalente. A reabertura não cobre expressamente mudança material de aceitação, estimando, dependência ou requisito externo do próprio gate.",
+      "concrete_failure_case": "O ledger recebe uma revisão legítima de critérios após um parecer. Sem contrato manifestado, código/dados/resultados mantêm os mesmos hashes e o parecer antigo não identifica os critérios exatos sob os quais aprovou o candidato.",
+      "failure_case_basis": "Contraexemplo de rastreabilidade do protocolo; não foi alterado o ledger para testar o validator.",
+      "existing_safeguards_considered": [
+        "Contrato é entregue ao revisor.",
+        "Fontes são congeladas e hashes são conferidos.",
+        "Rechecagem é exigida para artefatos alterados.",
+        "É proibido relaxar critérios para obter pass."
+      ],
+      "why_safeguards_do_not_close_gap": "Não tornam expressamente obrigatória a presença do contrato entre os artefatos cuja identidade é preservada, deixando essa obrigação depender de interpretação implícita de inputs/configuração.",
+      "requested_change": "Exigir snapshot imutável do contrato por despacho/rodada e incluí-lo no manifesto ou vincular seu SHA-256 a run/review/adjudication. Cobrir mudanças materiais do contrato na regra de invalidação e reabertura dos dependentes.",
+      "repair_boundary": "Pode ser uma projeção do contrato sem status operacionais; não é necessário invalidar tudo a cada atualização do ledger nem auditar novamente o código do validator nesta revisão.",
+      "recheck_acceptance": "Alterar apenas um critério de aceite gera nova identidade de contrato e impede reutilizar o parecer anterior para liberar o contrato novo.",
+      "gates_affected": [
+        "G0",
+        "G1",
+        "G2",
+        "G3",
+        "G4",
+        "G5",
+        "G6",
+        "G7",
+        "G8"
+      ]
+    },
+    {
+      "id": "S-F003",
+      "severity": "medium",
+      "priority": "P2",
+      "category": "per_round_execution_state",
+      "title": "G8 precisa de instâncias e estados por turno",
+      "quoted_finding": "G8 exige execução, espera e inconclusividade por turno, mas oferece somente um status, um conjunto de todos e um records; falta a regra que permita concluir T1 sem aprovar, sobrescrever ou manter indefinidamente ativo o trabalho de T2.",
+      "locator": [
+        {
+          "path": "quality_reports/plans/mebane_2022_2026_gates.json",
+          "line_start": 29,
+          "line_end": 29,
+          "json_pointer_or_selector": "operating_rules[12]"
+        },
+        {
+          "path": "quality_reports/plans/mebane_2022_2026_gates.json",
+          "line_start": 218,
+          "line_end": 236,
+          "json_pointer_or_selector": "gates[id=G8]"
+        },
+        {
+          "path": "quality_reports/plans/mebane_gate_agent_prompts.md",
+          "line_start": 21,
+          "line_end": 29
+        },
+        {
+          "path": "quality_reports/plans/mebane_gate_agent_prompts.md",
+          "line_start": 78,
+          "line_end": 80
+        },
+        {
+          "path": "quality_reports/plans/mebane_gate_agent_prompts.md",
+          "line_start": 110,
+          "line_end": 148
+        }
+      ],
+      "evidence": [
+        {
+          "basis": "inspected",
+          "quote": "Aplicar por turno o procedimento validado aos dados oficiais de 2026",
+          "path": "quality_reports/plans/mebane_2022_2026_gates.json",
+          "line": 220
+        },
+        {
+          "basis": "inspected",
+          "quote": "\"status\": \"waiting_external\"",
+          "path": "quality_reports/plans/mebane_2022_2026_gates.json",
+          "line": 223
+        },
+        {
+          "basis": "inspected",
+          "quote": "Manter o turno afetado inconclusive ou waiting_external",
+          "path": "quality_reports/plans/mebane_2022_2026_gates.json",
+          "line": 235
+        },
+        {
+          "basis": "inspected",
+          "quote": "\"records\": null",
+          "path": "quality_reports/plans/mebane_2022_2026_gates.json",
+          "line": 236
+        }
+      ],
+      "verified_gap": "Existe um único objeto G8 com um único status, quatro todos e um único records, sem instâncias de turno, chave obrigatória ano/turno/snapshot ou composição de status. RoundN distingue revisões do candidato, não define tratamento de dois turnos.",
+      "concrete_failure_case": "T1 já foi revisado e T2 aguarda publicação. Um único estado sem regra de composição pode gerar pass global com evidência apenas de T1, goal de T1 indefinidamente aberto ou substituição do único records ao processar T2.",
+      "failure_case_basis": "Caso operacional hipotético permitido pela subespecificação; não se afirma que T2 ocorrerá ou que G8 já foi executado.",
+      "existing_safeguards_considered": [
+        "G8 exige dados oficiais do turno realizado.",
+        "G7/G8 não presumem a ocorrência de segundo turno.",
+        "Goals devem ter entrega finita.",
+        "Versões anteriores devem ser preservadas."
+      ],
+      "why_safeguards_do_not_close_gap": "Essas regras exigem precisamente estados independentes, mas o protocolo não especifica como representá-los e compor a aprovação global.",
+      "requested_change": "Definir instâncias ano/turno/snapshot com todos, goals executor/revisor, manifesto, review, adjudication e status próprios, ou subgates condicionais por turno. Definir agregação do status e representação de T2 oficialmente não aplicável. Revisões TSE geram nova versão da instância afetada.",
+      "repair_boundary": "Preservar a espera por publicação oficial; não criar dados, antecipar existência de T2 ou manter agente ocioso à espera da eleição.",
+      "recheck_acceptance": "Representar T1 pass/T2 waiting_external, T1 pass/T2 inconclusive e T2 oficialmente não aplicável sem perda de evidência ou aprovação de inferência não executada; goal de T1 pode terminar independentemente de T2.",
+      "gates_affected": [
+        "G8"
+      ]
+    }
+  ],
+  "finding_counts": {
+    "total": 3,
+    "high": 1,
+    "medium": 2,
+    "low": 0
+  },
+  "criteria_checked": [
+    {
+      "id": "C01",
+      "criterion": "Integridade do candidato",
+      "status": "pass",
+      "evidence": "Cinco hashes esperados/observados iguais; manifesto preservado."
+    },
+    {
+      "id": "C02",
+      "criterion": "Estados pendentes e todos",
+      "status": "pass",
+      "evidence": "Nove gates: oito queued e um waiting_external; 40 todos todo, evidence vazio e records nulo."
+    },
+    {
+      "id": "C03",
+      "criterion": "DAG",
+      "status": "pass",
+      "evidence": "Ordenação topológica independente sem ciclo ou dependência ausente."
+    },
+    {
+      "id": "C04",
+      "criterion": "Precedência inferencial e paralelismo",
+      "status": "pass",
+      "evidence": "G6 descende de G0-G5; G8 de G0-G7; G7 depende apenas de G1, permitindo ramo de preparação."
+    },
+    {
+      "id": "C05",
+      "criterion": "Goals próprios e finitos",
+      "status": "pass_with_scope_limit",
+      "evidence": "Execução entrega candidato, revisão entrega parecer, coordenador aprova; sem token budget implícito.",
+      "limitation": "Granularidade por turno depende de S-F003."
+    },
+    {
+      "id": "C06",
+      "criterion": "Independência",
+      "status": "pass_as_written",
+      "evidence": "Novo agente, fork_context=false, fontes exatas, reprodução e escrita restrita à revisão; coordenador adjudica.",
+      "limitation": "Cumprimento futuro no runtime não foi testado."
+    },
+    {
+      "id": "C07",
+      "criterion": "Alocação Sol/modelo herdado",
+      "status": "pass_as_heuristic",
+      "evidence": "Sol para implementação/dados/diagnósticos; G2 e QA inferencial em inherit; nenhum benchmark de superioridade alegado."
+    },
+    {
+      "id": "C08",
+      "criterion": "Dados, denominadores e zeros",
+      "status": "pass_as_written",
+      "evidence": "G1 inclui tipos, duplicatas, joins, zeros versus missing, elegibilidade, N/a/w e reconciliação independente."
+    },
+    {
+      "id": "C09",
+      "criterion": "Não presumir JAGS correto",
+      "status": "pass_as_written",
+      "evidence": "G2 exige confronto paper/código e derivação; G3 requer small-N e fidelity; nenhuma aprovação empírica concedida."
+    },
+    {
+      "id": "C10",
+      "criterion": "Comparabilidade de engines",
+      "status": "pass_as_written",
+      "evidence": "Aproximações explicitamente rotuladas; comparação de equivalência apenas mesmo alvo; impossibilidade de Stan não aprova JAGS por si."
+    },
+    {
+      "id": "C11",
+      "criterion": "Convergência versus identificação",
+      "status": "pass_as_written",
+      "evidence": "G4 requer Rhat/ESS/MCSE/modos/recuperação e não dispensa falhas por pi pequeno; G6 reaplica os critérios."
+    },
+    {
+      "id": "C12",
+      "criterion": "Calibração, recuperação e poder",
+      "status": "changes_requested",
+      "finding_ids": [
+        "S-F001"
+      ]
+    },
+    {
+      "id": "C13",
+      "criterion": "Limites de claims e impacto na margem",
+      "status": "pass_as_written",
+      "evidence": "G2-T4 exige derivação e limites de identificação de stolen; G6 proíbe prova automática de fraude/ausência e comparação ingênua Fw/margem."
+    },
+    {
+      "id": "C14",
+      "criterion": "Recursos, parada e preservação do alvo",
+      "status": "pass_as_written",
+      "evidence": "G5 exige tempo/RAM, interrupção pequena, teste do runner em falha e cota para G6; mudanças de estimando reabrem gates."
+    },
+    {
+      "id": "C15",
+      "criterion": "Prontidão versus inferência 2026",
+      "status": "pass_as_written",
+      "evidence": "G7 data-ready não libera inferência; G8 requer G6/G7 e dados oficiais atuais, cobertura e revalidação."
+    },
+    {
+      "id": "C16",
+      "criterion": "Estado por turno",
+      "status": "changes_requested",
+      "finding_ids": [
+        "S-F003"
+      ]
+    },
+    {
+      "id": "C17",
+      "criterion": "Governança e vínculo do contrato",
+      "status": "changes_requested",
+      "finding_ids": [
+        "S-F002"
+      ]
+    },
+    {
+      "id": "C18",
+      "criterion": "Correspondência MD/JSON",
+      "status": "pass",
+      "evidence": "122 strings de goals/todos/deliverables/acceptance/on_failure e todas as arestas encontradas no MD."
+    }
+  ],
+  "executed_verifications": [
+    {
+      "id": "V01",
+      "basis": "executed",
+      "method": "hashlib.sha256(Path(path).read_bytes()) para o manifesto e cada entrada; comparação com SHA-256 do manifesto",
+      "result": "5/5 match, repetido na entrega"
+    },
+    {
+      "id": "V02",
+      "basis": "executed",
+      "method": "Parsing JSON e contagem independente de estados, todos, evidências e records",
+      "result": {
+        "gates": 9,
+        "todos": 40,
+        "gate_statuses": {
+          "queued": 8,
+          "waiting_external": 1
+        },
+        "todo_statuses": {
+          "todo": 40
+        },
+        "records_all_null": true,
+        "todo_evidence_all_empty": true
+      }
+    },
+    {
+      "id": "V03",
+      "basis": "executed",
+      "method": "Remoção iterativa de nós cujos pais já foram visitados; falha se nenhum nó restante ficar pronto",
+      "result": {
+        "acyclic": true,
+        "topological_layers": [
+          [
+            "G0"
+          ],
+          [
+            "G1",
+            "G2"
+          ],
+          [
+            "G3",
+            "G7"
+          ],
+          [
+            "G4"
+          ],
+          [
+            "G5"
+          ],
+          [
+            "G6"
+          ],
+          [
+            "G8"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "V04",
+      "basis": "executed",
+      "method": "Percurso recursivo iterativo da lista depends_on, acumulando ancestrais",
+      "result": {
+        "G6": [
+          "G0",
+          "G1",
+          "G2",
+          "G3",
+          "G4",
+          "G5"
+        ],
+        "G7": [
+          "G0",
+          "G1"
+        ],
+        "G8": [
+          "G0",
+          "G1",
+          "G2",
+          "G3",
+          "G4",
+          "G5",
+          "G6",
+          "G7"
+        ]
+      }
+    },
+    {
+      "id": "V05",
+      "basis": "executed",
+      "method": "Busca literal no MD de cada goal/on_failure/todo/acceptance/deliverable do JSON e de cada aresta Mermaid",
+      "result": {
+        "strings_checked": 122,
+        "missing_strings": [],
+        "missing_edges": []
+      }
+    },
+    {
+      "id": "V06",
+      "basis": "executed",
+      "method": "git status --short e git diff --stat, somente leitura",
+      "result": "Candidato e diretórios scripts/tests já eram não rastreados; diff de arquivos rastreados vazio antes da entrega."
+    },
+    {
+      "id": "V07",
+      "basis": "inspected",
+      "method": "Leitura textual independente dos três documentos do candidato e trechos locais pertinentes",
+      "result": "Findings e salvaguardas sustentados por localizadores exatos; sem notas de autoaprovação."
+    }
+  ],
+  "supporting_sources": [
+    {
+      "path": "CLAUDE.md",
+      "sha256": "99379af671c1f23babd6ffa7094e4f036ebd8e62c67cf616a8c5b1337e388e32",
+      "basis": "inspected",
+      "scope": "Contexto local inspecionado, não executado"
+    },
+    {
+      "path": "README.md",
+      "sha256": "d1ea8ff6427b4560040b322152c6fe247ca492130329256bcfff35cab1786b69",
+      "basis": "inspected",
+      "scope": "Contexto local inspecionado, não executado"
+    },
+    {
+      "path": "quality_reports/plans/2026-04-10_reconstrucao-metodologica.md",
+      "sha256": "da35ad19edff19f3105e21d84589c94addb94ad015fe0cb06c5fd1465bcbab45",
+      "basis": "inspected",
+      "scope": "Contexto histórico, sem autoridade sobre o candidato atual"
+    },
+    {
+      "path": "R/07_brasil_full_qbl.R",
+      "sha256": "1244e5f6e49c5842ef109f8ded2a1caa3ba7ddd0a83eeeaa4694f7d08775d862",
+      "basis": "inspected",
+      "scope": "Contexto local inspecionado, não executado"
+    },
+    {
+      "path": "R/05_jags_qbl_zone_fe.R",
+      "sha256": "a72118c328d1cce96ba2226b33da5d13d6608a42e34259b25208b14f823ed983",
+      "basis": "inspected",
+      "scope": "Contexto local inspecionado, não executado"
+    },
+    {
+      "path": "stan/eforensics_qbl.stan",
+      "sha256": "7c2d23fcebcc020c16d4779f8fffe26f6c588461c9655fe34187690581764541",
+      "basis": "inspected",
+      "scope": "Inspeção do rótulo de aproximação e estrutura; sem validação algébrica"
+    },
+    {
+      "path": "quality_reports/results/05_jags_qbl_zone_fe_summary.txt",
+      "sha256": "64d916baaef4dacc7fea45dd59a20692024b498079389e087b4b4ebc41b6236d",
+      "basis": "inspected",
+      "scope": "Diagnóstico histórico inspecionado, não recalculado"
+    }
+  ],
+  "historical_evidence_caution": "O resumo JAGS zone FE registra Gelman.diag 4.597 para pi[1] e 13.506 para iota.s.alpha. São registros históricos e outro diagnóstico, não Rhat rank-normalized atual. A revisão usa-os apenas para conferir pertinência da revalidação exigida, não para validar ou reprovar empiricamente o modelo.",
+  "limitations": [
+    "Nenhum MCMC novo, simulação inferencial, carregamento/reprocessamento de cadeias ou estimativa de fraude foi executado.",
+    "Não foi estabelecida identificação, convergência, equivalência matemática de engines ou potência empírica do modelo; esses são produtos de gates ainda pendentes.",
+    "PDFs não foram usados para rederivação integral do modelo; o cotejo científico completo de G2 continua obrigatório.",
+    "Não houve consulta a resultados oficiais de 2026 nem suposição de que dados ou segundo turno existam.",
+    "Código e testes do validator foram apenas hasheados; não foram lidos nem executados nesta revisão.",
+    "Não foram auditados empiricamente a disponibilidade futura de modelos/recursos nem o cumprimento futuro da independência pelo runtime.",
+    "Findings descrevem lacunas do protocolo, não eventos indevidos já ocorridos."
+  ],
+  "changes_made": {
+    "candidate_files_modified": false,
+    "code_modified": false,
+    "environment_modified": false,
+    "installations": false,
+    "output_files_only": [
+      "quality_reports/results/2026-09-28_gate_design/review_science_round1.md",
+      "quality_reports/results/2026-09-28_gate_design/review_science_round1.json"
+    ]
+  },
+  "disposition": {
+    "recommendation": "Adjudicar S-F001 a S-F003. Se confirmados, revisar o protocolo, gerar novo manifesto e solicitar rechecagem independente.",
+    "authorizes_operational_execution": false,
+    "native_review_goal_can_complete_after_delivery": true,
+    "note": "changes_requested conclui a tarefa de revisão, mas não aprova o candidato nem qualquer gate analítico."
+  },
+  "artifacts": [
+    {
+      "path": "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/2026-09-28_gate_design/review_science_round1.md",
+      "sha256": "b1ce64b8f04948355a60cc7a5d998ba020ecaa7e78c88d388529c5410b2be7ba"
+    },
+    {
+      "path": "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/2026-09-28_gate_design/review_science_round1.json",
+      "sha256": null,
+      "hash_note": "Hash do próprio JSON é calculado externamente na verificação final, para evitar autorreferência."
+    }
+  ]
+}
