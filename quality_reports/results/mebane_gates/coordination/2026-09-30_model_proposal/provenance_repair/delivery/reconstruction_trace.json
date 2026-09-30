@@ -1,0 +1,214 @@
+{
+  "file_change_states": [
+    {
+      "order": 3,
+      "id": "exec-87a7e37e-c2ad-4102-9080-db35009004be",
+      "change_index": 0,
+      "path": "quality_reports/results/mebane_gates/G3/round1/protocol.json",
+      "operation": "add",
+      "input_sha256": null,
+      "sha256": "de3a65e75a2a7b82444127c87816374b9d11028433ec03dc048e67d438a92478",
+      "patch_utf8_sha256": "de3a65e75a2a7b82444127c87816374b9d11028433ec03dc048e67d438a92478"
+    },
+    {
+      "order": 4,
+      "id": "exec-5e8b3c00-2f40-410f-aadc-9d753895f594",
+      "change_index": 0,
+      "path": "R/lib/mebane_model.R",
+      "operation": "add",
+      "input_sha256": null,
+      "sha256": "53b8672a2b840e1519a1ed2bd7a94c76321ee4b7c879d5a9f6f7ffd0f130c582",
+      "patch_utf8_sha256": "53b8672a2b840e1519a1ed2bd7a94c76321ee4b7c879d5a9f6f7ffd0f130c582"
+    },
+    {
+      "order": 5,
+      "id": "exec-95305a96-5221-4552-8296-702babb0188a",
+      "change_index": 0,
+      "path": "tests/mebane/likelihood/g3_deterministic.R",
+      "operation": "add",
+      "input_sha256": null,
+      "sha256": "8b0012b3e3b54a3b759745a0c846f3c384fae9484266b3e6baf8886328969341",
+      "patch_utf8_sha256": "8b0012b3e3b54a3b759745a0c846f3c384fae9484266b3e6baf8886328969341"
+    },
+    {
+      "order": 6,
+      "id": "exec-3dcb4c83-01d5-49cc-bc06-a8f0b22dbedc",
+      "change_index": 0,
+      "path": "quality_reports/results/mebane_gates/G3/round1/preflight_v1.md",
+      "operation": "add",
+      "input_sha256": null,
+      "sha256": "087c880cbceae4f3175d74dca090e362c3d7a317056c23afb8c755d835f5a780",
+      "patch_utf8_sha256": "087c880cbceae4f3175d74dca090e362c3d7a317056c23afb8c755d835f5a780"
+    },
+    {
+      "order": 6,
+      "id": "exec-3dcb4c83-01d5-49cc-bc06-a8f0b22dbedc",
+      "change_index": 1,
+      "path": "quality_reports/results/mebane_gates/G3/round1/protocol_v2.json",
+      "operation": "add",
+      "input_sha256": null,
+      "sha256": "b7b54a5b6606ba45a662f8e94ff0438336525fe63733f75f70a2ffa26f77186f",
+      "patch_utf8_sha256": "b7b54a5b6606ba45a662f8e94ff0438336525fe63733f75f70a2ffa26f77186f"
+    },
+    {
+      "order": 7,
+      "id": "exec-5e2918b3-c742-427b-814e-7a1ba2930668",
+      "change_index": 0,
+      "path": "tests/mebane/likelihood/g3_jags.R",
+      "operation": "add",
+      "input_sha256": null,
+      "sha256": "2988e8f080aa429ffc4f3cf89c925aa903c54a0958f8e34ecb6abaf6e58c5489",
+      "patch_utf8_sha256": "2988e8f080aa429ffc4f3cf89c925aa903c54a0958f8e34ecb6abaf6e58c5489"
+    },
+    {
+      "order": 10,
+      "id": "exec-480ddda5-5b2b-47db-acb0-ba90d5f5dd8e",
+      "change_index": 0,
+      "path": "R/lib/mebane_model.R",
+      "operation": "update",
+      "input_sha256": "53b8672a2b840e1519a1ed2bd7a94c76321ee4b7c879d5a9f6f7ffd0f130c582",
+      "sha256": "cded39d1bbf5cc22101ad8454d255a3016f21a263df91f76ec4592888d189136",
+      "patch_utf8_sha256": "1aba55bc19a502e448dcad973c20f11d4970dbf20dd2b90f850a13034173f109"
+    },
+    {
+      "order": 10,
+      "id": "exec-480ddda5-5b2b-47db-acb0-ba90d5f5dd8e",
+      "change_index": 1,
+      "path": "tests/mebane/likelihood/g3_deterministic.R",
+      "operation": "update",
+      "input_sha256": "8b0012b3e3b54a3b759745a0c846f3c384fae9484266b3e6baf8886328969341",
+      "sha256": "86fab7d3bff353d08b12f80a8d1c9a2d1976eb2f8bc43a9dd9183df7a49e5c16",
+      "patch_utf8_sha256": "7ac1e7761215152fd45c45d55350036fbc56401a0d880098e948272c39dd55fe"
+    },
+    {
+      "order": 11,
+      "id": "exec-034695ba-80d9-4e97-99f1-9b9cf7ea3239",
+      "change_index": 0,
+      "path": "quality_reports/results/mebane_gates/G3/round1/protocol_provenance_errata.md",
+      "operation": "add",
+      "input_sha256": null,
+      "sha256": "242394b2031310aa357812c312484e7e7b9e4e49ae508d58505320c86858c76e",
+      "patch_utf8_sha256": "242394b2031310aa357812c312484e7e7b9e4e49ae508d58505320c86858c76e"
+    },
+    {
+      "order": 14,
+      "id": "exec-f18a60d0-2b14-4dc7-a767-30072fa9f4da",
+      "change_index": 0,
+      "path": "R/lib/mebane_model.R",
+      "operation": "update",
+      "input_sha256": "cded39d1bbf5cc22101ad8454d255a3016f21a263df91f76ec4592888d189136",
+      "sha256": "68ca118912c678c7561e718075de7fc3ae10fc024c91a259231bf2a66254a300",
+      "patch_utf8_sha256": "dab3dfc1e3aece4c4857054c3cfef312752592ca2c35976f90e3365874759999"
+    },
+    {
+      "order": 14,
+      "id": "exec-f18a60d0-2b14-4dc7-a767-30072fa9f4da",
+      "change_index": 1,
+      "path": "tests/mebane/likelihood/g3_deterministic.R",
+      "operation": "update",
+      "input_sha256": "86fab7d3bff353d08b12f80a8d1c9a2d1976eb2f8bc43a9dd9183df7a49e5c16",
+      "sha256": "cb897259db4d5c7103728a2c3ad0e7cd7c3df4fc0e0e89fe015b27f1b26b9d2a",
+      "patch_utf8_sha256": "560288c01e3a97828b3ee197481fc2077a0ef36149a36f6b4a3f7c53b0a0c9c4"
+    },
+    {
+      "order": 14,
+      "id": "exec-f18a60d0-2b14-4dc7-a767-30072fa9f4da",
+      "change_index": 2,
+      "path": "tests/mebane/likelihood/g3_jags.R",
+      "operation": "update",
+      "input_sha256": "2988e8f080aa429ffc4f3cf89c925aa903c54a0958f8e34ecb6abaf6e58c5489",
+      "sha256": "15b48452923289dcdea8fc1dc32192b1305c3f246dad554ccc885340be801a42",
+      "patch_utf8_sha256": "c796f3662571d7e66b6bd4690e4457b82b22db43a85e04e8fe05e4efccb7ffb9"
+    },
+    {
+      "order": 15,
+      "id": "exec-7f87edb9-114a-4d94-8278-5d676c61bf4d",
+      "change_index": 0,
+      "path": "tests/mebane/likelihood/g3_deterministic.R",
+      "operation": "update",
+      "input_sha256": "cb897259db4d5c7103728a2c3ad0e7cd7c3df4fc0e0e89fe015b27f1b26b9d2a",
+      "sha256": "95dbcfa89532e6a1ee5089b36f0e845d9334a0f02bd9f0b9c2edefa0a30bf42c",
+      "patch_utf8_sha256": "c1c956e70ffff1706aa364b2c8d58fd30525879d34c35ec73b6f7307aa12a3b3"
+    },
+    {
+      "order": 19,
+      "id": "exec-b0e9f904-566c-41ba-a0df-ec0c7be8f4c8",
+      "change_index": 0,
+      "path": "tests/mebane/likelihood/g3_jags.R",
+      "operation": "update",
+      "input_sha256": "15b48452923289dcdea8fc1dc32192b1305c3f246dad554ccc885340be801a42",
+      "sha256": "19ed250a7c53f88b30ded695f55113a715c862c3b9bc07aa0917ef242007db3b",
+      "patch_utf8_sha256": "cc811138d9792588f0fcbef71a5278eb634f74e7fcc9da43686fb044659a2fb2"
+    },
+    {
+      "order": 22,
+      "id": "exec-5fb28eb8-dba5-46c8-8627-eb67a5f237d6",
+      "change_index": 0,
+      "path": "tests/mebane/likelihood/g3_jags.R",
+      "operation": "update",
+      "input_sha256": "19ed250a7c53f88b30ded695f55113a715c862c3b9bc07aa0917ef242007db3b",
+      "sha256": "72f96b79b35fbe7886dd70b93a6cf18a3fb944105ca97ed8df068b0ddfee253d",
+      "patch_utf8_sha256": "ff166e25f7ae83be6007040babbf55219002bdc530d8a42f2b485137fde06fb6"
+    },
+    {
+      "order": 26,
+      "id": "exec-e2330f7b-0af7-4d02-8fe2-b4062a1ca3e6",
+      "change_index": 0,
+      "path": "tests/mebane/likelihood/g3_source_contract.R",
+      "operation": "add",
+      "input_sha256": null,
+      "sha256": "8ea157d94d20f709bb471c58e77f44e1ae8e0b2ec8dc2940119809269932a874",
+      "patch_utf8_sha256": "8ea157d94d20f709bb471c58e77f44e1ae8e0b2ec8dc2940119809269932a874"
+    },
+    {
+      "order": 29,
+      "id": "exec-2e58e17a-f6f1-4d31-ab5f-7ffa8381b52a",
+      "change_index": 0,
+      "path": "tests/mebane/likelihood/g3_jags.R",
+      "operation": "update",
+      "input_sha256": "72f96b79b35fbe7886dd70b93a6cf18a3fb944105ca97ed8df068b0ddfee253d",
+      "sha256": "6ecae09f28159803ec93a3da654b661a129a44da630acba17e853969c9549583",
+      "patch_utf8_sha256": "910736683d33f37989a66938a952674ba75867fd37cfd025d8be1dbc623d018e"
+    },
+    {
+      "order": 32,
+      "id": "exec-c8e06f45-d5d9-4529-83ee-a540217a9afa",
+      "change_index": 0,
+      "path": "tests/mebane/likelihood/g3_jags.R",
+      "operation": "update",
+      "input_sha256": "6ecae09f28159803ec93a3da654b661a129a44da630acba17e853969c9549583",
+      "sha256": "46429e7533b9a068c9d265314454e505dca515e2bf3ccb002dc5d3f6ae2152eb",
+      "patch_utf8_sha256": "287f87fe27ccf7d638bf3293f3089645d59fb2e67abb5d09b62b9fdcd98f1982"
+    },
+    {
+      "order": 39,
+      "id": "exec-3da93d11-26eb-4b93-8fa6-46e3d6f40087",
+      "change_index": 0,
+      "path": "quality_reports/results/mebane_gates/G3/round1/revision2/replay_plan.json",
+      "operation": "add",
+      "input_sha256": null,
+      "sha256": "41935171c36b97ec04e8a301ccc3d31491dc0a3f3891fe4317ab5f5312aac17e",
+      "patch_utf8_sha256": "41935171c36b97ec04e8a301ccc3d31491dc0a3f3891fe4317ab5f5312aac17e"
+    },
+    {
+      "order": 39,
+      "id": "exec-3da93d11-26eb-4b93-8fa6-46e3d6f40087",
+      "change_index": 1,
+      "path": "tests/mebane/likelihood/g3_draw_replay.R",
+      "operation": "add",
+      "input_sha256": null,
+      "sha256": "6f147ba3bcebd6fa530004da4a9f5387e8a6e74392b08cbb6f6a1aaf847fcad5",
+      "patch_utf8_sha256": "6f147ba3bcebd6fa530004da4a9f5387e8a6e74392b08cbb6f6a1aaf847fcad5"
+    },
+    {
+      "order": 40,
+      "id": "exec-194b1c3b-2237-45c0-a650-c02bf7245163",
+      "change_index": 0,
+      "path": "tests/mebane/likelihood/g3_draw_postprocess.R",
+      "operation": "add",
+      "input_sha256": null,
+      "sha256": "d3a488bd3694eeb9b0545fbae66977dd4c9dbc91de43b41f4401c001683e4ec2",
+      "patch_utf8_sha256": "d3a488bd3694eeb9b0545fbae66977dd4c9dbc91de43b41f4401c001683e4ec2"
+    }
+  ]
+}

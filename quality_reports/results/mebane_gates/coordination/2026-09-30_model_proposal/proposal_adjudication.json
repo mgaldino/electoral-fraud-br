@@ -1,0 +1,37 @@
+{
+  "schema_version": "1.0",
+  "adjudication_id": "mebane-proposal:7fe462ed9956:round1",
+  "source": {
+    "reviewed_artifact": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/proposal_v1.md",
+    "sha256": "7fe462ed99561dee68d49fe1c5595845664249060459d018b4d01829fd61153c",
+    "artifact_intact": true
+  },
+  "contract": {"required": false, "path": null, "sha256": null, "contract_id": null, "artifact_sha256": null, "status": null, "stale": false},
+  "contract_scope_note": "Single independent technical review of a short comparative proposal and its finite demonstrations, not a multi-reader or transformative manuscript review. Scope/nonclaims appear explicitly throughout the reviewed source.",
+  "review_sources": [{
+    "review_id": "G3-PROPOSAL-QA-V1-01",
+    "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/review/proposal_review_v1.json",
+    "sha256": "0f44eee887d4d122c01bf044492e71b3f90cb2df86c2fec8281c5f961322a2c3"
+  }],
+  "findings": [],
+  "summary": {"total": 0, "confirmed": 0, "partial": 0, "refuted": 0, "unresolved": 0, "held_decisions": 0},
+  "adjudication": {
+    "verdict": "NO_CONFIRMED_DEFECTS",
+    "checked_at": "2026-09-30",
+    "reasons": [
+      "Independent reviewer read the entire frozen source and reported no mandatory corrections.",
+      "The 332 candidate finite distributions were independently reproduced. Separate QA checks examined 336 distributions and complete conditional transfer laws, not only their means.",
+      "Normalization, local observational equivalence, prior distinctions and interpretation limits are consistent with the stated proposal scope.",
+      "No inference, production engine, executable diagnostic protocol or external replication was approved."
+    ]
+  },
+  "owner_decisions_remaining": [
+    "Choose whether to develop candidate D, or another alternative, under a new mathematical contract.",
+    "Approve the new contract, estimands and prospective precision criteria before experimental model implementation and estimation.",
+    "Preserve the original author model for external replication; a modified model cannot silently substitute for it."
+  ],
+  "model_adopted": false,
+  "new_MCMC": false,
+  "G3_status": "inconclusive",
+  "scope": "Accept the proposal as a source-bound decision document, without changing the literal benchmark or approving a fitted model."
+}

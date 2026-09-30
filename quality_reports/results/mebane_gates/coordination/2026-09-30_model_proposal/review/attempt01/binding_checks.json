@@ -1,0 +1,38 @@
+{
+  "G3_revision3_manifest": {
+    "path": "quality_reports/results/mebane_gates/G3/round1/revision3/candidate_manifest.json",
+    "sha256": "63855471a88dbfc3840b1172aef71118f7cffbdfe425e0241f1d689bf5e67966",
+    "expected_sha256": "63855471a88dbfc3840b1172aef71118f7cffbdfe425e0241f1d689bf5e67966",
+    "valid": true
+  },
+  "G3_final_review": {
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/review.json",
+    "sha256": "c5fee3d48a7d23615bde07e866622cbea26964693ea40738e8aeb0dfe5c72955",
+    "expected_sha256": "c5fee3d48a7d23615bde07e866622cbea26964693ea40738e8aeb0dfe5c72955",
+    "valid": true
+  },
+  "G3_QA_manifest": {
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/review_manifest.json",
+    "sha256": "b7d8308b6e7b88f4c20d8d4841e7e60da43488c78e3bc962b760347325f0c8e0",
+    "expected_sha256": "b7d8308b6e7b88f4c20d8d4841e7e60da43488c78e3bc962b760347325f0c8e0",
+    "valid": true
+  },
+  "qbl_source": {
+    "path": "quality_reports/results/mebane_gates/G0/round1/qbl_installed_3017de5.jags",
+    "sha256": "f8360126424b7a463f76a1c99efc89a8a5cb81339213bd4931559f14595fbab6",
+    "expected_sha256": "f8360126424b7a463f76a1c99efc89a8a5cb81339213bd4931559f14595fbab6",
+    "valid": true
+  },
+  "raw_RDS": {
+    "path": "quality_reports/results/mebane_gates/G3/round1/revision2/raw_chains.rds",
+    "sha256": "66ddb0aaef7448b25e817e25c931d5608ee9c7141165842613925e9e145baf6d",
+    "expected_sha256": "66ddb0aaef7448b25e817e25c931d5608ee9c7141165842613925e9e145baf6d",
+    "valid": true
+  },
+  "benchmark_contract": {
+    "path": "quality_reports/results/mebane_gates/G2/round2/benchmark_contract.json",
+    "sha256": "63b61fb0594d0302a03d999bcff6c62967b6e999f37b4c9a8821f0f8e9ed18d2",
+    "expected_sha256": "63b61fb0594d0302a03d999bcff6c62967b6e999f37b4c9a8821f0f8e9ed18d2",
+    "valid": true
+  }
+}

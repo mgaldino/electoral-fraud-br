@@ -1,0 +1,41 @@
+{
+  "status": "verified_bounded_delivery",
+  "parent_entries": 350,
+  "supplement_entries": 42,
+  "review_entries": 569,
+  "all_gate_contracts_unchanged": true,
+  "other_gates_unchanged": true,
+  "G3_status": "inconclusive",
+  "proposal_sha256": "7fe462ed99561dee68d49fe1c5595845664249060459d018b4d01829fd61153c",
+  "pdf_sha256": "1ba3644476e788327e7378a0cff0499b8f1a497bd9f2e70eba204c11043f3847",
+  "independent_review_sha256": "f3efa814a7853d3c1202c19a69ea735485d0f13f62252cf2e719f8ada250518f",
+  "final_state": [
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/final_state/README.md",
+      "sha256": "53c787360ab825f310b91916a9d05db7e277eacce9c07860648e1020564c6d5b"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/final_state/CLAUDE.md",
+      "sha256": "1670d37bb2104bd04d5034d483f604401c6727edff919e4088ae92cb99a47ef2"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/final_state/quality_reports/plans/mebane_2022_2026_gates.json",
+      "sha256": "a4a8b0b5a4746d3f49300e3e82682ce35762de1e628dd1ce08a54c0cdca237f0"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/final_state/quality_reports/plans/2026-09-28_mebane_2022_2026_gates.md",
+      "sha256": "6e4eb7d514f3f4e97ad07cf69f59b94a3967fa935088890996d4000a815db033"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/final_state/quality_reports/results/mebane_gates/G3/round1/adjudication.json",
+      "sha256": "12edbc0c6e0fe18d0d6d4e296d9b6111ef028770721382968c56f34d98d7f89f"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/final_state/quality_reports/results/mebane_gates/G3/round1/adjudication.md",
+      "sha256": "9ec22580d2ca0a92a7a08c6e946c5eef605f9d29a1ed6e3830f4a1b6146177da"
+    }
+  ],
+  "checker_stdout": "PASS: 11 gates, 49 todos; structural checks only\n",
+  "checker_stderr": "",
+  "scope": "Artifact identity and stated changes; not production or inferential approval."
+}

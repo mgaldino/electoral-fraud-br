@@ -1,0 +1,235 @@
+{
+  "schema_version": "1.0",
+  "finding_id": "G3-QA-R2-INPUT-01",
+  "artifact_kind": "documentary_supplement_to_revision3",
+  "executor_thread_id": "01a0ee04-c901-7831-8ac6-0160da2e3883",
+  "parent_manifest_path": "quality_reports/results/mebane_gates/G3/round1/revision3/candidate_manifest.json",
+  "parent_manifest_sha256": "63855471a88dbfc3840b1172aef71118f7cffbdfe425e0241f1d689bf5e67966",
+  "gate_outcome": "inconclusive",
+  "approval_status": "submitted_for_independent_review",
+  "scope": "Exactly seven recovered historical source identities and documentary execution/hash mapping.",
+  "files": [
+    {
+      "path": "delivery/candidate_integrity_after.json",
+      "sha256": "ee021d0763f6315efdc082ed5e14f39692543348d2d04780799f23a1b407da9c",
+      "bytes": 81784
+    },
+    {
+      "path": "delivery/candidate_integrity_before.json",
+      "sha256": "ee021d0763f6315efdc082ed5e14f39692543348d2d04780799f23a1b407da9c",
+      "bytes": 81784
+    },
+    {
+      "path": "delivery/command_source_map.json",
+      "sha256": "caf38c0de624a8260be30c5af22b9f1cc9e944ce58d66a92c99659ce6e197737",
+      "bytes": 57870
+    },
+    {
+      "path": "delivery/frozen_inputs/adjudication.json",
+      "sha256": "438b50f4680ed661463405ccfcc64484b6011ef121285010078fba14cb7ce0b7",
+      "bytes": 2873
+    },
+    {
+      "path": "delivery/frozen_inputs/executor_event_sequence.json",
+      "sha256": "2ba52fc1909b9148b4e05a286ae8a75fac527aa6f28433346f002c606b88439f",
+      "bytes": 116554
+    },
+    {
+      "path": "delivery/frozen_inputs/history_audit.json",
+      "sha256": "1e29ca542fd20612b8030d88a3bc046abf3ff27ef894163eba0b9205a270a11c",
+      "bytes": 20559
+    },
+    {
+      "path": "delivery/frozen_inputs/input_closure_revision2.json",
+      "sha256": "21112d7cc29f924d2cf9dd530061b7086f899f9ca59f2c037626791be800cde9",
+      "bytes": 5646
+    },
+    {
+      "path": "delivery/frozen_inputs/qa_audit_event_history.py",
+      "sha256": "709f3f66ebfa00521fda40d45e7aa1db14e380de89ab86532b68dc7c757d38ff",
+      "bytes": 3788
+    },
+    {
+      "path": "delivery/frozen_inputs/review.json",
+      "sha256": "c5fee3d48a7d23615bde07e866622cbea26964693ea40738e8aeb0dfe5c72955",
+      "bytes": 13607
+    },
+    {
+      "path": "delivery/frozen_inputs/revision3_manifest.json",
+      "sha256": "63855471a88dbfc3840b1172aef71118f7cffbdfe425e0241f1d689bf5e67966",
+      "bytes": 82081
+    },
+    {
+      "path": "delivery/historical_logs/g3_deterministic.log",
+      "sha256": "ba7c5ef626ce133553d370b14be1d2db859dcebaf92f72f28f58b1c975031322",
+      "bytes": 489
+    },
+    {
+      "path": "delivery/historical_logs/g3_deterministic_attempt2.log",
+      "sha256": "022a2f2a8f82ef3476fb4b24eb0d5efc8019c816906a8ea38e09fd1f12bd2a0f",
+      "bytes": 347
+    },
+    {
+      "path": "delivery/historical_logs/g3_jags_attempt1.log",
+      "sha256": "602c1ed9d4f68eda717fbf8db86be49deca83ae9c3187190ce342d3e9e6faf86",
+      "bytes": 1464
+    },
+    {
+      "path": "delivery/historical_logs/g3_jags_attempt2.log",
+      "sha256": "39d9f0359740de56d0b1a90cdab2dc5f3d006541eab199c885c9ae5eef115cd1",
+      "bytes": 1676
+    },
+    {
+      "path": "delivery/historical_logs/g3_jags_attempt4.log",
+      "sha256": "e2cb8b004bb9449b9f6711bfea593c1694ec589a3e1f1011cad628019c1f0f7d",
+      "bytes": 1777
+    },
+    {
+      "path": "delivery/historical_logs_manifest.json",
+      "sha256": "8fabb991c50caefede0b19f249b992d0181c22f50f27239eaffb76d3c828e36b",
+      "bytes": 1956
+    },
+    {
+      "path": "delivery/input_manifest.json",
+      "sha256": "7431c61814e8bfca64479796be567716565184d97ed862742b719a33e7a29759",
+      "bytes": 2373
+    },
+    {
+      "path": "delivery/reconstruction_trace.json",
+      "sha256": "fa918851cd85301290dc04bfe9996df5c15aaaee9e55559c1dafc62676b3b56c",
+      "bytes": 9210
+    },
+    {
+      "path": "delivery/result.json",
+      "sha256": "6c80fdae4d9e78f330ba826667380e5d3008b662d75bb42245222381842e23d0",
+      "bytes": 3812
+    },
+    {
+      "path": "delivery/snapshots/deterministic1/R/lib/mebane_model.R",
+      "sha256": "53b8672a2b840e1519a1ed2bd7a94c76321ee4b7c879d5a9f6f7ffd0f130c582",
+      "bytes": 4972
+    },
+    {
+      "path": "delivery/snapshots/deterministic1/tests/mebane/likelihood/g3_deterministic.R",
+      "sha256": "8b0012b3e3b54a3b759745a0c846f3c384fae9484266b3e6baf8886328969341",
+      "bytes": 3047
+    },
+    {
+      "path": "delivery/snapshots/deterministic2/R/lib/mebane_model.R",
+      "sha256": "cded39d1bbf5cc22101ad8454d255a3016f21a263df91f76ec4592888d189136",
+      "bytes": 5012
+    },
+    {
+      "path": "delivery/snapshots/deterministic2/tests/mebane/likelihood/g3_deterministic.R",
+      "sha256": "86fab7d3bff353d08b12f80a8d1c9a2d1976eb2f8bc43a9dd9183df7a49e5c16",
+      "bytes": 3129
+    },
+    {
+      "path": "delivery/snapshots/jags1/tests/mebane/likelihood/g3_jags.R",
+      "sha256": "15b48452923289dcdea8fc1dc32192b1305c3f246dad554ccc885340be801a42",
+      "bytes": 8601
+    },
+    {
+      "path": "delivery/snapshots/jags2/tests/mebane/likelihood/g3_jags.R",
+      "sha256": "19ed250a7c53f88b30ded695f55113a715c862c3b9bc07aa0917ef242007db3b",
+      "bytes": 8674
+    },
+    {
+      "path": "delivery/snapshots/jags4/tests/mebane/likelihood/g3_jags.R",
+      "sha256": "6ecae09f28159803ec93a3da654b661a129a44da630acba17e853969c9549583",
+      "bytes": 8896
+    },
+    {
+      "path": "reconstruct_sources.py",
+      "sha256": "80957c2ff0bc4d2beed2b25fa44a9877eec84b97ffd694cfe1f6361d66e10ebb",
+      "bytes": 24102
+    },
+    {
+      "path": "repair_plan.json",
+      "sha256": "5aebb456caa1ed75d035058466aa5ebaa874511b00d0cf275eeb1f43afb44bc1",
+      "bytes": 2829
+    },
+    {
+      "path": "report.md",
+      "sha256": "37895b96db73d93fe31654b5f4d94557dbd009e1da20c3ca0d0b6c886da08466",
+      "bytes": 6119
+    },
+    {
+      "path": "run_documentary.py",
+      "sha256": "116088aa15bf9bde19e367cd1f774189e171c715c8c5cef778ca48af6103fae3",
+      "bytes": 3151
+    },
+    {
+      "path": "runs/build01/run.json",
+      "sha256": "dd7ff4fec9a97337c9ff15664ce76c585929bc980f5946c6421158e0bde118a4",
+      "bytes": 1574
+    },
+    {
+      "path": "runs/build01/source_snapshot/reconstruct_sources.py",
+      "sha256": "80957c2ff0bc4d2beed2b25fa44a9877eec84b97ffd694cfe1f6361d66e10ebb",
+      "bytes": 24102
+    },
+    {
+      "path": "runs/build01/source_snapshot/repair_plan.json",
+      "sha256": "5aebb456caa1ed75d035058466aa5ebaa874511b00d0cf275eeb1f43afb44bc1",
+      "bytes": 2829
+    },
+    {
+      "path": "runs/build01/source_snapshot/run_documentary.py",
+      "sha256": "116088aa15bf9bde19e367cd1f774189e171c715c8c5cef778ca48af6103fae3",
+      "bytes": 3151
+    },
+    {
+      "path": "runs/build01/stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "runs/build01/stdout.log",
+      "sha256": "076d3840e7b04f9008b46c252b6808d9493b3941f0ea2c8f41e809e2b82ae2a6",
+      "bytes": 215
+    },
+    {
+      "path": "runs/replay_check01/run.json",
+      "sha256": "b1e797ff9bc161113df50369489cf33dd57f3b24e6119c765782c62b69424485",
+      "bytes": 1596
+    },
+    {
+      "path": "runs/replay_check01/source_snapshot/reconstruct_sources.py",
+      "sha256": "80957c2ff0bc4d2beed2b25fa44a9877eec84b97ffd694cfe1f6361d66e10ebb",
+      "bytes": 24102
+    },
+    {
+      "path": "runs/replay_check01/source_snapshot/repair_plan.json",
+      "sha256": "5aebb456caa1ed75d035058466aa5ebaa874511b00d0cf275eeb1f43afb44bc1",
+      "bytes": 2829
+    },
+    {
+      "path": "runs/replay_check01/source_snapshot/run_documentary.py",
+      "sha256": "116088aa15bf9bde19e367cd1f774189e171c715c8c5cef778ca48af6103fae3",
+      "bytes": 3151
+    },
+    {
+      "path": "runs/replay_check01/stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "runs/replay_check01/stdout.log",
+      "sha256": "3f335a3acdb8f39967c693fb76b5ca30f33ab0fc6b53071b72a12bcc3c4d0b21",
+      "bytes": 670
+    }
+  ],
+  "external_inherited_inventory": "delivery/candidate_integrity_after.json",
+  "coverage": "All package files present at sealing. Original 350 inherited files are referenced read-only in the external inventory, not recopied or treated as newly generated outputs.",
+  "excluded_self_and_detached_checks": [
+    "closure_manifest.json",
+    "runs/final_verification/"
+  ],
+  "seal_command": [
+    "/opt/homebrew/opt/python@3.13/bin/python3.13",
+    "-B",
+    "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/provenance_repair/reconstruct_sources.py",
+    "seal"
+  ]
+}

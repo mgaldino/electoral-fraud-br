@@ -1,0 +1,1176 @@
+{
+  "schema_version": "1.0",
+  "finding_id": "G3-QA-R2-INPUT-01",
+  "source": "frozen_inputs/executor_event_sequence.json",
+  "source_thread_id": "01a0ee04-c901-7831-8ac6-0160da2e3883",
+  "event_count": 49,
+  "chronology_basis": "Saved raw tool-event order, not filesystem modification times or agent conclusions.",
+  "dependency_scope": "Timed R entrypoints plus the explicit source(R/lib/mebane_model.R) dependency audited by QA; not a complete runtime dependency graph.",
+  "affected_command_ids": [
+    "exec-5917a647-9399-47fb-96b0-9f87fb360581",
+    "exec-8d397c53-a60a-48b9-bc72-3fdb8c7fb417",
+    "exec-39fc0c88-d6b6-4a53-9f81-0ed65fa6f7a0",
+    "exec-16393a95-824d-40bc-affe-64ba4f890b21",
+    "exec-78df1b3c-3b27-45b5-8592-9c8ad88e4202"
+  ],
+  "commands": [
+    {
+      "order": 8,
+      "id": "exec-5917a647-9399-47fb-96b0-9f87fb360581",
+      "turn_id": "01a0ee08-35b6-7292-9838-701f07ead85e",
+      "item_order": 14,
+      "command": "/bin/zsh -lc '/usr/bin/time -p timeout 120 Rscript --vanilla tests/mebane/likelihood/g3_deterministic.R > quality_reports/results/mebane_gates/G3/round1/g3_deterministic.log 2>&1'",
+      "exit_code": 1,
+      "status": "failed",
+      "duration_ms_from_event": 429,
+      "historical_log": "quality_reports/results/mebane_gates/G3/round1/g3_deterministic.log",
+      "source_states": [
+        {
+          "path": "tests/mebane/likelihood/g3_deterministic.R",
+          "sha256": "8b0012b3e3b54a3b759745a0c846f3c384fae9484266b3e6baf8886328969341",
+          "last_edit": {
+            "order": 5,
+            "id": "exec-95305a96-5221-4552-8296-702babb0188a",
+            "change_index": 0,
+            "path": "tests/mebane/likelihood/g3_deterministic.R",
+            "operation": "add",
+            "input_sha256": null,
+            "sha256": "8b0012b3e3b54a3b759745a0c846f3c384fae9484266b3e6baf8886328969341",
+            "patch_utf8_sha256": "8b0012b3e3b54a3b759745a0c846f3c384fae9484266b3e6baf8886328969341"
+          },
+          "lineage": [
+            {
+              "order": 5,
+              "id": "exec-95305a96-5221-4552-8296-702babb0188a",
+              "change_index": 0,
+              "path": "tests/mebane/likelihood/g3_deterministic.R",
+              "operation": "add",
+              "input_sha256": null,
+              "sha256": "8b0012b3e3b54a3b759745a0c846f3c384fae9484266b3e6baf8886328969341",
+              "patch_utf8_sha256": "8b0012b3e3b54a3b759745a0c846f3c384fae9484266b3e6baf8886328969341"
+            }
+          ],
+          "availability": "recovered_in_this_supplement",
+          "snapshot": "snapshots/deterministic1/tests/mebane/likelihood/g3_deterministic.R",
+          "qa_attempt": "deterministic1"
+        },
+        {
+          "path": "R/lib/mebane_model.R",
+          "sha256": "53b8672a2b840e1519a1ed2bd7a94c76321ee4b7c879d5a9f6f7ffd0f130c582",
+          "last_edit": {
+            "order": 4,
+            "id": "exec-5e8b3c00-2f40-410f-aadc-9d753895f594",
+            "change_index": 0,
+            "path": "R/lib/mebane_model.R",
+            "operation": "add",
+            "input_sha256": null,
+            "sha256": "53b8672a2b840e1519a1ed2bd7a94c76321ee4b7c879d5a9f6f7ffd0f130c582",
+            "patch_utf8_sha256": "53b8672a2b840e1519a1ed2bd7a94c76321ee4b7c879d5a9f6f7ffd0f130c582"
+          },
+          "lineage": [
+            {
+              "order": 4,
+              "id": "exec-5e8b3c00-2f40-410f-aadc-9d753895f594",
+              "change_index": 0,
+              "path": "R/lib/mebane_model.R",
+              "operation": "add",
+              "input_sha256": null,
+              "sha256": "53b8672a2b840e1519a1ed2bd7a94c76321ee4b7c879d5a9f6f7ffd0f130c582",
+              "patch_utf8_sha256": "53b8672a2b840e1519a1ed2bd7a94c76321ee4b7c879d5a9f6f7ffd0f130c582"
+            }
+          ],
+          "availability": "recovered_in_this_supplement",
+          "snapshot": "snapshots/deterministic1/R/lib/mebane_model.R",
+          "qa_attempt": "deterministic1"
+        }
+      ],
+      "executed_by_this_repair": false,
+      "archived_log": {
+        "path": "historical_logs/g3_deterministic.log",
+        "sha256": "ba7c5ef626ce133553d370b14be1d2db859dcebaf92f72f28f58b1c975031322",
+        "bytes": 489,
+        "source_path": "quality_reports/results/mebane_gates/G3/round1/g3_deterministic.log",
+        "command_event_id": "exec-5917a647-9399-47fb-96b0-9f87fb360581",
+        "role": "historical_log_not_new_execution"
+      }
+    },
+    {
+      "order": 12,
+      "id": "exec-8d397c53-a60a-48b9-bc72-3fdb8c7fb417",
+      "turn_id": "01a0ee08-35b6-7292-9838-701f07ead85e",
+      "item_order": 27,
+      "command": "/bin/zsh -lc '/usr/bin/time -p timeout 120 Rscript --vanilla tests/mebane/likelihood/g3_deterministic.R > quality_reports/results/mebane_gates/G3/round1/g3_deterministic_attempt2.log 2>&1'",
+      "exit_code": 0,
+      "status": "completed",
+      "duration_ms_from_event": 442,
+      "historical_log": "quality_reports/results/mebane_gates/G3/round1/g3_deterministic_attempt2.log",
+      "source_states": [
+        {
+          "path": "tests/mebane/likelihood/g3_deterministic.R",
+          "sha256": "86fab7d3bff353d08b12f80a8d1c9a2d1976eb2f8bc43a9dd9183df7a49e5c16",
+          "last_edit": {
+            "order": 10,
+            "id": "exec-480ddda5-5b2b-47db-acb0-ba90d5f5dd8e",
+            "change_index": 1,
+            "path": "tests/mebane/likelihood/g3_deterministic.R",
+            "operation": "update",
+            "input_sha256": "8b0012b3e3b54a3b759745a0c846f3c384fae9484266b3e6baf8886328969341",
+            "sha256": "86fab7d3bff353d08b12f80a8d1c9a2d1976eb2f8bc43a9dd9183df7a49e5c16",
+            "patch_utf8_sha256": "7ac1e7761215152fd45c45d55350036fbc56401a0d880098e948272c39dd55fe"
+          },
+          "lineage": [
+            {
+              "order": 5,
+              "id": "exec-95305a96-5221-4552-8296-702babb0188a",
+              "change_index": 0,
+              "path": "tests/mebane/likelihood/g3_deterministic.R",
+              "operation": "add",
+              "input_sha256": null,
+              "sha256": "8b0012b3e3b54a3b759745a0c846f3c384fae9484266b3e6baf8886328969341",
+              "patch_utf8_sha256": "8b0012b3e3b54a3b759745a0c846f3c384fae9484266b3e6baf8886328969341"
+            },
+            {
+              "order": 10,
+              "id": "exec-480ddda5-5b2b-47db-acb0-ba90d5f5dd8e",
+              "change_index": 1,
+              "path": "tests/mebane/likelihood/g3_deterministic.R",
+              "operation": "update",
+              "input_sha256": "8b0012b3e3b54a3b759745a0c846f3c384fae9484266b3e6baf8886328969341",
+              "sha256": "86fab7d3bff353d08b12f80a8d1c9a2d1976eb2f8bc43a9dd9183df7a49e5c16",
+              "patch_utf8_sha256": "7ac1e7761215152fd45c45d55350036fbc56401a0d880098e948272c39dd55fe"
+            }
+          ],
+          "availability": "recovered_in_this_supplement",
+          "snapshot": "snapshots/deterministic2/tests/mebane/likelihood/g3_deterministic.R",
+          "qa_attempt": "deterministic2"
+        },
+        {
+          "path": "R/lib/mebane_model.R",
+          "sha256": "cded39d1bbf5cc22101ad8454d255a3016f21a263df91f76ec4592888d189136",
+          "last_edit": {
+            "order": 10,
+            "id": "exec-480ddda5-5b2b-47db-acb0-ba90d5f5dd8e",
+            "change_index": 0,
+            "path": "R/lib/mebane_model.R",
+            "operation": "update",
+            "input_sha256": "53b8672a2b840e1519a1ed2bd7a94c76321ee4b7c879d5a9f6f7ffd0f130c582",
+            "sha256": "cded39d1bbf5cc22101ad8454d255a3016f21a263df91f76ec4592888d189136",
+            "patch_utf8_sha256": "1aba55bc19a502e448dcad973c20f11d4970dbf20dd2b90f850a13034173f109"
+          },
+          "lineage": [
+            {
+              "order": 4,
+              "id": "exec-5e8b3c00-2f40-410f-aadc-9d753895f594",
+              "change_index": 0,
+              "path": "R/lib/mebane_model.R",
+              "operation": "add",
+              "input_sha256": null,
+              "sha256": "53b8672a2b840e1519a1ed2bd7a94c76321ee4b7c879d5a9f6f7ffd0f130c582",
+              "patch_utf8_sha256": "53b8672a2b840e1519a1ed2bd7a94c76321ee4b7c879d5a9f6f7ffd0f130c582"
+            },
+            {
+              "order": 10,
+              "id": "exec-480ddda5-5b2b-47db-acb0-ba90d5f5dd8e",
+              "change_index": 0,
+              "path": "R/lib/mebane_model.R",
+              "operation": "update",
+              "input_sha256": "53b8672a2b840e1519a1ed2bd7a94c76321ee4b7c879d5a9f6f7ffd0f130c582",
+              "sha256": "cded39d1bbf5cc22101ad8454d255a3016f21a263df91f76ec4592888d189136",
+              "patch_utf8_sha256": "1aba55bc19a502e448dcad973c20f11d4970dbf20dd2b90f850a13034173f109"
+            }
+          ],
+          "availability": "recovered_in_this_supplement",
+          "snapshot": "snapshots/deterministic2/R/lib/mebane_model.R",
+          "qa_attempt": "deterministic2"
+        }
+      ],
+      "executed_by_this_repair": false,
+      "archived_log": {
+        "path": "historical_logs/g3_deterministic_attempt2.log",
+        "sha256": "022a2f2a8f82ef3476fb4b24eb0d5efc8019c816906a8ea38e09fd1f12bd2a0f",
+        "bytes": 347,
+        "source_path": "quality_reports/results/mebane_gates/G3/round1/g3_deterministic_attempt2.log",
+        "command_event_id": "exec-8d397c53-a60a-48b9-bc72-3fdb8c7fb417",
+        "role": "historical_log_not_new_execution"
+      }
+    },
+    {
+      "order": 16,
+      "id": "exec-8f337ba3-37ca-47b0-9f6b-330d812ae3d6",
+      "turn_id": "01a0ee08-35b6-7292-9838-701f07ead85e",
+      "item_order": 35,
+      "command": "/bin/zsh -lc '/usr/bin/time -p timeout 120 Rscript --vanilla tests/mebane/likelihood/g3_deterministic.R > quality_reports/results/mebane_gates/G3/round1/g3_deterministic_attempt3.log 2>&1'",
+      "exit_code": 0,
+      "status": "completed",
+      "duration_ms_from_event": 446,
+      "historical_log": "quality_reports/results/mebane_gates/G3/round1/g3_deterministic_attempt3.log",
+      "source_states": [
+        {
+          "path": "tests/mebane/likelihood/g3_deterministic.R",
+          "sha256": "95dbcfa89532e6a1ee5089b36f0e845d9334a0f02bd9f0b9c2edefa0a30bf42c",
+          "last_edit": {
+            "order": 15,
+            "id": "exec-7f87edb9-114a-4d94-8278-5d676c61bf4d",
+            "change_index": 0,
+            "path": "tests/mebane/likelihood/g3_deterministic.R",
+            "operation": "update",
+            "input_sha256": "cb897259db4d5c7103728a2c3ad0e7cd7c3df4fc0e0e89fe015b27f1b26b9d2a",
+            "sha256": "95dbcfa89532e6a1ee5089b36f0e845d9334a0f02bd9f0b9c2edefa0a30bf42c",
+            "patch_utf8_sha256": "c1c956e70ffff1706aa364b2c8d58fd30525879d34c35ec73b6f7307aa12a3b3"
+          },
+          "lineage": [
+            {
+              "order": 5,
+              "id": "exec-95305a96-5221-4552-8296-702babb0188a",
+              "change_index": 0,
+              "path": "tests/mebane/likelihood/g3_deterministic.R",
+              "operation": "add",
+              "input_sha256": null,
+              "sha256": "8b0012b3e3b54a3b759745a0c846f3c384fae9484266b3e6baf8886328969341",
+              "patch_utf8_sha256": "8b0012b3e3b54a3b759745a0c846f3c384fae9484266b3e6baf8886328969341"
+            },
+            {
+              "order": 10,
+              "id": "exec-480ddda5-5b2b-47db-acb0-ba90d5f5dd8e",
+              "change_index": 1,
+              "path": "tests/mebane/likelihood/g3_deterministic.R",
+              "operation": "update",
+              "input_sha256": "8b0012b3e3b54a3b759745a0c846f3c384fae9484266b3e6baf8886328969341",
+              "sha256": "86fab7d3bff353d08b12f80a8d1c9a2d1976eb2f8bc43a9dd9183df7a49e5c16",
+              "patch_utf8_sha256": "7ac1e7761215152fd45c45d55350036fbc56401a0d880098e948272c39dd55fe"
+            },
+            {
+              "order": 14,
+              "id": "exec-f18a60d0-2b14-4dc7-a767-30072fa9f4da",
+              "change_index": 1,
+              "path": "tests/mebane/likelihood/g3_deterministic.R",
+              "operation": "update",
+              "input_sha256": "86fab7d3bff353d08b12f80a8d1c9a2d1976eb2f8bc43a9dd9183df7a49e5c16",
+              "sha256": "cb897259db4d5c7103728a2c3ad0e7cd7c3df4fc0e0e89fe015b27f1b26b9d2a",
+              "patch_utf8_sha256": "560288c01e3a97828b3ee197481fc2077a0ef36149a36f6b4a3f7c53b0a0c9c4"
+            },
+            {
+              "order": 15,
+              "id": "exec-7f87edb9-114a-4d94-8278-5d676c61bf4d",
+              "change_index": 0,
+              "path": "tests/mebane/likelihood/g3_deterministic.R",
+              "operation": "update",
+              "input_sha256": "cb897259db4d5c7103728a2c3ad0e7cd7c3df4fc0e0e89fe015b27f1b26b9d2a",
+              "sha256": "95dbcfa89532e6a1ee5089b36f0e845d9334a0f02bd9f0b9c2edefa0a30bf42c",
+              "patch_utf8_sha256": "c1c956e70ffff1706aa364b2c8d58fd30525879d34c35ec73b6f7307aa12a3b3"
+            }
+          ],
+          "availability": "inherited_candidate",
+          "inherited_paths": [
+            "quality_reports/results/mebane_gates/G3/round1/revision1/snapshots/tests/mebane/likelihood/g3_deterministic.R",
+            "quality_reports/results/mebane_gates/G3/round1/revision3/inherited_snapshots/tests/mebane/likelihood/g3_deterministic.R"
+          ]
+        },
+        {
+          "path": "R/lib/mebane_model.R",
+          "sha256": "68ca118912c678c7561e718075de7fc3ae10fc024c91a259231bf2a66254a300",
+          "last_edit": {
+            "order": 14,
+            "id": "exec-f18a60d0-2b14-4dc7-a767-30072fa9f4da",
+            "change_index": 0,
+            "path": "R/lib/mebane_model.R",
+            "operation": "update",
+            "input_sha256": "cded39d1bbf5cc22101ad8454d255a3016f21a263df91f76ec4592888d189136",
+            "sha256": "68ca118912c678c7561e718075de7fc3ae10fc024c91a259231bf2a66254a300",
+            "patch_utf8_sha256": "dab3dfc1e3aece4c4857054c3cfef312752592ca2c35976f90e3365874759999"
+          },
+          "lineage": [
+            {
+              "order": 4,
+              "id": "exec-5e8b3c00-2f40-410f-aadc-9d753895f594",
+              "change_index": 0,
+              "path": "R/lib/mebane_model.R",
+              "operation": "add",
+              "input_sha256": null,
+              "sha256": "53b8672a2b840e1519a1ed2bd7a94c76321ee4b7c879d5a9f6f7ffd0f130c582",
+              "patch_utf8_sha256": "53b8672a2b840e1519a1ed2bd7a94c76321ee4b7c879d5a9f6f7ffd0f130c582"
+            },
+            {
+              "order": 10,
+              "id": "exec-480ddda5-5b2b-47db-acb0-ba90d5f5dd8e",
+              "change_index": 0,
+              "path": "R/lib/mebane_model.R",
+              "operation": "update",
+              "input_sha256": "53b8672a2b840e1519a1ed2bd7a94c76321ee4b7c879d5a9f6f7ffd0f130c582",
+              "sha256": "cded39d1bbf5cc22101ad8454d255a3016f21a263df91f76ec4592888d189136",
+              "patch_utf8_sha256": "1aba55bc19a502e448dcad973c20f11d4970dbf20dd2b90f850a13034173f109"
+            },
+            {
+              "order": 14,
+              "id": "exec-f18a60d0-2b14-4dc7-a767-30072fa9f4da",
+              "change_index": 0,
+              "path": "R/lib/mebane_model.R",
+              "operation": "update",
+              "input_sha256": "cded39d1bbf5cc22101ad8454d255a3016f21a263df91f76ec4592888d189136",
+              "sha256": "68ca118912c678c7561e718075de7fc3ae10fc024c91a259231bf2a66254a300",
+              "patch_utf8_sha256": "dab3dfc1e3aece4c4857054c3cfef312752592ca2c35976f90e3365874759999"
+            }
+          ],
+          "availability": "inherited_candidate",
+          "inherited_paths": [
+            "quality_reports/results/mebane_gates/G3/round1/revision1/snapshots/R/lib/mebane_model.R",
+            "quality_reports/results/mebane_gates/G3/round1/revision3/inherited_snapshots/R/lib/mebane_model.R"
+          ]
+        }
+      ],
+      "executed_by_this_repair": false
+    },
+    {
+      "order": 17,
+      "id": "exec-39fc0c88-d6b6-4a53-9f81-0ed65fa6f7a0",
+      "turn_id": "01a0ee08-35b6-7292-9838-701f07ead85e",
+      "item_order": 36,
+      "command": "/bin/zsh -lc '/usr/bin/time -p timeout 120 Rscript --vanilla tests/mebane/likelihood/g3_jags.R > quality_reports/results/mebane_gates/G3/round1/g3_jags_attempt1.log 2>&1'",
+      "exit_code": 0,
+      "status": "completed",
+      "duration_ms_from_event": 154,
+      "historical_log": "quality_reports/results/mebane_gates/G3/round1/g3_jags_attempt1.log",
+      "source_states": [
+        {
+          "path": "tests/mebane/likelihood/g3_jags.R",
+          "sha256": "15b48452923289dcdea8fc1dc32192b1305c3f246dad554ccc885340be801a42",
+          "last_edit": {
+            "order": 14,
+            "id": "exec-f18a60d0-2b14-4dc7-a767-30072fa9f4da",
+            "change_index": 2,
+            "path": "tests/mebane/likelihood/g3_jags.R",
+            "operation": "update",
+            "input_sha256": "2988e8f080aa429ffc4f3cf89c925aa903c54a0958f8e34ecb6abaf6e58c5489",
+            "sha256": "15b48452923289dcdea8fc1dc32192b1305c3f246dad554ccc885340be801a42",
+            "patch_utf8_sha256": "c796f3662571d7e66b6bd4690e4457b82b22db43a85e04e8fe05e4efccb7ffb9"
+          },
+          "lineage": [
+            {
+              "order": 7,
+              "id": "exec-5e2918b3-c742-427b-814e-7a1ba2930668",
+              "change_index": 0,
+              "path": "tests/mebane/likelihood/g3_jags.R",
+              "operation": "add",
+              "input_sha256": null,
+              "sha256": "2988e8f080aa429ffc4f3cf89c925aa903c54a0958f8e34ecb6abaf6e58c5489",
+              "patch_utf8_sha256": "2988e8f080aa429ffc4f3cf89c925aa903c54a0958f8e34ecb6abaf6e58c5489"
+            },
+            {
+              "order": 14,
+              "id": "exec-f18a60d0-2b14-4dc7-a767-30072fa9f4da",
+              "change_index": 2,
+              "path": "tests/mebane/likelihood/g3_jags.R",
+              "operation": "update",
+              "input_sha256": "2988e8f080aa429ffc4f3cf89c925aa903c54a0958f8e34ecb6abaf6e58c5489",
+              "sha256": "15b48452923289dcdea8fc1dc32192b1305c3f246dad554ccc885340be801a42",
+              "patch_utf8_sha256": "c796f3662571d7e66b6bd4690e4457b82b22db43a85e04e8fe05e4efccb7ffb9"
+            }
+          ],
+          "availability": "recovered_in_this_supplement",
+          "snapshot": "snapshots/jags1/tests/mebane/likelihood/g3_jags.R",
+          "qa_attempt": "jags1"
+        },
+        {
+          "path": "R/lib/mebane_model.R",
+          "sha256": "68ca118912c678c7561e718075de7fc3ae10fc024c91a259231bf2a66254a300",
+          "last_edit": {
+            "order": 14,
+            "id": "exec-f18a60d0-2b14-4dc7-a767-30072fa9f4da",
+            "change_index": 0,
+            "path": "R/lib/mebane_model.R",
+            "operation": "update",
+            "input_sha256": "cded39d1bbf5cc22101ad8454d255a3016f21a263df91f76ec4592888d189136",
+            "sha256": "68ca118912c678c7561e718075de7fc3ae10fc024c91a259231bf2a66254a300",
+            "patch_utf8_sha256": "dab3dfc1e3aece4c4857054c3cfef312752592ca2c35976f90e3365874759999"
+          },
+          "lineage": [
+            {
+              "order": 4,
+              "id": "exec-5e8b3c00-2f40-410f-aadc-9d753895f594",
+              "change_index": 0,
+              "path": "R/lib/mebane_model.R",
+              "operation": "add",
+              "input_sha256": null,
+              "sha256": "53b8672a2b840e1519a1ed2bd7a94c76321ee4b7c879d5a9f6f7ffd0f130c582",
+              "patch_utf8_sha256": "53b8672a2b840e1519a1ed2bd7a94c76321ee4b7c879d5a9f6f7ffd0f130c582"
+            },
+            {
+              "order": 10,
+              "id": "exec-480ddda5-5b2b-47db-acb0-ba90d5f5dd8e",
+              "change_index": 0,
+              "path": "R/lib/mebane_model.R",
+              "operation": "update",
+              "input_sha256": "53b8672a2b840e1519a1ed2bd7a94c76321ee4b7c879d5a9f6f7ffd0f130c582",
+              "sha256": "cded39d1bbf5cc22101ad8454d255a3016f21a263df91f76ec4592888d189136",
+              "patch_utf8_sha256": "1aba55bc19a502e448dcad973c20f11d4970dbf20dd2b90f850a13034173f109"
+            },
+            {
+              "order": 14,
+              "id": "exec-f18a60d0-2b14-4dc7-a767-30072fa9f4da",
+              "change_index": 0,
+              "path": "R/lib/mebane_model.R",
+              "operation": "update",
+              "input_sha256": "cded39d1bbf5cc22101ad8454d255a3016f21a263df91f76ec4592888d189136",
+              "sha256": "68ca118912c678c7561e718075de7fc3ae10fc024c91a259231bf2a66254a300",
+              "patch_utf8_sha256": "dab3dfc1e3aece4c4857054c3cfef312752592ca2c35976f90e3365874759999"
+            }
+          ],
+          "availability": "inherited_candidate",
+          "inherited_paths": [
+            "quality_reports/results/mebane_gates/G3/round1/revision1/snapshots/R/lib/mebane_model.R",
+            "quality_reports/results/mebane_gates/G3/round1/revision3/inherited_snapshots/R/lib/mebane_model.R"
+          ]
+        }
+      ],
+      "executed_by_this_repair": false,
+      "archived_log": {
+        "path": "historical_logs/g3_jags_attempt1.log",
+        "sha256": "602c1ed9d4f68eda717fbf8db86be49deca83ae9c3187190ce342d3e9e6faf86",
+        "bytes": 1464,
+        "source_path": "quality_reports/results/mebane_gates/G3/round1/g3_jags_attempt1.log",
+        "command_event_id": "exec-39fc0c88-d6b6-4a53-9f81-0ed65fa6f7a0",
+        "role": "historical_log_not_new_execution"
+      }
+    },
+    {
+      "order": 20,
+      "id": "exec-16393a95-824d-40bc-affe-64ba4f890b21",
+      "turn_id": "01a0ee08-35b6-7292-9838-701f07ead85e",
+      "item_order": 44,
+      "command": "/bin/zsh -lc '/usr/bin/time -p timeout 120 Rscript --vanilla tests/mebane/likelihood/g3_jags.R > quality_reports/results/mebane_gates/G3/round1/g3_jags_attempt2.log 2>&1'",
+      "exit_code": 1,
+      "status": "failed",
+      "duration_ms_from_event": 224,
+      "historical_log": "quality_reports/results/mebane_gates/G3/round1/g3_jags_attempt2.log",
+      "source_states": [
+        {
+          "path": "tests/mebane/likelihood/g3_jags.R",
+          "sha256": "19ed250a7c53f88b30ded695f55113a715c862c3b9bc07aa0917ef242007db3b",
+          "last_edit": {
+            "order": 19,
+            "id": "exec-b0e9f904-566c-41ba-a0df-ec0c7be8f4c8",
+            "change_index": 0,
+            "path": "tests/mebane/likelihood/g3_jags.R",
+            "operation": "update",
+            "input_sha256": "15b48452923289dcdea8fc1dc32192b1305c3f246dad554ccc885340be801a42",
+            "sha256": "19ed250a7c53f88b30ded695f55113a715c862c3b9bc07aa0917ef242007db3b",
+            "patch_utf8_sha256": "cc811138d9792588f0fcbef71a5278eb634f74e7fcc9da43686fb044659a2fb2"
+          },
+          "lineage": [
+            {
+              "order": 7,
+              "id": "exec-5e2918b3-c742-427b-814e-7a1ba2930668",
+              "change_index": 0,
+              "path": "tests/mebane/likelihood/g3_jags.R",
+              "operation": "add",
+              "input_sha256": null,
+              "sha256": "2988e8f080aa429ffc4f3cf89c925aa903c54a0958f8e34ecb6abaf6e58c5489",
+              "patch_utf8_sha256": "2988e8f080aa429ffc4f3cf89c925aa903c54a0958f8e34ecb6abaf6e58c5489"
+            },
+            {
+              "order": 14,
+              "id": "exec-f18a60d0-2b14-4dc7-a767-30072fa9f4da",
+              "change_index": 2,
+              "path": "tests/mebane/likelihood/g3_jags.R",
+              "operation": "update",
+              "input_sha256": "2988e8f080aa429ffc4f3cf89c925aa903c54a0958f8e34ecb6abaf6e58c5489",
+              "sha256": "15b48452923289dcdea8fc1dc32192b1305c3f246dad554ccc885340be801a42",
+              "patch_utf8_sha256": "c796f3662571d7e66b6bd4690e4457b82b22db43a85e04e8fe05e4efccb7ffb9"
+            },
+            {
+              "order": 19,
+              "id": "exec-b0e9f904-566c-41ba-a0df-ec0c7be8f4c8",
+              "change_index": 0,
+              "path": "tests/mebane/likelihood/g3_jags.R",
+              "operation": "update",
+              "input_sha256": "15b48452923289dcdea8fc1dc32192b1305c3f246dad554ccc885340be801a42",
+              "sha256": "19ed250a7c53f88b30ded695f55113a715c862c3b9bc07aa0917ef242007db3b",
+              "patch_utf8_sha256": "cc811138d9792588f0fcbef71a5278eb634f74e7fcc9da43686fb044659a2fb2"
+            }
+          ],
+          "availability": "recovered_in_this_supplement",
+          "snapshot": "snapshots/jags2/tests/mebane/likelihood/g3_jags.R",
+          "qa_attempt": "jags2"
+        },
+        {
+          "path": "R/lib/mebane_model.R",
+          "sha256": "68ca118912c678c7561e718075de7fc3ae10fc024c91a259231bf2a66254a300",
+          "last_edit": {
+            "order": 14,
+            "id": "exec-f18a60d0-2b14-4dc7-a767-30072fa9f4da",
+            "change_index": 0,
+            "path": "R/lib/mebane_model.R",
+            "operation": "update",
+            "input_sha256": "cded39d1bbf5cc22101ad8454d255a3016f21a263df91f76ec4592888d189136",
+            "sha256": "68ca118912c678c7561e718075de7fc3ae10fc024c91a259231bf2a66254a300",
+            "patch_utf8_sha256": "dab3dfc1e3aece4c4857054c3cfef312752592ca2c35976f90e3365874759999"
+          },
+          "lineage": [
+            {
+              "order": 4,
+              "id": "exec-5e8b3c00-2f40-410f-aadc-9d753895f594",
+              "change_index": 0,
+              "path": "R/lib/mebane_model.R",
+              "operation": "add",
+              "input_sha256": null,
+              "sha256": "53b8672a2b840e1519a1ed2bd7a94c76321ee4b7c879d5a9f6f7ffd0f130c582",
+              "patch_utf8_sha256": "53b8672a2b840e1519a1ed2bd7a94c76321ee4b7c879d5a9f6f7ffd0f130c582"
+            },
+            {
+              "order": 10,
+              "id": "exec-480ddda5-5b2b-47db-acb0-ba90d5f5dd8e",
+              "change_index": 0,
+              "path": "R/lib/mebane_model.R",
+              "operation": "update",
+              "input_sha256": "53b8672a2b840e1519a1ed2bd7a94c76321ee4b7c879d5a9f6f7ffd0f130c582",
+              "sha256": "cded39d1bbf5cc22101ad8454d255a3016f21a263df91f76ec4592888d189136",
+              "patch_utf8_sha256": "1aba55bc19a502e448dcad973c20f11d4970dbf20dd2b90f850a13034173f109"
+            },
+            {
+              "order": 14,
+              "id": "exec-f18a60d0-2b14-4dc7-a767-30072fa9f4da",
+              "change_index": 0,
+              "path": "R/lib/mebane_model.R",
+              "operation": "update",
+              "input_sha256": "cded39d1bbf5cc22101ad8454d255a3016f21a263df91f76ec4592888d189136",
+              "sha256": "68ca118912c678c7561e718075de7fc3ae10fc024c91a259231bf2a66254a300",
+              "patch_utf8_sha256": "dab3dfc1e3aece4c4857054c3cfef312752592ca2c35976f90e3365874759999"
+            }
+          ],
+          "availability": "inherited_candidate",
+          "inherited_paths": [
+            "quality_reports/results/mebane_gates/G3/round1/revision1/snapshots/R/lib/mebane_model.R",
+            "quality_reports/results/mebane_gates/G3/round1/revision3/inherited_snapshots/R/lib/mebane_model.R"
+          ]
+        }
+      ],
+      "executed_by_this_repair": false,
+      "archived_log": {
+        "path": "historical_logs/g3_jags_attempt2.log",
+        "sha256": "39d9f0359740de56d0b1a90cdab2dc5f3d006541eab199c885c9ae5eef115cd1",
+        "bytes": 1676,
+        "source_path": "quality_reports/results/mebane_gates/G3/round1/g3_jags_attempt2.log",
+        "command_event_id": "exec-16393a95-824d-40bc-affe-64ba4f890b21",
+        "role": "historical_log_not_new_execution"
+      }
+    },
+    {
+      "order": 23,
+      "id": "exec-cce129db-2777-49b2-9150-5063bd4b09e1",
+      "turn_id": "01a0ee08-35b6-7292-9838-701f07ead85e",
+      "item_order": 52,
+      "command": "/bin/zsh -lc '/usr/bin/time -p timeout 120 Rscript --vanilla tests/mebane/likelihood/g3_jags.R > quality_reports/results/mebane_gates/G3/round1/g3_jags_attempt3.log 2>&1'",
+      "exit_code": 0,
+      "status": "completed",
+      "duration_ms_from_event": 688,
+      "historical_log": "quality_reports/results/mebane_gates/G3/round1/g3_jags_attempt3.log",
+      "source_states": [
+        {
+          "path": "tests/mebane/likelihood/g3_jags.R",
+          "sha256": "72f96b79b35fbe7886dd70b93a6cf18a3fb944105ca97ed8df068b0ddfee253d",
+          "last_edit": {
+            "order": 22,
+            "id": "exec-5fb28eb8-dba5-46c8-8627-eb67a5f237d6",
+            "change_index": 0,
+            "path": "tests/mebane/likelihood/g3_jags.R",
+            "operation": "update",
+            "input_sha256": "19ed250a7c53f88b30ded695f55113a715c862c3b9bc07aa0917ef242007db3b",
+            "sha256": "72f96b79b35fbe7886dd70b93a6cf18a3fb944105ca97ed8df068b0ddfee253d",
+            "patch_utf8_sha256": "ff166e25f7ae83be6007040babbf55219002bdc530d8a42f2b485137fde06fb6"
+          },
+          "lineage": [
+            {
+              "order": 7,
+              "id": "exec-5e2918b3-c742-427b-814e-7a1ba2930668",
+              "change_index": 0,
+              "path": "tests/mebane/likelihood/g3_jags.R",
+              "operation": "add",
+              "input_sha256": null,
+              "sha256": "2988e8f080aa429ffc4f3cf89c925aa903c54a0958f8e34ecb6abaf6e58c5489",
+              "patch_utf8_sha256": "2988e8f080aa429ffc4f3cf89c925aa903c54a0958f8e34ecb6abaf6e58c5489"
+            },
+            {
+              "order": 14,
+              "id": "exec-f18a60d0-2b14-4dc7-a767-30072fa9f4da",
+              "change_index": 2,
+              "path": "tests/mebane/likelihood/g3_jags.R",
+              "operation": "update",
+              "input_sha256": "2988e8f080aa429ffc4f3cf89c925aa903c54a0958f8e34ecb6abaf6e58c5489",
+              "sha256": "15b48452923289dcdea8fc1dc32192b1305c3f246dad554ccc885340be801a42",
+              "patch_utf8_sha256": "c796f3662571d7e66b6bd4690e4457b82b22db43a85e04e8fe05e4efccb7ffb9"
+            },
+            {
+              "order": 19,
+              "id": "exec-b0e9f904-566c-41ba-a0df-ec0c7be8f4c8",
+              "change_index": 0,
+              "path": "tests/mebane/likelihood/g3_jags.R",
+              "operation": "update",
+              "input_sha256": "15b48452923289dcdea8fc1dc32192b1305c3f246dad554ccc885340be801a42",
+              "sha256": "19ed250a7c53f88b30ded695f55113a715c862c3b9bc07aa0917ef242007db3b",
+              "patch_utf8_sha256": "cc811138d9792588f0fcbef71a5278eb634f74e7fcc9da43686fb044659a2fb2"
+            },
+            {
+              "order": 22,
+              "id": "exec-5fb28eb8-dba5-46c8-8627-eb67a5f237d6",
+              "change_index": 0,
+              "path": "tests/mebane/likelihood/g3_jags.R",
+              "operation": "update",
+              "input_sha256": "19ed250a7c53f88b30ded695f55113a715c862c3b9bc07aa0917ef242007db3b",
+              "sha256": "72f96b79b35fbe7886dd70b93a6cf18a3fb944105ca97ed8df068b0ddfee253d",
+              "patch_utf8_sha256": "ff166e25f7ae83be6007040babbf55219002bdc530d8a42f2b485137fde06fb6"
+            }
+          ],
+          "availability": "inherited_candidate",
+          "inherited_paths": [
+            "quality_reports/results/mebane_gates/G3/round1/revision1/snapshots/root_candidate_old/tests/mebane/likelihood/g3_jags.R"
+          ]
+        },
+        {
+          "path": "R/lib/mebane_model.R",
+          "sha256": "68ca118912c678c7561e718075de7fc3ae10fc024c91a259231bf2a66254a300",
+          "last_edit": {
+            "order": 14,
+            "id": "exec-f18a60d0-2b14-4dc7-a767-30072fa9f4da",
+            "change_index": 0,
+            "path": "R/lib/mebane_model.R",
+            "operation": "update",
+            "input_sha256": "cded39d1bbf5cc22101ad8454d255a3016f21a263df91f76ec4592888d189136",
+            "sha256": "68ca118912c678c7561e718075de7fc3ae10fc024c91a259231bf2a66254a300",
+            "patch_utf8_sha256": "dab3dfc1e3aece4c4857054c3cfef312752592ca2c35976f90e3365874759999"
+          },
+          "lineage": [
+            {
+              "order": 4,
+              "id": "exec-5e8b3c00-2f40-410f-aadc-9d753895f594",
+              "change_index": 0,
+              "path": "R/lib/mebane_model.R",
+              "operation": "add",
+              "input_sha256": null,
+              "sha256": "53b8672a2b840e1519a1ed2bd7a94c76321ee4b7c879d5a9f6f7ffd0f130c582",
+              "patch_utf8_sha256": "53b8672a2b840e1519a1ed2bd7a94c76321ee4b7c879d5a9f6f7ffd0f130c582"
+            },
+            {
+              "order": 10,
+              "id": "exec-480ddda5-5b2b-47db-acb0-ba90d5f5dd8e",
+              "change_index": 0,
+              "path": "R/lib/mebane_model.R",
+              "operation": "update",
+              "input_sha256": "53b8672a2b840e1519a1ed2bd7a94c76321ee4b7c879d5a9f6f7ffd0f130c582",
+              "sha256": "cded39d1bbf5cc22101ad8454d255a3016f21a263df91f76ec4592888d189136",
+              "patch_utf8_sha256": "1aba55bc19a502e448dcad973c20f11d4970dbf20dd2b90f850a13034173f109"
+            },
+            {
+              "order": 14,
+              "id": "exec-f18a60d0-2b14-4dc7-a767-30072fa9f4da",
+              "change_index": 0,
+              "path": "R/lib/mebane_model.R",
+              "operation": "update",
+              "input_sha256": "cded39d1bbf5cc22101ad8454d255a3016f21a263df91f76ec4592888d189136",
+              "sha256": "68ca118912c678c7561e718075de7fc3ae10fc024c91a259231bf2a66254a300",
+              "patch_utf8_sha256": "dab3dfc1e3aece4c4857054c3cfef312752592ca2c35976f90e3365874759999"
+            }
+          ],
+          "availability": "inherited_candidate",
+          "inherited_paths": [
+            "quality_reports/results/mebane_gates/G3/round1/revision1/snapshots/R/lib/mebane_model.R",
+            "quality_reports/results/mebane_gates/G3/round1/revision3/inherited_snapshots/R/lib/mebane_model.R"
+          ]
+        }
+      ],
+      "executed_by_this_repair": false
+    },
+    {
+      "order": 24,
+      "id": "exec-6797e44e-3927-4f5f-83cc-a56c1ad334a9",
+      "turn_id": "01a0ee08-35b6-7292-9838-701f07ead85e",
+      "item_order": 57,
+      "command": "/bin/zsh -lc '/usr/bin/time -p timeout 120 Rscript --vanilla tests/mebane/likelihood/test_ar02_interface.R > quality_reports/results/mebane_gates/G3/round1/g3_interface_attempt1.log 2>&1'",
+      "exit_code": 0,
+      "status": "completed",
+      "duration_ms_from_event": 515,
+      "historical_log": "quality_reports/results/mebane_gates/G3/round1/g3_interface_attempt1.log",
+      "source_states": [
+        {
+          "path": "tests/mebane/likelihood/test_ar02_interface.R",
+          "state_from_trace_unavailable": true,
+          "availability": "unresolved_in_event_trace"
+        }
+      ],
+      "executed_by_this_repair": false
+    },
+    {
+      "order": 27,
+      "id": "exec-eb69eefa-dc02-407e-9079-f0e800963734",
+      "turn_id": "01a0ee08-35b6-7292-9838-701f07ead85e",
+      "item_order": 65,
+      "command": "/bin/zsh -lc '/usr/bin/time -p timeout 120 Rscript --vanilla tests/mebane/likelihood/g3_source_contract.R > quality_reports/results/mebane_gates/G3/round1/g3_source_attempt1.log 2>&1'",
+      "exit_code": 0,
+      "status": "completed",
+      "duration_ms_from_event": 6,
+      "historical_log": "quality_reports/results/mebane_gates/G3/round1/g3_source_attempt1.log",
+      "source_states": [
+        {
+          "path": "tests/mebane/likelihood/g3_source_contract.R",
+          "sha256": "8ea157d94d20f709bb471c58e77f44e1ae8e0b2ec8dc2940119809269932a874",
+          "last_edit": {
+            "order": 26,
+            "id": "exec-e2330f7b-0af7-4d02-8fe2-b4062a1ca3e6",
+            "change_index": 0,
+            "path": "tests/mebane/likelihood/g3_source_contract.R",
+            "operation": "add",
+            "input_sha256": null,
+            "sha256": "8ea157d94d20f709bb471c58e77f44e1ae8e0b2ec8dc2940119809269932a874",
+            "patch_utf8_sha256": "8ea157d94d20f709bb471c58e77f44e1ae8e0b2ec8dc2940119809269932a874"
+          },
+          "lineage": [
+            {
+              "order": 26,
+              "id": "exec-e2330f7b-0af7-4d02-8fe2-b4062a1ca3e6",
+              "change_index": 0,
+              "path": "tests/mebane/likelihood/g3_source_contract.R",
+              "operation": "add",
+              "input_sha256": null,
+              "sha256": "8ea157d94d20f709bb471c58e77f44e1ae8e0b2ec8dc2940119809269932a874",
+              "patch_utf8_sha256": "8ea157d94d20f709bb471c58e77f44e1ae8e0b2ec8dc2940119809269932a874"
+            }
+          ],
+          "availability": "inherited_candidate",
+          "inherited_paths": [
+            "quality_reports/results/mebane_gates/G3/round1/revision1/snapshots/tests/mebane/likelihood/g3_source_contract.R",
+            "quality_reports/results/mebane_gates/G3/round1/revision3/inherited_snapshots/tests/mebane/likelihood/g3_source_contract.R"
+          ]
+        }
+      ],
+      "executed_by_this_repair": false
+    },
+    {
+      "order": 30,
+      "id": "exec-78df1b3c-3b27-45b5-8592-9c8ad88e4202",
+      "turn_id": "01a0ee08-35b6-7292-9838-701f07ead85e",
+      "item_order": 89,
+      "command": "/bin/zsh -lc '/usr/bin/time -p timeout 120 Rscript --vanilla tests/mebane/likelihood/g3_jags.R > quality_reports/results/mebane_gates/G3/round1/g3_jags_attempt4.log 2>&1'",
+      "exit_code": 1,
+      "status": "failed",
+      "duration_ms_from_event": 638,
+      "historical_log": "quality_reports/results/mebane_gates/G3/round1/g3_jags_attempt4.log",
+      "source_states": [
+        {
+          "path": "tests/mebane/likelihood/g3_jags.R",
+          "sha256": "6ecae09f28159803ec93a3da654b661a129a44da630acba17e853969c9549583",
+          "last_edit": {
+            "order": 29,
+            "id": "exec-2e58e17a-f6f1-4d31-ab5f-7ffa8381b52a",
+            "change_index": 0,
+            "path": "tests/mebane/likelihood/g3_jags.R",
+            "operation": "update",
+            "input_sha256": "72f96b79b35fbe7886dd70b93a6cf18a3fb944105ca97ed8df068b0ddfee253d",
+            "sha256": "6ecae09f28159803ec93a3da654b661a129a44da630acba17e853969c9549583",
+            "patch_utf8_sha256": "910736683d33f37989a66938a952674ba75867fd37cfd025d8be1dbc623d018e"
+          },
+          "lineage": [
+            {
+              "order": 7,
+              "id": "exec-5e2918b3-c742-427b-814e-7a1ba2930668",
+              "change_index": 0,
+              "path": "tests/mebane/likelihood/g3_jags.R",
+              "operation": "add",
+              "input_sha256": null,
+              "sha256": "2988e8f080aa429ffc4f3cf89c925aa903c54a0958f8e34ecb6abaf6e58c5489",
+              "patch_utf8_sha256": "2988e8f080aa429ffc4f3cf89c925aa903c54a0958f8e34ecb6abaf6e58c5489"
+            },
+            {
+              "order": 14,
+              "id": "exec-f18a60d0-2b14-4dc7-a767-30072fa9f4da",
+              "change_index": 2,
+              "path": "tests/mebane/likelihood/g3_jags.R",
+              "operation": "update",
+              "input_sha256": "2988e8f080aa429ffc4f3cf89c925aa903c54a0958f8e34ecb6abaf6e58c5489",
+              "sha256": "15b48452923289dcdea8fc1dc32192b1305c3f246dad554ccc885340be801a42",
+              "patch_utf8_sha256": "c796f3662571d7e66b6bd4690e4457b82b22db43a85e04e8fe05e4efccb7ffb9"
+            },
+            {
+              "order": 19,
+              "id": "exec-b0e9f904-566c-41ba-a0df-ec0c7be8f4c8",
+              "change_index": 0,
+              "path": "tests/mebane/likelihood/g3_jags.R",
+              "operation": "update",
+              "input_sha256": "15b48452923289dcdea8fc1dc32192b1305c3f246dad554ccc885340be801a42",
+              "sha256": "19ed250a7c53f88b30ded695f55113a715c862c3b9bc07aa0917ef242007db3b",
+              "patch_utf8_sha256": "cc811138d9792588f0fcbef71a5278eb634f74e7fcc9da43686fb044659a2fb2"
+            },
+            {
+              "order": 22,
+              "id": "exec-5fb28eb8-dba5-46c8-8627-eb67a5f237d6",
+              "change_index": 0,
+              "path": "tests/mebane/likelihood/g3_jags.R",
+              "operation": "update",
+              "input_sha256": "19ed250a7c53f88b30ded695f55113a715c862c3b9bc07aa0917ef242007db3b",
+              "sha256": "72f96b79b35fbe7886dd70b93a6cf18a3fb944105ca97ed8df068b0ddfee253d",
+              "patch_utf8_sha256": "ff166e25f7ae83be6007040babbf55219002bdc530d8a42f2b485137fde06fb6"
+            },
+            {
+              "order": 29,
+              "id": "exec-2e58e17a-f6f1-4d31-ab5f-7ffa8381b52a",
+              "change_index": 0,
+              "path": "tests/mebane/likelihood/g3_jags.R",
+              "operation": "update",
+              "input_sha256": "72f96b79b35fbe7886dd70b93a6cf18a3fb944105ca97ed8df068b0ddfee253d",
+              "sha256": "6ecae09f28159803ec93a3da654b661a129a44da630acba17e853969c9549583",
+              "patch_utf8_sha256": "910736683d33f37989a66938a952674ba75867fd37cfd025d8be1dbc623d018e"
+            }
+          ],
+          "availability": "recovered_in_this_supplement",
+          "snapshot": "snapshots/jags4/tests/mebane/likelihood/g3_jags.R",
+          "qa_attempt": "jags4"
+        },
+        {
+          "path": "R/lib/mebane_model.R",
+          "sha256": "68ca118912c678c7561e718075de7fc3ae10fc024c91a259231bf2a66254a300",
+          "last_edit": {
+            "order": 14,
+            "id": "exec-f18a60d0-2b14-4dc7-a767-30072fa9f4da",
+            "change_index": 0,
+            "path": "R/lib/mebane_model.R",
+            "operation": "update",
+            "input_sha256": "cded39d1bbf5cc22101ad8454d255a3016f21a263df91f76ec4592888d189136",
+            "sha256": "68ca118912c678c7561e718075de7fc3ae10fc024c91a259231bf2a66254a300",
+            "patch_utf8_sha256": "dab3dfc1e3aece4c4857054c3cfef312752592ca2c35976f90e3365874759999"
+          },
+          "lineage": [
+            {
+              "order": 4,
+              "id": "exec-5e8b3c00-2f40-410f-aadc-9d753895f594",
+              "change_index": 0,
+              "path": "R/lib/mebane_model.R",
+              "operation": "add",
+              "input_sha256": null,
+              "sha256": "53b8672a2b840e1519a1ed2bd7a94c76321ee4b7c879d5a9f6f7ffd0f130c582",
+              "patch_utf8_sha256": "53b8672a2b840e1519a1ed2bd7a94c76321ee4b7c879d5a9f6f7ffd0f130c582"
+            },
+            {
+              "order": 10,
+              "id": "exec-480ddda5-5b2b-47db-acb0-ba90d5f5dd8e",
+              "change_index": 0,
+              "path": "R/lib/mebane_model.R",
+              "operation": "update",
+              "input_sha256": "53b8672a2b840e1519a1ed2bd7a94c76321ee4b7c879d5a9f6f7ffd0f130c582",
+              "sha256": "cded39d1bbf5cc22101ad8454d255a3016f21a263df91f76ec4592888d189136",
+              "patch_utf8_sha256": "1aba55bc19a502e448dcad973c20f11d4970dbf20dd2b90f850a13034173f109"
+            },
+            {
+              "order": 14,
+              "id": "exec-f18a60d0-2b14-4dc7-a767-30072fa9f4da",
+              "change_index": 0,
+              "path": "R/lib/mebane_model.R",
+              "operation": "update",
+              "input_sha256": "cded39d1bbf5cc22101ad8454d255a3016f21a263df91f76ec4592888d189136",
+              "sha256": "68ca118912c678c7561e718075de7fc3ae10fc024c91a259231bf2a66254a300",
+              "patch_utf8_sha256": "dab3dfc1e3aece4c4857054c3cfef312752592ca2c35976f90e3365874759999"
+            }
+          ],
+          "availability": "inherited_candidate",
+          "inherited_paths": [
+            "quality_reports/results/mebane_gates/G3/round1/revision1/snapshots/R/lib/mebane_model.R",
+            "quality_reports/results/mebane_gates/G3/round1/revision3/inherited_snapshots/R/lib/mebane_model.R"
+          ]
+        }
+      ],
+      "executed_by_this_repair": false,
+      "archived_log": {
+        "path": "historical_logs/g3_jags_attempt4.log",
+        "sha256": "e2cb8b004bb9449b9f6711bfea593c1694ec589a3e1f1011cad628019c1f0f7d",
+        "bytes": 1777,
+        "source_path": "quality_reports/results/mebane_gates/G3/round1/g3_jags_attempt4.log",
+        "command_event_id": "exec-78df1b3c-3b27-45b5-8592-9c8ad88e4202",
+        "role": "historical_log_not_new_execution"
+      }
+    },
+    {
+      "order": 33,
+      "id": "exec-f9dfb538-f6a2-43e5-a1b7-334568dee571",
+      "turn_id": "01a0ee08-35b6-7292-9838-701f07ead85e",
+      "item_order": 94,
+      "command": "/bin/zsh -lc '/usr/bin/time -p timeout 120 Rscript --vanilla tests/mebane/likelihood/g3_jags.R > quality_reports/results/mebane_gates/G3/round1/g3_jags_attempt5.log 2>&1'",
+      "exit_code": 0,
+      "status": "completed",
+      "duration_ms_from_event": 659,
+      "historical_log": "quality_reports/results/mebane_gates/G3/round1/g3_jags_attempt5.log",
+      "source_states": [
+        {
+          "path": "tests/mebane/likelihood/g3_jags.R",
+          "sha256": "46429e7533b9a068c9d265314454e505dca515e2bf3ccb002dc5d3f6ae2152eb",
+          "last_edit": {
+            "order": 32,
+            "id": "exec-c8e06f45-d5d9-4529-83ee-a540217a9afa",
+            "change_index": 0,
+            "path": "tests/mebane/likelihood/g3_jags.R",
+            "operation": "update",
+            "input_sha256": "6ecae09f28159803ec93a3da654b661a129a44da630acba17e853969c9549583",
+            "sha256": "46429e7533b9a068c9d265314454e505dca515e2bf3ccb002dc5d3f6ae2152eb",
+            "patch_utf8_sha256": "287f87fe27ccf7d638bf3293f3089645d59fb2e67abb5d09b62b9fdcd98f1982"
+          },
+          "lineage": [
+            {
+              "order": 7,
+              "id": "exec-5e2918b3-c742-427b-814e-7a1ba2930668",
+              "change_index": 0,
+              "path": "tests/mebane/likelihood/g3_jags.R",
+              "operation": "add",
+              "input_sha256": null,
+              "sha256": "2988e8f080aa429ffc4f3cf89c925aa903c54a0958f8e34ecb6abaf6e58c5489",
+              "patch_utf8_sha256": "2988e8f080aa429ffc4f3cf89c925aa903c54a0958f8e34ecb6abaf6e58c5489"
+            },
+            {
+              "order": 14,
+              "id": "exec-f18a60d0-2b14-4dc7-a767-30072fa9f4da",
+              "change_index": 2,
+              "path": "tests/mebane/likelihood/g3_jags.R",
+              "operation": "update",
+              "input_sha256": "2988e8f080aa429ffc4f3cf89c925aa903c54a0958f8e34ecb6abaf6e58c5489",
+              "sha256": "15b48452923289dcdea8fc1dc32192b1305c3f246dad554ccc885340be801a42",
+              "patch_utf8_sha256": "c796f3662571d7e66b6bd4690e4457b82b22db43a85e04e8fe05e4efccb7ffb9"
+            },
+            {
+              "order": 19,
+              "id": "exec-b0e9f904-566c-41ba-a0df-ec0c7be8f4c8",
+              "change_index": 0,
+              "path": "tests/mebane/likelihood/g3_jags.R",
+              "operation": "update",
+              "input_sha256": "15b48452923289dcdea8fc1dc32192b1305c3f246dad554ccc885340be801a42",
+              "sha256": "19ed250a7c53f88b30ded695f55113a715c862c3b9bc07aa0917ef242007db3b",
+              "patch_utf8_sha256": "cc811138d9792588f0fcbef71a5278eb634f74e7fcc9da43686fb044659a2fb2"
+            },
+            {
+              "order": 22,
+              "id": "exec-5fb28eb8-dba5-46c8-8627-eb67a5f237d6",
+              "change_index": 0,
+              "path": "tests/mebane/likelihood/g3_jags.R",
+              "operation": "update",
+              "input_sha256": "19ed250a7c53f88b30ded695f55113a715c862c3b9bc07aa0917ef242007db3b",
+              "sha256": "72f96b79b35fbe7886dd70b93a6cf18a3fb944105ca97ed8df068b0ddfee253d",
+              "patch_utf8_sha256": "ff166e25f7ae83be6007040babbf55219002bdc530d8a42f2b485137fde06fb6"
+            },
+            {
+              "order": 29,
+              "id": "exec-2e58e17a-f6f1-4d31-ab5f-7ffa8381b52a",
+              "change_index": 0,
+              "path": "tests/mebane/likelihood/g3_jags.R",
+              "operation": "update",
+              "input_sha256": "72f96b79b35fbe7886dd70b93a6cf18a3fb944105ca97ed8df068b0ddfee253d",
+              "sha256": "6ecae09f28159803ec93a3da654b661a129a44da630acba17e853969c9549583",
+              "patch_utf8_sha256": "910736683d33f37989a66938a952674ba75867fd37cfd025d8be1dbc623d018e"
+            },
+            {
+              "order": 32,
+              "id": "exec-c8e06f45-d5d9-4529-83ee-a540217a9afa",
+              "change_index": 0,
+              "path": "tests/mebane/likelihood/g3_jags.R",
+              "operation": "update",
+              "input_sha256": "6ecae09f28159803ec93a3da654b661a129a44da630acba17e853969c9549583",
+              "sha256": "46429e7533b9a068c9d265314454e505dca515e2bf3ccb002dc5d3f6ae2152eb",
+              "patch_utf8_sha256": "287f87fe27ccf7d638bf3293f3089645d59fb2e67abb5d09b62b9fdcd98f1982"
+            }
+          ],
+          "availability": "inherited_candidate",
+          "inherited_paths": [
+            "quality_reports/results/mebane_gates/G3/round1/revision1/snapshots/tests/mebane/likelihood/g3_jags.R",
+            "quality_reports/results/mebane_gates/G3/round1/revision3/inherited_snapshots/tests/mebane/likelihood/g3_jags.R"
+          ]
+        },
+        {
+          "path": "R/lib/mebane_model.R",
+          "sha256": "68ca118912c678c7561e718075de7fc3ae10fc024c91a259231bf2a66254a300",
+          "last_edit": {
+            "order": 14,
+            "id": "exec-f18a60d0-2b14-4dc7-a767-30072fa9f4da",
+            "change_index": 0,
+            "path": "R/lib/mebane_model.R",
+            "operation": "update",
+            "input_sha256": "cded39d1bbf5cc22101ad8454d255a3016f21a263df91f76ec4592888d189136",
+            "sha256": "68ca118912c678c7561e718075de7fc3ae10fc024c91a259231bf2a66254a300",
+            "patch_utf8_sha256": "dab3dfc1e3aece4c4857054c3cfef312752592ca2c35976f90e3365874759999"
+          },
+          "lineage": [
+            {
+              "order": 4,
+              "id": "exec-5e8b3c00-2f40-410f-aadc-9d753895f594",
+              "change_index": 0,
+              "path": "R/lib/mebane_model.R",
+              "operation": "add",
+              "input_sha256": null,
+              "sha256": "53b8672a2b840e1519a1ed2bd7a94c76321ee4b7c879d5a9f6f7ffd0f130c582",
+              "patch_utf8_sha256": "53b8672a2b840e1519a1ed2bd7a94c76321ee4b7c879d5a9f6f7ffd0f130c582"
+            },
+            {
+              "order": 10,
+              "id": "exec-480ddda5-5b2b-47db-acb0-ba90d5f5dd8e",
+              "change_index": 0,
+              "path": "R/lib/mebane_model.R",
+              "operation": "update",
+              "input_sha256": "53b8672a2b840e1519a1ed2bd7a94c76321ee4b7c879d5a9f6f7ffd0f130c582",
+              "sha256": "cded39d1bbf5cc22101ad8454d255a3016f21a263df91f76ec4592888d189136",
+              "patch_utf8_sha256": "1aba55bc19a502e448dcad973c20f11d4970dbf20dd2b90f850a13034173f109"
+            },
+            {
+              "order": 14,
+              "id": "exec-f18a60d0-2b14-4dc7-a767-30072fa9f4da",
+              "change_index": 0,
+              "path": "R/lib/mebane_model.R",
+              "operation": "update",
+              "input_sha256": "cded39d1bbf5cc22101ad8454d255a3016f21a263df91f76ec4592888d189136",
+              "sha256": "68ca118912c678c7561e718075de7fc3ae10fc024c91a259231bf2a66254a300",
+              "patch_utf8_sha256": "dab3dfc1e3aece4c4857054c3cfef312752592ca2c35976f90e3365874759999"
+            }
+          ],
+          "availability": "inherited_candidate",
+          "inherited_paths": [
+            "quality_reports/results/mebane_gates/G3/round1/revision1/snapshots/R/lib/mebane_model.R",
+            "quality_reports/results/mebane_gates/G3/round1/revision3/inherited_snapshots/R/lib/mebane_model.R"
+          ]
+        }
+      ],
+      "executed_by_this_repair": false
+    },
+    {
+      "order": 42,
+      "id": "exec-f0acd599-4607-418c-aa67-8df888de6d55",
+      "turn_id": "01a0ee15-49e1-79d1-9007-51f1d20a7f4e",
+      "item_order": 21,
+      "command": "/bin/zsh -lc '/usr/bin/time -p timeout 120 Rscript --vanilla tests/mebane/likelihood/g3_draw_replay.R > quality_reports/results/mebane_gates/G3/round1/revision2/replay.log 2>&1'",
+      "exit_code": 0,
+      "status": "completed",
+      "duration_ms_from_event": 231,
+      "historical_log": "quality_reports/results/mebane_gates/G3/round1/revision2/replay.log",
+      "source_states": [
+        {
+          "path": "tests/mebane/likelihood/g3_draw_replay.R",
+          "sha256": "6f147ba3bcebd6fa530004da4a9f5387e8a6e74392b08cbb6f6a1aaf847fcad5",
+          "last_edit": {
+            "order": 39,
+            "id": "exec-3da93d11-26eb-4b93-8fa6-46e3d6f40087",
+            "change_index": 1,
+            "path": "tests/mebane/likelihood/g3_draw_replay.R",
+            "operation": "add",
+            "input_sha256": null,
+            "sha256": "6f147ba3bcebd6fa530004da4a9f5387e8a6e74392b08cbb6f6a1aaf847fcad5",
+            "patch_utf8_sha256": "6f147ba3bcebd6fa530004da4a9f5387e8a6e74392b08cbb6f6a1aaf847fcad5"
+          },
+          "lineage": [
+            {
+              "order": 39,
+              "id": "exec-3da93d11-26eb-4b93-8fa6-46e3d6f40087",
+              "change_index": 1,
+              "path": "tests/mebane/likelihood/g3_draw_replay.R",
+              "operation": "add",
+              "input_sha256": null,
+              "sha256": "6f147ba3bcebd6fa530004da4a9f5387e8a6e74392b08cbb6f6a1aaf847fcad5",
+              "patch_utf8_sha256": "6f147ba3bcebd6fa530004da4a9f5387e8a6e74392b08cbb6f6a1aaf847fcad5"
+            }
+          ],
+          "availability": "inherited_candidate",
+          "inherited_paths": [
+            "quality_reports/results/mebane_gates/G3/round1/revision2/snapshots/tests/mebane/likelihood/g3_draw_replay.R",
+            "quality_reports/results/mebane_gates/G3/round1/revision3/inherited_snapshots/tests/mebane/likelihood/g3_draw_replay.R"
+          ]
+        }
+      ],
+      "executed_by_this_repair": false
+    },
+    {
+      "order": 44,
+      "id": "exec-054bf2ff-bd7c-4fc0-875a-18fc1df1e91d",
+      "turn_id": "01a0ee15-49e1-79d1-9007-51f1d20a7f4e",
+      "item_order": 26,
+      "command": "/bin/zsh -lc '/usr/bin/time -p timeout 120 Rscript --vanilla tests/mebane/likelihood/g3_draw_postprocess.R > quality_reports/results/mebane_gates/G3/round1/revision2/postprocess.log 2>&1'",
+      "exit_code": 0,
+      "status": "completed",
+      "duration_ms_from_event": 595,
+      "historical_log": "quality_reports/results/mebane_gates/G3/round1/revision2/postprocess.log",
+      "source_states": [
+        {
+          "path": "tests/mebane/likelihood/g3_draw_postprocess.R",
+          "sha256": "d3a488bd3694eeb9b0545fbae66977dd4c9dbc91de43b41f4401c001683e4ec2",
+          "last_edit": {
+            "order": 40,
+            "id": "exec-194b1c3b-2237-45c0-a650-c02bf7245163",
+            "change_index": 0,
+            "path": "tests/mebane/likelihood/g3_draw_postprocess.R",
+            "operation": "add",
+            "input_sha256": null,
+            "sha256": "d3a488bd3694eeb9b0545fbae66977dd4c9dbc91de43b41f4401c001683e4ec2",
+            "patch_utf8_sha256": "d3a488bd3694eeb9b0545fbae66977dd4c9dbc91de43b41f4401c001683e4ec2"
+          },
+          "lineage": [
+            {
+              "order": 40,
+              "id": "exec-194b1c3b-2237-45c0-a650-c02bf7245163",
+              "change_index": 0,
+              "path": "tests/mebane/likelihood/g3_draw_postprocess.R",
+              "operation": "add",
+              "input_sha256": null,
+              "sha256": "d3a488bd3694eeb9b0545fbae66977dd4c9dbc91de43b41f4401c001683e4ec2",
+              "patch_utf8_sha256": "d3a488bd3694eeb9b0545fbae66977dd4c9dbc91de43b41f4401c001683e4ec2"
+            }
+          ],
+          "availability": "inherited_candidate",
+          "inherited_paths": [
+            "quality_reports/results/mebane_gates/G3/round1/revision2/snapshots/tests/mebane/likelihood/g3_draw_postprocess.R",
+            "quality_reports/results/mebane_gates/G3/round1/revision3/inherited_snapshots/tests/mebane/likelihood/g3_draw_postprocess.R"
+          ]
+        },
+        {
+          "path": "R/lib/mebane_model.R",
+          "sha256": "68ca118912c678c7561e718075de7fc3ae10fc024c91a259231bf2a66254a300",
+          "last_edit": {
+            "order": 14,
+            "id": "exec-f18a60d0-2b14-4dc7-a767-30072fa9f4da",
+            "change_index": 0,
+            "path": "R/lib/mebane_model.R",
+            "operation": "update",
+            "input_sha256": "cded39d1bbf5cc22101ad8454d255a3016f21a263df91f76ec4592888d189136",
+            "sha256": "68ca118912c678c7561e718075de7fc3ae10fc024c91a259231bf2a66254a300",
+            "patch_utf8_sha256": "dab3dfc1e3aece4c4857054c3cfef312752592ca2c35976f90e3365874759999"
+          },
+          "lineage": [
+            {
+              "order": 4,
+              "id": "exec-5e8b3c00-2f40-410f-aadc-9d753895f594",
+              "change_index": 0,
+              "path": "R/lib/mebane_model.R",
+              "operation": "add",
+              "input_sha256": null,
+              "sha256": "53b8672a2b840e1519a1ed2bd7a94c76321ee4b7c879d5a9f6f7ffd0f130c582",
+              "patch_utf8_sha256": "53b8672a2b840e1519a1ed2bd7a94c76321ee4b7c879d5a9f6f7ffd0f130c582"
+            },
+            {
+              "order": 10,
+              "id": "exec-480ddda5-5b2b-47db-acb0-ba90d5f5dd8e",
+              "change_index": 0,
+              "path": "R/lib/mebane_model.R",
+              "operation": "update",
+              "input_sha256": "53b8672a2b840e1519a1ed2bd7a94c76321ee4b7c879d5a9f6f7ffd0f130c582",
+              "sha256": "cded39d1bbf5cc22101ad8454d255a3016f21a263df91f76ec4592888d189136",
+              "patch_utf8_sha256": "1aba55bc19a502e448dcad973c20f11d4970dbf20dd2b90f850a13034173f109"
+            },
+            {
+              "order": 14,
+              "id": "exec-f18a60d0-2b14-4dc7-a767-30072fa9f4da",
+              "change_index": 0,
+              "path": "R/lib/mebane_model.R",
+              "operation": "update",
+              "input_sha256": "cded39d1bbf5cc22101ad8454d255a3016f21a263df91f76ec4592888d189136",
+              "sha256": "68ca118912c678c7561e718075de7fc3ae10fc024c91a259231bf2a66254a300",
+              "patch_utf8_sha256": "dab3dfc1e3aece4c4857054c3cfef312752592ca2c35976f90e3365874759999"
+            }
+          ],
+          "availability": "inherited_candidate",
+          "inherited_paths": [
+            "quality_reports/results/mebane_gates/G3/round1/revision1/snapshots/R/lib/mebane_model.R",
+            "quality_reports/results/mebane_gates/G3/round1/revision3/inherited_snapshots/R/lib/mebane_model.R"
+          ]
+        }
+      ],
+      "executed_by_this_repair": false
+    }
+  ]
+}

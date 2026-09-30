@@ -1,0 +1,37 @@
+[
+  {
+    "attempt": "deterministic1",
+    "path": "tests/mebane/likelihood/g3_deterministic.R",
+    "sha256": "8b0012b3e3b54a3b759745a0c846f3c384fae9484266b3e6baf8886328969341"
+  },
+  {
+    "attempt": "deterministic1",
+    "path": "R/lib/mebane_model.R",
+    "sha256": "53b8672a2b840e1519a1ed2bd7a94c76321ee4b7c879d5a9f6f7ffd0f130c582"
+  },
+  {
+    "attempt": "deterministic2",
+    "path": "tests/mebane/likelihood/g3_deterministic.R",
+    "sha256": "86fab7d3bff353d08b12f80a8d1c9a2d1976eb2f8bc43a9dd9183df7a49e5c16"
+  },
+  {
+    "attempt": "deterministic2",
+    "path": "R/lib/mebane_model.R",
+    "sha256": "cded39d1bbf5cc22101ad8454d255a3016f21a263df91f76ec4592888d189136"
+  },
+  {
+    "attempt": "jags1",
+    "path": "tests/mebane/likelihood/g3_jags.R",
+    "sha256": "15b48452923289dcdea8fc1dc32192b1305c3f246dad554ccc885340be801a42"
+  },
+  {
+    "attempt": "jags2",
+    "path": "tests/mebane/likelihood/g3_jags.R",
+    "sha256": "19ed250a7c53f88b30ded695f55113a715c862c3b9bc07aa0917ef242007db3b"
+  },
+  {
+    "attempt": "jags4",
+    "path": "tests/mebane/likelihood/g3_jags.R",
+    "sha256": "6ecae09f28159803ec93a3da654b661a129a44da630acba17e853969c9549583"
+  }
+]

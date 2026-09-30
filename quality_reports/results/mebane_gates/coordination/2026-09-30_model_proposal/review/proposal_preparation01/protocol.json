@@ -1,0 +1,23 @@
+{
+  "id": "G3-PROPOSAL-QA-V1-01",
+  "reviewer_id": "01a0ee05-aeaf-7492-a8ea-fa731dd6214a",
+  "proposal_sha256": "7fe462ed99561dee68d49fe1c5595845664249060459d018b4d01829fd61153c",
+  "candidate_script_sha256": "f8bb9da0b73216c6422d3292c90de66515631e26bb774170a3482dfb05318083",
+  "stage": "after_full_proposal_read_before_new_independent_execution",
+  "tolerance": 1e-12,
+  "probability_support": "Strict finite [0,1], without tolerance or clamp. Equality tolerances only apply to floating-point sums and identities.",
+  "tests": [
+    "Enumerate ordered five-category microstates independently of the candidate count enumeration, N=1..4, tau={0,.37,1},nu={0,.61,1},m={0,.23,1},s={0,.41,1}, plus three interior/near-boundary fixtures.",
+    "Compare full joint conditional law of M,S given A,W with the multinomial splitting formula, not only conditional means.",
+    "Verify all observed marginals, covariance, conservation, reservoirs and the distribution of M+S conditional on the data.",
+    "Enumerate the literal kernel with four independent auxiliary counts at N=2; distinguish active and inactive priors, class normalization, global normalization and normalization conditional on all counts.",
+    "Check posterior class weighting uses observed likelihood rather than prior pi.",
+    "Check local observational equivalence without asserting equivalence after hierarchical integration.",
+    "Reproduce each preserved candidate script in a fresh QA directory with a 110-second process limit; record failures as failures and preserve logs."
+  ],
+  "literal_fixture": {"N": 2, "tau": 0.6, "nu": 0.4, "mu_counts": [0.2,0.3,0.8,0.9], "pi": [0.6,0.25,0.15]},
+  "no_estimation": true,
+  "no_new_chains": true,
+  "not_a_future_MCMC_protocol": true,
+  "decision_scope": "Technical adequacy of the frozen proposal only; neither model adoption, inference, G3 PASS nor production approval."
+}

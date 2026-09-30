@@ -1,0 +1,9 @@
+{
+  "review_manifest_sha256": "9cf5b1b5b1aba14458b51b0b83dd5a50c3328188f3b169f3ec60ed698eb9f6d7",
+  "entries_reopened_and_verified": 569,
+  "unlisted_QA_files": [],
+  "status": "verified",
+  "scoped_manifest_complete": true,
+  "universal_historical_runtime_input_closure": false,
+  "G3_status": "inconclusive"
+}

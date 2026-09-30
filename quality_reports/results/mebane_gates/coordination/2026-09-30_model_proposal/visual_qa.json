@@ -1,0 +1,12 @@
+{
+  "date": "2026-09-30",
+  "reviewer": "coordinator",
+  "pdf": "mebane_model_proposal_v1.pdf",
+  "pdf_sha256": "1ba3644476e788327e7378a0cff0499b8f1a497bd9f2e70eba204c11043f3847",
+  "source_sha256": "7fe462ed99561dee68d49fe1c5595845664249060459d018b4d01829fd61153c",
+  "render": "pdftoppm -r 110 -png",
+  "pages_inspected": [1, 2, 3, 4, 5],
+  "status": "pass_readability",
+  "checks": ["All five pages rendered and visually inspected.", "Accents, formulas, numbered equations, links and references are legible.", "No observed clipping, overlap, replacement glyphs or lost paragraphs.", "Page numbering and date footer are consistent."],
+  "limit": "Visual QA is separate from the independent mathematical review, which binds the Markdown source."
+}

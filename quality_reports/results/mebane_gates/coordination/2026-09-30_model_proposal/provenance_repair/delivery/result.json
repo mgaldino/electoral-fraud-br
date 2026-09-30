@@ -1,0 +1,89 @@
+{
+  "finding_id": "G3-QA-R2-INPUT-01",
+  "executor_thread_id": "01a0ee04-c901-7831-8ac6-0160da2e3883",
+  "implementation_status": "candidate_ready_for_independent_review",
+  "documentary_checks": "all_seven_exact_source_identities_recovered",
+  "gate_outcome": "inconclusive",
+  "independently_approved": false,
+  "adjudication_resolved_by_executor": false,
+  "candidate_manifest_sha256": "63855471a88dbfc3840b1172aef71118f7cffbdfe425e0241f1d689bf5e67966",
+  "recovered_source_count": 7,
+  "affected_command_count": 5,
+  "historical_timed_commands_compared": 12,
+  "source_edit_states_compared": 21,
+  "parser_checks": [
+    "exact_patch_fixture_1",
+    "exact_patch_fixture_2",
+    "exact_patch_fixture_3",
+    "exact_patch_fixture_4",
+    "invalid_patch_rejected_1",
+    "invalid_patch_rejected_2",
+    "invalid_patch_rejected_3"
+  ],
+  "revision3_declared_files_preserved": 350,
+  "snapshots": [
+    {
+      "attempt": "deterministic1",
+      "path": "tests/mebane/likelihood/g3_deterministic.R",
+      "sha256": "8b0012b3e3b54a3b759745a0c846f3c384fae9484266b3e6baf8886328969341",
+      "snapshot": "snapshots/deterministic1/tests/mebane/likelihood/g3_deterministic.R",
+      "bytes": 3047,
+      "matches_qa_sha256": true
+    },
+    {
+      "attempt": "deterministic1",
+      "path": "R/lib/mebane_model.R",
+      "sha256": "53b8672a2b840e1519a1ed2bd7a94c76321ee4b7c879d5a9f6f7ffd0f130c582",
+      "snapshot": "snapshots/deterministic1/R/lib/mebane_model.R",
+      "bytes": 4972,
+      "matches_qa_sha256": true
+    },
+    {
+      "attempt": "deterministic2",
+      "path": "tests/mebane/likelihood/g3_deterministic.R",
+      "sha256": "86fab7d3bff353d08b12f80a8d1c9a2d1976eb2f8bc43a9dd9183df7a49e5c16",
+      "snapshot": "snapshots/deterministic2/tests/mebane/likelihood/g3_deterministic.R",
+      "bytes": 3129,
+      "matches_qa_sha256": true
+    },
+    {
+      "attempt": "deterministic2",
+      "path": "R/lib/mebane_model.R",
+      "sha256": "cded39d1bbf5cc22101ad8454d255a3016f21a263df91f76ec4592888d189136",
+      "snapshot": "snapshots/deterministic2/R/lib/mebane_model.R",
+      "bytes": 5012,
+      "matches_qa_sha256": true
+    },
+    {
+      "attempt": "jags1",
+      "path": "tests/mebane/likelihood/g3_jags.R",
+      "sha256": "15b48452923289dcdea8fc1dc32192b1305c3f246dad554ccc885340be801a42",
+      "snapshot": "snapshots/jags1/tests/mebane/likelihood/g3_jags.R",
+      "bytes": 8601,
+      "matches_qa_sha256": true
+    },
+    {
+      "attempt": "jags2",
+      "path": "tests/mebane/likelihood/g3_jags.R",
+      "sha256": "19ed250a7c53f88b30ded695f55113a715c862c3b9bc07aa0917ef242007db3b",
+      "snapshot": "snapshots/jags2/tests/mebane/likelihood/g3_jags.R",
+      "bytes": 8674,
+      "matches_qa_sha256": true
+    },
+    {
+      "attempt": "jags4",
+      "path": "tests/mebane/likelihood/g3_jags.R",
+      "sha256": "6ecae09f28159803ec93a3da654b661a129a44da630acba17e853969c9549583",
+      "snapshot": "snapshots/jags4/tests/mebane/likelihood/g3_jags.R",
+      "bytes": 8896,
+      "matches_qa_sha256": true
+    }
+  ],
+  "unresolved_target_ambiguities": [],
+  "limits": [
+    "No recovered R code or historical command was executed. No MCMC, estimation, diagnostic recomputation or scientific change.",
+    "Saved tool events establish the reconstructible edit/command sequence. Unrecorded edits cannot be ruled out independently; QA target hashes and all saved source-state hashes agree.",
+    "The test_ar02_interface.R entrypoint has no addition/update base in this event trace. It remains explicitly unavailable in this trace and is outside the seven identities adjudicated here; current bytes are not substituted.",
+    "This supplement does not claim complete closure of all historical runtime inputs, change revision3, repair other findings, resolve F1/F2, or approve G3."
+  ]
+}

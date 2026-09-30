@@ -10,10 +10,6 @@ Em 29/09, o usuário decidiu manter a ausência de um download já classificado 
 
 A replicação externa dos autores é agora G10, obrigatório entre G3 e G4. A [descoberta de fontes](quality_reports/results/mebane_gates/coordination/authors_replication_discovery/discovery.md) tem revisão independente, mas o contrato de comparação permanece proposto, sem nova estimação ou PASS de G10. Consulte também a [adjudicação e errata](quality_reports/results/mebane_gates/coordination/2026-09-29_benchmark_round/replication_adjudication.md). Não há resultado nacional qbl validado nem inferência de 2026. G7 cobre apenas staging ensaiado de CSV normalizado: ainda faltam conversor auditado dos arquivos oficiais brutos e atestação dos dados reais. Os fits históricos e os testes suplementares não demonstram fraude nem sua ausência.
 
-Em 30/09, G3 round1 foi [encerrado como inconclusivo](quality_reports/results/mebane_gates/G3/round1/adjudication.md), após testes pequenos e revisão independente. O reparo de diagnósticos passou, e sete versões históricas de fontes foram recuperadas com hashes exatos; isso não atesta todos os inputs de toda a história computacional. Permanecem os contraexemplos de probabilidade inválida e de contagens fora do suporte físico, além de nove ESS de cauda indefinidos no critério congelado. Nenhuma engine de produção está aprovada. Os todos registram progresso parcial, não validação integral.
-
-A [proposta comparativa de retomada](quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/proposal_v1.md), também em [PDF](quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/mebane_model_proposal_v1.pdf), recomenda estudar uma candidata multinomial de transferências. Ela é explicitamente diferente do qbl e não foi adotada ou estimada. As identidades gerativas passaram em 332 distribuições determinísticas pequenas; isso não demonstra identificação de fraude nem adequação ao Brasil. A próxima decisão substantiva é escolher a candidata para um contrato novo, preservando G2/G3 históricos e a exigência de replicação externa dos autores.
-
 ## Replicacao
 
 ### Pre-requisitos

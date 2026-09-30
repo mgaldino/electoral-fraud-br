@@ -1,0 +1,51 @@
+{
+  "frozen_at_utc": "2026-09-30T23:05:43.539159+00:00",
+  "inputs": [
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/proposal_v1.md",
+      "sha256": "7fe462ed99561dee68d49fe1c5595845664249060459d018b4d01829fd61153c",
+      "bytes": 18717
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/check_proposals.R",
+      "sha256": "f8bb9da0b73216c6422d3292c90de66515631e26bb774170a3482dfb05318083",
+      "bytes": 6642
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/checks01/check_proposals_initial.R",
+      "sha256": "10e316e87f3398bdb6ca2f20efcbe20d1a87d8e7889bd9f6a8e623224241765a",
+      "bytes": 6305
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/checks02/check_proposals_second.R",
+      "sha256": "89f93a4b51bdf7640b00029e3ed2247f5fe9e861e61241a03b306af83d0ba5b1",
+      "bytes": 6408
+    },
+    {
+      "path": "R/lib/mebane_model.R",
+      "sha256": "68ca118912c678c7561e718075de7fc3ae10fc024c91a259231bf2a66254a300",
+      "bytes": 5528
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G0/round1/qbl_installed_3017de5.jags",
+      "sha256": "f8360126424b7a463f76a1c99efc89a8a5cb81339213bd4931559f14595fbab6",
+      "bytes": 6761
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/review/proposal_preparation01/protocol.json",
+      "sha256": "a87aba6280aab707f3058ad1a4fe69f9b5d7fdef511c6a55ef3ec1618d07d4af",
+      "bytes": 1888
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/review/proposal_preparation01/checks.R",
+      "sha256": "f6e7b8169eeacbdbd2d35f8f864b79513862dd86a6f9e1fb8f3d8b1d4bc6cd02",
+      "bytes": 6755
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/review/proposal_preparation01/run.py",
+      "sha256": "2beabf580202e983f7dfc79b9b007085af93462716d499c57e6022144bc408cf",
+      "bytes": 3438
+    }
+  ],
+  "before_execution": true
+}

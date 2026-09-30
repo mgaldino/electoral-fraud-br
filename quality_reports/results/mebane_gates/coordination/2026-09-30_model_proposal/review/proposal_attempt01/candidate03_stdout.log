@@ -1,0 +1,79 @@
+$status
+[1] "deterministic_checks_pass"
+
+$estimation_performed
+[1] FALSE
+
+$parameter_cases
+[1] 83
+
+$distributions
+[1] 332
+
+$tolerance
+[1] 1e-11
+
+$max_mechanism_error
+[1] 2.775558e-16
+
+$max_sequential_error
+[1] 5.551115e-16
+
+$max_conditional_mean_error
+[1] 8.881784e-16
+
+$F1
+[1] 499.5
+
+$F2
+[1] 0.03125
+
+$roundoff_probe
+$roundoff_probe$direct_ratio
+[1] 1
+
+$roundoff_probe$positive_sum_ratio
+[1] 1
+
+
+$example
+$example$N
+[1] 1000
+
+$example$probabilities
+$example$probabilities$A
+[1] 0.32
+
+$example$probabilities$L
+[1] 0.24
+
+$example$probabilities$M
+[1] 0.08
+
+$example$probabilities$S
+[1] 0.108
+
+$example$probabilities$O
+[1] 0.252
+
+
+$example$expected_A_W_O
+  A       O 
+320 428 252 
+
+$example$no_transfer_tau
+[1] 0.68
+
+$example$no_transfer_nu
+[1] 0.6294118
+
+$example$expected_M_S
+[1]  80 108
+
+$example$conditional_M_S_given_W400
+[1]  74.76636 100.93458
+
+
+$limitation
+[1] "Algebraic checks only; no identification, MCMC, production approval or author replication."
+

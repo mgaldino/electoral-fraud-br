@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0",
+  "review_id": "G3-PROPOSAL-QA-V1-01",
+  "reviewer_thread_id": "01a0ee05-aeaf-7492-a8ea-fa731dd6214a",
+  "date": "2026-09-30",
+  "source": {
+    "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/proposal_v1.md",
+    "sha256": "7fe462ed99561dee68d49fe1c5595845664249060459d018b4d01829fd61153c",
+    "read_scope": "Entire document, lines 1-94"
+  },
+  "status": "pass",
+  "verdict_scope": "Technical coherence and source-bound accuracy of this comparative proposal as a proposal for user decision, not an implemented model or an executable MCMC protocol.",
+  "findings": [],
+  "changes_requested": [],
+  "gate_G3_status": "inconclusive",
+  "model_adoption_authorized": false,
+  "inference_approved": false,
+  "production_approved": false,
+  "candidate_script_sha256": "f8bb9da0b73216c6422d3292c90de66515631e26bb774170a3482dfb05318083",
+  "coverage": [
+    {"id": "P01", "lines": [3,15], "topic": "Recommendation and historical G3 limits", "assessment": "Correctly delimited. F1/F2 independently rederived; no sampler or prior explanation asserted from an observed successful run."},
+    {"id": "P02", "lines": [19,29], "topic": "Alternatives A-D", "assessment": "Distinct statistical targets. Kernel zeroing is not treated as normalization, rectangle normalization is not physical support, and D is not an exact qbl port."},
+    {"id": "P03", "lines": [21,23], "topic": "Normalization and induced count prior", "assessment": "Correct. P(R|z,theta)=base(R|theta)*C(z,R,theta)/C(z,theta). Global normalization also reweights classes. Inactive count priors integrate to one and retain their marginal law. Verified with all four counts at N=2."},
+    {"id": "P04", "lines": [33,52], "topic": "Transfer mechanism and likelihood", "assessment": "Count mechanism marginalizes exactly to the stated multinomial. Reservoirs, conservation, binomial marginals, negative covariance and stable sequential factorization checked independently, including boundaries."},
+    {"id": "P05", "lines": [54,58], "topic": "Priors and class marginalization", "assessment": "Six predictors, alpha+b0, Exp(5) on variance, partial pi order and three-term marginalization agree with the proposed comparison. Removing auxiliary counts and using continuous fractions are explicit substantive changes, not preservation of the integral JAGS target."},
+    {"id": "P06", "lines": [60,62], "topic": "Posterior M/S and joint functionals", "assessment": "Multinomial splitting conditional on observed W is correct given parameters and class drawn from their full-data posterior. Complete conditional law and distribution of M+S verified, not just means. Prior class weights would be incorrect for reconstruction."},
+    {"id": "P07", "lines": [64,64], "topic": "Identification", "assessment": "Correct local conditional equivalence. Does not assert equivalence of hierarchical marginal models. Equality of observed probabilities does not identify transfers or fraud; restrictions may be informative or prior-driven and need separate assessment."},
+    {"id": "P08", "lines": [33,62], "topic": "Other votes, blank/null and margins", "assessment": "O is correctly a residual if N-A is turnout. No opponent-specific margin is identified from undifferentiated S. Brazilian converter and electoral definitions remain future contract work."},
+    {"id": "P09", "lines": [68,72], "topic": "Diagnostics", "assessment": "Prospective guidance, not a frozen runnable protocol. Distinguishes diagnostic undefinedness, theoretical constants and sampling failures, and does not waive historical tail ESS criteria. Nine historical NAs remain."},
+    {"id": "P10", "lines": [74,94], "topic": "Roadmap and sources", "assessment": "User decision, new mathematical contract and independent review precede implementation/estimation. G10 dependencies and replication gaps match archived evidence. Printed P23 equation 4d omission remains documented in the benchmark contract; proposed k+ formula is supported by P22 and JAGS, not a literal transcription of that P23 typo."}
+  ],
+  "verification": {
+    "preflight_checks": 42,
+    "new_independent_checks": 25,
+    "new_independent_parameter_cases": 84,
+    "new_independent_distributions": 336,
+    "independent_tolerance": 1e-12,
+    "independent_observed_pmf_max_error": 5.55111512312578e-16,
+    "independent_conditional_joint_max_error": 6.66133814775094e-16,
+    "independent_joint_functional_max_error": 1.11022302462516e-15,
+    "independent_covariance_max_error": 9.65894031423886e-15,
+    "candidate_distributions_reproduced": 332,
+    "candidate_tolerance_unchanged": 1e-11,
+    "preserved_attempt01_exit": 1,
+    "preserved_attempt02_exit": 1,
+    "candidate_attempt03_exit": 0,
+    "failure_repair_assessment": "Algebraically equivalent stable denominator, earlier preservation of CSV output, scalar-name removal and an added diagnostic probe only. No changed grid, probability target or acceptance tolerance.",
+    "R_process_wall_seconds_total": 10.253690832934808,
+    "no_rng_or_estimation": true,
+    "source_code_executed": "New independent QA code plus the three deterministic demonstration scripts; no recovered historical G3 scripts, production runners or MCMC."
+  },
+  "evidence_paths": [
+    "attempt01/preflight_result.json",
+    "proposal_attempt01/freeze.json",
+    "proposal_attempt01/result.json",
+    "proposal_attempt01/independent/checks.csv",
+    "proposal_attempt01/independent/microstate_metrics.csv",
+    "proposal_attempt01/independent/induced_R.csv",
+    "proposal_attempt01/independent/literal_normalization.csv",
+    "proposal_attempt01/independent/posterior_classes.csv",
+    "mathematical_verification.md"
+  ],
+  "unverified_or_not_claimed": [
+    "Identification, detection validity, likelihood gradients, posterior geometry, scale, speed or convergence of any future fitted model.",
+    "A complete prospective diagnostic protocol: thresholds, monitored functions and precision budgets must be chosen and frozen later.",
+    "Equality after integrating different hierarchical priors, external author replication or Brazilian data-converter correctness.",
+    "Rendered PDF visual review. Its hash was verified, but all technical locators and this verdict bind the Markdown."
+  ],
+  "decision_owner": "User for model choice; coordination for adjudication and ledger changes."
+}

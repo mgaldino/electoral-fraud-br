@@ -1,0 +1,20 @@
+{
+  "date": "2026-09-30",
+  "role": "Primary reference cross-check only; no package update",
+  "sources": [
+    {
+      "url": "https://mc-stan.org/docs/functions-reference/multivariate_discrete_distributions.html",
+      "version": "2.40"
+    },
+    {
+      "url": "https://mc-stan.org/docs/stan-users-guide/finite-mixtures.html",
+      "version": "2.40"
+    },
+    {
+      "url": "https://mc-stan.org/posterior/reference/ess_tail.html",
+      "version": "1.7.1"
+    }
+  ],
+  "byte_archive_of_remote_pages": false,
+  "scope_limit": "Not a complete web archive; mathematical evidence independently derived locally."
+}

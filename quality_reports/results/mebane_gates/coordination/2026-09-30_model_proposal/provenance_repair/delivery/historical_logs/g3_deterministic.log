@@ -1,0 +1,15 @@
+During startup - Warning messages:
+1: Setting LC_CTYPE failed, using "C" 
+2: Setting LC_COLLATE failed, using "C" 
+3: Setting LC_TIME failed, using "C" 
+4: Setting LC_MESSAGES failed, using "C" 
+5: Setting LC_MONETARY failed, using "C" 
+Error in if (A + W > N) "invalid_physical" else "valid" : 
+  missing value where TRUE/FALSE needed
+Calls: mebane_attempts -> data.frame
+In addition: Warning message:
+In rbinom(1, N, p["pw"]) : NAs produced
+Execution halted
+real 0.54
+user 0.48
+sys 0.03

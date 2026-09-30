@@ -1,0 +1,3658 @@
+[
+  {
+    "id": "frozen_supplement_sha",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/provenance_repair/closure_manifest.json:count",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/provenance_repair/closure_manifest.json:unique",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/provenance_repair/delivery/candidate_integrity_after.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/provenance_repair/delivery/candidate_integrity_before.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/provenance_repair/delivery/command_source_map.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/provenance_repair/delivery/frozen_inputs/adjudication.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/provenance_repair/delivery/frozen_inputs/executor_event_sequence.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/provenance_repair/delivery/frozen_inputs/history_audit.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/provenance_repair/delivery/frozen_inputs/input_closure_revision2.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/provenance_repair/delivery/frozen_inputs/qa_audit_event_history.py",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/provenance_repair/delivery/frozen_inputs/review.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/provenance_repair/delivery/frozen_inputs/revision3_manifest.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/provenance_repair/delivery/historical_logs/g3_deterministic.log",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/provenance_repair/delivery/historical_logs/g3_deterministic_attempt2.log",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/provenance_repair/delivery/historical_logs/g3_jags_attempt1.log",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/provenance_repair/delivery/historical_logs/g3_jags_attempt2.log",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/provenance_repair/delivery/historical_logs/g3_jags_attempt4.log",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/provenance_repair/delivery/historical_logs_manifest.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/provenance_repair/delivery/input_manifest.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/provenance_repair/delivery/reconstruction_trace.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/provenance_repair/delivery/result.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/provenance_repair/delivery/snapshots/deterministic1/R/lib/mebane_model.R",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/provenance_repair/delivery/snapshots/deterministic1/tests/mebane/likelihood/g3_deterministic.R",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/provenance_repair/delivery/snapshots/deterministic2/R/lib/mebane_model.R",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/provenance_repair/delivery/snapshots/deterministic2/tests/mebane/likelihood/g3_deterministic.R",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/provenance_repair/delivery/snapshots/jags1/tests/mebane/likelihood/g3_jags.R",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/provenance_repair/delivery/snapshots/jags2/tests/mebane/likelihood/g3_jags.R",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/provenance_repair/delivery/snapshots/jags4/tests/mebane/likelihood/g3_jags.R",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/provenance_repair/reconstruct_sources.py",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/provenance_repair/repair_plan.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/provenance_repair/report.md",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/provenance_repair/run_documentary.py",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/provenance_repair/runs/build01/run.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/provenance_repair/runs/build01/source_snapshot/reconstruct_sources.py",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/provenance_repair/runs/build01/source_snapshot/repair_plan.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/provenance_repair/runs/build01/source_snapshot/run_documentary.py",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/provenance_repair/runs/build01/stderr.log",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/provenance_repair/runs/build01/stdout.log",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/provenance_repair/runs/replay_check01/run.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/provenance_repair/runs/replay_check01/source_snapshot/reconstruct_sources.py",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/provenance_repair/runs/replay_check01/source_snapshot/repair_plan.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/provenance_repair/runs/replay_check01/source_snapshot/run_documentary.py",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/provenance_repair/runs/replay_check01/stderr.log",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/provenance_repair/runs/replay_check01/stdout.log",
+    "pass": true
+  },
+  {
+    "id": "no_unlisted_package_file_except_declared_detached_verification",
+    "pass": true
+  },
+  {
+    "id": "original_revision3_sha",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision3/candidate_manifest.json:count",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision3/candidate_manifest.json:unique",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/build_candidate.py",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/candidate_manifest.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/comparison_result.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/counterexample.csv",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/deterministic_attempt2/counterexample.csv",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/deterministic_attempt2/enumeration.csv",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/deterministic_attempt2/generation_attempts.csv",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/deterministic_attempt2/joint_functionals.csv",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/deterministic_attempt2/joint_input.csv",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/deterministic_attempt2/mass.csv",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/deterministic_attempt2/normalization.csv",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/deterministic_attempt3/counterexample.csv",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/deterministic_attempt3/enumeration.csv",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/deterministic_attempt3/generation_attempts.csv",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/deterministic_attempt3/joint_functionals.csv",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/deterministic_attempt3/joint_input.csv",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/deterministic_attempt3/mass.csv",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/deterministic_attempt3/normalization.csv",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/engine_decision.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/enumeration.csv",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/environment.log",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/g3_deterministic.log",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/g3_deterministic_attempt2.log",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/g3_deterministic_attempt3.log",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/g3_interface_attempt1.log",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/g3_jags_attempt1.log",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/g3_jags_attempt2.log",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/g3_jags_attempt3.log",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/g3_jags_attempt4.log",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/g3_jags_attempt5.log",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/g3_source_attempt1.log",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/gate_contract.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/implementation.md",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/jags_attempt2/jags_probes.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/jags_attempt3/comparison_result.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/jags_attempt3/conditional_comparison.csv",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/jags_attempt3/conditional_exact_states.csv",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/jags_attempt3/jags_probes.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/jags_attempt3/margin_feasibility.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/jags_attempt4/conditional_comparison.csv",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/jags_attempt4/conditional_exact_states.csv",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/jags_attempt4/jags_probes.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/jags_attempt4/margin_feasibility.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/jags_attempt5/comparison_result.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/jags_attempt5/conditional_comparison.csv",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/jags_attempt5/conditional_exact_states.csv",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/jags_attempt5/jags_probes.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/jags_attempt5/margin_feasibility.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/jags_probes.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/mass.csv",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/metadata_consumed.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/normalization.csv",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/preflight_v1.md",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/protocol.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/protocol_provenance_errata.md",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/protocol_v2.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164404110482Z_math/diagnostic_conditional_marginals.csv",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164404110482Z_math/diagnostic_mass.csv",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164404110482Z_math/execution.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164404110482Z_math/invocation.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164404110482Z_math/joint_functionals_fixture.csv",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164404110482Z_math/kernel_cells.csv",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164404110482Z_math/math_checks.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164404110482Z_math/stderr.log",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164404110482Z_math/stdout.log",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164404110482Z_math/v2_conditioned_exact_states.csv",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164413891477Z_wrapper/direct_data.rds",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164413891477Z_wrapper/execution.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164413891477Z_wrapper/invocation.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164413891477Z_wrapper/stderr.log",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164413891477Z_wrapper/stdout.log",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164413891477Z_wrapper/tmp/xcrun_db",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164413891477Z_wrapper/wrapper_checks.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164413891477Z_wrapper/wrapper_data_1.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164413891477Z_wrapper/wrapper_data_2.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164413891477Z_wrapper/wrapper_data_3.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164413891477Z_wrapper/wrapper_payload_1.rds",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164413891477Z_wrapper/wrapper_payload_2.rds",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164413891477Z_wrapper/wrapper_payload_3.rds",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164446516572Z_runtime_01/not_started.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164658942859Z_runtime_01/data.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164658942859Z_runtime_01/data.rds",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164658942859Z_runtime_01/draws.csv",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164658942859Z_runtime_01/execution.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164658942859Z_runtime_01/inits.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164658942859Z_runtime_01/inits.rds",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164658942859Z_runtime_01/invocation.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164658942859Z_runtime_01/runtime_result.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164658942859Z_runtime_01/samples.rds",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164658942859Z_runtime_01/stderr.log",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164658942859Z_runtime_01/stdout.log",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164659293216Z_runtime_02/data.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164659293216Z_runtime_02/data.rds",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164659293216Z_runtime_02/draws.csv",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164659293216Z_runtime_02/execution.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164659293216Z_runtime_02/inits.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164659293216Z_runtime_02/inits.rds",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164659293216Z_runtime_02/invocation.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164659293216Z_runtime_02/runtime_result.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164659293216Z_runtime_02/samples.rds",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164659293216Z_runtime_02/stderr.log",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164659293216Z_runtime_02/stdout.log",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164659633339Z_runtime_03/data.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164659633339Z_runtime_03/data.rds",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164659633339Z_runtime_03/draws.csv",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164659633339Z_runtime_03/execution.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164659633339Z_runtime_03/inits.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164659633339Z_runtime_03/inits.rds",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164659633339Z_runtime_03/invocation.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164659633339Z_runtime_03/runtime_result.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164659633339Z_runtime_03/samples.rds",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164659633339Z_runtime_03/stderr.log",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164659633339Z_runtime_03/stdout.log",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164659979513Z_runtime_04/data.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164659979513Z_runtime_04/data.rds",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164659979513Z_runtime_04/execution.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164659979513Z_runtime_04/inits.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164659979513Z_runtime_04/inits.rds",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164659979513Z_runtime_04/invocation.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164659979513Z_runtime_04/runtime_result.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164659979513Z_runtime_04/stderr.log",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164659979513Z_runtime_04/stdout.log",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164700322191Z_runtime_05/data.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164700322191Z_runtime_05/data.rds",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164700322191Z_runtime_05/execution.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164700322191Z_runtime_05/inits.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164700322191Z_runtime_05/inits.rds",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164700322191Z_runtime_05/invocation.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164700322191Z_runtime_05/runtime_result.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164700322191Z_runtime_05/stderr.log",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164700322191Z_runtime_05/stdout.log",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164700669112Z_runtime_06/data.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164700669112Z_runtime_06/data.rds",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164700669112Z_runtime_06/execution.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164700669112Z_runtime_06/inits.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164700669112Z_runtime_06/inits.rds",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164700669112Z_runtime_06/invocation.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164700669112Z_runtime_06/runtime_result.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164700669112Z_runtime_06/stderr.log",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164700669112Z_runtime_06/stdout.log",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164701019746Z_runtime_07/data.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164701019746Z_runtime_07/data.rds",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164701019746Z_runtime_07/draws.csv",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164701019746Z_runtime_07/execution.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164701019746Z_runtime_07/inits.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164701019746Z_runtime_07/inits.rds",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164701019746Z_runtime_07/invocation.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164701019746Z_runtime_07/runtime_result.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164701019746Z_runtime_07/samples.rds",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164701019746Z_runtime_07/stderr.log",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164701019746Z_runtime_07/stdout.log",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164701368470Z_runtime_08/data.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164701368470Z_runtime_08/data.rds",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164701368470Z_runtime_08/draws.csv",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164701368470Z_runtime_08/execution.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164701368470Z_runtime_08/inits.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164701368470Z_runtime_08/inits.rds",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164701368470Z_runtime_08/invocation.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164701368470Z_runtime_08/runtime_result.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164701368470Z_runtime_08/samples.rds",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164701368470Z_runtime_08/stderr.log",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164701368470Z_runtime_08/stdout.log",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164701718780Z_runtime_09/data.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164701718780Z_runtime_09/data.rds",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164701718780Z_runtime_09/draws.csv",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164701718780Z_runtime_09/execution.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164701718780Z_runtime_09/inits.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164701718780Z_runtime_09/inits.rds",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164701718780Z_runtime_09/invocation.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164701718780Z_runtime_09/runtime_result.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164701718780Z_runtime_09/samples.rds",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164701718780Z_runtime_09/stderr.log",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164701718780Z_runtime_09/stdout.log",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164702070474Z_runtime_10/data.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164702070474Z_runtime_10/data.rds",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164702070474Z_runtime_10/draws.csv",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164702070474Z_runtime_10/execution.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164702070474Z_runtime_10/inits.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164702070474Z_runtime_10/inits.rds",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164702070474Z_runtime_10/invocation.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164702070474Z_runtime_10/runtime_result.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164702070474Z_runtime_10/samples.rds",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164702070474Z_runtime_10/stderr.log",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164702070474Z_runtime_10/stdout.log",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164702420276Z_runtime_11/data.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164702420276Z_runtime_11/data.rds",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164702420276Z_runtime_11/execution.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164702420276Z_runtime_11/inits.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164702420276Z_runtime_11/inits.rds",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164702420276Z_runtime_11/invocation.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164702420276Z_runtime_11/runtime_result.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164702420276Z_runtime_11/stderr.log",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164702420276Z_runtime_11/stdout.log",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164702761978Z_runtime_12/data.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164702761978Z_runtime_12/data.rds",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164702761978Z_runtime_12/draws.csv",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164702761978Z_runtime_12/execution.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164702761978Z_runtime_12/inits.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164702761978Z_runtime_12/inits.rds",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164702761978Z_runtime_12/invocation.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164702761978Z_runtime_12/runtime_result.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164702761978Z_runtime_12/samples.rds",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164702761978Z_runtime_12/stderr.log",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164702761978Z_runtime_12/stdout.log",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_correction01_wrapper/eforensics_archived_ast.R",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_correction01_wrapper/eforensics_installed_ast.R",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_correction01_wrapper/eforensics_main_par_archived_ast.R",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_correction01_wrapper/eforensics_main_par_installed_ast.R",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_correction01_wrapper/execution.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_correction01_wrapper/getRegMatrix_archived_ast.R",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_correction01_wrapper/getRegMatrix_installed_ast.R",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_correction01_wrapper/invocation.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_correction01_wrapper/repaired_math_checks.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_correction01_wrapper/stderr.log",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_correction01_wrapper/stdout.log",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_correction01_wrapper/wrapper_checks.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_diagnostic_helpers_selftest01/selftest_checks.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_supplement01/audit.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_supplement01/execution.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_supplement01/numeric_support.csv",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_supplement01/source_checks.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/corrections_01/amendment.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/corrections_01/freeze.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/corrections_01/run_repair.py",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/corrections_01/verify_repairs.R",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/final_checks/check_saved_draws.R",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/final_checks/diagnostic_helpers.R",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/final_checks/selftest.R",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/final_checks/verify_manifest.py",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/freeze_01/G3_static_contract.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/freeze_01/freeze.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/freeze_01/input_00_qbl_installed_3017de5.jags",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/freeze_01/input_01_benchmark_contract.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/freeze_01/input_02_ef_main_3017de5.R",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/freeze_01/input_03_mebane_2022_2026_gates.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/freeze_01/input_04_CLAUDE.md",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/freeze_01/input_05_dispatch.md",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/freeze_01/input_06_g3_dispatch_requirements.md",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/freeze_01/input_07_protocol_v2.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/preparation/checklist.md",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/preparation/protocol.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/preparation/qa_math.R",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/preparation/qa_runtime.R",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/preparation/qa_wrapper.R",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/preparation/run_qa.py",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/preparation_status.md",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/revision1_integrity/all_entries.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/revision1_integrity/declared_paths.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/revision1_integrity/historical_preservation.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/revision1_integrity/integrity.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/revision1_integrity/source_read_sites.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/supplement_01/audit.py",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/supplement_01/freeze.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/supplement_01/protocol.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision1/build_revision.py",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision1/candidate_manifest.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision1/implementation.md",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision1/old_code_mapping.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision1/recover_old_code.py",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision1/run.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision1/snapshots/R/lib/mebane_model.R",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision1/snapshots/root_candidate_old/tests/mebane/likelihood/g3_jags.R",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision1/snapshots/tests/mebane/likelihood/g3_deterministic.R",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision1/snapshots/tests/mebane/likelihood/g3_jags.R",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision1/snapshots/tests/mebane/likelihood/g3_source_contract.R",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision1/todo_evidence.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision2/build_candidate.py",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision2/candidate_manifest.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision2/conditional_comparison.csv",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision2/conditional_exact_states.csv",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision2/functionals_by_draw.csv",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision2/implementation.md",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision2/postprocess.log",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision2/postprocess_result.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision2/raw_chains.rds",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision2/replay.log",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision2/replay_plan.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision2/replay_vs_revision1.csv",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision2/run.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision2/sampling_metadata.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision2/snapshots/quality_reports/results/mebane_gates/coordination/2026-09-29_g3_runtime/draw_persistence_adjudication.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision2/snapshots/quality_reports/results/mebane_gates/coordination/2026-09-29_g3_runtime/draw_persistence_review.md",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision2/snapshots/tests/mebane/likelihood/g3_draw_postprocess.R",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision2/snapshots/tests/mebane/likelihood/g3_draw_replay.R",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision2/todo_evidence.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision3/build_candidate.py",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision3/code_snapshots/tests/mebane/likelihood/g3_diagnostic_shape.R",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision3/code_snapshots/tests/mebane/likelihood/g3_draw_postprocess.R",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision3/engine_decision.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision3/implementation.md",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision3/inherited_snapshots/CLAUDE.md",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision3/inherited_snapshots/R/05_eforensics_umeforensics_qbl.R",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision3/inherited_snapshots/R/07_brasil_full_qbl.R",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision3/inherited_snapshots/R/lib/mebane_model.R",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision3/inherited_snapshots/quality_reports/results/mebane_gates/G0/round1/qbl_installed_3017de5.jags",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision3/inherited_snapshots/quality_reports/results/mebane_gates/G2/round2/benchmark_contract.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision3/inherited_snapshots/quality_reports/results/mebane_gates/G2/round2/sources/ef_main_3017de5.R",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision3/inherited_snapshots/quality_reports/results/mebane_gates/G2/round3/adjudication.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision3/inherited_snapshots/quality_reports/results/mebane_gates/G2/round3/candidate_manifest.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision3/inherited_snapshots/quality_reports/results/mebane_gates/G2/round3/review/review.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision3/inherited_snapshots/quality_reports/results/mebane_gates/coordination/2026-09-29_benchmark_round/g3_dispatch_requirements.md",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision3/inherited_snapshots/quality_reports/results/mebane_gates/coordination/2026-09-29_g3_runtime/dispatch.md",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision3/inherited_snapshots/quality_reports/results/mebane_gates/coordination/2026-09-29_g3_runtime/draw_persistence_adjudication.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision3/inherited_snapshots/quality_reports/results/mebane_gates/coordination/2026-09-29_g3_runtime/draw_persistence_review.md",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision3/inherited_snapshots/scripts/mebane_gates.py",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision3/inherited_snapshots/tests/mebane/likelihood/g3_deterministic.R",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision3/inherited_snapshots/tests/mebane/likelihood/g3_draw_postprocess.R",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision3/inherited_snapshots/tests/mebane/likelihood/g3_draw_replay.R",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision3/inherited_snapshots/tests/mebane/likelihood/g3_jags.R",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision3/inherited_snapshots/tests/mebane/likelihood/g3_source_contract.R",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision3/inherited_snapshots/tests/mebane/likelihood/test_ar02_interface.R",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision3/postprocess.log",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision3/postprocess/conditional_comparison.csv",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision3/postprocess/conditional_exact_states.csv",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision3/postprocess/diagnostic_comparison_vs_revision2.csv",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision3/postprocess/functionals_by_draw.csv",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision3/postprocess/postprocess_result.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision3/postprocessor.diff",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision3/predecessor_files.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision3/prepare_inputs.py",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision3/repair_inputs.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision3/repair_inputs/CLAUDE.md",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision3/repair_inputs/quality_reports/results/mebane_gates/G3/round1/review/diagnostic_shape_counterexample/counterexample.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision3/repair_inputs/quality_reports/results/mebane_gates/G3/round1/review/diagnostic_shape_counterexample/shape_counterexample.csv",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision3/repair_inputs/quality_reports/results/mebane_gates/coordination/2026-09-29_g3_runtime/diagnostic_shape_adjudication.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision3/repair_plan.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision3/repair_validation.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision3/run.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision3/shape_regression.log",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision3/shape_regression/diagnostics.csv",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision3/shape_regression/fixture.csv",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision3/shape_regression/result.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision3/shape_regression/session.txt",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision3/todo_evidence.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/run.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/snapshots/CLAUDE.md",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/snapshots/R/05_eforensics_umeforensics_qbl.R",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/snapshots/R/07_brasil_full_qbl.R",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/snapshots/quality_reports/results/mebane_gates/G0/round1/qbl_installed_3017de5.jags",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/snapshots/quality_reports/results/mebane_gates/G2/round2/benchmark_contract.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/snapshots/quality_reports/results/mebane_gates/G2/round2/sources/ef_main_3017de5.R",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/snapshots/quality_reports/results/mebane_gates/G2/round3/adjudication.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/snapshots/quality_reports/results/mebane_gates/G2/round3/candidate_manifest.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/snapshots/quality_reports/results/mebane_gates/G2/round3/review/review.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/snapshots/quality_reports/results/mebane_gates/coordination/2026-09-29_benchmark_round/g3_dispatch_requirements.md",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/snapshots/quality_reports/results/mebane_gates/coordination/2026-09-29_g3_runtime/dispatch.md",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/snapshots/scripts/mebane_gates.py",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/snapshots/tests/mebane/likelihood/test_ar02_interface.R",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/source_checks.csv",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/todo_evidence.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/review_manifest.json:count",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/review_manifest.json:unique",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/build_candidate.py",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/candidate_manifest.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/comparison_result.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/counterexample.csv",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/deterministic_attempt2/counterexample.csv",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/deterministic_attempt2/enumeration.csv",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/deterministic_attempt2/generation_attempts.csv",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/deterministic_attempt2/joint_functionals.csv",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/deterministic_attempt2/joint_input.csv",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/deterministic_attempt2/mass.csv",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/deterministic_attempt2/normalization.csv",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/deterministic_attempt3/counterexample.csv",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/deterministic_attempt3/enumeration.csv",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/deterministic_attempt3/generation_attempts.csv",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/deterministic_attempt3/joint_functionals.csv",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/deterministic_attempt3/joint_input.csv",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/deterministic_attempt3/mass.csv",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/deterministic_attempt3/normalization.csv",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/engine_decision.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/enumeration.csv",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/environment.log",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/g3_deterministic.log",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/g3_deterministic_attempt2.log",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/g3_deterministic_attempt3.log",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/g3_interface_attempt1.log",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/g3_jags_attempt1.log",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/g3_jags_attempt2.log",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/g3_jags_attempt3.log",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/g3_jags_attempt4.log",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/g3_jags_attempt5.log",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/g3_source_attempt1.log",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/gate_contract.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/implementation.md",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/jags_attempt2/jags_probes.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/jags_attempt3/comparison_result.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/jags_attempt3/conditional_comparison.csv",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/jags_attempt3/conditional_exact_states.csv",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/jags_attempt3/jags_probes.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/jags_attempt3/margin_feasibility.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/jags_attempt4/conditional_comparison.csv",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/jags_attempt4/conditional_exact_states.csv",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/jags_attempt4/jags_probes.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/jags_attempt4/margin_feasibility.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/jags_attempt5/comparison_result.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/jags_attempt5/conditional_comparison.csv",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/jags_attempt5/conditional_exact_states.csv",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/jags_attempt5/jags_probes.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/jags_attempt5/margin_feasibility.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/jags_probes.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/mass.csv",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/metadata_consumed.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/normalization.csv",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/preflight_v1.md",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/protocol.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/protocol_provenance_errata.md",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/protocol_v2.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164404110482Z_math/diagnostic_conditional_marginals.csv",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164404110482Z_math/diagnostic_mass.csv",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164404110482Z_math/execution.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164404110482Z_math/invocation.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164404110482Z_math/joint_functionals_fixture.csv",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164404110482Z_math/kernel_cells.csv",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164404110482Z_math/math_checks.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164404110482Z_math/stderr.log",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164404110482Z_math/stdout.log",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164404110482Z_math/v2_conditioned_exact_states.csv",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164413891477Z_wrapper/direct_data.rds",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164413891477Z_wrapper/execution.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164413891477Z_wrapper/invocation.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164413891477Z_wrapper/stderr.log",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164413891477Z_wrapper/stdout.log",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164413891477Z_wrapper/tmp/xcrun_db",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164413891477Z_wrapper/wrapper_checks.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164413891477Z_wrapper/wrapper_data_1.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164413891477Z_wrapper/wrapper_data_2.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164413891477Z_wrapper/wrapper_data_3.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164413891477Z_wrapper/wrapper_payload_1.rds",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164413891477Z_wrapper/wrapper_payload_2.rds",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164413891477Z_wrapper/wrapper_payload_3.rds",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164446516572Z_runtime_01/not_started.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164658942859Z_runtime_01/data.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164658942859Z_runtime_01/data.rds",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164658942859Z_runtime_01/draws.csv",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164658942859Z_runtime_01/execution.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164658942859Z_runtime_01/inits.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164658942859Z_runtime_01/inits.rds",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164658942859Z_runtime_01/invocation.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164658942859Z_runtime_01/runtime_result.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164658942859Z_runtime_01/samples.rds",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164658942859Z_runtime_01/stderr.log",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164658942859Z_runtime_01/stdout.log",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164659293216Z_runtime_02/data.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164659293216Z_runtime_02/data.rds",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164659293216Z_runtime_02/draws.csv",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164659293216Z_runtime_02/execution.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164659293216Z_runtime_02/inits.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164659293216Z_runtime_02/inits.rds",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164659293216Z_runtime_02/invocation.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164659293216Z_runtime_02/runtime_result.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164659293216Z_runtime_02/samples.rds",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164659293216Z_runtime_02/stderr.log",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164659293216Z_runtime_02/stdout.log",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164659633339Z_runtime_03/data.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164659633339Z_runtime_03/data.rds",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164659633339Z_runtime_03/draws.csv",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164659633339Z_runtime_03/execution.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164659633339Z_runtime_03/inits.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164659633339Z_runtime_03/inits.rds",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164659633339Z_runtime_03/invocation.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164659633339Z_runtime_03/runtime_result.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164659633339Z_runtime_03/samples.rds",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164659633339Z_runtime_03/stderr.log",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164659633339Z_runtime_03/stdout.log",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164659979513Z_runtime_04/data.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164659979513Z_runtime_04/data.rds",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164659979513Z_runtime_04/execution.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164659979513Z_runtime_04/inits.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164659979513Z_runtime_04/inits.rds",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164659979513Z_runtime_04/invocation.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164659979513Z_runtime_04/runtime_result.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164659979513Z_runtime_04/stderr.log",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164659979513Z_runtime_04/stdout.log",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164700322191Z_runtime_05/data.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164700322191Z_runtime_05/data.rds",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164700322191Z_runtime_05/execution.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164700322191Z_runtime_05/inits.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164700322191Z_runtime_05/inits.rds",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164700322191Z_runtime_05/invocation.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164700322191Z_runtime_05/runtime_result.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164700322191Z_runtime_05/stderr.log",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164700322191Z_runtime_05/stdout.log",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164700669112Z_runtime_06/data.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164700669112Z_runtime_06/data.rds",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164700669112Z_runtime_06/execution.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164700669112Z_runtime_06/inits.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164700669112Z_runtime_06/inits.rds",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164700669112Z_runtime_06/invocation.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164700669112Z_runtime_06/runtime_result.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164700669112Z_runtime_06/stderr.log",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164700669112Z_runtime_06/stdout.log",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164701019746Z_runtime_07/data.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164701019746Z_runtime_07/data.rds",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164701019746Z_runtime_07/draws.csv",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164701019746Z_runtime_07/execution.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164701019746Z_runtime_07/inits.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164701019746Z_runtime_07/inits.rds",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164701019746Z_runtime_07/invocation.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164701019746Z_runtime_07/runtime_result.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164701019746Z_runtime_07/samples.rds",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164701019746Z_runtime_07/stderr.log",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164701019746Z_runtime_07/stdout.log",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164701368470Z_runtime_08/data.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164701368470Z_runtime_08/data.rds",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164701368470Z_runtime_08/draws.csv",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164701368470Z_runtime_08/execution.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164701368470Z_runtime_08/inits.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164701368470Z_runtime_08/inits.rds",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164701368470Z_runtime_08/invocation.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164701368470Z_runtime_08/runtime_result.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164701368470Z_runtime_08/samples.rds",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164701368470Z_runtime_08/stderr.log",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164701368470Z_runtime_08/stdout.log",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164701718780Z_runtime_09/data.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164701718780Z_runtime_09/data.rds",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164701718780Z_runtime_09/draws.csv",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164701718780Z_runtime_09/execution.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164701718780Z_runtime_09/inits.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164701718780Z_runtime_09/inits.rds",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164701718780Z_runtime_09/invocation.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164701718780Z_runtime_09/runtime_result.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164701718780Z_runtime_09/samples.rds",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164701718780Z_runtime_09/stderr.log",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164701718780Z_runtime_09/stdout.log",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164702070474Z_runtime_10/data.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164702070474Z_runtime_10/data.rds",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164702070474Z_runtime_10/draws.csv",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164702070474Z_runtime_10/execution.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164702070474Z_runtime_10/inits.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164702070474Z_runtime_10/inits.rds",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164702070474Z_runtime_10/invocation.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164702070474Z_runtime_10/runtime_result.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164702070474Z_runtime_10/samples.rds",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164702070474Z_runtime_10/stderr.log",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164702070474Z_runtime_10/stdout.log",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164702420276Z_runtime_11/data.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164702420276Z_runtime_11/data.rds",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164702420276Z_runtime_11/execution.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164702420276Z_runtime_11/inits.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164702420276Z_runtime_11/inits.rds",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164702420276Z_runtime_11/invocation.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164702420276Z_runtime_11/runtime_result.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164702420276Z_runtime_11/stderr.log",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164702420276Z_runtime_11/stdout.log",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164702761978Z_runtime_12/data.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164702761978Z_runtime_12/data.rds",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164702761978Z_runtime_12/draws.csv",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164702761978Z_runtime_12/execution.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164702761978Z_runtime_12/inits.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164702761978Z_runtime_12/inits.rds",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164702761978Z_runtime_12/invocation.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164702761978Z_runtime_12/runtime_result.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164702761978Z_runtime_12/samples.rds",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164702761978Z_runtime_12/stderr.log",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164702761978Z_runtime_12/stdout.log",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_correction01_wrapper/eforensics_archived_ast.R",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_correction01_wrapper/eforensics_installed_ast.R",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_correction01_wrapper/eforensics_main_par_archived_ast.R",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_correction01_wrapper/eforensics_main_par_installed_ast.R",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_correction01_wrapper/execution.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_correction01_wrapper/getRegMatrix_archived_ast.R",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_correction01_wrapper/getRegMatrix_installed_ast.R",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_correction01_wrapper/invocation.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_correction01_wrapper/repaired_math_checks.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_correction01_wrapper/stderr.log",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_correction01_wrapper/stdout.log",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_correction01_wrapper/wrapper_checks.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_diagnostic_helpers_selftest01/selftest_checks.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_revision3_shape_01/deterministic_matrix.rds",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_revision3_shape_01/result.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_supplement01/audit.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_supplement01/execution.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_supplement01/numeric_support.csv",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/attempt_supplement01/source_checks.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/corrections_01/amendment.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/corrections_01/freeze.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/corrections_01/run_repair.py",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/corrections_01/verify_repairs.R",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/diagnostic_shape_counterexample/.ess_quantile.R",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/diagnostic_shape_counterexample/.split_chains.R",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/diagnostic_shape_counterexample/counterexample.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/diagnostic_shape_counterexample/ess_bulk.default.R",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/diagnostic_shape_counterexample/ess_tail.default.R",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/diagnostic_shape_counterexample/rhat.default.R",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/diagnostic_shape_counterexample/shape_counterexample.csv",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/executor_event_sequence.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/final_checks/audit_event_history.py",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/final_checks/check_revision1_math.R",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/final_checks/check_saved_draws.R",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/final_checks/diagnostic_helpers.R",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/final_checks/diagnostic_shape_counterexample.R",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/final_checks/revision2_diagnostics.R",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/final_checks/revision3_checks.R",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/final_checks/revision3_checks_v2.R",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/final_checks/revision3_documentary.py",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/final_checks/seal_review.py",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/final_checks/selftest.R",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/final_checks/validate_final.py",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/final_checks/verify_manifest.py",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/final_consistency_checks.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/freeze_01/G3_static_contract.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/freeze_01/freeze.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/freeze_01/input_00_qbl_installed_3017de5.jags",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/freeze_01/input_01_benchmark_contract.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/freeze_01/input_02_ef_main_3017de5.R",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/freeze_01/input_03_mebane_2022_2026_gates.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/freeze_01/input_04_CLAUDE.md",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/freeze_01/input_05_dispatch.md",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/freeze_01/input_06_g3_dispatch_requirements.md",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/freeze_01/input_07_protocol_v2.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/history_audit.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/input_closure_revision2.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/preparation/checklist.md",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/preparation/protocol.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/preparation/qa_math.R",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/preparation/qa_runtime.R",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/preparation/qa_wrapper.R",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/preparation/run_qa.py",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/preparation_status.md",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/review.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/review.md",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/review_diagnostic_preliminary.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/review_diagnostic_preliminary.md",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/review_manifest_revision2.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/review_manifest_revision2_validation.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/review_revision2.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/review_revision2.md",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/revision1_integrity/all_entries.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/revision1_integrity/declared_paths.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/revision1_integrity/historical_preservation.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/revision1_integrity/integrity.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/revision1_integrity/source_read_sites.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/revision1_math/checks.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/revision1_math/exact_joint_states_comparison.csv",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/revision1_math/floating_vs_exact_boundary.csv",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/revision1_math/independent_kernel_comparison.csv",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/revision1_math/reproduced_generation.csv",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/revision2_diagnostics/.ess_quantile.R",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/revision2_diagnostics/checks.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/revision2_diagnostics/diagnostic_details.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/revision2_diagnostics/ess_tail.default.R",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/revision2_diagnostics/independent_comparison.csv",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/revision2_diagnostics/session_info.txt",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/revision2_diagnostics/should_return_NA.R",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/revision2_integrity/all_entries.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/revision2_integrity/declared_paths.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/revision2_integrity/historical_preservation.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/revision2_integrity/integrity.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/revision2_integrity/source_read_sites.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/revision3_checks_01/checks.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/revision3_checks_01/recomputed_diagnostics.csv",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/revision3_checks_02/checks.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/revision3_checks_02/recomputed_diagnostics.csv",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/revision3_documentary_01/checks.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/revision3_executor_events.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/revision3_integrity/all_entries.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/revision3_integrity/declared_paths.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/revision3_integrity/historical_preservation.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/revision3_integrity/integrity.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/revision3_integrity/source_read_sites.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/revision3_postprocessor_reexecution/conditional_comparison.csv",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/revision3_postprocessor_reexecution/conditional_exact_states.csv",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/revision3_postprocessor_reexecution/diagnostic_comparison_vs_revision2.csv",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/revision3_postprocessor_reexecution/functionals_by_draw.csv",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/revision3_postprocessor_reexecution/postprocess_result.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/revision3_preflight/adversarial_shape.R",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/revision3_preflight/protocol.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/revision3_preflight/qa_fixture_correction.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/supplement_01/audit.py",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/supplement_01/freeze.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/review/supplement_01/protocol.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision1/build_revision.py",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision1/candidate_manifest.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision1/implementation.md",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision1/old_code_mapping.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision1/recover_old_code.py",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision1/run.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision1/snapshots/R/lib/mebane_model.R",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision1/snapshots/root_candidate_old/tests/mebane/likelihood/g3_jags.R",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision1/snapshots/tests/mebane/likelihood/g3_deterministic.R",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision1/snapshots/tests/mebane/likelihood/g3_jags.R",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision1/snapshots/tests/mebane/likelihood/g3_source_contract.R",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision1/todo_evidence.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision2/build_candidate.py",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision2/candidate_manifest.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision2/conditional_comparison.csv",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision2/conditional_exact_states.csv",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision2/functionals_by_draw.csv",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision2/implementation.md",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision2/postprocess.log",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision2/postprocess_result.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision2/raw_chains.rds",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision2/replay.log",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision2/replay_plan.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision2/replay_vs_revision1.csv",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision2/run.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision2/sampling_metadata.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision2/snapshots/quality_reports/results/mebane_gates/coordination/2026-09-29_g3_runtime/draw_persistence_adjudication.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision2/snapshots/quality_reports/results/mebane_gates/coordination/2026-09-29_g3_runtime/draw_persistence_review.md",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision2/snapshots/tests/mebane/likelihood/g3_draw_postprocess.R",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision2/snapshots/tests/mebane/likelihood/g3_draw_replay.R",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision2/todo_evidence.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision3/build_candidate.py",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision3/candidate_manifest.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision3/code_snapshots/tests/mebane/likelihood/g3_diagnostic_shape.R",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision3/code_snapshots/tests/mebane/likelihood/g3_draw_postprocess.R",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision3/engine_decision.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision3/implementation.md",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision3/inherited_snapshots/CLAUDE.md",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision3/inherited_snapshots/R/05_eforensics_umeforensics_qbl.R",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision3/inherited_snapshots/R/07_brasil_full_qbl.R",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision3/inherited_snapshots/R/lib/mebane_model.R",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision3/inherited_snapshots/quality_reports/results/mebane_gates/G0/round1/qbl_installed_3017de5.jags",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision3/inherited_snapshots/quality_reports/results/mebane_gates/G2/round2/benchmark_contract.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision3/inherited_snapshots/quality_reports/results/mebane_gates/G2/round2/sources/ef_main_3017de5.R",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision3/inherited_snapshots/quality_reports/results/mebane_gates/G2/round3/adjudication.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision3/inherited_snapshots/quality_reports/results/mebane_gates/G2/round3/candidate_manifest.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision3/inherited_snapshots/quality_reports/results/mebane_gates/G2/round3/review/review.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision3/inherited_snapshots/quality_reports/results/mebane_gates/coordination/2026-09-29_benchmark_round/g3_dispatch_requirements.md",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision3/inherited_snapshots/quality_reports/results/mebane_gates/coordination/2026-09-29_g3_runtime/dispatch.md",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision3/inherited_snapshots/quality_reports/results/mebane_gates/coordination/2026-09-29_g3_runtime/draw_persistence_adjudication.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision3/inherited_snapshots/quality_reports/results/mebane_gates/coordination/2026-09-29_g3_runtime/draw_persistence_review.md",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision3/inherited_snapshots/scripts/mebane_gates.py",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision3/inherited_snapshots/tests/mebane/likelihood/g3_deterministic.R",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision3/inherited_snapshots/tests/mebane/likelihood/g3_draw_postprocess.R",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision3/inherited_snapshots/tests/mebane/likelihood/g3_draw_replay.R",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision3/inherited_snapshots/tests/mebane/likelihood/g3_jags.R",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision3/inherited_snapshots/tests/mebane/likelihood/g3_source_contract.R",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision3/inherited_snapshots/tests/mebane/likelihood/test_ar02_interface.R",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision3/postprocess.log",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision3/postprocess/conditional_comparison.csv",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision3/postprocess/conditional_exact_states.csv",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision3/postprocess/diagnostic_comparison_vs_revision2.csv",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision3/postprocess/functionals_by_draw.csv",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision3/postprocess/postprocess_result.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision3/postprocessor.diff",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision3/predecessor_files.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision3/prepare_inputs.py",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision3/repair_inputs.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision3/repair_inputs/CLAUDE.md",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision3/repair_inputs/quality_reports/results/mebane_gates/G3/round1/review/diagnostic_shape_counterexample/counterexample.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision3/repair_inputs/quality_reports/results/mebane_gates/G3/round1/review/diagnostic_shape_counterexample/shape_counterexample.csv",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision3/repair_inputs/quality_reports/results/mebane_gates/coordination/2026-09-29_g3_runtime/diagnostic_shape_adjudication.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision3/repair_plan.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision3/repair_validation.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision3/run.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision3/shape_regression.log",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision3/shape_regression/diagnostics.csv",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision3/shape_regression/fixture.csv",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision3/shape_regression/result.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision3/shape_regression/session.txt",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/revision3/todo_evidence.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/run.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/snapshots/CLAUDE.md",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/snapshots/R/05_eforensics_umeforensics_qbl.R",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/snapshots/R/07_brasil_full_qbl.R",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/snapshots/quality_reports/results/mebane_gates/G0/round1/qbl_installed_3017de5.jags",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/snapshots/quality_reports/results/mebane_gates/G2/round2/benchmark_contract.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/snapshots/quality_reports/results/mebane_gates/G2/round2/sources/ef_main_3017de5.R",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/snapshots/quality_reports/results/mebane_gates/G2/round3/adjudication.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/snapshots/quality_reports/results/mebane_gates/G2/round3/candidate_manifest.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/snapshots/quality_reports/results/mebane_gates/G2/round3/review/review.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/snapshots/quality_reports/results/mebane_gates/coordination/2026-09-29_benchmark_round/g3_dispatch_requirements.md",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/snapshots/quality_reports/results/mebane_gates/coordination/2026-09-29_g3_runtime/dispatch.md",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/snapshots/scripts/mebane_gates.py",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/snapshots/tests/mebane/likelihood/test_ar02_interface.R",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/source_checks.csv",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/G3/round1/todo_evidence.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/coordination/2026-09-29_g3_runtime/diagnostic_shape_adjudication.json",
+    "pass": true
+  },
+  {
+    "id": "quality_reports/results/mebane_gates/coordination/2026-09-29_g3_runtime/diagnostic_shape_adjudication.md",
+    "pass": true
+  },
+  {
+    "id": "copy_identical:frozen_inputs/adjudication.json",
+    "pass": true
+  },
+  {
+    "id": "copy_identical:frozen_inputs/input_closure_revision2.json",
+    "pass": true
+  },
+  {
+    "id": "copy_identical:frozen_inputs/executor_event_sequence.json",
+    "pass": true
+  },
+  {
+    "id": "copy_identical:frozen_inputs/history_audit.json",
+    "pass": true
+  },
+  {
+    "id": "copy_identical:frozen_inputs/qa_audit_event_history.py",
+    "pass": true
+  },
+  {
+    "id": "copy_identical:frozen_inputs/review.json",
+    "pass": true
+  },
+  {
+    "id": "copy_identical:frozen_inputs/revision3_manifest.json",
+    "pass": true
+  },
+  {
+    "id": "copy_identical:historical_logs/g3_deterministic.log",
+    "pass": true
+  },
+  {
+    "id": "copy_identical:historical_logs/g3_deterministic_attempt2.log",
+    "pass": true
+  },
+  {
+    "id": "copy_identical:historical_logs/g3_jags_attempt1.log",
+    "pass": true
+  },
+  {
+    "id": "copy_identical:historical_logs/g3_jags_attempt2.log",
+    "pass": true
+  },
+  {
+    "id": "copy_identical:historical_logs/g3_jags_attempt4.log",
+    "pass": true
+  },
+  {
+    "id": "raw_trace_unpaginated",
+    "pass": true
+  },
+  {
+    "id": "command_literal:exec-5917a647-9399-47fb-96b0-9f87fb360581",
+    "pass": true
+  },
+  {
+    "id": "command_order:exec-5917a647-9399-47fb-96b0-9f87fb360581",
+    "pass": true
+  },
+  {
+    "id": "effective_source:exec-5917a647-9399-47fb-96b0-9f87fb360581:tests/mebane/likelihood/g3_deterministic.R",
+    "pass": true
+  },
+  {
+    "id": "edit_lineage:exec-5917a647-9399-47fb-96b0-9f87fb360581:tests/mebane/likelihood/g3_deterministic.R",
+    "pass": true
+  },
+  {
+    "id": "recovered_byte_identity:deterministic1:tests/mebane/likelihood/g3_deterministic.R",
+    "pass": true
+  },
+  {
+    "id": "effective_source:exec-5917a647-9399-47fb-96b0-9f87fb360581:R/lib/mebane_model.R",
+    "pass": true
+  },
+  {
+    "id": "edit_lineage:exec-5917a647-9399-47fb-96b0-9f87fb360581:R/lib/mebane_model.R",
+    "pass": true
+  },
+  {
+    "id": "recovered_byte_identity:deterministic1:R/lib/mebane_model.R",
+    "pass": true
+  },
+  {
+    "id": "command_literal:exec-8d397c53-a60a-48b9-bc72-3fdb8c7fb417",
+    "pass": true
+  },
+  {
+    "id": "command_order:exec-8d397c53-a60a-48b9-bc72-3fdb8c7fb417",
+    "pass": true
+  },
+  {
+    "id": "effective_source:exec-8d397c53-a60a-48b9-bc72-3fdb8c7fb417:tests/mebane/likelihood/g3_deterministic.R",
+    "pass": true
+  },
+  {
+    "id": "edit_lineage:exec-8d397c53-a60a-48b9-bc72-3fdb8c7fb417:tests/mebane/likelihood/g3_deterministic.R",
+    "pass": true
+  },
+  {
+    "id": "recovered_byte_identity:deterministic2:tests/mebane/likelihood/g3_deterministic.R",
+    "pass": true
+  },
+  {
+    "id": "effective_source:exec-8d397c53-a60a-48b9-bc72-3fdb8c7fb417:R/lib/mebane_model.R",
+    "pass": true
+  },
+  {
+    "id": "edit_lineage:exec-8d397c53-a60a-48b9-bc72-3fdb8c7fb417:R/lib/mebane_model.R",
+    "pass": true
+  },
+  {
+    "id": "recovered_byte_identity:deterministic2:R/lib/mebane_model.R",
+    "pass": true
+  },
+  {
+    "id": "command_literal:exec-8f337ba3-37ca-47b0-9f6b-330d812ae3d6",
+    "pass": true
+  },
+  {
+    "id": "command_order:exec-8f337ba3-37ca-47b0-9f6b-330d812ae3d6",
+    "pass": true
+  },
+  {
+    "id": "effective_source:exec-8f337ba3-37ca-47b0-9f6b-330d812ae3d6:tests/mebane/likelihood/g3_deterministic.R",
+    "pass": true
+  },
+  {
+    "id": "edit_lineage:exec-8f337ba3-37ca-47b0-9f6b-330d812ae3d6:tests/mebane/likelihood/g3_deterministic.R",
+    "pass": true
+  },
+  {
+    "id": "effective_source:exec-8f337ba3-37ca-47b0-9f6b-330d812ae3d6:R/lib/mebane_model.R",
+    "pass": true
+  },
+  {
+    "id": "edit_lineage:exec-8f337ba3-37ca-47b0-9f6b-330d812ae3d6:R/lib/mebane_model.R",
+    "pass": true
+  },
+  {
+    "id": "command_literal:exec-39fc0c88-d6b6-4a53-9f81-0ed65fa6f7a0",
+    "pass": true
+  },
+  {
+    "id": "command_order:exec-39fc0c88-d6b6-4a53-9f81-0ed65fa6f7a0",
+    "pass": true
+  },
+  {
+    "id": "effective_source:exec-39fc0c88-d6b6-4a53-9f81-0ed65fa6f7a0:tests/mebane/likelihood/g3_jags.R",
+    "pass": true
+  },
+  {
+    "id": "edit_lineage:exec-39fc0c88-d6b6-4a53-9f81-0ed65fa6f7a0:tests/mebane/likelihood/g3_jags.R",
+    "pass": true
+  },
+  {
+    "id": "recovered_byte_identity:jags1:tests/mebane/likelihood/g3_jags.R",
+    "pass": true
+  },
+  {
+    "id": "effective_source:exec-39fc0c88-d6b6-4a53-9f81-0ed65fa6f7a0:R/lib/mebane_model.R",
+    "pass": true
+  },
+  {
+    "id": "edit_lineage:exec-39fc0c88-d6b6-4a53-9f81-0ed65fa6f7a0:R/lib/mebane_model.R",
+    "pass": true
+  },
+  {
+    "id": "command_literal:exec-16393a95-824d-40bc-affe-64ba4f890b21",
+    "pass": true
+  },
+  {
+    "id": "command_order:exec-16393a95-824d-40bc-affe-64ba4f890b21",
+    "pass": true
+  },
+  {
+    "id": "effective_source:exec-16393a95-824d-40bc-affe-64ba4f890b21:tests/mebane/likelihood/g3_jags.R",
+    "pass": true
+  },
+  {
+    "id": "edit_lineage:exec-16393a95-824d-40bc-affe-64ba4f890b21:tests/mebane/likelihood/g3_jags.R",
+    "pass": true
+  },
+  {
+    "id": "recovered_byte_identity:jags2:tests/mebane/likelihood/g3_jags.R",
+    "pass": true
+  },
+  {
+    "id": "effective_source:exec-16393a95-824d-40bc-affe-64ba4f890b21:R/lib/mebane_model.R",
+    "pass": true
+  },
+  {
+    "id": "edit_lineage:exec-16393a95-824d-40bc-affe-64ba4f890b21:R/lib/mebane_model.R",
+    "pass": true
+  },
+  {
+    "id": "command_literal:exec-cce129db-2777-49b2-9150-5063bd4b09e1",
+    "pass": true
+  },
+  {
+    "id": "command_order:exec-cce129db-2777-49b2-9150-5063bd4b09e1",
+    "pass": true
+  },
+  {
+    "id": "effective_source:exec-cce129db-2777-49b2-9150-5063bd4b09e1:tests/mebane/likelihood/g3_jags.R",
+    "pass": true
+  },
+  {
+    "id": "edit_lineage:exec-cce129db-2777-49b2-9150-5063bd4b09e1:tests/mebane/likelihood/g3_jags.R",
+    "pass": true
+  },
+  {
+    "id": "effective_source:exec-cce129db-2777-49b2-9150-5063bd4b09e1:R/lib/mebane_model.R",
+    "pass": true
+  },
+  {
+    "id": "edit_lineage:exec-cce129db-2777-49b2-9150-5063bd4b09e1:R/lib/mebane_model.R",
+    "pass": true
+  },
+  {
+    "id": "command_literal:exec-6797e44e-3927-4f5f-83cc-a56c1ad334a9",
+    "pass": true
+  },
+  {
+    "id": "command_order:exec-6797e44e-3927-4f5f-83cc-a56c1ad334a9",
+    "pass": true
+  },
+  {
+    "id": "absent_base_explicit:tests/mebane/likelihood/test_ar02_interface.R",
+    "pass": true
+  },
+  {
+    "id": "command_literal:exec-eb69eefa-dc02-407e-9079-f0e800963734",
+    "pass": true
+  },
+  {
+    "id": "command_order:exec-eb69eefa-dc02-407e-9079-f0e800963734",
+    "pass": true
+  },
+  {
+    "id": "effective_source:exec-eb69eefa-dc02-407e-9079-f0e800963734:tests/mebane/likelihood/g3_source_contract.R",
+    "pass": true
+  },
+  {
+    "id": "edit_lineage:exec-eb69eefa-dc02-407e-9079-f0e800963734:tests/mebane/likelihood/g3_source_contract.R",
+    "pass": true
+  },
+  {
+    "id": "command_literal:exec-78df1b3c-3b27-45b5-8592-9c8ad88e4202",
+    "pass": true
+  },
+  {
+    "id": "command_order:exec-78df1b3c-3b27-45b5-8592-9c8ad88e4202",
+    "pass": true
+  },
+  {
+    "id": "effective_source:exec-78df1b3c-3b27-45b5-8592-9c8ad88e4202:tests/mebane/likelihood/g3_jags.R",
+    "pass": true
+  },
+  {
+    "id": "edit_lineage:exec-78df1b3c-3b27-45b5-8592-9c8ad88e4202:tests/mebane/likelihood/g3_jags.R",
+    "pass": true
+  },
+  {
+    "id": "recovered_byte_identity:jags4:tests/mebane/likelihood/g3_jags.R",
+    "pass": true
+  },
+  {
+    "id": "effective_source:exec-78df1b3c-3b27-45b5-8592-9c8ad88e4202:R/lib/mebane_model.R",
+    "pass": true
+  },
+  {
+    "id": "edit_lineage:exec-78df1b3c-3b27-45b5-8592-9c8ad88e4202:R/lib/mebane_model.R",
+    "pass": true
+  },
+  {
+    "id": "command_literal:exec-f9dfb538-f6a2-43e5-a1b7-334568dee571",
+    "pass": true
+  },
+  {
+    "id": "command_order:exec-f9dfb538-f6a2-43e5-a1b7-334568dee571",
+    "pass": true
+  },
+  {
+    "id": "effective_source:exec-f9dfb538-f6a2-43e5-a1b7-334568dee571:tests/mebane/likelihood/g3_jags.R",
+    "pass": true
+  },
+  {
+    "id": "edit_lineage:exec-f9dfb538-f6a2-43e5-a1b7-334568dee571:tests/mebane/likelihood/g3_jags.R",
+    "pass": true
+  },
+  {
+    "id": "effective_source:exec-f9dfb538-f6a2-43e5-a1b7-334568dee571:R/lib/mebane_model.R",
+    "pass": true
+  },
+  {
+    "id": "edit_lineage:exec-f9dfb538-f6a2-43e5-a1b7-334568dee571:R/lib/mebane_model.R",
+    "pass": true
+  },
+  {
+    "id": "command_literal:exec-f0acd599-4607-418c-aa67-8df888de6d55",
+    "pass": true
+  },
+  {
+    "id": "command_order:exec-f0acd599-4607-418c-aa67-8df888de6d55",
+    "pass": true
+  },
+  {
+    "id": "effective_source:exec-f0acd599-4607-418c-aa67-8df888de6d55:tests/mebane/likelihood/g3_draw_replay.R",
+    "pass": true
+  },
+  {
+    "id": "edit_lineage:exec-f0acd599-4607-418c-aa67-8df888de6d55:tests/mebane/likelihood/g3_draw_replay.R",
+    "pass": true
+  },
+  {
+    "id": "command_literal:exec-054bf2ff-bd7c-4fc0-875a-18fc1df1e91d",
+    "pass": true
+  },
+  {
+    "id": "command_order:exec-054bf2ff-bd7c-4fc0-875a-18fc1df1e91d",
+    "pass": true
+  },
+  {
+    "id": "effective_source:exec-054bf2ff-bd7c-4fc0-875a-18fc1df1e91d:tests/mebane/likelihood/g3_draw_postprocess.R",
+    "pass": true
+  },
+  {
+    "id": "edit_lineage:exec-054bf2ff-bd7c-4fc0-875a-18fc1df1e91d:tests/mebane/likelihood/g3_draw_postprocess.R",
+    "pass": true
+  },
+  {
+    "id": "effective_source:exec-054bf2ff-bd7c-4fc0-875a-18fc1df1e91d:R/lib/mebane_model.R",
+    "pass": true
+  },
+  {
+    "id": "edit_lineage:exec-054bf2ff-bd7c-4fc0-875a-18fc1df1e91d:R/lib/mebane_model.R",
+    "pass": true
+  },
+  {
+    "id": "all_seven_exact_recovered",
+    "pass": true
+  },
+  {
+    "id": "five_affected_commands",
+    "pass": true
+  },
+  {
+    "id": "twelve_timed_commands",
+    "pass": true
+  },
+  {
+    "id": "twenty_one_edit_states",
+    "pass": true
+  },
+  {
+    "id": "full_edit_trace_matches",
+    "pass": true
+  },
+  {
+    "id": "executor_documentary_replay_exit_zero",
+    "pass": true
+  },
+  {
+    "id": "executor_bound_exact_seal",
+    "pass": true
+  },
+  {
+    "id": "detached_seal_hash",
+    "pass": true
+  },
+  {
+    "id": "seven_only_not_universal_closure",
+    "pass": true
+  }
+]

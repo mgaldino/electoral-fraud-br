@@ -1,0 +1,18 @@
+{
+  "status": "scoped_documentary_checks_pass",
+  "checks": 914,
+  "failed": [],
+  "package_sha256": "b6b56b80a7b40863d34f5f48b1de6641c1c54572121d949e9e6052ec46723965",
+  "package_entries_verified": 42,
+  "revision3_entries_verified": 350,
+  "old_QA_entries_verified": 419,
+  "seven_recovered_sources": 7,
+  "affected_commands": 5,
+  "event_commands_compared": 12,
+  "edit_states_compared": 21,
+  "documentary_replay_seconds": 0.1330553749576211,
+  "universal_historical_input_closure": false,
+  "new_MCMC": false,
+  "gate_G3": "inconclusive",
+  "adjudication_reserved_to_coordination": true
+}

@@ -1,0 +1,12 @@
+{
+  "argv": [
+    "timeout",
+    "110",
+    "/opt/homebrew/opt/python@3.13/bin/python3.13",
+    "-B",
+    "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/provenance_repair/reconstruct_sources.py",
+    "verify-seal"
+  ],
+  "cwd": "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud",
+  "source_execution": "documentary verifier only; no R sources executed"
+}

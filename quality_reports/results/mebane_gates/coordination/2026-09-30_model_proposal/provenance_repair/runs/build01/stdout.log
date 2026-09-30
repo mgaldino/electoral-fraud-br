@@ -1,0 +1,7 @@
+{
+  "documentary_checks": "all_seven_exact_source_identities_recovered",
+  "recovered_source_count": 7,
+  "affected_command_count": 5,
+  "revision3_declared_files_preserved": 350,
+  "gate_outcome": "inconclusive"
+}

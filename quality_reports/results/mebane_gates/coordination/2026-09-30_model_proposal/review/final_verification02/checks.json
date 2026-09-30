@@ -1,0 +1,35 @@
+{
+  "exact_bindings_checked": 4,
+  "candidate_reproduction": [
+    {
+      "file": "result.json",
+      "byte_identical": true
+    },
+    {
+      "file": "multinomial_checks.csv",
+      "byte_identical": true
+    },
+    {
+      "file": "normalization_choices.csv",
+      "byte_identical": true
+    }
+  ],
+  "local_inputs_rechecked": 504,
+  "reviews_JSON_parsed": 3,
+  "no_failed_check": true,
+  "archival_input_mappings": [
+    {
+      "original_path": "CLAUDE.md",
+      "expected_sha256": "44387924cb98ac8c0b562fa2a1f61cdddafad4378326e5ac12609bb071f6efaa",
+      "archived_path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/before/CLAUDE.md",
+      "reason": "Coordination metadata changed after preparation; archived original bytes verified, no rewrite."
+    },
+    {
+      "original_path": "quality_reports/plans/mebane_2022_2026_gates.json",
+      "expected_sha256": "a5356743fcaaba033b211a96d45c729cafbee2dbed478dfb061f6fd78fead0ee",
+      "archived_path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/before/quality_reports/plans/mebane_2022_2026_gates.json",
+      "reason": "Coordination metadata changed after preparation; archived original bytes verified, no rewrite."
+    }
+  ],
+  "prior_failed_attempt_preserved": "final_verification01/failure.json"
+}

@@ -1,0 +1,830 @@
+{
+  "scope": "Documentary closure supplement and methodological proposal, no new estimation.",
+  "files": [
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/audit_inputs.py",
+      "bytes": 2707,
+      "sha256": "de2b4f37db4b95d42195c801ff4c5e704f0d7b1253c43ab24d1a18ad13f56d2d"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/before/CLAUDE.md",
+      "bytes": 7127,
+      "sha256": "44387924cb98ac8c0b562fa2a1f61cdddafad4378326e5ac12609bb071f6efaa"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/before/README.md",
+      "bytes": 9642,
+      "sha256": "458c29f697310883c46aaf4a843c6e456fef135f4954fc147b6e5f0598010f47"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/before/quality_reports/plans/2026-09-28_mebane_2022_2026_gates.md",
+      "bytes": 38545,
+      "sha256": "251fd4c7de2f721544da9097bd6278f131405f0b76156eef2b39c83f63d87e13"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/before/quality_reports/plans/mebane_2022_2026_gates.json",
+      "bytes": 60071,
+      "sha256": "a5356743fcaaba033b211a96d45c729cafbee2dbed478dfb061f6fd78fead0ee"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/boundary_probe.R",
+      "bytes": 563,
+      "sha256": "8f100336f2359d3b45cc331ce575b2fd1193198d3198c8ddb6086392a55b634c"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/check_proposals.R",
+      "bytes": 6642,
+      "sha256": "f8bb9da0b73216c6422d3292c90de66515631e26bb774170a3482dfb05318083"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/checks01/boundary_probe.txt",
+      "bytes": 106,
+      "sha256": "327f8bf795845dc0874aaf03f5b5d7a7e9900a677568359432a9700eb76b0697"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/checks01/check_proposals_initial.R",
+      "bytes": 6305,
+      "sha256": "10e316e87f3398bdb6ca2f20efcbe20d1a87d8e7889bd9f6a8e623224241765a"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/checks01/failure_note.md",
+      "bytes": 766,
+      "sha256": "30f380793fe332336387dbc2d9b8529e203777854e4a7aa9db2875e7d3aea296"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/checks02/check_proposals_second.R",
+      "bytes": 6408,
+      "sha256": "89f93a4b51bdf7640b00029e3ed2247f5fe9e861e61241a03b306af83d0ba5b1"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/checks02/failure_note.md",
+      "bytes": 675,
+      "sha256": "c34388b82693bd398b70f54bdaf5eabd80fe388542b51a73b7ad6a1209b04381"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/checks02/multinomial_checks.csv",
+      "bytes": 17500,
+      "sha256": "bc3ec843389b6487a1e9c65eca7a44a022af5d0b60746906950831951425cdb3"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/checks03/multinomial_checks.csv",
+      "bytes": 17500,
+      "sha256": "bc3ec843389b6487a1e9c65eca7a44a022af5d0b60746906950831951425cdb3"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/checks03/normalization_choices.csv",
+      "bytes": 389,
+      "sha256": "97cefb98143fc64af1791c7806d5b889eeedfa354462a7651839287871623d7a"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/checks03/result.json",
+      "bytes": 1026,
+      "sha256": "3ec81809eb46acdd5a33430d10b386255a6a39a43a8d4ec51d5271c3828f41a9"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/checks03/sessionInfo.txt",
+      "bytes": 574,
+      "sha256": "148b2e035562e8f3d5cfa61a3e01c7b5f2959bce8d0af54f23f257dc5b0fd35e"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/completion.md",
+      "bytes": 2693,
+      "sha256": "4466334e447578f4b2759a26c0eeb899ba168fa56db6dcc3ce886075b97d1287"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/delivery_check.json",
+      "bytes": 2174,
+      "sha256": "79e5e9d56305899d6d72485a7170cc045a52c8447b93ef87d0b98f8ea9fb6e05"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/final_state/CLAUDE.md",
+      "bytes": 8383,
+      "sha256": "1670d37bb2104bd04d5034d483f604401c6727edff919e4088ae92cb99a47ef2"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/final_state/README.md",
+      "bytes": 10963,
+      "sha256": "53c787360ab825f310b91916a9d05db7e277eacce9c07860648e1020564c6d5b"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/final_state/quality_reports/plans/2026-09-28_mebane_2022_2026_gates.md",
+      "bytes": 38656,
+      "sha256": "6e4eb7d514f3f4e97ad07cf69f59b94a3967fa935088890996d4000a815db033"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/final_state/quality_reports/plans/mebane_2022_2026_gates.json",
+      "bytes": 61608,
+      "sha256": "a4a8b0b5a4746d3f49300e3e82682ce35762de1e628dd1ce08a54c0cdca237f0"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/final_state/quality_reports/results/mebane_gates/G3/round1/adjudication.json",
+      "bytes": 4624,
+      "sha256": "12edbc0c6e0fe18d0d6d4e296d9b6111ef028770721382968c56f34d98d7f89f"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/final_state/quality_reports/results/mebane_gates/G3/round1/adjudication.md",
+      "bytes": 2469,
+      "sha256": "9ec22580d2ca0a92a7a08c6e946c5eef605f9d29a1ed6e3830f4a1b6146177da"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/input_audit.json",
+      "bytes": 54357,
+      "sha256": "38eee700c674de3b74cd2f9938b2faa94475f909413bbfde17f017f371afea23"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/mebane_model_proposal_v1.manifest.json",
+      "bytes": 717,
+      "sha256": "a4f70b9fc3d37c9d54c2f96a7745d5c4af59171b0ec1b1501d12e2b48473acd9"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/mebane_model_proposal_v1.pdf",
+      "bytes": 20158,
+      "sha256": "1ba3644476e788327e7378a0cff0499b8f1a497bd9f2e70eba204c11043f3847"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/proposal_adjudication.json",
+      "bytes": 2408,
+      "sha256": "8155ecefe4ea4453324d246a118ae7facaf129002cb600b78527721e73fc74c7"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/proposal_adjudication.md",
+      "bytes": 1646,
+      "sha256": "6f9a29dd115036f9912c034bde5aadfd0d38f0d947bbdd22c60229f3bc87ea61"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/proposal_v1.md",
+      "bytes": 18717,
+      "sha256": "7fe462ed99561dee68d49fe1c5595845664249060459d018b4d01829fd61153c"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/proposal_v1_page-1.png",
+      "bytes": 279178,
+      "sha256": "9a8d6ddceb5390fa6967c494cee1c000da9a0356d78f4d092ea7249cfac6c1ea"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/proposal_v1_page-2.png",
+      "bytes": 295279,
+      "sha256": "a9c23493729a68d1b34bf4d86f5d9aca28bb387985868bd93819cbdb107d8cfe"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/proposal_v1_page-3.png",
+      "bytes": 305576,
+      "sha256": "aa1d8f1c691a483a37f327aad4258a5039aee3d7667185c6d7729ebe5391b110"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/proposal_v1_page-4.png",
+      "bytes": 315522,
+      "sha256": "c39e557aafea8876d17fdae7964a6e1e370e9625db79a3f169f9b2e7b9055768"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/proposal_v1_page-5.png",
+      "bytes": 260603,
+      "sha256": "9fa55d20aa4a60857b6206dad9793d65850dcde3cac8accedf33fc6e1bed809b"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/provenance_adjudication.json",
+      "bytes": 2873,
+      "sha256": "438b50f4680ed661463405ccfcc64484b6011ef121285010078fba14cb7ce0b7"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/provenance_repair/closure_manifest.json",
+      "bytes": 8668,
+      "sha256": "b6b56b80a7b40863d34f5f48b1de6641c1c54572121d949e9e6052ec46723965"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/provenance_repair/delivery/candidate_integrity_after.json",
+      "bytes": 81784,
+      "sha256": "ee021d0763f6315efdc082ed5e14f39692543348d2d04780799f23a1b407da9c"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/provenance_repair/delivery/candidate_integrity_before.json",
+      "bytes": 81784,
+      "sha256": "ee021d0763f6315efdc082ed5e14f39692543348d2d04780799f23a1b407da9c"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/provenance_repair/delivery/command_source_map.json",
+      "bytes": 57870,
+      "sha256": "caf38c0de624a8260be30c5af22b9f1cc9e944ce58d66a92c99659ce6e197737"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/provenance_repair/delivery/frozen_inputs/adjudication.json",
+      "bytes": 2873,
+      "sha256": "438b50f4680ed661463405ccfcc64484b6011ef121285010078fba14cb7ce0b7"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/provenance_repair/delivery/frozen_inputs/executor_event_sequence.json",
+      "bytes": 116554,
+      "sha256": "2ba52fc1909b9148b4e05a286ae8a75fac527aa6f28433346f002c606b88439f"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/provenance_repair/delivery/frozen_inputs/history_audit.json",
+      "bytes": 20559,
+      "sha256": "1e29ca542fd20612b8030d88a3bc046abf3ff27ef894163eba0b9205a270a11c"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/provenance_repair/delivery/frozen_inputs/input_closure_revision2.json",
+      "bytes": 5646,
+      "sha256": "21112d7cc29f924d2cf9dd530061b7086f899f9ca59f2c037626791be800cde9"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/provenance_repair/delivery/frozen_inputs/qa_audit_event_history.py",
+      "bytes": 3788,
+      "sha256": "709f3f66ebfa00521fda40d45e7aa1db14e380de89ab86532b68dc7c757d38ff"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/provenance_repair/delivery/frozen_inputs/review.json",
+      "bytes": 13607,
+      "sha256": "c5fee3d48a7d23615bde07e866622cbea26964693ea40738e8aeb0dfe5c72955"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/provenance_repair/delivery/frozen_inputs/revision3_manifest.json",
+      "bytes": 82081,
+      "sha256": "63855471a88dbfc3840b1172aef71118f7cffbdfe425e0241f1d689bf5e67966"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/provenance_repair/delivery/historical_logs/g3_deterministic.log",
+      "bytes": 489,
+      "sha256": "ba7c5ef626ce133553d370b14be1d2db859dcebaf92f72f28f58b1c975031322"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/provenance_repair/delivery/historical_logs/g3_deterministic_attempt2.log",
+      "bytes": 347,
+      "sha256": "022a2f2a8f82ef3476fb4b24eb0d5efc8019c816906a8ea38e09fd1f12bd2a0f"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/provenance_repair/delivery/historical_logs/g3_jags_attempt1.log",
+      "bytes": 1464,
+      "sha256": "602c1ed9d4f68eda717fbf8db86be49deca83ae9c3187190ce342d3e9e6faf86"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/provenance_repair/delivery/historical_logs/g3_jags_attempt2.log",
+      "bytes": 1676,
+      "sha256": "39d9f0359740de56d0b1a90cdab2dc5f3d006541eab199c885c9ae5eef115cd1"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/provenance_repair/delivery/historical_logs/g3_jags_attempt4.log",
+      "bytes": 1777,
+      "sha256": "e2cb8b004bb9449b9f6711bfea593c1694ec589a3e1f1011cad628019c1f0f7d"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/provenance_repair/delivery/historical_logs_manifest.json",
+      "bytes": 1956,
+      "sha256": "8fabb991c50caefede0b19f249b992d0181c22f50f27239eaffb76d3c828e36b"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/provenance_repair/delivery/input_manifest.json",
+      "bytes": 2373,
+      "sha256": "7431c61814e8bfca64479796be567716565184d97ed862742b719a33e7a29759"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/provenance_repair/delivery/reconstruction_trace.json",
+      "bytes": 9210,
+      "sha256": "fa918851cd85301290dc04bfe9996df5c15aaaee9e55559c1dafc62676b3b56c"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/provenance_repair/delivery/result.json",
+      "bytes": 3812,
+      "sha256": "6c80fdae4d9e78f330ba826667380e5d3008b662d75bb42245222381842e23d0"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/provenance_repair/delivery/snapshots/deterministic1/R/lib/mebane_model.R",
+      "bytes": 4972,
+      "sha256": "53b8672a2b840e1519a1ed2bd7a94c76321ee4b7c879d5a9f6f7ffd0f130c582"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/provenance_repair/delivery/snapshots/deterministic1/tests/mebane/likelihood/g3_deterministic.R",
+      "bytes": 3047,
+      "sha256": "8b0012b3e3b54a3b759745a0c846f3c384fae9484266b3e6baf8886328969341"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/provenance_repair/delivery/snapshots/deterministic2/R/lib/mebane_model.R",
+      "bytes": 5012,
+      "sha256": "cded39d1bbf5cc22101ad8454d255a3016f21a263df91f76ec4592888d189136"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/provenance_repair/delivery/snapshots/deterministic2/tests/mebane/likelihood/g3_deterministic.R",
+      "bytes": 3129,
+      "sha256": "86fab7d3bff353d08b12f80a8d1c9a2d1976eb2f8bc43a9dd9183df7a49e5c16"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/provenance_repair/delivery/snapshots/jags1/tests/mebane/likelihood/g3_jags.R",
+      "bytes": 8601,
+      "sha256": "15b48452923289dcdea8fc1dc32192b1305c3f246dad554ccc885340be801a42"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/provenance_repair/delivery/snapshots/jags2/tests/mebane/likelihood/g3_jags.R",
+      "bytes": 8674,
+      "sha256": "19ed250a7c53f88b30ded695f55113a715c862c3b9bc07aa0917ef242007db3b"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/provenance_repair/delivery/snapshots/jags4/tests/mebane/likelihood/g3_jags.R",
+      "bytes": 8896,
+      "sha256": "6ecae09f28159803ec93a3da654b661a129a44da630acba17e853969c9549583"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/provenance_repair/reconstruct_sources.py",
+      "bytes": 24102,
+      "sha256": "80957c2ff0bc4d2beed2b25fa44a9877eec84b97ffd694cfe1f6361d66e10ebb"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/provenance_repair/repair_plan.json",
+      "bytes": 2829,
+      "sha256": "5aebb456caa1ed75d035058466aa5ebaa874511b00d0cf275eeb1f43afb44bc1"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/provenance_repair/report.md",
+      "bytes": 6119,
+      "sha256": "37895b96db73d93fe31654b5f4d94557dbd009e1da20c3ca0d0b6c886da08466"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/provenance_repair/run_documentary.py",
+      "bytes": 3151,
+      "sha256": "116088aa15bf9bde19e367cd1f774189e171c715c8c5cef778ca48af6103fae3"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/provenance_repair/runs/build01/run.json",
+      "bytes": 1574,
+      "sha256": "dd7ff4fec9a97337c9ff15664ce76c585929bc980f5946c6421158e0bde118a4"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/provenance_repair/runs/build01/source_snapshot/reconstruct_sources.py",
+      "bytes": 24102,
+      "sha256": "80957c2ff0bc4d2beed2b25fa44a9877eec84b97ffd694cfe1f6361d66e10ebb"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/provenance_repair/runs/build01/source_snapshot/repair_plan.json",
+      "bytes": 2829,
+      "sha256": "5aebb456caa1ed75d035058466aa5ebaa874511b00d0cf275eeb1f43afb44bc1"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/provenance_repair/runs/build01/source_snapshot/run_documentary.py",
+      "bytes": 3151,
+      "sha256": "116088aa15bf9bde19e367cd1f774189e171c715c8c5cef778ca48af6103fae3"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/provenance_repair/runs/build01/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/provenance_repair/runs/build01/stdout.log",
+      "bytes": 215,
+      "sha256": "076d3840e7b04f9008b46c252b6808d9493b3941f0ea2c8f41e809e2b82ae2a6"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/provenance_repair/runs/final_verification/run.json",
+      "bytes": 1613,
+      "sha256": "2477cb9780f34ba2cd4c6dcf639bb2ede449ee2d80979f381a51f946f2408f1b"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/provenance_repair/runs/final_verification/source_snapshot/reconstruct_sources.py",
+      "bytes": 24102,
+      "sha256": "80957c2ff0bc4d2beed2b25fa44a9877eec84b97ffd694cfe1f6361d66e10ebb"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/provenance_repair/runs/final_verification/source_snapshot/repair_plan.json",
+      "bytes": 2829,
+      "sha256": "5aebb456caa1ed75d035058466aa5ebaa874511b00d0cf275eeb1f43afb44bc1"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/provenance_repair/runs/final_verification/source_snapshot/run_documentary.py",
+      "bytes": 3151,
+      "sha256": "116088aa15bf9bde19e367cd1f774189e171c715c8c5cef778ca48af6103fae3"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/provenance_repair/runs/final_verification/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/provenance_repair/runs/final_verification/stdout.log",
+      "bytes": 916,
+      "sha256": "478fa1ab59bd137a9af696e25776ae412f0306033cc742b58a0db75b58a47321"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/provenance_repair/runs/replay_check01/run.json",
+      "bytes": 1596,
+      "sha256": "b1e797ff9bc161113df50369489cf33dd57f3b24e6119c765782c62b69424485"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/provenance_repair/runs/replay_check01/source_snapshot/reconstruct_sources.py",
+      "bytes": 24102,
+      "sha256": "80957c2ff0bc4d2beed2b25fa44a9877eec84b97ffd694cfe1f6361d66e10ebb"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/provenance_repair/runs/replay_check01/source_snapshot/repair_plan.json",
+      "bytes": 2829,
+      "sha256": "5aebb456caa1ed75d035058466aa5ebaa874511b00d0cf275eeb1f43afb44bc1"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/provenance_repair/runs/replay_check01/source_snapshot/run_documentary.py",
+      "bytes": 3151,
+      "sha256": "116088aa15bf9bde19e367cd1f774189e171c715c8c5cef778ca48af6103fae3"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/provenance_repair/runs/replay_check01/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/provenance_repair/runs/replay_check01/stdout.log",
+      "bytes": 670,
+      "sha256": "3f335a3acdb8f39967c693fb76b5ca30f33ab0fc6b53071b72a12bcc3c4d0b21"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/render_proposal.py",
+      "bytes": 4094,
+      "sha256": "a2d667c4c53179826b7dabb1787a47981810d40816991e080c62ace704568325"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/review/attempt01/binding_checks.json",
+      "bytes": 1841,
+      "sha256": "8085280692666b45c6dcdc402496c053c5ebc5f3c7c08eab9fb788a81a232af3"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/review/attempt01/checks.csv",
+      "bytes": 2137,
+      "sha256": "5891517fa5e15517bdc87dfa2983c9d25a36097a78bde2a44aaedef208add560"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/review/attempt01/expected_seven_sources.json",
+      "bytes": 1172,
+      "sha256": "43b88cb9a14ac45c1901833b4a852ef1358fa9048ec37f269235cf9af6f4c4be"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/review/attempt01/freeze.json",
+      "bytes": 3505,
+      "sha256": "0491159185e7e993175a027b3e388a552ff6025aada1c8a32021de1462853767"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/review/attempt01/grid_metrics.csv",
+      "bytes": 28025,
+      "sha256": "542a0bfe8fd99d4aac6da8c33dc154b74e4725510eb8587d5690333ed1bb8ca9"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/review/attempt01/identification_counterexample.csv",
+      "bytes": 206,
+      "sha256": "32a2db9848eb65063725a5e1db5ed0bb3bda24495a27d5662750ef103d965dea"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/review/attempt01/invocation.json",
+      "bytes": 514,
+      "sha256": "79e030a647ae280c37eb2ca5656b567b728f037e2df83a309e0450aa1ab5cd10"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/review/attempt01/literal_normalizers.csv",
+      "bytes": 101,
+      "sha256": "5f040551314fa5d11d6b1a1c6ab19f8d0fb998b176f386bf1595f1ee98edb42f"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/review/attempt01/normalization_order.csv",
+      "bytes": 293,
+      "sha256": "27b8922905c4787400592f64468b8eb19b2a0c5a2f17d9d69cccead81beeed94"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/review/attempt01/preflight_result.json",
+      "bytes": 658,
+      "sha256": "c3c2fe70e090554f9cfcf206d25ee393feb460b97e35ac9c213808bfac5cd581"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/review/attempt01/prior_inventory_checks.json",
+      "bytes": 200331,
+      "sha256": "3e682fdf7f526e01ce10c9430b4d17d0e9aa1f86cd5779ab683ea0a7c6ad63a7"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/review/attempt01/session.txt",
+      "bytes": 619,
+      "sha256": "c0fc7c862eb558008b9ff41e83cc44569e7b1335cde25e1d5102da8bc01451e9"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/review/attempt01/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/review/attempt01/stdout.log",
+      "bytes": 92,
+      "sha256": "fd19dfc92d9b232e28bb51a3de5dc5b6110a920e6726bbbaae419ed0effb02c3"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/review/attempt01/transfer_metrics.csv",
+      "bytes": 182,
+      "sha256": "28d9989a25b004564ce99c6204913371a9a028cf023faa71f37ce855b4851f80"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/review/documentary_attempt01/checks.json",
+      "bytes": 124759,
+      "sha256": "c98f70cde7b0ff23051469d3f970d31094876e7796727c4caf8f7ef4497c576c"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/review/documentary_attempt01/executor_verify_invocation.json",
+      "bytes": 450,
+      "sha256": "86199921a6ae3b885628cc1c450631cb60b9f487369e649a38e660ceacf7a2c2"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/review/documentary_attempt01/executor_verify_stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/review/documentary_attempt01/executor_verify_stdout.log",
+      "bytes": 916,
+      "sha256": "478fa1ab59bd137a9af696e25776ae412f0306033cc742b58a0db75b58a47321"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/review/documentary_attempt01/input_inventory.json",
+      "bytes": 111460,
+      "sha256": "a9d3fc679de5d41fd7ac605591c862fc787614a851038577fb8575fecda0556a"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/review/documentary_attempt01/recovered_sources.json",
+      "bytes": 3221,
+      "sha256": "363ea79422cf67939cafac0e370364731400a01317348d1c706d8671322d2ee5"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/review/documentary_attempt01/replayed_event_history.json",
+      "bytes": 9618,
+      "sha256": "89989bf01984d3d1e6987385015316b9590ecea96fc5c65c4fd368dddb369d03"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/review/documentary_attempt01/result.json",
+      "bytes": 594,
+      "sha256": "1a31547fad57217106c5a1764de28f62664745e08793c0798fcaddd2ec17b822"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/review/final_verification01/failure.json",
+      "bytes": 884,
+      "sha256": "f084d749ec13ba3a9fac898d2f4dc07b6aa4fbd484c168fa5d067431ee68c5bd"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/review/final_verification02/checks.json",
+      "bytes": 1330,
+      "sha256": "9aa636e1b7d63ee135bdf8b081b536f0c0583da9a9f69bbcbbbcf265ea22a58b"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/review/final_verification02/manifest_verification.json",
+      "bytes": 312,
+      "sha256": "7b8a99b83510abf65314ecb1cea0939567e6297032ae8ace7f9b3e89536694f2"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/review/final_verification02/online_source_scope.json",
+      "bytes": 618,
+      "sha256": "91ce4643424c9d85cfab07c00f04d11dddc41c9c385ec85e6fdca95ac31462f1"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/review/mathematical_verification.md",
+      "bytes": 5825,
+      "sha256": "7c6e3b00bd7755bd000644f384f50b920b483ae36b81cbea2a268559763e1e26"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/review/preparation/checks.R",
+      "bytes": 8706,
+      "sha256": "fc284987e8f60300cc5d1331a99d6eba7fe1329d7b1227ce8efc27eff0e06a3f"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/review/preparation/protocol.json",
+      "bytes": 4231,
+      "sha256": "d3538d8f0bcb2a3a8df44501d853fa6fd2ea78b8f8c64a497602bc90857a318e"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/review/preparation/questions.md",
+      "bytes": 4193,
+      "sha256": "eb9c3a35e80e18a5c02746c82d5ee1155ef789b7c4bea61d1e2944f8af7063e4"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/review/preparation/run_preflight.py",
+      "bytes": 5225,
+      "sha256": "91b9796ee8d41e2e939c4a2ebdb672fc748dbfec1c0c77c457e48c19d19ae035"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/review/proposal_attempt01/candidate03/multinomial_checks.csv",
+      "bytes": 17500,
+      "sha256": "bc3ec843389b6487a1e9c65eca7a44a022af5d0b60746906950831951425cdb3"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/review/proposal_attempt01/candidate03/normalization_choices.csv",
+      "bytes": 389,
+      "sha256": "97cefb98143fc64af1791c7806d5b889eeedfa354462a7651839287871623d7a"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/review/proposal_attempt01/candidate03/result.json",
+      "bytes": 1026,
+      "sha256": "3ec81809eb46acdd5a33430d10b386255a6a39a43a8d4ec51d5271c3828f41a9"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/review/proposal_attempt01/candidate03/sessionInfo.txt",
+      "bytes": 634,
+      "sha256": "67c4bf240addda89ef249eea007c9a6c1f5b179a7cdd75681c57412a5235a853"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/review/proposal_attempt01/candidate03_completion.json",
+      "bytes": 78,
+      "sha256": "7f5e449b489334904f212828009929f6adffca16e225ce18741a641a68ecfbda"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/review/proposal_attempt01/candidate03_invocation.json",
+      "bytes": 713,
+      "sha256": "51242850719a0015819d8b8291b679014d028e1aea7c6c9f856fd5116fe2a5c3"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/review/proposal_attempt01/candidate03_stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/review/proposal_attempt01/candidate03_stdout.log",
+      "bytes": 960,
+      "sha256": "94b328f9827be7a9ce1170815bfe8e4fbcfdb27be2ba6541b99091778aee02bb"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/review/proposal_attempt01/freeze.json",
+      "bytes": 2160,
+      "sha256": "0cbc4e81bd8961e1698788e4369cfbcd0f67c22c8e4dc5e9f19dd8760a66ad25"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/review/proposal_attempt01/independent/checks.csv",
+      "bytes": 1068,
+      "sha256": "0ecadf6399c52fcc9dfe0661aaa2c7c2da80c08775051f2b5df2526720ef8d19"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/review/proposal_attempt01/independent/induced_R.csv",
+      "bytes": 6567,
+      "sha256": "700b366be3fc854cc61af2a8f9fd9d65d7f651b4ef8582b787863bf3350e321c"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/review/proposal_attempt01/independent/literal_normalization.csv",
+      "bytes": 135,
+      "sha256": "e1d7065d6e97f6963f471a37ea5c2df00b318ee381a7425b8d4bf5f82ed58499"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/review/proposal_attempt01/independent/microstate_metrics.csv",
+      "bytes": 26344,
+      "sha256": "5a0138045b92e13f29713dc8468dbe5d44b57cf3fc70406ae04c538835d8a401"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/review/proposal_attempt01/independent/posterior_classes.csv",
+      "bytes": 136,
+      "sha256": "204e8d7b3fd4c0f6d252f05f4ae5a08839b357e1977dadbac7742da74e9949e9"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/review/proposal_attempt01/independent/sessionInfo.txt",
+      "bytes": 619,
+      "sha256": "c0fc7c862eb558008b9ff41e83cc44569e7b1335cde25e1d5102da8bc01451e9"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/review/proposal_attempt01/independent_completion.json",
+      "bytes": 79,
+      "sha256": "e1c5464522d28a5952e6e67a99b7dcd532b71bba4dfb835d1e2987581c4c3c07"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/review/proposal_attempt01/independent_invocation.json",
+      "bytes": 734,
+      "sha256": "1b93fa750bf4a6afebf22fc177a69dbbae5ff0821146c01d65fef2f096acaec3"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/review/proposal_attempt01/independent_stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/review/proposal_attempt01/independent_stdout.log",
+      "bytes": 1690,
+      "sha256": "c24927cc7dbbd5d6fab031001aa04864fc7c2af2208488f54eadc1c9ea03a806"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/review/proposal_attempt01/preserved01_completion.json",
+      "bytes": 79,
+      "sha256": "c4690bcb2c45835b6df5c18fe16b87708d8673aafc03ac91821979a633922546"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/review/proposal_attempt01/preserved01_invocation.json",
+      "bytes": 730,
+      "sha256": "c1b67b2732e0bd0cfac07fa04d58d51f98ac68efc1cbcdccdd4badad6f047feb"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/review/proposal_attempt01/preserved01_stderr.log",
+      "bytes": 142,
+      "sha256": "343855165134d9e920f919e26dbf183ed9b4f9588fa9ad76b147e56bcd83f8ad"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/review/proposal_attempt01/preserved01_stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/review/proposal_attempt01/preserved02/multinomial_checks.csv",
+      "bytes": 17500,
+      "sha256": "bc3ec843389b6487a1e9c65eca7a44a022af5d0b60746906950831951425cdb3"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/review/proposal_attempt01/preserved02_completion.json",
+      "bytes": 77,
+      "sha256": "b91b93f7a7c366c2f119bd008931167c48636a0332146760d12d9feaae654d31"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/review/proposal_attempt01/preserved02_invocation.json",
+      "bytes": 729,
+      "sha256": "386f7c8fa36bc6629b92afbea86c864ccc96a57b642f6807096e2eacde43cab0"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/review/proposal_attempt01/preserved02_stderr.log",
+      "bytes": 64,
+      "sha256": "b4778ddff8f399931ecaa151e77ae504ee2ff40a18e81ba6027488f5fb0b7043"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/review/proposal_attempt01/preserved02_stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/review/proposal_attempt01/result.json",
+      "bytes": 592,
+      "sha256": "ee6c55087ebec3d0aa595db00c6adf26f549f2a620fbc2d840eedcc9224cb652"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/review/proposal_preparation01/audit_documentary.py",
+      "bytes": 9743,
+      "sha256": "e1ef2869a6f2b2bc777afb62bc4bb5963ab8ff83f23c32621a88a4dcf7215e9d"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/review/proposal_preparation01/checks.R",
+      "bytes": 6755,
+      "sha256": "f6e7b8169eeacbdbd2d35f8f864b79513862dd86a6f9e1fb8f3d8b1d4bc6cd02"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/review/proposal_preparation01/protocol.json",
+      "bytes": 1888,
+      "sha256": "a87aba6280aab707f3058ad1a4fe69f9b5d7fdef511c6a55ef3ec1618d07d4af"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/review/proposal_preparation01/run.py",
+      "bytes": 3438,
+      "sha256": "2beabf580202e983f7dfc79b9b007085af93462716d499c57e6022144bc408cf"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/review/proposal_preparation01/seal_review.py",
+      "bytes": 6166,
+      "sha256": "9091fdc75846cd70b32364906fd86d24c452815c83d30a80e44d0a97ff27034c"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/review/proposal_preparation01/seal_review_v2.py",
+      "bytes": 6766,
+      "sha256": "dce1f50b571b850b67b8dbfd9cac09270ec4d4aa9599b43a6d85dca9af272c4f"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/review/proposal_review_v1.json",
+      "bytes": 6375,
+      "sha256": "0f44eee887d4d122c01bf044492e71b3f90cb2df86c2fec8281c5f961322a2c3"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/review/proposal_review_v1.md",
+      "bytes": 6041,
+      "sha256": "8f7a9fba63d4c28832a38a338f2f5d9ebfadbadea5843e623aa3327b8ae2a409"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/review/provenance_review.json",
+      "bytes": 2863,
+      "sha256": "555bf619eda3764a2f935a75e45960e667e0b200bd6f37f0ad756dd1295bd3f8"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/review/provenance_review.md",
+      "bytes": 3339,
+      "sha256": "60dfcc9f1de33457970bed72fabe54dab310832569b89072b15b4d6d84020344"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/review/review.json",
+      "bytes": 1116,
+      "sha256": "f3efa814a7853d3c1202c19a69ea735485d0f13f62252cf2e719f8ada250518f"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/review/review.md",
+      "bytes": 2469,
+      "sha256": "df76485ad450c3396e26eb8e09f886647687baef3104442e9f3f096debe4d64d"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/review/review_manifest.json",
+      "bytes": 137174,
+      "sha256": "9cf5b1b5b1aba14458b51b0b83dd5a50c3328188f3b169f3ec60ed698eb9f6d7"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/scope_and_sources.md",
+      "bytes": 4393,
+      "sha256": "38769378718c39c5044ebe743795025bb0d69b8e91a551105117f660b692fded"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/verify_delivery.py",
+      "bytes": 6198,
+      "sha256": "691da73420b6cbace4c25035afcb287ea1582b06dba96d8fb9b66b0f635fe52a"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/visual_qa.json",
+      "bytes": 749,
+      "sha256": "952f3d54adbb7f05d475be937cf9fd0e67fc56fb6f182b0b9ac23c45e3af91a6"
+    }
+  ],
+  "excluded": [
+    "delivery_manifest.json itself"
+  ],
+  "parent_candidate_manifest": "quality_reports/results/mebane_gates/G3/round1/revision3/candidate_manifest.json",
+  "parent_candidate_sha256": "63855471a88dbfc3840b1172aef71118f7cffbdfe425e0241f1d689bf5e67966"
+}

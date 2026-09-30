@@ -1,0 +1,22 @@
+{
+  "status": "verified",
+  "snapshots_replayed_byte_for_byte": 7,
+  "command_map_reproduced": true,
+  "edit_trace_reproduced": true,
+  "historical_logs_unchanged": 5,
+  "parent_manifest_sha256": "63855471a88dbfc3840b1172aef71118f7cffbdfe425e0241f1d689bf5e67966",
+  "parent_entries_verified": 350,
+  "checks": [
+    "exact_patch_fixture_1",
+    "exact_patch_fixture_2",
+    "exact_patch_fixture_3",
+    "exact_patch_fixture_4",
+    "invalid_patch_rejected_1",
+    "invalid_patch_rejected_2",
+    "invalid_patch_rejected_3",
+    "altered_expected_digest_rejected",
+    "altered_recovered_bytes_rejected"
+  ],
+  "new_scientific_executions": 0,
+  "independent_qa": false
+}

@@ -1,0 +1,41 @@
+{
+  "schema_version": "1.0",
+  "finding_id": "G3-QA-R2-INPUT-01",
+  "executor_thread_id": "01a0ee04-c901-7831-8ac6-0160da2e3883",
+  "date": "2026-09-30",
+  "scope": "Documentary reconstruction of exactly seven historical source identities from raw file-change events, for independent review only.",
+  "source_repository": "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud",
+  "write_scope": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/provenance_repair",
+  "candidate_sha256": "63855471a88dbfc3840b1172aef71118f7cffbdfe425e0241f1d689bf5e67966",
+  "review_sha256": "c5fee3d48a7d23615bde07e866622cbea26964693ea40738e8aeb0dfe5c72955",
+  "expected_source_count": 7,
+  "expected_affected_command_count": 5,
+  "expected_candidate_entries": 350,
+  "expected_source_sha256": [
+    "8b0012b3e3b54a3b759745a0c846f3c384fae9484266b3e6baf8886328969341",
+    "53b8672a2b840e1519a1ed2bd7a94c76321ee4b7c879d5a9f6f7ffd0f130c582",
+    "86fab7d3bff353d08b12f80a8d1c9a2d1976eb2f8bc43a9dd9183df7a49e5c16",
+    "cded39d1bbf5cc22101ad8454d255a3016f21a263df91f76ec4592888d189136",
+    "15b48452923289dcdea8fc1dc32192b1305c3f246dad554ccc885340be801a42",
+    "19ed250a7c53f88b30ded695f55113a715c862c3b9bc07aa0917ef242007db3b",
+    "6ecae09f28159803ec93a3da654b661a129a44da630acba17e853969c9549583"
+  ],
+  "acceptance_checks": [
+    "All seven recovered UTF-8 byte strings must have exactly the SHA-256 identities listed by QA, without normalization or manual content repair.",
+    "Each version must be present at the affected command event, with a complete addition/update lineage, and agree with history_audit.json.",
+    "All original revision3 declared paths, sizes and hashes must still match before and after recovery.",
+    "Replay from frozen inputs must reproduce the archived seven sources and command map without reading current canonical code as a reconstruction source.",
+    "In-memory parser tests must reject wrong context, inconsistent hunk counts and absent bases; replay must reject an altered expected digest.",
+    "Manifest must cover local input snapshots, reconstruction code, recovered sources, maps, result and execution evidence. Detached final verification must bind its exact manifest hash."
+  ],
+  "execution_limits": {
+    "seconds_per_process": 120,
+    "new_estimation_or_scientific_tests": false,
+    "execute_recovered_sources": false,
+    "install_or_delete": false,
+    "overwrite_existing_artifacts": false
+  },
+  "ambiguity_policy": "Fail closed on ambiguous target reconstruction. Preserve unavailable event states as unresolved; no substitution of current canonical bytes. Broader historical input closure is not claimed.",
+  "gate_outcome": "inconclusive",
+  "approval_policy": "Executor checks are not independent QA and do not resolve the adjudication or promote G3."
+}

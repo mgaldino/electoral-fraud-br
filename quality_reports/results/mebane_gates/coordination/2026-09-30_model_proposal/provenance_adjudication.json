@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.0",
+  "adjudication_id": "G3:63855471a88d:historical-inputs",
+  "source": {
+    "reviewed_artifact": "quality_reports/results/mebane_gates/G3/round1/revision3/candidate_manifest.json",
+    "sha256": "63855471a88dbfc3840b1172aef71118f7cffbdfe425e0241f1d689bf5e67966",
+    "artifact_intact": true
+  },
+  "contract": {"required": false, "path": null, "sha256": null, "contract_id": null, "artifact_sha256": null, "status": null, "stale": false},
+  "review_sources": [{
+    "review_id": "G3-QA-FIDELIDADE-R3-FINAL",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/review.json",
+    "sha256": "c5fee3d48a7d23615bde07e866622cbea26964693ea40738e8aeb0dfe5c72955"
+  }],
+  "findings": [{
+    "finding_id": "G3-QA-R2-INPUT-01",
+    "source_review": "G3-QA-FIDELIDADE-R3-FINAL",
+    "quoted_finding": "Inherited historical executions lack seven effective source-byte snapshots",
+    "type": "artifact",
+    "severity": "major",
+    "scientific_dimension": "reproducibility",
+    "held_decision": false,
+    "status": "CONFIRMED",
+    "source_locations": ["quality_reports/results/mebane_gates/G3/round1/review/input_closure_revision2.json:50", "quality_reports/results/mebane_gates/G3/round1/revision3/predecessor_files.json"],
+    "defect_evidence": ["Seven SHA-256 identities from the effective historical execution audit are absent from the revision3 manifest. Logs remain available, so this is incomplete provenance, not demonstrated corruption of current files."],
+    "refuting_evidence": [],
+    "mechanical_checks": ["audit_inputs.py verifies all 350 declared files, the reviewed candidate identity and the seven absent source hashes.", "Read the independent event reconstruction code and historical-input closure record."],
+    "reasoning": "Current source bytes cannot substitute for the versions actually used in earlier failed or intermediate attempts. The raw tool events retain additions and diffs sufficient for a bounded reconstruction, which must be hash-checked before acceptance.",
+    "proposed_fix_assessment": "safe",
+    "disposition": "Reconstruct and archive only the seven exact source versions under new paths, map each command to its effective hashes, and independently verify. Preserve all old candidates, canonical source files, logs and raw chains. Do not rerun MCMC or change model, criteria or gate outcome.",
+    "resolved": false
+  }],
+  "summary": {"total": 1, "confirmed": 1, "partial": 0, "refuted": 0, "unresolved": 0, "held_decisions": 0},
+  "adjudication": {"verdict": "READY_FOR_IMPLEMENTATION", "checked_at": "2026-09-30", "reasons": ["A documentary-only repair is authorized by the current user request and independent of model-support decisions.", "G3 remains inconclusive even if this repair passes."]},
+  "scope": "Historical source closure only; no estimation or production-model approval."
+}

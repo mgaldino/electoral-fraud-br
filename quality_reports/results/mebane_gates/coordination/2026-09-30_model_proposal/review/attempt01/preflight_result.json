@@ -1,0 +1,19 @@
+{
+  "stage": "preparation_only_not_a_proposal_review",
+  "proposal_received": false,
+  "provenance_package_reviewed": false,
+  "G3_ledger_status_observed": "under_review",
+  "G3_review_status": "inconclusive",
+  "G3_candidate_entries_verified": 350,
+  "G3_QA_entries_verified": 419,
+  "inventory_errors": [],
+  "source_versions_expected": 7,
+  "R_exit_code": 0,
+  "R_elapsed_seconds": 0.4612093330360949,
+  "deterministic_checks": 42,
+  "failed_checks": [],
+  "no_estimation": true,
+  "no_new_chains": true,
+  "production_approved": false,
+  "next_step": "Await frozen provenance package and proposal paths/SHA; do not infer approval of unseen documents."
+}

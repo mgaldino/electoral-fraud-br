@@ -1,0 +1,835 @@
+{
+  "source": "Codex read_thread API, raw command/file-change events only; no agent conclusions or reasoning used",
+  "thread_id": "01a0ee04-c901-7831-8ac6-0160da2e3883",
+  "thread_title": "Implementar candidato de auditoria G",
+  "has_more": false,
+  "events": [
+    {
+      "turn_id": "01a0ee04-c9b2-77b1-99f5-601f63832e63",
+      "turn_started_at": 1790699686,
+      "item_order": 10,
+      "id": "exec-3444cffe-95b9-4e21-ab99-366f066c9538",
+      "type": "commandExecution",
+      "command": "/bin/zsh -lc \"pwd; git status --short; rg --files -g 'CLAUDE.md' -g '*g3_dispatch_requirements.md' -g 'benchmark_contract.json' -g 'dispatch.md' -g 'mebane_2022_2026_gates.json'\"",
+      "status": "completed",
+      "exit_code": 0,
+      "duration_ms": 0,
+      "output": {
+        "text": "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud\n M quality_reports/plans/mebane_2022_2026_gates.json\n?? quality_reports/results/mebane_gates/coordination/2026-09-29_g3_runtime/\nCLAUDE.md\nquality_reports/plans/mebane_2022_2026_gates.json\nquality_reports/results/mebane_gates/G0/round1/snapshots/CLAUDE.md\nquality_reports/results/mebane_gates/G0/round1/final_state/CLAUDE.md\nquality_reports/results/mebane_gates/G2/round2/benchmark_contract.json\nquality_reports/results/mebane_gates/G0/round1/final_state/quality_reports/plans/mebane_2022_2026_gates.json\nquality_reports/results/mebane_gates/G0/round2/final_state/CLAUDE.md\nquality_reports/results/mebane_gates/G0/round2/final_state/quality_reports/plans/mebane_2022_2026_gates.json\nquality_reports/results/mebane_gates/coordination/2026-09-29_inventory_rebaseline/before/CLAUDE.md\nquality_reports/results/mebane_gates/coordination/2026-09-29_inventory_rebaseline/before/quality_reports/plans/mebane_2022_2026_gates.json\nquality_reports/results/mebane_gates/coordination/2026-09-29_g3_runtime/dispatch.md\nquality_reports/results/mebane_gates/coordination/2026-09-29_benchmark_round/replication_review_inputs/quality_reports/plans/mebane_2022_2026_gates.json\nquality_reports/results/mebane_gates/coordination/2026-09-29_benchmark_round/g3_dispatch_requirements.md\nquality_reports/results/mebane_gates/coordination/2026-09-29_benchmark_round/final_state/CLAUDE.md\nquality_reports/results/mebane_gates/coordination/2026-09-29_benchmark_round/final_state/quality_reports/plans/mebane_2022_2026_gates.json\n",
+        "truncated": false
+      }
+    },
+    {
+      "turn_id": "01a0ee04-c9b2-77b1-99f5-601f63832e63",
+      "turn_started_at": 1790699686,
+      "item_order": 13,
+      "id": "exec-2ca3f0c1-6e4e-4db1-b567-da5c4bcac45a",
+      "type": "commandExecution",
+      "command": "/bin/zsh -lc 'cat quality_reports/results/mebane_gates/coordination/2026-09-29_g3_runtime/dispatch.md'",
+      "status": "completed",
+      "exit_code": 0,
+      "duration_ms": 0,
+      "output": {
+        "text": "# G3: teste pequeno do benchmark literal\n\n## Autorização e estado inicial\n\nContinuação do goal autorizado nesta conversa em 29/09/2026. A rodada anterior\nfez progresso: resolveu a pendência documental do inventário e aprovou os novos\nvínculos G0/G1/G2/G7. O checker passou antes deste despacho. G3 ainda não tinha\nexecução. Não há bloqueio atual que impeça os testes pequenos autorizados.\n\nO alvo é o contrato `G2/round2/benchmark_contract.json`, SHA-256\n`63b61fb0594d0302a03d999bcff6c62967b6e999f37b4c9a8821f0f8e9ed18d2`.\nA aprovação vigente de G2 é round3: manifesto\n`2ffd63203a6af407c5f17c708ce2c42120fef0dc9600e3585f83be6e48313173`,\nreview `0b6a2c4268e1b7d58c2964e31db54df2c894056634939c24681d38ad54ef96f3`,\nadjudicação `4999cc69a32e53e5bc0f6308acbfb77671c192a9b4126715794e1acfcc8b2ca9`.\nOs indicadores pending dentro do contrato congelado são históricos; os records\nde aprovação vigentes estão no ledger, sem reescrever o contrato.\n\n## Divisão do trabalho\n\nO executor Sol xhigh cria protocolo congelado antes dos resultados, implementação\nR, testes e candidato G3 round1. É a divisão já escolhida pelo usuário e pelo\ngate; a heurística de routing antiga não substitui o contrato nem a revisão.\nModelo principal separado revisa o candidato, reproduz casos críticos e procura\ncontraexemplos. O coordenador confere o escopo da replicação externa já incorporada,\nintegra evidências, adjudica e atualiza o ledger. Ninguém se autoaprova.\n\nO protocolo deve incluir os sete requisitos de\n`coordination/2026-09-29_benchmark_round/g3_dispatch_requirements.md`, sob\n`quality_reports/results/mebane_gates/`. Distinguir modelo integral inalterado,\nproblemas condicionados e modelos auxiliares. Um auditor que registra falhas de\ngeração não satisfaz automaticamente o gerador válido de G3-T1.\n\n## Limites operacionais\n\n- Apenas casos pequenos: enumeração N=1,2,3 e ensaios com no máximo oito unidades.\n- Não executar n2000, Brasília completa, nacional ou replicação externa ajustada.\n- Congelar sementes, dados, iterações, tolerâncias, diagnósticos e critérios de\n  falha antes da primeira execução dos testes correspondentes.\n- Usar o ambiente instalado, sem instalação, atualização ou mudança de engine\n  silenciosa. Se a versão necessária estiver ausente, registrar a limitação.\n- Limitar cada processo de teste a 120 segundos; teto de execução computacional\n  da rodada de 12 minutos. Timeout é resultado preservado, não razão para relançar\n  processo ainda ativo. Não aumentar iterações após observar falha diagnóstica.\n- Não excluir nem restaurar arquivos, inclusive em scripts de limpeza. Saídas\n  novas usam diretórios inéditos; preservar todos os logs e tentativas.\n- Não alterar fontes congeladas, contratos G2, ledger ou artefatos anteriores\n  pelo executor/revisor. A coordenação altera somente estado e evidências.\n\n## Encerramento esperado\n\nEntregar decisão explícita sobre JAGS como referência literal e sobre a não\nequivalência do Stan histórico. Uma falha do alvo deve produzir contraprova\nrevisável e encaminhamento a G2/inconclusive, não aprovação de produção. G4/G10\nnão são liberados por execução bem-sucedida isolada ou por aprovação de código.\n",
+        "truncated": false
+      }
+    },
+    {
+      "turn_id": "01a0ee04-c9b2-77b1-99f5-601f63832e63",
+      "turn_started_at": 1790699686,
+      "item_order": 14,
+      "id": "exec-7b189b2b-15ed-494b-b0df-feff8dd0f7ed",
+      "type": "commandExecution",
+      "command": "/bin/zsh -lc 'cat quality_reports/results/mebane_gates/coordination/2026-09-29_benchmark_round/g3_dispatch_requirements.md'",
+      "status": "completed",
+      "exit_code": 0,
+      "duration_ms": 0,
+      "output": {
+        "text": "# Requisitos do próximo teste de implementação\n\nPreparado pela coordenação antes da execução G3. Este memorando não autoriza\nexecutar G3 sem G2 aprovado e não altera o contrato estático dos gates.\n\n## Escopo\n\nO alvo é o benchmark literal qbl/JAGS aprovado em G2 round2, não o Stan\nhistórico aproximado nem uma nova distribuição generativa. O teste inicial deve\nser pequeno, reproduzível e limitado em tempo. Não rodar n2000, Brasília completa\nou Brasil nacional neste lote. Não instalar pacotes.\n\nO executor deve congelar seu protocolo de comparação antes de observar resultados:\ncasos, sementes, número de cadeias/iterações, tolerâncias determinísticas e\nMonte Carlo, critérios de diagnóstico, limite de execução e tratamento de\nfalhas. Registrar esse arquivo como input do run. Se o runtime impedir uma\ncomparação, preservar a falha e marcar o contraste correspondente inconclusivo;\nnão trocar parâmetros ou aumentar tolerâncias silenciosamente para obter PASS.\n\n## Verificações prioritárias\n\n1. Compilar e exercitar o arquivo literal qbl identificado por hash, distinguindo\n   dados observados, valores latentes condicionados e inits. Quando usar uma\n   redução analítica ou um modelo auxiliar para isolar o problema, rotulá-lo como\n   tal e cotejá-lo com o comportamento da fonte integral inalterada.\n2. Testar suporte inválido na inicialização e nas atualizações do JAGS. Abranger\n   classes ativas e inativas, quatro contagens binomiais e a expressão ponderada\n   literal de p.w. Não supor que somente o componente ativo importe ao runtime\n   antes de observar a execução. Guardar mensagens, versões e exit codes.\n3. Enumerar pequenos N e casos de fronteira para uma referência numérica da\n   likelihood. Distinguir kernel com estados inválidos zerados, normalização e\n   semântica efetivamente observada no JAGS. Testar separadamente suporte\n   probabilístico e suporte físico a + w <= N.\n4. Um gerador literal deve conservar e contar tentativas inválidas, sem clamp,\n   redraw silencioso ou renormalização. Se o qbl não define um gerador completo\n   nesse suporte, entregar um auditor de geração com falha explícita, não uma\n   correção implícita. Essa entrega não torna G3-T1 automaticamente satisfeito.\n5. Conferir as priors efetivas, a ordem parcial de pi, os seis efeitos por\n   observação, o desenho e ambos os interceptos. Testar funcionais por draw e\n   agregação conjunta. Preservar incerteza das classes; esperanças condicionais\n   devem receber outro nome e não substituir intervalos da distribuição completa.\n6. Comparar engines apenas no mesmo alvo. Na falta de Stan equivalente executável,\n   uma comparação JAGS versus enumeração exata de um problema condicionado pequeno\n   é evidência delimitada, não equivalência da portagem completa. Não acrescentar\n   Stan exato apenas para preencher uma lista se a semântica ainda estiver aberta.\n7. Testar a interface de dados com sentinela assimétrica, a != w: no wrapper do\n   commit 3017de5, `formula1` alimenta `w`/`Xw` e `formula2` alimenta `a`/`Xa`.\n   As versões anteriores de `R/05_eforensics_umeforensics_qbl.R` e\n   `R/07_brasil_full_qbl.R` invertiam essas chamadas. AR-02 corrigiu os quatro\n   pares e passou em QA independente; ver `interface_repair_closure.json`\n   adjacente. Não sobrescrever outputs antigos nem tratar essa aceitação\n   delimitada como PASS de G3. `fresh_v2` e `zone_fe` usam listas diretas com\n   campos corretos, portanto o achado não lhes é imputado.\n\n## Decisão esperada\n\nIdentificar o código e a versão testados e distinguir: execução, concordância\nnumérica, convergência, fidelidade da portagem e validade inferencial. A decisão\npode manter JAGS como referência de software e rejeitar equivalência do Stan\nhistórico. Problemas de especificação ou suporte sem resolução impedem declarar\numa implementação de produção validada. Nesse caso, G3 deve voltar a G2 ou ficar\ninconclusivo, com contraprova mínima e próximo teste útil, sem liberar G4.\n\nG10 exige reprodução externa dos autores após G3. Descobrir dados e código antes\ndisso é preparação; não constitui execução da replicação nem sua aprovação.\n",
+        "truncated": false
+      }
+    },
+    {
+      "turn_id": "01a0ee04-c9b2-77b1-99f5-601f63832e63",
+      "turn_started_at": 1790699686,
+      "item_order": 38,
+      "id": "exec-87a7e37e-c2ad-4102-9080-db35009004be",
+      "type": "fileChange",
+      "status": "completed",
+      "changes": [
+        {
+          "path": "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/G3/round1/protocol.json",
+          "kind": {
+            "type": "add"
+          },
+          "diff": {
+            "text": "{\n  \"protocol_id\": \"G3-round1-pretest-v1\",\n  \"frozen_before_tests\": true,\n  \"target\": \"Unmodified G0 qbl JAGS source, SHA-256 f8360126424b7a463f76a1c99efc89a8a5cb81339213bd4931559f14595fbab6; JAGS 4.3.2 required\",\n  \"scope\": \"n<=8; enumeration N=1,2,3; no national fitting; conditioned auxiliary contrasts labeled separately\",\n  \"seeds\": {\"generator\": 31101, \"jags_chain_1\": 31102, \"jags_chain_2\": 31103},\n  \"jags\": {\"chains\": 2, \"adapt\": 100, \"burnin\": 200, \"sample_iterations_per_chain\": 1000, \"thin\": 1, \"monitors\": [\"Z\", \"N.iota.m\", \"N.iota.s\"], \"single_process_limit_seconds\": 120},\n  \"deterministic_cases\": {\n    \"N\": [1, 2, 3],\n    \"tau\": 0.5,\n    \"nu\": 0.5,\n    \"mus\": [0.35, 0.35, 0.85, 0.85],\n    \"pi\": [0.5714285714285714, 0.2857142857142857, 0.14285714285714285],\n    \"observations\": \"all integer A,W in 0:N, flag A+W>N independently\",\n    \"invalid_probe\": {\"N\": 1, \"A\": 1, \"W\": 0, \"Z\": 2, \"R_iota_m\": 1, \"R_iota_s\": 0, \"tau\": 0.5, \"nu\": 0.5},\n    \"valid_control\": {\"N\": 1, \"A\": 0, \"W\": 0, \"Z\": 1, \"counts\": [0, 0, 0, 0], \"tau\": 0.5, \"nu\": 0.5}\n  },\n  \"runtime_probes\": [\"observed valid control\", \"invalid active class 2 counts in data\", \"invalid inactive class 1 counts in data\", \"invalid active class 3 counts in data\", \"invalid inactive class 2 chi counts in data\", \"invalid counts in inits\", \"stochastic count initialization/update\", \"a,w missing\", \"a conditioned w missing\", \"a missing w conditioned\"],\n  \"generator\": {\"attempts\": 32, \"max_N\": 3, \"policy\": \"record every attempt, no clamp/redraw/truncation; explicit failure if invalid probability or physical support\"},\n  \"comparison\": {\"case\": \"N=1,A=0,W=0; fixed continuous effects and coefficients; pi auxiliaries fixed; exact posterior over Z and four counts\", \"absolute_deterministic_tolerance\": 1e-12, \"mc_mean_absolute_tolerance\": 0.12, \"minimum_effective_samples_per_chain_combined\": 50, \"maximum_rhat\": 1.2, \"failure_policy\": \"retain output; do not increase iterations/tolerances; diagnostic failure means inconclusive\"},\n  \"timing\": {\"each_test_process_seconds\": 120, \"total_compute_seconds\": 720, \"timeout_is_failure_not_retry_instruction\": true},\n  \"decision_rules\": {\"deterministic\": \"fail on mismatch above tolerance\", \"generator\": \"if any failure or incomplete literal support, T1 not done/pass\", \"engine\": \"JAGS may remain literal software reference; no exact Stan equivalence claim\", \"gate\": \"executor supplies candidate only; independent review and coordination decide pass\"}\n}\n",
+            "truncated": false
+          }
+        }
+      ]
+    },
+    {
+      "turn_id": "01a0ee04-c9b2-77b1-99f5-601f63832e63",
+      "turn_started_at": 1790699686,
+      "item_order": 42,
+      "id": "exec-5e8b3c00-2f40-410f-aadc-9d753895f594",
+      "type": "fileChange",
+      "status": "completed",
+      "changes": [
+        {
+          "path": "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/R/lib/mebane_model.R",
+          "kind": {
+            "type": "add"
+          },
+          "diff": {
+            "text": "# Literal qbl equations. Invalid-parent zero is an audit kernel, not a JAGS claim.\nmebane_fraction <- function(r, N, manufactured = FALSE) {\n  if (manufactured && r == N) 0.999 else r / N\n}\n\nmebane_probabilities <- function(N, A, z, counts, tau, nu) {\n  stopifnot(length(counts) == 4L, z %in% 1:3, N >= 1, A >= 0, A <= N)\n  m <- c(0, mebane_fraction(counts[1], N, TRUE),\n         mebane_fraction(counts[3], N, TRUE))[z]\n  s <- c(0, counts[2] / N, counts[4] / N)[z]\n  pa <- (1 - tau) * (1 - m)\n  q <- A / N\n  # Keep both inactive terms in the literal expression for runtime auditing.\n  im <- mebane_fraction(counts[1], N, TRUE)\n  is <- counts[2] / N\n  cm <- mebane_fraction(counts[3], N, TRUE)\n  cs <- counts[4] / N\n  term <- function(m, s) nu * ((1 - s) / (1 - m)) * (1 - m - q) +\n    q * ((m - s) / (1 - m)) + s\n  pw <- (z == 1) * nu * (1 - q) + (z == 2) * term(im, is) +\n    (z == 3) * term(cm, cs)\n  c(pa = pa, pw = pw, m = m, s = s)\n}\n\nmebane_kernel <- function(N, A, W, z, counts, tau, nu) {\n  if (any(!is.finite(c(N, A, W, tau, nu, counts))) ||\n      N < 1 || N != floor(N) || A < 0 || A > N || A != floor(A) ||\n      W < 0 || W > N || W != floor(W)) return(0)\n  p <- mebane_probabilities(N, A, z, counts, tau, nu)\n  if (any(!is.finite(p[1:2])) || any(p[1:2] < 0 | p[1:2] > 1)) return(0)\n  dbinom(A, N, p[\"pa\"]) * dbinom(W, N, p[\"pw\"])\n}\n\nmebane_enumerate <- function(N, A, W, tau, nu, mus, pi) {\n  stopifnot(N %in% 1:3, length(mus) == 4L, length(pi) == 3L)\n  out <- 0\n  for (z in 1:3) for (r1 in 0:N) for (r2 in 0:N)\n    for (r3 in 0:N) for (r4 in 0:N) {\n      counts <- c(r1, r2, r3, r4)\n      out <- out + pi[z] * prod(dbinom(counts, N, mus)) *\n        mebane_kernel(N, A, W, z, counts, tau, nu)\n    }\n  out\n}\n\nmebane_factorized <- function(N, A, W, tau, nu, mus, pi) {\n  stopifnot(N %in% 1:3, length(mus) == 4L, length(pi) == 3L)\n  base <- mebane_kernel(N, A, W, 1, rep(0, 4), tau, nu)\n  pair <- function(z, indices) {\n    ans <- 0\n    for (r in 0:N) for (s in 0:N) {\n      counts <- rep(0, 4)\n      counts[indices] <- c(r, s)\n      ans <- ans + prod(dbinom(c(r, s), N, mus[indices])) *\n        mebane_kernel(N, A, W, z, counts, tau, nu)\n    }\n    ans\n  }\n  sum(pi * c(base, pair(2, 1:2), pair(3, 3:4)))\n}\n\nmebane_mass <- function(N, tau, nu, mus, pi, physical = FALSE) {\n  sum(vapply(0:N, function(A) sum(vapply(0:N, function(W) {\n    if (physical && A + W > N) return(0)\n    mebane_factorized(N, A, W, tau, nu, mus, pi)\n  }, numeric(1))), numeric(1)))\n}\n\nmebane_attempts <- function(n_attempts, seed, max_N = 3L) {\n  set.seed(seed)\n  blocks <- c(\"tau\", \"nu\", \"iota.m\", \"iota.s\", \"chi.m\", \"chi.s\")\n  out <- vector(\"list\", n_attempts)\n  for (i in seq_len(n_attempts)) {\n    N <- sample.int(max_N, 1)\n    h0 <- runif(1)\n    aux <- c(h0, runif(1, 0, h0), runif(1, 0, h0))\n    alpha <- rnorm(6)\n    variance <- rexp(6, rate = 5)\n    beta0 <- rnorm(6, sd = 0.01)\n    effect <- rnorm(6, alpha, sqrt(variance))\n    eta <- effect + beta0\n    names(eta) <- blocks\n    mu <- c(plogis(eta[1:2]), 0.7 * plogis(eta[3:4]),\n            0.7 + 0.3 * plogis(eta[5:6]))\n    counts <- rbinom(4, N, mu[3:6])\n    z <- sample.int(3, 1, prob = aux / sum(aux))\n    # A is generated before pW, exactly as its observed-parent dependence requires.\n    pa <- (1 - mu[1]) * (1 - c(0, mebane_fraction(counts[1], N, TRUE),\n                                mebane_fraction(counts[3], N, TRUE))[z])\n    A <- rbinom(1, N, pa)\n    p <- mebane_probabilities(N, A, z, counts, mu[1], mu[2])\n    valid <- all(is.finite(p[1:2])) && all(p[1:2] >= 0 & p[1:2] <= 1)\n    W <- if (valid) rbinom(1, N, p[\"pw\"]) else NA_integer_\n    out[[i]] <- data.frame(attempt = i, N = N, Z = z, A = A, W = W,\n                           r_im = counts[1], r_is = counts[2],\n                           r_cm = counts[3], r_cs = counts[4],\n                           tau = unname(mu[1]), nu = unname(mu[2]),\n                           pa = unname(p[\"pa\"]), pw = unname(p[\"pw\"]),\n                           status = if (!valid) \"invalid_probability\" else if (A + W > N)\n                             \"invalid_physical\" else \"valid\")\n  }\n  do.call(rbind, out)\n}\n\nmebane_joint_functionals <- function(draws) {\n  required <- c(\"draw\", \"N\", \"Z\", \"tau\", \"nu\", \"r_im\", \"r_is\", \"r_cm\", \"r_cs\", \"Dobs\")\n  stopifnot(all(required %in% names(draws)))\n  by_draw <- split(draws, draws$draw)\n  do.call(rbind, lapply(by_draw, function(x) {\n    m <- ifelse(x$Z == 1, 0, ifelse(x$Z == 2,\n      ifelse(x$r_im == x$N, 0.999, x$r_im / x$N),\n      ifelse(x$r_cm == x$N, 0.999, x$r_cm / x$N)))\n    s <- ifelse(x$Z == 1, 0, ifelse(x$Z == 2, x$r_is / x$N, x$r_cs / x$N))\n    M <- sum(x$N * m * (1 - x$tau))\n    S <- sum(x$N * s * x$tau * (1 - x$nu))\n    stopifnot(length(unique(x$Dobs)) == 1L)\n    data.frame(draw = x$draw[1], M = M, S = S,\n               margin_lower = x$Dobs[1] - M - 2 * S,\n               margin_upper = x$Dobs[1] - M - S,\n               class1 = sum(x$Z == 1), class2 = sum(x$Z == 2),\n               class3 = sum(x$Z == 3))\n  }))\n}\n",
+            "truncated": false
+          }
+        }
+      ]
+    },
+    {
+      "turn_id": "01a0ee04-c9b2-77b1-99f5-601f63832e63",
+      "turn_started_at": 1790699686,
+      "item_order": 57,
+      "id": "exec-95305a96-5221-4552-8296-702babb0188a",
+      "type": "fileChange",
+      "status": "completed",
+      "changes": [
+        {
+          "path": "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/tests/mebane/likelihood/g3_deterministic.R",
+          "kind": {
+            "type": "add"
+          },
+          "diff": {
+            "text": "source(\"R/lib/mebane_model.R\")\noutdir <- \"quality_reports/results/mebane_gates/G3/round1\"\ntau <- nu <- 0.5\nmus <- c(0.35, 0.35, 0.85, 0.85)\npi <- c(4, 2, 1) / 7\nrows <- list()\nfor (N in 1:3) for (A in 0:N) for (W in 0:N) {\n  full <- mebane_enumerate(N, A, W, tau, nu, mus, pi)\n  factored <- mebane_factorized(N, A, W, tau, nu, mus, pi)\n  rows[[length(rows) + 1L]] <- data.frame(N, A, W, physical = A + W <= N,\n    complete = full, factorized = factored, difference = abs(full - factored))\n}\ngrid <- do.call(rbind, rows)\nwrite.csv(grid, file.path(outdir, \"enumeration.csv\"), row.names = FALSE)\nstopifnot(max(grid$difference) <= 1e-12)\nmass <- do.call(rbind, lapply(1:3, function(N) {\n  raw <- mebane_mass(N, tau, nu, mus, pi)\n  physical <- mebane_mass(N, tau, nu, mus, pi, TRUE)\n  data.frame(N, kernel_mass = raw, physical_mass = physical,\n             invalid_parent_deficit = 1 - raw,\n             unphysical_mass = raw - physical)\n}))\nwrite.csv(mass, file.path(outdir, \"mass.csv\"), row.names = FALSE)\nstopifnot(all(mass$kernel_mass > 0), all(mass$kernel_mass <= 1 + 1e-12),\n          all(mass$physical_mass <= mass$kernel_mass + 1e-12))\ngrid$normalized_all <- grid$factorized / mass$kernel_mass[grid$N]\ngrid$normalized_physical <- ifelse(grid$physical,\n  grid$factorized / mass$physical_mass[grid$N], 0)\nwrite.csv(grid, file.path(outdir, \"normalization.csv\"), row.names = FALSE)\nstopifnot(all(abs(tapply(grid$normalized_all, grid$N, sum) - 1) < 1e-12),\n          all(abs(tapply(grid$normalized_physical, grid$N, sum) - 1) < 1e-12))\nbad <- mebane_probabilities(1, 1, 2, c(1, 0, 0, 0), 0.5, 0.5)\nstopifnot(abs(bad[\"pw\"] - 499.5) < 1e-10,\n          mebane_kernel(1, 1, 0, 2, c(1, 0, 0, 0), 0.5, 0.5) == 0)\nwrite.csv(data.frame(N = 1, A = 1, W = 0, Z = 2,\n                     p_a = bad[\"pa\"], p_w = bad[\"pw\"],\n                     diagnostic_kernel = 0),\n          file.path(outdir, \"counterexample.csv\"), row.names = FALSE)\nattempts <- mebane_attempts(32, 31101, 3)\nwrite.csv(attempts, file.path(outdir, \"generation_attempts.csv\"), row.names = FALSE)\nstopifnot(nrow(attempts) == 32, identical(attempts$attempt, 1:32),\n          all(attempts$N <= 3),\n          all(is.na(attempts$W[attempts$status == \"invalid_probability\"])))\njoint <- data.frame(draw = c(1,1,2,2), N = c(2,3,2,3),\n  Z = c(2,3,1,2), tau = c(.4,.6,.3,.5), nu = c(.5,.7,.6,.4),\n  r_im = c(1,0,0,3), r_is = c(1,0,0,1),\n  r_cm = c(0,3,0,0), r_cs = c(0,2,0,0), Dobs = 10)\njoint_out <- mebane_joint_functionals(joint)\nwrite.csv(joint, file.path(outdir, \"joint_input.csv\"), row.names = FALSE)\nwrite.csv(joint_out, file.path(outdir, \"joint_functionals.csv\"), row.names = FALSE)\nstopifnot(nrow(joint_out) == 2, all(joint_out$margin_lower <= joint_out$margin_upper),\n          all(joint_out$margin_upper == 10 - joint_out$M - joint_out$S),\n          joint_out$M[1] != joint_out$M[2])\ncat(sprintf(\"deterministic PASS: %d grid cases; max diff %.3g; generator statuses %s\\n\",\n  nrow(grid), max(grid$difference), paste(names(table(attempts$status)),\n  table(attempts$status), collapse = \", \")))\n",
+            "truncated": false
+          }
+        }
+      ]
+    },
+    {
+      "turn_id": "01a0ee08-35b6-7292-9838-701f07ead85e",
+      "turn_started_at": 1790699910,
+      "item_order": 4,
+      "id": "exec-3dcb4c83-01d5-49cc-bc06-a8f0b22dbedc",
+      "type": "fileChange",
+      "status": "completed",
+      "changes": [
+        {
+          "path": "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/G3/round1/preflight_v1.md",
+          "kind": {
+            "type": "add"
+          },
+          "diff": {
+            "text": "# Preflight anterior aos ensaios G3\n\nO usuário inspecionou `protocol.json` v1 antes dos resultados e identificou que\nduas cadeias, Rhat 1.2, ESS 50 e tolerância fixa de 0.12 não sustentam a\ncomparação \"dentro do erro Monte Carlo\" de G3-T4. O escopo dos funcionais\nmonitorados era insuficiente. Classificação: achado confirmado de desenho do\nprotocolo, antes de qualquer execução dos testes G3.\n\nO único comando R já executado sob v1 sondou versão/disponibilidade de R,\n`rjags`, `runjags`, `eforensics`, `jsonlite` e `coda` e, em segunda invocação,\nacrescentou a library renv existente para confirmar JAGS 4.3.2. Ambos terminaram\ncom exit code 0; nenhuma cadeia JAGS, enumeração, gerador ou comparação foi\nexecutada. `g3_deterministic.R` foi escrito, mas não executado. Não havia\nprocesso de teste ativo no momento da interrupção nem output de ensaio a\nsobrescrever. O v1 permanece intacto e não será usado para aprovação.\n\nO `protocol_v2.json` registra os critérios confirmatórios antes da primeira\nexecução. O código dos testes deve registrar MCSE e diagnósticos para cada alvo,\ne qualquer dependência ausente torna a comparação inconclusiva, sem instalação.\n",
+            "truncated": false
+          }
+        },
+        {
+          "path": "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/G3/round1/protocol_v2.json",
+          "kind": {
+            "type": "add"
+          },
+          "diff": {
+            "text": "{\n  \"protocol_id\": \"G3-round1-pretest-v2\",\n  \"supersedes_for_confirmation\": \"protocol.json\",\n  \"reason\": \"User preflight found MC tolerance and diagnostics insufficient before test results\",\n  \"frozen_before_tests\": true,\n  \"v1_execution\": \"Only environment/version probes; no G3 test or JAGS chain run; no active process or test output\",\n  \"target\": \"Unmodified G0 qbl JAGS source, SHA-256 f8360126424b7a463f76a1c99efc89a8a5cb81339213bd4931559f14595fbab6; JAGS 4.3.2 required\",\n  \"scope\": \"n<=8; enumeration N=1,2,3; no national fitting; conditioned comparison is not an unconditioned full-model validation\",\n  \"seeds\": {\"generator\": 31101, \"jags_chains\": [31102, 31103, 31104, 31105]},\n  \"jags\": {\"chains\": 4, \"adapt\": 200, \"burnin\": 500, \"sample_iterations_per_chain\": 2000, \"thin\": 1, \"single_process_limit_seconds\": 120},\n  \"deterministic_cases\": {\"N\": [1, 2, 3], \"tau\": 0.5, \"nu\": 0.5, \"mus\": [0.35, 0.35, 0.85, 0.85], \"pi\": [0.5714285714285714, 0.2857142857142857, 0.14285714285714285], \"observations\": \"all integer A,W in 0:N, flag A+W>N independently\", \"invalid_probe\": {\"N\": 1, \"A\": 1, \"W\": 0, \"Z\": 2, \"R_iota_m\": 1, \"R_iota_s\": 0, \"tau\": 0.5, \"nu\": 0.5}, \"valid_control\": {\"N\": 1, \"A\": 0, \"W\": 0, \"Z\": 1, \"counts\": [0, 0, 0, 0], \"tau\": 0.5, \"nu\": 0.5}},\n  \"runtime_probes\": [\"observed valid control\", \"invalid active class 2 counts in data\", \"invalid inactive class 1 counts in data\", \"invalid active class 3 counts in data\", \"invalid inactive class 2 chi counts in data\", \"invalid counts in inits\", \"stochastic count initialization/update\", \"a,w missing\", \"a conditioned w missing\", \"a missing w conditioned\"],\n  \"generator\": {\"attempts\": 32, \"max_N\": 3, \"policy\": \"record every attempt, no clamp/redraw/truncation; explicit failure if invalid probability or physical support\"},\n  \"comparison\": {\n    \"case\": \"N=1,A=0,W=0; continuous effects, coefficients and pi auxiliaries fixed and labeled conditioned; exact posterior over Z and four counts\",\n    \"monitored_nodes\": [\"Z\", \"N.iota.m\", \"N.iota.s\", \"N.chi.m\", \"N.chi.s\"],\n    \"derived_targets\": [\"indicator_Z1\", \"indicator_Z2\", \"indicator_Z3\", \"M\", \"S\", \"margin_lower\", \"margin_upper\"],\n    \"fixed_continuous_targets\": [\"tau=0.5\", \"nu=0.5\", \"Dobs=1\"],\n    \"absolute_deterministic_tolerance\": 1e-12,\n    \"mc_mean_absolute_tolerance\": \"max(1e-3, 6*MCSE) per target\",\n    \"mcse_method\": \"per-chain non-overlapping batch means, batch size 50 for 2000 draws, 40 batches; pooled MCSE=sqrt(sum_c var(batch_means_c)/40)/4; independent chains\",\n    \"diagnostics\": \"posterior rank-normalized split Rhat <1.01 and bulk/tail ESS >=400 for every nonconstant monitored or derived target; constant targets checked analytically without diagnostics claim\",\n    \"missing_dependency\": \"inconclusive, no install\",\n    \"failure_policy\": \"retain output and failures; do not increase iterations/tolerances or select new cases\"\n  },\n  \"timing\": {\"each_test_process_seconds\": 120, \"total_compute_seconds\": 720, \"timeout_is_failure_not_retry_instruction\": true},\n  \"decision_rules\": {\"deterministic\": \"fail on mismatch above 1e-12\", \"generator\": \"if any failure or incomplete literal support, T1 not done/pass\", \"engine\": \"JAGS may remain literal software reference; no exact Stan equivalence claim\", \"gate\": \"executor supplies candidate only; independent review and coordination decide pass\"}\n}\n",
+            "truncated": false
+          }
+        }
+      ]
+    },
+    {
+      "turn_id": "01a0ee08-35b6-7292-9838-701f07ead85e",
+      "turn_started_at": 1790699910,
+      "item_order": 10,
+      "id": "exec-5e2918b3-c742-427b-814e-7a1ba2930668",
+      "type": "fileChange",
+      "status": "completed",
+      "changes": [
+        {
+          "path": "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/tests/mebane/likelihood/g3_jags.R",
+          "kind": {
+            "type": "add"
+          },
+          "diff": {
+            "text": "lib <- \"renv/library/macos/R-4.4/aarch64-apple-darwin20\"\n.libPaths(c(lib, .libPaths()))\nstopifnot(requireNamespace(\"rjags\", quietly = TRUE),\n          requireNamespace(\"coda\", quietly = TRUE),\n          requireNamespace(\"jsonlite\", quietly = TRUE))\nsource(\"R/lib/mebane_model.R\")\noutdir <- \"quality_reports/results/mebane_gates/G3/round1\"\nmodel <- \"quality_reports/results/mebane_gates/G0/round1/qbl_installed_3017de5.jags\"\nstopifnot(identical(unname(tools::md5sum(model)), unname(tools::md5sum(model))),\n          as.character(rjags::jags.version()) == \"4.3.2\")\nsave_json <- function(x, name) jsonlite::write_json(x, file.path(outdir, name),\n  auto_unbox = TRUE, pretty = TRUE, na = \"null\")\nbase <- function() {\n  x <- list(n = 1L, N = 1L, a = 0L, w = 0L,\n            \"pi.aux1\" = 1, \"pi.aux2\" = .5, \"pi.aux3\" = .25)\n  for (nm in c(\"tau\", \"nu\", \"iota.m\", \"iota.s\", \"chi.m\", \"chi.s\")) {\n    x[[paste0(\"X\", if (nm %in% c(\"tau\", \"nu\"))\n      if (nm == \"tau\") \"a\" else \"w\" else paste0(\".\", nm))]] <- matrix(1, 1, 1)\n    x[[paste0(\"dx\", if (nm %in% c(\"tau\", \"nu\"))\n      if (nm == \"tau\") \"a\" else \"w\" else paste0(\".\", nm))]] <- 1L\n    h <- switch(nm, tau = \"th\", nu = \"nh\", \"iota.m\" = \"imh\",\n                \"iota.s\" = \"ish\", \"chi.m\" = \"cmh\", \"chi.s\" = \"csh\")\n    x[[h]] <- 0\n    x[[paste0(\"beta.\", nm, \"1\")]] <- 0\n  }\n  x$Z <- 1L\n  for (nm in c(\"iota.m\", \"iota.s\", \"chi.m\", \"chi.s\"))\n    x[[paste0(\"N.\", nm)]] <- 0L\n  x\n}\nprobe <- function(id, data, inits = NULL, update_steps = 1L) {\n  stage <- \"compile\"\n  started <- Sys.time()\n  result <- tryCatch({\n    jm <- rjags::jags.model(model, data = data, inits = inits,\n                           n.chains = 1L, n.adapt = 1L, quiet = TRUE)\n    stage <- \"update\"\n    rjags::update(jm, update_steps, progress.bar = \"none\")\n    stage <- \"sample\"\n    smp <- rjags::coda.samples(jm, c(\"p.a\", \"p.w\", \"a\", \"w\", \"Z\"),\n                                n.iter = 1L, progress.bar = \"none\")\n    list(id = id, outcome = \"success\", stage = stage,\n         values = as.list(as.numeric(as.matrix(smp[[1]])[1, ])),\n         variables = colnames(as.matrix(smp[[1]])),\n         seconds = as.numeric(difftime(Sys.time(), started, units = \"secs\")))\n  }, error = function(e) list(id = id, outcome = \"error\", stage = stage,\n      message = conditionMessage(e),\n      seconds = as.numeric(difftime(Sys.time(), started, units = \"secs\"))))\n  result\n}\nprobes <- list()\nadd <- function(id, data, inits = NULL, update_steps = 1L) {\n  probes[[length(probes) + 1L]] <<- probe(id, data, inits, update_steps)\n  save_json(probes, \"jags_probes.json\")\n}\nd <- base(); add(\"valid_control_observed\", d)\nd <- base(); d$a <- 1L; d$Z <- 2L; d[[\"N.iota.m\"]] <- 1L\nadd(\"invalid_active_class2_data\", d)\nd <- base(); d$a <- 1L; d[[\"N.iota.m\"]] <- 1L\nadd(\"invalid_inactive_class1_data\", d)\nd <- base(); d$a <- 1L; d$Z <- 3L; d[[\"N.chi.m\"]] <- 1L\nadd(\"invalid_active_class3_data\", d)\nd <- base(); d$a <- 1L; d$Z <- 2L; d[[\"N.chi.m\"]] <- 1L\nadd(\"invalid_inactive_chi_class2_data\", d)\nd <- base(); d$a <- 1L; d$Z <- 2L; d[[\"N.iota.m\"]] <- NULL\nadd(\"invalid_active_class2_init\", d, list(\"N.iota.m\" = 1L))\nd <- base(); d$a <- 1L; d$Z <- 2L; d[[\"N.iota.m\"]] <- NULL\nadd(\"stochastic_count_update\", d, update_steps = 20L)\nd <- base(); d$a <- NA_integer_; d$w <- NA_integer_\nadd(\"a_w_missing\", d)\nd <- base(); d$w <- NA_integer_; add(\"a_conditioned_w_missing\", d)\nd <- base(); d$a <- NA_integer_; add(\"a_missing_w_conditioned\", d)\ncat(\"JAGS probes complete:\", length(probes), \"cases\\n\")\n\n# This comparison conditions on continuous effects, coefficients and pi auxiliaries.\ncmp <- base()\ncmp$Z <- NULL\nfor (nm in c(\"iota.m\", \"iota.s\", \"chi.m\", \"chi.s\"))\n  cmp[[paste0(\"N.\", nm)]] <- NULL\nseeds <- 31102:31105\nstart <- Sys.time()\nfit <- tryCatch({\n  ini <- lapply(seeds, function(s) list(.RNG.name = \"base::Mersenne-Twister\",\n                                        .RNG.seed = as.integer(s)))\n  jm <- rjags::jags.model(model, data = cmp, inits = ini, n.chains = 4L,\n                         n.adapt = 200L, quiet = TRUE)\n  rjags::update(jm, 500L, progress.bar = \"none\")\n  rjags::coda.samples(jm,\n    c(\"Z\", \"N.iota.m\", \"N.iota.s\", \"N.chi.m\", \"N.chi.s\"),\n    n.iter = 2000L, progress.bar = \"none\")\n}, error = function(e) e)\nif (inherits(fit, \"error\")) {\n  save_json(list(status = \"inconclusive\", message = conditionMessage(fit),\n                 seconds = as.numeric(difftime(Sys.time(), start, units = \"secs\"))),\n            \"comparison_result.json\")\n  cat(\"conditioned JAGS comparison INCONCLUSIVE:\", conditionMessage(fit), \"\\n\")\n  quit(status = 0)\n}\nmatrices <- lapply(fit, as.matrix)\nnode <- function(name) do.call(cbind, lapply(matrices, function(x) x[, paste0(name, \"[1]\")]))\nZ <- node(\"Z\"); im <- node(\"N.iota.m\"); is <- node(\"N.iota.s\")\ncm <- node(\"N.chi.m\"); cs <- node(\"N.chi.s\")\nM <- ifelse(Z == 1, 0, ifelse(Z == 2, ifelse(im == 1, .999, 0),\n                              ifelse(cm == 1, .999, 0))) * .5\nS <- ifelse(Z == 1, 0, ifelse(Z == 2, is, cs)) * .25\ntargets <- list(Z = Z, r_im = im, r_is = is, r_cm = cm, r_cs = cs,\n  indicator_Z1 = (Z == 1) * 1, indicator_Z2 = (Z == 2) * 1,\n  indicator_Z3 = (Z == 3) * 1, M = M, S = S,\n  margin_lower = 1 - M - 2*S, margin_upper = 1 - M - S)\nstates <- list()\nfor (z in 1:3) for (r1 in 0:1) for (r2 in 0:1)\n  for (r3 in 0:1) for (r4 in 0:1) {\n    counts <- c(r1,r2,r3,r4)\n    weight <- c(4,2,1)[z]/7 * prod(dbinom(counts, 1,\n      c(.35,.35,.85,.85))) * mebane_kernel(1,0,0,z,counts,.5,.5)\n    m <- if (z == 1) 0 else if (z == 2) if (r1 == 1) .999 else 0 else if (r3 == 1) .999 else 0\n    s <- if (z == 1) 0 else if (z == 2) r2 else r4\n    states[[length(states)+1L]] <- data.frame(Z=z,r_im=r1,r_is=r2,r_cm=r3,r_cs=r4,\n      indicator_Z1=as.numeric(z==1),indicator_Z2=as.numeric(z==2),\n      indicator_Z3=as.numeric(z==3),M=.5*m,S=.25*s,\n      margin_lower=1-.5*m-.5*s,margin_upper=1-.5*m-.25*s,weight=weight)\n  }\nexact <- do.call(rbind, states)\nexact$posterior <- exact$weight/sum(exact$weight)\nwrite.csv(exact, file.path(outdir,\"conditional_exact_states.csv\"), row.names=FALSE)\nif (!requireNamespace(\"posterior\", quietly = TRUE)) {\n  save_json(list(status=\"inconclusive\",reason=\"posterior package unavailable\"),\n            \"comparison_result.json\")\n  quit(status=0)\n}\nmcse_batch <- function(x) {\n  stopifnot(nrow(x)==2000L,ncol(x)==4L)\n  batches <- sapply(1:4,function(chain) colMeans(matrix(x[,chain],nrow=50L,ncol=40L)))\n  sqrt(sum(apply(batches,2,var)/40))/4\n}\nsummary <- do.call(rbind,lapply(names(targets),function(nm) {\n  x <- targets[[nm]]\n  expectation <- sum(exact[[nm]]*exact$posterior)\n  constant <- length(unique(as.vector(x)))==1L && length(unique(exact[[nm]]))==1L\n  mcse <- if (constant) 0 else mcse_batch(x)\n  draws <- posterior::as_draws_array(array(x, dim=c(2000L,4L,1L),\n    dimnames=list(NULL,NULL,nm)))\n  rh <- if (constant) NA_real_ else posterior::rhat(draws)[[1]]\n  eb <- if (constant) NA_real_ else posterior::ess_bulk(draws)[[1]]\n  et <- if (constant) NA_real_ else posterior::ess_tail(draws)[[1]]\n  tol <- max(1e-3,6*mcse)\n  data.frame(target=nm,exact=expectation,mc_mean=mean(x),mcse=mcse,\n    tolerance=tol,difference=abs(mean(x)-expectation),rhat=rh,\n    ess_bulk=eb,ess_tail=et,constant=constant)\n}))\nsummary$mean_pass <- summary$difference <= summary$tolerance\nsummary$diagnostic_pass <- with(summary,constant |\n  (!is.na(rhat) & rhat < 1.01 & ess_bulk >= 400 & ess_tail >= 400))\nwrite.csv(summary,file.path(outdir,\"conditional_comparison.csv\"),row.names=FALSE)\nsave_json(list(status=if(all(summary$mean_pass & summary$diagnostic_pass)) \"pass_conditioned\" else \"inconclusive\",\n  continuous_fixed=list(tau=.5,nu=.5,Dobs=1),chains=4L,iterations=2000L,\n  seconds=as.numeric(difftime(Sys.time(),start,units=\"secs\")),\n  all_mean_pass=all(summary$mean_pass),all_diagnostic_pass=all(summary$diagnostic_pass)),\n  \"comparison_result.json\")\ncat(\"conditioned comparison complete:\", all(summary$mean_pass),\n    all(summary$diagnostic_pass),\"\\n\")\n",
+            "truncated": false
+          }
+        }
+      ]
+    },
+    {
+      "turn_id": "01a0ee08-35b6-7292-9838-701f07ead85e",
+      "turn_started_at": 1790699910,
+      "item_order": 14,
+      "id": "exec-5917a647-9399-47fb-96b0-9f87fb360581",
+      "type": "commandExecution",
+      "command": "/bin/zsh -lc '/usr/bin/time -p timeout 120 Rscript --vanilla tests/mebane/likelihood/g3_deterministic.R > quality_reports/results/mebane_gates/G3/round1/g3_deterministic.log 2>&1'",
+      "status": "failed",
+      "exit_code": 1,
+      "duration_ms": 429
+    },
+    {
+      "turn_id": "01a0ee08-35b6-7292-9838-701f07ead85e",
+      "turn_started_at": 1790699910,
+      "item_order": 16,
+      "id": "exec-83b8869f-c130-48ff-94ff-b5a0c791b6ab",
+      "type": "commandExecution",
+      "command": "/bin/zsh -lc 'cat quality_reports/results/mebane_gates/G3/round1/g3_deterministic.log'",
+      "status": "completed",
+      "exit_code": 0,
+      "duration_ms": 0,
+      "output": {
+        "text": "During startup - Warning messages:\n1: Setting LC_CTYPE failed, using \"C\" \n2: Setting LC_COLLATE failed, using \"C\" \n3: Setting LC_TIME failed, using \"C\" \n4: Setting LC_MESSAGES failed, using \"C\" \n5: Setting LC_MONETARY failed, using \"C\" \nError in if (A + W > N) \"invalid_physical\" else \"valid\" : \n  missing value where TRUE/FALSE needed\nCalls: mebane_attempts -> data.frame\nIn addition: Warning message:\nIn rbinom(1, N, p[\"pw\"]) : NAs produced\nExecution halted\nreal 0.54\nuser 0.48\nsys 0.03\n",
+        "truncated": false
+      }
+    },
+    {
+      "turn_id": "01a0ee08-35b6-7292-9838-701f07ead85e",
+      "turn_started_at": 1790699910,
+      "item_order": 20,
+      "id": "exec-480ddda5-5b2b-47db-acb0-ba90d5f5dd8e",
+      "type": "fileChange",
+      "status": "completed",
+      "changes": [
+        {
+          "path": "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/R/lib/mebane_model.R",
+          "kind": {
+            "type": "update",
+            "move_path": null
+          },
+          "diff": {
+            "text": "@@ -7,2 +7,4 @@\n   stopifnot(length(counts) == 4L, z %in% 1:3, N >= 1, A >= 0, A <= N)\n+  tau <- unname(tau)\n+  nu <- unname(nu)\n   m <- c(0, mebane_fraction(counts[1], N, TRUE),\n",
+            "truncated": false
+          }
+        },
+        {
+          "path": "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/tests/mebane/likelihood/g3_deterministic.R",
+          "kind": {
+            "type": "update",
+            "move_path": null
+          },
+          "diff": {
+            "text": "@@ -1,3 +1,4 @@\n source(\"R/lib/mebane_model.R\")\n-outdir <- \"quality_reports/results/mebane_gates/G3/round1\"\n+outdir <- \"quality_reports/results/mebane_gates/G3/round1/deterministic_attempt2\"\n+dir.create(outdir, recursive = TRUE, showWarnings = FALSE)\n tau <- nu <- 0.5\n",
+            "truncated": false
+          }
+        }
+      ]
+    },
+    {
+      "turn_id": "01a0ee08-35b6-7292-9838-701f07ead85e",
+      "turn_started_at": 1790699910,
+      "item_order": 25,
+      "id": "exec-034695ba-80d9-4e97-99f1-9b9cf7ea3239",
+      "type": "fileChange",
+      "status": "completed",
+      "changes": [
+        {
+          "path": "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/G3/round1/protocol_provenance_errata.md",
+          "kind": {
+            "type": "add"
+          },
+          "diff": {
+            "text": "# Errata de proveniência e interpretação, sem retuning\n\nQuem inspecionou `protocol.json` v1 e encaminhou o preflight foi o\n**COORDENADOR**, não o usuário. As atribuições em `preflight_v1.md` e no campo\n`protocol_v2.json.reason` estão incorretas nesse ponto. Os arquivos de\nprotocolo congelados permanecem byte-intactos; critérios numéricos e seeds não\nmudam. A errata integra a interpretação de todas as saídas desta rodada.\n\nNa comparação condicionada N=1, A=0, W=0, `Dobs=1` é um **deslocamento\nalgébrico de fixture**. Não é uma margem eleitoral realizável a partir da\nobservação (votos no líder zero). M, S e as duas expressões de margem são\ntestes de álgebra por draw, não validação de contrafactual físico. Registrar\n`observed_margin_compatible=false` e flags de capacidade sem clipping. Um\nresultado MC que passe nesses funcionais não satisfaz, por si só, a validação\nfísica da margem nem fecha G3.\n",
+            "truncated": false
+          }
+        }
+      ]
+    },
+    {
+      "turn_id": "01a0ee08-35b6-7292-9838-701f07ead85e",
+      "turn_started_at": 1790699910,
+      "item_order": 27,
+      "id": "exec-8d397c53-a60a-48b9-bc72-3fdb8c7fb417",
+      "type": "commandExecution",
+      "command": "/bin/zsh -lc '/usr/bin/time -p timeout 120 Rscript --vanilla tests/mebane/likelihood/g3_deterministic.R > quality_reports/results/mebane_gates/G3/round1/g3_deterministic_attempt2.log 2>&1'",
+      "status": "completed",
+      "exit_code": 0,
+      "duration_ms": 442
+    },
+    {
+      "turn_id": "01a0ee08-35b6-7292-9838-701f07ead85e",
+      "turn_started_at": 1790699910,
+      "item_order": 28,
+      "id": "exec-a32f677a-5281-49ca-864f-3973cc82dcae",
+      "type": "commandExecution",
+      "command": "/bin/zsh -lc 'cat quality_reports/results/mebane_gates/G3/round1/g3_deterministic_attempt2.log'",
+      "status": "completed",
+      "exit_code": 0,
+      "duration_ms": 0,
+      "output": {
+        "text": "During startup - Warning messages:\n1: Setting LC_CTYPE failed, using \"C\" \n2: Setting LC_COLLATE failed, using \"C\" \n3: Setting LC_TIME failed, using \"C\" \n4: Setting LC_MESSAGES failed, using \"C\" \n5: Setting LC_MONETARY failed, using \"C\" \ndeterministic PASS: 29 grid cases; max diff 2.5e-16; generator statuses valid 32\nreal 0.56\nuser 0.51\nsys 0.03\n",
+        "truncated": false
+      }
+    },
+    {
+      "turn_id": "01a0ee08-35b6-7292-9838-701f07ead85e",
+      "turn_started_at": 1790699910,
+      "item_order": 30,
+      "id": "exec-f18a60d0-2b14-4dc7-a767-30072fa9f4da",
+      "type": "fileChange",
+      "status": "completed",
+      "changes": [
+        {
+          "path": "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/R/lib/mebane_model.R",
+          "kind": {
+            "type": "update",
+            "move_path": null
+          },
+          "diff": {
+            "text": "@@ -107,3 +107,4 @@\n mebane_joint_functionals <- function(draws) {\n-  required <- c(\"draw\", \"N\", \"Z\", \"tau\", \"nu\", \"r_im\", \"r_is\", \"r_cm\", \"r_cs\", \"Dobs\")\n+  required <- c(\"draw\", \"N\", \"A\", \"W\", \"runner_up\", \"Z\", \"tau\", \"nu\",\n+                \"r_im\", \"r_is\", \"r_cm\", \"r_cs\", \"Dobs\")\n   stopifnot(all(required %in% names(draws)))\n@@ -118,2 +119,6 @@\n     stopifnot(length(unique(x$Dobs)) == 1L)\n+    observed_counts_valid <- all(x$A >= 0 & x$W >= 0 & x$runner_up >= 0 &\n+      x$A + x$W + x$runner_up <= x$N)\n+    margin_compatible <- abs(x$Dobs[1] - sum(x$W - x$runner_up)) < 1e-12\n+    leader_capacity <- M + S <= sum(x$W) + 1e-12\n     data.frame(draw = x$draw[1], M = M, S = S,\n@@ -121,2 +126,6 @@\n                margin_upper = x$Dobs[1] - M - S,\n+               observed_counts_valid = observed_counts_valid,\n+               observed_margin_compatible = margin_compatible,\n+               leader_capacity_necessary = leader_capacity,\n+               physical_counterfactual_validated = FALSE,\n                class1 = sum(x$Z == 1), class2 = sum(x$Z == 2),\n",
+            "truncated": false
+          }
+        },
+        {
+          "path": "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/tests/mebane/likelihood/g3_deterministic.R",
+          "kind": {
+            "type": "update",
+            "move_path": null
+          },
+          "diff": {
+            "text": "@@ -45,2 +45,3 @@\n joint <- data.frame(draw = c(1,1,2,2), N = c(2,3,2,3),\n+  A = c(0,0,0,0), W = c(1,1,1,1), runner_up = c(0,1,0,1),\n   Z = c(2,3,1,2), tau = c(.4,.6,.3,.5), nu = c(.5,.7,.6,.4),\n@@ -53,2 +54,4 @@\n           all(joint_out$margin_upper == 10 - joint_out$M - joint_out$S),\n+          all(!joint_out$observed_margin_compatible),\n+          all(!joint_out$physical_counterfactual_validated),\n           joint_out$M[1] != joint_out$M[2])\n",
+            "truncated": false
+          }
+        },
+        {
+          "path": "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/tests/mebane/likelihood/g3_jags.R",
+          "kind": {
+            "type": "update",
+            "move_path": null
+          },
+          "diff": {
+            "text": "@@ -8,3 +8,4 @@\n model <- \"quality_reports/results/mebane_gates/G0/round1/qbl_installed_3017de5.jags\"\n-stopifnot(identical(unname(tools::md5sum(model)), unname(tools::md5sum(model))),\n+actual_sha <- strsplit(system2(\"shasum\", c(\"-a\", \"256\", model), stdout = TRUE), \" \")[[1]][1]\n+stopifnot(actual_sha == \"f8360126424b7a463f76a1c99efc89a8a5cb81339213bd4931559f14595fbab6\",\n           as.character(rjags::jags.version()) == \"4.3.2\")\n@@ -124,3 +125,12 @@\n exact$posterior <- exact$weight/sum(exact$weight)\n+exact$observed_margin_compatible <- FALSE\n+exact$leader_capacity_necessary <- exact$M + exact$S <= 0\n+exact$physical_counterfactual_validated <- FALSE\n write.csv(exact, file.path(outdir,\"conditional_exact_states.csv\"), row.names=FALSE)\n+save_json(list(Dobs_kind=\"algebraic_fixture_offset_not_observed_margin\",\n+  N=1,A=0,W=0,Dobs_offset=1,observed_margin_compatible=FALSE,\n+  leader_capacity_necessary_fraction=sum(exact$posterior[exact$leader_capacity_necessary]),\n+  source_capacity_fully_verified=FALSE,physical_counterfactual_validated=FALSE,\n+  note=\"Expected-vote functionals; necessary flags do not establish physical origin/ballot feasibility\"),\n+  \"margin_feasibility.json\")\n if (!requireNamespace(\"posterior\", quietly = TRUE)) {\n",
+            "truncated": false
+          }
+        }
+      ]
+    },
+    {
+      "turn_id": "01a0ee08-35b6-7292-9838-701f07ead85e",
+      "turn_started_at": 1790699910,
+      "item_order": 32,
+      "id": "exec-7f87edb9-114a-4d94-8278-5d676c61bf4d",
+      "type": "fileChange",
+      "status": "completed",
+      "changes": [
+        {
+          "path": "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/tests/mebane/likelihood/g3_deterministic.R",
+          "kind": {
+            "type": "update",
+            "move_path": null
+          },
+          "diff": {
+            "text": "@@ -1,3 +1,3 @@\n source(\"R/lib/mebane_model.R\")\n-outdir <- \"quality_reports/results/mebane_gates/G3/round1/deterministic_attempt2\"\n+outdir <- \"quality_reports/results/mebane_gates/G3/round1/deterministic_attempt3\"\n dir.create(outdir, recursive = TRUE, showWarnings = FALSE)\n",
+            "truncated": false
+          }
+        }
+      ]
+    },
+    {
+      "turn_id": "01a0ee08-35b6-7292-9838-701f07ead85e",
+      "turn_started_at": 1790699910,
+      "item_order": 35,
+      "id": "exec-8f337ba3-37ca-47b0-9f6b-330d812ae3d6",
+      "type": "commandExecution",
+      "command": "/bin/zsh -lc '/usr/bin/time -p timeout 120 Rscript --vanilla tests/mebane/likelihood/g3_deterministic.R > quality_reports/results/mebane_gates/G3/round1/g3_deterministic_attempt3.log 2>&1'",
+      "status": "completed",
+      "exit_code": 0,
+      "duration_ms": 446
+    },
+    {
+      "turn_id": "01a0ee08-35b6-7292-9838-701f07ead85e",
+      "turn_started_at": 1790699910,
+      "item_order": 36,
+      "id": "exec-39fc0c88-d6b6-4a53-9f81-0ed65fa6f7a0",
+      "type": "commandExecution",
+      "command": "/bin/zsh -lc '/usr/bin/time -p timeout 120 Rscript --vanilla tests/mebane/likelihood/g3_jags.R > quality_reports/results/mebane_gates/G3/round1/g3_jags_attempt1.log 2>&1'",
+      "status": "completed",
+      "exit_code": 0,
+      "duration_ms": 154
+    },
+    {
+      "turn_id": "01a0ee08-35b6-7292-9838-701f07ead85e",
+      "turn_started_at": 1790699910,
+      "item_order": 38,
+      "id": "exec-351ecb58-4a9f-4480-85ac-5e0af0f97111",
+      "type": "commandExecution",
+      "command": "/bin/zsh -lc 'cat quality_reports/results/mebane_gates/G3/round1/g3_jags_attempt1.log'",
+      "status": "completed",
+      "exit_code": 0,
+      "duration_ms": 0,
+      "output": {
+        "text": "During startup - Warning messages:\n1: Setting LC_CTYPE failed, using \"C\" \n2: Setting LC_COLLATE failed, using \"C\" \n3: Setting LC_TIME failed, using \"C\" \n4: Setting LC_MESSAGES failed, using \"C\" \n5: Setting LC_MONETARY failed, using \"C\" \nperl: warning: Setting locale failed.\nperl: warning: Please check that your locale settings:\n\tLC_ALL = \"C.UTF-8\",\n\tLC_CTYPE = \"C.UTF-8\",\n\tLANG = \"C.UTF-8\"\n    are supported and installed on your system.\nperl: warning: Falling back to the standard locale (\"C\").\nWarning message:\nIn rjags::jags.model(model, data = data, inits = inits, n.chains = 1L,  :\n  Adaptation incomplete\nWarning message:\nIn rjags::jags.model(model, data = data, inits = inits, n.chains = 1L,  :\n  Adaptation incomplete\nWarning message:\nIn rjags::jags.model(model, data = data, inits = inits, n.chains = 1L,  :\n  Adaptation incomplete\nWarning message:\nIn rjags::jags.model(model, data = data, inits = inits, n.chains = 1L,  :\n  Adaptation incomplete\nWarning message:\nIn rjags::jags.model(model, data = data, inits = inits, n.chains = 1L,  :\n  Adaptation incomplete\nWarning message:\nIn rjags::jags.model(model, data = data, inits = inits, n.chains = 1L,  :\n  Adaptation incomplete\nWarning message:\nIn rjags::jags.model(model, data = data, inits = inits, n.chains = 1L,  :\n  Adaptation incomplete\nJAGS probes complete: 10 cases\nconditioned JAGS comparison INCONCLUSIVE: 'update' is not an exported object from 'namespace:rjags' \nreal 0.27\nuser 0.21\nsys 0.04\n",
+        "truncated": false
+      }
+    },
+    {
+      "turn_id": "01a0ee08-35b6-7292-9838-701f07ead85e",
+      "turn_started_at": 1790699910,
+      "item_order": 43,
+      "id": "exec-b0e9f904-566c-41ba-a0df-ec0c7be8f4c8",
+      "type": "fileChange",
+      "status": "completed",
+      "changes": [
+        {
+          "path": "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/tests/mebane/likelihood/g3_jags.R",
+          "kind": {
+            "type": "update",
+            "move_path": null
+          },
+          "diff": {
+            "text": "@@ -6,3 +6,4 @@\n source(\"R/lib/mebane_model.R\")\n-outdir <- \"quality_reports/results/mebane_gates/G3/round1\"\n+outdir <- \"quality_reports/results/mebane_gates/G3/round1/jags_attempt2\"\n+dir.create(outdir, recursive = TRUE, showWarnings = FALSE)\n model <- \"quality_reports/results/mebane_gates/G0/round1/qbl_installed_3017de5.jags\"\n@@ -38,3 +39,3 @@\n     stage <- \"update\"\n-    rjags::update(jm, update_steps, progress.bar = \"none\")\n+    stats::update(jm, update_steps, progress.bar = \"none\")\n     stage <- \"sample\"\n@@ -87,3 +88,3 @@\n                          n.adapt = 200L, quiet = TRUE)\n-  rjags::update(jm, 500L, progress.bar = \"none\")\n+  stats::update(jm, 500L, progress.bar = \"none\")\n   rjags::coda.samples(jm,\n",
+            "truncated": false
+          }
+        }
+      ]
+    },
+    {
+      "turn_id": "01a0ee08-35b6-7292-9838-701f07ead85e",
+      "turn_started_at": 1790699910,
+      "item_order": 44,
+      "id": "exec-16393a95-824d-40bc-affe-64ba4f890b21",
+      "type": "commandExecution",
+      "command": "/bin/zsh -lc '/usr/bin/time -p timeout 120 Rscript --vanilla tests/mebane/likelihood/g3_jags.R > quality_reports/results/mebane_gates/G3/round1/g3_jags_attempt2.log 2>&1'",
+      "status": "failed",
+      "exit_code": 1,
+      "duration_ms": 224
+    },
+    {
+      "turn_id": "01a0ee08-35b6-7292-9838-701f07ead85e",
+      "turn_started_at": 1790699910,
+      "item_order": 46,
+      "id": "exec-29dcad78-566f-4652-a0e9-8348015af537",
+      "type": "commandExecution",
+      "command": "/bin/zsh -lc 'cat quality_reports/results/mebane_gates/G3/round1/g3_jags_attempt2.log'",
+      "status": "completed",
+      "exit_code": 0,
+      "duration_ms": 0,
+      "output": {
+        "text": "During startup - Warning messages:\n1: Setting LC_CTYPE failed, using \"C\" \n2: Setting LC_COLLATE failed, using \"C\" \n3: Setting LC_TIME failed, using \"C\" \n4: Setting LC_MESSAGES failed, using \"C\" \n5: Setting LC_MONETARY failed, using \"C\" \nperl: warning: Setting locale failed.\nperl: warning: Please check that your locale settings:\n\tLC_ALL = \"C.UTF-8\",\n\tLC_CTYPE = \"C.UTF-8\",\n\tLANG = \"C.UTF-8\"\n    are supported and installed on your system.\nperl: warning: Falling back to the standard locale (\"C\").\nNOTE: Stopping adaptation\n\n\nWarning message:\nIn rjags::jags.model(model, data = data, inits = inits, n.chains = 1L,  :\n  Adaptation incomplete\nNOTE: Stopping adaptation\n\n\nWarning message:\nIn rjags::jags.model(model, data = data, inits = inits, n.chains = 1L,  :\n  Adaptation incomplete\nNOTE: Stopping adaptation\n\n\nWarning message:\nIn rjags::jags.model(model, data = data, inits = inits, n.chains = 1L,  :\n  Adaptation incomplete\nNOTE: Stopping adaptation\n\n\nWarning message:\nIn rjags::jags.model(model, data = data, inits = inits, n.chains = 1L,  :\n  Adaptation incomplete\nNOTE: Stopping adaptation\n\n\nWarning message:\nIn rjags::jags.model(model, data = data, inits = inits, n.chains = 1L,  :\n  Adaptation incomplete\nNOTE: Stopping adaptation\n\n\nWarning message:\nIn rjags::jags.model(model, data = data, inits = inits, n.chains = 1L,  :\n  Adaptation incomplete\nNOTE: Stopping adaptation\n\n\nWarning message:\nIn rjags::jags.model(model, data = data, inits = inits, n.chains = 1L,  :\n  Adaptation incomplete\nJAGS probes complete: 10 cases\nError in x[, paste0(name, \"[1]\")] : subscript out of bounds\nCalls: node -> do.call -> lapply -> FUN\nExecution halted\nreal 0.34\nuser 0.28\nsys 0.05\n",
+        "truncated": false
+      }
+    },
+    {
+      "turn_id": "01a0ee08-35b6-7292-9838-701f07ead85e",
+      "turn_started_at": 1790699910,
+      "item_order": 51,
+      "id": "exec-5fb28eb8-dba5-46c8-8627-eb67a5f237d6",
+      "type": "fileChange",
+      "status": "completed",
+      "changes": [
+        {
+          "path": "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/tests/mebane/likelihood/g3_jags.R",
+          "kind": {
+            "type": "update",
+            "move_path": null
+          },
+          "diff": {
+            "text": "@@ -6,3 +6,3 @@\n source(\"R/lib/mebane_model.R\")\n-outdir <- \"quality_reports/results/mebane_gates/G3/round1/jags_attempt2\"\n+outdir <- \"quality_reports/results/mebane_gates/G3/round1/jags_attempt3\"\n dir.create(outdir, recursive = TRUE, showWarnings = FALSE)\n@@ -101,3 +101,8 @@\n matrices <- lapply(fit, as.matrix)\n-node <- function(name) do.call(cbind, lapply(matrices, function(x) x[, paste0(name, \"[1]\")]))\n+node <- function(name) do.call(cbind, lapply(matrices, function(x) {\n+  key <- intersect(c(name, paste0(name, \"[1]\")), colnames(x))\n+  if (length(key) != 1L) stop(\"Monitored node absent: \", name,\n+                               \"; columns: \", paste(colnames(x), collapse = \",\"))\n+  x[, key]\n+}))\n Z <- node(\"Z\"); im <- node(\"N.iota.m\"); is <- node(\"N.iota.s\")\n",
+            "truncated": false
+          }
+        }
+      ]
+    },
+    {
+      "turn_id": "01a0ee08-35b6-7292-9838-701f07ead85e",
+      "turn_started_at": 1790699910,
+      "item_order": 52,
+      "id": "exec-cce129db-2777-49b2-9150-5063bd4b09e1",
+      "type": "commandExecution",
+      "command": "/bin/zsh -lc '/usr/bin/time -p timeout 120 Rscript --vanilla tests/mebane/likelihood/g3_jags.R > quality_reports/results/mebane_gates/G3/round1/g3_jags_attempt3.log 2>&1'",
+      "status": "completed",
+      "exit_code": 0,
+      "duration_ms": 688
+    },
+    {
+      "turn_id": "01a0ee08-35b6-7292-9838-701f07ead85e",
+      "turn_started_at": 1790699910,
+      "item_order": 57,
+      "id": "exec-6797e44e-3927-4f5f-83cc-a56c1ad334a9",
+      "type": "commandExecution",
+      "command": "/bin/zsh -lc '/usr/bin/time -p timeout 120 Rscript --vanilla tests/mebane/likelihood/test_ar02_interface.R > quality_reports/results/mebane_gates/G3/round1/g3_interface_attempt1.log 2>&1'",
+      "status": "completed",
+      "exit_code": 0,
+      "duration_ms": 515
+    },
+    {
+      "turn_id": "01a0ee08-35b6-7292-9838-701f07ead85e",
+      "turn_started_at": 1790699910,
+      "item_order": 59,
+      "id": "exec-22edf9ab-37f5-4ec5-808a-f51f71b1e76e",
+      "type": "commandExecution",
+      "command": "/bin/zsh -lc 'tail -15 quality_reports/results/mebane_gates/G3/round1/g3_interface_attempt1.log; cat quality_reports/results/mebane_gates/G3/round1/jags_attempt3/margin_feasibility.json; cat quality_reports/results/mebane_gates/G3/round1/deterministic_attempt3/mass.csv'",
+      "status": "completed",
+      "exit_code": 0,
+      "duration_ms": 0,
+      "output": {
+        "text": "MCMC in progress ....\n\n\nBurn-in: 0\n\nNumber of MCMC samples per chain: 1\n\nMCMC in progress ....\n\nWRAPPER PASS: call 4, direct-list match and swapped negative control\nMCMC BLOCKED: 8 captures in sampler stub, 0 compiler entries\nAR-02 PASS: original namespace functions restored in this disposable R process\nreal 0.64\nuser 0.49\nsys 0.06\n{\n  \"Dobs_kind\": \"algebraic_fixture_offset_not_observed_margin\",\n  \"N\": 1,\n  \"A\": 0,\n  \"W\": 0,\n  \"Dobs_offset\": 1,\n  \"observed_margin_compatible\": false,\n  \"leader_capacity_necessary_fraction\": 0.807,\n  \"source_capacity_fully_verified\": false,\n  \"physical_counterfactual_validated\": false,\n  \"note\": \"Expected-vote functionals; necessary flags do not establish physical origin/ballot feasibility\"\n}\n\"N\",\"kernel_mass\",\"physical_mass\",\"invalid_parent_deficit\",\"unphysical_mass\"\n1,0.999958392857143,0.999958392857143,4.16071428572806e-05,0\n2,0.99994066037433,0.954322378267522,5.93396256698409e-05,0.0456182821068079\n3,0.999931666545307,0.934146428440558,6.83334546934811e-05,0.0657852381047485\n",
+        "truncated": false
+      }
+    },
+    {
+      "turn_id": "01a0ee08-35b6-7292-9838-701f07ead85e",
+      "turn_started_at": 1790699910,
+      "item_order": 63,
+      "id": "exec-e2330f7b-0af7-4d02-8fe2-b4062a1ca3e6",
+      "type": "fileChange",
+      "status": "completed",
+      "changes": [
+        {
+          "path": "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/tests/mebane/likelihood/g3_source_contract.R",
+          "kind": {
+            "type": "add"
+          },
+          "diff": {
+            "text": "path <- \"quality_reports/results/mebane_gates/G0/round1/qbl_installed_3017de5.jags\"\nq <- paste(readLines(path, warn = FALSE), collapse = \"\\n\")\nhas <- function(s) grepl(s, q, fixed = TRUE)\nblocks <- c(\"tau\", \"nu\", \"iota.m\", \"iota.s\", \"chi.m\", \"chi.s\")\nchecks <- c(\n  pi_partial = has(\"pi.aux2 ~ dunif(0,pi.aux1)\") &&\n    has(\"pi.aux3 ~ dunif(0,pi.aux1)\"),\n  four_counts = all(vapply(c(\"iota.s\", \"iota.m\", \"chi.s\", \"chi.m\"),\n    function(x) has(paste0(\"N.\",x,\"[j]\")) && has(paste0(\"mu.\",x,\"[j]\")),logical(1))),\n  endpoint = has(\".999, N.iota.m[j]/N[j]\") && has(\".999, N.chi.m[j]/N[j]\"),\n  two_observations = has(\"a[j] ~ dbin(p.a[j],N[j])\") &&\n    has(\"w[j] ~ dbin(p.w[j],N[j])\"),\n  fixed_intercept_precision = all(vapply(blocks, function(x)\n    has(paste0(\"sigma.beta.\",x,\"[i,j]\")), logical(1))),\n  alpha_and_beta0 = all(vapply(blocks, function(x)\n    has(paste0(x,\".alpha ~ dnorm(0,1)\")) &&\n    has(paste0(\"beta.\",x,\"1\")), logical(1))),\n  six_exp5_variances = all(vapply(c(\"tb\",\"nb\",\"imb\",\"isb\",\"cmb\",\"csb\"),\n    function(x) has(paste0(x,\" ~ dexp(5)\")), logical(1))),\n  six_observation_effects = all(vapply(c(\"th\",\"nh\",\"imh\",\"ish\",\"cmh\",\"csh\"),\n    function(x) has(paste0(x,\"[j] ~ dnorm(\")), logical(1))),\n  distinct_intercepts = has(\"omt[j] <- inprod(Xa[j,], beta.tau1)\") &&\n    has(\"mu.tau[j] <- ilogit(th[j] + omt[j])\") &&\n    has(\"omn[j] <- inprod(Xw[j,], beta.nu1)\") &&\n    has(\"mu.nu[j]  <- ilogit(nh[j] + omn[j])\"),\n  weighted_pw = has(\"(Z[j] == 1) * ( mu.nu[j]\") &&\n    has(\"(Z[j] == 2) * ( mu.nu[j]\") &&\n    has(\"(Z[j] == 3) * ( mu.nu[j]\")\n)\nout <- \"quality_reports/results/mebane_gates/G3/round1/source_checks.csv\"\nwrite.csv(data.frame(check=names(checks),pass=unname(checks)),out,row.names=FALSE)\nstopifnot(all(checks))\ncat(\"source contract PASS:\",length(checks),\"checks\\n\")\n",
+            "truncated": false
+          }
+        }
+      ]
+    },
+    {
+      "turn_id": "01a0ee08-35b6-7292-9838-701f07ead85e",
+      "turn_started_at": 1790699910,
+      "item_order": 65,
+      "id": "exec-eb69eefa-dc02-407e-9079-f0e800963734",
+      "type": "commandExecution",
+      "command": "/bin/zsh -lc '/usr/bin/time -p timeout 120 Rscript --vanilla tests/mebane/likelihood/g3_source_contract.R > quality_reports/results/mebane_gates/G3/round1/g3_source_attempt1.log 2>&1'",
+      "status": "completed",
+      "exit_code": 0,
+      "duration_ms": 6
+    },
+    {
+      "turn_id": "01a0ee08-35b6-7292-9838-701f07ead85e",
+      "turn_started_at": 1790699910,
+      "item_order": 67,
+      "id": "exec-0c5b88a0-23dc-428d-8794-fb3eb35634ef",
+      "type": "commandExecution",
+      "command": "/bin/zsh -lc 'cat quality_reports/results/mebane_gates/G3/round1/g3_source_attempt1.log; cat quality_reports/results/mebane_gates/G3/round1/source_checks.csv'",
+      "status": "completed",
+      "exit_code": 0,
+      "duration_ms": 0,
+      "output": {
+        "text": "During startup - Warning messages:\n1: Setting LC_CTYPE failed, using \"C\" \n2: Setting LC_COLLATE failed, using \"C\" \n3: Setting LC_TIME failed, using \"C\" \n4: Setting LC_MESSAGES failed, using \"C\" \n5: Setting LC_MONETARY failed, using \"C\" \nsource contract PASS: 10 checks\nreal 0.13\nuser 0.09\nsys 0.02\n\"check\",\"pass\"\n\"pi_partial\",TRUE\n\"four_counts\",TRUE\n\"endpoint\",TRUE\n\"two_observations\",TRUE\n\"fixed_intercept_precision\",TRUE\n\"alpha_and_beta0\",TRUE\n\"six_exp5_variances\",TRUE\n\"six_observation_effects\",TRUE\n\"distinct_intercepts\",TRUE\n\"weighted_pw\",TRUE\n",
+        "truncated": false
+      }
+    },
+    {
+      "turn_id": "01a0ee08-35b6-7292-9838-701f07ead85e",
+      "turn_started_at": 1790699910,
+      "item_order": 88,
+      "id": "exec-2e58e17a-f6f1-4d31-ab5f-7ffa8381b52a",
+      "type": "fileChange",
+      "status": "completed",
+      "changes": [
+        {
+          "path": "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/tests/mebane/likelihood/g3_jags.R",
+          "kind": {
+            "type": "update",
+            "move_path": null
+          },
+          "diff": {
+            "text": "@@ -6,3 +6,3 @@\n source(\"R/lib/mebane_model.R\")\n-outdir <- \"quality_reports/results/mebane_gates/G3/round1/jags_attempt3\"\n+outdir <- \"quality_reports/results/mebane_gates/G3/round1/jags_attempt4\"\n dir.create(outdir, recursive = TRUE, showWarnings = FALSE)\n@@ -154,3 +154,4 @@\n   expectation <- sum(exact[[nm]]*exact$posterior)\n-  constant <- length(unique(as.vector(x)))==1L && length(unique(exact[[nm]]))==1L\n+  constant <- length(unique(as.vector(x)))==1L &&\n+    length(unique(exact[[nm]][exact$posterior > 0]))==1L\n   mcse <- if (constant) 0 else mcse_batch(x)\n",
+            "truncated": false
+          }
+        }
+      ]
+    },
+    {
+      "turn_id": "01a0ee08-35b6-7292-9838-701f07ead85e",
+      "turn_started_at": 1790699910,
+      "item_order": 89,
+      "id": "exec-78df1b3c-3b27-45b5-8592-9c8ad88e4202",
+      "type": "commandExecution",
+      "command": "/bin/zsh -lc '/usr/bin/time -p timeout 120 Rscript --vanilla tests/mebane/likelihood/g3_jags.R > quality_reports/results/mebane_gates/G3/round1/g3_jags_attempt4.log 2>&1'",
+      "status": "failed",
+      "exit_code": 1,
+      "duration_ms": 638
+    },
+    {
+      "turn_id": "01a0ee08-35b6-7292-9838-701f07ead85e",
+      "turn_started_at": 1790699910,
+      "item_order": 91,
+      "id": "exec-0510aa90-a426-4c26-91e8-90c743047b2f",
+      "type": "commandExecution",
+      "command": "/bin/zsh -lc 'tail -25 quality_reports/results/mebane_gates/G3/round1/g3_jags_attempt4.log'",
+      "status": "completed",
+      "exit_code": 0,
+      "duration_ms": 0,
+      "output": {
+        "text": "\n\nWarning message:\nIn rjags::jags.model(model, data = data, inits = inits, n.chains = 1L,  :\n  Adaptation incomplete\nNOTE: Stopping adaptation\n\n\nWarning message:\nIn rjags::jags.model(model, data = data, inits = inits, n.chains = 1L,  :\n  Adaptation incomplete\nNOTE: Stopping adaptation\n\n\nWarning message:\nIn rjags::jags.model(model, data = data, inits = inits, n.chains = 1L,  :\n  Adaptation incomplete\nJAGS probes complete: 10 cases\nError in if (all(summary$mean_pass & summary$diagnostic_pass)) \"pass_conditioned\" else \"inconclusive\" : \n  missing value where TRUE/FALSE needed\nCalls: save_json -> <Anonymous> -> <Anonymous> -> force\nExecution halted\nreal 0.76\nuser 0.66\nsys 0.07\n",
+        "truncated": false
+      }
+    },
+    {
+      "turn_id": "01a0ee08-35b6-7292-9838-701f07ead85e",
+      "turn_started_at": 1790699910,
+      "item_order": 93,
+      "id": "exec-c8e06f45-d5d9-4529-83ee-a540217a9afa",
+      "type": "fileChange",
+      "status": "completed",
+      "changes": [
+        {
+          "path": "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/tests/mebane/likelihood/g3_jags.R",
+          "kind": {
+            "type": "update",
+            "move_path": null
+          },
+          "diff": {
+            "text": "@@ -6,3 +6,3 @@\n source(\"R/lib/mebane_model.R\")\n-outdir <- \"quality_reports/results/mebane_gates/G3/round1/jags_attempt4\"\n+outdir <- \"quality_reports/results/mebane_gates/G3/round1/jags_attempt5\"\n dir.create(outdir, recursive = TRUE, showWarnings = FALSE)\n@@ -169,3 +169,4 @@\n summary$diagnostic_pass <- with(summary,constant |\n-  (!is.na(rhat) & rhat < 1.01 & ess_bulk >= 400 & ess_tail >= 400))\n+  (!is.na(rhat) & !is.na(ess_bulk) & !is.na(ess_tail) &\n+    rhat < 1.01 & ess_bulk >= 400 & ess_tail >= 400))\n write.csv(summary,file.path(outdir,\"conditional_comparison.csv\"),row.names=FALSE)\n",
+            "truncated": false
+          }
+        }
+      ]
+    },
+    {
+      "turn_id": "01a0ee08-35b6-7292-9838-701f07ead85e",
+      "turn_started_at": 1790699910,
+      "item_order": 94,
+      "id": "exec-f9dfb538-f6a2-43e5-a1b7-334568dee571",
+      "type": "commandExecution",
+      "command": "/bin/zsh -lc '/usr/bin/time -p timeout 120 Rscript --vanilla tests/mebane/likelihood/g3_jags.R > quality_reports/results/mebane_gates/G3/round1/g3_jags_attempt5.log 2>&1'",
+      "status": "completed",
+      "exit_code": 0,
+      "duration_ms": 659
+    },
+    {
+      "turn_id": "01a0ee08-35b6-7292-9838-701f07ead85e",
+      "turn_started_at": 1790699910,
+      "item_order": 105,
+      "id": "exec-c329b7cb-b6ad-4bde-bdf0-4135b6602674",
+      "type": "commandExecution",
+      "command": "/bin/zsh -lc \"python3 - <<'PY'\nimport json\nfrom pathlib import Path\nm=json.loads(Path('quality_reports/results/mebane_gates/G3/round1/candidate_manifest.json').read_text())\nfor x in m['files']:\n if x['path'] in ('tests/mebane/likelihood/g3_jags.R','R/lib/mebane_model.R'):\n  print(x)\nPY\"",
+      "status": "completed",
+      "exit_code": 0,
+      "duration_ms": 0,
+      "output": {
+        "text": "{'path': 'R/lib/mebane_model.R', 'sha256': '68ca118912c678c7561e718075de7fc3ae10fc024c91a259231bf2a66254a300', 'bytes': 5528}\n{'path': 'tests/mebane/likelihood/g3_jags.R', 'sha256': '72f96b79b35fbe7886dd70b93a6cf18a3fb944105ca97ed8df068b0ddfee253d', 'bytes': 8871}\n",
+        "truncated": false
+      }
+    },
+    {
+      "turn_id": "01a0ee08-35b6-7292-9838-701f07ead85e",
+      "turn_started_at": 1790699910,
+      "item_order": 107,
+      "id": "exec-87a0441f-3009-49da-b5dd-717c02aaa5f9",
+      "type": "commandExecution",
+      "command": "/bin/zsh -lc \"python3 - <<'PY'\nfrom pathlib import Path\nimport hashlib\ns=Path('tests/mebane/likelihood/g3_jags.R').read_text()\ns=s.replace('outdir <- \\\"quality_reports/results/mebane_gates/G3/round1/jags_attempt5\\\"','outdir <- \\\"quality_reports/results/mebane_gates/G3/round1/jags_attempt3\\\"')\ns=s.replace('  constant <- length(unique(as.vector(x)))==1L &&\\\\n    length(unique(exact[[nm]][exact\"'$posterior > 0]))==1L'\"','  constant <- length(unique(as.vector(x)))==1L && length(unique(exact[[nm]]))==1L')\ns=s.replace('  (\"'!is.na(rhat) & !is.na(ess_bulk) & !is.na(ess_tail) &'\"\\\\n    rhat < 1.01 & ess_bulk >= 400 & ess_tail >= 400))','  (\"'!is.na(rhat) & rhat < 1.01 & ess_bulk >= 400 & ess_tail >= 400))'\"')\nprint(hashlib.sha256(s.encode()).hexdigest(),len(s.encode()))\nPY\"",
+      "status": "completed",
+      "exit_code": 0,
+      "duration_ms": 0,
+      "output": {
+        "text": "72f96b79b35fbe7886dd70b93a6cf18a3fb944105ca97ed8df068b0ddfee253d 8871\n",
+        "truncated": false
+      }
+    },
+    {
+      "turn_id": "01a0ee15-49e1-79d1-9007-51f1d20a7f4e",
+      "turn_started_at": 1790700767,
+      "item_order": 5,
+      "id": "exec-7ca7c4bd-28ea-4d30-a7a5-7111c96e9a7c",
+      "type": "commandExecution",
+      "command": "/bin/zsh -lc 'cat quality_reports/results/mebane_gates/coordination/2026-09-29_g3_runtime/draw_persistence_adjudication.json'",
+      "status": "completed",
+      "exit_code": 0,
+      "duration_ms": 0,
+      "output": {
+        "text": "{\n  \"schema_version\": \"1.0\",\n  \"adjudication_id\": \"G3:4b84fe6996a7:draw-persistence\",\n  \"source\": {\n    \"reviewed_artifact\": \"quality_reports/results/mebane_gates/G3/round1/revision1/candidate_manifest.json\",\n    \"sha256\": \"4b84fe6996a72321225fd3e5f4713439b77b74fc8a7f039d09e3dcaf7beb72a9\",\n    \"artifact_intact\": true\n  },\n  \"contract\": {\n    \"required\": false, \"path\": null, \"sha256\": null, \"contract_id\": null,\n    \"artifact_sha256\": null, \"status\": null, \"stale\": false\n  },\n  \"contract_scope_note\": \"Reparo de persistência de resultados no escopo G3 autorizado, sem alterar o contrato matemático G2; não exige contrato de argumento de manuscrito.\",\n  \"review_sources\": [{\n    \"review_id\": \"COORD-DRAW-PERSISTENCE\",\n    \"path\": \"quality_reports/results/mebane_gates/coordination/2026-09-29_g3_runtime/draw_persistence_review.md\",\n    \"sha256\": \"003d055e45053885f1946bc3d827ef9ef0fcf5324f4dfe67971aa425302c6d54\"\n  }],\n  \"findings\": [{\n    \"finding_id\": \"G3-COORD-DRAW-01\",\n    \"source_review\": \"COORD-DRAW-PERSISTENCE\",\n    \"quoted_finding\": \"Raw JAGS draws were not saved, preventing independent recomputation of reported MCSE and joint-draw functionals from this run.\",\n    \"type\": \"artifact\",\n    \"severity\": \"major\",\n    \"scientific_dimension\": \"reproducibility\",\n    \"held_decision\": false,\n    \"status\": \"CONFIRMED\",\n    \"source_locations\": [\n      \"quality_reports/results/mebane_gates/G3/round1/revision1/implementation.md:29\",\n      \"quality_reports/results/mebane_gates/G3/round1/revision1/snapshots/tests/mebane/likelihood/g3_jags.R:90\"\n    ],\n    \"defect_evidence\": [\n      \"Implementation explicitly states raw draws were not saved in any attempt.\",\n      \"Harness calls coda.samples and writes summary CSV and JSON but does not persist the sample object.\"\n    ],\n    \"refuting_evidence\": [],\n    \"mechanical_checks\": [\n      \"Read implementation and inspected sampling/output calls in g3_jags.R.\",\n      \"Recomputed SHA-256 of the revision1 candidate manifest.\"\n    ],\n    \"reasoning\": \"Seeds and summary tables alone do not provide the actual sampled rows needed for a source-bound independent recalculation. A new identical-protocol replay can supply verifiable new draws but cannot recover the unsaved original ones.\",\n    \"proposed_fix_assessment\": \"safe\",\n    \"disposition\": \"Persist chains and metadata in a new output directory, replay the same small protocol unchanged, reopen the saved chains and calculate all summaries from them; retain prior candidate and attempts.\",\n    \"resolved\": false\n  }],\n  \"summary\": {\"total\": 1, \"confirmed\": 1, \"partial\": 0, \"refuted\": 0, \"unresolved\": 0, \"held_decisions\": 0},\n  \"adjudication\": {\n    \"verdict\": \"READY_FOR_IMPLEMENTATION\",\n    \"checked_at\": \"2026-09-29\",\n    \"reasons\": [\n      \"The bounded artifact repair is independent of F1/F2 and does not change the scientific target or test thresholds.\",\n      \"G3 execution and safe code repairs are already authorized; the revised candidate still requires independent review.\"\n    ]\n  },\n  \"scope\": \"Raw-draw persistence only; no G3 PASS or inferential approval.\"\n}\n",
+        "truncated": false
+      }
+    },
+    {
+      "turn_id": "01a0ee15-49e1-79d1-9007-51f1d20a7f4e",
+      "turn_started_at": 1790700767,
+      "item_order": 6,
+      "id": "exec-7a741ee9-6f58-43cf-9db4-0688655b9a98",
+      "type": "commandExecution",
+      "command": "/bin/zsh -lc 'cat quality_reports/results/mebane_gates/coordination/2026-09-29_g3_runtime/draw_persistence_review.md'",
+      "status": "completed",
+      "exit_code": 0,
+      "duration_ms": 0,
+      "output": {
+        "text": "# G3-COORD-DRAW-01: persistência das cadeias\n\nO candidato `G3/round1/revision1/candidate_manifest.json`, SHA-256\n`4b84fe6996a72321225fd3e5f4713439b77b74fc8a7f039d09e3dcaf7beb72a9`,\ninforma em `implementation.md` que os draws JAGS não foram salvos. O coordenador\nconferiu o código `tests/mebane/likelihood/g3_jags.R`: a amostragem retorna um\nobjeto em memória, e o script grava estados exatos, CSV de resumos e JSON, mas\nnão grava o objeto de cadeias. Consequentemente, a QA não pode recalcular MCSE,\ndiagnósticos e funcionais a partir dos draws que originaram os números salvos.\n\nO defeito é de reprodutibilidade do candidato, independente dos problemas de\nsuporte do qbl e do diagnóstico para alvos discretos. Reparo seguro: preservar\nrevision1 e todas as tentativas; acrescentar persistência das cadeias e de seus\nmetadados; executar uma nova reprodução pequena do protocolo v2 sem mudar\nmodelo, caso, sementes, adaptação, burn-in, amostragem ou critérios. Registrar\nque são draws de uma nova execução, não recuperação das cadeias que não foram\nsalvas. Recalcular os resumos exclusivamente a partir do RDS reaberto, verificar\nidentidades por draw e entregar novo candidato ligado ao anterior.\n\nEste encaminhamento não autoriza corrigir F1/F2, mudar o alvo, aumentar a\namostragem para tentar passar o diagnóstico ou considerar os NAs de tail ESS\ncomo prova automática de não-convergência. O candidato revisado ainda exige QA.\n",
+        "truncated": false
+      }
+    },
+    {
+      "turn_id": "01a0ee15-49e1-79d1-9007-51f1d20a7f4e",
+      "turn_started_at": 1790700767,
+      "item_order": 8,
+      "id": "exec-72d2f2c8-9740-4df1-bcb2-a5ca1cfb88ad",
+      "type": "commandExecution",
+      "command": "/bin/zsh -lc 'git status --short; shasum -a 256 quality_reports/results/mebane_gates/G3/round1/revision1/candidate_manifest.json quality_reports/results/mebane_gates/coordination/2026-09-29_g3_runtime/draw_persistence_review.md tests/mebane/likelihood/g3_jags.R; rg --files quality_reports/results/mebane_gates/G3/round1/revision2'",
+      "status": "failed",
+      "exit_code": 2,
+      "duration_ms": 0,
+      "output": {
+        "text": "rg: quality_reports/results/mebane_gates/G3/round1/revision2: IO error for operation on quality_reports/results/mebane_gates/G3/round1/revision2: No such file or directory (os error 2)\n",
+        "truncated": false
+      }
+    },
+    {
+      "turn_id": "01a0ee15-49e1-79d1-9007-51f1d20a7f4e",
+      "turn_started_at": 1790700767,
+      "item_order": 14,
+      "id": "exec-3da93d11-26eb-4b93-8fa6-46e3d6f40087",
+      "type": "fileChange",
+      "status": "completed",
+      "changes": [
+        {
+          "path": "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/G3/round1/revision2/replay_plan.json",
+          "kind": {
+            "type": "add"
+          },
+          "diff": {
+            "text": "{\n  \"schema_version\": \"1.0\",\n  \"repair_id\": \"G3-COORD-DRAW-01\",\n  \"status\": \"frozen_before_replay\",\n  \"authorizing_adjudication\": \"quality_reports/results/mebane_gates/coordination/2026-09-29_g3_runtime/draw_persistence_adjudication.json\",\n  \"prior_candidate_manifest_sha256\": \"4b84fe6996a72321225fd3e5f4713439b77b74fc8a7f039d09e3dcaf7beb72a9\",\n  \"protocol\": \"quality_reports/results/mebane_gates/G3/round1/protocol_v2.json\",\n  \"model\": \"quality_reports/results/mebane_gates/G0/round1/qbl_installed_3017de5.jags\",\n  \"scope\": \"Only conditioned comparison N=1,A=0,W=0; fixed continuous effects, beta1 and pi auxiliaries; no probes or deterministic grid\",\n  \"seeds\": [31102, 31103, 31104, 31105],\n  \"chains\": 4,\n  \"adapt\": 200,\n  \"burnin\": 500,\n  \"post_iterations_per_chain\": 2000,\n  \"thin\": 1,\n  \"monitors\": [\"Z\", \"N.iota.m\", \"N.iota.s\", \"N.chi.m\", \"N.chi.s\"],\n  \"criteria\": \"Exactly protocol_v2; do not retune; preserve inconclusive G3 classification\",\n  \"process_limit_seconds\": 120,\n  \"output_policy\": \"new revision2 files only; no overwrite, cleanup, deletion or restoration; new draws are not recovered prior draws\"\n}\n",
+            "truncated": false
+          }
+        },
+        {
+          "path": "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/tests/mebane/likelihood/g3_draw_replay.R",
+          "kind": {
+            "type": "add"
+          },
+          "diff": {
+            "text": "# One conditioned qbl/JAGS replay. No probes, grid or downstream summaries here.\n.libPaths(c(\"renv/library/macos/R-4.4/aarch64-apple-darwin20\", .libPaths()))\nstopifnot(requireNamespace(\"rjags\", quietly = TRUE),\n          requireNamespace(\"coda\", quietly = TRUE),\n          requireNamespace(\"jsonlite\", quietly = TRUE))\noutdir <- \"quality_reports/results/mebane_gates/G3/round1/revision2\"\nmodel <- \"quality_reports/results/mebane_gates/G0/round1/qbl_installed_3017de5.jags\"\nprotocol <- \"quality_reports/results/mebane_gates/G3/round1/protocol_v2.json\"\nrds_path <- file.path(outdir, \"raw_chains.rds\")\nmetadata_path <- file.path(outdir, \"sampling_metadata.json\")\nstopifnot(dir.exists(outdir), !file.exists(rds_path), !file.exists(metadata_path))\nsha <- function(path) strsplit(system2(\"shasum\", c(\"-a\", \"256\", path),\n                                       stdout = TRUE), \" \")[[1]][1]\nstopifnot(sha(model) == \"f8360126424b7a463f76a1c99efc89a8a5cb81339213bd4931559f14595fbab6\",\n          as.character(rjags::jags.version()) == \"4.3.2\")\np <- jsonlite::read_json(protocol, simplifyVector = TRUE)\nstopifnot(identical(as.integer(p$seeds$jags_chains), 31102:31105),\n          p$jags$chains == 4, p$jags$adapt == 200,\n          p$jags$burnin == 500, p$jags$sample_iterations_per_chain == 2000)\n\ndata <- list(n = 1L, N = 1L, a = 0L, w = 0L,\n             \"pi.aux1\" = 1, \"pi.aux2\" = .5, \"pi.aux3\" = .25)\nfor (nm in c(\"tau\", \"nu\", \"iota.m\", \"iota.s\", \"chi.m\", \"chi.s\")) {\n  name <- if (nm == \"tau\") \"a\" else if (nm == \"nu\") \"w\" else paste0(\".\", nm)\n  data[[paste0(\"X\", name)]] <- matrix(1, 1, 1)\n  data[[paste0(\"dx\", name)]] <- 1L\n  h <- switch(nm, tau = \"th\", nu = \"nh\", \"iota.m\" = \"imh\",\n              \"iota.s\" = \"ish\", \"chi.m\" = \"cmh\", \"chi.s\" = \"csh\")\n  data[[h]] <- 0\n  data[[paste0(\"beta.\", nm, \"1\")]] <- 0\n}\n# Z and all four counts remain stochastic; all continuous effects are conditioned.\nseeds <- 31102:31105\ninits <- lapply(seeds, function(s) list(.RNG.name = \"base::Mersenne-Twister\",\n                                        .RNG.seed = as.integer(s)))\nstarted <- Sys.time()\njm <- rjags::jags.model(model, data = data, inits = inits,\n                       n.chains = 4L, n.adapt = 200L, quiet = TRUE)\nstats::update(jm, 500L, progress.bar = \"none\")\nnodes <- c(\"Z\", \"N.iota.m\", \"N.iota.s\", \"N.chi.m\", \"N.chi.s\")\nfit <- rjags::coda.samples(jm, nodes, n.iter = 2000L,\n                           progress.bar = \"none\")\nended <- Sys.time()\nstopifnot(length(fit) == 4L,\n          all(vapply(fit, nrow, integer(1)) == 2000L),\n          all(vapply(fit, ncol, integer(1)) == 5L))\npayload <- list(schema_version = \"1.0\", repair_id = \"G3-COORD-DRAW-01\",\n  new_draws_not_recovery = TRUE, model_path = model, model_sha256 = sha(model),\n  protocol_path = protocol, protocol_sha256 = sha(protocol),\n  data = data, inits = inits, monitored_nodes = nodes,\n  adapt = 200L, burnin = 500L, post_iterations_per_chain = 2000L,\n  thin = 1L, chains = 4L, seeds = seeds,\n  r_version = R.version.string, jags_version = as.character(rjags::jags.version()),\n  rjags_version = as.character(utils::packageVersion(\"rjags\")),\n  coda_version = as.character(utils::packageVersion(\"coda\")),\n  started_at = format(started, tz = \"UTC\", usetz = TRUE),\n  ended_at = format(ended, tz = \"UTC\", usetz = TRUE),\n  elapsed_seconds = as.numeric(difftime(ended, started, units = \"secs\")),\n  draws = fit)\nsaveRDS(payload, rds_path, version = 3)\n# This metadata records the persisted object; summaries are computed by a separate reopen.\nmetadata <- payload[names(payload) != \"draws\"]\nmetadata$raw_rds_path <- rds_path\nmetadata$raw_rds_sha256 <- sha(rds_path)\nmetadata$draw_rows_per_chain <- vapply(fit, nrow, integer(1))\nmetadata$draw_columns <- colnames(as.matrix(fit[[1]]))\njsonlite::write_json(metadata, metadata_path, auto_unbox = TRUE,\n                     pretty = TRUE, na = \"null\")\ncat(\"persisted\", length(fit), \"chains x\", nrow(fit[[1]]), \"draws, SHA-256\",\n    metadata$raw_rds_sha256, \"\\n\")\n",
+            "truncated": false
+          }
+        }
+      ]
+    },
+    {
+      "turn_id": "01a0ee15-49e1-79d1-9007-51f1d20a7f4e",
+      "turn_started_at": 1790700767,
+      "item_order": 17,
+      "id": "exec-194b1c3b-2237-45c0-a650-c02bf7245163",
+      "type": "fileChange",
+      "status": "completed",
+      "changes": [
+        {
+          "path": "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/tests/mebane/likelihood/g3_draw_postprocess.R",
+          "kind": {
+            "type": "add"
+          },
+          "diff": {
+            "text": "# Read only the persisted new replay; no JAGS compilation or sampling.\n.libPaths(c(\"renv/library/macos/R-4.4/aarch64-apple-darwin20\", .libPaths()))\nstopifnot(requireNamespace(\"posterior\", quietly = TRUE),\n          requireNamespace(\"jsonlite\", quietly = TRUE))\nsource(\"R/lib/mebane_model.R\")\noutdir <- \"quality_reports/results/mebane_gates/G3/round1/revision2\"\nrds_path <- file.path(outdir, \"raw_chains.rds\")\nmeta <- jsonlite::read_json(file.path(outdir, \"sampling_metadata.json\"),\n                            simplifyVector = TRUE)\nsha <- function(path) strsplit(system2(\"shasum\", c(\"-a\", \"256\", path),\n                                       stdout = TRUE), \" \")[[1]][1]\nstopifnot(sha(rds_path) == meta$raw_rds_sha256)\npayload <- readRDS(rds_path)\nstopifnot(inherits(payload$draws, \"mcmc.list\"),\n          length(payload$draws) == 4L,\n          all(vapply(payload$draws, nrow, integer(1)) == 2000L),\n          identical(as.integer(payload$seeds), 31102:31105),\n          payload$adapt == 200L, payload$burnin == 500L,\n          payload$post_iterations_per_chain == 2000L,\n          payload$data$n == 1L, payload$data$N == 1L,\n          payload$data$a == 0L, payload$data$w == 0L)\nmatrices <- lapply(payload$draws, as.matrix)\nnode <- function(name) do.call(cbind, lapply(matrices, function(x) {\n  key <- intersect(c(name, paste0(name, \"[1]\")), colnames(x))\n  if (length(key) != 1L) stop(\"Missing monitored node: \", name)\n  x[, key]\n}))\nZ <- node(\"Z\"); im <- node(\"N.iota.m\"); is <- node(\"N.iota.s\")\ncm <- node(\"N.chi.m\"); cs <- node(\"N.chi.s\")\nM <- ifelse(Z == 1, 0, ifelse(Z == 2, ifelse(im == 1, .999, 0),\n                              ifelse(cm == 1, .999, 0))) * .5\nS <- ifelse(Z == 1, 0, ifelse(Z == 2, is, cs)) * .25\ntargets <- list(Z = Z, r_im = im, r_is = is, r_cm = cm, r_cs = cs,\n  indicator_Z1 = (Z == 1) * 1, indicator_Z2 = (Z == 2) * 1,\n  indicator_Z3 = (Z == 3) * 1, M = M, S = S,\n  margin_lower = 1 - M - 2*S, margin_upper = 1 - M - S)\nchecks <- c(z_support = all(Z %in% 1:3),\n  four_count_support = all(c(im, is, cm, cs) %in% 0:1),\n  one_class_per_draw = all(targets$indicator_Z1 + targets$indicator_Z2 +\n                            targets$indicator_Z3 == 1),\n  nonnegative_functionals = all(M >= 0 & S >= 0),\n  lower_identity = all(abs(targets$margin_lower - (1 - M - 2*S)) < 1e-12),\n  upper_identity = all(abs(targets$margin_upper - (1 - M - S)) < 1e-12),\n  bound_order = all(targets$margin_lower <= targets$margin_upper))\nstopifnot(all(checks))\njoint <- data.frame(chain = rep(1:4, each = 2000),\n  iteration = rep(1:2000, 4), Z = as.vector(Z),\n  r_im = as.vector(im), r_is = as.vector(is),\n  r_cm = as.vector(cm), r_cs = as.vector(cs),\n  M = as.vector(M), S = as.vector(S),\n  margin_lower = as.vector(targets$margin_lower),\n  margin_upper = as.vector(targets$margin_upper),\n  observed_margin_compatible = FALSE,\n  leader_capacity_necessary = as.vector(M + S <= 0),\n  physical_counterfactual_validated = FALSE)\nwrite.csv(joint, file.path(outdir, \"functionals_by_draw.csv\"), row.names = FALSE)\n\nstates <- list()\nfor (z in 1:3) for (r1 in 0:1) for (r2 in 0:1)\n  for (r3 in 0:1) for (r4 in 0:1) {\n    counts <- c(r1, r2, r3, r4)\n    weight <- c(4, 2, 1)[z]/7 * prod(dbinom(counts, 1,\n      c(.35, .35, .85, .85))) * mebane_kernel(1, 0, 0, z, counts, .5, .5)\n    m <- if (z == 1) 0 else if (z == 2) if (r1 == 1) .999 else 0 else if (r3 == 1) .999 else 0\n    s <- if (z == 1) 0 else if (z == 2) r2 else r4\n    states[[length(states)+1L]] <- data.frame(Z=z, r_im=r1, r_is=r2,\n      r_cm=r3, r_cs=r4, indicator_Z1=as.numeric(z==1),\n      indicator_Z2=as.numeric(z==2), indicator_Z3=as.numeric(z==3),\n      M=.5*m, S=.25*s, margin_lower=1-.5*m-.5*s,\n      margin_upper=1-.5*m-.25*s, weight=weight)\n  }\nexact <- do.call(rbind, states)\nexact$posterior <- exact$weight/sum(exact$weight)\nwrite.csv(exact, file.path(outdir, \"conditional_exact_states.csv\"), row.names = FALSE)\nmcse_batch <- function(x) {\n  stopifnot(nrow(x) == 2000L, ncol(x) == 4L)\n  batches <- sapply(1:4, function(chain)\n    colMeans(matrix(x[, chain], nrow = 50L, ncol = 40L)))\n  sqrt(sum(apply(batches, 2, var)/40))/4\n}\nsummary <- do.call(rbind, lapply(names(targets), function(nm) {\n  x <- targets[[nm]]\n  expectation <- sum(exact[[nm]] * exact$posterior)\n  constant <- length(unique(as.vector(x))) == 1L &&\n    length(unique(exact[[nm]][exact$posterior > 0])) == 1L\n  mcse <- if (constant) 0 else mcse_batch(x)\n  draws <- posterior::as_draws_array(array(x, dim=c(2000L,4L,1L),\n    dimnames=list(NULL,NULL,nm)))\n  rh <- if (constant) NA_real_ else posterior::rhat(draws)[[1]]\n  eb <- if (constant) NA_real_ else posterior::ess_bulk(draws)[[1]]\n  et <- if (constant) NA_real_ else posterior::ess_tail(draws)[[1]]\n  tol <- max(1e-3, 6*mcse)\n  data.frame(target=nm, exact=expectation, mc_mean=mean(x), mcse=mcse,\n    tolerance=tol, difference=abs(mean(x)-expectation), rhat=rh,\n    ess_bulk=eb, ess_tail=et, constant=constant)\n}))\nsummary$mean_pass <- summary$difference <= summary$tolerance\nsummary$diagnostic_pass <- with(summary, constant |\n  (!is.na(rhat) & !is.na(ess_bulk) & !is.na(ess_tail) &\n    rhat < 1.01 & ess_bulk >= 400 & ess_tail >= 400))\nwrite.csv(summary, file.path(outdir, \"conditional_comparison.csv\"), row.names = FALSE)\nold <- read.csv(\"quality_reports/results/mebane_gates/G3/round1/jags_attempt5/conditional_comparison.csv\")\nstopifnot(identical(as.character(old$target), as.character(summary$target)))\nprior_check <- data.frame(target=summary$target,\n  revision1_mean=old$mc_mean, revision2_mean=summary$mc_mean,\n  absolute_mean_difference=abs(summary$mc_mean-old$mc_mean),\n  revision1_mcse=old$mcse, revision2_mcse=summary$mcse,\n  combined_mcse=sqrt(old$mcse^2+summary$mcse^2),\n  same_seeds_declared=TRUE)\nwrite.csv(prior_check, file.path(outdir, \"replay_vs_revision1.csv\"),\n          row.names = FALSE)\nresult <- list(status=\"inconclusive\", repair_id=\"G3-COORD-DRAW-01\",\n  source=\"reopened_raw_chains_rds\", raw_rds_sha256=sha(rds_path),\n  prior_summary_sha256=sha(\"quality_reports/results/mebane_gates/G3/round1/jags_attempt5/conditional_comparison.csv\"),\n  all_mean_pass=all(summary$mean_pass),\n  all_diagnostic_pass=all(summary$diagnostic_pass),\n  degenerate_targets=as.character(summary$target[summary$constant]),\n  missing_tail_ess_targets=as.character(summary$target[is.na(summary$ess_tail) & !summary$constant]),\n  per_draw_identities=as.list(checks),\n  replay_comparison=\"descriptive; no stochastic identity or new acceptance criterion\",\n  margin=\"Dobs=1 algebraic offset; observed margin incompatible with N=1,A=0,W=0\",\n  physical_counterfactual_validated=FALSE)\njsonlite::write_json(result, file.path(outdir, \"postprocess_result.json\"),\n                     auto_unbox=TRUE, pretty=TRUE, na=\"null\")\ncat(\"postprocess from reopened RDS:\", nrow(joint), \"joint rows; means\",\n    result$all_mean_pass, \"diagnostics\", result$all_diagnostic_pass, \"\\n\")\n",
+            "truncated": false
+          }
+        }
+      ]
+    },
+    {
+      "turn_id": "01a0ee15-49e1-79d1-9007-51f1d20a7f4e",
+      "turn_started_at": 1790700767,
+      "item_order": 19,
+      "id": "exec-efc2c1a4-d41b-435b-b8ec-6c8c98f946e0",
+      "type": "commandExecution",
+      "command": "/bin/zsh -lc \"Rscript --vanilla -e 'parse(\\\"tests/mebane/likelihood/g3_draw_replay.R\\\"); parse(\\\"tests/mebane/likelihood/g3_draw_postprocess.R\\\"); cat(\\\"parse PASS\\\\n\\\")'\"",
+      "status": "completed",
+      "exit_code": 0,
+      "duration_ms": 0,
+      "output": {
+        "text": "During startup - Warning messages:\n1: Setting LC_CTYPE failed, using \"C\" \n2: Setting LC_COLLATE failed, using \"C\" \n3: Setting LC_TIME failed, using \"C\" \n4: Setting LC_MESSAGES failed, using \"C\" \n5: Setting LC_MONETARY failed, using \"C\" \nexpression(.libPaths(c(\"renv/library/macos/R-4.4/aarch64-apple-darwin20\", \n    .libPaths())), stopifnot(requireNamespace(\"rjags\", quietly = TRUE), \n    requireNamespace(\"coda\", quietly = TRUE), requireNamespace(\"jsonlite\", \n        quietly = TRUE)), outdir <- \"quality_reports/results/mebane_gates/G3/round1/revision2\", \n    model <- \"quality_reports/results/mebane_gates/G0/round1/qbl_installed_3017de5.jags\", \n    protocol <- \"quality_reports/results/mebane_gates/G3/round1/protocol_v2.json\", \n    rds_path <- file.path(outdir, \"raw_chains.rds\"), metadata_path <- file.path(outdir, \n        \"sampling_metadata.json\"), stopifnot(dir.exists(outdir), \n        !file.exists(rds_path), !file.exists(metadata_path)), \n    sha <- function(path) strsplit(system2(\"shasum\", c(\"-a\", \n        \"256\", path), stdout = TRUE), \" \")[[1]][1], stopifnot(sha(model) == \n        \"f8360126424b7a463f76a1c99efc89a8a5cb81339213bd4931559f14595fbab6\", \n        as.character(rjags::jags.version()) == \"4.3.2\"), p <- jsonlite::read_json(protocol, \n        simplifyVector = TRUE), stopifnot(identical(as.integer(p$seeds$jags_chains), \n        31102:31105), p$jags$chains == 4, p$jags$adapt == 200, \n        p$jags$burnin == 500, p$jags$sample_iterations_per_chain == \n            2000), data <- list(n = 1L, N = 1L, a = 0L, w = 0L, \n        pi.aux1 = 1, pi.aux2 = 0.5, pi.aux3 = 0.25), for (nm in c(\"tau\", \n        \"nu\", \"iota.m\", \"iota.s\", \"chi.m\", \"chi.s\")) {\n        name <- if (nm == \"tau\") \n            \"a\"\n        else if (nm == \"nu\") \n            \"w\"\n        else paste0(\".\", nm)\n        data[[paste0(\"X\", name)]] <- matrix(1, 1, 1)\n        data[[paste0(\"dx\", name)]] <- 1L\n        h <- switch(nm, tau = \"th\", nu = \"nh\", iota.m = \"imh\", \n            iota.s = \"ish\", chi.m = \"cmh\", chi.s = \"csh\")\n        data[[h]] <- 0\n        data[[paste0(\"beta.\", nm, \"1\")]] <- 0\n    }, seeds <- 31102:31105, inits <- lapply(seeds, function(s) list(.RNG.name = \"base::Mersenne-Twister\", \n        .RNG.seed = as.integer(s))), started <- Sys.time(), jm <- rjags::jags.model(model, \n        data = data, inits = inits, n.chains = 4L, n.adapt = 200L, \n        quiet = TRUE), stats::update(jm, 500L, progress.bar = \"none\"), \n    nodes <- c(\"Z\", \"N.iota.m\", \"N.iota.s\", \"N.chi.m\", \"N.chi.s\"), \n    fit <- rjags::coda.samples(jm, nodes, n.iter = 2000L, progress.bar = \"none\"), \n    ended <- Sys.time(), stopifnot(length(fit) == 4L, all(vapply(fit, \n        nrow, integer(1)) == 2000L), all(vapply(fit, ncol, integer(1)) == \n        5L)), payload <- list(schema_version = \"1.0\", repair_id = \"G3-COORD-DRAW-01\", \n        new_draws_not_recovery = TRUE, model_path = model, model_sha256 = sha(model), \n        protocol_path = protocol, protocol_sha256 = sha(protocol), \n        data = data, inits = inits, monitored_nodes = nodes, \n        adapt = 200L, burnin = 500L, post_iterations_per_chain = 2000L, \n        thin = 1L, chains = 4L, seeds = seeds, r_version = R.version.string, \n        jags_version = as.character(rjags::jags.version()), rjags_version = as.character(utils::packageVersion(\"rjags\")), \n        coda_version = as.character(utils::packageVersion(\"coda\")), \n        started_at = format(started, tz = \"UTC\", usetz = TRUE), \n        ended_at = format(ended, tz = \"UTC\", usetz = TRUE), elapsed_seconds = as.numeric(difftime(ended, \n            started, units = \"secs\")), draws = fit), saveRDS(payload, \n        rds_path, version = 3), metadata <- payload[names(payload) != \n        \"draws\"], metadata$raw_rds_path <- rds_path, metadata$raw_rds_sha256 <- sha(rds_path), \n    metadata$draw_rows_per_chain <- vapply(fit, nrow, integer(1)), \n    metadata$draw_columns <- colnames(as.matrix(fit[[1]])), jsonlite::write_json(metadata, \n        metadata_path, auto_unbox = TRUE, pretty = TRUE, na = \"null\"), \n    cat(\"persisted\", length(fit), \"chains x\", nrow(fit[[1]]), \n        \"draws, SHA-256\", metadata$raw_rds_sha256, \"\\n\"))\nexpression(.libPaths(c(\"renv/library/macos/R-4.4/aarch64-apple-darwin20\", \n    .libPaths())), stopifnot(requireNamespace(\"posterior\", quietly = TRUE), \n    requireNamespace(\"jsonlite\", quietly = TRUE)), source(\"R/lib/mebane_model.R\"), \n    outdir <- \"quality_reports/results/mebane_gates/G3/round1/revision2\", \n    rds_path <- file.path(outdir, \"raw_chains.rds\"), meta <- jsonlite::read_json(file.path(outdir, \n        \"sampling_metadata.json\"), simplifyVector = TRUE), sha <- function(path) strsplit(system2(\"shasum\", \n        c(\"-a\", \"256\", path), stdout = TRUE), \" \")[[1]][1], stopifnot(sha(rds_path) == \n        meta$raw_rds_sha256), payload <- readRDS(rds_path), stopifnot(inherits(payload$draws, \n        \"mcmc.list\"), length(payload$draws) == 4L, all(vapply(payload$draws, \n        nrow, integer(1)) == 2000L), identical(as.integer(payload$seeds), \n        31102:31105), payload$adapt == 200L, payload$burnin == \n        500L, payload$post_iterations_per_chain == 2000L, payload$data$n == \n        1L, payload$data$N == 1L, payload$data$a == 0L, payload$data$w == \n        0L), matrices <- lapply(payload$draws, as.matrix), node <- function(name) do.call(cbind, \n        lapply(matrices, function(x) {\n            key <- intersect(c(name, paste0(name, \"[1]\")), colnames(x))\n            if (length(key) != 1L) \n                stop(\"Missing monitored node: \", name)\n            x[, key]\n        })), Z <- node(\"Z\"), im <- node(\"N.iota.m\"), is <- node(\"N.iota.s\"), \n    cm <- node(\"N.chi.m\"), cs <- node(\"N.chi.s\"), M <- ifelse(Z == \n        1, 0, ifelse(Z == 2, ifelse(im == 1, 0.999, 0), ifelse(cm == \n        1, 0.999, 0))) * 0.5, S <- ifelse(Z == 1, 0, ifelse(Z == \n        2, is, cs)) * 0.25, targets <- list(Z = Z, r_im = im, \n        r_is = is, r_cm = cm, r_cs = cs, indicator_Z1 = (Z == \n            1) * 1, indicator_Z2 = (Z == 2) * 1, indicator_Z3 = (Z == \n            3) * 1, M = M, S = S, margin_lower = 1 - M - 2 * \n            S, margin_upper = 1 - M - S), checks <- c(z_support = all(Z %in% \n        1:3), four_count_support = all(c(im, is, cm, cs) %in% \n        0:1), one_class_per_draw = all(targets$indicator_Z1 + \n        targets$indicator_Z2 + targets$indicator_Z3 == 1), nonnegative_functionals = all(M >= \n        0 & S >= 0), lower_identity = all(abs(targets$margin_lower - \n        (1 - M - 2 * S)) < 1e-12), upper_identity = all(abs(targets$margin_upper - \n        (1 - M - S)) < 1e-12), bound_order = all(targets$margin_lower <= \n        targets$margin_upper)), stopifnot(all(checks)), joint <- data.frame(chain = rep(1:4, \n        each = 2000), iteration = rep(1:2000, 4), Z = as.vector(Z), \n        r_im = as.vector(im), r_is = as.vector(is), r_cm = as.vector(cm), \n        r_cs = as.vector(cs), M = as.vector(M), S = as.vector(S), \n        margin_lower = as.vector(targets$margin_lower), margin_upper = as.vector(targets$margin_upper), \n        observed_margin_compatible = FALSE, leader_capacity_necessary = as.vector(M + \n            S <= 0), physical_counterfactual_validated = FALSE), \n    write.csv(joint, file.path(outdir, \"functionals_by_draw.csv\"), \n        row.names = FALSE), states <- list(), for (z in 1:3) for (r1 in 0:1) for (r2 in 0:1) for (r3 in 0:1) for (r4 in 0:1) {\n        counts <- c(r1, r2, r3, r4)\n        weight <- c(4, 2, 1)[z]/7 * prod(dbinom(counts, 1, c(0.35, \n            0.35, 0.85, 0.85))) * mebane_kernel(1, 0, 0, z, counts, \n            0.5, 0.5)\n        m <- if (z == 1) \n            0\n        else if (z == 2) \n            if (r1 == 1) \n                0.999\n            else 0\n        else if (r3 == 1) \n            0.999\n        else 0\n        s <- if (z == 1) \n            0\n        else if (z == 2) \n            r2\n        else r4\n        states[[length(states) + 1L]] <- data.frame(Z = z, r_im = r1, \n            r_is = r2, r_cm = r3, r_cs = r4, indicator_Z1 = as.numeric(z == \n                1), indicator_Z2 = as.numeric(z == 2), indicator_Z3 = as.numeric(z == \n                3), M = 0.5 * m, S = 0.25 * s, margin_lower = 1 - \n                0.5 * m - 0.5 * s, margin_upper = 1 - 0.5 * m - \n                0.25 * s, weight = weight)\n    }, exact <- do.call(rbind, states), exact$posterior <- exact$weight/sum(exact$weight), \n    write.csv(exact, file.path(outdir, \"conditional_exact_states.csv\"), \n        row.names = FALSE), mcse_batch <- function(x) {\n        stopifnot(nrow(x) == 2000L, ncol(x) == 4L)\n        batches <- sapply(1:4, function(chain) colMeans(matrix(x[, \n            chain], nrow = 50L, ncol = 40L)))\n        sqrt(sum(apply(batches, 2, var)/40))/4\n    }, summary <- do.call(rbind, lapply(names(targets), function(nm) {\n        x <- targets[[nm]]\n        expectation <- sum(exact[[nm]] * exact$posterior)\n        constant <- length(unique(as.vector(x))) == 1L && length(unique(exact[[nm]][exact$posterior > \n            0])) == 1L\n        mcse <- if (constant) \n            0\n        else mcse_batch(x)\n        draws <- posterior::as_draws_array(array(x, dim = c(2000L, \n            4L, 1L), dimnames = list(NULL, NULL, nm)))\n        rh <- if (constant) \n            NA_real_\n        else posterior::rhat(draws)[[1]]\n        eb <- if (constant) \n            NA_real_\n        else posterior::ess_bulk(draws)[[1]]\n        et <- if (constant) \n            NA_real_\n        else posterior::ess_tail(draws)[[1]]\n        tol <- max(0.001, 6 * mcse)\n        data.frame(target = nm, exact = expectation, mc_mean = mean(x), \n            mcse = mcse, tolerance = tol, difference = abs(mean(x) - \n                expectation), rhat = rh, ess_bulk = eb, ess_tail = et, \n            constant = constant)\n    })), summary$mean_pass <- summary$difference <= summary$tolerance, \n    summary$diagnostic_pass <- with(summary, constant | (!is.na(rhat) & \n        !is.na(ess_bulk) & !is.na(ess_tail) & rhat < 1.01 & ess_bulk >= \n        400 & ess_tail >= 400)), write.csv(summary, file.path(outdir, \n        \"conditional_comparison.csv\"), row.names = FALSE), old <- read.csv(\"quality_reports/results/mebane_gates/G3/round1/jags_attempt5/conditional_comparison.csv\"), \n    stopifnot(identical(as.character(old$target), as.character(summary$target))), \n    prior_check <- data.frame(target = summary$target, revision1_mean = old$mc_mean, \n        revision2_mean = summary$mc_mean, absolute_mean_difference = abs(summary$mc_mean - \n            old$mc_mean), revision1_mcse = old$mcse, revision2_mcse = summary$mcse, \n        combined_mcse = sqrt(old$mcse^2 + summary$mcse^2), same_seeds_declared = TRUE), \n    write.csv(prior_check, file.path(outdir, \"replay_vs_revision1.csv\"), \n        row.names = FALSE), result <- list(status = \"inconclusive\", \n        repair_id = \"G3-COORD-DRAW-01\", source = \"reopened_raw_chains_rds\", \n        raw_rds_sha256 = sha(rds_path), prior_summary_sha256 = sha(\"quality_reports/results/mebane_gates/G3/round1/jags_attempt5/conditional_comparison.csv\"), \n        all_mean_pass = all(summary$mean_pass), all_diagnostic_pass = all(summary$diagnostic_pass), \n        degenerate_targets = as.character(summary$target[summary$constant]), \n        missing_tail_ess_targets = as.character(summary$target[is.na(summary$ess_tail) & \n            !summary$constant]), per_draw_identities = as.list(checks), \n        replay_comparison = \"descriptive; no stochastic identity or new acceptance criterion\", \n        margin = \"Dobs=1 algebraic offset; observed margin incompatible with N=1,A=0,W=0\", \n        physical_counterfactual_validated = FALSE), jsonlite::write_json(result, \n        file.path(outdir, \"postprocess_result.json\"), auto_unbox = TRUE, \n        pretty = TRUE, na = \"null\"), cat(\"postprocess from reopened RDS:\", \n        nrow(joint), \"joint rows; means\", result$all_mean_pass, \n        \"diagnostics\", result$all_diagnostic_pass, \"\\n\"))\nparse PASS\n",
+        "truncated": false
+      }
+    },
+    {
+      "turn_id": "01a0ee15-49e1-79d1-9007-51f1d20a7f4e",
+      "turn_started_at": 1790700767,
+      "item_order": 21,
+      "id": "exec-f0acd599-4607-418c-aa67-8df888de6d55",
+      "type": "commandExecution",
+      "command": "/bin/zsh -lc '/usr/bin/time -p timeout 120 Rscript --vanilla tests/mebane/likelihood/g3_draw_replay.R > quality_reports/results/mebane_gates/G3/round1/revision2/replay.log 2>&1'",
+      "status": "completed",
+      "exit_code": 0,
+      "duration_ms": 231
+    },
+    {
+      "turn_id": "01a0ee15-49e1-79d1-9007-51f1d20a7f4e",
+      "turn_started_at": 1790700767,
+      "item_order": 23,
+      "id": "exec-a6c8f7a0-9e36-4085-bd28-1fd791fdedab",
+      "type": "commandExecution",
+      "command": "/bin/zsh -lc 'cat quality_reports/results/mebane_gates/G3/round1/revision2/replay.log; ls -lh quality_reports/results/mebane_gates/G3/round1/revision2/raw_chains.rds quality_reports/results/mebane_gates/G3/round1/revision2/sampling_metadata.json'",
+      "status": "completed",
+      "exit_code": 0,
+      "duration_ms": 0,
+      "output": {
+        "text": "During startup - Warning messages:\n1: Setting LC_CTYPE failed, using \"C\" \n2: Setting LC_COLLATE failed, using \"C\" \n3: Setting LC_TIME failed, using \"C\" \n4: Setting LC_MESSAGES failed, using \"C\" \n5: Setting LC_MONETARY failed, using \"C\" \nperl: warning: Setting locale failed.\nperl: warning: Please check that your locale settings:\n\tLC_ALL = \"C.UTF-8\",\n\tLC_CTYPE = \"C.UTF-8\",\n\tLANG = \"C.UTF-8\"\n    are supported and installed on your system.\nperl: warning: Falling back to the standard locale (\"C\").\nperl: warning: Setting locale failed.\nperl: warning: Please check that your locale settings:\n\tLC_ALL = \"C.UTF-8\",\n\tLC_CTYPE = \"C.UTF-8\",\n\tLANG = \"C.UTF-8\"\n    are supported and installed on your system.\nperl: warning: Falling back to the standard locale (\"C\").\nperl: warning: Setting locale failed.\nperl: warning: Please check that your locale settings:\n\tLC_ALL = \"C.UTF-8\",\n\tLC_CTYPE = \"C.UTF-8\",\n\tLANG = \"C.UTF-8\"\n    are supported and installed on your system.\nperl: warning: Falling back to the standard locale (\"C\").\nperl: warning: Setting locale failed.\nperl: warning: Please check that your locale settings:\n\tLC_ALL = \"C.UTF-8\",\n\tLC_CTYPE = \"C.UTF-8\",\n\tLANG = \"C.UTF-8\"\n    are supported and installed on your system.\nperl: warning: Falling back to the standard locale (\"C\").\npersisted 4 chains x 2000 draws, SHA-256 66ddb0aaef7448b25e817e25c931d5608ee9c7141165842613925e9e145baf6d \nreal 0.35\nuser 0.26\nsys 0.05\n-rw-r--r--@ 1 manoelgaldino  staff    12K Sep 29 13:55 quality_reports/results/mebane_gates/G3/round1/revision2/raw_chains.rds\n-rw-r--r--@ 1 manoelgaldino  staff   2.1K Sep 29 13:55 quality_reports/results/mebane_gates/G3/round1/revision2/sampling_metadata.json\n",
+        "truncated": false
+      }
+    },
+    {
+      "turn_id": "01a0ee15-49e1-79d1-9007-51f1d20a7f4e",
+      "turn_started_at": 1790700767,
+      "item_order": 26,
+      "id": "exec-054bf2ff-bd7c-4fc0-875a-18fc1df1e91d",
+      "type": "commandExecution",
+      "command": "/bin/zsh -lc '/usr/bin/time -p timeout 120 Rscript --vanilla tests/mebane/likelihood/g3_draw_postprocess.R > quality_reports/results/mebane_gates/G3/round1/revision2/postprocess.log 2>&1'",
+      "status": "completed",
+      "exit_code": 0,
+      "duration_ms": 595
+    },
+    {
+      "turn_id": "01a0ee15-49e1-79d1-9007-51f1d20a7f4e",
+      "turn_started_at": 1790700767,
+      "item_order": 28,
+      "id": "exec-f230af1f-351e-408f-ae81-4d49ff875308",
+      "type": "commandExecution",
+      "command": "/bin/zsh -lc 'cat quality_reports/results/mebane_gates/G3/round1/revision2/postprocess.log; cat quality_reports/results/mebane_gates/G3/round1/revision2/postprocess_result.json; cat quality_reports/results/mebane_gates/G3/round1/revision2/replay_vs_revision1.csv'",
+      "status": "completed",
+      "exit_code": 0,
+      "duration_ms": 0,
+      "output": {
+        "text": "During startup - Warning messages:\n1: Setting LC_CTYPE failed, using \"C\" \n2: Setting LC_COLLATE failed, using \"C\" \n3: Setting LC_TIME failed, using \"C\" \n4: Setting LC_MESSAGES failed, using \"C\" \n5: Setting LC_MONETARY failed, using \"C\" \nperl: warning: Setting locale failed.\nperl: warning: Please check that your locale settings:\n\tLC_ALL = \"C.UTF-8\",\n\tLC_CTYPE = \"C.UTF-8\",\n\tLANG = \"C.UTF-8\"\n    are supported and installed on your system.\nperl: warning: Falling back to the standard locale (\"C\").\nperl: warning: Setting locale failed.\nperl: warning: Please check that your locale settings:\n\tLC_ALL = \"C.UTF-8\",\n\tLC_CTYPE = \"C.UTF-8\",\n\tLANG = \"C.UTF-8\"\n    are supported and installed on your system.\nperl: warning: Falling back to the standard locale (\"C\").\nperl: warning: Setting locale failed.\nperl: warning: Please check that your locale settings:\n\tLC_ALL = \"C.UTF-8\",\n\tLC_CTYPE = \"C.UTF-8\",\n\tLANG = \"C.UTF-8\"\n    are supported and installed on your system.\nperl: warning: Falling back to the standard locale (\"C\").\npostprocess from reopened RDS: 8000 joint rows; means TRUE diagnostics FALSE \nreal 0.72\nuser 0.61\nsys 0.08\n{\n  \"status\": \"inconclusive\",\n  \"repair_id\": \"G3-COORD-DRAW-01\",\n  \"source\": \"reopened_raw_chains_rds\",\n  \"raw_rds_sha256\": \"66ddb0aaef7448b25e817e25c931d5608ee9c7141165842613925e9e145baf6d\",\n  \"prior_summary_sha256\": \"7f70d062f30a26fd5e1eaa8cc6e8d89b36ca09a519f8116bd88bf0c6ac9a173a\",\n  \"all_mean_pass\": true,\n  \"all_diagnostic_pass\": false,\n  \"degenerate_targets\": \"S\",\n  \"missing_tail_ess_targets\": [\"r_im\", \"r_is\", \"r_cm\", \"r_cs\", \"indicator_Z1\", \"indicator_Z2\", \"M\", \"margin_lower\", \"margin_upper\"],\n  \"per_draw_identities\": {\n    \"z_support\": true,\n    \"four_count_support\": true,\n    \"one_class_per_draw\": true,\n    \"nonnegative_functionals\": true,\n    \"lower_identity\": true,\n    \"upper_identity\": true,\n    \"bound_order\": true\n  },\n  \"replay_comparison\": \"descriptive; no stochastic identity or new acceptance criterion\",\n  \"margin\": \"Dobs=1 algebraic offset; observed margin incompatible with N=1,A=0,W=0\",\n  \"physical_counterfactual_validated\": false\n}\n\"target\",\"revision1_mean\",\"revision2_mean\",\"absolute_mean_difference\",\"revision1_mcse\",\"revision2_mcse\",\"combined_mcse\",\"same_seeds_declared\"\n\"Z\",1.38225,1.38225,6.66133814775094e-16,0.00750848878577799,0.00750848878577799,0.0106186066737735,TRUE\n\"r_im\",0.396125,0.396125,1.66533453693773e-16,0.00545189481293266,0.00545189481293266,0.0077101435850809,TRUE\n\"r_is\",0.247125,0.247125,3.88578058618805e-16,0.00544593914812938,0.00544593914812938,0.00770172100314315,TRUE\n\"r_cm\",0.865625,0.865625,1.11022302462516e-16,0.00366304089381263,0.00366304089381263,0.00518032211155708,TRUE\n\"r_cs\",0.809,0.809,3.33066907387547e-16,0.00542363949618846,0.00542363949618846,0.0076701845329321,TRUE\n\"indicator_Z1\",0.665375000000001,0.665375000000001,0,0.00617016316328332,0.00617016316328332,0.00872592842757015,TRUE\n\"indicator_Z2\",0.287000000000001,0.287000000000001,2.77555756156289e-16,0.00602126307134632,0.00602126307134632,0.00851535189811425,TRUE\n\"indicator_Z3\",0.047625,0.047625,2.77555756156289e-17,0.00287151405163164,0.00287151405163164,0.00406093411636238,TRUE\n\"M\",0.0939684375000001,0.0939684375000001,2.77555756156289e-17,0.00254792161217076,0.00254792161217076,0.00360330529979541,TRUE\n\"S\",0,0,0,0,0,0,TRUE\n\"margin_lower\",0.9060315625,0.9060315625,0,0.00254792161217076,0.00254792161217076,0.00360330529979541,TRUE\n\"margin_upper\",0.9060315625,0.9060315625,0,0.00254792161217076,0.00254792161217076,0.00360330529979541,TRUE\n",
+        "truncated": false
+      }
+    },
+    {
+      "turn_id": "01a0ee15-49e1-79d1-9007-51f1d20a7f4e",
+      "turn_started_at": 1790700767,
+      "item_order": 35,
+      "id": "exec-87f3165c-f7ee-45e3-be1b-79a0f1756dbb",
+      "type": "commandExecution",
+      "command": "/bin/zsh -lc 'python3 quality_reports/results/mebane_gates/G3/round1/revision2/build_candidate.py'",
+      "status": "completed",
+      "exit_code": 0,
+      "duration_ms": 0,
+      "output": {
+        "text": "revision2 sealed 321 files 1b26bbed0577e159a57af93567f14d38d511ea7f26216ca6d5aba22e56a2dacf\n",
+        "truncated": false
+      }
+    },
+    {
+      "turn_id": "01a0ee15-49e1-79d1-9007-51f1d20a7f4e",
+      "turn_started_at": 1790700767,
+      "item_order": 37,
+      "id": "exec-246babe9-6194-437c-94aa-213aa5497789",
+      "type": "commandExecution",
+      "command": "/bin/zsh -lc \"python3 - <<'PY'\nimport json,hashlib\nfrom pathlib import Path\nroot=Path.cwd(); h=root/'quality_reports/results/mebane_gates/G3/round1/revision2'; sha=lambda p: hashlib.sha256(p.read_bytes()).hexdigest()\nm=json.loads((h/'candidate_manifest.json').read_text()); r=json.loads((h/'run.json').read_text()); c=json.loads((h.parent/'gate_contract.json').read_text()); meta=json.loads((h/'sampling_metadata.json').read_text()); result=json.loads((h/'postprocess_result.json').read_text())\ncanon=hashlib.sha256(json.dumps(c,sort_keys=True,ensure_ascii=False,separators=(',',':')).encode()).hexdigest()\nassert m['contract_sha256']==r['contract_sha256']==canon\nassert len(m['files'])==len(set(x['path'] for x in m['files']))\nassert all(sha(root/x['path'])==x['sha256'] and (root/x['path']).stat().st_size==x['bytes'] for x in m['files'])\nassert all(any(x['path']==p for x in m['files']) for k in ('inputs','code','configuration','outputs') for p in r[k])\nassert m['raw_draws_sha256']==r['raw_draws_sha256']==meta['raw_rds_sha256']==result['raw_rds_sha256']==sha(h/'raw_chains.rds')\nassert r['prior_candidate_manifest_sha256']==sha(h.parent/'revision1/candidate_manifest.json')\nassert r['repair_adjudication_sha256']==sha(root/'quality_reports/results/mebane_gates/coordination/2026-09-29_g3_runtime/draw_persistence_adjudication.json')\nassert r['new_mcmc_runs']==1 and r['candidate_status']=='inconclusive' and not r['gate_approved']\nassert all(x['exit_code']==0 for x in r['commands'][-2:])\nassert 'quality_reports/plans/mebane_2022_2026_gates.json' not in (x['path'] for x in m['files'])\nprint('ACTIVE_MANIFEST',h/'candidate_manifest.json',sha(h/'candidate_manifest.json'))\nprint('VERIFY_PASS',len(m['files']),'files; RDS',sha(h/'raw_chains.rds'),'new timed seconds',sum(x['elapsed_seconds'] for x in r['commands'][-2:]))\nPY\"",
+      "status": "completed",
+      "exit_code": 0,
+      "duration_ms": 0,
+      "output": {
+        "text": "ACTIVE_MANIFEST /Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/G3/round1/revision2/candidate_manifest.json de779221e40964b9729bdd928a814e7e7dfd9738df866b91f6ee97307a14bd0f\nVERIFY_PASS 321 files; RDS 66ddb0aaef7448b25e817e25c931d5608ee9c7141165842613925e9e145baf6d new timed seconds 1.0699999999999998\n",
+        "truncated": false
+      }
+    },
+    {
+      "turn_id": "01a0ee15-49e1-79d1-9007-51f1d20a7f4e",
+      "turn_started_at": 1790700767,
+      "item_order": 40,
+      "id": "exec-82565073-5b45-47ac-b2c4-0f39d758db87",
+      "type": "commandExecution",
+      "command": "/bin/zsh -lc \"Rscript --vanilla -e '.libPaths(c(\\\"renv/library/macos/R-4.4/aarch64-apple-darwin20\\\",.libPaths())); x<-readRDS(\\\"quality_reports/results/mebane_gates/G3/round1/revision2/raw_chains.rds\\\"); stopifnot(inherits(x\"'$draws,\"mcmc.list\"),length(x$draws)==4L,all(vapply(x$draws,nrow,integer(1))==2000L),all(vapply(x$draws,ncol,integer(1))==5L)); cat(\"RDS READ PASS: 4 chains x 2000 draws x 5 nodes; seeds\",paste(x$seeds,collapse=\",\"),\"'\"\\\\n\\\")'\"",
+      "status": "completed",
+      "exit_code": 0,
+      "duration_ms": 0,
+      "output": {
+        "text": "During startup - Warning messages:\n1: Setting LC_CTYPE failed, using \"C\" \n2: Setting LC_COLLATE failed, using \"C\" \n3: Setting LC_TIME failed, using \"C\" \n4: Setting LC_MESSAGES failed, using \"C\" \n5: Setting LC_MONETARY failed, using \"C\" \nRDS READ PASS: 4 chains x 2000 draws x 5 nodes; seeds 31102,31103,31104,31105 \n",
+        "truncated": false
+      }
+    }
+  ]
+}

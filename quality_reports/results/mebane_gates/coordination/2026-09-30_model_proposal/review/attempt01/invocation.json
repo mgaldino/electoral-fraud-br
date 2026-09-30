@@ -1,0 +1,13 @@
+{
+  "argv": [
+    "timeout",
+    "110",
+    "Rscript",
+    "--vanilla",
+    "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/review/preparation/checks.R",
+    "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/review/attempt01"
+  ],
+  "cwd": "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud",
+  "no_RNG": true,
+  "no_estimation": true
+}

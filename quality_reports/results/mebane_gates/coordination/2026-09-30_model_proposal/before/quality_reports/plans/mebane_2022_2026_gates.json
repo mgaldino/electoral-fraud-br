@@ -3,7 +3,7 @@
   "plan_id": "mebane-brasil-2022-2026",
   "date": "2026-09-28",
   "scope": "Modelo eforensics qbl para eleição presidencial brasileira de 2022 e preparação para 2026, com execução por subagentes, goals delimitados e revisão independente.",
-  "current_deliverable": "G3 round1 encerrado como inconclusive: testes pequenos executados, diagnósticos reparados e revisão independente concluída; sete versões históricas recuperadas em suplemento, sem atestação universal de todos os inputs antigos. F1/F2 e o critério discreto de ESS de cauda continuam abertos; nenhuma engine de produção aprovada. Proposta comparativa de 30/09 recomenda estudar uma candidata multinomial, sem adoção ou nova estimação. G2 continua aprovado apenas como benchmark literal. G10 permanece não executado, faltando alvo externo completo; G4/G6 não liberados. Nenhuma exclusão de arquivos está autorizada.",
+  "current_deliverable": "G3 round1 em execução: testes pequenos do qbl/JAGS literal, sob protocolo prévio e revisão independente, sem aprovação de produção ou inferência. G2 round3 permanece aprovado no escopo de benchmark de software. Reconciliação documental G0/G1/G2/G7 concluída; download incompleto continua ausente por decisão do usuário. A replicação externa dos autores está incorporada em G10 com fontes e critérios, mas falta referência numérica D.C. ou input limpo de outro caso; não foi executada nem aprovada. Nenhuma exclusão de arquivos está autorizada.",
   "integrity_hold": {
     "incident": "G2-R2-QA-I1",
     "path": "ssrn-4073770.pdf.download/ssrn-4073770.pdf",
@@ -154,24 +154,20 @@
       "goal": "Entregar uma implementação testada contra o contrato, e decidir com evidência se a produção usará JAGS, Stan equivalente ou apenas JAGS com Stan aproximado como sensibilidade.",
       "depends_on": ["G2"],
       "external_prerequisites": [],
-      "status": "inconclusive",
+      "status": "under_review",
       "executor": {"role": "SOL-MODELO", "model": "gpt-6-sol", "effort": "xhigh"},
       "reviewer": {"role": "QA-FIDELIDADE", "model": "inherit", "effort": "xhigh", "independent": true},
       "write_scope": ["stan/", "R/lib/mebane_model.R", "R/05_stan_eforensics_qbl_calibrate.R", "R/05_eforensics_umeforensics_qbl.R", "R/07_brasil_full_qbl.R", "tests/mebane/likelihood/", "quality_reports/results/mebane_gates/G3/"],
       "todos": [
-        {"id": "G3-T1", "task": "Construir gerador sintético fiel ao contrato, sem reutilizar simulate_bl com constantes incompatíveis sem correção e teste.", "status": "in_progress", "evidence": [{"path": "quality_reports/results/mebane_gates/G3/round1/review/review.json", "basis": "executed", "locator": "Auditor de 32 tentativas e probes independentes; F1/F2 impedem validar gerador integral."}]},
-        {"id": "G3-T2", "task": "Implementar e testar a verossimilhança de referência para N pequeno, enumerando contagens discretas quando cabível, e comparar probabilidades em uma grade incluindo fronteiras.", "status": "in_progress", "evidence": [{"path": "quality_reports/results/mebane_gates/G3/round1/review/review.json", "basis": "executed", "locator": "87 casos independentes e 48 estados condicionados conferidos; kernel diagnóstico não certifica likelihood irrestrita normalizada."}]},
-        {"id": "G3-T3", "task": "Conferir priors, matrizes de desenho, interface de dados, transformações e generated quantities; testar formula1=w/formula2=a com sentinelas assimétricas e corrigir as chamadas históricas invertidas preservando fonte anterior e fits; separar aproximação já existente de eventual Stan exato e testar gradientes se aplicável.", "status": "in_progress", "evidence": [{"path": "quality_reports/results/mebane_gates/G3/round1/review/review.json", "basis": "executed", "locator": "Priors, seis efeitos, interface assimétrica e funcionais conjuntos conferidos; sem certificação física ou Stan exato."}]},
-        {"id": "G3-T4", "task": "Executar comparações pequenas entre engines apenas no mesmo alvo e dentro do erro Monte Carlo; documentar a decisão de engine e a viabilidade da marginalização.", "status": "in_progress", "evidence": [{"path": "quality_reports/results/mebane_gates/G3/round1/review/review.json", "basis": "executed", "locator": "Quatro cadeias de caso condicionado comparadas à enumeração; médias passam, nove tail ESS indefinidos; nenhuma equivalência integral JAGS-Stan."}, {"path": "quality_reports/results/mebane_gates/G3/round1/adjudication.json", "basis": "inspected", "locator": "Engine não aprovada; fechamento inconclusivo e reparo documental aceito em escopo delimitado."}]}
+        {"id": "G3-T1", "task": "Construir gerador sintético fiel ao contrato, sem reutilizar simulate_bl com constantes incompatíveis sem correção e teste.", "status": "todo", "evidence": []},
+        {"id": "G3-T2", "task": "Implementar e testar a verossimilhança de referência para N pequeno, enumerando contagens discretas quando cabível, e comparar probabilidades em uma grade incluindo fronteiras.", "status": "todo", "evidence": []},
+        {"id": "G3-T3", "task": "Conferir priors, matrizes de desenho, interface de dados, transformações e generated quantities; testar formula1=w/formula2=a com sentinelas assimétricas e corrigir as chamadas históricas invertidas preservando fonte anterior e fits; separar aproximação já existente de eventual Stan exato e testar gradientes se aplicável.", "status": "todo", "evidence": []},
+        {"id": "G3-T4", "task": "Executar comparações pequenas entre engines apenas no mesmo alvo e dentro do erro Monte Carlo; documentar a decisão de engine e a viabilidade da marginalização.", "status": "todo", "evidence": []}
       ],
       "deliverables": ["Testes small-N e gerador auditado", "Implementação aprovada ou decisão documentada de manter JAGS", "Registro de equivalência/limites do Stan"],
       "acceptance": ["O alvo de produção preserva o contrato G2; aproximações não são apresentadas como portagem exata.", "Uma impossibilidade computacional de Stan exato pode encerrar a opção Stan sem bloquear JAGS validado; a decisão é explícita.", "Tolerâncias numéricas e MCSE são definidas antes da comparação, incluindo casos de suporte inválido.", "Revisor recalcula exemplos da likelihood e identifica a implementação de produção por hash."],
       "on_failure": "Corrigir implementação ou voltar ao G2 se o problema for de especificação. Não aumentar iterações para mascarar discrepância de likelihood.",
-      "records": {
-        "candidate_manifest": "quality_reports/results/mebane_gates/G3/round1/revision3/candidate_manifest.json",
-        "review": "quality_reports/results/mebane_gates/G3/round1/review/review.json",
-        "adjudication": "quality_reports/results/mebane_gates/G3/round1/adjudication.json"
-      }
+      "records": null
     },
     {
       "id": "G10",

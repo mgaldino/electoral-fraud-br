@@ -1,0 +1,53 @@
+{
+  "files": [
+    {
+      "path": "frozen_inputs/adjudication.json",
+      "sha256": "438b50f4680ed661463405ccfcc64484b6011ef121285010078fba14cb7ce0b7",
+      "bytes": 2873,
+      "source_path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/provenance_adjudication.json",
+      "role": "preexisting_review_or_adjudication_input"
+    },
+    {
+      "path": "frozen_inputs/input_closure_revision2.json",
+      "sha256": "21112d7cc29f924d2cf9dd530061b7086f899f9ca59f2c037626791be800cde9",
+      "bytes": 5646,
+      "source_path": "quality_reports/results/mebane_gates/G3/round1/review/input_closure_revision2.json",
+      "role": "preexisting_review_or_adjudication_input"
+    },
+    {
+      "path": "frozen_inputs/executor_event_sequence.json",
+      "sha256": "2ba52fc1909b9148b4e05a286ae8a75fac527aa6f28433346f002c606b88439f",
+      "bytes": 116554,
+      "source_path": "quality_reports/results/mebane_gates/G3/round1/review/executor_event_sequence.json",
+      "role": "preexisting_review_or_adjudication_input"
+    },
+    {
+      "path": "frozen_inputs/history_audit.json",
+      "sha256": "1e29ca542fd20612b8030d88a3bc046abf3ff27ef894163eba0b9205a270a11c",
+      "bytes": 20559,
+      "source_path": "quality_reports/results/mebane_gates/G3/round1/review/history_audit.json",
+      "role": "preexisting_review_or_adjudication_input"
+    },
+    {
+      "path": "frozen_inputs/qa_audit_event_history.py",
+      "sha256": "709f3f66ebfa00521fda40d45e7aa1db14e380de89ab86532b68dc7c757d38ff",
+      "bytes": 3788,
+      "source_path": "quality_reports/results/mebane_gates/G3/round1/review/final_checks/audit_event_history.py",
+      "role": "preexisting_review_or_adjudication_input"
+    },
+    {
+      "path": "frozen_inputs/review.json",
+      "sha256": "c5fee3d48a7d23615bde07e866622cbea26964693ea40738e8aeb0dfe5c72955",
+      "bytes": 13607,
+      "source_path": "quality_reports/results/mebane_gates/G3/round1/review/review.json",
+      "role": "preexisting_review_or_adjudication_input"
+    },
+    {
+      "path": "frozen_inputs/revision3_manifest.json",
+      "sha256": "63855471a88dbfc3840b1172aef71118f7cffbdfe425e0241f1d689bf5e67966",
+      "bytes": 82081,
+      "source_path": "quality_reports/results/mebane_gates/G3/round1/revision3/candidate_manifest.json",
+      "role": "preexisting_review_or_adjudication_input"
+    }
+  ]
+}

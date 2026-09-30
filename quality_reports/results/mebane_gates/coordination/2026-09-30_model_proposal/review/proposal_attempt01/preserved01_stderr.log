@@ -1,0 +1,3 @@
+There were 50 or more warnings (use warnings() to see the first 50)
+Error: max(results$sequential_error) < 1e-11 is not TRUE
+Execution halted

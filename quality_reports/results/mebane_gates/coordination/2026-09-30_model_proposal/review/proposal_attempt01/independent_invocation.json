@@ -1,0 +1,14 @@
+{
+  "argv": [
+    "timeout",
+    "110",
+    "Rscript",
+    "--vanilla",
+    "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/review/proposal_preparation01/checks.R",
+    "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/review/proposal_attempt01/independent"
+  ],
+  "cwd": "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud",
+  "source_sha256": "f6e7b8169eeacbdbd2d35f8f864b79513862dd86a6f9e1fb8f3d8b1d4bc6cd02",
+  "no_MCMC": true,
+  "R_LIBS_USER": "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/renv/library/macos/R-4.4/aarch64-apple-darwin20"
+}

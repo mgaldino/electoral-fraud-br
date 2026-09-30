@@ -1,0 +1,3 @@
+"case","tau","nu","m","s","pA","pW","pO","expected_M_per_N","expected_S_per_N"
+"no_transfer",0.7,0.714285714285714,0,0,0.3,0.5,0.2,0,0
+"positive_transfer",0.6,0.5,0.25,0.333333333333333,0.3,0.5,0.2,0.1,0.1

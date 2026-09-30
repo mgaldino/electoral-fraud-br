@@ -1,0 +1,38 @@
+{
+  "command": [
+    "/opt/homebrew/opt/python@3.13/bin/python3.13",
+    "-B",
+    "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/provenance_repair/reconstruct_sources.py",
+    "verify-seal"
+  ],
+  "cwd": "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud",
+  "started_at": "2026-09-30T23:02:15.179748+00:00",
+  "finished_at": "2026-09-30T23:02:15.274095+00:00",
+  "wall_seconds": 0.09370399999897927,
+  "exit_code": 0,
+  "timed_out": false,
+  "timeout_seconds": 120,
+  "python": "3.13.3 (main, Apr  8 2025, 13:54:08) [Clang 16.0.0 (clang-1600.0.26.6)]",
+  "platform": "macOS-14.7.3-arm64-arm-64bit-Mach-O",
+  "source_snapshots": [
+    {
+      "path": "runs/final_verification/source_snapshot/reconstruct_sources.py",
+      "sha256": "80957c2ff0bc4d2beed2b25fa44a9877eec84b97ffd694cfe1f6361d66e10ebb",
+      "bytes": 24102
+    },
+    {
+      "path": "runs/final_verification/source_snapshot/run_documentary.py",
+      "sha256": "116088aa15bf9bde19e367cd1f774189e171c715c8c5cef778ca48af6103fae3",
+      "bytes": 3151
+    },
+    {
+      "path": "runs/final_verification/source_snapshot/repair_plan.json",
+      "sha256": "5aebb456caa1ed75d035058466aa5ebaa874511b00d0cf275eeb1f43afb44bc1",
+      "bytes": 2829
+    }
+  ],
+  "reconstructor_sha256": "80957c2ff0bc4d2beed2b25fa44a9877eec84b97ffd694cfe1f6361d66e10ebb",
+  "runner_sha256": "116088aa15bf9bde19e367cd1f774189e171c715c8c5cef778ca48af6103fae3",
+  "plan_sha256": "5aebb456caa1ed75d035058466aa5ebaa874511b00d0cf275eeb1f43afb44bc1",
+  "new_scientific_executions": 0
+}

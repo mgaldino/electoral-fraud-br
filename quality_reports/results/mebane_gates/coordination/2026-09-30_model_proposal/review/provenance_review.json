@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.0",
+  "review_id": "G3-PROVENANCE-QA-20260930-01",
+  "reviewer_thread_id": "01a0ee05-aeaf-7492-a8ea-fa731dd6214a",
+  "date": "2026-09-30",
+  "source": {
+    "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/provenance_repair/closure_manifest.json",
+    "sha256": "b6b56b80a7b40863d34f5f48b1de6641c1c54572121d949e9e6052ec46723965",
+    "declared_files": 42
+  },
+  "status": "pass",
+  "verdict_scope": "Documentary supplement recovers exactly the seven adjudicated historical source identities; not universal historical runtime input closure.",
+  "finding_reviewed": "G3-QA-R2-INPUT-01",
+  "finding_assessment": "Seven-source archival defect repaired within the adjudicated scope; evidence sufficient for coordination to resolve this narrow finding.",
+  "new_findings": [],
+  "adjudication_performed": false,
+  "ledger_modified": false,
+  "parent_manifest_sha256": "63855471a88dbfc3840b1172aef71118f7cffbdfe425e0241f1d689bf5e67966",
+  "historical_final_review_sha256": "c5fee3d48a7d23615bde07e866622cbea26964693ea40738e8aeb0dfe5c72955",
+  "checks": {
+    "independent_checks": 914,
+    "failed": 0,
+    "package_files_verified": 42,
+    "source_identities_recovered_and_replayed": 7,
+    "affected_command_ids": 5,
+    "timed_commands_compared": 12,
+    "source_edit_states_compared": 21,
+    "original_revision3_entries_verified": 350,
+    "original_QA_entries_verified": 419,
+    "frozen_inputs_identical_to_originals": true,
+    "five_archived_historical_logs_identical": true,
+    "independent_raw_event_reconstruction": true,
+    "executor_read_only_verify_seal_exit": 0,
+    "detached_final_verification_bound_to_exact_manifest": true,
+    "unlisted_package_files_outside_declared_exclusions": 0
+  },
+  "closure": {
+    "declared_supplement_files_closed": true,
+    "seven_adjudicated_source_identities_closed": true,
+    "universal_historical_runtime_inputs_closed": false,
+    "original_review_manifest_complete_rewritten": false,
+    "unresolved_outside_scope": "test_ar02_interface.R has no reconstructible base in this event sequence; the map does not claim a complete transitive runtime dependency graph. Unrecorded edits are not independently excluded."
+  },
+  "gate_G3_status": "inconclusive",
+  "F1_F2_resolved": false,
+  "historical_tail_ESS_criterion_satisfied": false,
+  "new_estimation_or_chains": false,
+  "recovered_R_sources_executed": false,
+  "production_approved": false,
+  "evidence_paths": [
+    "documentary_attempt01/checks.json",
+    "documentary_attempt01/recovered_sources.json",
+    "documentary_attempt01/replayed_event_history.json",
+    "documentary_attempt01/input_inventory.json",
+    "documentary_attempt01/executor_verify_stdout.log",
+    "documentary_attempt01/result.json"
+  ],
+  "decision_owner": "Coordination adjudicates finding closure and changes ledger."
+}

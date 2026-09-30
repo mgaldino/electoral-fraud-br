@@ -1,0 +1,44 @@
+{
+  "files": [
+    {
+      "path": "historical_logs/g3_deterministic.log",
+      "sha256": "ba7c5ef626ce133553d370b14be1d2db859dcebaf92f72f28f58b1c975031322",
+      "bytes": 489,
+      "source_path": "quality_reports/results/mebane_gates/G3/round1/g3_deterministic.log",
+      "command_event_id": "exec-5917a647-9399-47fb-96b0-9f87fb360581",
+      "role": "historical_log_not_new_execution"
+    },
+    {
+      "path": "historical_logs/g3_deterministic_attempt2.log",
+      "sha256": "022a2f2a8f82ef3476fb4b24eb0d5efc8019c816906a8ea38e09fd1f12bd2a0f",
+      "bytes": 347,
+      "source_path": "quality_reports/results/mebane_gates/G3/round1/g3_deterministic_attempt2.log",
+      "command_event_id": "exec-8d397c53-a60a-48b9-bc72-3fdb8c7fb417",
+      "role": "historical_log_not_new_execution"
+    },
+    {
+      "path": "historical_logs/g3_jags_attempt1.log",
+      "sha256": "602c1ed9d4f68eda717fbf8db86be49deca83ae9c3187190ce342d3e9e6faf86",
+      "bytes": 1464,
+      "source_path": "quality_reports/results/mebane_gates/G3/round1/g3_jags_attempt1.log",
+      "command_event_id": "exec-39fc0c88-d6b6-4a53-9f81-0ed65fa6f7a0",
+      "role": "historical_log_not_new_execution"
+    },
+    {
+      "path": "historical_logs/g3_jags_attempt2.log",
+      "sha256": "39d9f0359740de56d0b1a90cdab2dc5f3d006541eab199c885c9ae5eef115cd1",
+      "bytes": 1676,
+      "source_path": "quality_reports/results/mebane_gates/G3/round1/g3_jags_attempt2.log",
+      "command_event_id": "exec-16393a95-824d-40bc-affe-64ba4f890b21",
+      "role": "historical_log_not_new_execution"
+    },
+    {
+      "path": "historical_logs/g3_jags_attempt4.log",
+      "sha256": "e2cb8b004bb9449b9f6711bfea593c1694ec589a3e1f1011cad628019c1f0f7d",
+      "bytes": 1777,
+      "source_path": "quality_reports/results/mebane_gates/G3/round1/g3_jags_attempt4.log",
+      "command_event_id": "exec-78df1b3c-3b27-45b5-8592-9c8ad88e4202",
+      "role": "historical_log_not_new_execution"
+    }
+  ]
+}

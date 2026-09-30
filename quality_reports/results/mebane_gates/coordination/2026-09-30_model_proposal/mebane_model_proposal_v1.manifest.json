@@ -1,0 +1,10 @@
+{
+  "source": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/proposal_v1.md",
+  "source_sha256": "7fe462ed99561dee68d49fe1c5595845664249060459d018b4d01829fd61153c",
+  "builder": "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/render_proposal.py",
+  "builder_sha256": "a2d667c4c53179826b7dabb1787a47981810d40816991e080c62ace704568325",
+  "output": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/mebane_model_proposal_v1.pdf",
+  "output_sha256": "1ba3644476e788327e7378a0cff0499b8f1a497bd9f2e70eba204c11043f3847",
+  "reportlab_version": "4.4.9",
+  "visual_qa": "pending"
+}

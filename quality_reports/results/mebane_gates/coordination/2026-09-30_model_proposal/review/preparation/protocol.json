@@ -1,0 +1,49 @@
+{
+  "protocol_id": "G3-MODEL-PROPOSAL-INDEPENDENT-PREFLIGHT-01",
+  "reviewer_id": "01a0ee05-aeaf-7492-a8ea-fa731dd6214a",
+  "stage": "preparation_before_frozen_proposal_received",
+  "final_review_authorized_now": false,
+  "scope": "Documentary identity and deterministic mathematical counterexamples only; no estimation, new chains, model selection or production approval.",
+  "write_scope": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/review/",
+  "candidate_proposal_path": null,
+  "candidate_proposal_sha256": null,
+  "provenance_package_path": null,
+  "provenance_package_sha256": null,
+  "fixed_bindings": {
+    "G3_revision3_manifest": "63855471a88dbfc3840b1172aef71118f7cffbdfe425e0241f1d689bf5e67966",
+    "G3_final_review": "c5fee3d48a7d23615bde07e866622cbea26964693ea40738e8aeb0dfe5c72955",
+    "G3_QA_manifest": "b7d8308b6e7b88f4c20d8d4841e7e60da43488c78e3bc962b760347325f0c8e0",
+    "qbl_source": "f8360126424b7a463f76a1c99efc89a8a5cb81339213bd4931559f14595fbab6",
+    "raw_RDS": "66ddb0aaef7448b25e817e25c931d5608ee9c7141165842613925e9e145baf6d",
+    "benchmark_contract": "63b61fb0594d0302a03d999bcff6c62967b6e999f37b4c9a8821f0f8e9ed18d2"
+  },
+  "provenance_acceptance": [
+    "Exactly seven recovered source-byte identities must match the prior independent audit",
+    "Each recovered source must map to the original command, attempt, source path and raw event sequence",
+    "Recovered sources are archives, never replacements of canonical or historical files",
+    "Old candidates, protocols, logs and raw chains must retain their original bytes or existing explicit frozen mappings",
+    "New package inventory must close actual reconstruction inputs, including event records and reconstruction code",
+    "Documentary repair cannot promote G3 to PASS or resolve F1/F2"
+  ],
+  "mathematical_cases": {
+    "F1": "N=A=1, m=.999, s=0, tau=nu=.5: exact pW=499.5, parent mass positive",
+    "F2": "N=2, A=1, W=2, m=s=0, tau=nu=.5: impossible electoral event has literal mass 1/32",
+    "triangle_normalizer": "N=2, m=s=0, tau=.5; nu=.2,.5,.8. C=1-tau*(1-tau)*nu^2/2, hence not a data-only constant",
+    "normalization_order": "N=2, tau=nu=.5; equal-weight fixed components (m,s)=(0,0),(.5,0). C0=31/32, C1=55/64. Normalizing the mixture differs from normalizing its components",
+    "paper_probabilities": "pA=(1-tau)*(1-m), pW=tau*nu+(1-tau)*m+tau*(1-nu)*s, pO=tau*(1-nu)*(1-s); formulas read from archived G2 contract, not yet a new review of article provenance",
+    "independent_binomials": "N=1,tau=nu=.5,m=s=0: P(A=W=1)=1/8; conditioning onto triangle is not multinomial",
+    "multinomial": "Compare three-category multinomial to sequential A~Bin(N,pA), W|A~Bin(N-A,pW/(1-pA)), including pA=1 boundary",
+    "transfer_composition": "Marginalize five mutually exclusive categories (unmoved abstention, manufactured, true leader, stolen, unmoved other) for N=1,2,3; compare to three-category multinomial and capacity constraints",
+    "identification_counterexample": "(tau,nu,m,s)=(.7,5/7,0,0) and (.6,.5,.25,1/3) both induce (pA,pW,pO)=(.3,.5,.2), but expected transfers are 0 versus .1N manufactured and .1N stolen",
+    "grid": {"N": [1,2,3], "tau": [0.2,0.5,0.8], "nu": [0.2,0.5,0.8], "m": [0,0.2,0.6,0.999], "s": [0,0.3,0.8]},
+    "grid_scope": "Scalar fixed-parameter algebraic fixtures, not draws from qbl latent counts or a substitute fitted model. F1/F2 separately use values in literal count support."
+  },
+  "tolerances": {
+    "deterministic_absolute": 1e-12,
+    "probability_support": "Strict finite p in [0,1]; no epsilon/clamp to validate invalid probabilities",
+    "normalization": "Require finite positive normalizer before division; normalization is explicitly a different statistical model",
+    "identification": "Exact algebraic equality is the proof; small-N numeric enumeration is only a check"
+  },
+  "runtime": {"one_process_seconds": 110, "no_rng": true, "no_MCMC": true, "no_install": true, "no_network": true, "preserve_each_attempt": true},
+  "decision_boundary": "Prepare evidence and questions, then await user-provided frozen proposal bytes and package identity. Do not issue final pass/changes_requested/inconclusive for an unseen proposal."
+}

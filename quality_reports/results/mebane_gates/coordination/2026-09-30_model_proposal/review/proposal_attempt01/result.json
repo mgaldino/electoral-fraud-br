@@ -1,0 +1,32 @@
+{
+  "jobs": [
+    {
+      "name": "independent",
+      "exit_code": 0,
+      "seconds": 0.5462908749468625
+    },
+    {
+      "name": "preserved01",
+      "exit_code": 1,
+      "seconds": 3.1728846660116687
+    },
+    {
+      "name": "preserved02",
+      "exit_code": 1,
+      "seconds": 3.24350704200333
+    },
+    {
+      "name": "candidate03",
+      "exit_code": 0,
+      "seconds": 3.291008249972947
+    }
+  ],
+  "input_bytes_unchanged": true,
+  "independent_checks": 25,
+  "failed_checks": [],
+  "expected_failures": [
+    "preserved01",
+    "preserved02"
+  ],
+  "no_estimation": true
+}

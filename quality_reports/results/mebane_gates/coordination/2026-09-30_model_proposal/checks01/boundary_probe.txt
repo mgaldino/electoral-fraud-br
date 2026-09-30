@@ -1,0 +1,3 @@
+direct_ratio=1.0000000000000002
+positive_sum_ratio=1
+No clamp, tolerance change or new probability model.

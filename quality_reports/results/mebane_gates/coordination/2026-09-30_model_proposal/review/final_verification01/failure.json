@@ -1,0 +1,12 @@
+{
+  "stage": "QA_manifest_sealing",
+  "first_command": "python3 -B review/proposal_preparation01/seal_review.py seal",
+  "first_exit_code": 1,
+  "error": "AssertionError: quality_reports/plans/mebane_2022_2026_gates.json",
+  "second_command": "python3 -B review/proposal_preparation01/seal_review.py verify",
+  "second_exit_code": 1,
+  "second_error": "FileNotFoundError: review_manifest.json had not been created",
+  "evidence_origin": "Observed terminal tool results; no scientific tests rerun.",
+  "cause": "Mutable coordination metadata changed after preparation: CLAUDE.md and the gate ledger. Frozen proposal, supplement and G3 candidate identities did not change.",
+  "repair_scope": "Resolve the two old input identities through exact preexisting before/ snapshots. Preserve this attempt, use a new sealing script and directory, and do not rewrite metadata or preparation."
+}
