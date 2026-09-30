@@ -1,0 +1,11 @@
+{
+  "status": "pass_inventory_validation_only",
+  "manifest_sha256": "b7d8308b6e7b88f4c20d8d4841e7e60da43488c78e3bc962b760347325f0c8e0",
+  "review_sha256": "c5fee3d48a7d23615bde07e866622cbea26964693ea40738e8aeb0dfe5c72955",
+  "files_verified": 419,
+  "candidate_entries_preserved": 350,
+  "candidate_remapped_entries": 0,
+  "review_status": "inconclusive",
+  "candidate_manifest_complete": false,
+  "production_validated": false
+}

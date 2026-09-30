@@ -1,0 +1,23 @@
+{
+  "protocol_id": "G3-round1-pretest-v1",
+  "frozen_before_tests": true,
+  "target": "Unmodified G0 qbl JAGS source, SHA-256 f8360126424b7a463f76a1c99efc89a8a5cb81339213bd4931559f14595fbab6; JAGS 4.3.2 required",
+  "scope": "n<=8; enumeration N=1,2,3; no national fitting; conditioned auxiliary contrasts labeled separately",
+  "seeds": {"generator": 31101, "jags_chain_1": 31102, "jags_chain_2": 31103},
+  "jags": {"chains": 2, "adapt": 100, "burnin": 200, "sample_iterations_per_chain": 1000, "thin": 1, "monitors": ["Z", "N.iota.m", "N.iota.s"], "single_process_limit_seconds": 120},
+  "deterministic_cases": {
+    "N": [1, 2, 3],
+    "tau": 0.5,
+    "nu": 0.5,
+    "mus": [0.35, 0.35, 0.85, 0.85],
+    "pi": [0.5714285714285714, 0.2857142857142857, 0.14285714285714285],
+    "observations": "all integer A,W in 0:N, flag A+W>N independently",
+    "invalid_probe": {"N": 1, "A": 1, "W": 0, "Z": 2, "R_iota_m": 1, "R_iota_s": 0, "tau": 0.5, "nu": 0.5},
+    "valid_control": {"N": 1, "A": 0, "W": 0, "Z": 1, "counts": [0, 0, 0, 0], "tau": 0.5, "nu": 0.5}
+  },
+  "runtime_probes": ["observed valid control", "invalid active class 2 counts in data", "invalid inactive class 1 counts in data", "invalid active class 3 counts in data", "invalid inactive class 2 chi counts in data", "invalid counts in inits", "stochastic count initialization/update", "a,w missing", "a conditioned w missing", "a missing w conditioned"],
+  "generator": {"attempts": 32, "max_N": 3, "policy": "record every attempt, no clamp/redraw/truncation; explicit failure if invalid probability or physical support"},
+  "comparison": {"case": "N=1,A=0,W=0; fixed continuous effects and coefficients; pi auxiliaries fixed; exact posterior over Z and four counts", "absolute_deterministic_tolerance": 1e-12, "mc_mean_absolute_tolerance": 0.12, "minimum_effective_samples_per_chain_combined": 50, "maximum_rhat": 1.2, "failure_policy": "retain output; do not increase iterations/tolerances; diagnostic failure means inconclusive"},
+  "timing": {"each_test_process_seconds": 120, "total_compute_seconds": 720, "timeout_is_failure_not_retry_instruction": true},
+  "decision_rules": {"deterministic": "fail on mismatch above tolerance", "generator": "if any failure or incomplete literal support, T1 not done/pass", "engine": "JAGS may remain literal software reference; no exact Stan equivalence claim", "gate": "executor supplies candidate only; independent review and coordination decide pass"}
+}

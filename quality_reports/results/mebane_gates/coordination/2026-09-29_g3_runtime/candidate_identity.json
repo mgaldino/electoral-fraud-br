@@ -1,0 +1,13 @@
+{
+  "checked_at": "2026-09-29T16:59:16.523557+00:00",
+  "candidate_manifest_sha256": "de779221e40964b9729bdd928a814e7e7dfd9738df866b91f6ee97307a14bd0f",
+  "files_checked": 321,
+  "bytes_checked": 2023862,
+  "all_hashes_and_sizes_match": true,
+  "all_run_paths_included": true,
+  "static_G3_contract_unchanged": true,
+  "G2_approval_current": true,
+  "raw_draws_sha256": "66ddb0aaef7448b25e817e25c931d5608ee9c7141165842613925e9e145baf6d",
+  "scope": "Identity and declared dependencies only; not a scientific PASS or proof of manifest completeness",
+  "script_sha256": "3054d812efd5375616906d4f6997c48c46fce40ddbccaaaf9dbc250b6b2b4b7c"
+}

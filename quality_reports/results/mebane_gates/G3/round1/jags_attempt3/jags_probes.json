@@ -1,0 +1,121 @@
+[
+  {
+    "id": "valid_control_observed",
+    "outcome": "success",
+    "stage": "sample",
+    "values": [
+      1,
+      0,
+      0.5,
+      0.5,
+      0
+    ],
+    "variables": ["Z", "a", "p.a", "p.w", "w"],
+    "seconds": 0.0115
+  },
+  {
+    "id": "invalid_active_class2_data",
+    "outcome": "error",
+    "stage": "compile",
+    "message": "Error in node w\nInvalid parent values\n\n",
+    "seconds": 0.0039
+  },
+  {
+    "id": "invalid_inactive_class1_data",
+    "outcome": "success",
+    "stage": "sample",
+    "values": [
+      1,
+      1,
+      0.5,
+      0,
+      0
+    ],
+    "variables": ["Z", "a", "p.a", "p.w", "w"],
+    "seconds": 0.0046
+  },
+  {
+    "id": "invalid_active_class3_data",
+    "outcome": "error",
+    "stage": "compile",
+    "message": "Error in node w\nInvalid parent values\n\n",
+    "seconds": 0.0035
+  },
+  {
+    "id": "invalid_inactive_chi_class2_data",
+    "outcome": "success",
+    "stage": "sample",
+    "values": [
+      2,
+      1,
+      0.5,
+      0,
+      0
+    ],
+    "variables": ["Z", "a", "p.a", "p.w", "w"],
+    "seconds": 0.0044
+  },
+  {
+    "id": "invalid_active_class2_init",
+    "outcome": "error",
+    "stage": "compile",
+    "message": "Error in node w\nInvalid parent values\n\n",
+    "seconds": 0.0035
+  },
+  {
+    "id": "stochastic_count_update",
+    "outcome": "success",
+    "stage": "sample",
+    "values": [
+      2,
+      1,
+      0.5,
+      0,
+      0
+    ],
+    "variables": ["Z", "a", "p.a", "p.w", "w"],
+    "seconds": 0.0044
+  },
+  {
+    "id": "a_w_missing",
+    "outcome": "success",
+    "stage": "sample",
+    "values": [
+      1,
+      0,
+      0.5,
+      0.5,
+      0
+    ],
+    "variables": ["Z", "a", "p.a", "p.w", "w"],
+    "seconds": 0.0071
+  },
+  {
+    "id": "a_conditioned_w_missing",
+    "outcome": "success",
+    "stage": "sample",
+    "values": [
+      1,
+      0,
+      0.5,
+      0.5,
+      0
+    ],
+    "variables": ["Z", "a", "p.a", "p.w", "w"],
+    "seconds": 0.0047
+  },
+  {
+    "id": "a_missing_w_conditioned",
+    "outcome": "success",
+    "stage": "sample",
+    "values": [
+      1,
+      0,
+      0.5,
+      0.5,
+      0
+    ],
+    "variables": ["Z", "a", "p.a", "p.w", "w"],
+    "seconds": 0.0047
+  }
+]

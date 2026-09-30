@@ -1,0 +1,71 @@
+{
+  "predecessor_entries_preserved": 321,
+  "raw_RDS_unchanged": true,
+  "new_mcmc_runs": 0,
+  "prior_means_MCSE_and_tolerances_unchanged": true,
+  "byte_identical_outputs": {
+    "functionals_by_draw.csv": true,
+    "conditional_exact_states.csv": true
+  },
+  "QA_diagnostic_comparisons": [
+    {
+      "target": "Z",
+      "matches_QA": true,
+      "tail_NA_retained": false
+    },
+    {
+      "target": "r_im",
+      "matches_QA": true,
+      "tail_NA_retained": true
+    },
+    {
+      "target": "r_is",
+      "matches_QA": true,
+      "tail_NA_retained": true
+    },
+    {
+      "target": "r_cm",
+      "matches_QA": true,
+      "tail_NA_retained": true
+    },
+    {
+      "target": "r_cs",
+      "matches_QA": true,
+      "tail_NA_retained": true
+    },
+    {
+      "target": "indicator_Z1",
+      "matches_QA": true,
+      "tail_NA_retained": true
+    },
+    {
+      "target": "indicator_Z2",
+      "matches_QA": true,
+      "tail_NA_retained": true
+    },
+    {
+      "target": "indicator_Z3",
+      "matches_QA": true,
+      "tail_NA_retained": false
+    },
+    {
+      "target": "M",
+      "matches_QA": true,
+      "tail_NA_retained": true
+    },
+    {
+      "target": "margin_lower",
+      "matches_QA": true,
+      "tail_NA_retained": true
+    },
+    {
+      "target": "margin_upper",
+      "matches_QA": true,
+      "tail_NA_retained": true
+    }
+  ],
+  "remaining_tail_NA": 9,
+  "criteria_unchanged": true,
+  "candidate_status": "inconclusive",
+  "independent_repair_review_pending": true
+}

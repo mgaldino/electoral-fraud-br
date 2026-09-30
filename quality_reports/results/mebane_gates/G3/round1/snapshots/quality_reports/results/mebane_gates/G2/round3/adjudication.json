@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.0",
+  "adjudication_id": "mebane-G2:inventory-rebaseline:round3",
+  "gate_id": "G2",
+  "round": "round3",
+  "contract_sha256": "f834bc1d12d88b4bc82fb2ada95120a838451c5809332630a75cd9abf03cf4d1",
+  "candidate_manifest_sha256": "2ffd63203a6af407c5f17c708ce2c42120fef0dc9600e3585f83be6e48313173",
+  "review_sha256": "0b6a2c4268e1b7d58c2964e31db54df2c894056634939c24681d38ad54ef96f3",
+  "status": "pass",
+  "unresolved_material_findings": 0,
+  "coordinator_id": "019d795a-acfa-72c2-a210-d55a46c606c2",
+  "source": {
+    "reviewed_artifact": "quality_reports/results/mebane_gates/G2/round3/candidate_manifest.json",
+    "sha256": "2ffd63203a6af407c5f17c708ce2c42120fef0dc9600e3585f83be6e48313173",
+    "artifact_intact": true
+  },
+  "contract": {
+    "required": false,
+    "path": null,
+    "sha256": null,
+    "contract_id": null,
+    "artifact_sha256": null,
+    "status": null,
+    "stale": false
+  },
+  "review_sources": [
+    {
+      "review_id": "QA-G2-round3",
+      "path": "quality_reports/results/mebane_gates/G2/round3/review/review.json",
+      "sha256": "0b6a2c4268e1b7d58c2964e31db54df2c894056634939c24681d38ad54ef96f3"
+    }
+  ],
+  "findings": [],
+  "summary": {
+    "total": 0,
+    "confirmed": 0,
+    "partial": 0,
+    "refuted": 0,
+    "unresolved": 0,
+    "held_decisions": 0
+  },
+  "adjudication": {
+    "verdict": "NO_CONFIRMED_DEFECTS",
+    "checked_at": "2026-09-29T16:20:16.242119+00:00",
+    "reasons": [
+      "Independent review and all candidate hashes checked.",
+      "Documentary revalidation only; prior scientific tests not rerun.",
+      "User-authorized removal from active inventory, not file deletion."
+    ]
+  },
+  "resolved_prior_incident": {
+    "id": "G2-R2-QA-I1",
+    "status": "CONFIRMED",
+    "resolved": true,
+    "decision": "quality_reports/results/mebane_gates/coordination/2026-09-29_inventory_rebaseline/decision.md",
+    "resolution": "Keep both files absent; use new inventory and dependency bindings; preserve prior records.",
+    "deletion_actor": "unknown",
+    "deletion_cause": "unknown"
+  },
+  "resolved_prior_findings": [
+    {
+      "id": "G2-R2-QA-I1",
+      "prior_status": "CONFIRMED",
+      "severity": "major",
+      "resolution_status": "resolved_by_authorized_inventory_rebaseline_and_current_dependency_binding",
+      "resolved": true,
+      "resolution": "A decisão autorizou manter ausente o download inválido, sem restaurar ou excluir outros arquivos. G0 round4 preserva a ausência por tombstone, tem revisão e adjudicação pass vinculadas ao seu manifesto, e os seus 186 arquivos ativos foram novamente conferidos por hash/tamanho. G2 round3 fixa esses três hashes de aprovação. As 163 entradas diretas G2 round2 permanecem idênticas, quatro em snapshots. A falta do PDF no inventário histórico não é escondida nem interpretada como nova falha na relação ativa reconciliada.",
+      "evidence": [
+        "quality_reports/results/mebane_gates/coordination/2026-09-29_inventory_rebaseline/decision.md",
+        "quality_reports/results/mebane_gates/G0/round4/tombstone.json",
+        "quality_reports/results/mebane_gates/G0/round4/review/review.json",
+        "quality_reports/results/mebane_gates/G0/round4/adjudication.json",
+        "quality_reports/results/mebane_gates/G2/round3/run.json",
+        "quality_reports/results/mebane_gates/G2/round3/review/checks.json"
+      ],
+      "scientific_scope": "Fechamento exclusivamente documental. O achado histórico continua CONFIRMED; não é refutado e não demonstra erro ou acerto adicional de D1-D3. Autoria e causa da remoção continuam desconhecidas."
+    }
+  ],
+  "scope": "No model change, no new analysis or MCMC, no G3/G10 or inferential approval."
+}

@@ -1,0 +1,52 @@
+{
+  "frozen_at": "2026-09-29T16:46:50.897744+00:00",
+  "files": [
+    {
+      "path": "quality_reports/results/mebane_gates/G3/round1/review/corrections_01/amendment.json",
+      "bytes": 1592,
+      "sha256": "4d89218b240aede023508a373d7b4c3da556856c3fbfdd395f07d582936ef6f8"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G3/round1/review/corrections_01/run_repair.py",
+      "bytes": 1809,
+      "sha256": "d926beadf122dbed8f5cb67b5c644475433c9af581108fb954ec031d63f42de6"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G3/round1/review/corrections_01/verify_repairs.R",
+      "bytes": 3271,
+      "sha256": "ac8f6c6ff64eb90d4d9e5cf84764afe8ae523d46a7b01220fa149c4a02a0bfcb"
+    }
+  ],
+  "inputs": [
+    {
+      "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164413891477Z_wrapper/direct_data.rds",
+      "bytes": 193,
+      "sha256": "b3aa47445dfc76c8cc5d97ca4bec600b3df61540c1a39de67ddda2510cbd3676"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164413891477Z_wrapper/wrapper_payload_1.rds",
+      "bytes": 2105,
+      "sha256": "974cc1a365f2db84a445126db09dc7bca918488c0be526d4b4eacbb22c3ece80"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164413891477Z_wrapper/wrapper_payload_2.rds",
+      "bytes": 2101,
+      "sha256": "070edef55ddf7859183fcd90c42a4946c08287442fcb31ee8087dee075479043"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164413891477Z_wrapper/wrapper_payload_3.rds",
+      "bytes": 2155,
+      "sha256": "8cf93b3a1b161e381e4f9b19d8e7c9485b42dcb25f86804922c80a2c6ad283a5"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164404110482Z_math/v2_conditioned_exact_states.csv",
+      "bytes": 3227,
+      "sha256": "067436c4bf97df962c54a5324a9625b043ac782485cc862b68d9ec770ee18dcb"
+    }
+  ],
+  "original_freeze": {
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/freeze_01/freeze.json",
+    "bytes": 5631,
+    "sha256": "ff921ec660050d2df5696a16ed4335deb466c5782d5e27689a2dd5e8fcbbe570"
+  }
+}

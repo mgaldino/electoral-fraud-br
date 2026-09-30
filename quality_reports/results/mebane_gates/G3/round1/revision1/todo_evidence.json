@@ -1,0 +1,12 @@
+{
+  "gate_id": "G3",
+  "round": "round1",
+  "revision": "revision1",
+  "candidate_only": true,
+  "todos": [
+    {"id": "G3-T1", "status": "inconclusive", "basis": "executed_now", "evidence": ["../deterministic_attempt3/generation_attempts.csv", "../deterministic_attempt3/counterexample.csv", "../jags_attempt5/jags_probes.json"], "reason": "32 attempts recorded, but positive-mass invalid parent prevents certifying a complete literal generator"},
+    {"id": "G3-T2", "status": "partial", "basis": "executed_now", "evidence": ["../deterministic_attempt3/enumeration.csv", "../deterministic_attempt3/mass.csv", "../deterministic_attempt3/normalization.csv"], "reason": "exact diagnostic kernel and normalizers for N=1,2,3, not a normalized literal JAGS likelihood"},
+    {"id": "G3-T3", "status": "partial", "basis": "executed_now_and_inspected", "evidence": ["../source_checks.csv", "../g3_interface_attempt1.log", "../deterministic_attempt3/joint_functionals.csv", "../jags_attempt5/margin_feasibility.json"], "reason": "priors/interface and algebra checked; offset margin and source capacity do not validate physical counterfactual"},
+    {"id": "G3-T4", "status": "inconclusive", "basis": "executed_now", "evidence": ["../jags_attempt5/conditional_exact_states.csv", "../jags_attempt5/conditional_comparison.csv", "../jags_attempt5/comparison_result.json"], "reason": "MC means pass frozen tolerance; S analytic constant, but tail ESS unavailable for other discrete targets"}
+  ]
+}

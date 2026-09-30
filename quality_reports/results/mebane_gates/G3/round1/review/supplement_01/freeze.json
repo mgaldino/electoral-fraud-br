@@ -1,0 +1,20 @@
+{
+  "frozen_at": "2026-09-29T16:49:24.725706+00:00",
+  "files": [
+    {
+      "path": "quality_reports/results/mebane_gates/G3/round1/review/supplement_01/audit.py",
+      "bytes": 3947,
+      "sha256": "13f509c17332b91a011339591b804c3e3d951f0f827de9c7ee7f8ecf20b35b4a"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G3/round1/review/supplement_01/protocol.json",
+      "bytes": 1172,
+      "sha256": "d1c23c53011ff1189a25e2309dd784847af5517d6ed984fd14ebc344dcf71688"
+    }
+  ],
+  "source": {
+    "path": "quality_reports/results/mebane_gates/G0/round1/qbl_installed_3017de5.jags",
+    "bytes": 6761,
+    "sha256": "f8360126424b7a463f76a1c99efc89a8a5cb81339213bd4931559f14595fbab6"
+  }
+}

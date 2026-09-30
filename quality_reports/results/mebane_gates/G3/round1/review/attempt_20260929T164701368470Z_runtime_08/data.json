@@ -1,0 +1,58 @@
+{
+  "N": 1,
+  "n": 1,
+  "a": 1,
+  "w": 0,
+  "Z": 1,
+  "pi.aux1": 1,
+  "pi.aux2": 0.4,
+  "pi.aux3": 0.6,
+  "Xa": [
+    [1]
+  ],
+  "Xw": [
+    [1]
+  ],
+  "X.iota.m": [
+    [1]
+  ],
+  "X.iota.s": [
+    [1]
+  ],
+  "X.chi.m": [
+    [1]
+  ],
+  "X.chi.s": [
+    [1]
+  ],
+  "dxa": 1,
+  "dxw": 1,
+  "dx.iota.m": 1,
+  "dx.iota.s": 1,
+  "dx.chi.m": 1,
+  "dx.chi.s": 1,
+  "beta.tau1": 0,
+  "tau.alpha": 0,
+  "beta.nu1": 0,
+  "nu.alpha": 0,
+  "beta.iota.m1": 0,
+  "iota.m.alpha": 0,
+  "beta.iota.s1": 0,
+  "iota.s.alpha": 0,
+  "beta.chi.m1": 0,
+  "chi.m.alpha": 0,
+  "beta.chi.s1": 0,
+  "chi.s.alpha": 0,
+  "tb": 0.2,
+  "nb": 0.2,
+  "imb": 0.2,
+  "isb": 0.2,
+  "cmb": 0.2,
+  "csb": 0.2,
+  "th": 0,
+  "nh": 0,
+  "imh": 0,
+  "ish": 0,
+  "cmh": 0,
+  "csh": 0
+}

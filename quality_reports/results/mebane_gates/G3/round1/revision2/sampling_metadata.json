@@ -1,0 +1,90 @@
+{
+  "schema_version": "1.0",
+  "repair_id": "G3-COORD-DRAW-01",
+  "new_draws_not_recovery": true,
+  "model_path": "quality_reports/results/mebane_gates/G0/round1/qbl_installed_3017de5.jags",
+  "model_sha256": "f8360126424b7a463f76a1c99efc89a8a5cb81339213bd4931559f14595fbab6",
+  "protocol_path": "quality_reports/results/mebane_gates/G3/round1/protocol_v2.json",
+  "protocol_sha256": "b7b54a5b6606ba45a662f8e94ff0438336525fe63733f75f70a2ffa26f77186f",
+  "data": {
+    "n": 1,
+    "N": 1,
+    "a": 0,
+    "w": 0,
+    "pi.aux1": 1,
+    "pi.aux2": 0.5,
+    "pi.aux3": 0.25,
+    "Xa": [
+      [1]
+    ],
+    "dxa": 1,
+    "th": 0,
+    "beta.tau1": 0,
+    "Xw": [
+      [1]
+    ],
+    "dxw": 1,
+    "nh": 0,
+    "beta.nu1": 0,
+    "X.iota.m": [
+      [1]
+    ],
+    "dx.iota.m": 1,
+    "imh": 0,
+    "beta.iota.m1": 0,
+    "X.iota.s": [
+      [1]
+    ],
+    "dx.iota.s": 1,
+    "ish": 0,
+    "beta.iota.s1": 0,
+    "X.chi.m": [
+      [1]
+    ],
+    "dx.chi.m": 1,
+    "cmh": 0,
+    "beta.chi.m1": 0,
+    "X.chi.s": [
+      [1]
+    ],
+    "dx.chi.s": 1,
+    "csh": 0,
+    "beta.chi.s1": 0
+  },
+  "inits": [
+    {
+      ".RNG.name": "base::Mersenne-Twister",
+      ".RNG.seed": 31102
+    },
+    {
+      ".RNG.name": "base::Mersenne-Twister",
+      ".RNG.seed": 31103
+    },
+    {
+      ".RNG.name": "base::Mersenne-Twister",
+      ".RNG.seed": 31104
+    },
+    {
+      ".RNG.name": "base::Mersenne-Twister",
+      ".RNG.seed": 31105
+    }
+  ],
+  "monitored_nodes": ["Z", "N.iota.m", "N.iota.s", "N.chi.m", "N.chi.s"],
+  "adapt": 200,
+  "burnin": 500,
+  "post_iterations_per_chain": 2000,
+  "thin": 1,
+  "chains": 4,
+  "seeds": [31102, 31103, 31104, 31105],
+  "r_version": "R version 4.4.2 (2024-10-31)",
+  "jags_version": "4.3.2",
+  "rjags_version": "4.17",
+  "coda_version": "0.19.4.1",
+  "started_at": "2026-09-29 16:55:30 UTC",
+  "ended_at": "2026-09-29 16:55:30 UTC",
+  "elapsed_seconds": 0.064,
+  "raw_rds_path": "quality_reports/results/mebane_gates/G3/round1/revision2/raw_chains.rds",
+  "raw_rds_sha256": "66ddb0aaef7448b25e817e25c931d5608ee9c7141165842613925e9e145baf6d",
+  "draw_rows_per_chain": [2000, 2000, 2000, 2000],
+  "draw_columns": ["N.chi.m", "N.chi.s", "N.iota.m", "N.iota.s", "Z"]
+}

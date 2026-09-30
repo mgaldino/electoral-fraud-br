@@ -1,0 +1,10 @@
+{
+  "correct_dimensions": [2000, 4],
+  "wrong_dimensions": [8000, 1],
+  "correct_rhat": 1.7325134200315644,
+  "pooled_rhat": 0.99987499218652331,
+  "detects_chain_collapse": true,
+  "RNG_used": false,
+  "no_MCMC": true,
+  "criterion_scope": "deterministic unit test only"
+}

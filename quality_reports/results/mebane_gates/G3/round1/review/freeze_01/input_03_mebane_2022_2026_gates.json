@@ -3,7 +3,7 @@
   "plan_id": "mebane-brasil-2022-2026",
   "date": "2026-09-28",
   "scope": "Modelo eforensics qbl para eleição presidencial brasileira de 2022 e preparação para 2026, com execução por subagentes, goals delimitados e revisão independente.",
-  "current_deliverable": "G3 round1 em execução: testes pequenos do qbl/JAGS literal, sob protocolo prévio e revisão independente, sem aprovação de produção ou inferência. G2 round3 permanece aprovado no escopo de benchmark de software. Reconciliação documental G0/G1/G2/G7 concluída; download incompleto continua ausente por decisão do usuário. A replicação externa dos autores está incorporada em G10 com fontes e critérios, mas falta referência numérica D.C. ou input limpo de outro caso; não foi executada nem aprovada. Nenhuma exclusão de arquivos está autorizada.",
+  "current_deliverable": "Reconciliação documental autorizada concluída em 2026-09-29: G0 round4 e G1/G2/G7 round3 aprovados após conferência de hashes, revisão independente e adjudicação. O download incompleto permanece ausente por decisão do usuário; inventários e pareceres anteriores foram preservados. Nenhum arquivo foi excluído ou restaurado nesta atualização e nenhuma análise científica foi reexecutada. D1-D3 de G2 e reparo AR-02 permanecem metodologicamente revisados; G3 e G10 ainda não executados, sem liberação inferencial.",
   "integrity_hold": {
     "incident": "G2-R2-QA-I1",
     "path": "ssrn-4073770.pdf.download/ssrn-4073770.pdf",
@@ -154,7 +154,7 @@
       "goal": "Entregar uma implementação testada contra o contrato, e decidir com evidência se a produção usará JAGS, Stan equivalente ou apenas JAGS com Stan aproximado como sensibilidade.",
       "depends_on": ["G2"],
       "external_prerequisites": [],
-      "status": "under_review",
+      "status": "running",
       "executor": {"role": "SOL-MODELO", "model": "gpt-6-sol", "effort": "xhigh"},
       "reviewer": {"role": "QA-FIDELIDADE", "model": "inherit", "effort": "xhigh", "independent": true},
       "write_scope": ["stan/", "R/lib/mebane_model.R", "R/05_stan_eforensics_qbl_calibrate.R", "R/05_eforensics_umeforensics_qbl.R", "R/07_brasil_full_qbl.R", "tests/mebane/likelihood/", "quality_reports/results/mebane_gates/G3/"],

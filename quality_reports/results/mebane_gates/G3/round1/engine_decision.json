@@ -1,0 +1,14 @@
+{
+  "gate_id": "G3",
+  "round": "round1",
+  "candidate_status": "inconclusive",
+  "literal_reference": "JAGS 4.3.2 with unmodified qbl source",
+  "production_engine_approved": false,
+  "historical_stan_exact_equivalent": false,
+  "new_stan_added": false,
+  "conditional_comparison": "all mean contrasts within preregistered MCSE tolerance; diagnostic criterion not met because tail ESS unavailable for several discrete targets",
+  "generator_certified": false,
+  "physical_support_certified": false,
+  "national_inference_authorized": false,
+  "requires": ["G2 substantive support decision for F1/F2", "new preregistered discrete-target diagnostic design", "independent G3 review and coordinator adjudication"]
+}

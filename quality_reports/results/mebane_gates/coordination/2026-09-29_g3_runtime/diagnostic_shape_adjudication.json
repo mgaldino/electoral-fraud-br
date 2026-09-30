@@ -1,0 +1,57 @@
+{
+  "schema_version": "1.0",
+  "adjudication_id": "G3:de779221e409:diagnostic-shape",
+  "source": {
+    "reviewed_artifact": "quality_reports/results/mebane_gates/G3/round1/revision2/candidate_manifest.json",
+    "sha256": "de779221e40964b9729bdd928a814e7e7dfd9738df866b91f6ee97307a14bd0f",
+    "artifact_intact": true
+  },
+  "contract": {
+    "required": false, "path": null, "sha256": null, "contract_id": null,
+    "artifact_sha256": null, "status": null, "stale": false
+  },
+  "contract_scope_note": "Reparo de forma de dados no pós-processamento G3; preserva contrato G2, protocolo v2 e todos os draws.",
+  "review_sources": [{
+    "review_id": "QA-DIAG-SHAPE",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/diagnostic_shape_counterexample/counterexample.json",
+    "sha256": "d7441f10f448121dc472c02a87bac76e8eb11bbf375c9c3db465f010b0f30b15"
+  }],
+  "findings": [{
+    "finding_id": "G3-COORD-DIAG-01",
+    "source_review": "QA-DIAG-SHAPE",
+    "quoted_finding": "rhat/ess defaults call as.matrix on draws_array, collapsing four chains into one before splitting",
+    "type": "method",
+    "severity": "major",
+    "scientific_dimension": "sampling_diagnostics",
+    "held_decision": false,
+    "status": "CONFIRMED",
+    "source_locations": [
+      "quality_reports/results/mebane_gates/G3/round1/revision2/snapshots/tests/mebane/likelihood/g3_draw_postprocess.R:87",
+      "quality_reports/results/mebane_gates/G3/round1/review/diagnostic_shape_counterexample/shape_counterexample.csv:4"
+    ],
+    "defect_evidence": [
+      "The candidate passes a draws_array of shape 2000x4x1 to scalar diagnostic defaults. The independent probe observes coercion to 8000x1, followed by splitting into 4000x2, instead of splitting the four original chains into 1000x8.",
+      "All candidate diagnostics match the incorrectly pooled path. For N.iota.s, the correct four-chain Rhat is 1.00120757086769, versus 1.00020832622997 in the candidate."
+    ],
+    "refuting_evidence": [],
+    "mechanical_checks": [
+      "Coordinator opened the frozen postprocessor lines 87-91 and the independent shape counterexample JSON/CSV.",
+      "Candidate identity audit verified all 321 declared files and current G2 approval before this adjudication.",
+      "Independent QA recomputed diagnostics from the saved raw chains; no new sampling."
+    ],
+    "reasoning": "The criterion requires rank-normalized split diagnostics of four independent chains. Pooling them before splitting changes that statistic and can conceal between-chain disagreement. This defect is separate from tail-ESS NA caused by discrete atoms; preserving the correct shape does not authorize relaxing the latter criterion.",
+    "proposed_fix_assessment": "safe",
+    "disposition": "Pass an ordinary iterations-by-chain numeric matrix directly to posterior::rhat, ess_bulk and ess_tail; assert dimensions. Recompute solely from the unchanged revision2 RDS into revision3. Add an adversarial deterministic chain-shape regression check; preserve all prior candidates and code snapshots.",
+    "resolved": false
+  }],
+  "summary": {"total": 1, "confirmed": 1, "partial": 0, "refuted": 0, "unresolved": 0, "held_decisions": 0},
+  "adjudication": {
+    "verdict": "READY_FOR_IMPLEMENTATION",
+    "checked_at": "2026-09-29",
+    "reasons": [
+      "The failure has an independently reproduced numeric counterexample and a bounded code repair already within the authorized G3 task.",
+      "No model change, new MCMC, new seed, tolerance change or G3 approval is authorized by this record."
+    ]
+  },
+  "scope": "Diagnostic data shape only; scientific support decisions F1/F2 remain unchanged."
+}

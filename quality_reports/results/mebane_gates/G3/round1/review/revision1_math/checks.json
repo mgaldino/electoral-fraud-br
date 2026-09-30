@@ -1,0 +1,74 @@
+{
+  "code_sha256": "68ca118912c678c7561e718075de7fc3ae10fc024c91a259231bf2a66254a300",
+  "checks": [
+    {
+      "id": "all_87_cells_independent_tolerance_1e12",
+      "pass": true,
+      "value": 6.106226635438361e-16
+    },
+    {
+      "id": "published_29_cells_recomputed",
+      "pass": true,
+      "value": {}
+    },
+    {
+      "id": "all_48_joint_states",
+      "pass": true,
+      "value": {}
+    },
+    {
+      "id": "joint_M_and_S_per_state",
+      "pass": true,
+      "value": {}
+    },
+    {
+      "id": "S_zero_positive_support",
+      "pass": true,
+      "value": {}
+    },
+    {
+      "id": "Dobs_algebraic_flag",
+      "pass": true,
+      "value": "N=1,A=0,W=0 cannot have observed leader margin +1"
+    },
+    {
+      "id": "generation_32_rows_reproduce",
+      "pass": true,
+      "value": {}
+    },
+    {
+      "id": "generator_keeps_attempt_ids",
+      "pass": true,
+      "value": {}
+    },
+    {
+      "id": "generation_status_strict_support",
+      "pass": true,
+      "value": {}
+    },
+    {
+      "id": "joint_aggregation_independent",
+      "pass": true,
+      "value": {}
+    },
+    {
+      "id": "joint_published_reproduced",
+      "pass": true,
+      "value": {}
+    },
+    {
+      "id": "margin_flags_no_clipping",
+      "pass": true,
+      "value": {}
+    },
+    {
+      "id": "no_clamp_on_roundoff",
+      "pass": true,
+      "value": {}
+    }
+  ],
+  "failed": 0,
+  "candidate_revision": "revision1",
+  "no_MCMC_run": true,
+  "generator_certified": false
+}

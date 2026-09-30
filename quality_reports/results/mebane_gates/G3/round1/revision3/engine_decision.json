@@ -1,0 +1,16 @@
+{
+  "gate_id": "G3",
+  "round": "round1",
+  "revision": "revision3",
+  "candidate_status": "inconclusive",
+  "repair_id": "G3-COORD-DIAG-01",
+  "repair_delivery": "implemented_awaiting_independent_QA",
+  "diagnostic_input": "ordinary numeric 2000x4 matrix",
+  "tail_ESS_NA_criterion_relaxed": false,
+  "new_mcmc_runs": 0,
+  "production_engine_approved": false,
+  "historical_stan_exact_equivalent": false,
+  "F1_F2_resolved": false,
+  "physical_counterfactual_validated": false,
+  "gate_approved": false
+}

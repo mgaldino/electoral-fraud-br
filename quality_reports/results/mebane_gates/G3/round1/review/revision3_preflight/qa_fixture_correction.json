@@ -1,0 +1,12 @@
+{
+  "id": "QA-R3-FIXTURE-SERIALIZATION-01",
+  "prior_attempt_preserved": "revision3_checks_01",
+  "prior_code_preserved": "final_checks/revision3_checks.R",
+  "failure": "Only candidate_regression_numbers failed: 54 of 55 checks passed. Parsing the decimal CSV changes ties and therefore rank/quantile diagnostics, despite max coordinate error 4.884981e-15.",
+  "cause": "QA attempted to reproduce rank diagnostics from the rounded display CSV rather than regenerating the frozen deterministic formula with its original operation order.",
+  "correction": "Regenerate wave first and add each fixed chain mean, exactly as the preregistered regression source specifies; retain a separate 1e-12 coordinate check for the CSV. Use this regenerated fixture for the unchanged 1e-8 serialized-diagnostic comparison.",
+  "new_code": "final_checks/revision3_checks_v2.R",
+  "MCMC_or_model_change": false,
+  "tolerances_changed": false,
+  "saved_raw_RDS_affected": false
+}

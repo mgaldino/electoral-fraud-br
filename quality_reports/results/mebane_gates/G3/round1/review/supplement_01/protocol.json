@@ -1,0 +1,14 @@
+{
+  "id": "G3-QA-independent-numeric-support-and-diagnostic-prerequisites",
+  "candidate_read": false,
+  "input": "unchanged qbl source and own frozen exact-state output only",
+  "source_grid": {"N": [1,2,3], "A": "0:N", "manufactured_count": "0:N", "stolen_count": "0:N", "nu": ["0","0.1","0.2","0.35","0.5","0.7","0.85","1"]},
+  "arithmetic": "Exact fractions for decimal parameters and integer ratios; compare with literal binary64 arithmetic as a numerical diagnostic, not replacement JAGS code",
+  "support_classification": "strict 0<=p<=1 in each arithmetic; no tolerance or clamp",
+  "prior_checks": "source checks for all six blocks, variance dexp5, precision reciprocal, observation effect, beta1 in product, alpha reported separately, four binomial counts, partial order prior",
+  "diagnostic_checks": "Inspect installed posterior ess_tail and .ess_quantile code; constant quantile indicators can produce NA even for nonconstant target. Exact support of each candidate_v2 functional must be established independently.",
+  "postprocessing_only": true,
+  "JAGS_runs": 0,
+  "max_seconds": 110,
+  "output": "audit.json, numeric_support.csv and source_checks.json"
+}

@@ -1,0 +1,11 @@
+"check","pass"
+"pi_partial",TRUE
+"four_counts",TRUE
+"endpoint",TRUE
+"two_observations",TRUE
+"fixed_intercept_precision",TRUE
+"alpha_and_beta0",TRUE
+"six_exp5_variances",TRUE
+"six_observation_effects",TRUE
+"distinct_intercepts",TRUE
+"weighted_pw",TRUE

@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.0",
+  "review_id": "G3-QA-R2-DIAGNOSTIC-PRELIMINARY",
+  "gate_id": "G3",
+  "round": "round1",
+  "candidate_revision": "revision2",
+  "status": "changes_requested",
+  "scope": "Diagnostic data shape only; not the final G3 verdict",
+  "reviewer_id": "01a0ee05-aeaf-7492-a8ea-fa731dd6214a",
+  "executor_id": "01a0ee04-c901-7831-8ac6-0160da2e3883",
+  "candidate_manifest_path": "quality_reports/results/mebane_gates/G3/round1/revision2/candidate_manifest.json",
+  "candidate_manifest_sha256": "de779221e40964b9729bdd928a814e7e7dfd9738df866b91f6ee97307a14bd0f",
+  "gate_contract_sha256": "1b26bbed0577e159a57af93567f14d38d511ea7f26216ca6d5aba22e56a2dacf",
+  "raw_draws_path": "quality_reports/results/mebane_gates/G3/round1/revision2/raw_chains.rds",
+  "raw_draws_sha256": "66ddb0aaef7448b25e817e25c931d5608ee9c7141165842613925e9e145baf6d",
+  "finding": {
+    "id": "G3-QA-R2-DIAG-01",
+    "coordination_alias": "G3-COORD-DIAG-01",
+    "severity": "major",
+    "category": "repairable_candidate_defect",
+    "title": "Scalar posterior diagnostics collapse the four original chains",
+    "status": "confirmed",
+    "locations": [
+      {
+        "path": "quality_reports/results/mebane_gates/G3/round1/revision2/snapshots/tests/mebane/likelihood/g3_draw_postprocess.R",
+        "sha256": "d3a488bd3694eeb9b0545fbae66977dd4c9dbc91de43b41f4401c001683e4ec2",
+        "start_line": 87,
+        "end_line": 91
+      },
+      {
+        "path": "quality_reports/results/mebane_gates/G3/round1/revision1/snapshots/tests/mebane/likelihood/g3_jags.R",
+        "start_line": 158,
+        "end_line": 162,
+        "role": "same historical pattern; numerical counterexample binds revision2 draws"
+      }
+    ],
+    "mechanism": "posterior 1.7.0 scalar defaults call .split_chains, which coerces draws_array with as.matrix: 2000 x 4 x 1 becomes 8000 x 1 and then 4000 x 2, instead of 1000 x 8 from the four original chains.",
+    "impact": "Between-chain disagreement is not evaluated with the frozen four-chain rank-normalized split diagnostic. All eleven published nonconstant diagnostic rows reproduce the wrongly pooled path.",
+    "numerical_counterexample": {
+      "target": "N.iota.s",
+      "published_pooled_rhat": 1.00020832622997,
+      "correct_four_chain_rhat": 1.00120757086769,
+      "published_pooled_ess_bulk": 5930.43967667792,
+      "correct_four_chain_ess_bulk": 5984.97063394254,
+      "ess_tail_both": null
+    },
+    "second_counterexample": {
+      "target": "Z",
+      "published_pooled_ess_tail": 4477.53299137056,
+      "correct_four_chain_ess_tail": 4495.26249801662
+    },
+    "safe_repair": "Pass an ordinary numeric iterations-by-chain matrix x with dim(x) == c(2000L, 4L) directly to posterior::rhat(x), posterior::ess_bulk(x), posterior::ess_tail(x). Assert dimensions, add a deterministic adversarial chain-separation regression, and recompute only from the unchanged revision2 raw RDS into a new revision.",
+    "new_mcmc_required": false,
+    "model_or_threshold_change_authorized": false,
+    "candidate_edited_by_qa": false,
+    "tail_ess_note": "Nine tail ESS values remain NA with the correct four-chain shape. Each has a constant quantile indicator induced by discrete atoms. This is not evidence of nonconvergence, but it does not satisfy the frozen all-target criterion. Do not substitute another criterion silently.",
+    "constant_S_note": "S is exactly zero on positive conditional support for N=1,A=0,W=0; analytic constant handling is distinct from the nine nonconstant targets with undefined tail ESS."
+  },
+  "evidence": [
+    {
+      "path": "quality_reports/results/mebane_gates/G3/round1/review/diagnostic_shape_counterexample/counterexample.json",
+      "sha256": "d7441f10f448121dc472c02a87bac76e8eb11bbf375c9c3db465f010b0f30b15"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G3/round1/review/final_checks/diagnostic_shape_counterexample.R",
+      "sha256": "7064f3fef83b440a17394725795969475b779dbfea4fcbc24d10260983ec5294"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G3/round1/review/diagnostic_shape_counterexample/shape_counterexample.csv"
+    }
+  ],
+  "coordination_record": {
+    "path": "quality_reports/results/mebane_gates/coordination/2026-09-29_g3_runtime/diagnostic_shape_adjudication.json",
+    "sha256": "4b22c41804b4421f765229b0d85c60b3c38073ca1aaecad86dd7a7b98f499c84",
+    "finding_status": "CONFIRMED",
+    "verdict": "READY_FOR_IMPLEMENTATION",
+    "note": "Read after the independent numeric counterexample; adjudication is not substituted for QA evidence."
+  },
+  "remaining_scope": "The full revision2 review and final revision3 verification remain separate. F1/F2 source-support decisions remain held; production is not validated."
+}

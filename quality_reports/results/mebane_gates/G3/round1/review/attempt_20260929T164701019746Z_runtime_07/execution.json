@@ -1,0 +1,69 @@
+{
+  "finished": "2026-09-29T16:47:01.259473+00:00",
+  "pid": 96747,
+  "exit_code": 0,
+  "elapsed_seconds": 0.23869316698983312,
+  "timed_out": false,
+  "command": [
+    "/usr/local/bin/Rscript",
+    "--vanilla",
+    "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/G3/round1/review/preparation/qa_runtime.R",
+    "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/G3/round1/review/preparation/protocol.json",
+    "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164701019746Z_runtime_07",
+    "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/G0/round1/qbl_installed_3017de5.jags",
+    "7"
+  ],
+  "total_compute_seconds": 3.7066581250401214,
+  "outputs": [
+    {
+      "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164701019746Z_runtime_07/data.json",
+      "bytes": 794,
+      "sha256": "aa8265e32826488f7c2e1aa73fbab718333c4348ca9637f7507a1579423a632c"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164701019746Z_runtime_07/data.rds",
+      "bytes": 344,
+      "sha256": "c43849e54fd6a0bae5c8319b2b5f5e96da287048978e90698b5ec33f5536212e"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164701019746Z_runtime_07/draws.csv",
+      "bytes": 2421,
+      "sha256": "f4533b439787151022f7c41fe0c9830a4cdf39107bf92cd1561c570f4829241e"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164701019746Z_runtime_07/inits.json",
+      "bytes": 81,
+      "sha256": "d14bdac2f3ea4935368cf93b96c4175dc14b73cebcaa16267df95664022fa20f"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164701019746Z_runtime_07/inits.rds",
+      "bytes": 131,
+      "sha256": "2e4adeb52d7aa00521227994fb8a9deb0e9326498912cd520705a6487d208e25"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164701019746Z_runtime_07/invocation.json",
+      "bytes": 1348,
+      "sha256": "1152555ba01a86b6eeac5e5cf42faef5795c11246e6c300703bbfc19bee5b500"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164701019746Z_runtime_07/runtime_result.json",
+      "bytes": 1113,
+      "sha256": "82d52666b4eba6dd3a148dc6d1ff0d839e5d2ca90fa9dbacd9d3427cdef73a04"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164701019746Z_runtime_07/samples.rds",
+      "bytes": 269,
+      "sha256": "c59ba4b5ce19256f3e1a193541d33f0753c3ca82d2e0b373d89b891cf304953f"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164701019746Z_runtime_07/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164701019746Z_runtime_07/stdout.log",
+      "bytes": 1605,
+      "sha256": "6ca2015b7e7b87cd3dc5b3a77358df23ca2fc6a7178069e25ff3a8b514242f47"
+    }
+  ]
+}

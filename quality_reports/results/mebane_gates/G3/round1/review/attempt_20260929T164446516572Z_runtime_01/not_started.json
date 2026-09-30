@@ -1,0 +1,8 @@
+{
+  "attempt": "runtime_01",
+  "R_process_started": false,
+  "JAGS_process_started": false,
+  "elapsed_compute_seconds": 0,
+  "seed_consumed": false,
+  "reason": "Original runner assertion: wrapper preflight not passed. Failure occurred before invocation.json/subprocess creation. Directory and tmp retained; no cleanup."
+}

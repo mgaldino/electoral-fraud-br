@@ -1,0 +1,24 @@
+{
+  "started": "2026-09-29T16:47:02.071053+00:00",
+  "command": [
+    "/usr/local/bin/Rscript",
+    "--vanilla",
+    "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/G3/round1/review/preparation/qa_runtime.R",
+    "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/G3/round1/review/preparation/protocol.json",
+    "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164702070474Z_runtime_10",
+    "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/G0/round1/qbl_installed_3017de5.jags",
+    "10"
+  ],
+  "timeout_seconds": 110,
+  "prior_compute_seconds": 4.188900666049449,
+  "freeze": {
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/freeze_01/freeze.json",
+    "bytes": 5631,
+    "sha256": "ff921ec660050d2df5696a16ed4335deb466c5782d5e27689a2dd5e8fcbbe570"
+  },
+  "environment": {
+    "LC_ALL": "en_US.UTF-8",
+    "R_LIBS_USER": "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/renv/library/macos/R-4.4/aarch64-apple-darwin20",
+    "TMPDIR": "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164702070474Z_runtime_10/tmp"
+  }
+}

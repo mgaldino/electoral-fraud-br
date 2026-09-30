@@ -1,0 +1,78 @@
+Compiling model graph
+   Resolving undeclared variables
+   Allocating nodes
+Graph information:
+   Observed stochastic nodes: 34
+   Unobserved stochastic nodes: 0
+   Total graph size: 92
+
+Initializing model
+
+$runtime_success
+[1] TRUE
+
+$phase
+[1] "completed"
+
+$error
+NULL
+
+$physical_invalid_draws
+[1] 64
+
+$pW_range
+[1] 0.25 0.25
+
+$unique_Z
+[1] 1
+
+$case
+$case$id
+[1] "class1_physical_invalid_observation"
+
+$case$N
+[1] 2
+
+$case$a
+[1] 1
+
+$case$w
+[1] 2
+
+$case$Z
+[1] 1
+
+
+$warnings
+character(0)
+
+$source_sha256
+[1] "f8360126424b7a463f76a1c99efc89a8a5cb81339213bd4931559f14595fbab6"
+
+$JAGS
+[1] "4.3.2"
+
+$data_fixed_nodes
+ [1] "N"            "n"            "a"            "w"            "Z"           
+ [6] "pi.aux1"      "pi.aux2"      "pi.aux3"      "N.iota.m"     "N.iota.s"    
+[11] "N.chi.m"      "N.chi.s"      "Xa"           "Xw"           "X.iota.m"    
+[16] "X.iota.s"     "X.chi.m"      "X.chi.s"      "dxa"          "dxw"         
+[21] "dx.iota.m"    "dx.iota.s"    "dx.chi.m"     "dx.chi.s"     "beta.tau1"   
+[26] "tau.alpha"    "beta.nu1"     "nu.alpha"     "beta.iota.m1" "iota.m.alpha"
+[31] "beta.iota.s1" "iota.s.alpha" "beta.chi.m1"  "chi.m.alpha"  "beta.chi.s1" 
+[36] "chi.s.alpha"  "tb"           "nb"           "imb"          "isb"         
+[41] "cmb"          "csb"          "th"           "nh"           "imh"         
+[46] "ish"          "cmh"          "csh"         
+
+$free_latent_nodes
+character(0)
+
+$missing_response_nodes
+character(0)
+
+$init_nodes
+[1] ".RNG.name" ".RNG.seed"
+
+$scope
+[1] "unchanged integral source, conditioned graph; no unconditional hierarchy validation; errors are preserved observations"
+

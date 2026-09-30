@@ -1,0 +1,59 @@
+{
+  "id": "G3",
+  "title": "Implementação e decisão JAGS–Stan",
+  "goal": "Entregar uma implementação testada contra o contrato, e decidir com evidência se a produção usará JAGS, Stan equivalente ou apenas JAGS com Stan aproximado como sensibilidade.",
+  "depends_on": [
+    "G2"
+  ],
+  "external_prerequisites": [],
+  "executor": {
+    "role": "SOL-MODELO",
+    "model": "gpt-6-sol",
+    "effort": "xhigh"
+  },
+  "reviewer": {
+    "role": "QA-FIDELIDADE",
+    "model": "inherit",
+    "effort": "xhigh",
+    "independent": true
+  },
+  "write_scope": [
+    "stan/",
+    "R/lib/mebane_model.R",
+    "R/05_stan_eforensics_qbl_calibrate.R",
+    "R/05_eforensics_umeforensics_qbl.R",
+    "R/07_brasil_full_qbl.R",
+    "tests/mebane/likelihood/",
+    "quality_reports/results/mebane_gates/G3/"
+  ],
+  "todos": [
+    {
+      "id": "G3-T1",
+      "task": "Construir gerador sintético fiel ao contrato, sem reutilizar simulate_bl com constantes incompatíveis sem correção e teste."
+    },
+    {
+      "id": "G3-T2",
+      "task": "Implementar e testar a verossimilhança de referência para N pequeno, enumerando contagens discretas quando cabível, e comparar probabilidades em uma grade incluindo fronteiras."
+    },
+    {
+      "id": "G3-T3",
+      "task": "Conferir priors, matrizes de desenho, interface de dados, transformações e generated quantities; testar formula1=w/formula2=a com sentinelas assimétricas e corrigir as chamadas históricas invertidas preservando fonte anterior e fits; separar aproximação já existente de eventual Stan exato e testar gradientes se aplicável."
+    },
+    {
+      "id": "G3-T4",
+      "task": "Executar comparações pequenas entre engines apenas no mesmo alvo e dentro do erro Monte Carlo; documentar a decisão de engine e a viabilidade da marginalização."
+    }
+  ],
+  "deliverables": [
+    "Testes small-N e gerador auditado",
+    "Implementação aprovada ou decisão documentada de manter JAGS",
+    "Registro de equivalência/limites do Stan"
+  ],
+  "acceptance": [
+    "O alvo de produção preserva o contrato G2; aproximações não são apresentadas como portagem exata.",
+    "Uma impossibilidade computacional de Stan exato pode encerrar a opção Stan sem bloquear JAGS validado; a decisão é explícita.",
+    "Tolerâncias numéricas e MCSE são definidas antes da comparação, incluindo casos de suporte inválido.",
+    "Revisor recalcula exemplos da likelihood e identifica a implementação de produção por hash."
+  ],
+  "on_failure": "Corrigir implementação ou voltar ao G2 se o problema for de especificação. Não aumentar iterações para mascarar discrepância de likelihood."
+}

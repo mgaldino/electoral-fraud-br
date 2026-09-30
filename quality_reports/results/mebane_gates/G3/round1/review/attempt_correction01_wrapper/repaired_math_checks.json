@@ -1,0 +1,12 @@
+{
+  "left_mass": 0.75,
+  "right_mass": 0.25000000000000022,
+  "total": 1.0000000000000002,
+  "exact_left": 0.75,
+  "exact_right": 0.25,
+  "pass": true,
+  "error_bound_reported": 1.1102230246251569e-14,
+  "S_support_exact": 0,
+  "S_is_analytically_constant": true,
+  "proof": "A=0 implies pW=(1+s)/2; active s=1 implies pW=1 and hence likelihood W=0 is zero; Z=1 always S=0"
+}

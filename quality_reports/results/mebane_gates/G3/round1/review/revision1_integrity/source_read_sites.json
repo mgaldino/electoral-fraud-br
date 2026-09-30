@@ -1,0 +1,92 @@
+[
+  {
+    "code_path": "tests/mebane/likelihood/g3_deterministic.R",
+    "line": 1,
+    "text": "source(\"R/lib/mebane_model.R\")",
+    "requires_manual_closure": true
+  },
+  {
+    "code_path": "tests/mebane/likelihood/g3_jags.R",
+    "line": 6,
+    "text": "source(\"R/lib/mebane_model.R\")",
+    "requires_manual_closure": true
+  },
+  {
+    "code_path": "tests/mebane/likelihood/g3_jags.R",
+    "line": 10,
+    "text": "actual_sha <- strsplit(system2(\"shasum\", c(\"-a\", \"256\", model), stdout = TRUE), \" \")[[1]][1]",
+    "requires_manual_closure": true
+  },
+  {
+    "code_path": "tests/mebane/likelihood/g3_jags.R",
+    "line": 37,
+    "text": "jm <- rjags::jags.model(model, data = data, inits = inits,",
+    "requires_manual_closure": true
+  },
+  {
+    "code_path": "tests/mebane/likelihood/g3_jags.R",
+    "line": 87,
+    "text": "jm <- rjags::jags.model(model, data = cmp, inits = ini, n.chains = 4L,",
+    "requires_manual_closure": true
+  },
+  {
+    "code_path": "tests/mebane/likelihood/g3_source_contract.R",
+    "line": 2,
+    "text": "q <- paste(readLines(path, warn = FALSE), collapse = \"\\n\")",
+    "requires_manual_closure": true
+  },
+  {
+    "code_path": "quality_reports/results/mebane_gates/G3/round1/build_candidate.py",
+    "line": 16,
+    "text": "return hashlib.sha256(path.read_bytes()).hexdigest()",
+    "requires_manual_closure": true
+  },
+  {
+    "code_path": "quality_reports/results/mebane_gates/G3/round1/build_candidate.py",
+    "line": 42,
+    "text": "ledger = json.loads((ROOT / \"quality_reports/plans/mebane_2022_2026_gates.json\").read_text())",
+    "requires_manual_closure": true
+  },
+  {
+    "code_path": "quality_reports/results/mebane_gates/G3/round1/build_candidate.py",
+    "line": 119,
+    "text": "text = (HERE / log).read_text()",
+    "requires_manual_closure": true
+  },
+  {
+    "code_path": "quality_reports/results/mebane_gates/G3/round1/revision1/build_revision.py",
+    "line": 19,
+    "text": "return hashlib.sha256(p.read_bytes()).hexdigest()",
+    "requires_manual_closure": true
+  },
+  {
+    "code_path": "quality_reports/results/mebane_gates/G3/round1/revision1/build_revision.py",
+    "line": 28,
+    "text": "old = json.loads((ROUND / \"run.json\").read_text())",
+    "requires_manual_closure": true
+  },
+  {
+    "code_path": "quality_reports/results/mebane_gates/G3/round1/revision1/build_revision.py",
+    "line": 52,
+    "text": "txt = (ROUND / log).read_text()",
+    "requires_manual_closure": true
+  },
+  {
+    "code_path": "quality_reports/results/mebane_gates/G3/round1/revision1/recover_old_code.py",
+    "line": 9,
+    "text": "old = json.loads((ROUND / \"candidate_manifest.json\").read_text())",
+    "requires_manual_closure": true
+  },
+  {
+    "code_path": "quality_reports/results/mebane_gates/G3/round1/revision1/recover_old_code.py",
+    "line": 13,
+    "text": "current = (ROOT / source).read_text(encoding=\"utf-8\")",
+    "requires_manual_closure": true
+  },
+  {
+    "code_path": "quality_reports/results/mebane_gates/G3/round1/revision1/recover_old_code.py",
+    "line": 35,
+    "text": "sha = lambda p: hashlib.sha256(p.read_bytes()).hexdigest()",
+    "requires_manual_closure": true
+  }
+]

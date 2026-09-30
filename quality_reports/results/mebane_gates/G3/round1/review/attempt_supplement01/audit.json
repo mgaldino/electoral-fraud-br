@@ -1,0 +1,52 @@
+{
+  "numeric_cases": 792,
+  "strict_support_disagreements": [
+    {
+      "N": 3,
+      "A": 3,
+      "rm": 2,
+      "rs": 1,
+      "nu": "1",
+      "exact_fraction": "0",
+      "exact_float": 0.0,
+      "literal_binary64": -5.551115123125783e-17,
+      "exact_probability_valid": true,
+      "numeric_probability_valid": false,
+      "disagreement": true,
+      "note": "diagnostic only; literal source not changed"
+    },
+    {
+      "N": 3,
+      "A": 3,
+      "rm": 3,
+      "rs": 1,
+      "nu": "1",
+      "exact_fraction": "0",
+      "exact_float": 0.0,
+      "literal_binary64": -1.5160095401256513e-13,
+      "exact_probability_valid": true,
+      "numeric_probability_valid": false,
+      "disagreement": true,
+      "note": "diagnostic only; literal source not changed"
+    },
+    {
+      "N": 3,
+      "A": 3,
+      "rm": 3,
+      "rs": 2,
+      "nu": "1",
+      "exact_fraction": "0",
+      "exact_float": 0.0,
+      "literal_binary64": -1.8984813721090177e-14,
+      "exact_probability_valid": true,
+      "numeric_probability_valid": false,
+      "disagreement": true,
+      "note": "diagnostic only; literal source not changed"
+    }
+  ],
+  "exact_invalid_states": 108,
+  "source_checks_passed": 57,
+  "source_checks_total": 57,
+  "source_sha256": "f8360126424b7a463f76a1c99efc89a8a5cb81339213bd4931559f14595fbab6",
+  "limitation": "Python binary64 is diagnostic, not an assertion of operation ordering in R/JAGS; no source repair or clamp"
+}

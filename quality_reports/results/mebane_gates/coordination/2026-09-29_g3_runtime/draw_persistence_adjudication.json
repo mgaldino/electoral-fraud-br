@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.0",
+  "adjudication_id": "G3:4b84fe6996a7:draw-persistence",
+  "source": {
+    "reviewed_artifact": "quality_reports/results/mebane_gates/G3/round1/revision1/candidate_manifest.json",
+    "sha256": "4b84fe6996a72321225fd3e5f4713439b77b74fc8a7f039d09e3dcaf7beb72a9",
+    "artifact_intact": true
+  },
+  "contract": {
+    "required": false, "path": null, "sha256": null, "contract_id": null,
+    "artifact_sha256": null, "status": null, "stale": false
+  },
+  "contract_scope_note": "Reparo de persistência de resultados no escopo G3 autorizado, sem alterar o contrato matemático G2; não exige contrato de argumento de manuscrito.",
+  "review_sources": [{
+    "review_id": "COORD-DRAW-PERSISTENCE",
+    "path": "quality_reports/results/mebane_gates/coordination/2026-09-29_g3_runtime/draw_persistence_review.md",
+    "sha256": "003d055e45053885f1946bc3d827ef9ef0fcf5324f4dfe67971aa425302c6d54"
+  }],
+  "findings": [{
+    "finding_id": "G3-COORD-DRAW-01",
+    "source_review": "COORD-DRAW-PERSISTENCE",
+    "quoted_finding": "Raw JAGS draws were not saved, preventing independent recomputation of reported MCSE and joint-draw functionals from this run.",
+    "type": "artifact",
+    "severity": "major",
+    "scientific_dimension": "reproducibility",
+    "held_decision": false,
+    "status": "CONFIRMED",
+    "source_locations": [
+      "quality_reports/results/mebane_gates/G3/round1/revision1/implementation.md:29",
+      "quality_reports/results/mebane_gates/G3/round1/revision1/snapshots/tests/mebane/likelihood/g3_jags.R:90"
+    ],
+    "defect_evidence": [
+      "Implementation explicitly states raw draws were not saved in any attempt.",
+      "Harness calls coda.samples and writes summary CSV and JSON but does not persist the sample object."
+    ],
+    "refuting_evidence": [],
+    "mechanical_checks": [
+      "Read implementation and inspected sampling/output calls in g3_jags.R.",
+      "Recomputed SHA-256 of the revision1 candidate manifest."
+    ],
+    "reasoning": "Seeds and summary tables alone do not provide the actual sampled rows needed for a source-bound independent recalculation. A new identical-protocol replay can supply verifiable new draws but cannot recover the unsaved original ones.",
+    "proposed_fix_assessment": "safe",
+    "disposition": "Persist chains and metadata in a new output directory, replay the same small protocol unchanged, reopen the saved chains and calculate all summaries from them; retain prior candidate and attempts.",
+    "resolved": false
+  }],
+  "summary": {"total": 1, "confirmed": 1, "partial": 0, "refuted": 0, "unresolved": 0, "held_decisions": 0},
+  "adjudication": {
+    "verdict": "READY_FOR_IMPLEMENTATION",
+    "checked_at": "2026-09-29",
+    "reasons": [
+      "The bounded artifact repair is independent of F1/F2 and does not change the scientific target or test thresholds.",
+      "G3 execution and safe code repairs are already authorized; the revised candidate still requires independent review."
+    ]
+  },
+  "scope": "Raw-draw persistence only; no G3 PASS or inferential approval."
+}

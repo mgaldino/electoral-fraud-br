@@ -1,0 +1,1762 @@
+[
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/build_candidate.py",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/candidate_manifest.json",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/comparison_result.json",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/counterexample.csv",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/deterministic_attempt2/counterexample.csv",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/deterministic_attempt2/enumeration.csv",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/deterministic_attempt2/generation_attempts.csv",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/deterministic_attempt2/joint_functionals.csv",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/deterministic_attempt2/joint_input.csv",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/deterministic_attempt2/mass.csv",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/deterministic_attempt2/normalization.csv",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/deterministic_attempt3/counterexample.csv",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/deterministic_attempt3/enumeration.csv",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/deterministic_attempt3/generation_attempts.csv",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/deterministic_attempt3/joint_functionals.csv",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/deterministic_attempt3/joint_input.csv",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/deterministic_attempt3/mass.csv",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/deterministic_attempt3/normalization.csv",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/engine_decision.json",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/enumeration.csv",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/environment.log",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/g3_deterministic.log",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/g3_deterministic_attempt2.log",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/g3_deterministic_attempt3.log",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/g3_interface_attempt1.log",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/g3_jags_attempt1.log",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/g3_jags_attempt2.log",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/g3_jags_attempt3.log",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/g3_jags_attempt4.log",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/g3_jags_attempt5.log",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/g3_source_attempt1.log",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/gate_contract.json",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/implementation.md",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/jags_attempt2/jags_probes.json",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/jags_attempt3/comparison_result.json",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/jags_attempt3/conditional_comparison.csv",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/jags_attempt3/conditional_exact_states.csv",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/jags_attempt3/jags_probes.json",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/jags_attempt3/margin_feasibility.json",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/jags_attempt4/conditional_comparison.csv",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/jags_attempt4/conditional_exact_states.csv",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/jags_attempt4/jags_probes.json",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/jags_attempt4/margin_feasibility.json",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/jags_attempt5/comparison_result.json",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/jags_attempt5/conditional_comparison.csv",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/jags_attempt5/conditional_exact_states.csv",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/jags_attempt5/jags_probes.json",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/jags_attempt5/margin_feasibility.json",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/jags_probes.json",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/mass.csv",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/metadata_consumed.json",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/normalization.csv",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/preflight_v1.md",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/protocol.json",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/protocol_provenance_errata.md",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/protocol_v2.json",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164404110482Z_math/diagnostic_conditional_marginals.csv",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164404110482Z_math/diagnostic_mass.csv",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164404110482Z_math/execution.json",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164404110482Z_math/invocation.json",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164404110482Z_math/joint_functionals_fixture.csv",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164404110482Z_math/kernel_cells.csv",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164404110482Z_math/math_checks.json",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164404110482Z_math/stderr.log",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164404110482Z_math/stdout.log",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164404110482Z_math/v2_conditioned_exact_states.csv",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164413891477Z_wrapper/direct_data.rds",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164413891477Z_wrapper/execution.json",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164413891477Z_wrapper/invocation.json",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164413891477Z_wrapper/stderr.log",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164413891477Z_wrapper/stdout.log",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164413891477Z_wrapper/tmp/xcrun_db",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164413891477Z_wrapper/wrapper_checks.json",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164413891477Z_wrapper/wrapper_data_1.json",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164413891477Z_wrapper/wrapper_data_2.json",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164413891477Z_wrapper/wrapper_data_3.json",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164413891477Z_wrapper/wrapper_payload_1.rds",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164413891477Z_wrapper/wrapper_payload_2.rds",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164413891477Z_wrapper/wrapper_payload_3.rds",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164446516572Z_runtime_01/not_started.json",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164658942859Z_runtime_01/data.json",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164658942859Z_runtime_01/data.rds",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164658942859Z_runtime_01/draws.csv",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164658942859Z_runtime_01/execution.json",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164658942859Z_runtime_01/inits.json",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164658942859Z_runtime_01/inits.rds",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164658942859Z_runtime_01/invocation.json",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164658942859Z_runtime_01/runtime_result.json",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164658942859Z_runtime_01/samples.rds",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164658942859Z_runtime_01/stderr.log",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164658942859Z_runtime_01/stdout.log",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164659293216Z_runtime_02/data.json",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164659293216Z_runtime_02/data.rds",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164659293216Z_runtime_02/draws.csv",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164659293216Z_runtime_02/execution.json",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164659293216Z_runtime_02/inits.json",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164659293216Z_runtime_02/inits.rds",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164659293216Z_runtime_02/invocation.json",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164659293216Z_runtime_02/runtime_result.json",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164659293216Z_runtime_02/samples.rds",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164659293216Z_runtime_02/stderr.log",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164659293216Z_runtime_02/stdout.log",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164659633339Z_runtime_03/data.json",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164659633339Z_runtime_03/data.rds",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164659633339Z_runtime_03/draws.csv",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164659633339Z_runtime_03/execution.json",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164659633339Z_runtime_03/inits.json",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164659633339Z_runtime_03/inits.rds",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164659633339Z_runtime_03/invocation.json",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164659633339Z_runtime_03/runtime_result.json",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164659633339Z_runtime_03/samples.rds",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164659633339Z_runtime_03/stderr.log",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164659633339Z_runtime_03/stdout.log",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164659979513Z_runtime_04/data.json",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164659979513Z_runtime_04/data.rds",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164659979513Z_runtime_04/execution.json",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164659979513Z_runtime_04/inits.json",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164659979513Z_runtime_04/inits.rds",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164659979513Z_runtime_04/invocation.json",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164659979513Z_runtime_04/runtime_result.json",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164659979513Z_runtime_04/stderr.log",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164659979513Z_runtime_04/stdout.log",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164700322191Z_runtime_05/data.json",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164700322191Z_runtime_05/data.rds",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164700322191Z_runtime_05/execution.json",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164700322191Z_runtime_05/inits.json",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164700322191Z_runtime_05/inits.rds",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164700322191Z_runtime_05/invocation.json",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164700322191Z_runtime_05/runtime_result.json",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164700322191Z_runtime_05/stderr.log",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164700322191Z_runtime_05/stdout.log",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164700669112Z_runtime_06/data.json",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164700669112Z_runtime_06/data.rds",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164700669112Z_runtime_06/execution.json",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164700669112Z_runtime_06/inits.json",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164700669112Z_runtime_06/inits.rds",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164700669112Z_runtime_06/invocation.json",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164700669112Z_runtime_06/runtime_result.json",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164700669112Z_runtime_06/stderr.log",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164700669112Z_runtime_06/stdout.log",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164701019746Z_runtime_07/data.json",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164701019746Z_runtime_07/data.rds",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164701019746Z_runtime_07/draws.csv",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164701019746Z_runtime_07/execution.json",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164701019746Z_runtime_07/inits.json",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164701019746Z_runtime_07/inits.rds",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164701019746Z_runtime_07/invocation.json",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164701019746Z_runtime_07/runtime_result.json",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164701019746Z_runtime_07/samples.rds",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164701019746Z_runtime_07/stderr.log",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164701019746Z_runtime_07/stdout.log",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164701368470Z_runtime_08/data.json",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164701368470Z_runtime_08/data.rds",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164701368470Z_runtime_08/draws.csv",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164701368470Z_runtime_08/execution.json",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164701368470Z_runtime_08/inits.json",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164701368470Z_runtime_08/inits.rds",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164701368470Z_runtime_08/invocation.json",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164701368470Z_runtime_08/runtime_result.json",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164701368470Z_runtime_08/samples.rds",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164701368470Z_runtime_08/stderr.log",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164701368470Z_runtime_08/stdout.log",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164701718780Z_runtime_09/data.json",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164701718780Z_runtime_09/data.rds",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164701718780Z_runtime_09/draws.csv",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164701718780Z_runtime_09/execution.json",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164701718780Z_runtime_09/inits.json",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164701718780Z_runtime_09/inits.rds",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164701718780Z_runtime_09/invocation.json",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164701718780Z_runtime_09/runtime_result.json",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164701718780Z_runtime_09/samples.rds",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164701718780Z_runtime_09/stderr.log",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164701718780Z_runtime_09/stdout.log",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164702070474Z_runtime_10/data.json",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164702070474Z_runtime_10/data.rds",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164702070474Z_runtime_10/draws.csv",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164702070474Z_runtime_10/execution.json",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164702070474Z_runtime_10/inits.json",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164702070474Z_runtime_10/inits.rds",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164702070474Z_runtime_10/invocation.json",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164702070474Z_runtime_10/runtime_result.json",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164702070474Z_runtime_10/samples.rds",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164702070474Z_runtime_10/stderr.log",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164702070474Z_runtime_10/stdout.log",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164702420276Z_runtime_11/data.json",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164702420276Z_runtime_11/data.rds",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164702420276Z_runtime_11/execution.json",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164702420276Z_runtime_11/inits.json",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164702420276Z_runtime_11/inits.rds",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164702420276Z_runtime_11/invocation.json",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164702420276Z_runtime_11/runtime_result.json",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164702420276Z_runtime_11/stderr.log",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164702420276Z_runtime_11/stdout.log",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164702761978Z_runtime_12/data.json",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164702761978Z_runtime_12/data.rds",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164702761978Z_runtime_12/draws.csv",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164702761978Z_runtime_12/execution.json",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164702761978Z_runtime_12/inits.json",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164702761978Z_runtime_12/inits.rds",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164702761978Z_runtime_12/invocation.json",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164702761978Z_runtime_12/runtime_result.json",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164702761978Z_runtime_12/samples.rds",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164702761978Z_runtime_12/stderr.log",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164702761978Z_runtime_12/stdout.log",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_correction01_wrapper/eforensics_archived_ast.R",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_correction01_wrapper/eforensics_installed_ast.R",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_correction01_wrapper/eforensics_main_par_archived_ast.R",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_correction01_wrapper/eforensics_main_par_installed_ast.R",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_correction01_wrapper/execution.json",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_correction01_wrapper/getRegMatrix_archived_ast.R",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_correction01_wrapper/getRegMatrix_installed_ast.R",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_correction01_wrapper/invocation.json",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_correction01_wrapper/repaired_math_checks.json",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_correction01_wrapper/stderr.log",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_correction01_wrapper/stdout.log",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_correction01_wrapper/wrapper_checks.json",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_diagnostic_helpers_selftest01/selftest_checks.json",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_supplement01/audit.json",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_supplement01/execution.json",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_supplement01/numeric_support.csv",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_supplement01/source_checks.json",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/corrections_01/amendment.json",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/corrections_01/freeze.json",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/corrections_01/run_repair.py",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/corrections_01/verify_repairs.R",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/final_checks/check_saved_draws.R",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/final_checks/diagnostic_helpers.R",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/final_checks/selftest.R",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/final_checks/verify_manifest.py",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/freeze_01/G3_static_contract.json",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/freeze_01/freeze.json",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/freeze_01/input_00_qbl_installed_3017de5.jags",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/freeze_01/input_01_benchmark_contract.json",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/freeze_01/input_02_ef_main_3017de5.R",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/freeze_01/input_03_mebane_2022_2026_gates.json",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/freeze_01/input_04_CLAUDE.md",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/freeze_01/input_05_dispatch.md",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/freeze_01/input_06_g3_dispatch_requirements.md",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/freeze_01/input_07_protocol_v2.json",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/preparation/checklist.md",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/preparation/protocol.json",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/preparation/qa_math.R",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/preparation/qa_runtime.R",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/preparation/qa_wrapper.R",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/preparation/run_qa.py",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/preparation_status.md",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/revision1_integrity/all_entries.json",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/revision1_integrity/declared_paths.json",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/revision1_integrity/historical_preservation.json",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/revision1_integrity/integrity.json",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/revision1_integrity/source_read_sites.json",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/supplement_01/audit.py",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/supplement_01/freeze.json",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/supplement_01/protocol.json",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/revision1/build_revision.py",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/revision1/candidate_manifest.json",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/revision1/implementation.md",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/revision1/old_code_mapping.json",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/revision1/recover_old_code.py",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/revision1/run.json",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/revision1/snapshots/R/lib/mebane_model.R",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/revision1/snapshots/root_candidate_old/tests/mebane/likelihood/g3_jags.R",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/revision1/snapshots/tests/mebane/likelihood/g3_deterministic.R",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/revision1/snapshots/tests/mebane/likelihood/g3_jags.R",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/revision1/snapshots/tests/mebane/likelihood/g3_source_contract.R",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/revision1/todo_evidence.json",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/revision2/build_candidate.py",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/revision2/candidate_manifest.json",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/revision2/conditional_comparison.csv",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/revision2/conditional_exact_states.csv",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/revision2/functionals_by_draw.csv",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/revision2/implementation.md",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/revision2/postprocess.log",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/revision2/postprocess_result.json",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/revision2/raw_chains.rds",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/revision2/replay.log",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/revision2/replay_plan.json",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/revision2/replay_vs_revision1.csv",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/revision2/run.json",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/revision2/sampling_metadata.json",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/revision2/snapshots/quality_reports/results/mebane_gates/coordination/2026-09-29_g3_runtime/draw_persistence_adjudication.json",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/revision2/snapshots/quality_reports/results/mebane_gates/coordination/2026-09-29_g3_runtime/draw_persistence_review.md",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/revision2/snapshots/tests/mebane/likelihood/g3_draw_postprocess.R",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/revision2/snapshots/tests/mebane/likelihood/g3_draw_replay.R",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/revision2/todo_evidence.json",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/revision3/inherited_snapshots/CLAUDE.md",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/revision3/inherited_snapshots/R/05_eforensics_umeforensics_qbl.R",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/revision3/inherited_snapshots/R/07_brasil_full_qbl.R",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/revision3/inherited_snapshots/R/lib/mebane_model.R",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/revision3/inherited_snapshots/quality_reports/results/mebane_gates/G0/round1/qbl_installed_3017de5.jags",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/revision3/inherited_snapshots/quality_reports/results/mebane_gates/G2/round2/benchmark_contract.json",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/revision3/inherited_snapshots/quality_reports/results/mebane_gates/G2/round2/sources/ef_main_3017de5.R",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/revision3/inherited_snapshots/quality_reports/results/mebane_gates/G2/round3/adjudication.json",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/revision3/inherited_snapshots/quality_reports/results/mebane_gates/G2/round3/candidate_manifest.json",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/revision3/inherited_snapshots/quality_reports/results/mebane_gates/G2/round3/review/review.json",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/revision3/inherited_snapshots/quality_reports/results/mebane_gates/coordination/2026-09-29_benchmark_round/g3_dispatch_requirements.md",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/revision3/inherited_snapshots/quality_reports/results/mebane_gates/coordination/2026-09-29_g3_runtime/dispatch.md",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/revision3/inherited_snapshots/quality_reports/results/mebane_gates/coordination/2026-09-29_g3_runtime/draw_persistence_adjudication.json",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/revision3/inherited_snapshots/quality_reports/results/mebane_gates/coordination/2026-09-29_g3_runtime/draw_persistence_review.md",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/revision3/inherited_snapshots/scripts/mebane_gates.py",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/revision3/inherited_snapshots/tests/mebane/likelihood/g3_deterministic.R",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/revision3/inherited_snapshots/tests/mebane/likelihood/g3_draw_postprocess.R",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/revision3/inherited_snapshots/tests/mebane/likelihood/g3_draw_replay.R",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/revision3/inherited_snapshots/tests/mebane/likelihood/g3_jags.R",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/revision3/inherited_snapshots/tests/mebane/likelihood/g3_source_contract.R",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/revision3/inherited_snapshots/tests/mebane/likelihood/test_ar02_interface.R",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/revision3/predecessor_files.json",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/revision3/repair_inputs.json",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/revision3/repair_inputs/CLAUDE.md",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/revision3/repair_inputs/quality_reports/results/mebane_gates/G3/round1/review/diagnostic_shape_counterexample/counterexample.json",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/revision3/repair_inputs/quality_reports/results/mebane_gates/G3/round1/review/diagnostic_shape_counterexample/shape_counterexample.csv",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/revision3/repair_inputs/quality_reports/results/mebane_gates/coordination/2026-09-29_g3_runtime/diagnostic_shape_adjudication.json",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/run.json",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/snapshots/CLAUDE.md",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/snapshots/R/05_eforensics_umeforensics_qbl.R",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/snapshots/R/07_brasil_full_qbl.R",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/snapshots/quality_reports/results/mebane_gates/G0/round1/qbl_installed_3017de5.jags",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/snapshots/quality_reports/results/mebane_gates/G2/round2/benchmark_contract.json",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/snapshots/quality_reports/results/mebane_gates/G2/round2/sources/ef_main_3017de5.R",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/snapshots/quality_reports/results/mebane_gates/G2/round3/adjudication.json",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/snapshots/quality_reports/results/mebane_gates/G2/round3/candidate_manifest.json",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/snapshots/quality_reports/results/mebane_gates/G2/round3/review/review.json",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/snapshots/quality_reports/results/mebane_gates/coordination/2026-09-29_benchmark_round/g3_dispatch_requirements.md",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/snapshots/quality_reports/results/mebane_gates/coordination/2026-09-29_g3_runtime/dispatch.md",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/snapshots/scripts/mebane_gates.py",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/snapshots/tests/mebane/likelihood/test_ar02_interface.R",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/source_checks.csv",
+    "in_manifest": true
+  },
+  {
+    "group": "inputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/todo_evidence.json",
+    "in_manifest": true
+  },
+  {
+    "group": "code",
+    "path": "quality_reports/results/mebane_gates/G3/round1/revision3/code_snapshots/tests/mebane/likelihood/g3_draw_postprocess.R",
+    "in_manifest": true
+  },
+  {
+    "group": "code",
+    "path": "quality_reports/results/mebane_gates/G3/round1/revision3/code_snapshots/tests/mebane/likelihood/g3_diagnostic_shape.R",
+    "in_manifest": true
+  },
+  {
+    "group": "code",
+    "path": "quality_reports/results/mebane_gates/G3/round1/revision3/prepare_inputs.py",
+    "in_manifest": true
+  },
+  {
+    "group": "code",
+    "path": "quality_reports/results/mebane_gates/G3/round1/revision3/build_candidate.py",
+    "in_manifest": true
+  },
+  {
+    "group": "code",
+    "path": "quality_reports/results/mebane_gates/G3/round1/revision3/inherited_snapshots/R/lib/mebane_model.R",
+    "in_manifest": true
+  },
+  {
+    "group": "configuration",
+    "path": "quality_reports/results/mebane_gates/G3/round1/gate_contract.json",
+    "in_manifest": true
+  },
+  {
+    "group": "configuration",
+    "path": "quality_reports/results/mebane_gates/G3/round1/protocol_v2.json",
+    "in_manifest": true
+  },
+  {
+    "group": "configuration",
+    "path": "quality_reports/results/mebane_gates/G3/round1/revision3/repair_plan.json",
+    "in_manifest": true
+  },
+  {
+    "group": "outputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/revision3/engine_decision.json",
+    "in_manifest": true
+  },
+  {
+    "group": "outputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/revision3/implementation.md",
+    "in_manifest": true
+  },
+  {
+    "group": "outputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/revision3/postprocess.log",
+    "in_manifest": true
+  },
+  {
+    "group": "outputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/revision3/postprocess/conditional_comparison.csv",
+    "in_manifest": true
+  },
+  {
+    "group": "outputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/revision3/postprocess/conditional_exact_states.csv",
+    "in_manifest": true
+  },
+  {
+    "group": "outputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/revision3/postprocess/diagnostic_comparison_vs_revision2.csv",
+    "in_manifest": true
+  },
+  {
+    "group": "outputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/revision3/postprocess/functionals_by_draw.csv",
+    "in_manifest": true
+  },
+  {
+    "group": "outputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/revision3/postprocess/postprocess_result.json",
+    "in_manifest": true
+  },
+  {
+    "group": "outputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/revision3/postprocessor.diff",
+    "in_manifest": true
+  },
+  {
+    "group": "outputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/revision3/repair_validation.json",
+    "in_manifest": true
+  },
+  {
+    "group": "outputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/revision3/shape_regression.log",
+    "in_manifest": true
+  },
+  {
+    "group": "outputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/revision3/shape_regression/diagnostics.csv",
+    "in_manifest": true
+  },
+  {
+    "group": "outputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/revision3/shape_regression/fixture.csv",
+    "in_manifest": true
+  },
+  {
+    "group": "outputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/revision3/shape_regression/result.json",
+    "in_manifest": true
+  },
+  {
+    "group": "outputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/revision3/shape_regression/session.txt",
+    "in_manifest": true
+  },
+  {
+    "group": "outputs",
+    "path": "quality_reports/results/mebane_gates/G3/round1/revision3/todo_evidence.json",
+    "in_manifest": true
+  }
+]

@@ -1,0 +1,398 @@
+{
+  "Z": {
+    "exact": {
+      "mean": 1.382845090305032,
+      "variance": 0.32824299427329612,
+      "support": [1, 2, 3],
+      "mass": [0.66313904326443451, 0.29087682316609964, 0.045984133569466103],
+      "constant": false,
+      "q05": 1,
+      "q95": 2,
+      "q05_indicator_constant": false,
+      "q95_indicator_constant": false
+    },
+    "mcse_sensitivity": [
+      {
+        "batch_size": 25,
+        "mcse": 0.0078049552176400793,
+        "lag1_batch_acf": [-0.040181615080604652, 0.058195317465922825, 0.0039495241067247213, 0.11149995097798913]
+      },
+      {
+        "batch_size": 50,
+        "mcse": 0.0075084887857779902,
+        "lag1_batch_acf": [-0.024140426840203955, 0.05857213091726373, 0.1682149176534638, 0.13625123368790398]
+      },
+      {
+        "batch_size": 100,
+        "mcse": 0.0077818741823209676,
+        "lag1_batch_acf": [0.024026687167096942, 0.14493097985969672, -0.20164003364171587, 0.10894757983530859]
+      }
+    ],
+    "chain_means": [1.3714999999999999, 1.381, 1.3774999999999999, 1.399],
+    "chain_variances": [0.34666108054026024, 0.33300550275136909, 0.31114932466232958, 0.3349664832416322],
+    "inference_limit": "conditioned discrete problem only; batch sensitivity does not replace frozen acceptance rule"
+  },
+  "N.iota.m": {
+    "exact": {
+      "mean": 0.3989818121683526,
+      "variance": 0.23979532572721002,
+      "support": [0, 1],
+      "mass": [0.60101818783164751, 0.3989818121683526],
+      "constant": false,
+      "q05": 0,
+      "q95": 1,
+      "q05_indicator_constant": false,
+      "q95_indicator_constant": true
+    },
+    "mcse_sensitivity": [
+      {
+        "batch_size": 25,
+        "mcse": 0.0053749632027000659,
+        "lag1_batch_acf": [0.11252973142611739, -0.031237297808958994, 0.052210399297937728, 0.11723338707819869]
+      },
+      {
+        "batch_size": 50,
+        "mcse": 0.005451894812932661,
+        "lag1_batch_acf": [0.10164505765590041, 0.025647096888052293, 0.20144084934277051, 0.19466785042824306]
+      },
+      {
+        "batch_size": 100,
+        "mcse": 0.0061162665986092494,
+        "lag1_batch_acf": [-0.059842942151985073, -0.1265436279489785, 0.028975535168195853, -0.25832547910776005]
+      }
+    ],
+    "chain_means": [0.38850000000000001, 0.40050000000000002, 0.39800000000000002, 0.39750000000000002],
+    "chain_variances": [0.23768659329664374, 0.24021985992997166, 0.23971585792897288, 0.23961355677840041],
+    "inference_limit": "conditioned discrete problem only; batch sensitivity does not replace frozen acceptance rule"
+  },
+  "N.iota.s": {
+    "exact": {
+      "mean": 0.24819311189186527,
+      "variance": 0.18659329110129735,
+      "support": [0, 1],
+      "mass": [0.7518068881081349, 0.24819311189186527],
+      "constant": false,
+      "q05": 0,
+      "q95": 1,
+      "q05_indicator_constant": false,
+      "q95_indicator_constant": false
+    },
+    "mcse_sensitivity": [
+      {
+        "batch_size": 25,
+        "mcse": 0.0055230207234259407,
+        "lag1_batch_acf": [0.011480857851825614, -0.11940543071161054, -0.019250544972040547, 0.092564810002751366]
+      },
+      {
+        "batch_size": 50,
+        "mcse": 0.005445939148129385,
+        "lag1_batch_acf": [0.061603585657370535, -0.11372118551042809, -0.1213878326996196, 0.079089634251044566]
+      },
+      {
+        "batch_size": 100,
+        "mcse": 0.0051973392737357247,
+        "lag1_batch_acf": [-0.041383812010443936, 0.04720893141945786, 0.02712878254750186, -0.15058639166919421]
+      }
+    ],
+    "chain_means": [0.27400000000000002, 0.23599999999999999, 0.23699999999999999, 0.24149999999999999],
+    "chain_variances": [0.19902351175588429, 0.18039419709855312, 0.18092146073037077, 0.1832693846923483],
+    "inference_limit": "conditioned discrete problem only; batch sensitivity does not replace frozen acceptance rule"
+  },
+  "N.chi.m": {
+    "exact": {
+      "mean": 0.85316746291705758,
+      "variance": 0.1252727431367289,
+      "support": [0, 1],
+      "mass": [0.14683253708294261, 0.85316746291705758],
+      "constant": false,
+      "q05": 0,
+      "q95": 1,
+      "q05_indicator_constant": false,
+      "q95_indicator_constant": false
+    },
+    "mcse_sensitivity": [
+      {
+        "batch_size": 25,
+        "mcse": 0.0036848507432459179,
+        "lag1_batch_acf": [-0.018455720296534275, 0.052487600743955108, -0.060467338429464536, -0.072725885225885342]
+      },
+      {
+        "batch_size": 50,
+        "mcse": 0.0036630408938126253,
+        "lag1_batch_acf": [0.054067335842743459, 0.29787515250101665, -0.043574094231068644, -0.083877284595300555]
+      },
+      {
+        "batch_size": 100,
+        "mcse": 0.0038293147318795152,
+        "lag1_batch_acf": [-0.12747589833479411, 0.0050027948574623395, 0.13613196365073116, 0.074022346368715186]
+      }
+    ],
+    "chain_means": [0.86699999999999999, 0.86899999999999999, 0.86150000000000004, 0.86499999999999999],
+    "chain_variances": [0.11536868434216825, 0.11389594797398175, 0.11937743871936053, 0.11683341670835462],
+    "inference_limit": "conditioned discrete problem only; batch sensitivity does not replace frozen acceptance rule"
+  },
+  "N.chi.s": {
+    "exact": {
+      "mean": 0.81091348646595396,
+      "variance": 0.1533328039335852,
+      "support": [0, 1],
+      "mass": [0.18908651353404626, 0.81091348646595396],
+      "constant": false,
+      "q05": 0,
+      "q95": 1,
+      "q05_indicator_constant": false,
+      "q95_indicator_constant": false
+    },
+    "mcse_sensitivity": [
+      {
+        "batch_size": 25,
+        "mcse": 0.0054100454501003854,
+        "lag1_batch_acf": [0.0054584651495049735, 0.089341446491251975, -0.03391620720605211, -0.1548400426063323]
+      },
+      {
+        "batch_size": 50,
+        "mcse": 0.0054236394961884576,
+        "lag1_batch_acf": [0.06795220810647308, 0.19881962426312588, 0.018881351423250838, -0.10721236335114452]
+      },
+      {
+        "batch_size": 100,
+        "mcse": 0.0058082008719069836,
+        "lag1_batch_acf": [-0.38493837775866996, 0.28055746730901582, -0.18460107482430752, 0.2019601052777393]
+      }
+    ],
+    "chain_means": [0.79100000000000004, 0.8165, 0.81899999999999995, 0.8095],
+    "chain_variances": [0.16540170085042083, 0.14990270135067205, 0.14831315657828575, 0.15428689344672247],
+    "inference_limit": "conditioned discrete problem only; batch sensitivity does not replace frozen acceptance rule"
+  },
+  "indicator_Z1": {
+    "exact": {
+      "mean": 0.66313904326443451,
+      "variance": 0.22338565256276505,
+      "support": [0, 1],
+      "mass": [0.33686095673556571, 0.66313904326443451],
+      "constant": false,
+      "q05": 0,
+      "q95": 1,
+      "q05_indicator_constant": false,
+      "q95_indicator_constant": false
+    },
+    "mcse_sensitivity": [
+      {
+        "batch_size": 25,
+        "mcse": 0.0063286975733308319,
+        "lag1_batch_acf": [-0.053560355518809485, 0.00018070395977368365, -0.022624269600742208, 0.11382108635255428]
+      },
+      {
+        "batch_size": 50,
+        "mcse": 0.0061701631632833228,
+        "lag1_batch_acf": [-0.024712879409351751, -0.059321537379892098, 0.13190524401834777, 0.059247939150173116]
+      },
+      {
+        "batch_size": 100,
+        "mcse": 0.0063895602558515629,
+        "lag1_batch_acf": [0.003940455341505892, 0.033071033602722351, -0.25806866240981857, -0.095791409340087549]
+      }
+    ],
+    "chain_means": [0.68500000000000005, 0.66749999999999998, 0.66049999999999998, 0.64849999999999997],
+    "chain_variances": [0.21588294147072928, 0.22205477738869375, 0.22435192596298162, 0.22806178089044132],
+    "inference_limit": "conditioned discrete problem only; batch sensitivity does not replace frozen acceptance rule"
+  },
+  "indicator_Z2": {
+    "exact": {
+      "mean": 0.29087682316609964,
+      "variance": 0.20626749691089724,
+      "support": [0, 1],
+      "mass": [0.70912317683390047, 0.29087682316609964],
+      "constant": false,
+      "q05": 0,
+      "q95": 1,
+      "q05_indicator_constant": false,
+      "q95_indicator_constant": true
+    },
+    "mcse_sensitivity": [
+      {
+        "batch_size": 25,
+        "mcse": 0.0061084282405231092,
+        "lag1_batch_acf": [-0.064906975134023076, -0.041091522880720155, -0.067981447733678063, 0.047480106100795796]
+      },
+      {
+        "batch_size": 50,
+        "mcse": 0.0060212630713463245,
+        "lag1_batch_acf": [-0.037459504988985405, -0.067270194986072479, 0.11246310393040247, -0.066475095785440572]
+      },
+      {
+        "batch_size": 100,
+        "mcse": 0.0061273491735608513,
+        "lag1_batch_acf": [0.0035540159096741019, -0.083502170767004322, -0.2051193686944362, -0.30576923076923085]
+      }
+    ],
+    "chain_means": [0.25850000000000001, 0.28399999999999997, 0.30149999999999999, 0.30399999999999999],
+    "chain_variances": [0.19177363681840223, 0.20344572286142484, 0.21070310155077304, 0.21168984492246409],
+    "inference_limit": "conditioned discrete problem only; batch sensitivity does not replace frozen acceptance rule"
+  },
+  "indicator_Z3": {
+    "exact": {
+      "mean": 0.045984133569466103,
+      "variance": 0.043869593029331605,
+      "support": [0, 1],
+      "mass": [0.95401586643053393, 0.045984133569466103],
+      "constant": false,
+      "q05": 0,
+      "q95": 0,
+      "q05_indicator_constant": false,
+      "q95_indicator_constant": false
+    },
+    "mcse_sensitivity": [
+      {
+        "batch_size": 25,
+        "mcse": 0.0030104314947877698,
+        "lag1_batch_acf": [-0.038553898329808156, 0.077437696282038379, -0.0023669796557120792, -0.027283603828547581]
+      },
+      {
+        "batch_size": 50,
+        "mcse": 0.0028715140516316394,
+        "lag1_batch_acf": [-0.045034272090597592, 0.30215782281940318, 0.25721757322175726, 0.029067197170645473]
+      },
+      {
+        "batch_size": 100,
+        "mcse": 0.00286784005463125,
+        "lag1_batch_acf": [0.055097706032285483, 0.16489850631941788, 0.1540772532188841, 0.24749373433583954]
+      }
+    ],
+    "chain_means": [0.056500000000000002, 0.048500000000000001, 0.037999999999999999, 0.047500000000000001],
+    "chain_variances": [0.053334417208603026, 0.046170835417709812, 0.036574287143572207, 0.045266383191596905],
+    "inference_limit": "conditioned discrete problem only; batch sensitivity does not replace frozen acceptance rule"
+  },
+  "M": {
+    "exact": {
+      "mean": 0.096424817025431708,
+      "variance": 0.038866450765815158,
+      "support": [0, 0.4995],
+      "mass": [0.80695732327240899, 0.19304267672759101],
+      "constant": false,
+      "q05": 0,
+      "q95": 0.4995,
+      "q05_indicator_constant": false,
+      "q95_indicator_constant": true
+    },
+    "mcse_sensitivity": [
+      {
+        "batch_size": 25,
+        "mcse": 0.0025385084104276871,
+        "lag1_batch_acf": [0.14712831025675494, -0.12982140887532623, -0.090841183778048049, 0.094378197250721649]
+      },
+      {
+        "batch_size": 50,
+        "mcse": 0.0025479216121707571,
+        "lag1_batch_acf": [0.083848889846949715, -0.12451483816134287, 0.10513681895919869, 0.096132009404231902]
+      },
+      {
+        "batch_size": 100,
+        "mcse": 0.0026707904949292197,
+        "lag1_batch_acf": [0.13080194410692614, -0.055202478743334692, -0.29618361975537993, 0.15999912975372019]
+      }
+    ],
+    "chain_means": [0.090409500000000406, 0.097652250000000579, 0.092157750000000455, 0.095654250000000524],
+    "chain_variances": [0.03700416964457133, 0.039260967428652628, 0.037558524502189397, 0.038648886775324652],
+    "inference_limit": "conditioned discrete problem only; batch sensitivity does not replace frozen acceptance rule"
+  },
+  "S": {
+    "exact": {
+      "mean": 0,
+      "variance": 0,
+      "support": 0,
+      "mass": 0.99999999999999989,
+      "constant": true,
+      "q05": 0,
+      "q95": 0,
+      "q05_indicator_constant": false,
+      "q95_indicator_constant": false
+    },
+    "mcse_sensitivity": [
+      {
+        "batch_size": 25,
+        "mcse": 0,
+        "lag1_batch_acf": [null, null, null, null]
+      },
+      {
+        "batch_size": 50,
+        "mcse": 0,
+        "lag1_batch_acf": [null, null, null, null]
+      },
+      {
+        "batch_size": 100,
+        "mcse": 0,
+        "lag1_batch_acf": [null, null, null, null]
+      }
+    ],
+    "chain_means": [0, 0, 0, 0],
+    "chain_variances": [0, 0, 0, 0],
+    "inference_limit": "conditioned discrete problem only; batch sensitivity does not replace frozen acceptance rule"
+  },
+  "margin_lower": {
+    "exact": {
+      "mean": 0.90357518297456829,
+      "variance": 0.038866450765815172,
+      "support": [0.50049999999999994, 1],
+      "mass": [0.19304267672759101, 0.80695732327240899],
+      "constant": false,
+      "q05": 0.50049999999999994,
+      "q95": 1,
+      "q05_indicator_constant": false,
+      "q95_indicator_constant": true
+    },
+    "mcse_sensitivity": [
+      {
+        "batch_size": 25,
+        "mcse": 0.0025385084104276884,
+        "lag1_batch_acf": [0.14712831025675488, -0.12982140887532631, -0.090841183778047563, 0.094378197250721552]
+      },
+      {
+        "batch_size": 50,
+        "mcse": 0.0025479216121707558,
+        "lag1_batch_acf": [0.083848889846949812, -0.12451483816134255, 0.10513681895919855, 0.096132009404231444]
+      },
+      {
+        "batch_size": 100,
+        "mcse": 0.0026707904949292128,
+        "lag1_batch_acf": [0.13080194410692494, -0.05520247874333499, -0.29618361975537788, 0.15999912975372177]
+      }
+    ],
+    "chain_means": [0.90959050000000663, 0.90234775000000766, 0.90784225000000673, 0.90434575000000694],
+    "chain_variances": [0.037004169644571337, 0.039260967428652628, 0.037558524502189397, 0.038648886775324666],
+    "inference_limit": "conditioned discrete problem only; batch sensitivity does not replace frozen acceptance rule"
+  },
+  "margin_upper": {
+    "exact": {
+      "mean": 0.90357518297456829,
+      "variance": 0.038866450765815172,
+      "support": [0.50049999999999994, 1],
+      "mass": [0.19304267672759101, 0.80695732327240899],
+      "constant": false,
+      "q05": 0.50049999999999994,
+      "q95": 1,
+      "q05_indicator_constant": false,
+      "q95_indicator_constant": true
+    },
+    "mcse_sensitivity": [
+      {
+        "batch_size": 25,
+        "mcse": 0.0025385084104276884,
+        "lag1_batch_acf": [0.14712831025675488, -0.12982140887532631, -0.090841183778047563, 0.094378197250721552]
+      },
+      {
+        "batch_size": 50,
+        "mcse": 0.0025479216121707558,
+        "lag1_batch_acf": [0.083848889846949812, -0.12451483816134255, 0.10513681895919855, 0.096132009404231444]
+      },
+      {
+        "batch_size": 100,
+        "mcse": 0.0026707904949292128,
+        "lag1_batch_acf": [0.13080194410692494, -0.05520247874333499, -0.29618361975537788, 0.15999912975372177]
+      }
+    ],
+    "chain_means": [0.90959050000000663, 0.90234775000000766, 0.90784225000000673, 0.90434575000000694],
+    "chain_variances": [0.037004169644571337, 0.039260967428652628, 0.037558524502189397, 0.038648886775324666],
+    "inference_limit": "conditioned discrete problem only; batch sensitivity does not replace frozen acceptance rule"
+  }
+}

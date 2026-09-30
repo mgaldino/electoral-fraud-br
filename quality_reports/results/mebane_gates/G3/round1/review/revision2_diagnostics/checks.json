@@ -1,0 +1,193 @@
+{
+  "checks": [
+    {
+      "id": "source_hash",
+      "pass": true,
+      "value": {}
+    },
+    {
+      "id": "protocol_hash",
+      "pass": true,
+      "value": {}
+    },
+    {
+      "id": "seeds_inits_exact",
+      "pass": true,
+      "value": {}
+    },
+    {
+      "id": "sampling_schedule",
+      "pass": true,
+      "value": {}
+    },
+    {
+      "id": "four_chain_shape",
+      "pass": true,
+      "value": {}
+    },
+    {
+      "id": "mcpar_701_2700_thin1",
+      "pass": true,
+      "value": {}
+    },
+    {
+      "id": "conditioned_response_case",
+      "pass": true,
+      "value": {}
+    },
+    {
+      "id": "pi_auxiliary_case",
+      "pass": true,
+      "value": {}
+    },
+    {
+      "id": "six_designs",
+      "pass": true,
+      "value": {}
+    },
+    {
+      "id": "continuous_effects_beta0_conditioned",
+      "pass": true,
+      "value": {}
+    },
+    {
+      "id": "class_counts_not_conditioned",
+      "pass": true,
+      "value": {}
+    },
+    {
+      "id": "published_summary_Z",
+      "pass": false,
+      "value": {}
+    },
+    {
+      "id": "published_summary_N.iota.m",
+      "pass": false,
+      "value": {}
+    },
+    {
+      "id": "published_summary_N.iota.s",
+      "pass": false,
+      "value": {}
+    },
+    {
+      "id": "published_summary_N.chi.m",
+      "pass": false,
+      "value": {}
+    },
+    {
+      "id": "published_summary_N.chi.s",
+      "pass": false,
+      "value": {}
+    },
+    {
+      "id": "published_summary_indicator_Z1",
+      "pass": false,
+      "value": {}
+    },
+    {
+      "id": "published_summary_indicator_Z2",
+      "pass": false,
+      "value": {}
+    },
+    {
+      "id": "published_summary_indicator_Z3",
+      "pass": false,
+      "value": {}
+    },
+    {
+      "id": "published_summary_M",
+      "pass": false,
+      "value": {}
+    },
+    {
+      "id": "published_summary_S",
+      "pass": true,
+      "value": {}
+    },
+    {
+      "id": "published_summary_margin_lower",
+      "pass": false,
+      "value": {}
+    },
+    {
+      "id": "published_summary_margin_upper",
+      "pass": false,
+      "value": {}
+    },
+    {
+      "id": "8000_joint_rows",
+      "pass": true,
+      "value": {}
+    },
+    {
+      "id": "per_draw_Z",
+      "pass": true,
+      "value": {}
+    },
+    {
+      "id": "per_draw_r_im",
+      "pass": true,
+      "value": {}
+    },
+    {
+      "id": "per_draw_r_is",
+      "pass": true,
+      "value": {}
+    },
+    {
+      "id": "per_draw_r_cm",
+      "pass": true,
+      "value": {}
+    },
+    {
+      "id": "per_draw_r_cs",
+      "pass": true,
+      "value": {}
+    },
+    {
+      "id": "per_draw_M",
+      "pass": true,
+      "value": {}
+    },
+    {
+      "id": "per_draw_S",
+      "pass": true,
+      "value": {}
+    },
+    {
+      "id": "per_draw_margin_lower",
+      "pass": true,
+      "value": {}
+    },
+    {
+      "id": "per_draw_margin_upper",
+      "pass": true,
+      "value": {}
+    },
+    {
+      "id": "margin_physical_flags",
+      "pass": true,
+      "value": {}
+    },
+    {
+      "id": "S_constant_exact_and_sampled",
+      "pass": true,
+      "value": {}
+    },
+    {
+      "id": "48_states_match",
+      "pass": true,
+      "value": {}
+    }
+  ],
+  "failed": 11,
+  "all_mean_pass": true,
+  "all_diagnostic_pass": false,
+  "missing_tail_ess_targets": ["N.iota.m", "N.iota.s", "N.chi.m", "N.chi.s", "indicator_Z1", "indicator_Z2", "M", "margin_lower", "margin_upper"],
+  "raw_draws_sha256": "66ddb0aaef7448b25e817e25c931d5608ee9c7141165842613925e9e145baf6d",
+  "no_MCMC_run": true,
+  "finite_rhat_max": 1.0012075708676915,
+  "bulk_ess_min": 4495.2624980166192,
+  "finite_tail_ess_min": 4495.2624980166211
+}

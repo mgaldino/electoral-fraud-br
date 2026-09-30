@@ -1,0 +1,2 @@
+Error: all(vapply(checks, function(x) x$pass, logical(1))) is not TRUE
+Execution halted

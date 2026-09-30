@@ -1,0 +1,10 @@
+During startup - Warning messages:
+1: Setting LC_CTYPE failed, using "C" 
+2: Setting LC_COLLATE failed, using "C" 
+3: Setting LC_TIME failed, using "C" 
+4: Setting LC_MESSAGES failed, using "C" 
+5: Setting LC_MONETARY failed, using "C" 
+deterministic PASS: 29 grid cases; max diff 2.5e-16; generator statuses valid 32
+real 0.56
+user 0.51
+sys 0.03

@@ -1,0 +1,23 @@
+{
+  "status": "inconclusive",
+  "repair_id": "G3-COORD-DRAW-01",
+  "source": "reopened_raw_chains_rds",
+  "raw_rds_sha256": "66ddb0aaef7448b25e817e25c931d5608ee9c7141165842613925e9e145baf6d",
+  "prior_summary_sha256": "7f70d062f30a26fd5e1eaa8cc6e8d89b36ca09a519f8116bd88bf0c6ac9a173a",
+  "all_mean_pass": true,
+  "all_diagnostic_pass": false,
+  "degenerate_targets": "S",
+  "missing_tail_ess_targets": ["r_im", "r_is", "r_cm", "r_cs", "indicator_Z1", "indicator_Z2", "M", "margin_lower", "margin_upper"],
+  "per_draw_identities": {
+    "z_support": true,
+    "four_count_support": true,
+    "one_class_per_draw": true,
+    "nonnegative_functionals": true,
+    "lower_identity": true,
+    "upper_identity": true,
+    "bound_order": true
+  },
+  "replay_comparison": "descriptive; no stochastic identity or new acceptance criterion",
+  "margin": "Dobs=1 algebraic offset; observed margin incompatible with N=1,A=0,W=0",
+  "physical_counterfactual_validated": false
+}

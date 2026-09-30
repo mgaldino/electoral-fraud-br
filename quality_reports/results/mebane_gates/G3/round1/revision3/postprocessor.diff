@@ -1,0 +1,98 @@
+--- revision2/g3_draw_postprocess.R
++++ revision3/g3_draw_postprocess.R
+@@ -3,13 +3,28 @@
+ stopifnot(requireNamespace("posterior", quietly = TRUE),
+           requireNamespace("jsonlite", quietly = TRUE))
+ source("R/lib/mebane_model.R")
+-outdir <- "quality_reports/results/mebane_gates/G3/round1/revision2"
+-rds_path <- file.path(outdir, "raw_chains.rds")
+-meta <- jsonlite::read_json(file.path(outdir, "sampling_metadata.json"),
++g3_chain_diagnostics <- function(x, constant = FALSE) {
++  stopifnot(is.numeric(x), identical(class(x), c("matrix", "array")),
++            identical(dim(x), c(2000L, 4L)))
++  if (constant) return(c(rhat = NA_real_, ess_bulk = NA_real_, ess_tail = NA_real_))
++  c(rhat = unname(posterior::rhat(x)),
++    ess_bulk = unname(posterior::ess_bulk(x)),
++    ess_tail = unname(posterior::ess_tail(x)))
++}
++data_dir <- "quality_reports/results/mebane_gates/G3/round1/revision2"
++args <- commandArgs(trailingOnly = TRUE)
++stopifnot(length(args) <= 1L)
++outdir <- if (length(args)) args[1] else
++  "quality_reports/results/mebane_gates/G3/round1/revision3/postprocess"
++stopifnot(!dir.exists(outdir))
++dir.create(outdir, recursive = TRUE)
++rds_path <- file.path(data_dir, "raw_chains.rds")
++meta <- jsonlite::read_json(file.path(data_dir, "sampling_metadata.json"),
+                             simplifyVector = TRUE)
+ sha <- function(path) strsplit(system2("shasum", c("-a", "256", path),
+                                        stdout = TRUE), " ")[[1]][1]
+-stopifnot(sha(rds_path) == meta$raw_rds_sha256)
++stopifnot(sha(rds_path) == meta$raw_rds_sha256,
++          sha(rds_path) == "66ddb0aaef7448b25e817e25c931d5608ee9c7141165842613925e9e145baf6d")
+ payload <- readRDS(rds_path)
+ stopifnot(inherits(payload$draws, "mcmc.list"),
+           length(payload$draws) == 4L,
+@@ -84,40 +99,46 @@
+   constant <- length(unique(as.vector(x))) == 1L &&
+     length(unique(exact[[nm]][exact$posterior > 0])) == 1L
+   mcse <- if (constant) 0 else mcse_batch(x)
+-  draws <- posterior::as_draws_array(array(x, dim=c(2000L,4L,1L),
+-    dimnames=list(NULL,NULL,nm)))
+-  rh <- if (constant) NA_real_ else posterior::rhat(draws)[[1]]
+-  eb <- if (constant) NA_real_ else posterior::ess_bulk(draws)[[1]]
+-  et <- if (constant) NA_real_ else posterior::ess_tail(draws)[[1]]
++  diagnostics <- g3_chain_diagnostics(x, constant)
+   tol <- max(1e-3, 6*mcse)
+   data.frame(target=nm, exact=expectation, mc_mean=mean(x), mcse=mcse,
+-    tolerance=tol, difference=abs(mean(x)-expectation), rhat=rh,
+-    ess_bulk=eb, ess_tail=et, constant=constant)
++    tolerance=tol, difference=abs(mean(x)-expectation), rhat=diagnostics[["rhat"]],
++    ess_bulk=diagnostics[["ess_bulk"]], ess_tail=diagnostics[["ess_tail"]],
++    constant=constant)
+ }))
+ summary$mean_pass <- summary$difference <= summary$tolerance
+ summary$diagnostic_pass <- with(summary, constant |
+   (!is.na(rhat) & !is.na(ess_bulk) & !is.na(ess_tail) &
+     rhat < 1.01 & ess_bulk >= 400 & ess_tail >= 400))
+ write.csv(summary, file.path(outdir, "conditional_comparison.csv"), row.names = FALSE)
+-old <- read.csv("quality_reports/results/mebane_gates/G3/round1/jags_attempt5/conditional_comparison.csv")
++old_path <- file.path(data_dir, "conditional_comparison.csv")
++old <- read.csv(old_path)
+ stopifnot(identical(as.character(old$target), as.character(summary$target)))
++for (field in c("exact", "mc_mean", "mcse", "tolerance", "difference")) {
++  stopifnot(all(abs(old[[field]] - summary[[field]]) < 1e-12))
++}
+ prior_check <- data.frame(target=summary$target,
+-  revision1_mean=old$mc_mean, revision2_mean=summary$mc_mean,
++  revision2_mean=old$mc_mean, revision3_mean=summary$mc_mean,
+   absolute_mean_difference=abs(summary$mc_mean-old$mc_mean),
+-  revision1_mcse=old$mcse, revision2_mcse=summary$mcse,
+-  combined_mcse=sqrt(old$mcse^2+summary$mcse^2),
+-  same_seeds_declared=TRUE)
+-write.csv(prior_check, file.path(outdir, "replay_vs_revision1.csv"),
++  revision2_mcse=old$mcse, revision3_mcse=summary$mcse,
++  revision2_rhat=old$rhat, revision3_rhat=summary$rhat,
++  revision2_ess_bulk=old$ess_bulk, revision3_ess_bulk=summary$ess_bulk,
++  revision2_ess_tail=old$ess_tail, revision3_ess_tail=summary$ess_tail,
++  same_raw_draws=TRUE)
++write.csv(prior_check, file.path(outdir, "diagnostic_comparison_vs_revision2.csv"),
+           row.names = FALSE)
+-result <- list(status="inconclusive", repair_id="G3-COORD-DRAW-01",
++result <- list(status="inconclusive", repair_id="G3-COORD-DIAG-01",
+   source="reopened_raw_chains_rds", raw_rds_sha256=sha(rds_path),
+-  prior_summary_sha256=sha("quality_reports/results/mebane_gates/G3/round1/jags_attempt5/conditional_comparison.csv"),
++  prior_summary_sha256=sha(old_path),
++  diagnostic_input_shape=c(iterations=2000L, chains=4L),
++  diagnostic_input_class=c("matrix", "array"), new_mcmc_runs=0L,
+   all_mean_pass=all(summary$mean_pass),
+   all_diagnostic_pass=all(summary$diagnostic_pass),
+   degenerate_targets=as.character(summary$target[summary$constant]),
+   missing_tail_ess_targets=as.character(summary$target[is.na(summary$ess_tail) & !summary$constant]),
+   per_draw_identities=as.list(checks),
+-  replay_comparison="descriptive; no stochastic identity or new acceptance criterion",
++  comparison="same persisted draws; only diagnostic input shape changed",
++  remaining_tail_NA="Retained as unavailable under unchanged criteria; separate from the repaired chain-shape defect",
+   margin="Dobs=1 algebraic offset; observed margin incompatible with N=1,A=0,W=0",
+   physical_counterfactual_validated=FALSE)
+ jsonlite::write_json(result, file.path(outdir, "postprocess_result.json"),

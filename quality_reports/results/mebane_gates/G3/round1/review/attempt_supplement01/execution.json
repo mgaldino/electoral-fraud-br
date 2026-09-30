@@ -1,0 +1,27 @@
+{
+  "finished": "2026-09-29T16:49:24.740602+00:00",
+  "elapsed_seconds": 0.01378212499548681,
+  "exit_code": 0,
+  "input_freeze": {
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/supplement_01/freeze.json",
+    "bytes": 706,
+    "sha256": "9f6771a7ad319c7e4153eb18e746acdd063d501cf443ad6869bff6c141c2b987"
+  },
+  "outputs": [
+    {
+      "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_supplement01/audit.json",
+      "bytes": 1458,
+      "sha256": "9d4c0d4b7f36e757f89a2d8c9f24b5311d0b407243fa41eb14e83e8809adee38"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_supplement01/numeric_support.csv",
+      "bytes": 78035,
+      "sha256": "ac7bb965666926987c54b1e8f7203a065e2b69f0531065f029e5cee0758a1178"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_supplement01/source_checks.json",
+      "bytes": 4807,
+      "sha256": "cc4888cd261ca081e7c458168542fa4435b6d9e25abaa62a80bd700dd532a6f8"
+    }
+  ]
+}

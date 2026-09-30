@@ -1,0 +1,12 @@
+{
+  "Dobs_kind": "algebraic_fixture_offset_not_observed_margin",
+  "N": 1,
+  "A": 0,
+  "W": 0,
+  "Dobs_offset": 1,
+  "observed_margin_compatible": false,
+  "leader_capacity_necessary_fraction": 0.807,
+  "source_capacity_fully_verified": false,
+  "physical_counterfactual_validated": false,
+  "note": "Expected-vote functionals; necessary flags do not establish physical origin/ballot feasibility"
+}

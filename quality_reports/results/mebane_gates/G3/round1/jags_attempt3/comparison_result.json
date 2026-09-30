@@ -1,0 +1,13 @@
+{
+  "status": "inconclusive",
+  "continuous_fixed": {
+    "tau": 0.5,
+    "nu": 0.5,
+    "Dobs": 1
+  },
+  "chains": 4,
+  "iterations": 2000,
+  "seconds": 0.5433,
+  "all_mean_pass": true,
+  "all_diagnostic_pass": false
+}

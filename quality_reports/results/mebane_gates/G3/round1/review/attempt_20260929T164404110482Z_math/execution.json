@@ -1,0 +1,62 @@
+{
+  "finished": "2026-09-29T16:44:04.455936+00:00",
+  "pid": 96464,
+  "exit_code": 1,
+  "elapsed_seconds": 0.3446094999962952,
+  "timed_out": false,
+  "command": [
+    "/usr/local/bin/Rscript",
+    "--vanilla",
+    "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/G3/round1/review/preparation/qa_math.R",
+    "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/G3/round1/review/preparation/protocol.json",
+    "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164404110482Z_math"
+  ],
+  "total_compute_seconds": 0.3446094999962952,
+  "outputs": [
+    {
+      "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164404110482Z_math/diagnostic_conditional_marginals.csv",
+      "bytes": 12537,
+      "sha256": "a643ba593e74e50fd95690d5c6c1523e9eabbdaba98f5bc896e7c73adc88e4a2"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164404110482Z_math/diagnostic_mass.csv",
+      "bytes": 363,
+      "sha256": "3d440ee9937e05aaf18ac00d0f89a006dd006e017f33f1dc0a08f1a649018901"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164404110482Z_math/invocation.json",
+      "bytes": 1171,
+      "sha256": "95f9cddd1c61b2016c04e3ee71a2fd542c1d3c6430e8b46c31a4cfae1c806ed0"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164404110482Z_math/joint_functionals_fixture.csv",
+      "bytes": 132,
+      "sha256": "1d614dfaf9bf8dc8c5eb4b96928236537bee62d54cea9e285a2444f45e1e6187"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164404110482Z_math/kernel_cells.csv",
+      "bytes": 3704,
+      "sha256": "1493adf62ca139461b0727ccdc43427148986c5d2acaba0bf94eea8249b23f8b"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164404110482Z_math/math_checks.json",
+      "bytes": 19548,
+      "sha256": "b0596dcda97f88579f51d223b751bf7b7b47b092754497f074e965d2d60074b8"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164404110482Z_math/stderr.log",
+      "bytes": 88,
+      "sha256": "1e6944a20d84bde21d031f4c2ff8fd3bcabc5e51ba370e280ede4e9845849a46"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164404110482Z_math/stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164404110482Z_math/v2_conditioned_exact_states.csv",
+      "bytes": 3227,
+      "sha256": "067436c4bf97df962c54a5324a9625b043ac782485cc862b68d9ec770ee18dcb"
+    }
+  ]
+}

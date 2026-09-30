@@ -1,0 +1,25 @@
+{
+  "root_goal_id": "019d795a-acfa-72c2-a210-d55a46c606c2",
+  "executor": {
+    "agent_id": "01a0ee04-c901-7831-8ac6-0160da2e3883",
+    "nickname": "Raman",
+    "role": "SOL-MODELO",
+    "requested_model": "gpt-6-sol",
+    "requested_effort": "xhigh",
+    "fork_context": false,
+    "write_scope": ["R/lib/mebane_model.R", "tests/mebane/likelihood/g3_*", "quality_reports/results/mebane_gates/G3/round1/ excluding review and adjudication"]
+  },
+  "reviewer": {
+    "agent_id": "01a0ee05-aeaf-7492-a8ea-fa731dd6214a",
+    "nickname": "Averroes",
+    "role": "QA-FIDELIDADE",
+    "requested_model": "inherit",
+    "requested_effort": "xhigh",
+    "fork_context": false,
+    "write_scope": ["quality_reports/results/mebane_gates/G3/round1/review/"]
+  },
+  "routing_basis": "User-selected Sol implementation and independent principal-model review; not comparative model benchmarking",
+  "token_budget_requested": false,
+  "speed_tier_requested": false,
+  "file_deletion_authorized": false
+}

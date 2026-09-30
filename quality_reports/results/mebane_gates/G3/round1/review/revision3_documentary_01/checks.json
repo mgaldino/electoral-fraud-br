@@ -1,0 +1,1753 @@
+{
+  "checks": [
+    {
+      "id": "manifest_identity",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "predecessor_complete_mapping",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:CLAUDE.md",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:R/05_eforensics_umeforensics_qbl.R",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:R/07_brasil_full_qbl.R",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:R/lib/mebane_model.R",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G0/round1/qbl_installed_3017de5.jags",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G2/round2/benchmark_contract.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G2/round2/sources/ef_main_3017de5.R",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G2/round3/adjudication.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G2/round3/candidate_manifest.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G2/round3/review/review.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/build_candidate.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/candidate_manifest.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/comparison_result.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/counterexample.csv",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/deterministic_attempt2/counterexample.csv",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/deterministic_attempt2/enumeration.csv",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/deterministic_attempt2/generation_attempts.csv",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/deterministic_attempt2/joint_functionals.csv",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/deterministic_attempt2/joint_input.csv",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/deterministic_attempt2/mass.csv",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/deterministic_attempt2/normalization.csv",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/deterministic_attempt3/counterexample.csv",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/deterministic_attempt3/enumeration.csv",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/deterministic_attempt3/generation_attempts.csv",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/deterministic_attempt3/joint_functionals.csv",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/deterministic_attempt3/joint_input.csv",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/deterministic_attempt3/mass.csv",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/deterministic_attempt3/normalization.csv",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/engine_decision.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/enumeration.csv",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/environment.log",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/g3_deterministic.log",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/g3_deterministic_attempt2.log",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/g3_deterministic_attempt3.log",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/g3_interface_attempt1.log",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/g3_jags_attempt1.log",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/g3_jags_attempt2.log",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/g3_jags_attempt3.log",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/g3_jags_attempt4.log",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/g3_jags_attempt5.log",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/g3_source_attempt1.log",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/gate_contract.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/implementation.md",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/jags_attempt2/jags_probes.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/jags_attempt3/comparison_result.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/jags_attempt3/conditional_comparison.csv",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/jags_attempt3/conditional_exact_states.csv",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/jags_attempt3/jags_probes.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/jags_attempt3/margin_feasibility.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/jags_attempt4/conditional_comparison.csv",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/jags_attempt4/conditional_exact_states.csv",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/jags_attempt4/jags_probes.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/jags_attempt4/margin_feasibility.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/jags_attempt5/comparison_result.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/jags_attempt5/conditional_comparison.csv",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/jags_attempt5/conditional_exact_states.csv",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/jags_attempt5/jags_probes.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/jags_attempt5/margin_feasibility.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/jags_probes.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/mass.csv",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/metadata_consumed.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/normalization.csv",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/preflight_v1.md",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/protocol.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/protocol_provenance_errata.md",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/protocol_v2.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164404110482Z_math/diagnostic_conditional_marginals.csv",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164404110482Z_math/diagnostic_mass.csv",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164404110482Z_math/execution.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164404110482Z_math/invocation.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164404110482Z_math/joint_functionals_fixture.csv",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164404110482Z_math/kernel_cells.csv",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164404110482Z_math/math_checks.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164404110482Z_math/stderr.log",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164404110482Z_math/stdout.log",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164404110482Z_math/v2_conditioned_exact_states.csv",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164413891477Z_wrapper/direct_data.rds",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164413891477Z_wrapper/execution.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164413891477Z_wrapper/invocation.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164413891477Z_wrapper/stderr.log",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164413891477Z_wrapper/stdout.log",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164413891477Z_wrapper/tmp/xcrun_db",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164413891477Z_wrapper/wrapper_checks.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164413891477Z_wrapper/wrapper_data_1.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164413891477Z_wrapper/wrapper_data_2.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164413891477Z_wrapper/wrapper_data_3.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164413891477Z_wrapper/wrapper_payload_1.rds",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164413891477Z_wrapper/wrapper_payload_2.rds",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164413891477Z_wrapper/wrapper_payload_3.rds",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164446516572Z_runtime_01/not_started.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164658942859Z_runtime_01/data.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164658942859Z_runtime_01/data.rds",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164658942859Z_runtime_01/draws.csv",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164658942859Z_runtime_01/execution.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164658942859Z_runtime_01/inits.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164658942859Z_runtime_01/inits.rds",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164658942859Z_runtime_01/invocation.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164658942859Z_runtime_01/runtime_result.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164658942859Z_runtime_01/samples.rds",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164658942859Z_runtime_01/stderr.log",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164658942859Z_runtime_01/stdout.log",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164659293216Z_runtime_02/data.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164659293216Z_runtime_02/data.rds",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164659293216Z_runtime_02/draws.csv",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164659293216Z_runtime_02/execution.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164659293216Z_runtime_02/inits.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164659293216Z_runtime_02/inits.rds",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164659293216Z_runtime_02/invocation.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164659293216Z_runtime_02/runtime_result.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164659293216Z_runtime_02/samples.rds",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164659293216Z_runtime_02/stderr.log",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164659293216Z_runtime_02/stdout.log",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164659633339Z_runtime_03/data.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164659633339Z_runtime_03/data.rds",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164659633339Z_runtime_03/draws.csv",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164659633339Z_runtime_03/execution.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164659633339Z_runtime_03/inits.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164659633339Z_runtime_03/inits.rds",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164659633339Z_runtime_03/invocation.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164659633339Z_runtime_03/runtime_result.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164659633339Z_runtime_03/samples.rds",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164659633339Z_runtime_03/stderr.log",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164659633339Z_runtime_03/stdout.log",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164659979513Z_runtime_04/data.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164659979513Z_runtime_04/data.rds",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164659979513Z_runtime_04/execution.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164659979513Z_runtime_04/inits.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164659979513Z_runtime_04/inits.rds",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164659979513Z_runtime_04/invocation.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164659979513Z_runtime_04/runtime_result.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164659979513Z_runtime_04/stderr.log",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164659979513Z_runtime_04/stdout.log",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164700322191Z_runtime_05/data.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164700322191Z_runtime_05/data.rds",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164700322191Z_runtime_05/execution.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164700322191Z_runtime_05/inits.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164700322191Z_runtime_05/inits.rds",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164700322191Z_runtime_05/invocation.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164700322191Z_runtime_05/runtime_result.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164700322191Z_runtime_05/stderr.log",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164700322191Z_runtime_05/stdout.log",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164700669112Z_runtime_06/data.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164700669112Z_runtime_06/data.rds",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164700669112Z_runtime_06/execution.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164700669112Z_runtime_06/inits.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164700669112Z_runtime_06/inits.rds",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164700669112Z_runtime_06/invocation.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164700669112Z_runtime_06/runtime_result.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164700669112Z_runtime_06/stderr.log",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164700669112Z_runtime_06/stdout.log",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164701019746Z_runtime_07/data.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164701019746Z_runtime_07/data.rds",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164701019746Z_runtime_07/draws.csv",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164701019746Z_runtime_07/execution.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164701019746Z_runtime_07/inits.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164701019746Z_runtime_07/inits.rds",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164701019746Z_runtime_07/invocation.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164701019746Z_runtime_07/runtime_result.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164701019746Z_runtime_07/samples.rds",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164701019746Z_runtime_07/stderr.log",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164701019746Z_runtime_07/stdout.log",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164701368470Z_runtime_08/data.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164701368470Z_runtime_08/data.rds",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164701368470Z_runtime_08/draws.csv",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164701368470Z_runtime_08/execution.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164701368470Z_runtime_08/inits.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164701368470Z_runtime_08/inits.rds",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164701368470Z_runtime_08/invocation.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164701368470Z_runtime_08/runtime_result.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164701368470Z_runtime_08/samples.rds",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164701368470Z_runtime_08/stderr.log",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164701368470Z_runtime_08/stdout.log",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164701718780Z_runtime_09/data.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164701718780Z_runtime_09/data.rds",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164701718780Z_runtime_09/draws.csv",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164701718780Z_runtime_09/execution.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164701718780Z_runtime_09/inits.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164701718780Z_runtime_09/inits.rds",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164701718780Z_runtime_09/invocation.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164701718780Z_runtime_09/runtime_result.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164701718780Z_runtime_09/samples.rds",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164701718780Z_runtime_09/stderr.log",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164701718780Z_runtime_09/stdout.log",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164702070474Z_runtime_10/data.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164702070474Z_runtime_10/data.rds",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164702070474Z_runtime_10/draws.csv",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164702070474Z_runtime_10/execution.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164702070474Z_runtime_10/inits.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164702070474Z_runtime_10/inits.rds",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164702070474Z_runtime_10/invocation.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164702070474Z_runtime_10/runtime_result.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164702070474Z_runtime_10/samples.rds",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164702070474Z_runtime_10/stderr.log",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164702070474Z_runtime_10/stdout.log",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164702420276Z_runtime_11/data.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164702420276Z_runtime_11/data.rds",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164702420276Z_runtime_11/execution.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164702420276Z_runtime_11/inits.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164702420276Z_runtime_11/inits.rds",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164702420276Z_runtime_11/invocation.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164702420276Z_runtime_11/runtime_result.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164702420276Z_runtime_11/stderr.log",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164702420276Z_runtime_11/stdout.log",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164702761978Z_runtime_12/data.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164702761978Z_runtime_12/data.rds",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164702761978Z_runtime_12/draws.csv",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164702761978Z_runtime_12/execution.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164702761978Z_runtime_12/inits.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164702761978Z_runtime_12/inits.rds",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164702761978Z_runtime_12/invocation.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164702761978Z_runtime_12/runtime_result.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164702761978Z_runtime_12/samples.rds",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164702761978Z_runtime_12/stderr.log",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164702761978Z_runtime_12/stdout.log",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_correction01_wrapper/eforensics_archived_ast.R",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_correction01_wrapper/eforensics_installed_ast.R",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_correction01_wrapper/eforensics_main_par_archived_ast.R",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_correction01_wrapper/eforensics_main_par_installed_ast.R",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_correction01_wrapper/execution.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_correction01_wrapper/getRegMatrix_archived_ast.R",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_correction01_wrapper/getRegMatrix_installed_ast.R",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_correction01_wrapper/invocation.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_correction01_wrapper/repaired_math_checks.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_correction01_wrapper/stderr.log",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_correction01_wrapper/stdout.log",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_correction01_wrapper/wrapper_checks.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_diagnostic_helpers_selftest01/selftest_checks.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_supplement01/audit.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_supplement01/execution.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_supplement01/numeric_support.csv",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/attempt_supplement01/source_checks.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/corrections_01/amendment.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/corrections_01/freeze.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/corrections_01/run_repair.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/corrections_01/verify_repairs.R",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/final_checks/check_saved_draws.R",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/final_checks/diagnostic_helpers.R",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/final_checks/selftest.R",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/final_checks/verify_manifest.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/freeze_01/G3_static_contract.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/freeze_01/freeze.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/freeze_01/input_00_qbl_installed_3017de5.jags",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/freeze_01/input_01_benchmark_contract.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/freeze_01/input_02_ef_main_3017de5.R",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/freeze_01/input_03_mebane_2022_2026_gates.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/freeze_01/input_04_CLAUDE.md",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/freeze_01/input_05_dispatch.md",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/freeze_01/input_06_g3_dispatch_requirements.md",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/freeze_01/input_07_protocol_v2.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/preparation/checklist.md",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/preparation/protocol.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/preparation/qa_math.R",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/preparation/qa_runtime.R",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/preparation/qa_wrapper.R",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/preparation/run_qa.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/preparation_status.md",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/revision1_integrity/all_entries.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/revision1_integrity/declared_paths.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/revision1_integrity/historical_preservation.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/revision1_integrity/integrity.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/revision1_integrity/source_read_sites.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/supplement_01/audit.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/supplement_01/freeze.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/review/supplement_01/protocol.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/revision1/build_revision.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/revision1/candidate_manifest.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/revision1/implementation.md",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/revision1/old_code_mapping.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/revision1/recover_old_code.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/revision1/run.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/revision1/snapshots/R/lib/mebane_model.R",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/revision1/snapshots/root_candidate_old/tests/mebane/likelihood/g3_jags.R",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/revision1/snapshots/tests/mebane/likelihood/g3_deterministic.R",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/revision1/snapshots/tests/mebane/likelihood/g3_jags.R",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/revision1/snapshots/tests/mebane/likelihood/g3_source_contract.R",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/revision1/todo_evidence.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/revision2/build_candidate.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/revision2/conditional_comparison.csv",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/revision2/conditional_exact_states.csv",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/revision2/functionals_by_draw.csv",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/revision2/implementation.md",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/revision2/postprocess.log",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/revision2/postprocess_result.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/revision2/raw_chains.rds",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/revision2/replay.log",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/revision2/replay_plan.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/revision2/replay_vs_revision1.csv",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/revision2/run.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/revision2/sampling_metadata.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/revision2/snapshots/quality_reports/results/mebane_gates/coordination/2026-09-29_g3_runtime/draw_persistence_adjudication.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/revision2/snapshots/quality_reports/results/mebane_gates/coordination/2026-09-29_g3_runtime/draw_persistence_review.md",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/revision2/snapshots/tests/mebane/likelihood/g3_draw_postprocess.R",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/revision2/snapshots/tests/mebane/likelihood/g3_draw_replay.R",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/revision2/todo_evidence.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/run.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/snapshots/CLAUDE.md",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/snapshots/R/05_eforensics_umeforensics_qbl.R",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/snapshots/R/07_brasil_full_qbl.R",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/snapshots/quality_reports/results/mebane_gates/G0/round1/qbl_installed_3017de5.jags",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/snapshots/quality_reports/results/mebane_gates/G2/round2/benchmark_contract.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/snapshots/quality_reports/results/mebane_gates/G2/round2/sources/ef_main_3017de5.R",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/snapshots/quality_reports/results/mebane_gates/G2/round3/adjudication.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/snapshots/quality_reports/results/mebane_gates/G2/round3/candidate_manifest.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/snapshots/quality_reports/results/mebane_gates/G2/round3/review/review.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/snapshots/quality_reports/results/mebane_gates/coordination/2026-09-29_benchmark_round/g3_dispatch_requirements.md",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/snapshots/quality_reports/results/mebane_gates/coordination/2026-09-29_g3_runtime/dispatch.md",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/snapshots/scripts/mebane_gates.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/snapshots/tests/mebane/likelihood/test_ar02_interface.R",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/source_checks.csv",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/G3/round1/todo_evidence.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/coordination/2026-09-29_benchmark_round/g3_dispatch_requirements.md",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/coordination/2026-09-29_g3_runtime/dispatch.md",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/coordination/2026-09-29_g3_runtime/draw_persistence_adjudication.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:quality_reports/results/mebane_gates/coordination/2026-09-29_g3_runtime/draw_persistence_review.md",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:scripts/mebane_gates.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:tests/mebane/likelihood/g3_deterministic.R",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:tests/mebane/likelihood/g3_draw_postprocess.R",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:tests/mebane/likelihood/g3_draw_replay.R",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:tests/mebane/likelihood/g3_jags.R",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:tests/mebane/likelihood/g3_source_contract.R",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "preservation:tests/mebane/likelihood/test_ar02_interface.R",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "execution_source:tests/mebane/likelihood/g3_draw_postprocess.R",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "execution_source:tests/mebane/likelihood/g3_diagnostic_shape.R",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "library_unchanged",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "source_unchanged",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "raw_draws_unchanged",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "protocol_unchanged",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "old_reviews_not_overwritten",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "two_postprocessing_only_commands",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "no_MCMC_command_in_repair_trace",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "plan_before_every_test",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "predecessor_frozen_before_edit",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "repair_logs_retained",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "time_limits",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "QA_not_misclassified_as_executor_outputs",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "no_stale_active_result_pointers",
+      "pass": true,
+      "detail": null
+    }
+  ],
+  "failed": 0,
+  "current_revision3_repair_inputs_closed": true,
+  "closure_basis": "Full changed-source reads; canonical runtime code matches frozen execution_code_map; data RDS, metadata, prior summary, model library, protocol, regression plan, QA repair inputs, predecessor map and builder reads are all bound by verified hashes.",
+  "candidate_manifest_complete": false,
+  "historical_effective_code_missing": [
+    {
+      "attempt": "deterministic1",
+      "path": "tests/mebane/likelihood/g3_deterministic.R",
+      "sha256": "8b0012b3e3b54a3b759745a0c846f3c384fae9484266b3e6baf8886328969341"
+    },
+    {
+      "attempt": "deterministic1",
+      "path": "R/lib/mebane_model.R",
+      "sha256": "53b8672a2b840e1519a1ed2bd7a94c76321ee4b7c879d5a9f6f7ffd0f130c582"
+    },
+    {
+      "attempt": "deterministic2",
+      "path": "tests/mebane/likelihood/g3_deterministic.R",
+      "sha256": "86fab7d3bff353d08b12f80a8d1c9a2d1976eb2f8bc43a9dd9183df7a49e5c16"
+    },
+    {
+      "attempt": "deterministic2",
+      "path": "R/lib/mebane_model.R",
+      "sha256": "cded39d1bbf5cc22101ad8454d255a3016f21a263df91f76ec4592888d189136"
+    },
+    {
+      "attempt": "jags1",
+      "path": "tests/mebane/likelihood/g3_jags.R",
+      "sha256": "15b48452923289dcdea8fc1dc32192b1305c3f246dad554ccc885340be801a42"
+    },
+    {
+      "attempt": "jags2",
+      "path": "tests/mebane/likelihood/g3_jags.R",
+      "sha256": "19ed250a7c53f88b30ded695f55113a715c862c3b9bc07aa0917ef242007db3b"
+    },
+    {
+      "attempt": "jags4",
+      "path": "tests/mebane/likelihood/g3_jags.R",
+      "sha256": "6ecae09f28159803ec93a3da654b661a129a44da630acba17e853969c9549583"
+    }
+  ],
+  "historical_gap_count": 7,
+  "repair_commands": [
+    {
+      "event_id": "exec-979d9948-50d8-4330-a334-527e653bc671",
+      "command": "/bin/zsh -lc '/usr/bin/time -p timeout 120 Rscript --vanilla tests/mebane/likelihood/g3_diagnostic_shape.R > quality_reports/results/mebane_gates/G3/round1/revision3/shape_regression.log 2>&1'",
+      "exit_code": 0
+    },
+    {
+      "event_id": "exec-b3cb82f4-5621-4715-944c-67dacd310463",
+      "command": "/bin/zsh -lc '/usr/bin/time -p timeout 120 Rscript --vanilla tests/mebane/likelihood/g3_draw_postprocess.R > quality_reports/results/mebane_gates/G3/round1/revision3/postprocess.log 2>&1'",
+      "exit_code": 0
+    }
+  ],
+  "repair_time_seconds": 1.1300000000000001,
+  "round_time_seconds": 7.59,
+  "new_MCMC_observed": false,
+  "META_01_resolved_for_revision3": true,
+  "INPUT_01_resolved": false
+}

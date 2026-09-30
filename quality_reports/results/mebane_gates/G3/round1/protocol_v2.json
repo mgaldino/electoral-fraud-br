@@ -1,0 +1,28 @@
+{
+  "protocol_id": "G3-round1-pretest-v2",
+  "supersedes_for_confirmation": "protocol.json",
+  "reason": "User preflight found MC tolerance and diagnostics insufficient before test results",
+  "frozen_before_tests": true,
+  "v1_execution": "Only environment/version probes; no G3 test or JAGS chain run; no active process or test output",
+  "target": "Unmodified G0 qbl JAGS source, SHA-256 f8360126424b7a463f76a1c99efc89a8a5cb81339213bd4931559f14595fbab6; JAGS 4.3.2 required",
+  "scope": "n<=8; enumeration N=1,2,3; no national fitting; conditioned comparison is not an unconditioned full-model validation",
+  "seeds": {"generator": 31101, "jags_chains": [31102, 31103, 31104, 31105]},
+  "jags": {"chains": 4, "adapt": 200, "burnin": 500, "sample_iterations_per_chain": 2000, "thin": 1, "single_process_limit_seconds": 120},
+  "deterministic_cases": {"N": [1, 2, 3], "tau": 0.5, "nu": 0.5, "mus": [0.35, 0.35, 0.85, 0.85], "pi": [0.5714285714285714, 0.2857142857142857, 0.14285714285714285], "observations": "all integer A,W in 0:N, flag A+W>N independently", "invalid_probe": {"N": 1, "A": 1, "W": 0, "Z": 2, "R_iota_m": 1, "R_iota_s": 0, "tau": 0.5, "nu": 0.5}, "valid_control": {"N": 1, "A": 0, "W": 0, "Z": 1, "counts": [0, 0, 0, 0], "tau": 0.5, "nu": 0.5}},
+  "runtime_probes": ["observed valid control", "invalid active class 2 counts in data", "invalid inactive class 1 counts in data", "invalid active class 3 counts in data", "invalid inactive class 2 chi counts in data", "invalid counts in inits", "stochastic count initialization/update", "a,w missing", "a conditioned w missing", "a missing w conditioned"],
+  "generator": {"attempts": 32, "max_N": 3, "policy": "record every attempt, no clamp/redraw/truncation; explicit failure if invalid probability or physical support"},
+  "comparison": {
+    "case": "N=1,A=0,W=0; continuous effects, coefficients and pi auxiliaries fixed and labeled conditioned; exact posterior over Z and four counts",
+    "monitored_nodes": ["Z", "N.iota.m", "N.iota.s", "N.chi.m", "N.chi.s"],
+    "derived_targets": ["indicator_Z1", "indicator_Z2", "indicator_Z3", "M", "S", "margin_lower", "margin_upper"],
+    "fixed_continuous_targets": ["tau=0.5", "nu=0.5", "Dobs=1"],
+    "absolute_deterministic_tolerance": 1e-12,
+    "mc_mean_absolute_tolerance": "max(1e-3, 6*MCSE) per target",
+    "mcse_method": "per-chain non-overlapping batch means, batch size 50 for 2000 draws, 40 batches; pooled MCSE=sqrt(sum_c var(batch_means_c)/40)/4; independent chains",
+    "diagnostics": "posterior rank-normalized split Rhat <1.01 and bulk/tail ESS >=400 for every nonconstant monitored or derived target; constant targets checked analytically without diagnostics claim",
+    "missing_dependency": "inconclusive, no install",
+    "failure_policy": "retain output and failures; do not increase iterations/tolerances or select new cases"
+  },
+  "timing": {"each_test_process_seconds": 120, "total_compute_seconds": 720, "timeout_is_failure_not_retry_instruction": true},
+  "decision_rules": {"deterministic": "fail on mismatch above 1e-12", "generator": "if any failure or incomplete literal support, T1 not done/pass", "engine": "JAGS may remain literal software reference; no exact Stan equivalence claim", "gate": "executor supplies candidate only; independent review and coordination decide pass"}
+}

@@ -1,0 +1,15 @@
+During startup - Warning messages:
+1: Setting LC_CTYPE failed, using "C" 
+2: Setting LC_COLLATE failed, using "C" 
+3: Setting LC_TIME failed, using "C" 
+4: Setting LC_MESSAGES failed, using "C" 
+5: Setting LC_MONETARY failed, using "C" 
+R version 4.4.2 (2024-10-31) 
+rjags 4.17 
+runjags 2.2.2.5 
+eforensics 0.0.4 
+posterior 1.7.0 
+coda 0.19.4.1 
+jsonlite 2.0.0 
+JAGS 4.3.2 
+eforensics_sha 3017de537450f97a01872d0157462a68bea348ee 

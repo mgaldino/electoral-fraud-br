@@ -1,0 +1,9 @@
+Tracing function "run.jags" in package "namespace:runjags"
+fatal error: /Library/Developer/CommandLineTools/usr/bin/lipo: can't open input file: /opt/homebrew/libexec/jags-terminal (No such file or directory)
+fatal error: /Library/Developer/CommandLineTools/usr/bin/lipo: can't open input file: /opt/homebrew/libexec/jags-terminal (No such file or directory)
+fatal error: /Library/Developer/CommandLineTools/usr/bin/lipo: can't open input file: /opt/homebrew/libexec/jags-terminal (No such file or directory)
+fatal error: /Library/Developer/CommandLineTools/usr/bin/lipo: can't open input file: /opt/homebrew/libexec/jags-terminal (No such file or directory)
+fatal error: /Library/Developer/CommandLineTools/usr/bin/lipo: can't open input file: /opt/homebrew/libexec/jags-terminal (No such file or directory)
+fatal error: /Library/Developer/CommandLineTools/usr/bin/lipo: can't open input file: /opt/homebrew/libexec/jags-terminal (No such file or directory)
+Error: all(vapply(results, function(x) x$pass, logical(1))) is not TRUE
+Execution halted

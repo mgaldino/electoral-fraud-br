@@ -1,0 +1,15 @@
+{
+  "started": "2026-09-29T16:46:50.899169+00:00",
+  "command": [
+    "/usr/local/bin/Rscript",
+    "--vanilla",
+    "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/G3/round1/review/corrections_01/verify_repairs.R",
+    "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/G3/round1/review/attempt_correction01_wrapper"
+  ],
+  "timeout_seconds": 110,
+  "freeze": {
+    "path": "quality_reports/results/mebane_gates/G3/round1/review/corrections_01/freeze.json",
+    "bytes": 2208,
+    "sha256": "bf0b4d5f35d62b0f6fee56f3327efd680abb9021e1649b648d1d5c745afaebd6"
+  }
+}

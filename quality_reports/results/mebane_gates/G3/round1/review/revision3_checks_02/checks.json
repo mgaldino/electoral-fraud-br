@@ -1,0 +1,286 @@
+{
+  "checks": [
+    {
+      "id": "diagnostic_Z",
+      "pass": true,
+      "value": {}
+    },
+    {
+      "id": "function_Z",
+      "pass": true,
+      "value": {}
+    },
+    {
+      "id": "mean_MCSE_exact_Z",
+      "pass": true,
+      "value": {}
+    },
+    {
+      "id": "diagnostic_N.iota.m",
+      "pass": true,
+      "value": {}
+    },
+    {
+      "id": "function_N.iota.m",
+      "pass": true,
+      "value": {}
+    },
+    {
+      "id": "mean_MCSE_exact_N.iota.m",
+      "pass": true,
+      "value": {}
+    },
+    {
+      "id": "diagnostic_N.iota.s",
+      "pass": true,
+      "value": {}
+    },
+    {
+      "id": "function_N.iota.s",
+      "pass": true,
+      "value": {}
+    },
+    {
+      "id": "mean_MCSE_exact_N.iota.s",
+      "pass": true,
+      "value": {}
+    },
+    {
+      "id": "diagnostic_N.chi.m",
+      "pass": true,
+      "value": {}
+    },
+    {
+      "id": "function_N.chi.m",
+      "pass": true,
+      "value": {}
+    },
+    {
+      "id": "mean_MCSE_exact_N.chi.m",
+      "pass": true,
+      "value": {}
+    },
+    {
+      "id": "diagnostic_N.chi.s",
+      "pass": true,
+      "value": {}
+    },
+    {
+      "id": "function_N.chi.s",
+      "pass": true,
+      "value": {}
+    },
+    {
+      "id": "mean_MCSE_exact_N.chi.s",
+      "pass": true,
+      "value": {}
+    },
+    {
+      "id": "diagnostic_indicator_Z1",
+      "pass": true,
+      "value": {}
+    },
+    {
+      "id": "function_indicator_Z1",
+      "pass": true,
+      "value": {}
+    },
+    {
+      "id": "mean_MCSE_exact_indicator_Z1",
+      "pass": true,
+      "value": {}
+    },
+    {
+      "id": "diagnostic_indicator_Z2",
+      "pass": true,
+      "value": {}
+    },
+    {
+      "id": "function_indicator_Z2",
+      "pass": true,
+      "value": {}
+    },
+    {
+      "id": "mean_MCSE_exact_indicator_Z2",
+      "pass": true,
+      "value": {}
+    },
+    {
+      "id": "diagnostic_indicator_Z3",
+      "pass": true,
+      "value": {}
+    },
+    {
+      "id": "function_indicator_Z3",
+      "pass": true,
+      "value": {}
+    },
+    {
+      "id": "mean_MCSE_exact_indicator_Z3",
+      "pass": true,
+      "value": {}
+    },
+    {
+      "id": "diagnostic_M",
+      "pass": true,
+      "value": {}
+    },
+    {
+      "id": "function_M",
+      "pass": true,
+      "value": {}
+    },
+    {
+      "id": "mean_MCSE_exact_M",
+      "pass": true,
+      "value": {}
+    },
+    {
+      "id": "diagnostic_S",
+      "pass": true,
+      "value": {}
+    },
+    {
+      "id": "function_S",
+      "pass": true,
+      "value": {}
+    },
+    {
+      "id": "mean_MCSE_exact_S",
+      "pass": true,
+      "value": {}
+    },
+    {
+      "id": "diagnostic_margin_lower",
+      "pass": true,
+      "value": {}
+    },
+    {
+      "id": "function_margin_lower",
+      "pass": true,
+      "value": {}
+    },
+    {
+      "id": "mean_MCSE_exact_margin_lower",
+      "pass": true,
+      "value": {}
+    },
+    {
+      "id": "diagnostic_margin_upper",
+      "pass": true,
+      "value": {}
+    },
+    {
+      "id": "function_margin_upper",
+      "pass": true,
+      "value": {}
+    },
+    {
+      "id": "mean_MCSE_exact_margin_upper",
+      "pass": true,
+      "value": {}
+    },
+    {
+      "id": "prior_non_diagnostic_fields_unchanged",
+      "pass": true,
+      "value": {}
+    },
+    {
+      "id": "mean_pass_preserved",
+      "pass": true,
+      "value": {}
+    },
+    {
+      "id": "nine_nonconstant_tail_NA",
+      "pass": true,
+      "value": {}
+    },
+    {
+      "id": "nine_nonconstant_diagnostic_failures",
+      "pass": true,
+      "value": {}
+    },
+    {
+      "id": "S_exact_constant_preserved",
+      "pass": true,
+      "value": {}
+    },
+    {
+      "id": "reexecution_byte_identity_conditional_comparison.csv",
+      "pass": true,
+      "value": {}
+    },
+    {
+      "id": "reexecution_byte_identity_conditional_exact_states.csv",
+      "pass": true,
+      "value": {}
+    },
+    {
+      "id": "reexecution_byte_identity_diagnostic_comparison_vs_revision2.csv",
+      "pass": true,
+      "value": {}
+    },
+    {
+      "id": "reexecution_byte_identity_functionals_by_draw.csv",
+      "pass": true,
+      "value": {}
+    },
+    {
+      "id": "reexecution_byte_identity_postprocess_result.json",
+      "pass": true,
+      "value": {}
+    },
+    {
+      "id": "revision2_byte_identity_functionals_by_draw.csv",
+      "pass": true,
+      "value": {}
+    },
+    {
+      "id": "revision2_byte_identity_conditional_exact_states.csv",
+      "pass": true,
+      "value": {}
+    },
+    {
+      "id": "QA_adversarial_chain_fixture",
+      "pass": true,
+      "value": {}
+    },
+    {
+      "id": "reject_array",
+      "pass": true,
+      "value": {}
+    },
+    {
+      "id": "reject_pooled",
+      "pass": true,
+      "value": {}
+    },
+    {
+      "id": "reject_transpose",
+      "pass": true,
+      "value": {}
+    },
+    {
+      "id": "candidate_deterministic_fixture",
+      "pass": true,
+      "value": {}
+    },
+    {
+      "id": "candidate_regression_numbers",
+      "pass": true,
+      "value": {}
+    },
+    {
+      "id": "candidate_regression_large_gap",
+      "pass": true,
+      "value": {}
+    }
+  ],
+  "total": 55,
+  "failed": 0,
+  "no_MCMC_run": true,
+  "repair_resolved": true,
+  "nine_tail_NA_retained": true,
+  "frozen_criterion_satisfied": false,
+  "production_validated": false
+}

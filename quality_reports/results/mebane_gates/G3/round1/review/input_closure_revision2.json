@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.0",
+  "gate_id": "G3",
+  "candidate_revision": "revision2",
+  "candidate_manifest_sha256": "de779221e40964b9729bdd928a814e7e7dfd9738df866b91f6ee97307a14bd0f",
+  "declared_entries_verified": 321,
+  "declared_bytes_verified": 2023862,
+  "declared_path_errors": [],
+  "current_revision2_scientific_inputs_closed": true,
+  "all_historical_execution_inputs_closed_in_candidate": false,
+  "manifest_complete": false,
+  "closure_definition": "Byte inventory plus actual runtime read sites and historical command-to-source identity; a declared file list alone is insufficient.",
+  "read_site_groups": [
+    {
+      "code": ["g3_deterministic.R", "g3_jags.R", "g3_source_contract.R"],
+      "actual_inputs": ["R/lib/mebane_model.R", "G0/round1/qbl_installed_3017de5.jags", "protocol_v2.json"],
+      "resolution": "Final effective scientific code is preserved in revision1 snapshots and included in revision2. Data and init literals are in the source; protocol is the preregistered specification. Earlier executed versions are the separate historical gap below."
+    },
+    {
+      "code": ["test_ar02_interface.R"],
+      "actual_inputs": ["G2/round2/sources/ef_main_3017de5.R", "R/05_eforensics_umeforensics_qbl.R", "R/07_brasil_full_qbl.R", "installed eforensics and runjags wrapper boundary"],
+      "resolution": "Archived code and caller snapshots are present. Independent QA intercepted the actual installed wrapper at runjags::run.jags, checked asymmetric positive/negative sentinels, and compared archived/installed function bodies. Package runtime versions are recorded; installed binaries are environment dependencies, not newly generated candidate outputs."
+    },
+    {
+      "code": ["revision2/snapshots/tests/mebane/likelihood/g3_draw_replay.R"],
+      "actual_inputs": ["literal G0 source", "protocol_v2.json", "revision2/replay_plan.json", "data/inits/seeds encoded in replay script"],
+      "resolution": "Source and protocol hashes, all data/inits, 31102:31105, 200/500/2000 schedule and four chains match the saved RDS and metadata. Raw event chronology has one authorized replay and a separate reopened-RDS postprocessor."
+    },
+    {
+      "code": ["revision2/snapshots/tests/mebane/likelihood/g3_draw_postprocess.R"],
+      "actual_inputs": ["R/lib/mebane_model.R", "revision2/raw_chains.rds", "revision2/sampling_metadata.json", "jags_attempt5/conditional_comparison.csv"],
+      "resolution": "All bytes are present and hashed. Independent QA recomputed every one of 8000 joint rows, all 48 exact states and the frozen MCSE. The diagnostic shape defect affects outputs, not discovery of these inputs."
+    },
+    {
+      "code": ["build_candidate.py", "revision1/build_revision.py", "revision1/recover_old_code.py", "revision2/build_candidate.py"],
+      "actual_inputs": ["static G3 contract and consumed ledger metadata", "current G2 round3 approval records", "prior manifests and runs", "test logs", "draw persistence adjudication and review", "revision2/postprocess_result.json", "recursive round1 files"],
+      "resolution": "Consumed static metadata is preserved separately rather than binding future ledger state. G2 dependency hashes match current approval. All declared files and prior manifest bytes are verified. Recursive collection incorrectly labels 198 QA paths as executor outputs and does not close missing historical source versions."
+    }
+  ],
+  "historical_preservation": {
+    "original_manifest_sha256": "46f7e5d91ccd381767a2caa28a3757729779b51579b9ac6c235ba3c677b278be",
+    "revision1_manifest_sha256": "4b84fe6996a72321225fd3e5f4713439b77b74fc8a7f039d09e3dcaf7beb72a9",
+    "all_declared_old_bytes_available": true,
+    "old_canonical_g3_jags_recovered_by_hash": true,
+    "logs_retained": true,
+    "missing_effective_code_versions": [
+      {"attempt": "deterministic1", "path": "tests/mebane/likelihood/g3_deterministic.R", "sha256": "8b0012b3e3b54a3b759745a0c846f3c384fae9484266b3e6baf8886328969341"},
+      {"attempt": "deterministic1", "path": "R/lib/mebane_model.R", "sha256": "53b8672a2b840e1519a1ed2bd7a94c76321ee4b7c879d5a9f6f7ffd0f130c582"},
+      {"attempt": "deterministic2", "path": "tests/mebane/likelihood/g3_deterministic.R", "sha256": "86fab7d3bff353d08b12f80a8d1c9a2d1976eb2f8bc43a9dd9183df7a49e5c16"},
+      {"attempt": "deterministic2", "path": "R/lib/mebane_model.R", "sha256": "cded39d1bbf5cc22101ad8454d255a3016f21a263df91f76ec4592888d189136"},
+      {"attempt": "jags1", "path": "tests/mebane/likelihood/g3_jags.R", "sha256": "15b48452923289dcdea8fc1dc32192b1305c3f246dad554ccc885340be801a42"},
+      {"attempt": "jags2", "path": "tests/mebane/likelihood/g3_jags.R", "sha256": "19ed250a7c53f88b30ded695f55113a715c862c3b9bc07aa0917ef242007db3b"},
+      {"attempt": "jags4", "path": "tests/mebane/likelihood/g3_jags.R", "sha256": "6ecae09f28159803ec93a3da654b661a129a44da630acba17e853969c9549583"}
+    ],
+    "evidence": ["history_audit.json", "executor_event_sequence.json", "revision2_integrity/historical_preservation.json"],
+    "limit": "Missing versions can be reconstructed from raw tool file-change events saved by QA, but are not full-byte inputs in the frozen 321-entry candidate. QA did not restore or modify canonical files."
+  },
+  "runtime_environment": {"R": "4.4.2", "JAGS": "4.3.2", "rjags": "4.17", "posterior": "1.7.0", "coda": "0.19.4.1", "jsonlite": "2.0.0", "eforensics": "0.0.4", "eforensics_RemoteSha": "3017de537450f97a01872d0157462a68bea348ee"},
+  "evidence_scope": "Manual source read sites were closed using source code and saved runtime artifacts, not implementer conclusions. This attestation applies to revision2 only."
+}

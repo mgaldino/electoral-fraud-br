@@ -1,0 +1,80 @@
+[
+  {
+    "code_path": "quality_reports/results/mebane_gates/G3/round1/revision3/code_snapshots/tests/mebane/likelihood/g3_draw_postprocess.R",
+    "line": 5,
+    "text": "source(\"R/lib/mebane_model.R\")",
+    "requires_manual_closure": true
+  },
+  {
+    "code_path": "quality_reports/results/mebane_gates/G3/round1/revision3/code_snapshots/tests/mebane/likelihood/g3_draw_postprocess.R",
+    "line": 24,
+    "text": "sha <- function(path) strsplit(system2(\"shasum\", c(\"-a\", \"256\", path),",
+    "requires_manual_closure": true
+  },
+  {
+    "code_path": "quality_reports/results/mebane_gates/G3/round1/revision3/code_snapshots/tests/mebane/likelihood/g3_draw_postprocess.R",
+    "line": 28,
+    "text": "payload <- readRDS(rds_path)",
+    "requires_manual_closure": true
+  },
+  {
+    "code_path": "quality_reports/results/mebane_gates/G3/round1/revision3/code_snapshots/tests/mebane/likelihood/g3_draw_postprocess.R",
+    "line": 115,
+    "text": "old <- read.csv(old_path)",
+    "requires_manual_closure": true
+  },
+  {
+    "code_path": "quality_reports/results/mebane_gates/G3/round1/revision3/prepare_inputs.py",
+    "line": 11,
+    "text": "sha = lambda p: hashlib.sha256(p.read_bytes()).hexdigest()",
+    "requires_manual_closure": true
+  },
+  {
+    "code_path": "quality_reports/results/mebane_gates/G3/round1/revision3/prepare_inputs.py",
+    "line": 20,
+    "text": "manifest = json.loads((PRIOR / \"candidate_manifest.json\").read_text())",
+    "requires_manual_closure": true
+  },
+  {
+    "code_path": "quality_reports/results/mebane_gates/G3/round1/revision3/prepare_inputs.py",
+    "line": 55,
+    "text": "adjud = json.loads((ROOT / inputs[1]).read_text())",
+    "requires_manual_closure": true
+  },
+  {
+    "code_path": "quality_reports/results/mebane_gates/G3/round1/revision3/build_candidate.py",
+    "line": 17,
+    "text": "sha = lambda p: hashlib.sha256(p.read_bytes()).hexdigest()",
+    "requires_manual_closure": true
+  },
+  {
+    "code_path": "quality_reports/results/mebane_gates/G3/round1/revision3/build_candidate.py",
+    "line": 22,
+    "text": "return json.loads(path.read_text(encoding=\"utf-8\"))",
+    "requires_manual_closure": true
+  },
+  {
+    "code_path": "quality_reports/results/mebane_gates/G3/round1/revision3/build_candidate.py",
+    "line": 31,
+    "text": "with path.open() as stream:",
+    "requires_manual_closure": true
+  },
+  {
+    "code_path": "quality_reports/results/mebane_gates/G3/round1/revision3/build_candidate.py",
+    "line": 113,
+    "text": "diff = \"\".join(difflib.unified_diff(before.read_text().splitlines(keepends=True),",
+    "requires_manual_closure": true
+  },
+  {
+    "code_path": "quality_reports/results/mebane_gates/G3/round1/revision3/build_candidate.py",
+    "line": 114,
+    "text": "after.read_text().splitlines(keepends=True),",
+    "requires_manual_closure": true
+  },
+  {
+    "code_path": "quality_reports/results/mebane_gates/G3/round1/revision3/build_candidate.py",
+    "line": 126,
+    "text": "match = re.search(r\"^real ([0-9.]+)$\", (HERE / log).read_text(), re.MULTILINE)",
+    "requires_manual_closure": true
+  }
+]

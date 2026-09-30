@@ -1,0 +1,27 @@
+{
+  "id": "G3-QA-R3-DIAGNOSTIC-ONLY",
+  "scope": "Verify the authorized postprocessing repair, without expanding scientific acceptance",
+  "created_before_reading_revision3_results": true,
+  "raw_RDS_required_sha256": "66ddb0aaef7448b25e817e25c931d5608ee9c7141165842613925e9e145baf6d",
+  "predecessor_manifest_required_sha256": "de779221e40964b9729bdd928a814e7e7dfd9738df866b91f6ee97307a14bd0f",
+  "protocol_v2_required_sha256": "b7b54a5b6606ba45a662f8e94ff0438336525fe63733f75f70a2ffa26f77186f",
+  "new_MCMC_permitted": false,
+  "checks": [
+    "Read all frozen changed code and the source diff, then verify every manifest byte and actual input closure",
+    "Keep all revision2 and revision1 declared bytes available by original path or explicit hash-identical frozen mapping",
+    "Recompute every target from the same four-chain RDS; use ordinary numeric 2000 x 4 matrices",
+    "Compare means, MCSE and exact values to the independent revision2 reference without changing the batch-size-50 rule",
+    "Preserve NA locations and analytic S constant status; nine undefined tail ESS cannot be promoted to passed diagnostics",
+    "Verify the deterministic regression detects loss of chain identities and does not run MCMC",
+    "Check F1/F2, Dobs incompatibility and no-production status remain explicit",
+    "Track INPUT-01 and META-01 separately; do not assert manifest_complete merely because all declared hashes match"
+  ],
+  "numeric_reproduction_tolerance": "1e-12 absolute for means/MCSE/exact functionals; 1e-8 absolute for serialized Rhat/ESS; these are reproduction checks, not new scientific thresholds",
+  "adversarial_fixture": {
+    "code": "u=sin(seq_len(2000)); x=cbind(u-4,u+4,u-4,u+4)",
+    "expected_correct_dimensions": [2000, 4],
+    "expected_wrong_dimensions": [8000, 1],
+    "deterministic_detection": "correct four-chain Rhat >1.1 and incorrectly pooled Rhat <1.05",
+    "scope": "unit test of chain-shape preservation, not a new sampling convergence criterion"
+  }
+}

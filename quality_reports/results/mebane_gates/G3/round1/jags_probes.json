@@ -1,0 +1,72 @@
+[
+  {
+    "id": "valid_control_observed",
+    "outcome": "error",
+    "stage": "update",
+    "message": "'update' is not an exported object from 'namespace:rjags'",
+    "seconds": 0.0125
+  },
+  {
+    "id": "invalid_active_class2_data",
+    "outcome": "error",
+    "stage": "compile",
+    "message": "Error in node w\nInvalid parent values\n\n",
+    "seconds": 0.0039
+  },
+  {
+    "id": "invalid_inactive_class1_data",
+    "outcome": "error",
+    "stage": "update",
+    "message": "'update' is not an exported object from 'namespace:rjags'",
+    "seconds": 0.0042
+  },
+  {
+    "id": "invalid_active_class3_data",
+    "outcome": "error",
+    "stage": "compile",
+    "message": "Error in node w\nInvalid parent values\n\n",
+    "seconds": 0.0036
+  },
+  {
+    "id": "invalid_inactive_chi_class2_data",
+    "outcome": "error",
+    "stage": "update",
+    "message": "'update' is not an exported object from 'namespace:rjags'",
+    "seconds": 0.004
+  },
+  {
+    "id": "invalid_active_class2_init",
+    "outcome": "error",
+    "stage": "compile",
+    "message": "Error in node w\nInvalid parent values\n\n",
+    "seconds": 0.0036
+  },
+  {
+    "id": "stochastic_count_update",
+    "outcome": "error",
+    "stage": "update",
+    "message": "'update' is not an exported object from 'namespace:rjags'",
+    "seconds": 0.0038
+  },
+  {
+    "id": "a_w_missing",
+    "outcome": "error",
+    "stage": "update",
+    "message": "'update' is not an exported object from 'namespace:rjags'",
+    "seconds": 0.004
+  },
+  {
+    "id": "a_conditioned_w_missing",
+    "outcome": "error",
+    "stage": "update",
+    "message": "'update' is not an exported object from 'namespace:rjags'",
+    "seconds": 0.0038
+  },
+  {
+    "id": "a_missing_w_conditioned",
+    "outcome": "error",
+    "stage": "update",
+    "message": "'update' is not an exported object from 'namespace:rjags'",
+    "seconds": 0.0039
+  }
+]

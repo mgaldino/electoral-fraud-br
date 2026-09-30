@@ -1,0 +1,11 @@
+{
+  "gate_id": "G3",
+  "round": "round1",
+  "candidate_only": true,
+  "todos": [
+    {"id": "G3-T1", "status": "inconclusive", "basis": "executed_now", "evidence": ["deterministic_attempt3/generation_attempts.csv", "deterministic_attempt3/counterexample.csv", "jags_attempt3/jags_probes.json"], "reason": "32 recorded attempts do not establish a complete generator; positive-mass invalid parent remains"},
+    {"id": "G3-T2", "status": "partial", "basis": "executed_now", "evidence": ["deterministic_attempt3/enumeration.csv", "deterministic_attempt3/mass.csv", "deterministic_attempt3/normalization.csv", "jags_attempt3/jags_probes.json"], "reason": "diagnostic kernel and conditioned cases checked; normalized likelihood is a distinct target"},
+    {"id": "G3-T3", "status": "partial", "basis": "executed_now_and_inspected", "evidence": ["source_checks.csv", "g3_interface_attempt1.log", "deterministic_attempt3/joint_functionals.csv", "jags_attempt3/margin_feasibility.json"], "reason": "literal priors/interface and algebra checked; physical margin/source capacity not certified"},
+    {"id": "G3-T4", "status": "inconclusive", "basis": "executed_now", "evidence": ["jags_attempt3/conditional_exact_states.csv", "jags_attempt3/conditional_comparison.csv", "jags_attempt3/comparison_result.json"], "reason": "means within preregistered MCSE tolerance, but tail ESS unavailable for discrete targets; no exact Stan port"}
+  ]
+}

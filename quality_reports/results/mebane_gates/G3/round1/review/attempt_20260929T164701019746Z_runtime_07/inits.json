@@ -1,0 +1,5 @@
+{
+  ".RNG.name": "base::Wichmann-Hill",
+  ".RNG.seed": 290937,
+  "N.iota.m": 0
+}

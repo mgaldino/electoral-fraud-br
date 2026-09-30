@@ -1,0 +1,22 @@
+{
+  "repair_id": "G3-COORD-DIAG-01",
+  "frozen_before_checks": true,
+  "prior_manifest_sha256": "de779221e40964b9729bdd928a814e7e7dfd9738df866b91f6ee97307a14bd0f",
+  "raw_rds_sha256": "66ddb0aaef7448b25e817e25c931d5608ee9c7141165842613925e9e145baf6d",
+  "new_mcmc_runs": 0,
+  "change": "Pass ordinary numeric 2000 by 4 matrices directly to posterior scalar diagnostics, with dimension assertions",
+  "regression": {
+    "iterations": 2000,
+    "chain_means": [-2, 2, -2, 2],
+    "wave": "0.01*sin(2*pi*i/25)+0.003*cos(2*pi*i/31), i=1..2000",
+    "correct_rhat_min_exclusive": 1.1,
+    "incorrect_pooled_rhat_max_exclusive": 1.01,
+    "rhat_gap_min_exclusive": 0.1,
+    "direct_function_equality_tolerance": 1e-12,
+    "reject_inputs": ["draws_array 2000x4x1", "pooled matrix 8000x1", "transposed matrix 4x2000"]
+  },
+  "comparison": "Compare corrected diagnostics to revision2 and QA counterexample; means, MCSE, tolerances and draws must remain unchanged within 1e-12",
+  "scientific_criteria": "Existing protocol_v2 without changes; tail ESS NA still does not pass",
+  "process_limit_seconds": 120,
+  "candidate_status": "inconclusive"
+}

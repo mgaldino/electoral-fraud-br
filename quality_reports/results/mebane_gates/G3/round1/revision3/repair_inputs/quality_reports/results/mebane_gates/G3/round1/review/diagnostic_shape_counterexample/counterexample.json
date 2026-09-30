@@ -1,0 +1,97 @@
+{
+  "shapes": {
+    "Z": {
+      "matrix_dim": [2000, 4],
+      "draws_array_dim": [2000, 4, 1],
+      "coerced_array_dim": [8000, 1],
+      "correct_split_dim": [1000, 8],
+      "candidate_split_dim": [4000, 2]
+    },
+    "N.iota.m": {
+      "matrix_dim": [2000, 4],
+      "draws_array_dim": [2000, 4, 1],
+      "coerced_array_dim": [8000, 1],
+      "correct_split_dim": [1000, 8],
+      "candidate_split_dim": [4000, 2]
+    },
+    "N.iota.s": {
+      "matrix_dim": [2000, 4],
+      "draws_array_dim": [2000, 4, 1],
+      "coerced_array_dim": [8000, 1],
+      "correct_split_dim": [1000, 8],
+      "candidate_split_dim": [4000, 2]
+    },
+    "N.chi.m": {
+      "matrix_dim": [2000, 4],
+      "draws_array_dim": [2000, 4, 1],
+      "coerced_array_dim": [8000, 1],
+      "correct_split_dim": [1000, 8],
+      "candidate_split_dim": [4000, 2]
+    },
+    "N.chi.s": {
+      "matrix_dim": [2000, 4],
+      "draws_array_dim": [2000, 4, 1],
+      "coerced_array_dim": [8000, 1],
+      "correct_split_dim": [1000, 8],
+      "candidate_split_dim": [4000, 2]
+    },
+    "indicator_Z1": {
+      "matrix_dim": [2000, 4],
+      "draws_array_dim": [2000, 4, 1],
+      "coerced_array_dim": [8000, 1],
+      "correct_split_dim": [1000, 8],
+      "candidate_split_dim": [4000, 2]
+    },
+    "indicator_Z2": {
+      "matrix_dim": [2000, 4],
+      "draws_array_dim": [2000, 4, 1],
+      "coerced_array_dim": [8000, 1],
+      "correct_split_dim": [1000, 8],
+      "candidate_split_dim": [4000, 2]
+    },
+    "indicator_Z3": {
+      "matrix_dim": [2000, 4],
+      "draws_array_dim": [2000, 4, 1],
+      "coerced_array_dim": [8000, 1],
+      "correct_split_dim": [1000, 8],
+      "candidate_split_dim": [4000, 2]
+    },
+    "M": {
+      "matrix_dim": [2000, 4],
+      "draws_array_dim": [2000, 4, 1],
+      "coerced_array_dim": [8000, 1],
+      "correct_split_dim": [1000, 8],
+      "candidate_split_dim": [4000, 2]
+    },
+    "S": {
+      "matrix_dim": [2000, 4],
+      "draws_array_dim": [2000, 4, 1],
+      "coerced_array_dim": [8000, 1],
+      "correct_split_dim": [1000, 8],
+      "candidate_split_dim": [4000, 2]
+    },
+    "margin_lower": {
+      "matrix_dim": [2000, 4],
+      "draws_array_dim": [2000, 4, 1],
+      "coerced_array_dim": [8000, 1],
+      "correct_split_dim": [1000, 8],
+      "candidate_split_dim": [4000, 2]
+    },
+    "margin_upper": {
+      "matrix_dim": [2000, 4],
+      "draws_array_dim": [2000, 4, 1],
+      "coerced_array_dim": [8000, 1],
+      "correct_split_dim": [1000, 8],
+      "candidate_split_dim": [4000, 2]
+    }
+  },
+  "all_published_diagnostics_match_pooled": true,
+  "all_correct_rhat_below_1_01": true,
+  "all_correct_bulk_above_400": true,
+  "correct_tail_NA": 9,
+  "all_NA_have_constant_tail_indicator": true,
+  "threshold_not_relaxed": true,
+  "no_new_sampling": true,
+  "finding": "rhat/ess defaults call as.matrix on draws_array, collapsing four chains into one before splitting",
+  "qa_note": "Structural indicator constancy replaces equality-to-one floating mass in explanatory flags only; candidate data and criteria unchanged"
+}

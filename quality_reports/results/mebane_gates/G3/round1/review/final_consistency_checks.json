@@ -1,0 +1,15 @@
+{
+  "status": "pass_consistency_only",
+  "candidate_manifest_sha256": "63855471a88dbfc3840b1172aef71118f7cffbdfe425e0241f1d689bf5e67966",
+  "review_sha256": "c5fee3d48a7d23615bde07e866622cbea26964693ea40738e8aeb0dfe5c72955",
+  "review_status": "inconclusive",
+  "candidate_entries_rehashed": 350,
+  "numeric_checks": 55,
+  "documentary_checks": 338,
+  "manifest_complete": false,
+  "production_validated": false,
+  "open_findings": [
+    "G3-QA-R2-INPUT-01"
+  ],
+  "no_files_changed_outside_review": true
+}

@@ -1,0 +1,71 @@
+{
+  "protocol_id": "G3-R1-QA-FIDELIDADE-pre-candidate-v1",
+  "reviewer_id": "01a0ee05-aeaf-7492-a8ea-fa731dd6214a",
+  "goal_thread_id": "01a0ee05-aeaf-7492-a8ea-fa731dd6214a",
+  "candidate_received": false,
+  "candidate_manifest_sha256": null,
+  "source_sha256": "f8360126424b7a463f76a1c99efc89a8a5cb81339213bd4931559f14595fbab6",
+  "benchmark_contract_sha256": "63b61fb0594d0302a03d999bcff6c62967b6e999f37b4c9a8821f0f8e9ed18d2",
+  "limits": {"process_seconds": 110, "cumulative_compute_seconds": 720, "max_units": 8},
+  "tolerances": {"absolute": 1e-12, "relative": 1e-10, "probability_support": "strict closed [0,1], no clipping", "runtime_prediction": "record observed semantics; no predeclared error text assumed"},
+  "math": {
+    "N": [1,2,3],
+    "parameter_sets": [
+      {"tau": 0.5, "nu": 0.5, "q": [0.35,0.35,0.85,0.85], "pi": [0.5,0.2,0.3]},
+      {"tau": 0.2, "nu": 0.7, "q": [0.1,0.6,0.75,0.95], "pi": [0.6,0.3,0.1]},
+      {"tau": 0.5, "nu": 0.5, "q": [0.35,0.35,0.85,0.85], "pi": [0.5714285714285714,0.2857142857142857,0.14285714285714285]}
+    ],
+    "enumeration": "all (A,W), Z and four independent binomial counts; invalid pW zeroed only for explicitly diagnostic kernel; preserve physical-invalid mass separately",
+    "comparisons": ["literal weighted versus affine expression", "full four-count sum versus active-pair sum", "class marginals and joint M,S moments", "same Z joint likelihood versus independent response mixtures negative control", "parameter-dependent diagnostic mass", "class1 N=2,A=1,W=2 mass=1/32"],
+    "functionals": "two equally weighted joint draws; N=(2,2), tau=nu=0.5, counts=(1,1,2,2), Z=(1,1) then (2,2); aggregate first; retain ties; margin Dobs=1 and fixed runner-up capacity=0 for explicit infeasibility flag",
+    "prior_checks": "source-bound six Exp(5) variances, six effects, alpha+b0, precision 10000 for b0; integrate partial-order simplex density pi1^-3 using B/H,C/H coordinates"
+  },
+  "wrapper": {
+    "sentinel": {"N": [3,3], "a": [0,2], "w": [2,1]},
+    "interception": "actual installed public wrapper, trace runjags::run.jags on entry and stop before sampling; preserve captured data and model",
+    "cases": ["formula1=w~1/formula2=a~1", "swapped negative control", "asymmetric covariates: w~xw, a~xa"],
+    "direct_list": "independent direct list compared to wrapper payload; not a test of unfrozen candidate adapter"
+  },
+  "runtime": {
+    "engine": "JAGS 4.3.2 via installed rjags",
+    "model": "byte-identical integral source; never auxiliary source",
+    "base_conditioning": "N=1,a=1,w=0; all six fixed b0=0, alpha=0, variance=0.2, all six observation effects=0, pi auxiliary=(1,0.4,0.6); counts=(iota.m=0,iota.s=0,chi.m=0,chi.s=0), Z=1",
+    "conditioning_notice": "nodes supplied in data are fixed/conditioned, not initial values; full graph is retained but these are not samples from the unrestricted hierarchy",
+    "seed_base": 290930,
+    "chains": 1,
+    "adapt": 0,
+    "updates": 64,
+    "thin": 1,
+    "mc_comparison": "none; only support/phase probes, no convergence or inferential pass",
+    "cases": [
+      {"id": "valid_control", "Z": 1},
+      {"id": "inactive_iota_invalid", "Z": 1, "iota_m": 1},
+      {"id": "inactive_chi_invalid", "Z": 2, "chi_m": 1},
+      {"id": "active_iota_invalid_data", "Z": 2, "iota_m": 1},
+      {"id": "active_chi_invalid_data", "Z": 3, "chi_m": 1},
+      {"id": "active_iota_invalid_init", "Z": 2, "free": "N.iota.m", "init": 1},
+      {"id": "active_iota_updates", "Z": 2, "free": "N.iota.m", "init": 0},
+      {"id": "inactive_four_counts_updates", "Z": 1, "free": "all_counts", "init": 0},
+      {"id": "latent_class_updates", "Z": 1, "iota_m": 1, "chi_m": 1, "free": "Z", "init": 1},
+      {"id": "class1_physical_invalid_observation", "N": 2, "a": 1, "w": 2, "Z": 1},
+      {"id": "missing_w_active_invalid", "Z": 2, "iota_m": 1, "omit": "w"},
+      {"id": "missing_a_w_generation", "Z": 2, "iota_m": 1, "omit": ["a","w"]}
+    ]
+  },
+  "decision_rules": {
+    "pass": "only after frozen candidate, real input closure, independent checks and all static G3 requirements satisfied",
+    "changes_requested": "candidate implementation/evidence has a material repairable defect or overclaim",
+    "inconclusive": "target support or unavailable comparison prevents validation without changing G2",
+    "preparation_only": "no final gate decision, no manifest_complete for unseen candidate, no alternate candidate"
+  },
+  "candidate_v2_review_plan": {
+    "read_before_local_freeze": true,
+    "not_candidate_evidence": true,
+    "MCSE": "recalculate from actual chain-preserving draws for all four counts, Z indicators and each functional; equal-length four-chain formula sqrt(sum(var(batch_means)/40))/4 is algebraically correct only with valid batch variance and independent chains",
+    "MCSE_sensitivity": "inspect batch-means autocorrelation and independent batch sizes 25/50/100, not a replacement or relaxation of frozen executor criterion",
+    "constant_targets": "empirical zero variance alone is insufficient; verify exact support variance is zero before exempting diagnostics",
+    "diagnostics": "recompute posterior rank split Rhat and bulk/tail ESS on each nonconstant monitored/derived target, not only pi or class labels",
+    "chronology": "verify v1 preserved, v2 bytes and freeze precede matching seed-specific output, no live-process restart, all failed attempts retained; coordinator preflight is not user request",
+    "margin": "Dobs=1 for N=1,A=0,W=0 is only an algebraic offset; fixed-runner-up physical compatibility and capacity must be flagged"
+  }
+}

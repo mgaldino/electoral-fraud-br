@@ -1,0 +1,13 @@
+{
+  "gate_id": "G3",
+  "round": "round1",
+  "revision": "revision3",
+  "candidate_only": true,
+  "todos": [
+    {"id": "G3-T1", "status": "inconclusive", "basis": "inherited", "evidence": ["../deterministic_attempt3/generation_attempts.csv", "../deterministic_attempt3/counterexample.csv"], "reason": "Literal generator and F1/F2 unchanged"},
+    {"id": "G3-T2", "status": "partial", "basis": "inherited", "evidence": ["../deterministic_attempt3/enumeration.csv", "../deterministic_attempt3/mass.csv"], "reason": "Kernel results unchanged"},
+    {"id": "G3-T3", "status": "partial", "basis": "postprocessed_existing_draws", "evidence": ["postprocess/functionals_by_draw.csv", "repair_validation.json"], "reason": "Joint functionals preserved; physical margin not validated"},
+    {"id": "G3-T4", "status": "inconclusive", "basis": "postprocessed_existing_draws_and_deterministic_regression", "evidence": ["shape_regression/result.json", "postprocess/conditional_comparison.csv", "postprocess/diagnostic_comparison_vs_revision2.csv", "postprocess/postprocess_result.json", "repair_validation.json"], "reason": "Chain dimensions repaired; remaining tail ESS NA does not pass unchanged criteria"}
+  ],
+  "gate_approved": false
+}

@@ -1,0 +1,70 @@
+{
+  "candidate_manifest_sha256": "63855471a88dbfc3840b1172aef71118f7cffbdfe425e0241f1d689bf5e67966",
+  "gate_id": "G3",
+  "round": "round1",
+  "reviewer_id": "01a0ee05-aeaf-7492-a8ea-fa731dd6214a",
+  "executor_id": "01a0ee04-c901-7831-8ac6-0160da2e3883",
+  "distinct_id": true,
+  "entries": 350,
+  "total_bytes": 2810748,
+  "entry_errors": [],
+  "headers": [
+    {
+      "artifact": "manifest",
+      "valid": true,
+      "gate_id": "G3",
+      "round": "round1",
+      "contract": "1b26bbed0577e159a57af93567f14d38d511ea7f26216ca6d5aba22e56a2dacf"
+    },
+    {
+      "artifact": "run",
+      "valid": true,
+      "gate_id": "G3",
+      "round": "round1",
+      "contract": "1b26bbed0577e159a57af93567f14d38d511ea7f26216ca6d5aba22e56a2dacf"
+    },
+    {
+      "artifact": "run_in_manifest",
+      "valid": true
+    }
+  ],
+  "dependencies": [
+    {
+      "gate": "G2",
+      "field": "candidate_manifest",
+      "path": "quality_reports/results/mebane_gates/G2/round3/candidate_manifest.json",
+      "actual_sha256": "2ffd63203a6af407c5f17c708ce2c42120fef0dc9600e3585f83be6e48313173",
+      "expected_sha256": "2ffd63203a6af407c5f17c708ce2c42120fef0dc9600e3585f83be6e48313173",
+      "valid": true,
+      "parent_status": "pass"
+    },
+    {
+      "gate": "G2",
+      "field": "review",
+      "path": "quality_reports/results/mebane_gates/G2/round3/review/review.json",
+      "actual_sha256": "0b6a2c4268e1b7d58c2964e31db54df2c894056634939c24681d38ad54ef96f3",
+      "expected_sha256": "0b6a2c4268e1b7d58c2964e31db54df2c894056634939c24681d38ad54ef96f3",
+      "valid": true,
+      "parent_status": "pass"
+    },
+    {
+      "gate": "G2",
+      "field": "adjudication",
+      "path": "quality_reports/results/mebane_gates/G2/round3/adjudication.json",
+      "actual_sha256": "4999cc69a32e53e5bc0f6308acbfb77671c192a9b4126715794e1acfcc8b2ca9",
+      "expected_sha256": "4999cc69a32e53e5bc0f6308acbfb77671c192a9b4126715794e1acfcc8b2ca9",
+      "valid": true,
+      "parent_status": "pass"
+    }
+  ],
+  "missing_declared_paths": [],
+  "unrecoverable_historical_entries": [],
+  "qa_artifacts_misclassified_as_executor_outputs": [],
+  "contract_sha256": "1b26bbed0577e159a57af93567f14d38d511ea7f26216ca6d5aba22e56a2dacf",
+  "manual_actual_input_closure_pending": true,
+  "manifest_complete": false,
+  "elapsed_seconds": 0.2135336249775719,
+  "checked_at": "2026-09-29T17:20:28.575906+00:00",
+  "ledger_observed_sha256": "a5356743fcaaba033b211a96d45c729cafbee2dbed478dfb061f6fd78fead0ee",
+  "verifier_sha256": "2d73d2c252702ecb0fdad88cb28764c309378a7e689ee761b970dc250f8887d4"
+}

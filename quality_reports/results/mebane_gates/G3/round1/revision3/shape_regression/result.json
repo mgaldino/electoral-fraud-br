@@ -1,0 +1,18 @@
+{
+  "checks": {
+    "ordinary_matrix": true,
+    "pooled_shape_demonstrated": true,
+    "production_equals_direct": true,
+    "correct_rhat_detects_chain_disagreement": true,
+    "pooled_rhat_hides_chain_disagreement": true,
+    "rhat_gap": true,
+    "reject_draws_array": true,
+    "reject_pooled_matrix": true,
+    "reject_transposed_matrix": true
+  },
+  "all_pass": true,
+  "actual_shape": [2000, 4],
+  "incorrect_coerced_shape": [8000, 1],
+  "posterior_version": "1.7.0",
+  "no_new_sampling": true
+}

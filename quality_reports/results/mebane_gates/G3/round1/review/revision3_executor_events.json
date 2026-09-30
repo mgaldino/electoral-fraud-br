@@ -1,0 +1,428 @@
+{
+  "source": "Codex read_thread API; raw command and file-change records only; no agent conclusions used",
+  "thread_id": "01a0ee04-c901-7831-8ac6-0160da2e3883",
+  "thread_title": "Implementar candidato de auditoria G",
+  "turn_id": "01a0ee23-0c0f-7061-a33d-f0078fc064b3",
+  "turn_status": "completed",
+  "events": [
+    {
+      "turn_id": "01a0ee23-0c0f-7061-a33d-f0078fc064b3",
+      "turn_started_at": 1790701669,
+      "item_order": 2,
+      "type": "commandExecution",
+      "id": "exec-23b94a96-4b76-416a-a21a-7cd5b659f11e",
+      "command": "/bin/zsh -lc 'cat quality_reports/results/mebane_gates/coordination/2026-09-29_g3_runtime/diagnostic_shape_adjudication.json'",
+      "cwd": "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud",
+      "status": "completed",
+      "exitCode": 0,
+      "durationMs": 0,
+      "output": {
+        "text": "{\n  \"schema_version\": \"1.0\",\n  \"adjudication_id\": \"G3:de779221e409:diagnostic-shape\",\n  \"source\": {\n    \"reviewed_artifact\": \"quality_reports/results/mebane_gates/G3/round1/revision2/candidate_manifest.json\",\n    \"sha256\": \"de779221e40964b9729bdd928a814e7e7dfd9738df866b91f6ee97307a14bd0f\",\n    \"artifact_intact\": true\n  },\n  \"contract\": {\n    \"required\": false, \"path\": null, \"sha256\": null, \"contract_id\": null,\n    \"artifact_sha256\": null, \"status\": null, \"stale\": false\n  },\n  \"contract_scope_note\": \"Reparo de forma de dados no pós-processamento G3; preserva contrato G2, protocolo v2 e todos os draws.\",\n  \"review_sources\": [{\n    \"review_id\": \"QA-DIAG-SHAPE\",\n    \"path\": \"quality_reports/results/mebane_gates/G3/round1/review/diagnostic_shape_counterexample/counterexample.json\",\n    \"sha256\": \"d7441f10f448121dc472c02a87bac76e8eb11bbf375c9c3db465f010b0f30b15\"\n  }],\n  \"findings\": [{\n    \"finding_id\": \"G3-COORD-DIAG-01\",\n    \"source_review\": \"QA-DIAG-SHAPE\",\n    \"quoted_finding\": \"rhat/ess defaults call as.matrix on draws_array, collapsing four chains into one before splitting\",\n    \"type\": \"method\",\n    \"severity\": \"major\",\n    \"scientific_dimension\": \"sampling_diagnostics\",\n    \"held_decision\": false,\n    \"status\": \"CONFIRMED\",\n    \"source_locations\": [\n      \"quality_reports/results/mebane_gates/G3/round1/revision2/snapshots/tests/mebane/likelihood/g3_draw_postprocess.R:87\",\n      \"quality_reports/results/mebane_gates/G3/round1/review/diagnostic_shape_counterexample/shape_counterexample.csv:4\"\n    ],\n    \"defect_evidence\": [\n      \"The candidate passes a draws_array of shape 2000x4x1 to scalar diagnostic defaults. The independent probe observes coercion to 8000x1, followed by splitting into 4000x2, instead of splitting the four original chains into 1000x8.\",\n      \"All candidate diagnostics match the incorrectly pooled path. For N.iota.s, the correct four-chain Rhat is 1.00120757086769, versus 1.00020832622997 in the candidate.\"\n    ],\n    \"refuting_evidence\": [],\n    \"mechanical_checks\": [\n      \"Coordinator opened the frozen postprocessor lines 87-91 and the independent shape counterexample JSON/CSV.\",\n      \"Candidate identity audit verified all 321 declared files and current G2 approval before this adjudication.\",\n      \"Independent QA recomputed diagnostics from the saved raw chains; no new sampling.\"\n    ],\n    \"reasoning\": \"The criterion requires rank-normalized split diagnostics of four independent chains. Pooling them before splitting changes that statistic and can conceal between-chain disagreement. This defect is separate from tail-ESS NA caused by discrete atoms; preserving the correct shape does not authorize relaxing the latter criterion.\",\n    \"proposed_fix_assessment\": \"safe\",\n    \"disposition\": \"Pass an ordinary iterations-by-chain numeric matrix directly to posterior::rhat, ess_bulk and ess_tail; assert dimensions. Recompute solely from the unchanged revision2 RDS into revision3. Add an adversarial deterministic chain-shape regression check; preserve all prior candidates and code snapshots.\",\n    \"resolved\": false\n  }],\n  \"summary\": {\"total\": 1, \"confirmed\": 1, \"partial\": 0, \"refuted\": 0, \"unresolved\": 0, \"held_decisions\": 0},\n  \"adjudication\": {\n    \"verdict\": \"READY_FOR_IMPLEMENTATION\",\n    \"checked_at\": \"2026-09-29\",\n    \"reasons\": [\n      \"The failure has an independently reproduced numeric counterexample and a bounded code repair already within the authorized G3 task.\",\n      \"No model change, new MCMC, new seed, tolerance change or G3 approval is authorized by this record.\"\n    ]\n  },\n  \"scope\": \"Diagnostic data shape only; scientific support decisions F1/F2 remain unchanged.\"\n}\n",
+        "truncated": false
+      }
+    },
+    {
+      "turn_id": "01a0ee23-0c0f-7061-a33d-f0078fc064b3",
+      "turn_started_at": 1790701669,
+      "item_order": 3,
+      "type": "commandExecution",
+      "id": "exec-751d66af-1737-4d1f-8b74-8681fc3c4551",
+      "command": "/bin/zsh -lc \"rg -n 'electoralFraud|Checker evidence must be gate-specific' /Users/manoelgaldino/.codex/memories/MEMORY.md\"",
+      "cwd": "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud",
+      "status": "completed",
+      "exitCode": 0,
+      "durationMs": 0,
+      "output": {
+        "text": "1:# Task Group: electoralFraud gate governance and checker audit\n3:scope: Preserve the recorded gate-status boundary and checker-audit failure shield for electoralFraud; this is session-lesson evidence, not a fresh source-artifact verification.\n4:applies_to: cwd=/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud; reuse_rule=re-check current gate artifacts, model decision, and official-raw converter before making inference or approval claims.\n10:- rollout_summaries/2026-09-29T09-39-00-electoralfraud_gates_and_checker_audit.md (cwd=/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud, rollout_path=/Users/manoelgaldino/.codex/sessions/2026/04/10/rollout-2026-04-10T18-44-38-019d795a-acfa-72c2-a210-d55a46c606c2.jsonl, updated_at=2026-09-29T12:39:00+00:00, thread_id=019d795a-acfa-72c2-a210-d55a46c606c2, derived from machine-managed session lessons; verify current artifacts)\n14:- electoralFraud, G0, G1, G2, G7, G8, `changes_requested`, `not_applicable`, calibration contract, official raw converter, 2026 inference, `review_checker_round1.md`, eforensics, cmdstan\n19:- Checker evidence must be gate-specific: an adversarial review found it accepted a revised G0 as G1 evidence and irrelevant text as G8 external evidence. `not_applicable` must separate official non-occurrence from unavailable data, and a calibration contract must precede confirmatory evaluation. [Task 1]\n",
+        "truncated": false
+      }
+    },
+    {
+      "turn_id": "01a0ee23-0c0f-7061-a33d-f0078fc064b3",
+      "turn_started_at": 1790701669,
+      "item_order": 4,
+      "type": "commandExecution",
+      "id": "exec-e4c918a9-152e-4539-86b1-fd89740aa32d",
+      "command": "/bin/zsh -lc 'git status --short'",
+      "cwd": "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud",
+      "status": "completed",
+      "exitCode": 0,
+      "durationMs": 0,
+      "output": {
+        "text": " M quality_reports/plans/mebane_2022_2026_gates.json\n?? R/lib/mebane_model.R\n?? quality_reports/results/mebane_gates/G3/\n?? quality_reports/results/mebane_gates/coordination/2026-09-29_g3_runtime/\n?? tests/mebane/likelihood/g3_deterministic.R\n?? tests/mebane/likelihood/g3_draw_postprocess.R\n?? tests/mebane/likelihood/g3_draw_replay.R\n?? tests/mebane/likelihood/g3_jags.R\n?? tests/mebane/likelihood/g3_source_contract.R\n",
+        "truncated": false
+      }
+    },
+    {
+      "turn_id": "01a0ee23-0c0f-7061-a33d-f0078fc064b3",
+      "turn_started_at": 1790701669,
+      "item_order": 6,
+      "type": "commandExecution",
+      "id": "exec-be2973f5-fbad-4356-872b-60efb6f886ff",
+      "command": "/bin/zsh -lc 'cat tests/mebane/likelihood/g3_draw_postprocess.R'",
+      "cwd": "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud",
+      "status": "completed",
+      "exitCode": 0,
+      "durationMs": 0,
+      "output": {
+        "text": "# Read only the persisted new replay; no JAGS compilation or sampling.\n.libPaths(c(\"renv/library/macos/R-4.4/aarch64-apple-darwin20\", .libPaths()))\nstopifnot(requireNamespace(\"posterior\", quietly = TRUE),\n          requireNamespace(\"jsonlite\", quietly = TRUE))\nsource(\"R/lib/mebane_model.R\")\noutdir <- \"quality_reports/results/mebane_gates/G3/round1/revision2\"\nrds_path <- file.path(outdir, \"raw_chains.rds\")\nmeta <- jsonlite::read_json(file.path(outdir, \"sampling_metadata.json\"),\n                            simplifyVector = TRUE)\nsha <- function(path) strsplit(system2(\"shasum\", c(\"-a\", \"256\", path),\n                                       stdout = TRUE), \" \")[[1]][1]\nstopifnot(sha(rds_path) == meta$raw_rds_sha256)\npayload <- readRDS(rds_path)\nstopifnot(inherits(payload$draws, \"mcmc.list\"),\n          length(payload$draws) == 4L,\n          all(vapply(payload$draws, nrow, integer(1)) == 2000L),\n          identical(as.integer(payload$seeds), 31102:31105),\n          payload$adapt == 200L, payload$burnin == 500L,\n          payload$post_iterations_per_chain == 2000L,\n          payload$data$n == 1L, payload$data$N == 1L,\n          payload$data$a == 0L, payload$data$w == 0L)\nmatrices <- lapply(payload$draws, as.matrix)\nnode <- function(name) do.call(cbind, lapply(matrices, function(x) {\n  key <- intersect(c(name, paste0(name, \"[1]\")), colnames(x))\n  if (length(key) != 1L) stop(\"Missing monitored node: \", name)\n  x[, key]\n}))\nZ <- node(\"Z\"); im <- node(\"N.iota.m\"); is <- node(\"N.iota.s\")\ncm <- node(\"N.chi.m\"); cs <- node(\"N.chi.s\")\nM <- ifelse(Z == 1, 0, ifelse(Z == 2, ifelse(im == 1, .999, 0),\n                              ifelse(cm == 1, .999, 0))) * .5\nS <- ifelse(Z == 1, 0, ifelse(Z == 2, is, cs)) * .25\ntargets <- list(Z = Z, r_im = im, r_is = is, r_cm = cm, r_cs = cs,\n  indicator_Z1 = (Z == 1) * 1, indicator_Z2 = (Z == 2) * 1,\n  indicator_Z3 = (Z == 3) * 1, M = M, S = S,\n  margin_lower = 1 - M - 2*S, margin_upper = 1 - M - S)\nchecks <- c(z_support = all(Z %in% 1:3),\n  four_count_support = all(c(im, is, cm, cs) %in% 0:1),\n  one_class_per_draw = all(targets$indicator_Z1 + targets$indicator_Z2 +\n                            targets$indicator_Z3 == 1),\n  nonnegative_functionals = all(M >= 0 & S >= 0),\n  lower_identity = all(abs(targets$margin_lower - (1 - M - 2*S)) < 1e-12),\n  upper_identity = all(abs(targets$margin_upper - (1 - M - S)) < 1e-12),\n  bound_order = all(targets$margin_lower <= targets$margin_upper))\nstopifnot(all(checks))\njoint <- data.frame(chain = rep(1:4, each = 2000),\n  iteration = rep(1:2000, 4), Z = as.vector(Z),\n  r_im = as.vector(im), r_is = as.vector(is),\n  r_cm = as.vector(cm), r_cs = as.vector(cs),\n  M = as.vector(M), S = as.vector(S),\n  margin_lower = as.vector(targets$margin_lower),\n  margin_upper = as.vector(targets$margin_upper),\n  observed_margin_compatible = FALSE,\n  leader_capacity_necessary = as.vector(M + S <= 0),\n  physical_counterfactual_validated = FALSE)\nwrite.csv(joint, file.path(outdir, \"functionals_by_draw.csv\"), row.names = FALSE)\n\nstates <- list()\nfor (z in 1:3) for (r1 in 0:1) for (r2 in 0:1)\n  for (r3 in 0:1) for (r4 in 0:1) {\n    counts <- c(r1, r2, r3, r4)\n    weight <- c(4, 2, 1)[z]/7 * prod(dbinom(counts, 1,\n      c(.35, .35, .85, .85))) * mebane_kernel(1, 0, 0, z, counts, .5, .5)\n    m <- if (z == 1) 0 else if (z == 2) if (r1 == 1) .999 else 0 else if (r3 == 1) .999 else 0\n    s <- if (z == 1) 0 else if (z == 2) r2 else r4\n    states[[length(states)+1L]] <- data.frame(Z=z, r_im=r1, r_is=r2,\n      r_cm=r3, r_cs=r4, indicator_Z1=as.numeric(z==1),\n      indicator_Z2=as.numeric(z==2), indicator_Z3=as.numeric(z==3),\n      M=.5*m, S=.25*s, margin_lower=1-.5*m-.5*s,\n      margin_upper=1-.5*m-.25*s, weight=weight)\n  }\nexact <- do.call(rbind, states)\nexact$posterior <- exact$weight/sum(exact$weight)\nwrite.csv(exact, file.path(outdir, \"conditional_exact_states.csv\"), row.names = FALSE)\nmcse_batch <- function(x) {\n  stopifnot(nrow(x) == 2000L, ncol(x) == 4L)\n  batches <- sapply(1:4, function(chain)\n    colMeans(matrix(x[, chain], nrow = 50L, ncol = 40L)))\n  sqrt(sum(apply(batches, 2, var)/40))/4\n}\nsummary <- do.call(rbind, lapply(names(targets), function(nm) {\n  x <- targets[[nm]]\n  expectation <- sum(exact[[nm]] * exact$posterior)\n  constant <- length(unique(as.vector(x))) == 1L &&\n    length(unique(exact[[nm]][exact$posterior > 0])) == 1L\n  mcse <- if (constant) 0 else mcse_batch(x)\n  draws <- posterior::as_draws_array(array(x, dim=c(2000L,4L,1L),\n    dimnames=list(NULL,NULL,nm)))\n  rh <- if (constant) NA_real_ else posterior::rhat(draws)[[1]]\n  eb <- if (constant) NA_real_ else posterior::ess_bulk(draws)[[1]]\n  et <- if (constant) NA_real_ else posterior::ess_tail(draws)[[1]]\n  tol <- max(1e-3, 6*mcse)\n  data.frame(target=nm, exact=expectation, mc_mean=mean(x), mcse=mcse,\n    tolerance=tol, difference=abs(mean(x)-expectation), rhat=rh,\n    ess_bulk=eb, ess_tail=et, constant=constant)\n}))\nsummary$mean_pass <- summary$difference <= summary$tolerance\nsummary$diagnostic_pass <- with(summary, constant |\n  (!is.na(rhat) & !is.na(ess_bulk) & !is.na(ess_tail) &\n    rhat < 1.01 & ess_bulk >= 400 & ess_tail >= 400))\nwrite.csv(summary, file.path(outdir, \"conditional_comparison.csv\"), row.names = FALSE)\nold <- read.csv(\"quality_reports/results/mebane_gates/G3/round1/jags_attempt5/conditional_comparison.csv\")\nstopifnot(identical(as.character(old$target), as.character(summary$target)))\nprior_check <- data.frame(target=summary$target,\n  revision1_mean=old$mc_mean, revision2_mean=summary$mc_mean,\n  absolute_mean_difference=abs(summary$mc_mean-old$mc_mean),\n  revision1_mcse=old$mcse, revision2_mcse=summary$mcse,\n  combined_mcse=sqrt(old$mcse^2+summary$mcse^2),\n  same_seeds_declared=TRUE)\nwrite.csv(prior_check, file.path(outdir, \"replay_vs_revision1.csv\"),\n          row.names = FALSE)\nresult <- list(status=\"inconclusive\", repair_id=\"G3-COORD-DRAW-01\",\n  source=\"reopened_raw_chains_rds\", raw_rds_sha256=sha(rds_path),\n  prior_summary_sha256=sha(\"quality_reports/results/mebane_gates/G3/round1/jags_attempt5/conditional_comparison.csv\"),\n  all_mean_pass=all(summary$mean_pass),\n  all_diagnostic_pass=all(summary$diagnostic_pass),\n  degenerate_targets=as.character(summary$target[summary$constant]),\n  missing_tail_ess_targets=as.character(summary$target[is.na(summary$ess_tail) & !summary$constant]),\n  per_draw_identities=as.list(checks),\n  replay_comparison=\"descriptive; no stochastic identity or new acceptance criterion\",\n  margin=\"Dobs=1 algebraic offset; observed margin incompatible with N=1,A=0,W=0\",\n  physical_counterfactual_validated=FALSE)\njsonlite::write_json(result, file.path(outdir, \"postprocess_result.json\"),\n                     auto_unbox=TRUE, pretty=TRUE, na=\"null\")\ncat(\"postprocess from reopened RDS:\", nrow(joint), \"joint rows; means\",\n    result$all_mean_pass, \"diagnostics\", result$all_diagnostic_pass, \"\\n\")\n",
+        "truncated": false
+      }
+    },
+    {
+      "turn_id": "01a0ee23-0c0f-7061-a33d-f0078fc064b3",
+      "turn_started_at": 1790701669,
+      "item_order": 7,
+      "type": "commandExecution",
+      "id": "exec-0441e175-715c-4c4a-80e3-a7253ad77142",
+      "command": "/bin/zsh -lc 'cat quality_reports/results/mebane_gates/G3/round1/review/diagnostic_shape_counterexample/counterexample.json'",
+      "cwd": "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud",
+      "status": "completed",
+      "exitCode": 0,
+      "durationMs": 0,
+      "output": {
+        "text": "{\n  \"shapes\": {\n    \"Z\": {\n      \"matrix_dim\": [2000, 4],\n      \"draws_array_dim\": [2000, 4, 1],\n      \"coerced_array_dim\": [8000, 1],\n      \"correct_split_dim\": [1000, 8],\n      \"candidate_split_dim\": [4000, 2]\n    },\n    \"N.iota.m\": {\n      \"matrix_dim\": [2000, 4],\n      \"draws_array_dim\": [2000, 4, 1],\n      \"coerced_array_dim\": [8000, 1],\n      \"correct_split_dim\": [1000, 8],\n      \"candidate_split_dim\": [4000, 2]\n    },\n    \"N.iota.s\": {\n      \"matrix_dim\": [2000, 4],\n      \"draws_array_dim\": [2000, 4, 1],\n      \"coerced_array_dim\": [8000, 1],\n      \"correct_split_dim\": [1000, 8],\n      \"candidate_split_dim\": [4000, 2]\n    },\n    \"N.chi.m\": {\n      \"matrix_dim\": [2000, 4],\n      \"draws_array_dim\": [2000, 4, 1],\n      \"coerced_array_dim\": [8000, 1],\n      \"correct_split_dim\": [1000, 8],\n      \"candidate_split_dim\": [4000, 2]\n    },\n    \"N.chi.s\": {\n      \"matrix_dim\": [2000, 4],\n      \"draws_array_dim\": [2000, 4, 1],\n      \"coerced_array_dim\": [8000, 1],\n      \"correct_split_dim\": [1000, 8],\n      \"candidate_split_dim\": [4000, 2]\n    },\n    \"indicator_Z1\": {\n      \"matrix_dim\": [2000, 4],\n      \"draws_array_dim\": [2000, 4, 1],\n      \"coerced_array_dim\": [8000, 1],\n      \"correct_split_dim\": [1000, 8],\n      \"candidate_split_dim\": [4000, 2]\n    },\n    \"indicator_Z2\": {\n      \"matrix_dim\": [2000, 4],\n      \"draws_array_dim\": [2000, 4, 1],\n      \"coerced_array_dim\": [8000, 1],\n      \"correct_split_dim\": [1000, 8],\n      \"candidate_split_dim\": [4000, 2]\n    },\n    \"indicator_Z3\": {\n      \"matrix_dim\": [2000, 4],\n      \"draws_array_dim\": [2000, 4, 1],\n      \"coerced_array_dim\": [8000, 1],\n      \"correct_split_dim\": [1000, 8],\n      \"candidate_split_dim\": [4000, 2]\n    },\n    \"M\": {\n      \"matrix_dim\": [2000, 4],\n      \"draws_array_dim\": [2000, 4, 1],\n      \"coerced_array_dim\": [8000, 1],\n      \"correct_split_dim\": [1000, 8],\n      \"candidate_split_dim\": [4000, 2]\n    },\n    \"S\": {\n      \"matrix_dim\": [2000, 4],\n      \"draws_array_dim\": [2000, 4, 1],\n      \"coerced_array_dim\": [8000, 1],\n      \"correct_split_dim\": [1000, 8],\n      \"candidate_split_dim\": [4000, 2]\n    },\n    \"margin_lower\": {\n      \"matrix_dim\": [2000, 4],\n      \"draws_array_dim\": [2000, 4, 1],\n      \"coerced_array_dim\": [8000, 1],\n      \"correct_split_dim\": [1000, 8],\n      \"candidate_split_dim\": [4000, 2]\n    },\n    \"margin_upper\": {\n      \"matrix_dim\": [2000, 4],\n      \"draws_array_dim\": [2000, 4, 1],\n      \"coerced_array_dim\": [8000, 1],\n      \"correct_split_dim\": [1000, 8],\n      \"candidate_split_dim\": [4000, 2]\n    }\n  },\n  \"all_published_diagnostics_match_pooled\": true,\n  \"all_correct_rhat_below_1_01\": true,\n  \"all_correct_bulk_above_400\": true,\n  \"correct_tail_NA\": 9,\n  \"all_NA_have_constant_tail_indicator\": true,\n  \"threshold_not_relaxed\": true,\n  \"no_new_sampling\": true,\n  \"finding\": \"rhat/ess defaults call as.matrix on draws_array, collapsing four chains into one before splitting\",\n  \"qa_note\": \"Structural indicator constancy replaces equality-to-one floating mass in explanatory flags only; candidate data and criteria unchanged\"\n}\n",
+        "truncated": false
+      }
+    },
+    {
+      "turn_id": "01a0ee23-0c0f-7061-a33d-f0078fc064b3",
+      "turn_started_at": 1790701669,
+      "item_order": 8,
+      "type": "commandExecution",
+      "id": "exec-28345c66-48da-4a9a-ba5d-433839322342",
+      "command": "/bin/zsh -lc 'cat quality_reports/results/mebane_gates/G3/round1/protocol_v2.json'",
+      "cwd": "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud",
+      "status": "completed",
+      "exitCode": 0,
+      "durationMs": 0,
+      "output": {
+        "text": "{\n  \"protocol_id\": \"G3-round1-pretest-v2\",\n  \"supersedes_for_confirmation\": \"protocol.json\",\n  \"reason\": \"User preflight found MC tolerance and diagnostics insufficient before test results\",\n  \"frozen_before_tests\": true,\n  \"v1_execution\": \"Only environment/version probes; no G3 test or JAGS chain run; no active process or test output\",\n  \"target\": \"Unmodified G0 qbl JAGS source, SHA-256 f8360126424b7a463f76a1c99efc89a8a5cb81339213bd4931559f14595fbab6; JAGS 4.3.2 required\",\n  \"scope\": \"n<=8; enumeration N=1,2,3; no national fitting; conditioned comparison is not an unconditioned full-model validation\",\n  \"seeds\": {\"generator\": 31101, \"jags_chains\": [31102, 31103, 31104, 31105]},\n  \"jags\": {\"chains\": 4, \"adapt\": 200, \"burnin\": 500, \"sample_iterations_per_chain\": 2000, \"thin\": 1, \"single_process_limit_seconds\": 120},\n  \"deterministic_cases\": {\"N\": [1, 2, 3], \"tau\": 0.5, \"nu\": 0.5, \"mus\": [0.35, 0.35, 0.85, 0.85], \"pi\": [0.5714285714285714, 0.2857142857142857, 0.14285714285714285], \"observations\": \"all integer A,W in 0:N, flag A+W>N independently\", \"invalid_probe\": {\"N\": 1, \"A\": 1, \"W\": 0, \"Z\": 2, \"R_iota_m\": 1, \"R_iota_s\": 0, \"tau\": 0.5, \"nu\": 0.5}, \"valid_control\": {\"N\": 1, \"A\": 0, \"W\": 0, \"Z\": 1, \"counts\": [0, 0, 0, 0], \"tau\": 0.5, \"nu\": 0.5}},\n  \"runtime_probes\": [\"observed valid control\", \"invalid active class 2 counts in data\", \"invalid inactive class 1 counts in data\", \"invalid active class 3 counts in data\", \"invalid inactive class 2 chi counts in data\", \"invalid counts in inits\", \"stochastic count initialization/update\", \"a,w missing\", \"a conditioned w missing\", \"a missing w conditioned\"],\n  \"generator\": {\"attempts\": 32, \"max_N\": 3, \"policy\": \"record every attempt, no clamp/redraw/truncation; explicit failure if invalid probability or physical support\"},\n  \"comparison\": {\n    \"case\": \"N=1,A=0,W=0; continuous effects, coefficients and pi auxiliaries fixed and labeled conditioned; exact posterior over Z and four counts\",\n    \"monitored_nodes\": [\"Z\", \"N.iota.m\", \"N.iota.s\", \"N.chi.m\", \"N.chi.s\"],\n    \"derived_targets\": [\"indicator_Z1\", \"indicator_Z2\", \"indicator_Z3\", \"M\", \"S\", \"margin_lower\", \"margin_upper\"],\n    \"fixed_continuous_targets\": [\"tau=0.5\", \"nu=0.5\", \"Dobs=1\"],\n    \"absolute_deterministic_tolerance\": 1e-12,\n    \"mc_mean_absolute_tolerance\": \"max(1e-3, 6*MCSE) per target\",\n    \"mcse_method\": \"per-chain non-overlapping batch means, batch size 50 for 2000 draws, 40 batches; pooled MCSE=sqrt(sum_c var(batch_means_c)/40)/4; independent chains\",\n    \"diagnostics\": \"posterior rank-normalized split Rhat <1.01 and bulk/tail ESS >=400 for every nonconstant monitored or derived target; constant targets checked analytically without diagnostics claim\",\n    \"missing_dependency\": \"inconclusive, no install\",\n    \"failure_policy\": \"retain output and failures; do not increase iterations/tolerances or select new cases\"\n  },\n  \"timing\": {\"each_test_process_seconds\": 120, \"total_compute_seconds\": 720, \"timeout_is_failure_not_retry_instruction\": true},\n  \"decision_rules\": {\"deterministic\": \"fail on mismatch above 1e-12\", \"generator\": \"if any failure or incomplete literal support, T1 not done/pass\", \"engine\": \"JAGS may remain literal software reference; no exact Stan equivalence claim\", \"gate\": \"executor supplies candidate only; independent review and coordination decide pass\"}\n}\n",
+        "truncated": false
+      }
+    },
+    {
+      "turn_id": "01a0ee23-0c0f-7061-a33d-f0078fc064b3",
+      "turn_started_at": 1790701669,
+      "item_order": 9,
+      "type": "commandExecution",
+      "id": "exec-22200258-c997-43ec-a385-cee5b48600e7",
+      "command": "/bin/zsh -lc 'cat CLAUDE.md'",
+      "cwd": "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud",
+      "status": "completed",
+      "exitCode": 0,
+      "durationMs": 0,
+      "output": {
+        "text": "# electoralFraud — Parecer metodologico\n\n## O que e este projeto\n\nParecer sobre a research note de terceiros \"Is there evidence of fraud in Brazil's 2022 presidential election?\" (Figueiredo, Carvalho, Santano). A nota aplica electoral fingerprint analysis (joint distribution turnout x vote share) aos dados TSE 2022 e conclui ausencia de fraude por inspecao visual.\n\n**Papel do usuario**: parecerista / reconstrutor metodologico. Nao e autor da nota.\n\n## Estado atual\n\nO protocolo vigente é `quality_reports/plans/mebane_2022_2026_gates.json`. O usuário autorizou o benchmark literal qbl/JAGS e replicação externa dos autores (novo G10 entre G3 e G4). D1-D3 de G2 round2 passaram em 59 checagens metodológicas independentes; preservam priors efetivas, desenho inicial intercept-only com hierarquia e funcionais conjuntos, sem aprovação inferencial. Consultar `appendices/mebane_model_contract.md` e `quality_reports/results/mebane_gates/G2/round2/benchmark_contract.json`.\n\nO usuário decidiu em 29/09 manter a exclusão do download incompleto `ssrn-4073770.pdf.download/ssrn-4073770.pdf` e atualizar o inventário. O arquivo não era fonte do modelo. A autoria e a causa da remoção são desconhecidas; o checkpoint automático do Git apenas registra a ausência. A reconciliação documental foi concluída: G0 round4 e G1/G2/G7 round3 têm hashes reconferidos, revisão independente e adjudicação aprovadas, sem repetir análises científicas. A pendência de integridade foi encerrada; G3 e G10 não foram executados. Os inventários e pareceres anteriores são preservados. Ver `coordination/2026-09-29_inventory_rebaseline/decision.md` e `completion.json`, sob `quality_reports/results/mebane_gates/`.\n\n### Preservação de arquivos\n\nNão excluir arquivos ou diretórios sem autorização explícita prévia do usuário,\ninclusive em rotinas de limpeza, remoção de temporários e tarefas delegadas a\nsubagentes. Não interpretar aprovação de análise, gate ou plano como autorização\npara excluir. A decisão de manter uma ausência já existente não autoriza novas\nexclusões. Se houver remoção inesperada, registrar o fato sem atribuir autoria\nsem evidência e não restaurar silenciosamente uma possível alteração do usuário.\n\nG7 cobre staging ensaiado de CSV normalizado, não conversor bruto oficial nem atestação de votos reais de 2026. A descoberta de materiais de replicação dos autores foi revisada, mas nenhum ajuste externo foi reproduzido e G10 não passou. Blocos 0-2 e testes suplementares têm artefatos históricos; não equivalem a validação atual. O pipeline nacional e as conclusões inferenciais continuam pendentes; o ledger prevalece sobre este resumo.\n\n- Manuscrito: `research_note.md`\n- Plano metodologico aprovado: `quality_reports/plans/2026-04-10_reconstrucao-metodologica.md`\n- Handoff qbl (Stan/JAGS): `quality_reports/results/05_stan_qbl_session_handoff.md`\n- Handoff Bloco 3: `quality_reports/results/bloco3_session_handoff.md`\n- Pareceres: `quality_reports/reviews/2026-04-10_*.md`\n\n### Progresso dos blocos\n\n| Bloco | Status | Scripts |\n|-------|--------|---------|\n| 0 (infra) | Completo | `R/00_setup.R` |\n| 1 (dados) | Completo | `R/01_load_tse.R`, `R/02_build_vars.R` |\n| 2 (fingerprint visual) | Completo | `R/03_fingerprint_base.R` → 8 PDFs |\n| 3a (eforensics Brasilia) | Parcial | `R/05_eforensics_*.R`, `R/05_jags_qbl_zone_fe.R` |\n| 3 suplementares | Execucoes historicas; interpretacao nao validada neste gate | `R/05_kobak_integer.R`, `R/06_beber_scacco.R`, `R/07_benford_2bl.R`, `R/08_spikes_rozenas.R` |\n| 3a-k (eforensics Brasil) | **Pendente** | `R/04_eforensics_mebane.R` nao existe; `R/07_brasil_full_qbl.R` existe sem fit nacional correspondente |\n| 4 (Monte Carlo poder) | Pendente | — |\n| 5-7 (robustez) | Pendente | — |\n\n## Escopo\n\n**Dentro**: reconstruir e validar 2022 e preparar a recepcao de dados oficiais de 2026 conforme o plano vigente. Estimacoes de 2026 dependem de publicacao oficial e dos gates anteriores aprovados.\n\n**Fora** (por decisao do usuario):\n- Reescrita de abstract/introducao, reformulacao teorica da pergunta, literatura sobre fraud claims, recomendacoes de policy.\n- **Benchmark 2018 x 2022**: trabalho futuro. Segundo ciclo de revisao, com dados de 2018 fornecidos pelos autores.\n\n## Stack\n\nR. O baseline qbl usa `eforensics` 0.0.4 de `UMeforensics/eforensics_public` no commit `3017de537450f97a01872d0157462a68bea348ee`, nao o fork antigo `DiogoFerrari`. Outras dependencias historicas/planejadas incluem `electionsBR`, `spikes`, `BenfordTests`, `data.table`/`arrow`, `future.apply` e `renv`; a disponibilidade efetiva esta no relatorio G0.\n\n## Ao retomar a sessao\n\n1. Ler este CLAUDE.md e o handoff mais recente:\n   - `quality_reports/results/bloco3_session_handoff.md` (estado geral)\n   - `quality_reports/results/05_stan_qbl_session_handoff.md` (detalhes qbl)\n2. Checar `git log --oneline -10` e `git status`.\n3. Ler o ledger vigente, verificar `integrity_hold` e as evidências congeladas. A decisão sobre o download incompleto já foi dada: manter a ausência e reconciliar o inventário; não voltar a pedir a mesma escolha nem restaurar os arquivos. Não rodar análise nacional antes de G1-G5 e G10 aprovados, sobretudo o preflight de recursos.\n4. O benchmark literal foi escolhido; engine de produção, geografia e critérios inferenciais continuam sujeitos aos gates pertinentes. Não usar handoffs de abril como aprovação. G10 exige contrato de replicação revisado antes da execução comparativa.\n5. Os loaders G1 exigem `CONFIG_JSON` e diretório de saída explícitos. Não usar as chamadas antigas sem argumentos nem ligar automaticamente seus produtos aos scripts históricos. Ver comandos vigentes no README; preservar rounds congelados e `data/processed/`.\n\n### Evidencia historica e limites\n- O pacote `eforensics` 0.0.4 instalado declara `RemoteSha` `3017de537450f97a01872d0157462a68bea348ee`; G0 arquiva o codigo `qbl` e o commit correspondente. O alvo de producao e sua fidelidade matematica serao decididos em G2-G3.\n- O fit JAGS Brasilia fresh_v2 tem quatro cadeias, mas o R-hat classico recalculado de `pi[2]` e cerca de 1.25; o fit zone FE registra cerca de 4.62 no resumo historico. A observacao de `iota.s.alpha` negativo nao autoriza conclusao de ausencia de fraude.\n- O log Stan de 2.000 observacoes identifica o modelo como aproximado e registra `rhat_max` 1.229 e `ess_bulk_min` 8.2. Igualdade com o JAGS nao foi demonstrada.\n- O handoff de abril usa limites de R-hat mais permissivos que os criterios definidos no plano atual G4; resultados historicos nao os substituem.\n- O PDF local `ssrn-4073770.pdf` e um artigo de Kirill Kalinin (2022), nao um paper de Mebane. O download incompleto que ficava na pasta `.download` foi removido e permanece ausente por decisao do usuario; nunca foi fonte valida.\n- A interface UMeforensics usa formula1=w/Xw e formula2=a/Xa. Dois wrappers históricos inverteram as chamadas; o reparo AR-02 é independente da pendência de integridade e não reestima resultados. As listas diretas fresh_v2/zoneFE estão corretas nesse ponto.\n",
+        "truncated": false
+      }
+    },
+    {
+      "turn_id": "01a0ee23-0c0f-7061-a33d-f0078fc064b3",
+      "turn_started_at": 1790701669,
+      "item_order": 16,
+      "type": "commandExecution",
+      "id": "exec-e0ba5ca5-9cc7-489e-bef4-7aeffe9416ce",
+      "command": "/bin/zsh -lc 'cat quality_reports/results/mebane_gates/G3/round1/revision2/build_candidate.py'",
+      "cwd": "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud",
+      "status": "completed",
+      "exitCode": 0,
+      "durationMs": 0,
+      "output": {
+        "text": "\"\"\"Seal revision2 with new persisted draws and all consumed inputs.\"\"\"\nimport hashlib\nimport json\nimport re\nimport shutil\nfrom datetime import datetime, timezone\nfrom pathlib import Path\n\nROOT = Path(__file__).resolve().parents[6]\nHERE = Path(__file__).resolve().parent\nROUND = HERE.parent\nPRIOR = ROUND / \"revision1\"\nCOORD = ROOT / \"quality_reports/results/mebane_gates/coordination/2026-09-29_g3_runtime\"\n\n\ndef rel(path):\n    return str(path.relative_to(ROOT))\n\n\ndef sha(path):\n    return hashlib.sha256(path.read_bytes()).hexdigest()\n\n\ndef dump_new(path, obj):\n    if path.exists():\n        raise FileExistsError(path)\n    path.write_text(json.dumps(obj, ensure_ascii=False, indent=2) + \"\\n\",\n                    encoding=\"utf-8\")\n\n\nprior = json.loads((PRIOR / \"run.json\").read_text())\nprior_hash = sha(PRIOR / \"candidate_manifest.json\")\nassert prior_hash == \"4b84fe6996a72321225fd3e5f4713439b77b74fc8a7f039d09e3dcaf7beb72a9\"\nadjud = json.loads((COORD / \"draw_persistence_adjudication.json\").read_text())\nassert adjud[\"source\"][\"sha256\"] == prior_hash\nassert adjud[\"adjudication\"][\"verdict\"] == \"READY_FOR_IMPLEMENTATION\"\nassert adjud[\"review_sources\"][0][\"sha256\"] == sha(COORD / \"draw_persistence_review.md\")\nassert adjud[\"findings\"][0][\"finding_id\"] == \"G3-COORD-DRAW-01\"\nassert adjud[\"findings\"][0][\"status\"] == \"CONFIRMED\"\nassert prior[\"contract_sha256\"] == json.loads((PRIOR / \"candidate_manifest.json\").read_text())[\"contract_sha256\"]\nassert json.loads((HERE / \"postprocess_result.json\").read_text())[\"status\"] == \"inconclusive\"\n\ncanonical = [\n    COORD / \"draw_persistence_adjudication.json\",\n    COORD / \"draw_persistence_review.md\",\n    ROOT / \"tests/mebane/likelihood/g3_draw_replay.R\",\n    ROOT / \"tests/mebane/likelihood/g3_draw_postprocess.R\",\n]\nsnapshots = []\nfor src in canonical:\n    dst = HERE / \"snapshots\" / rel(src)\n    if dst.exists():\n        raise FileExistsError(dst)\n    dst.parent.mkdir(parents=True, exist_ok=True)\n    shutil.copy2(src, dst)\n    assert sha(src) == sha(dst)\n    snapshots.append(rel(dst))\n\ncommand_specs = [\n    (\"draw_replay\", \"tests/mebane/likelihood/g3_draw_replay.R\", \"replay.log\", \"new_draws_persisted\"),\n    (\"rds_postprocess\", \"tests/mebane/likelihood/g3_draw_postprocess.R\", \"postprocess.log\", \"summaries_from_reopened_RDS_inconclusive\"),\n]\ncommands = list(prior[\"commands\"])\nfor name, script, log, outcome in command_specs:\n    txt = (HERE / log).read_text()\n    match = re.search(r\"^real ([0-9.]+)$\", txt, re.MULTILINE)\n    assert match, log\n    commands.append({\"id\": name,\n      \"command\": f\"/usr/bin/time -p timeout 120 Rscript --vanilla {script}\",\n      \"log\": rel(HERE / log), \"exit_code\": 0,\n      \"elapsed_seconds\": float(match.group(1)), \"semantic_outcome\": outcome})\n\ninputs = list(prior[\"inputs\"]) + [\n    rel(PRIOR / \"candidate_manifest.json\"),\n    rel(ROUND / \"jags_attempt5/conditional_comparison.csv\"),\n    *(rel(p) for p in canonical[:2]),\n    *snapshots,\n]\ncode = list(prior[\"code\"]) + [rel(p) for p in canonical[2:]] + [rel(HERE / \"build_candidate.py\")]\nconfig = list(prior[\"configuration\"]) + [rel(HERE / \"replay_plan.json\")]\nexcluded = set(inputs + code + config)\noutputs = sorted(rel(p) for p in ROUND.rglob(\"*\") if p.is_file() and\n                 p not in {HERE / \"run.json\", HERE / \"candidate_manifest.json\"} and\n                 rel(p) not in excluded)\nrun = dict(prior)\nrun.update({\n    \"revision\": \"revision2\", \"candidate_status\": \"inconclusive\", \"gate_approved\": False,\n    \"repair_id\": \"G3-COORD-DRAW-01\", \"repair_adjudication_sha256\": sha(canonical[0]),\n    \"prior_candidate_manifest_sha256\": prior_hash,\n    \"started_at_utc\": datetime.fromtimestamp((HERE / \"replay_plan.json\").stat().st_mtime,\n                                       tz=timezone.utc).isoformat(),\n    \"ended_at_utc\": datetime.now(timezone.utc).isoformat(),\n    \"commands\": commands,\n    \"timed_test_seconds_total\": sum(item[\"elapsed_seconds\"] for item in commands),\n    \"inputs\": inputs, \"code\": code, \"configuration\": config, \"outputs\": outputs,\n    \"raw_draws_path\": rel(HERE / \"raw_chains.rds\"),\n    \"raw_draws_sha256\": sha(HERE / \"raw_chains.rds\"),\n    \"sampling_metadata_path\": rel(HERE / \"sampling_metadata.json\"),\n    \"postprocess_result_path\": rel(HERE / \"postprocess_result.json\"),\n    \"raw_draws_are_new_not_recovered\": True,\n    \"new_mcmc_runs\": 1,\n})\ndump_new(HERE / \"run.json\", run)\nfiles = sorted(set(inputs + code + config + outputs + [rel(HERE / \"run.json\")] +\n                   [rel(p) for p in ROUND.rglob(\"*\") if p.is_file() and\n                    p != HERE / \"candidate_manifest.json\"]))\nassert \"quality_reports/plans/mebane_2022_2026_gates.json\" not in files\nmanifest = {\"gate_id\": \"G3\", \"round\": \"round1\", \"revision\": \"revision2\",\n            \"contract_sha256\": run[\"contract_sha256\"],\n            \"prior_candidate_manifest_sha256\": prior_hash,\n            \"raw_draws_sha256\": run[\"raw_draws_sha256\"],\n            \"files\": [{\"path\": path, \"sha256\": sha(ROOT / path),\n                       \"bytes\": (ROOT / path).stat().st_size} for path in files]}\ndump_new(HERE / \"candidate_manifest.json\", manifest)\nprint(\"revision2 sealed\", len(files), \"files\", run[\"contract_sha256\"])\n",
+        "truncated": false
+      }
+    },
+    {
+      "turn_id": "01a0ee23-0c0f-7061-a33d-f0078fc064b3",
+      "turn_started_at": 1790701669,
+      "item_order": 17,
+      "type": "commandExecution",
+      "id": "exec-b35d04bd-663f-4ace-b007-8f6a5a71045e",
+      "command": "/bin/zsh -lc 'cat quality_reports/results/mebane_gates/G3/round1/review/diagnostic_shape_counterexample/shape_counterexample.csv'",
+      "cwd": "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud",
+      "status": "completed",
+      "exitCode": 0,
+      "durationMs": 0,
+      "output": {
+        "text": "\"target\",\"published_matches_pooled\",\"correct_rhat\",\"pooled_rhat\",\"correct_bulk\",\"pooled_bulk\",\"correct_tail\",\"pooled_tail\",\"lower_tail_indicator_constant\",\"upper_tail_indicator_constant\"\n\"Z\",TRUE,0.999985423255829,1.00002224263466,5417.83369220932,5405.22416488764,4495.26249801662,4477.53299137056,FALSE,FALSE\n\"N.iota.m\",TRUE,0.999651181739659,0.999886029808892,7515.18142189439,7461.73431124114,NA,NA,FALSE,TRUE\n\"N.iota.s\",TRUE,1.00120757086769,1.00020832622997,5984.97063394254,5930.43967667792,NA,NA,FALSE,TRUE\n\"N.chi.m\",TRUE,0.999857172597369,0.999923480289889,7698.37713063606,7692.62401110769,NA,NA,FALSE,TRUE\n\"N.chi.s\",TRUE,1.00032406621392,1.00005336192001,4936.85022071032,4918.52202691121,NA,NA,FALSE,TRUE\n\"indicator_Z1\",TRUE,1.00024250574872,1.00040623707253,5722.72332059546,5693.7513779477,NA,NA,FALSE,TRUE\n\"indicator_Z2\",TRUE,1.00072844261077,1.00108781922583,5689.69351399127,5571.91984922931,NA,NA,FALSE,TRUE\n\"indicator_Z3\",TRUE,1.00030954640715,1.00039903382341,4495.26249801662,4477.53299137055,4495.26249801662,4477.53299137056,FALSE,FALSE\n\"M\",TRUE,0.999736875081447,0.999875094475792,5872.59748728805,5850.90592390315,NA,NA,FALSE,TRUE\n\"margin_lower\",TRUE,0.999736875081447,0.999875094475792,5872.59748728805,5850.90592390315,NA,NA,FALSE,TRUE\n\"margin_upper\",TRUE,0.999736875081447,0.999875094475792,5872.59748728805,5850.90592390315,NA,NA,FALSE,TRUE\n",
+        "truncated": false
+      }
+    },
+    {
+      "turn_id": "01a0ee23-0c0f-7061-a33d-f0078fc064b3",
+      "turn_started_at": 1790701669,
+      "item_order": 18,
+      "type": "commandExecution",
+      "id": "exec-26ffdc8e-5f76-4733-85ea-eb6acc2d1f87",
+      "command": "/bin/zsh -lc 'ls -ld quality_reports/results/mebane_gates/G3/round1/revision3'",
+      "cwd": "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud",
+      "status": "failed",
+      "exitCode": 1,
+      "durationMs": 0,
+      "output": {
+        "text": "ls: quality_reports/results/mebane_gates/G3/round1/revision3: No such file or directory\n",
+        "truncated": false
+      }
+    },
+    {
+      "turn_id": "01a0ee23-0c0f-7061-a33d-f0078fc064b3",
+      "turn_started_at": 1790701669,
+      "item_order": 21,
+      "type": "fileChange",
+      "id": "exec-a563f354-0051-48e4-9929-9a9ea90bf6d5",
+      "status": "completed",
+      "changes": [
+        {
+          "path": "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/G3/round1/revision3/prepare_inputs.py",
+          "kind": {
+            "type": "add"
+          },
+          "diff": {
+            "text": "\"\"\"Verify predecessors and preserve canonical bytes before the diagnostic repair.\"\"\"\nimport hashlib\nimport json\nimport shutil\nfrom pathlib import Path\n\nROOT = Path(__file__).resolve().parents[6]\nHERE = Path(__file__).resolve().parent\nROUND = HERE.parent\nPRIOR = ROUND / \"revision2\"\nsha = lambda p: hashlib.sha256(p.read_bytes()).hexdigest()\nrel = lambda p: str(p.relative_to(ROOT))\n\n\ndef dump_new(path, obj):\n    assert not path.exists(), path\n    path.write_text(json.dumps(obj, ensure_ascii=False, indent=2) + \"\\n\", encoding=\"utf-8\")\n\n\nmanifest = json.loads((PRIOR / \"candidate_manifest.json\").read_text())\nassert sha(PRIOR / \"candidate_manifest.json\") == \"de779221e40964b9729bdd928a814e7e7dfd9738df866b91f6ee97307a14bd0f\"\nassert sha(ROUND / \"revision1/candidate_manifest.json\") == \"4b84fe6996a72321225fd3e5f4713439b77b74fc8a7f039d09e3dcaf7beb72a9\"\nassert sha(PRIOR / \"raw_chains.rds\") == \"66ddb0aaef7448b25e817e25c931d5608ee9c7141165842613925e9e145baf6d\"\nrows = []\nfor entry in manifest[\"files\"]:\n    src = ROOT / entry[\"path\"]\n    assert sha(src) == entry[\"sha256\"] and src.stat().st_size == entry[\"bytes\"], src\n    if src.is_relative_to(ROUND):\n        dst = src\n    else:\n        dst = HERE / \"inherited_snapshots\" / entry[\"path\"]\n        assert not dst.exists(), dst\n        dst.parent.mkdir(parents=True, exist_ok=True)\n        shutil.copy2(src, dst)\n    rows.append({**entry, \"frozen_path\": rel(dst)})\ndump_new(HERE / \"predecessor_files.json\", {\n    \"prior_manifest_sha256\": sha(PRIOR / \"candidate_manifest.json\"),\n    \"all_entries_verified_before_edit\": True, \"files\": rows})\n\ninputs = [\n    \"CLAUDE.md\",\n    \"quality_reports/results/mebane_gates/coordination/2026-09-29_g3_runtime/diagnostic_shape_adjudication.json\",\n    \"quality_reports/results/mebane_gates/G3/round1/review/diagnostic_shape_counterexample/counterexample.json\",\n    \"quality_reports/results/mebane_gates/G3/round1/review/diagnostic_shape_counterexample/shape_counterexample.csv\",\n]\nfrozen = []\nfor path in inputs:\n    src = ROOT / path\n    dst = HERE / \"repair_inputs\" / path\n    assert not dst.exists(), dst\n    dst.parent.mkdir(parents=True, exist_ok=True)\n    shutil.copy2(src, dst)\n    frozen.append({\"original_path\": path, \"path\": rel(dst), \"sha256\": sha(dst),\n                   \"bytes\": dst.stat().st_size})\nadjud = json.loads((ROOT / inputs[1]).read_text())\nassert adjud[\"source\"][\"sha256\"] == sha(PRIOR / \"candidate_manifest.json\")\nassert adjud[\"adjudication\"][\"verdict\"] == \"READY_FOR_IMPLEMENTATION\"\nassert adjud[\"review_sources\"][0][\"sha256\"] == sha(ROOT / inputs[2])\ndump_new(HERE / \"repair_inputs.json\", frozen)\nprint(\"pre-edit freeze PASS\", len(rows), \"predecessor entries\", len(frozen), \"repair inputs\")\n",
+            "truncated": false
+          }
+        },
+        {
+          "path": "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/G3/round1/revision3/repair_plan.json",
+          "kind": {
+            "type": "add"
+          },
+          "diff": {
+            "text": "{\n  \"repair_id\": \"G3-COORD-DIAG-01\",\n  \"frozen_before_checks\": true,\n  \"prior_manifest_sha256\": \"de779221e40964b9729bdd928a814e7e7dfd9738df866b91f6ee97307a14bd0f\",\n  \"raw_rds_sha256\": \"66ddb0aaef7448b25e817e25c931d5608ee9c7141165842613925e9e145baf6d\",\n  \"new_mcmc_runs\": 0,\n  \"change\": \"Pass ordinary numeric 2000 by 4 matrices directly to posterior scalar diagnostics, with dimension assertions\",\n  \"regression\": {\n    \"iterations\": 2000,\n    \"chain_means\": [-2, 2, -2, 2],\n    \"wave\": \"0.01*sin(2*pi*i/25)+0.003*cos(2*pi*i/31), i=1..2000\",\n    \"correct_rhat_min_exclusive\": 1.1,\n    \"incorrect_pooled_rhat_max_exclusive\": 1.01,\n    \"rhat_gap_min_exclusive\": 0.1,\n    \"direct_function_equality_tolerance\": 1e-12,\n    \"reject_inputs\": [\"draws_array 2000x4x1\", \"pooled matrix 8000x1\", \"transposed matrix 4x2000\"]\n  },\n  \"comparison\": \"Compare corrected diagnostics to revision2 and QA counterexample; means, MCSE, tolerances and draws must remain unchanged within 1e-12\",\n  \"scientific_criteria\": \"Existing protocol_v2 without changes; tail ESS NA still does not pass\",\n  \"process_limit_seconds\": 120,\n  \"candidate_status\": \"inconclusive\"\n}\n",
+            "truncated": false
+          }
+        }
+      ]
+    },
+    {
+      "turn_id": "01a0ee23-0c0f-7061-a33d-f0078fc064b3",
+      "turn_started_at": 1790701669,
+      "item_order": 22,
+      "type": "commandExecution",
+      "id": "exec-8a7e7676-cf97-4eaf-8add-213060c6cfa3",
+      "command": "/bin/zsh -lc 'python3 quality_reports/results/mebane_gates/G3/round1/revision3/prepare_inputs.py'",
+      "cwd": "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud",
+      "status": "completed",
+      "exitCode": 0,
+      "durationMs": 0,
+      "output": {
+        "text": "pre-edit freeze PASS 321 predecessor entries 4 repair inputs\n",
+        "truncated": false
+      }
+    },
+    {
+      "turn_id": "01a0ee23-0c0f-7061-a33d-f0078fc064b3",
+      "turn_started_at": 1790701669,
+      "item_order": 26,
+      "type": "fileChange",
+      "id": "exec-7de7ee2a-e693-4c3f-b1ee-be171e09d1a9",
+      "status": "completed",
+      "changes": [
+        {
+          "path": "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/tests/mebane/likelihood/g3_diagnostic_shape.R",
+          "kind": {
+            "type": "add"
+          },
+          "diff": {
+            "text": "# Adversarial regression for chain-preserving scalar diagnostics; no MCMC.\n.libPaths(c(\"renv/library/macos/R-4.4/aarch64-apple-darwin20\", .libPaths()))\nstopifnot(requireNamespace(\"posterior\", quietly = TRUE),\n          requireNamespace(\"jsonlite\", quietly = TRUE))\nroot <- \"quality_reports/results/mebane_gates/G3/round1/revision3\"\noutdir <- file.path(root, \"shape_regression\")\nstopifnot(!dir.exists(outdir))\ndir.create(outdir, recursive = TRUE)\nplan <- jsonlite::read_json(file.path(root, \"repair_plan.json\"), simplifyVector = TRUE)\nast <- parse(\"tests/mebane/likelihood/g3_draw_postprocess.R\")\ndefinitions <- Filter(function(x) is.call(x) && identical(x[[1L]], as.name(\"<-\")) &&\n  identical(x[[2L]], as.name(\"g3_chain_diagnostics\")), as.list(ast))\nstopifnot(length(definitions) == 1L)\neval(definitions[[1L]])\ni <- seq_len(plan$regression$iterations)\nwave <- .01*sin(2*pi*i/25) + .003*cos(2*pi*i/31)\nx <- vapply(plan$regression$chain_means, function(mu) mu + wave, numeric(2000L))\nstopifnot(identical(dim(x), c(2000L, 4L)), is.numeric(x))\narray_input <- posterior::as_draws_array(array(x, dim=c(2000L,4L,1L),\n  dimnames=list(NULL,NULL,\"fixture\")))\npooled <- as.matrix(array_input)\nexpected <- c(rhat=posterior::rhat(x), ess_bulk=posterior::ess_bulk(x),\n              ess_tail=posterior::ess_tail(x))\nactual <- g3_chain_diagnostics(x)\nnegative <- c(rhat=posterior::rhat(array_input),\n              ess_bulk=posterior::ess_bulk(array_input),\n              ess_tail=posterior::ess_tail(array_input))\nrejects <- function(value) inherits(tryCatch(g3_chain_diagnostics(value),\n  error=function(e) e), \"error\")\nchecks <- c(\n  ordinary_matrix = identical(class(x), c(\"matrix\", \"array\")),\n  pooled_shape_demonstrated = identical(dim(pooled), c(8000L,1L)),\n  production_equals_direct = all(abs(actual-expected) <\n    plan$regression$direct_function_equality_tolerance),\n  correct_rhat_detects_chain_disagreement = actual[[\"rhat\"]] >\n    plan$regression$correct_rhat_min_exclusive,\n  pooled_rhat_hides_chain_disagreement = negative[[\"rhat\"]] <\n    plan$regression$incorrect_pooled_rhat_max_exclusive,\n  rhat_gap = actual[[\"rhat\"]] - negative[[\"rhat\"]] >\n    plan$regression$rhat_gap_min_exclusive,\n  reject_draws_array = rejects(array_input),\n  reject_pooled_matrix = rejects(pooled),\n  reject_transposed_matrix = rejects(t(x)))\nwrite.csv(x, file.path(outdir, \"fixture.csv\"), row.names=FALSE)\nwrite.csv(data.frame(diagnostic=names(expected), direct=unname(expected),\n  production=unname(actual), incorrect_pooled=unname(negative)),\n  file.path(outdir, \"diagnostics.csv\"), row.names=FALSE)\njsonlite::write_json(list(checks=as.list(checks), all_pass=all(checks),\n  actual_shape=dim(x), incorrect_coerced_shape=dim(pooled),\n  posterior_version=as.character(utils::packageVersion(\"posterior\")),\n  no_new_sampling=TRUE), file.path(outdir, \"result.json\"),\n  pretty=TRUE, auto_unbox=TRUE, na=\"null\")\ncapture.output(sessionInfo(), file=file.path(outdir, \"session.txt\"))\nstopifnot(all(checks))\ncat(\"chain-shape regression PASS:\", length(checks), \"checks; correct Rhat\",\n    actual[[\"rhat\"]], \"incorrect pooled Rhat\", negative[[\"rhat\"]], \"\\n\")\n",
+            "truncated": false
+          }
+        },
+        {
+          "path": "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/tests/mebane/likelihood/g3_draw_postprocess.R",
+          "kind": {
+            "type": "update",
+            "move_path": null
+          },
+          "diff": {
+            "text": "@@ -5,5 +5,19 @@\n source(\"R/lib/mebane_model.R\")\n-outdir <- \"quality_reports/results/mebane_gates/G3/round1/revision2\"\n-rds_path <- file.path(outdir, \"raw_chains.rds\")\n-meta <- jsonlite::read_json(file.path(outdir, \"sampling_metadata.json\"),\n+g3_chain_diagnostics <- function(x, constant = FALSE) {\n+  stopifnot(is.numeric(x), identical(class(x), c(\"matrix\", \"array\")),\n+            identical(dim(x), c(2000L, 4L)))\n+  if (constant) return(c(rhat = NA_real_, ess_bulk = NA_real_, ess_tail = NA_real_))\n+  c(rhat = unname(posterior::rhat(x)),\n+    ess_bulk = unname(posterior::ess_bulk(x)),\n+    ess_tail = unname(posterior::ess_tail(x)))\n+}\n+data_dir <- \"quality_reports/results/mebane_gates/G3/round1/revision2\"\n+args <- commandArgs(trailingOnly = TRUE)\n+stopifnot(length(args) <= 1L)\n+outdir <- if (length(args)) args[1] else\n+  \"quality_reports/results/mebane_gates/G3/round1/revision3/postprocess\"\n+stopifnot(!dir.exists(outdir))\n+dir.create(outdir, recursive = TRUE)\n+rds_path <- file.path(data_dir, \"raw_chains.rds\")\n+meta <- jsonlite::read_json(file.path(data_dir, \"sampling_metadata.json\"),\n                             simplifyVector = TRUE)\n@@ -11,3 +25,4 @@\n                                        stdout = TRUE), \" \")[[1]][1]\n-stopifnot(sha(rds_path) == meta$raw_rds_sha256)\n+stopifnot(sha(rds_path) == meta$raw_rds_sha256,\n+          sha(rds_path) == \"66ddb0aaef7448b25e817e25c931d5608ee9c7141165842613925e9e145baf6d\")\n payload <- readRDS(rds_path)\n@@ -86,11 +101,8 @@\n   mcse <- if (constant) 0 else mcse_batch(x)\n-  draws <- posterior::as_draws_array(array(x, dim=c(2000L,4L,1L),\n-    dimnames=list(NULL,NULL,nm)))\n-  rh <- if (constant) NA_real_ else posterior::rhat(draws)[[1]]\n-  eb <- if (constant) NA_real_ else posterior::ess_bulk(draws)[[1]]\n-  et <- if (constant) NA_real_ else posterior::ess_tail(draws)[[1]]\n+  diagnostics <- g3_chain_diagnostics(x, constant)\n   tol <- max(1e-3, 6*mcse)\n   data.frame(target=nm, exact=expectation, mc_mean=mean(x), mcse=mcse,\n-    tolerance=tol, difference=abs(mean(x)-expectation), rhat=rh,\n-    ess_bulk=eb, ess_tail=et, constant=constant)\n+    tolerance=tol, difference=abs(mean(x)-expectation), rhat=diagnostics[[\"rhat\"]],\n+    ess_bulk=diagnostics[[\"ess_bulk\"]], ess_tail=diagnostics[[\"ess_tail\"]],\n+    constant=constant)\n }))\n@@ -101,15 +113,23 @@\n write.csv(summary, file.path(outdir, \"conditional_comparison.csv\"), row.names = FALSE)\n-old <- read.csv(\"quality_reports/results/mebane_gates/G3/round1/jags_attempt5/conditional_comparison.csv\")\n+old_path <- file.path(data_dir, \"conditional_comparison.csv\")\n+old <- read.csv(old_path)\n stopifnot(identical(as.character(old$target), as.character(summary$target)))\n+for (field in c(\"exact\", \"mc_mean\", \"mcse\", \"tolerance\", \"difference\")) {\n+  stopifnot(all(abs(old[[field]] - summary[[field]]) < 1e-12))\n+}\n prior_check <- data.frame(target=summary$target,\n-  revision1_mean=old$mc_mean, revision2_mean=summary$mc_mean,\n+  revision2_mean=old$mc_mean, revision3_mean=summary$mc_mean,\n   absolute_mean_difference=abs(summary$mc_mean-old$mc_mean),\n-  revision1_mcse=old$mcse, revision2_mcse=summary$mcse,\n-  combined_mcse=sqrt(old$mcse^2+summary$mcse^2),\n-  same_seeds_declared=TRUE)\n-write.csv(prior_check, file.path(outdir, \"replay_vs_revision1.csv\"),\n+  revision2_mcse=old$mcse, revision3_mcse=summary$mcse,\n+  revision2_rhat=old$rhat, revision3_rhat=summary$rhat,\n+  revision2_ess_bulk=old$ess_bulk, revision3_ess_bulk=summary$ess_bulk,\n+  revision2_ess_tail=old$ess_tail, revision3_ess_tail=summary$ess_tail,\n+  same_raw_draws=TRUE)\n+write.csv(prior_check, file.path(outdir, \"diagnostic_comparison_vs_revision2.csv\"),\n           row.names = FALSE)\n-result <- list(status=\"inconclusive\", repair_id=\"G3-COORD-DRAW-01\",\n+result <- list(status=\"inconclusive\", repair_id=\"G3-COORD-DIAG-01\",\n   source=\"reopened_raw_chains_rds\", raw_rds_sha256=sha(rds_path),\n-  prior_summary_sha256=sha(\"quality_reports/results/mebane_gates/G3/round1/jags_attempt5/conditional_comparison.csv\"),\n+  prior_summary_sha256=sha(old_path),\n+  diagnostic_input_shape=c(iterations=2000L, chains=4L),\n+  diagnostic_input_class=c(\"matrix\", \"array\"), new_mcmc_runs=0L,\n   all_mean_pass=all(summary$mean_pass),\n@@ -119,3 +139,4 @@\n   per_draw_identities=as.list(checks),\n-  replay_comparison=\"descriptive; no stochastic identity or new acceptance criterion\",\n+  comparison=\"same persisted draws; only diagnostic input shape changed\",\n+  remaining_tail_NA=\"Retained as unavailable under unchanged criteria; separate from the repaired chain-shape defect\",\n   margin=\"Dobs=1 algebraic offset; observed margin incompatible with N=1,A=0,W=0\",\n",
+            "truncated": false
+          }
+        }
+      ]
+    },
+    {
+      "turn_id": "01a0ee23-0c0f-7061-a33d-f0078fc064b3",
+      "turn_started_at": 1790701669,
+      "item_order": 28,
+      "type": "commandExecution",
+      "id": "exec-979d9948-50d8-4330-a334-527e653bc671",
+      "command": "/bin/zsh -lc '/usr/bin/time -p timeout 120 Rscript --vanilla tests/mebane/likelihood/g3_diagnostic_shape.R > quality_reports/results/mebane_gates/G3/round1/revision3/shape_regression.log 2>&1'",
+      "cwd": "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud",
+      "status": "completed",
+      "exitCode": 0,
+      "durationMs": 324
+    },
+    {
+      "turn_id": "01a0ee23-0c0f-7061-a33d-f0078fc064b3",
+      "turn_started_at": 1790701669,
+      "item_order": 29,
+      "type": "commandExecution",
+      "id": "exec-8d691574-5e31-4e0d-bee0-85460b3c7680",
+      "command": "/bin/zsh -lc 'cat quality_reports/results/mebane_gates/G3/round1/revision3/shape_regression/diagnostics.csv'",
+      "cwd": "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud",
+      "status": "completed",
+      "exitCode": 0,
+      "durationMs": 0,
+      "output": {
+        "text": "\"diagnostic\",\"direct\",\"production\",\"incorrect_pooled\"\n\"rhat\",1.73364677702875,1.73364677702875,0.999874992186523\n\"ess_bulk\",10.1628523132002,10.1628523132002,25.1499239037313\n\"ess_tail\",1727.51972851618,1727.51972851618,1742.84347015042\n",
+        "truncated": false
+      }
+    },
+    {
+      "turn_id": "01a0ee23-0c0f-7061-a33d-f0078fc064b3",
+      "turn_started_at": 1790701669,
+      "item_order": 30,
+      "type": "commandExecution",
+      "id": "exec-d50d5877-94bd-44b1-9e4d-f6504800df70",
+      "command": "/bin/zsh -lc 'cat quality_reports/results/mebane_gates/G3/round1/revision3/shape_regression/result.json'",
+      "cwd": "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud",
+      "status": "completed",
+      "exitCode": 0,
+      "durationMs": 0,
+      "output": {
+        "text": "{\n  \"checks\": {\n    \"ordinary_matrix\": true,\n    \"pooled_shape_demonstrated\": true,\n    \"production_equals_direct\": true,\n    \"correct_rhat_detects_chain_disagreement\": true,\n    \"pooled_rhat_hides_chain_disagreement\": true,\n    \"rhat_gap\": true,\n    \"reject_draws_array\": true,\n    \"reject_pooled_matrix\": true,\n    \"reject_transposed_matrix\": true\n  },\n  \"all_pass\": true,\n  \"actual_shape\": [2000, 4],\n  \"incorrect_coerced_shape\": [8000, 1],\n  \"posterior_version\": \"1.7.0\",\n  \"no_new_sampling\": true\n}\n",
+        "truncated": false
+      }
+    },
+    {
+      "turn_id": "01a0ee23-0c0f-7061-a33d-f0078fc064b3",
+      "turn_started_at": 1790701669,
+      "item_order": 33,
+      "type": "commandExecution",
+      "id": "exec-b3cb82f4-5621-4715-944c-67dacd310463",
+      "command": "/bin/zsh -lc '/usr/bin/time -p timeout 120 Rscript --vanilla tests/mebane/likelihood/g3_draw_postprocess.R > quality_reports/results/mebane_gates/G3/round1/revision3/postprocess.log 2>&1'",
+      "cwd": "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud",
+      "status": "completed",
+      "exitCode": 0,
+      "durationMs": 559
+    },
+    {
+      "turn_id": "01a0ee23-0c0f-7061-a33d-f0078fc064b3",
+      "turn_started_at": 1790701669,
+      "item_order": 35,
+      "type": "commandExecution",
+      "id": "exec-0a5a0c2a-76ea-4f12-860e-f9ec4a779a98",
+      "command": "/bin/zsh -lc 'cat quality_reports/results/mebane_gates/G3/round1/revision3/postprocess/postprocess_result.json'",
+      "cwd": "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud",
+      "status": "completed",
+      "exitCode": 0,
+      "durationMs": 0,
+      "output": {
+        "text": "{\n  \"status\": \"inconclusive\",\n  \"repair_id\": \"G3-COORD-DIAG-01\",\n  \"source\": \"reopened_raw_chains_rds\",\n  \"raw_rds_sha256\": \"66ddb0aaef7448b25e817e25c931d5608ee9c7141165842613925e9e145baf6d\",\n  \"prior_summary_sha256\": \"7f70d062f30a26fd5e1eaa8cc6e8d89b36ca09a519f8116bd88bf0c6ac9a173a\",\n  \"diagnostic_input_shape\": [2000, 4],\n  \"diagnostic_input_class\": [\"matrix\", \"array\"],\n  \"new_mcmc_runs\": 0,\n  \"all_mean_pass\": true,\n  \"all_diagnostic_pass\": false,\n  \"degenerate_targets\": \"S\",\n  \"missing_tail_ess_targets\": [\"r_im\", \"r_is\", \"r_cm\", \"r_cs\", \"indicator_Z1\", \"indicator_Z2\", \"M\", \"margin_lower\", \"margin_upper\"],\n  \"per_draw_identities\": {\n    \"z_support\": true,\n    \"four_count_support\": true,\n    \"one_class_per_draw\": true,\n    \"nonnegative_functionals\": true,\n    \"lower_identity\": true,\n    \"upper_identity\": true,\n    \"bound_order\": true\n  },\n  \"comparison\": \"same persisted draws; only diagnostic input shape changed\",\n  \"remaining_tail_NA\": \"Retained as unavailable under unchanged criteria; separate from the repaired chain-shape defect\",\n  \"margin\": \"Dobs=1 algebraic offset; observed margin incompatible with N=1,A=0,W=0\",\n  \"physical_counterfactual_validated\": false\n}\n",
+        "truncated": false
+      }
+    },
+    {
+      "turn_id": "01a0ee23-0c0f-7061-a33d-f0078fc064b3",
+      "turn_started_at": 1790701669,
+      "item_order": 36,
+      "type": "commandExecution",
+      "id": "exec-7d616d52-d917-40fb-b79b-91fe52f83f90",
+      "command": "/bin/zsh -lc 'cat quality_reports/results/mebane_gates/G3/round1/revision3/postprocess/conditional_comparison.csv'",
+      "cwd": "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud",
+      "status": "completed",
+      "exitCode": 0,
+      "durationMs": 0,
+      "output": {
+        "text": "\"target\",\"exact\",\"mc_mean\",\"mcse\",\"tolerance\",\"difference\",\"rhat\",\"ess_bulk\",\"ess_tail\",\"constant\",\"mean_pass\",\"diagnostic_pass\"\n\"Z\",1.38284509030503,1.38225,0.00750848878577799,0.0450509327146679,0.000595090305031132,0.999985423255829,5417.83369220932,4495.26249801662,FALSE,TRUE,TRUE\n\"r_im\",0.398981812168353,0.396125,0.00545189481293266,0.032711368877596,0.00285681216835293,0.999651181739659,7515.18142189439,NA,FALSE,TRUE,FALSE\n\"r_is\",0.248193111891865,0.247125,0.00544593914812938,0.0326756348887763,0.00106811189186487,1.00120757086769,5984.97063394254,NA,FALSE,TRUE,FALSE\n\"r_cm\",0.853167462917057,0.865625,0.00366304089381263,0.0219782453628758,0.0124575370829427,0.999857172597369,7698.37713063606,NA,FALSE,TRUE,FALSE\n\"r_cs\",0.810913486465954,0.809,0.00542363949618846,0.0325418369771307,0.00191348646595335,1.00032406621392,4936.85022071032,NA,FALSE,TRUE,FALSE\n\"indicator_Z1\",0.663139043264435,0.665375000000001,0.00617016316328332,0.0370209789796999,0.00223595673556631,1.00024250574872,5722.72332059546,NA,FALSE,TRUE,FALSE\n\"indicator_Z2\",0.290876823166099,0.287000000000001,0.00602126307134632,0.036127578428078,0.00387682316609866,1.00072844261077,5689.69351399127,NA,FALSE,TRUE,FALSE\n\"indicator_Z3\",0.0459841335694661,0.047625,0.00287151405163164,0.0172290843097898,0.00164086643053386,1.00030954640715,4495.26249801662,4495.26249801662,FALSE,TRUE,TRUE\n\"M\",0.0964248170254318,0.0939684375000001,0.00254792161217076,0.0152875296730245,0.00245637952543175,0.999736875081447,5872.59748728805,NA,FALSE,TRUE,FALSE\n\"S\",0,0,0,0.001,0,NA,NA,NA,TRUE,TRUE,TRUE\n\"margin_lower\",0.903575182974568,0.9060315625,0.00254792161217076,0.0152875296730245,0.00245637952543176,0.999736875081447,5872.59748728805,NA,FALSE,TRUE,FALSE\n\"margin_upper\",0.903575182974568,0.9060315625,0.00254792161217076,0.0152875296730245,0.00245637952543176,0.999736875081447,5872.59748728805,NA,FALSE,TRUE,FALSE\n",
+        "truncated": false
+      }
+    },
+    {
+      "turn_id": "01a0ee23-0c0f-7061-a33d-f0078fc064b3",
+      "turn_started_at": 1790701669,
+      "item_order": 37,
+      "type": "commandExecution",
+      "id": "exec-3289e8e7-33b9-4c66-9d8e-17cf139bc26a",
+      "command": "/bin/zsh -lc 'git diff -- tests/mebane/likelihood/g3_draw_postprocess.R'",
+      "cwd": "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud",
+      "status": "completed",
+      "exitCode": 0,
+      "durationMs": 0
+    },
+    {
+      "turn_id": "01a0ee23-0c0f-7061-a33d-f0078fc064b3",
+      "turn_started_at": 1790701669,
+      "item_order": 43,
+      "type": "fileChange",
+      "id": "exec-9ecdbee6-84ec-49aa-9ff0-be4a6baeeb55",
+      "status": "completed",
+      "changes": [
+        {
+          "path": "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/G3/round1/revision3/build_candidate.py",
+          "kind": {
+            "type": "add"
+          },
+          "diff": {
+            "text": "\"\"\"Validate and seal the bounded diagnostic-shape repair without sampling.\"\"\"\nimport csv\nimport difflib\nimport hashlib\nimport json\nimport math\nimport re\nimport shutil\nfrom datetime import datetime, timezone\nfrom pathlib import Path\n\nROOT = Path(__file__).resolve().parents[6]\nHERE = Path(__file__).resolve().parent\nROUND = HERE.parent\nPRIOR = ROUND / \"revision2\"\nEXECUTOR = \"01a0ee04-c901-7831-8ac6-0160da2e3883\"\nsha = lambda p: hashlib.sha256(p.read_bytes()).hexdigest()\nrel = lambda p: str(p.relative_to(ROOT))\n\n\ndef read(path):\n    return json.loads(path.read_text(encoding=\"utf-8\"))\n\n\ndef dump_new(path, obj):\n    assert not path.exists(), path\n    path.write_text(json.dumps(obj, ensure_ascii=False, indent=2) + \"\\n\", encoding=\"utf-8\")\n\n\ndef table(path):\n    with path.open() as stream:\n        return list(csv.DictReader(stream))\n\n\ndef same_number(a, b, tolerance=1e-12):\n    if a == \"NA\" or b == \"NA\":\n        return a == b\n    return abs(float(a) - float(b)) < tolerance\n\n\npredecessor = read(HERE / \"predecessor_files.json\")\nassert sha(PRIOR / \"candidate_manifest.json\") == predecessor[\"prior_manifest_sha256\"]\nassert sha(PRIOR / \"candidate_manifest.json\") == \"de779221e40964b9729bdd928a814e7e7dfd9738df866b91f6ee97307a14bd0f\"\nfor row in predecessor[\"files\"]:\n    path = ROOT / row[\"frozen_path\"]\n    assert sha(path) == row[\"sha256\"] and path.stat().st_size == row[\"bytes\"], path\nprior_run = read(PRIOR / \"run.json\")\ncontract = read(ROUND / \"gate_contract.json\")\ncontract_hash = hashlib.sha256(json.dumps(contract, sort_keys=True, ensure_ascii=False,\n                                          separators=(\",\", \":\")).encode()).hexdigest()\nassert contract_hash == prior_run[\"contract_sha256\"]\nfrozen_by_original = {row[\"path\"]: ROOT / row[\"frozen_path\"] for row in predecessor[\"files\"]}\nmetadata = read(ROUND / \"metadata_consumed.json\")\nassert sha(ROUND / \"metadata_consumed.json\") == prior_run[\"metadata_consumed_sha256\"]\ng2 = metadata[\"G2\"]\nassert g2[\"status\"] == \"pass\"\nassert sha(frozen_by_original[g2[\"records\"][\"candidate_manifest\"]]) == prior_run[\"dependency_manifests\"][\"G2\"]\nfor key in (\"review\", \"adjudication\"):\n    assert sha(frozen_by_original[g2[\"records\"][key]]) == prior_run[\"dependency_approvals\"][\"G2\"][key + \"_sha256\"]\n\nrepair_inputs = read(HERE / \"repair_inputs.json\")\nfor row in repair_inputs:\n    assert sha(ROOT / row[\"path\"]) == row[\"sha256\"]\nadjud_row = next(row for row in repair_inputs if row[\"original_path\"].endswith(\"diagnostic_shape_adjudication.json\"))\nadjud = read(ROOT / adjud_row[\"path\"])\nassert adjud[\"adjudication\"][\"verdict\"] == \"READY_FOR_IMPLEMENTATION\"\nassert adjud[\"source\"][\"sha256\"] == sha(PRIOR / \"candidate_manifest.json\")\nqa_path = ROOT / next(row[\"path\"] for row in repair_inputs if row[\"original_path\"].endswith(\"shape_counterexample.csv\"))\nqa = {row[\"target\"]: row for row in table(qa_path)}\ncurrent = table(HERE / \"postprocess/conditional_comparison.csv\")\nold = {row[\"target\"]: row for row in table(PRIOR / \"conditional_comparison.csv\")}\naliases = {\"r_im\": \"N.iota.m\", \"r_is\": \"N.iota.s\", \"r_cm\": \"N.chi.m\", \"r_cs\": \"N.chi.s\"}\nqa_comparison = []\nfor row in current:\n    previous = old[row[\"target\"]]\n    assert all(same_number(row[field], previous[field]) for field in\n               (\"exact\", \"mc_mean\", \"mcse\", \"tolerance\", \"difference\"))\n    if row[\"constant\"] == \"TRUE\":\n        assert row[\"target\"] == \"S\" and row[\"rhat\"] == row[\"ess_bulk\"] == row[\"ess_tail\"] == \"NA\"\n        continue\n    reference = qa[aliases.get(row[\"target\"], row[\"target\"])]\n    matches = all(same_number(row[key], reference[qa_key]) for key, qa_key in\n                  ((\"rhat\", \"correct_rhat\"), (\"ess_bulk\", \"correct_bulk\"), (\"ess_tail\", \"correct_tail\")))\n    assert matches, row[\"target\"]\n    qa_comparison.append({\"target\": row[\"target\"], \"matches_QA\": matches,\n                          \"tail_NA_retained\": row[\"ess_tail\"] == previous[\"ess_tail\"] == \"NA\"})\nsame_outputs = {}\nfor name in (\"functionals_by_draw.csv\", \"conditional_exact_states.csv\"):\n    same_outputs[name] = sha(HERE / \"postprocess\" / name) == sha(PRIOR / name)\n    assert same_outputs[name]\nassert sha(PRIOR / \"raw_chains.rds\") == \"66ddb0aaef7448b25e817e25c931d5608ee9c7141165842613925e9e145baf6d\"\nresult = read(HERE / \"postprocess/postprocess_result.json\")\nassert result[\"status\"] == \"inconclusive\" and result[\"new_mcmc_runs\"] == 0\nassert len(result[\"missing_tail_ess_targets\"]) == 9\nassert read(HERE / \"shape_regression/result.json\")[\"all_pass\"] is True\ndump_new(HERE / \"repair_validation.json\", {\n    \"predecessor_entries_preserved\": len(predecessor[\"files\"]),\n    \"raw_RDS_unchanged\": True, \"new_mcmc_runs\": 0,\n    \"prior_means_MCSE_and_tolerances_unchanged\": True,\n    \"byte_identical_outputs\": same_outputs, \"QA_diagnostic_comparisons\": qa_comparison,\n    \"remaining_tail_NA\": 9, \"criteria_unchanged\": True,\n    \"candidate_status\": \"inconclusive\", \"independent_repair_review_pending\": True})\n\ncode = []\nfor original in (\"tests/mebane/likelihood/g3_draw_postprocess.R\", \"tests/mebane/likelihood/g3_diagnostic_shape.R\"):\n    dest = HERE / \"code_snapshots\" / original\n    assert not dest.exists(), dest\n    dest.parent.mkdir(parents=True, exist_ok=True)\n    shutil.copy2(ROOT / original, dest)\n    code.append(rel(dest))\nbefore = frozen_by_original[\"tests/mebane/likelihood/g3_draw_postprocess.R\"]\nafter = ROOT / \"tests/mebane/likelihood/g3_draw_postprocess.R\"\ndiff = \"\".join(difflib.unified_diff(before.read_text().splitlines(keepends=True),\n                                  after.read_text().splitlines(keepends=True),\n                                  fromfile=\"revision2/g3_draw_postprocess.R\",\n                                  tofile=\"revision3/g3_draw_postprocess.R\"))\nassert not (HERE / \"postprocessor.diff\").exists()\n(HERE / \"postprocessor.diff\").write_text(diff, encoding=\"utf-8\")\ncode += [rel(HERE / \"prepare_inputs.py\"), rel(HERE / \"build_candidate.py\"),\n         rel(frozen_by_original[\"R/lib/mebane_model.R\"])]\n\ncommands = []\nfor ident, script, log in (\n    (\"shape_regression\", \"tests/mebane/likelihood/g3_diagnostic_shape.R\", \"shape_regression.log\"),\n    (\"postprocess\", \"tests/mebane/likelihood/g3_draw_postprocess.R\", \"postprocess.log\")):\n    match = re.search(r\"^real ([0-9.]+)$\", (HERE / log).read_text(), re.MULTILINE)\n    assert match\n    commands.append({\"id\": ident, \"command\": f\"/usr/bin/time -p timeout 120 Rscript --vanilla {script}\",\n                     \"exit_code\": 0, \"elapsed_seconds\": float(match.group(1)), \"log\": rel(HERE / log)})\ninputs = sorted(set([row[\"frozen_path\"] for row in predecessor[\"files\"]] +\n                    [row[\"path\"] for row in repair_inputs] +\n                    [rel(PRIOR / \"candidate_manifest.json\"), rel(HERE / \"predecessor_files.json\"),\n                     rel(HERE / \"repair_inputs.json\")]))\nconfig = [rel(ROUND / \"gate_contract.json\"), rel(ROUND / \"protocol_v2.json\"),\n          rel(HERE / \"repair_plan.json\")]\noutputs = sorted(rel(path) for path in HERE.rglob(\"*\") if path.is_file() and\n                 rel(path) not in set(inputs + code + config))\nrun = {\n    \"gate_id\": \"G3\", \"round\": \"round1\", \"revision\": \"revision3\",\n    \"contract_sha256\": contract_hash, \"executor_id\": EXECUTOR, \"goal_id\": EXECUTOR,\n    \"executor_role\": \"SOL-MODELO\", \"requested_model\": \"gpt-6-sol\", \"requested_effort\": \"xhigh\",\n    \"repair_id\": \"G3-COORD-DIAG-01\", \"candidate_status\": \"inconclusive\", \"gate_approved\": False,\n    \"repair_adjudication_sha256\": adjud_row[\"sha256\"],\n    \"prior_candidate_manifest_sha256\": sha(PRIOR / \"candidate_manifest.json\"),\n    \"metadata_consumed_sha256\": prior_run[\"metadata_consumed_sha256\"],\n    \"dependency_manifests\": prior_run[\"dependency_manifests\"],\n    \"dependency_approvals\": prior_run[\"dependency_approvals\"],\n    \"benchmark_contract_sha256\": prior_run[\"benchmark_contract_sha256\"],\n    \"qbl_sha256\": prior_run[\"qbl_sha256\"],\n    \"raw_draws_path\": rel(PRIOR / \"raw_chains.rds\"), \"raw_draws_sha256\": sha(PRIOR / \"raw_chains.rds\"),\n    \"new_mcmc_runs\": 0, \"versions\": {\"posterior\": \"1.7.0\", \"session\": rel(HERE / \"shape_regression/session.txt\")},\n    \"started_at_utc\": datetime.fromtimestamp((HERE / \"repair_plan.json\").stat().st_mtime, tz=timezone.utc).isoformat(),\n    \"ended_at_utc\": datetime.now(timezone.utc).isoformat(),\n    \"commands\": commands, \"time_limit_seconds_per_process\": 120,\n    \"timed_test_seconds_total\": sum(item[\"elapsed_seconds\"] for item in commands),\n    \"round_timed_test_seconds_total\": prior_run[\"timed_test_seconds_total\"] + sum(item[\"elapsed_seconds\"] for item in commands),\n    \"execution_code_map\": [{\"executed_path\": \"tests/mebane/likelihood/\" + Path(path).name,\n                             \"frozen_path\": path, \"sha256\": sha(ROOT / path)} for path in code[:2]],\n    \"inputs\": inputs, \"code\": code, \"configuration\": config, \"outputs\": outputs,\n}\ndump_new(HERE / \"run.json\", run)\npaths = sorted(set(inputs + code + config + outputs + [rel(HERE / \"run.json\")]))\nassert \"quality_reports/plans/mebane_2022_2026_gates.json\" not in paths\ndump_new(HERE / \"candidate_manifest.json\", {\n    \"gate_id\": \"G3\", \"round\": \"round1\", \"revision\": \"revision3\", \"contract_sha256\": contract_hash,\n    \"prior_candidate_manifest_sha256\": run[\"prior_candidate_manifest_sha256\"],\n    \"raw_draws_sha256\": run[\"raw_draws_sha256\"],\n    \"files\": [{\"path\": path, \"sha256\": sha(ROOT / path), \"bytes\": (ROOT / path).stat().st_size}\n              for path in paths]})\nprint(\"revision3 sealed\", len(paths), \"files; manifest\", sha(HERE / \"candidate_manifest.json\"))\n",
+            "truncated": false
+          }
+        },
+        {
+          "path": "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/G3/round1/revision3/engine_decision.json",
+          "kind": {
+            "type": "add"
+          },
+          "diff": {
+            "text": "{\n  \"gate_id\": \"G3\",\n  \"round\": \"round1\",\n  \"revision\": \"revision3\",\n  \"candidate_status\": \"inconclusive\",\n  \"repair_id\": \"G3-COORD-DIAG-01\",\n  \"repair_delivery\": \"implemented_awaiting_independent_QA\",\n  \"diagnostic_input\": \"ordinary numeric 2000x4 matrix\",\n  \"tail_ESS_NA_criterion_relaxed\": false,\n  \"new_mcmc_runs\": 0,\n  \"production_engine_approved\": false,\n  \"historical_stan_exact_equivalent\": false,\n  \"F1_F2_resolved\": false,\n  \"physical_counterfactual_validated\": false,\n  \"gate_approved\": false\n}\n",
+            "truncated": false
+          }
+        },
+        {
+          "path": "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/G3/round1/revision3/implementation.md",
+          "kind": {
+            "type": "add"
+          },
+          "diff": {
+            "text": "# G3 round1 revision3: forma dos diagnósticos\n\nO reparo G3-COORD-DIAG-01 passa uma matriz numérica ordinary 2000 x 4\ndiretamente a `posterior::rhat`, `posterior::ess_bulk` e `posterior::ess_tail`.\nA função compartilhada pelo pós-processamento e pela regressão rejeita\ndimensões ou classes incompatíveis antes de calcular os diagnósticos.\nO RDS de revision2 foi reaberto, com SHA-256\n`66ddb0aaef7448b25e817e25c931d5608ee9c7141165842613925e9e145baf6d`.\nNenhuma nova MCMC foi executada.\n\nA regressão determinística usa quatro cadeias com médias -2, +2, -2, +2\ne uma onda pequena, conforme `repair_plan.json`, congelado antes dos checks.\nRhat correto foi 1.73364677702875; o caminho antigo, que agrupa as quatro\ncadeias antes do split, produziu 0.999874992186523. As nove verificações\npassaram, incluindo rejeição de array 2000 x 4 x 1, matriz 8000 x 1 e matriz\ntransposta. As três estatísticas da função de produção coincidiram com as\nchamadas diretas sobre a matriz preservando as cadeias.\n\nNos draws do caso condicionado, os diagnósticos corrigidos concordam com os\nvalores independentes da QA. Para N.iota.s, Rhat é 1.00120757086769, ante\n1.00020832622997 no resumo anterior. Os funcionais por draw e os estados\nexatos permanecem byte-idênticos aos arquivos de revision2; médias, MCSE,\nexpectativas exatas e tolerâncias também permanecem iguais dentro de 1e-12.\n\nO defeito de forma está implementado e entregue para QA. O problema separado\nde diagnósticos em distribuições discretas permanece: tail ESS retornou NA\npara nove alvos não constantes. A QA atribui esses casos ao indicador de\ncauda superior constante, conforme sua tabela arquivada; esses NAs continuam\nsem satisfazer o critério do protocolo. S é constante no suporte posterior\npositivo e recebe tratamento analítico. O resultado do candidato continua\ninconclusive, sem conclusão sobre convergência nacional ou resolução F1/F2.\n\nOs manifestos de revision1 e revision2 mantêm seus hashes originais. Antes\nda edição, todos os 321 registros de revision2 foram conferidos. Os arquivos\ncanônicos referenciados por aquele candidato foram copiados para\n`inherited_snapshots`; `predecessor_files.json` mapeia cada hash anterior aos\nbytes preservados. O código novo tem snapshot próprio em `code_snapshots`.\nO manifesto ativo usa esses snapshots, o RDS existente e os novos outputs,\nsem depender do ledger vivo.\n",
+            "truncated": false
+          }
+        },
+        {
+          "path": "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/G3/round1/revision3/todo_evidence.json",
+          "kind": {
+            "type": "add"
+          },
+          "diff": {
+            "text": "{\n  \"gate_id\": \"G3\",\n  \"round\": \"round1\",\n  \"revision\": \"revision3\",\n  \"candidate_only\": true,\n  \"todos\": [\n    {\"id\": \"G3-T1\", \"status\": \"inconclusive\", \"basis\": \"inherited\", \"evidence\": [\"../deterministic_attempt3/generation_attempts.csv\", \"../deterministic_attempt3/counterexample.csv\"], \"reason\": \"Literal generator and F1/F2 unchanged\"},\n    {\"id\": \"G3-T2\", \"status\": \"partial\", \"basis\": \"inherited\", \"evidence\": [\"../deterministic_attempt3/enumeration.csv\", \"../deterministic_attempt3/mass.csv\"], \"reason\": \"Kernel results unchanged\"},\n    {\"id\": \"G3-T3\", \"status\": \"partial\", \"basis\": \"postprocessed_existing_draws\", \"evidence\": [\"postprocess/functionals_by_draw.csv\", \"repair_validation.json\"], \"reason\": \"Joint functionals preserved; physical margin not validated\"},\n    {\"id\": \"G3-T4\", \"status\": \"inconclusive\", \"basis\": \"postprocessed_existing_draws_and_deterministic_regression\", \"evidence\": [\"shape_regression/result.json\", \"postprocess/conditional_comparison.csv\", \"postprocess/diagnostic_comparison_vs_revision2.csv\", \"postprocess/postprocess_result.json\", \"repair_validation.json\"], \"reason\": \"Chain dimensions repaired; remaining tail ESS NA does not pass unchanged criteria\"}\n  ],\n  \"gate_approved\": false\n}\n",
+            "truncated": false
+          }
+        }
+      ]
+    },
+    {
+      "turn_id": "01a0ee23-0c0f-7061-a33d-f0078fc064b3",
+      "turn_started_at": 1790701669,
+      "item_order": 45,
+      "type": "commandExecution",
+      "id": "exec-3301db6c-dd68-4380-ae71-bc12b92909b0",
+      "command": "/bin/zsh -lc 'python3 quality_reports/results/mebane_gates/G3/round1/revision3/build_candidate.py'",
+      "cwd": "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud",
+      "status": "completed",
+      "exitCode": 0,
+      "durationMs": 0,
+      "output": {
+        "text": "revision3 sealed 350 files; manifest 63855471a88dbfc3840b1172aef71118f7cffbdfe425e0241f1d689bf5e67966\n",
+        "truncated": false
+      }
+    },
+    {
+      "turn_id": "01a0ee23-0c0f-7061-a33d-f0078fc064b3",
+      "turn_started_at": 1790701669,
+      "item_order": 47,
+      "type": "commandExecution",
+      "id": "exec-1810fd2e-e76f-4aa9-a751-b510c0142bb9",
+      "command": "/bin/zsh -lc \"python3 - <<'PY'\nimport hashlib,json,runpy\nfrom pathlib import Path\nroot=Path.cwd(); h=root/'quality_reports/results/mebane_gates/G3/round1/revision3'; sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()\nm=json.loads((h/'candidate_manifest.json').read_text()); r=json.loads((h/'run.json').read_text()); pre=json.loads((h/'predecessor_files.json').read_text()); metadata=json.loads((h.parent/'metadata_consumed.json').read_text())\nassert len(m['files'])==len(set(x['path'] for x in m['files']))\nassert all(sha(root/x['path'])==x['sha256'] and (root/x['path']).stat().st_size==x['bytes'] for x in m['files'])\nassert all(sha(root/x['frozen_path'])==x['sha256'] for x in pre['files'])\nassert all(any(x['path']==p for x in m['files']) for k in ('inputs','code','configuration','outputs') for p in r[k])\nchecker=runpy.run_path(str(h/'inherited_snapshots/scripts/mebane_gates.py'))\nassert checker['contract_sha256'](metadata['G3'])==r['contract_sha256']==m['contract_sha256']\nassert sha(h.parent/'revision1/candidate_manifest.json')=='4b84fe6996a72321225fd3e5f4713439b77b74fc8a7f039d09e3dcaf7beb72a9'\nassert sha(h.parent/'revision2/candidate_manifest.json')=='de779221e40964b9729bdd928a814e7e7dfd9738df866b91f6ee97307a14bd0f'\nassert sha(h.parent/'revision2/raw_chains.rds')==r['raw_draws_sha256']=='66ddb0aaef7448b25e817e25c931d5608ee9c7141165842613925e9e145baf6d'\nassert all(sha(root/e['executed_path'])==e['sha256']==sha(root/e['frozen_path']) for e in r['execution_code_map'])\nassert r['new_mcmc_runs']==0 and r['candidate_status']=='inconclusive' and not r['gate_approved']\nassert all(c['exit_code']==0 and c['elapsed_seconds']<=120 for c in r['commands'])\nassert r['round_timed_test_seconds_total']<=720\nprint('VERIFY PASS:',len(m['files']),'manifest files;',len(pre['files']),'predecessor entries recoverable; contract agrees with checker')\nprint('MANIFEST_SHA256',sha(h/'candidate_manifest.json'))\nprint('CURRENT_SECONDS',r['timed_test_seconds_total'],'ROUND_SECONDS',r['round_timed_test_seconds_total'])\nPY\"",
+      "cwd": "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud",
+      "status": "completed",
+      "exitCode": 0,
+      "durationMs": 0,
+      "output": {
+        "text": "VERIFY PASS: 350 manifest files; 321 predecessor entries recoverable; contract agrees with checker\nMANIFEST_SHA256 63855471a88dbfc3840b1172aef71118f7cffbdfe425e0241f1d689bf5e67966\nCURRENT_SECONDS 1.1300000000000001 ROUND_SECONDS 7.59\n",
+        "truncated": false
+      }
+    }
+  ]
+}

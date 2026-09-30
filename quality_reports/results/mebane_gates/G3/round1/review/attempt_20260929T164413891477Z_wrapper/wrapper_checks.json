@@ -1,0 +1,46 @@
+[
+  {
+    "case": 1,
+    "captured_engine_boundary": true,
+    "error": "QA_CAPTURE_NO_SAMPLING",
+    "response_order_correct": false,
+    "expected_negative_control": false,
+    "design_correct": true,
+    "pass": false
+  },
+  {
+    "case": 2,
+    "captured_engine_boundary": true,
+    "error": "QA_CAPTURE_NO_SAMPLING",
+    "response_order_correct": false,
+    "expected_negative_control": true,
+    "design_correct": true,
+    "pass": true
+  },
+  {
+    "case": 3,
+    "captured_engine_boundary": true,
+    "error": "QA_CAPTURE_NO_SAMPLING",
+    "response_order_correct": false,
+    "expected_negative_control": false,
+    "design_correct": true,
+    "pass": false
+  },
+  {
+    "case": "source_body_eforensics",
+    "pass": false
+  },
+  {
+    "case": "source_body_eforensics_main_par",
+    "pass": false
+  },
+  {
+    "case": "source_body_getRegMatrix",
+    "pass": false
+  },
+  {
+    "case": "independent_direct_list",
+    "pass": false,
+    "scope": "independent fixture; candidate adapter not yet reviewed"
+  }
+]

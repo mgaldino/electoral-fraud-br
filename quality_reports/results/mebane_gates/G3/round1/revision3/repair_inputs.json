@@ -1,0 +1,26 @@
+[
+  {
+    "original_path": "CLAUDE.md",
+    "path": "quality_reports/results/mebane_gates/G3/round1/revision3/repair_inputs/CLAUDE.md",
+    "sha256": "44387924cb98ac8c0b562fa2a1f61cdddafad4378326e5ac12609bb071f6efaa",
+    "bytes": 7127
+  },
+  {
+    "original_path": "quality_reports/results/mebane_gates/coordination/2026-09-29_g3_runtime/diagnostic_shape_adjudication.json",
+    "path": "quality_reports/results/mebane_gates/G3/round1/revision3/repair_inputs/quality_reports/results/mebane_gates/coordination/2026-09-29_g3_runtime/diagnostic_shape_adjudication.json",
+    "sha256": "4b22c41804b4421f765229b0d85c60b3c38073ca1aaecad86dd7a7b98f499c84",
+    "bytes": 3669
+  },
+  {
+    "original_path": "quality_reports/results/mebane_gates/G3/round1/review/diagnostic_shape_counterexample/counterexample.json",
+    "path": "quality_reports/results/mebane_gates/G3/round1/revision3/repair_inputs/quality_reports/results/mebane_gates/G3/round1/review/diagnostic_shape_counterexample/counterexample.json",
+    "sha256": "d7441f10f448121dc472c02a87bac76e8eb11bbf375c9c3db465f010b0f30b15",
+    "bytes": 3061
+  },
+  {
+    "original_path": "quality_reports/results/mebane_gates/G3/round1/review/diagnostic_shape_counterexample/shape_counterexample.csv",
+    "path": "quality_reports/results/mebane_gates/G3/round1/revision3/repair_inputs/quality_reports/results/mebane_gates/G3/round1/review/diagnostic_shape_counterexample/shape_counterexample.csv",
+    "sha256": "05f1b6207eb856f8de9331b9f4ea7b8cc6e6452703031c78fe893697774265a0",
+    "bytes": 1370
+  }
+]

@@ -1,0 +1,39 @@
+[
+  {
+    "case": 1,
+    "pass": true,
+    "response_order_correct": true,
+    "design_correct": true,
+    "source_attempt": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164413891477Z_wrapper"
+  },
+  {
+    "case": 2,
+    "pass": true,
+    "response_order_correct": false,
+    "design_correct": true,
+    "source_attempt": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164413891477Z_wrapper"
+  },
+  {
+    "case": 3,
+    "pass": true,
+    "response_order_correct": true,
+    "design_correct": true,
+    "source_attempt": "quality_reports/results/mebane_gates/G3/round1/review/attempt_20260929T164413891477Z_wrapper"
+  },
+  {
+    "case": "source_body_eforensics",
+    "pass": true
+  },
+  {
+    "case": "source_body_eforensics_main_par",
+    "pass": true
+  },
+  {
+    "case": "source_body_getRegMatrix",
+    "pass": true
+  },
+  {
+    "case": "direct_data",
+    "pass": true
+  }
+]

@@ -1,0 +1,15 @@
+{
+  "gate_id": "G3",
+  "round": "round1",
+  "revision": "revision2",
+  "candidate_only": true,
+  "repair_id": "G3-COORD-DRAW-01",
+  "todos": [
+    {"id": "G3-T1", "status": "inconclusive", "basis": "inherited_and_inspected", "evidence": ["../deterministic_attempt3/generation_attempts.csv", "../deterministic_attempt3/counterexample.csv"], "reason": "no certified full literal generator; F1/F2 unchanged"},
+    {"id": "G3-T2", "status": "partial", "basis": "inherited_and_inspected", "evidence": ["../deterministic_attempt3/enumeration.csv", "../deterministic_attempt3/mass.csv"], "reason": "kernel and normalizers checked, but physical/normalized target not certified"},
+    {"id": "G3-T3", "status": "partial", "basis": "inherited_and_executed_now", "evidence": ["../source_checks.csv", "../g3_interface_attempt1.log", "functionals_by_draw.csv", "postprocess_result.json"], "reason": "joint functionals reproducible from new RDS; physical margin and source capacity not certified"},
+    {"id": "G3-T4", "status": "inconclusive", "basis": "executed_now", "evidence": ["raw_chains.rds", "sampling_metadata.json", "conditional_exact_states.csv", "conditional_comparison.csv", "replay_vs_revision1.csv", "postprocess_result.json"], "reason": "reproducible new draws and MCSE; means pass but tail ESS unavailable for discrete targets"}
+  ],
+  "artifact_repair_delivered_for_independent_review": true,
+  "gate_approved": false
+}

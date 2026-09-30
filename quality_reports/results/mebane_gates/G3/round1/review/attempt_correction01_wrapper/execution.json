@@ -1,0 +1,64 @@
+{
+  "finished": "2026-09-29T16:46:51.141149+00:00",
+  "exit_code": 0,
+  "pid": 96668,
+  "elapsed_seconds": 0.2417032920056954,
+  "timed_out": false,
+  "outputs": [
+    {
+      "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_correction01_wrapper/eforensics_archived_ast.R",
+      "bytes": 1028,
+      "sha256": "1f77773a578d07613ca0430508b11ec91418bc77930c28f7caef8d76f5d29659"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_correction01_wrapper/eforensics_installed_ast.R",
+      "bytes": 1029,
+      "sha256": "cb9909f938fd5eca9f748883619736e7a4519dd2737f7e5e56f0603ff93b93cf"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_correction01_wrapper/eforensics_main_par_archived_ast.R",
+      "bytes": 6809,
+      "sha256": "b7d64269796a424c44324ff30742c489baa9a128e87ac8df316a7975bb0b7725"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_correction01_wrapper/eforensics_main_par_installed_ast.R",
+      "bytes": 6810,
+      "sha256": "f5ad1cbdfb143337e4a1ada68dcf2c6e09c41d6e721b2e76b7c14948013c74df"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_correction01_wrapper/getRegMatrix_archived_ast.R",
+      "bytes": 1578,
+      "sha256": "16366b747d41fa8c215d451b522b75aa3843f4b125ac94ae435df3e45afc4885"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_correction01_wrapper/getRegMatrix_installed_ast.R",
+      "bytes": 1579,
+      "sha256": "b8ebd01d4df7083306b4719cbfabf7e3537e0532564befa015afd77ec191b8eb"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_correction01_wrapper/invocation.json",
+      "bytes": 656,
+      "sha256": "aa6f26fe8be17bb932e6fa57e0c52328b42daebcd8ea02527ec5eddf8efb527f"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_correction01_wrapper/repaired_math_checks.json",
+      "bytes": 376,
+      "sha256": "6cd92034474e7da1fc6b697b15740638d389b3e6e4b67a43f8f17a0117796d34"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_correction01_wrapper/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_correction01_wrapper/stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G3/round1/review/attempt_correction01_wrapper/wrapper_checks.json",
+      "bytes": 929,
+      "sha256": "f0cc78c3fccdea8329376bcd619c6460d8ef0f5dfea212b1f6fcf9dc07548173"
+    }
+  ]
+}

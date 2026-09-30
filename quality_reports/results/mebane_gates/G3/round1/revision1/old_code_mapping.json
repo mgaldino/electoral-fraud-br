@@ -1,0 +1,17 @@
+{
+  "initial_candidate_manifest_sha256": "46f7e5d91ccd381767a2caa28a3757729779b51579b9ac6c235ba3c677b278be",
+  "drifted_paths": [
+    "tests/mebane/likelihood/g3_jags.R"
+  ],
+  "recovered": [
+    {
+      "original_path": "tests/mebane/likelihood/g3_jags.R",
+      "original_sha256": "72f96b79b35fbe7886dd70b93a6cf18a3fb944105ca97ed8df068b0ddfee253d",
+      "original_bytes": 8871,
+      "recovered_path": "quality_reports/results/mebane_gates/G3/round1/revision1/snapshots/root_candidate_old/tests/mebane/likelihood/g3_jags.R",
+      "recovered_sha256": "72f96b79b35fbe7886dd70b93a6cf18a3fb944105ca97ed8df068b0ddfee253d"
+    }
+  ],
+  "other_initial_manifest_entries": "All other 115 entries still match their original hashes at recovery time",
+  "raw_JAGS_draws": "not saved by test harness; only summary and exact-state outputs are recoverable"
+}

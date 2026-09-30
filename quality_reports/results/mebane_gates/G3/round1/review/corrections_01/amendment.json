@@ -1,0 +1,15 @@
+{
+  "id": "G3-QA-PREP-code-repairs-01",
+  "changes_frozen_targets": false,
+  "changes_tolerances": false,
+  "reruns_MCMC": false,
+  "preserves_all_prior_attempts": true,
+  "repairs": [
+    {"test": "partial_pi_density_normalizes", "cause": "Unsplit quadrature at the analytic kink p2=1/3, with R default relative integration tolerance, produced 1.0000000001020024", "repair": "Integrate separately over [0,1/3] and [1/3,1/2], explicitly rel.tol=abs.tol=1e-12; verify exact antiderivative masses 3/4 and 1/4. No tolerance change for the test."},
+    {"test": "wrapper_response_order", "cause": "QA compared as.numeric output to integer fixture using identical", "repair": "Compare both as.numeric vectors exactly; payloads and indices unchanged, negative control remains required."},
+    {"test": "wrapper_direct_matrices", "cause": "model.matrix carries assign metadata absent in direct matrices", "repair": "Assert exact numeric entries and dimensions, record original metadata; do not discard meaningful matrix order or dimension."},
+    {"test": "installed_source_body", "cause": "identical rejected expression metadata whereas all.equal was true", "repair": "Compare deparsed AST plus formals and preserve generated installed source for audit, without changing any function body."}
+  ],
+  "execution": "Postprocess preserved payloads and exact states only; then original runtime probes may begin after corrected wrapper preflight passes.",
+  "prior_runtime_attempt": "attempt_20260929T164446516572Z_runtime_01: wrapper prerequisite failed before R launch; no JAGS run or seed consumed"
+}

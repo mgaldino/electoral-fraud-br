@@ -1,0 +1,21 @@
+{
+  "runtime_success": true,
+  "phase": "completed",
+  "error": null,
+  "physical_invalid_draws": 0,
+  "pW_range": [0, 0],
+  "unique_Z": 1,
+  "case": {
+    "id": "inactive_iota_invalid",
+    "Z": 1,
+    "iota_m": 1
+  },
+  "warnings": [],
+  "source_sha256": "f8360126424b7a463f76a1c99efc89a8a5cb81339213bd4931559f14595fbab6",
+  "JAGS": "4.3.2",
+  "data_fixed_nodes": ["N", "n", "a", "w", "Z", "pi.aux1", "pi.aux2", "pi.aux3", "N.iota.m", "N.iota.s", "N.chi.m", "N.chi.s", "Xa", "Xw", "X.iota.m", "X.iota.s", "X.chi.m", "X.chi.s", "dxa", "dxw", "dx.iota.m", "dx.iota.s", "dx.chi.m", "dx.chi.s", "beta.tau1", "tau.alpha", "beta.nu1", "nu.alpha", "beta.iota.m1", "iota.m.alpha", "beta.iota.s1", "iota.s.alpha", "beta.chi.m1", "chi.m.alpha", "beta.chi.s1", "chi.s.alpha", "tb", "nb", "imb", "isb", "cmb", "csb", "th", "nh", "imh", "ish", "cmh", "csh"],
+  "free_latent_nodes": [],
+  "missing_response_nodes": [],
+  "init_nodes": [".RNG.name", ".RNG.seed"],
+  "scope": "unchanged integral source, conditioned graph; no unconditional hierarchy validation; errors are preserved observations"
+}

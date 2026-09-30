@@ -1,0 +1,139 @@
+{
+  "frozen_at": "2026-09-29T16:44:03.983172+00:00",
+  "reviewer_id": "01a0ee05-aeaf-7492-a8ea-fa731dd6214a",
+  "candidate_received": false,
+  "candidate_manifest_sha256": null,
+  "contract_sha256": "1b26bbed0577e159a57af93567f14d38d511ea7f26216ca6d5aba22e56a2dacf",
+  "inputs": [
+    {
+      "original": {
+        "path": "quality_reports/results/mebane_gates/G0/round1/qbl_installed_3017de5.jags",
+        "bytes": 6761,
+        "sha256": "f8360126424b7a463f76a1c99efc89a8a5cb81339213bd4931559f14595fbab6"
+      },
+      "snapshot": {
+        "path": "quality_reports/results/mebane_gates/G3/round1/review/freeze_01/input_00_qbl_installed_3017de5.jags",
+        "bytes": 6761,
+        "sha256": "f8360126424b7a463f76a1c99efc89a8a5cb81339213bd4931559f14595fbab6"
+      }
+    },
+    {
+      "original": {
+        "path": "quality_reports/results/mebane_gates/G2/round2/benchmark_contract.json",
+        "bytes": 14203,
+        "sha256": "63b61fb0594d0302a03d999bcff6c62967b6e999f37b4c9a8821f0f8e9ed18d2"
+      },
+      "snapshot": {
+        "path": "quality_reports/results/mebane_gates/G3/round1/review/freeze_01/input_01_benchmark_contract.json",
+        "bytes": 14203,
+        "sha256": "63b61fb0594d0302a03d999bcff6c62967b6e999f37b4c9a8821f0f8e9ed18d2"
+      }
+    },
+    {
+      "original": {
+        "path": "quality_reports/results/mebane_gates/G2/round2/sources/ef_main_3017de5.R",
+        "bytes": 50459,
+        "sha256": "ee626c0c939f84567c0ee74a100954229567911711193716a46837e1d6e3ce8b"
+      },
+      "snapshot": {
+        "path": "quality_reports/results/mebane_gates/G3/round1/review/freeze_01/input_02_ef_main_3017de5.R",
+        "bytes": 50459,
+        "sha256": "ee626c0c939f84567c0ee74a100954229567911711193716a46837e1d6e3ce8b"
+      }
+    },
+    {
+      "original": {
+        "path": "quality_reports/plans/mebane_2022_2026_gates.json",
+        "bytes": 60030,
+        "sha256": "0edd6867a7dbb8beace5f10af67f67a79e2345cd3b0bd652174ba5aba10e24da"
+      },
+      "snapshot": {
+        "path": "quality_reports/results/mebane_gates/G3/round1/review/freeze_01/input_03_mebane_2022_2026_gates.json",
+        "bytes": 60030,
+        "sha256": "0edd6867a7dbb8beace5f10af67f67a79e2345cd3b0bd652174ba5aba10e24da"
+      }
+    },
+    {
+      "original": {
+        "path": "CLAUDE.md",
+        "bytes": 7127,
+        "sha256": "44387924cb98ac8c0b562fa2a1f61cdddafad4378326e5ac12609bb071f6efaa"
+      },
+      "snapshot": {
+        "path": "quality_reports/results/mebane_gates/G3/round1/review/freeze_01/input_04_CLAUDE.md",
+        "bytes": 7127,
+        "sha256": "44387924cb98ac8c0b562fa2a1f61cdddafad4378326e5ac12609bb071f6efaa"
+      }
+    },
+    {
+      "original": {
+        "path": "quality_reports/results/mebane_gates/coordination/2026-09-29_g3_runtime/dispatch.md",
+        "bytes": 3263,
+        "sha256": "b12e985488ff08f02ef12b749e2bffd972229cb6c17ecc97240f0b51a5359ced"
+      },
+      "snapshot": {
+        "path": "quality_reports/results/mebane_gates/G3/round1/review/freeze_01/input_05_dispatch.md",
+        "bytes": 3263,
+        "sha256": "b12e985488ff08f02ef12b749e2bffd972229cb6c17ecc97240f0b51a5359ced"
+      }
+    },
+    {
+      "original": {
+        "path": "quality_reports/results/mebane_gates/coordination/2026-09-29_benchmark_round/g3_dispatch_requirements.md",
+        "bytes": 4237,
+        "sha256": "49a64cf7abae97b07069ccfaddc45f5de5aa23da454c9c0880ff442d34126a2f"
+      },
+      "snapshot": {
+        "path": "quality_reports/results/mebane_gates/G3/round1/review/freeze_01/input_06_g3_dispatch_requirements.md",
+        "bytes": 4237,
+        "sha256": "49a64cf7abae97b07069ccfaddc45f5de5aa23da454c9c0880ff442d34126a2f"
+      }
+    },
+    {
+      "original": {
+        "path": "quality_reports/results/mebane_gates/G3/round1/protocol_v2.json",
+        "bytes": 3333,
+        "sha256": "b7b54a5b6606ba45a662f8e94ff0438336525fe63733f75f70a2ffa26f77186f"
+      },
+      "snapshot": {
+        "path": "quality_reports/results/mebane_gates/G3/round1/review/freeze_01/input_07_protocol_v2.json",
+        "bytes": 3333,
+        "sha256": "b7b54a5b6606ba45a662f8e94ff0438336525fe63733f75f70a2ffa26f77186f"
+      }
+    }
+  ],
+  "preparation_files": [
+    {
+      "path": "quality_reports/results/mebane_gates/G3/round1/review/preparation/checklist.md",
+      "bytes": 4382,
+      "sha256": "ac1fdb57d241f4aadc781e0ad29bd4eefa7072c937a6e4d5c9285a8ac44d12ab"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G3/round1/review/preparation/protocol.json",
+      "bytes": 5601,
+      "sha256": "1a4ee83adbb64772c8dddc026057189e8bb4caf20b26ef084c7d9c858523a72c"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G3/round1/review/preparation/qa_math.R",
+      "bytes": 6305,
+      "sha256": "d514213d905fb6ccb8d830d9a4992a410e9a2e5d279eba8b0e04d5b22dda1681"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G3/round1/review/preparation/qa_runtime.R",
+      "bytes": 3412,
+      "sha256": "c928cc41ff9413b1aa0dc18cc04e959351a18cdc77531d70fd178ea4a46d3871"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G3/round1/review/preparation/qa_wrapper.R",
+      "bytes": 3111,
+      "sha256": "62a5fee92e2d37139535a7d4c71d7eabe968d9637ce79668e274814a3b7ed84b"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G3/round1/review/preparation/run_qa.py",
+      "bytes": 6075,
+      "sha256": "d64aba0c29c0559ab7d55730cd947c73799aa223dc260fbd84e72eff82f7ec15"
+    }
+  ],
+  "pre_freeze_parse_note": "R wrapper draft extra parenthesis repaired before tests/freeze; no numerical output observed",
+  "unrestricted_manifest_complete": false
+}
