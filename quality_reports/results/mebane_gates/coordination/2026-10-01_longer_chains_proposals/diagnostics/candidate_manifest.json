@@ -1,0 +1,105 @@
+{
+  "created_utc": "2026-10-01 12:39:35 UTC",
+  "status": "diagnostic_and_protocol_candidate_requires_user_confirmation",
+  "scope": "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/coordination/2026-10-01_longer_chains_proposals/diagnostics",
+  "new_sampling": false,
+  "prior_change": false,
+  "compilation": false,
+  "installation": false,
+  "deletion": false,
+  "independent_QA_by_executor": false,
+  "coordinator_reported_check": "69 globals / 897 cells agree with reviewed tables; user message",
+  "executor_checks": {
+    "global_rows": 69,
+    "focused_metric_matches": 78,
+    "original_metrics_and_decisions_unchanged": true,
+    "thinning": 1,
+    "class_aware_iteration_chain_shape": true,
+    "trace_PDF_pages_rendered_and_visually_inspected": 6,
+    "resource_payload_arithmetic_checked": true
+  },
+  "verification_limits": ["Local/NCP metrics reused from valid existing diagnostics", "No peak-RAM or parallel-speedup measurement", "No independent review of this proposal claimed"],
+  "canonical_files": ["diagnostic_proposal.md", "handoff.md", "analysis01/global_rankings.csv", "addenda02/all_target_rankings_corrected.csv", "addenda02/grouped_diagnostics_corrected.csv", "analysis01/rare_class_diagnostics.csv", "analysis01/within_chain_summaries.csv", "analysis01/focused_metric_checks.csv", "analysis01/focused_traces.pdf", "addenda02/proposed_protocol.csv", "addenda02/resource_payload_addendum.csv"],
+  "input_manifests": ["analysis01/input_manifest.json", "addenda02/input_rechecks.csv"],
+  "superseded_annotations": ["analysis01/all_target_rankings.csv", "analysis01/grouped_diagnostics.csv"],
+  "preserved_failed_attempt": {
+    "directory": "addenda01",
+    "script": "prepare_addenda.R",
+    "cause": "Integer overflow caught by payload assertion before writing resource payload",
+    "replacement": "prepare_addenda_v2.R and addenda02"
+  },
+  "inventory": {
+    "path": "artifact_hashes.csv",
+    "sha256": "5c2a58d97691a801ac1f5bfd823230343b60954a5df22d7712b8eae2996cb65f",
+    "files": 49,
+    "note": "Contains all existing files in this scope except manifest and inventory itself"
+  },
+  "key_hashes": [
+    {
+      "path": "addenda02/all_target_rankings_corrected.csv",
+      "bytes": 3155975,
+      "sha256": "50e98d934122d795c6effff97e5500cef05f5bf66b23797df3107832da5de589",
+      "_row": "quality_reports/results/mebane_gates/coordination/2026-10-01_longer_chains_proposals/diagnostics/addenda02/all_target_rankings_corrected.csv"
+    },
+    {
+      "path": "addenda02/grouped_diagnostics_corrected.csv",
+      "bytes": 28067,
+      "sha256": "cd4629428b337683e0743db64bf8346f977d0f98cd0b57e03b40c16e80807d1d",
+      "_row": "quality_reports/results/mebane_gates/coordination/2026-10-01_longer_chains_proposals/diagnostics/addenda02/grouped_diagnostics_corrected.csv"
+    },
+    {
+      "path": "addenda02/proposed_protocol.csv",
+      "bytes": 461,
+      "sha256": "19b4ed1dc28eb9988fd4697d33b1c9a382f3d875c5e26651749371072424bf1e",
+      "_row": "quality_reports/results/mebane_gates/coordination/2026-10-01_longer_chains_proposals/diagnostics/addenda02/proposed_protocol.csv"
+    },
+    {
+      "path": "addenda02/resource_payload_addendum.csv",
+      "bytes": 1003,
+      "sha256": "1b15e271fc94628e7957b9092713413600d582726aad5a008e40507f2b4d9f8a",
+      "_row": "quality_reports/results/mebane_gates/coordination/2026-10-01_longer_chains_proposals/diagnostics/addenda02/resource_payload_addendum.csv"
+    },
+    {
+      "path": "analysis01/focused_metric_checks.csv",
+      "bytes": 9135,
+      "sha256": "3e6199a0f830a6e6501573c96a9a60991a4387954e35fac6f78b167f1f8b70cd",
+      "_row": "quality_reports/results/mebane_gates/coordination/2026-10-01_longer_chains_proposals/diagnostics/analysis01/focused_metric_checks.csv"
+    },
+    {
+      "path": "analysis01/focused_traces.pdf",
+      "bytes": 1030111,
+      "sha256": "5a70127e26769dcc9748a82ba5452bb65e28cdbc25d9c476930ba1150253843c",
+      "_row": "quality_reports/results/mebane_gates/coordination/2026-10-01_longer_chains_proposals/diagnostics/analysis01/focused_traces.pdf"
+    },
+    {
+      "path": "analysis01/global_rankings.csv",
+      "bytes": 36428,
+      "sha256": "e2d1f8a07c8b29dc7b3dff69421bf9282ae918c9466c77478f56874026f938eb",
+      "_row": "quality_reports/results/mebane_gates/coordination/2026-10-01_longer_chains_proposals/diagnostics/analysis01/global_rankings.csv"
+    },
+    {
+      "path": "analysis01/rare_class_diagnostics.csv",
+      "bytes": 1242,
+      "sha256": "f43ae977e3f66730c985864c95d689015fc836f279c0d70cc99b1e4d91ca0bc1",
+      "_row": "quality_reports/results/mebane_gates/coordination/2026-10-01_longer_chains_proposals/diagnostics/analysis01/rare_class_diagnostics.csv"
+    },
+    {
+      "path": "analysis01/within_chain_summaries.csv",
+      "bytes": 297460,
+      "sha256": "50b2baca3c0150136bd8189dbf25ef501e85b8899a3428259db4bb8cc51fd7c4",
+      "_row": "quality_reports/results/mebane_gates/coordination/2026-10-01_longer_chains_proposals/diagnostics/analysis01/within_chain_summaries.csv"
+    },
+    {
+      "path": "diagnostic_proposal.md",
+      "bytes": 11379,
+      "sha256": "64cd4c616c4ea77bf17888dd95c1bc7a68dab817c304b0adeaa6dfb9a6c03415",
+      "_row": "quality_reports/results/mebane_gates/coordination/2026-10-01_longer_chains_proposals/diagnostics/diagnostic_proposal.md"
+    },
+    {
+      "path": "handoff.md",
+      "bytes": 1946,
+      "sha256": "152ab7aba062042b716b2b191cfc572af639d3249af32682d4b33d18cf2986dd",
+      "_row": "quality_reports/results/mebane_gates/coordination/2026-10-01_longer_chains_proposals/diagnostics/handoff.md"
+    }
+  ]
+}

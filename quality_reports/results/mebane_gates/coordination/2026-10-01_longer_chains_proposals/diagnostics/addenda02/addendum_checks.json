@@ -1,0 +1,49 @@
+{
+  "created_utc": "2026-10-01 12:35:33 UTC",
+  "scope": "Executor consistency checks, not independent QA or release",
+  "global_rows": 69,
+  "all_target_rows": 6525,
+  "focused_unthinned_matches": 78,
+  "annotation_corrections": 6,
+  "annotations_do_not_change_metrics_or_original_decisions": true,
+  "original_outputs_preserved": true,
+  "new_sampling": false,
+  "snapshots": [
+    {
+      "source": "CLAUDE.md",
+      "copy": "quality_reports/results/mebane_gates/coordination/2026-10-01_longer_chains_proposals/diagnostics/addenda02/context_snapshots/CLAUDE.md",
+      "sha256": "2945605d0196b991d2d587672154064625e0c874eca462548c3b2ec2239cf94c"
+    },
+    {
+      "source": "quality_reports/results/mebane_gates/coordination/2026-10-01_longer_chains_proposals/resource_snapshot.json",
+      "copy": "quality_reports/results/mebane_gates/coordination/2026-10-01_longer_chains_proposals/diagnostics/addenda02/context_snapshots/resource_snapshot.json",
+      "sha256": "29372112894292889d45ee10fe2e9dfae2985d4eb0ca2318d5c7f328e3c5a871"
+    },
+    {
+      "source": "quality_reports/results/mebane_gates/coordination/2026-10-01_longer_chains_proposals/decision.md",
+      "copy": "quality_reports/results/mebane_gates/coordination/2026-10-01_longer_chains_proposals/diagnostics/addenda02/context_snapshots/decision.md",
+      "sha256": "e2ffc93095f96d6ccbb21e5b8912ace2e54f614a51ed61ac2db8ff7b8201088f"
+    },
+    {
+      "source": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/handoff.md",
+      "copy": "quality_reports/results/mebane_gates/coordination/2026-10-01_longer_chains_proposals/diagnostics/addenda02/context_snapshots/handoff.md",
+      "sha256": "314f795d64383e944f501f2dd637ac3a0db39c5ca7c6409565976d137450a3db"
+    },
+    {
+      "source": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/completion.json",
+      "copy": "quality_reports/results/mebane_gates/coordination/2026-10-01_longer_chains_proposals/diagnostics/addenda02/context_snapshots/completion.json",
+      "sha256": "9da6a88aefcc5e37431c341597c1b7757658a9bda7b86925142f131982e9a137"
+    },
+    {
+      "source": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/results_adjudication.json",
+      "copy": "quality_reports/results/mebane_gates/coordination/2026-10-01_longer_chains_proposals/diagnostics/addenda02/context_snapshots/results_adjudication.json",
+      "sha256": "35064ac2153f13338adfabf1c7125a0ae728946244c3e468e9dd610750fa6717"
+    },
+    {
+      "source": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_diagnostics02/input_representation.json",
+      "copy": "quality_reports/results/mebane_gates/coordination/2026-10-01_longer_chains_proposals/diagnostics/addenda02/context_snapshots/input_representation.json",
+      "sha256": "df8d72f29e857a44247d0f31780c326638dacd494e087b4f26879d6149fd18eb"
+    }
+  ],
+  "script_sha256": "b04c501d86f59563dc43fbe1d73bfe7d2b0aa2382b9afbf6c53ee697a2ff3ef1"
+}

@@ -1,0 +1,7 @@
+"run","target","old_nature","corrected_nature","old_rhat_fails","corrected_rhat_fails"
+"A_JAGS_20k","class_indicator[51,1]","discrete_class","discrete_class",FALSE,TRUE
+"A_JAGS_20k","class_indicator[51,2]","discrete_class","discrete_class",FALSE,TRUE
+"D_JAGS_20k","M_count_total","continuous","discrete_secondary_ballot_count",TRUE,TRUE
+"D_JAGS_20k","S_count_total","continuous","discrete_secondary_ballot_count",TRUE,TRUE
+"D_Stan_2k","S_count_total","continuous","discrete_secondary_ballot_count",TRUE,TRUE
+"D_Stan_2k","M_count_total","continuous","discrete_secondary_ballot_count",TRUE,TRUE

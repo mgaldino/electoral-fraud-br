@@ -1,0 +1,308 @@
+{
+  "status": "pass",
+  "checks": [
+    {
+      "id": "fresh_process_posterior_not_loaded",
+      "pass": true,
+      "evidence": {}
+    },
+    {
+      "id": "actual_draws_shape",
+      "pass": true,
+      "evidence": {}
+    },
+    {
+      "id": "actual_sampler_shape",
+      "pass": true,
+      "evidence": {}
+    },
+    {
+      "id": "actual_draws_class",
+      "pass": true,
+      "evidence": {}
+    },
+    {
+      "id": "actual_sampler_class",
+      "pass": true,
+      "evidence": {}
+    },
+    {
+      "id": "actual_variable_names_unique",
+      "pass": true,
+      "evidence": {}
+    },
+    {
+      "id": "actual_chain_ids",
+      "pass": true,
+      "evidence": {}
+    },
+    {
+      "id": "actual_probe_variable_exists",
+      "pass": true,
+      "evidence": {}
+    },
+    {
+      "id": "raw_before_namespace_2000_by_4",
+      "pass": true,
+      "evidence": {}
+    },
+    {
+      "id": "raw_after_namespace_8000_by_1",
+      "pass": true,
+      "evidence": {}
+    },
+    {
+      "id": "normalization_independent_of_namespace_load_order",
+      "pass": true,
+      "evidence": {}
+    },
+    {
+      "id": "actual_draws_attributes_except_class",
+      "pass": true,
+      "evidence": {}
+    },
+    {
+      "id": "actual_draws_all_values_and_linear_order",
+      "pass": true,
+      "evidence": {}
+    },
+    {
+      "id": "actual_draws_base_array",
+      "pass": true,
+      "evidence": {}
+    },
+    {
+      "id": "actual_draws_iteration_chain_variable_names",
+      "pass": true,
+      "evidence": {}
+    },
+    {
+      "id": "actual_sampler_attributes_except_class",
+      "pass": true,
+      "evidence": {}
+    },
+    {
+      "id": "actual_sampler_all_values_and_linear_order",
+      "pass": true,
+      "evidence": {}
+    },
+    {
+      "id": "actual_sampler_base_array",
+      "pass": true,
+      "evidence": {}
+    },
+    {
+      "id": "actual_sampler_iteration_chain_variable_names",
+      "pass": true,
+      "evidence": {}
+    },
+    {
+      "id": "actual_original_draws_not_mutated_in_memory",
+      "pass": true,
+      "evidence": {}
+    },
+    {
+      "id": "actual_original_sampler_not_mutated_in_memory",
+      "pass": true,
+      "evidence": {}
+    },
+    {
+      "id": "representation_metadata_matches_original",
+      "pass": true,
+      "evidence": {}
+    },
+    {
+      "id": "actual_fixed_slice_pi[1]",
+      "pass": true,
+      "evidence": {}
+    },
+    {
+      "id": "actual_fixed_slice_z[1,1]",
+      "pass": true,
+      "evidence": {}
+    },
+    {
+      "id": "actual_fixed_slice_z[143,6]",
+      "pass": true,
+      "evidence": {}
+    },
+    {
+      "id": "actual_fixed_slice_r[1]",
+      "pass": true,
+      "evidence": {}
+    },
+    {
+      "id": "actual_fixed_slice_r[2]",
+      "pass": true,
+      "evidence": {}
+    },
+    {
+      "id": "actual_fixed_slice_M_RB_total",
+      "pass": true,
+      "evidence": {}
+    },
+    {
+      "id": "actual_fixed_slice_S_RB_total",
+      "pass": true,
+      "evidence": {}
+    },
+    {
+      "id": "actual_fixed_slice_M_total",
+      "pass": true,
+      "evidence": {}
+    },
+    {
+      "id": "actual_fixed_slice_S_total",
+      "pass": true,
+      "evidence": {}
+    },
+    {
+      "id": "fixture_is_real_posterior_draws_array",
+      "pass": true,
+      "evidence": {}
+    },
+    {
+      "id": "fixture_original_object_unchanged",
+      "pass": true,
+      "evidence": {}
+    },
+    {
+      "id": "fixture_attributes_except_class",
+      "pass": true,
+      "evidence": {}
+    },
+    {
+      "id": "fixture_all_values_and_linear_order",
+      "pass": true,
+      "evidence": {}
+    },
+    {
+      "id": "fixture_base_array",
+      "pass": true,
+      "evidence": {}
+    },
+    {
+      "id": "fixture_iteration_chain_variable_names",
+      "pass": true,
+      "evidence": {}
+    },
+    {
+      "id": "fixture_double_normalization_idempotent",
+      "pass": true,
+      "evidence": {}
+    },
+    {
+      "id": "unrepaired_fixture_rejected_by_unchanged_adapter",
+      "pass": true,
+      "evidence": "ncol(x) == 4L is not TRUE"
+    },
+    {
+      "id": "fixture_coordinate_order_1",
+      "pass": true,
+      "evidence": {}
+    },
+    {
+      "id": "fixture_chain_means_1",
+      "pass": true,
+      "evidence": {}
+    },
+    {
+      "id": "fixture_metrics_four_separate_chains_1",
+      "pass": true,
+      "evidence": {}
+    },
+    {
+      "id": "fixture_coordinate_order_2",
+      "pass": true,
+      "evidence": {}
+    },
+    {
+      "id": "fixture_chain_means_2",
+      "pass": true,
+      "evidence": {}
+    },
+    {
+      "id": "fixture_metrics_four_separate_chains_2",
+      "pass": true,
+      "evidence": {}
+    },
+    {
+      "id": "fixture_coordinate_order_3",
+      "pass": true,
+      "evidence": {}
+    },
+    {
+      "id": "fixture_chain_means_3",
+      "pass": true,
+      "evidence": {}
+    },
+    {
+      "id": "fixture_metrics_four_separate_chains_3",
+      "pass": true,
+      "evidence": {}
+    },
+    {
+      "id": "undefined_fixture_not_approved",
+      "pass": true,
+      "evidence": {}
+    },
+    {
+      "id": "threshold_boundaries_unchanged",
+      "pass": true,
+      "evidence": {}
+    },
+    {
+      "id": "all_860_internal_extractions_preserve_shape_values_and_order",
+      "pass": true,
+      "evidence": {}
+    },
+    {
+      "id": "synthetic_sampler_route_four_chains",
+      "pass": true,
+      "evidence": {}
+    }
+  ],
+  "details": {
+    "initial_posterior_namespace_loaded": false,
+    "before_namespace": {
+      "draws": [2000, 4],
+      "sampler": [2000, 4]
+    },
+    "after_namespace": {
+      "draws": [8000, 1],
+      "sampler": [8000, 1]
+    },
+    "actual": {
+      "draws_shape": [2000, 4, 4890],
+      "sampler_shape": [2000, 4, 6],
+      "classes": ["draws_array", "draws", "array"],
+      "sampler_classes": ["draws_array", "draws", "array"],
+      "iteration_names": ["1", "2000"],
+      "chain_names": ["1", "2", "3", "4"],
+      "all_draws_values_compared": 39120000,
+      "all_sampler_values_compared": 48000,
+      "probe_variables": ["pi[1]", "z[1,1]", "z[143,6]", "r[1]", "r[2]", "M_RB_total", "S_RB_total", "M_total", "S_total"],
+      "input_representation": {
+        "draws_class": ["draws_array", "draws", "array"],
+        "sampler_class": ["draws_array", "draws", "array"],
+        "draws_shape": [2000, 4, 4890],
+        "sampler_shape": [2000, 4, 6]
+      }
+    },
+    "route_test": {
+      "targets": 860,
+      "diagnostic_row_replaced_with_shape_spy": true,
+      "actual_empirical_NCP_metrics_computed": false
+    },
+    "runtime": {
+      "R": "R version 4.4.2 (2024-10-31)",
+      "posterior": "1.7.0",
+      "jsonlite": "2.0.0"
+    }
+  },
+  "error": {},
+  "full_postprocessor_executed": false,
+  "empirical_metrics_computed": false,
+  "empirical_resampling": false,
+  "candidate_edits": false
+}

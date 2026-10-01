@@ -1,0 +1,90 @@
+{
+  "schema_version": "1.0",
+  "date": "2026-10-01",
+  "agent_id": "01a0f756-1646-7910-ac2f-986ab89aac82",
+  "scope": "Finite model/prior/diagnostic proposal and source-bound terminology addendum only.",
+  "delivery_complete": true,
+  "awaiting_confirmation": true,
+  "noMCMC": true,
+  "precision_approval": false,
+  "gates_unchanged": true,
+  "writes_restricted_to": "quality_reports/results/mebane_gates/coordination/2026-10-01_longer_chains_proposals/model_proposals",
+  "validation": {
+    "json_status_and_source_count": "passed using JSON.parse; jq unavailable, no install",
+    "source_count": 13,
+    "source_hash_mismatches": 0,
+    "rendered_pages_read": 5,
+    "model_edits": false,
+    "new_prior_analysis_after_priority_change": false
+  },
+  "artifacts": [
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_longer_chains_proposals/model_proposals/deterministic_checks.R",
+      "sha256": "c372c4b8b1bb1f45431372f248e5b84feec125dc96ca1b3affde077bfe6af32a"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_longer_chains_proposals/model_proposals/deterministic_results.txt",
+      "sha256": "7203860680e0ef3cc22a79c14f80f117457e3e4cf885a60482ec6ecb6ae0b985"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_longer_chains_proposals/model_proposals/measfrauds_local_layout.txt",
+      "sha256": "0cb79e9a9c46495f4d17d2dfd5985a3bf4401ef9c6b57419ceef47576a4352ff"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_longer_chains_proposals/model_proposals/measfrauds_page-07.png",
+      "sha256": "f987ee7ebc6dac14d8eaa3bfe88be70272747e96e7e5d5f68b28741eacd1f4f9"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_longer_chains_proposals/model_proposals/measfrauds_page-08.png",
+      "sha256": "895daff194065853a4cac74d58dd204f7ed894fca0a5d603e6020aabbf017993"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_longer_chains_proposals/model_proposals/pm23_local_layout.txt",
+      "sha256": "d793aa5167e40140d6809441b2ca735efe13cdf5b9f3f2aa9777bbbf23e722d8"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_longer_chains_proposals/model_proposals/pm23_page-007.png",
+      "sha256": "e588e87995e0df7427e234a2ccf4e5c1b1e4a8477352cf6011a7997c42842444"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_longer_chains_proposals/model_proposals/pm23_page-008.png",
+      "sha256": "ce5b7c827d2a6a910f3e83b78c1a5b81d367917569bd0204a30ed20ae3fd6bad"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_longer_chains_proposals/model_proposals/pm23_page-009.png",
+      "sha256": "1b41e6dd6831e7a3bd80f12eca1e67977998134027b6a4640c134c5fe8448112"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_longer_chains_proposals/model_proposals/prior_predictive_means.csv",
+      "sha256": "cbcc4c634ec73908398b5f3bd6c5045d1fac8fce8fd2e151b92ddf5e8f9cc66c"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_longer_chains_proposals/model_proposals/prior_scale.csv",
+      "sha256": "4a3413bd51c80dc5ca1eed60388378412e050f5f3b12401cf6f248e05983a7eb"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_longer_chains_proposals/model_proposals/proposal.md",
+      "sha256": "23a9f3d61f6236af0a3b8f702430f8f6c8dd64cc4b1dfd4c5bdfd2de93d6632e"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_longer_chains_proposals/model_proposals/proposals.json",
+      "sha256": "da79bd54a711065b92babb41f5c71dc77bc8da46de796e37bb2bf66f119c2a7c"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_longer_chains_proposals/model_proposals/proposals.md",
+      "sha256": "cddfc52daa31b6a953166d19d2e9e1b3f5e64eb005efa8fadd1296132490f8c7"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_longer_chains_proposals/model_proposals/selected_anchors.csv",
+      "sha256": "f962728ec0d284768dca7a9027a76201eb6541cb767c0a52019b5181fb741b6c"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_longer_chains_proposals/model_proposals/source_manifest.json",
+      "sha256": "1739343b79c5a75a2fcfce11faa9b75335aed76fd50f8d7e844812fa0ad39a69"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_longer_chains_proposals/model_proposals/sources.md",
+      "sha256": "fa9cff02c53f74e410a0965198f2d92a5a8cd0be81e9a4861eea6ac913c636ba"
+    }
+  ]
+}

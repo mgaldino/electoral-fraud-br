@@ -1,0 +1,10 @@
+{
+  "source": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/comparison_report.md",
+  "source_sha256": "32a899467b576754fe1cb13350b8d0aa1dfcca5258268b993a6fe5286f35a602",
+  "renderer": "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/render_report.py",
+  "renderer_sha256": "fe09ea8c588e4e64cd7c94c5602f3b9d5340841c3a88986ebc8b9c8476ab28f7",
+  "pdf": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/comparison_JAGS20k_Stan2k_DC2010_v1.pdf",
+  "pdf_sha256": "cf53dffcb5e13d259b3f63aacb20dbff73c105245621a5f7adace9f8c5204888",
+  "reportlab": "4.4.9",
+  "visual_qa": "pending"
+}

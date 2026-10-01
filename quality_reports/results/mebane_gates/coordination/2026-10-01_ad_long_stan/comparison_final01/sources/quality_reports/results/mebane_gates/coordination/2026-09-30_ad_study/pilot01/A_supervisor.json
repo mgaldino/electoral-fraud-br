@@ -1,0 +1,17 @@
+{
+  "command": [
+    "Rscript",
+    "--vanilla",
+    "R/experimental/mebane_ad/run_jags.R",
+    "A",
+    "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/contract_v2.json",
+    "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/data/run-20260930T235038Z-pid61600/dc2010_ad_data.rds",
+    "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/A"
+  ],
+  "returncode": 0,
+  "timed_out": false,
+  "elapsed_seconds": 102.57054570800392,
+  "log": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/A_sampling.log",
+  "log_sha256": "e9b0f25d4622edd10178188b0501b18e9dcead39517da050a0f05bea915281e3",
+  "model": "A"
+}

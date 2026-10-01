@@ -1,0 +1,36 @@
+{
+  "status": "pass",
+  "reviewer_id": "01a0f717-7535-72e3-baf8-4db20da81abb",
+  "method": "Manual inspection of all four 130-dpi page renders, plus enlarged footer crops on pages 2/3 and a full-page-3 alternate render.",
+  "pdf": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/comparison_JAGS20k_Stan2k_DC2010_v1.pdf",
+  "pdf_sha256": "cf53dffcb5e13d259b3f63aacb20dbff73c105245621a5f7adace9f8c5204888",
+  "pages_inspected": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "findings": [],
+  "page_observations": [
+    {
+      "page": 1,
+      "observation": "Protocol, model distinction, compilation scope, title and footer legible. Table 1 caption begins here and table follows on page 2 without content loss."
+    },
+    {
+      "page": 2,
+      "observation": "Repair and failed-time exclusion disclosed; all five timing rows and five diagnostic-count rows present, aligned and numerically consistent. Group counts and footer complete."
+    },
+    {
+      "page": 3,
+      "observation": "All four HMC rows, all five selected engine-difference rows and first five chain-mean rows present. No clipping or footer collision; signs and decimals legible."
+    },
+    {
+      "page": 4,
+      "observation": "Final D/Stan S_total row continues Table 5 with repeated column headings. Scope limitations, scientific caveats, references and footer complete."
+    }
+  ],
+  "all_markdown_numeric_rows_found_in_pdf_text": true,
+  "all_numeric_rows_visually_checked": true,
+  "layout_clipping_overlap_missing_rows": false,
+  "PDF_recompiled_or_modified": false
+}

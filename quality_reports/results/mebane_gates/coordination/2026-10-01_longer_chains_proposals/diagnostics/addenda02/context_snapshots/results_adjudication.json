@@ -1,0 +1,18 @@
+{
+  "date": "2026-10-01",
+  "coordinator_id": "019d795a-acfa-72c2-a210-d55a46c606c2",
+  "status": "accepted_fidelity_only",
+  "candidate_manifest_sha256": "d4479f0c060e0cf757bada81c916c852b639fbbed86be73a857211b295ce45f8",
+  "review": "review_stan_results/review.json",
+  "review_sha256": "9cbd1036113cdc35725292e77a83f2f2d21678567194fc7975b4c6c51acf00a2",
+  "reviewer_id": "01a0f717-7535-72e3-baf8-4db20da81abb",
+  "findings_received": 0,
+  "decision": "Accept correspondence and preservation of frozen Stan results, diagnostic repair, comparison and report. All three new empirical fits remain computationally_inconclusive.",
+  "checks": {"independent_numerical_assertions": 21551, "independent_delivery_checks": 83, "independent_unchanged_bound_inputs": 202, "independent_globals_recomputed": 23, "independent_NCP_targets_recomputed": 860, "independent_common_decisions_reapplied": 1742, "parent_PDF_pages_viewed": 4, "reviewer_PDF_pages_viewed": 4, "parent_read_final_review": true, "parent_review_and_evidence_hashes_checked": true},
+  "limitations": ["Local continuous and individual-indicator Rhat/ESS were not exhaustively recalculated by the reviewer", "JAGS raw QA is inherited from the separate hash-bound review, not repeated in final Stan review", "Compiled target fidelity relies on independently reviewed preflight and source preservation", "Productive timings exclude disclosed failed postprocessing and development/review time"],
+  "scientific_precision_approved": false,
+  "posterior_equivalence_demonstrated": false,
+  "production_approved": false,
+  "historical_gates_reopened": false,
+  "new_sampling_released": false
+}

@@ -1,0 +1,181 @@
+{
+  "note": "Exact D augmented-posterior diagnostics; HMC, continuous, discrete and secondary RB statuses kept separate",
+  "files": [
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_diagnostics02/GQ_joint_checks.json",
+      "bytes": 128,
+      "sha256": "b98e5b220b32329bdc5572c7221b720f366f1d42fff8f37af546aedc49915689"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_diagnostics02/HMC_by_chain.csv",
+      "bytes": 143,
+      "sha256": "44528d3a43251bf13b73c674c707d8f1d85a5b94e77cbee836c071076f12a7d8"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_diagnostics02/NCP_diagnostics.csv",
+      "bytes": 282800,
+      "sha256": "e29dd857ab51b9b54382ad27d1d17b5919ffa182f3fd38137bb7d605bc2b1d5d"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_diagnostics02/RB_diagnostics.csv",
+      "bytes": 882,
+      "sha256": "be432488d7a929cc1feafa4f1d814e8959558de345a6c6e6b2c42af3d3b51b8f"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_diagnostics02/common_diagnostics/class_probabilities.csv",
+      "bytes": 17424,
+      "sha256": "876091b4e17cc652be1e74e1ac2c2f831f87d8f9fcd2b9481c209351053a1c21"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_diagnostics02/common_diagnostics/consumed_sources/R/experimental/mebane_ad/io.R",
+      "bytes": 2627,
+      "sha256": "913803dc29f9784d756ab9a1834b2a96b8201d754957dbd9f65286674b4abb2d"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_diagnostics02/common_diagnostics/consumed_sources/R/experimental/mebane_ad_long/diagnostics_stan.R",
+      "bytes": 13127,
+      "sha256": "a5a19974731ad2f19a13a27afe8b2641e138751e61898dbb35f77bc1b13ac1b9"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_diagnostics02/common_diagnostics/consumed_sources/manifest.json",
+      "bytes": 3410,
+      "sha256": "bf1b809e77defaf19d8bad4e4b5e124345216676759e22edbe1250a0c4905ecf"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_diagnostics02/common_diagnostics/consumed_sources/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/data/run-20260930T235038Z-pid61600/dc2010_ad_data.rds",
+      "bytes": 2539,
+      "sha256": "b2ef611dabb751f9286acbaae841a23c34948ed0a4b6306364cbe94d9d24903e"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_diagnostics02/common_diagnostics/consumed_sources/quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/contract_stan_diagnostics.json",
+      "bytes": 17873,
+      "sha256": "e33a59939f0d55513fea6ae05a2cc90fac617f3385193ec56e4a2a7a9b6df264"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_diagnostics02/common_diagnostics/consumed_sources/quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_diagnostics02/common_view/raw_chains.rds",
+      "bytes": 76993924,
+      "sha256": "65f14c223b7a6cb7e70eeb5c8d1620ffe4773b5fa86ebe5fc0e271e453b5ad0c"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_diagnostics02/common_diagnostics/consumed_sources/quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_diagnostics02/common_view/run_result.json",
+      "bytes": 250,
+      "sha256": "6f40a4c519f9e08a9b2458da2024881a1f121b4d9042167b6abe3ef486aaca81"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_diagnostics02/common_diagnostics/consumed_sources/quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_diagnostics02/common_view/sampling_metadata.json",
+      "bytes": 305,
+      "sha256": "6660c7d7059bc6e1b6492670c2158d0830d701aa0686723fbf4e86c020fb0182"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_diagnostics02/common_diagnostics/diagnostic_result.json",
+      "bytes": 643,
+      "sha256": "15548eafaab2777fdc14898eb802ac7a8c42d13e75a356c71ebfa2c2bf1bd867"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_diagnostics02/common_diagnostics/diagnostics.csv",
+      "bytes": 565104,
+      "sha256": "b3f1f0c2f9797d4392673cd9d2a5cdb0e2cea83f109d506fe7dfe1d386802693"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_diagnostics02/common_diagnostics/joint_functionals.csv",
+      "bytes": 983777,
+      "sha256": "61f3b3fcd80b6352b932fe91df514e0deada1ecc92c2fdf40ead65ba33f1c9fa"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_diagnostics02/common_diagnostics/manifest.json",
+      "bytes": 4631,
+      "sha256": "1913540b39dc6a1cb9d729982654ac56fab6f47012334220074d49981a1cc02e"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_diagnostics02/common_diagnostics/secondary_counts_by_unit.rds",
+      "bytes": 1830433,
+      "sha256": "855d6195dd5ab23e9d02fa45e05ce3d656163507c24fa0fc7c0485a9c594be67"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_diagnostics02/common_diagnostics/support_checks.json",
+      "bytes": 361,
+      "sha256": "a2692399a30da0f139a8f181013ff2716aee62ecfd77564c62bd950e9ced6384"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_diagnostics02/common_view/raw_chains.rds",
+      "bytes": 76993924,
+      "sha256": "65f14c223b7a6cb7e70eeb5c8d1620ffe4773b5fa86ebe5fc0e271e453b5ad0c"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_diagnostics02/common_view/run_result.json",
+      "bytes": 250,
+      "sha256": "6f40a4c519f9e08a9b2458da2024881a1f121b4d9042167b6abe3ef486aaca81"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_diagnostics02/common_view/sampling_metadata.json",
+      "bytes": 305,
+      "sha256": "6660c7d7059bc6e1b6492670c2158d0830d701aa0686723fbf4e86c020fb0182"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_diagnostics02/input_representation.json",
+      "bytes": 176,
+      "sha256": "df8d72f29e857a44247d0f31780c326638dacd494e087b4f26879d6149fd18eb"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_diagnostics02/result.json",
+      "bytes": 1004,
+      "sha256": "d65efa0630e599bcf01fd61452522a1d9035e507908233563025a97a2d83cddd"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_diagnostics02/sources/R/experimental/mebane_ad_long/postprocess_stan_v2.R",
+      "bytes": 4835,
+      "sha256": "c9942429e543e521c83db799166b470fab32cf793c27b5afd737240546efb5e0"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_diagnostics02/sources/R/experimental/mebane_ad_long/stan_bridge.R",
+      "bytes": 3081,
+      "sha256": "aec0a5c70564b2f39fd8504240bb425cd74f2ce587f138b5839f953ff66242cc"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_diagnostics02/sources/manifest.json",
+      "bytes": 4472,
+      "sha256": "6b5685414dbcfc4b36528cc86285b2d041c0b7b8402eea49f4d11bc9bbcb64b1"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_diagnostics02/sources/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/data/run-20260930T235038Z-pid61600/dc2010_ad_data.rds",
+      "bytes": 2539,
+      "sha256": "b2ef611dabb751f9286acbaae841a23c34948ed0a4b6306364cbe94d9d24903e"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_diagnostics02/sources/quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/contract.json",
+      "bytes": 17442,
+      "sha256": "fb4a296c9bf0af25812d7d8dd2ab63340fe10d4e73e806e64b5dba3f7dcf481a"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_diagnostics02/sources/quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/contract_stan_diagnostics.json",
+      "bytes": 17873,
+      "sha256": "e33a59939f0d55513fea6ae05a2cc90fac617f3385193ec56e4a2a7a9b6df264"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_diagnostics02/sources/quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan2k01/draws_array.rds",
+      "bytes": 233853613,
+      "sha256": "682bcc18ab392004be25c9a87abb52f4fb299e53eb53d5f536ff9ba267f2a15a"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_diagnostics02/sources/quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan2k01/manifest.json",
+      "bytes": 6924,
+      "sha256": "99fd59f1efc9d0f7f3009a1ba14a0221dc1082fef74089b6b2b16aa4c006f151"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_diagnostics02/sources/quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan2k01/sampler_diagnostics.rds",
+      "bytes": 116698,
+      "sha256": "bdc58529fa1f3a51c0b522e0b818bf35c0fe0c988aa67da866945e49aecfee15"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_diagnostics02/sources/quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan2k01/supervisor_finished.json",
+      "bytes": 1115,
+      "sha256": "a0a81a3c3537c59cb28fe0cbfeaf30d65328004488652972f0289a41c37d6ae3"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_diagnostics02/sources/quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan2k01/timing.json",
+      "bytes": 10721,
+      "sha256": "6203fad644b5830fe0e31bed7679d1f52480ce082943967faafd73af464a3e75"
+    }
+  ],
+  "excluded": "This manifest itself; active outer process logs are sealed separately"
+}

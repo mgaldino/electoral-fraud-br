@@ -1,0 +1,150 @@
+{
+  "schema_version": "1.0-independent-B1-preparation-review",
+  "review_id": "BOL2019-B1-R1-INDEPENDENT-01",
+  "date": "2026-10-01",
+  "reviewer": {
+    "agent_identity": "Codex independent B1 source/reference reviewer",
+    "thread_id": "01a0f756-1646-7910-ac2f-986ab89aac82",
+    "implemented_candidate": false,
+    "independence": "Separate reviewer chat. Did not implement or modify B1 candidate; did not read, import or run executor extract_reference.py. Created an independent raw-order PDF parser and checked page images.",
+    "native_goal": "Finite B1 independent review goal, no token budget; no broader program completion claim"
+  },
+  "verdict": "PASS",
+  "verdict_scope": "B1 preparation QA: faithful transcription and accurately qualified source/reference package for the exact supplied archived PDF. Not certification of an executable historical replication target.",
+  "gate_pass_recorded": false,
+  "adjudication_owner": "parent coordinator",
+  "material_candidate_discrepancies": 0,
+  "blocking_findings_in_B1_scope": 0,
+  "candidate": {
+    "root": "quality_reports/results/mebane_gates/coordination/2026-10-01_bolivia2019_replication/B1/round1",
+    "candidate_manifest_sha256": "afa7b901b85b97b5c369023d75d3e68a88679a487fef37cdb873796644ccf729",
+    "pdf_sha256": "ddcdb42bebf8160abf80b6c189db37951db8ead7f0f763d5469423778f870fb7",
+    "reference_csv_sha256": "d4b15199b6191a22fde1bae8609db7c2a9a13a143b2e966c1b9c9f82d3021fdd",
+    "manifest_entries_verified": 12,
+    "candidate_unchanged": true,
+    "original_archived_pdf_equal": true,
+    "current_remote_pdf_byte_equality": "UNKNOWN"
+  },
+  "governing_documents_read": [
+    "CLAUDE.md",
+    "quality_reports/plans/2026-10-01_bolivia2019_replication.json",
+    "quality_reports/plans/2026-10-01_bolivia2019_replication.md",
+    "quality_reports/results/mebane_gates/coordination/2026-10-01_bolivia2019_replication/user_request.txt"
+  ],
+  "checks": [
+    {
+      "id": "B1-C01",
+      "status": "PASS",
+      "description": "Recomputed supplied manifest, PDF and CSV hashes and all 12 manifest entries; original discovery PDF has the same hash. Code copies match the original extracted snapshot.",
+      "evidence": ["integrity_checks.json", "review_manifest.json"]
+    },
+    {
+      "id": "B1-C02",
+      "status": "PASS",
+      "description": "PDF metadata and visual cover confirm 36 pages, November 13 2019 version and correct printed/PDF page mapping. Local archive, not certified current URL bytes.",
+      "evidence": ["pdfinfo.txt", "visual/page-01.png", "visual_qa.json"]
+    },
+    {
+      "id": "B1-C03",
+      "status": "PASS",
+      "description": "All 51 rows independently derived: 36 per-chain globals, 9 combined globals, 4 aggregate intervals and 2 class counts. Exactly 194 numeric estimate/SD/endpoint cells and 765 field comparisons match. Signs, exponents, upper-block alignment, chain labels, statistics, covariates, units and page/phase mapping checked. Global interval levels are conditional inferences, not independently printed facts.",
+      "evidence": ["independent_check.py", "independent_reference.csv", "cell_comparison.json", "pdf_raw.txt", "visual_qa.json"]
+    },
+    {
+      "id": "B1-C04",
+      "status": "PASS_QUALIFIED",
+      "description": "Global headers establish HPD labeling; archived summary.eforensics lines 83 and 100 call coda::HPDinterval without prob, consistent with documented default .95. Exact Bolivia eforensics/coda versions are UNKNOWN. Candidate dictionary lines 45-50 and code_identity lines 37-44 qualify the inference; CSV must remain accompanied by these definitions. Aggregate .95/.995 labels are printed, but HPD/equal-tailed type and algorithm are UNKNOWN. Count intervals are not applicable.",
+      "evidence": ["../archive/ef_summary_3017de5.R", "../reference_values_dictionary.md", "../code_identity.md", "search_review.json", "visual/page-36.png"]
+    },
+    {
+      "id": "B1-C05",
+      "status": "PASS",
+      "description": "Published sequence separates initial 1000 adaptation + 5000 warmup + 2000 checking updates, later re-adaptation of 1000 + 2000 final updates, save and per-chain summary, then reload and joined/postprocessing summaries. Visible initial chain logs are 1/2 and final logs 1/3; four parallel simulations are announced in both phases. No reconstruction of unprinted chain trajectories or B3 wrapper approval.",
+      "evidence": ["visual/page-27.png", "visual/page-28.png", "visual/page-29.png", "visual/page-30.png", "visual/page-33.png", "visual/page-35.png"]
+    },
+    {
+      "id": "B1-C06",
+      "status": "PASS_QUALIFIED",
+      "description": "Candidate 3017de5 commit author/committer date 2019-10-27T04:11:09Z precedes printed October 28/29 executions; DESCRIPTION says 0.0.4. Static qbl string matches the G0 installed snapshot ignoring only outer whitespace. This supports local A identity and chronological compatibility, not Bolivia installed-code identity. R 3.4.4, Linux platform, JAGS 4.3.0 and modules are printed; seeds, init contents, exact other package versions, scripts, original CSV and saved fit remain unknown/unavailable.",
+      "evidence": ["integrity_checks.json", "../archive/eforensics_commit_3017de5.json", "../archive/eforensics_DESCRIPTION_3017de5", "../code_identity.md", "visual/page-25.png", "visual/page-27.png", "visual/page-33.png"]
+    },
+    {
+      "id": "B1-C07",
+      "status": "PASS",
+      "description": "Static source confirms imb/isb/cmb/csb/nb/tb ~ dexp(5), each reciprocal used as Normal precision for the six local effects. Exp(rate=5) is on variances, not SDs or precisions. k=.7 and partial ordering pi1 >= pi2,pi3 are visible. No author code or model was executed and no full B3 model audit is claimed.",
+      "evidence": ["../archive/ef_models_3017de5.R:983-1150", "independent_check.py"]
+    },
+    {
+      "id": "B1-C08",
+      "status": "PASS_WITH_SOURCE_OBSERVATION",
+      "description": "34277+274=34551; all 9 combined means match equal-weight chain means within 5e-11; six aggregate-to-prose roundings match. pi sums have source residuals up to 5.2e-9, retained without correction or invented cause. Printed party sums differ from printed Votos.Validos by -107; see B1-R1-F01.",
+      "evidence": ["arithmetic_checks.json", "visual/page-26.png", "visual/page-34.png", "visual/page-36.png"]
+    },
+    {
+      "id": "B1-C09",
+      "status": "PASS_QUALIFIED",
+      "description": "Reviewed bounded executor search and independently renewed local and web searches. Did not locate primary downloads of the named CSV/scripts. Official electoral URL matches PDF footnote 5; workbook not validated. Search leads and failed-access reports do not prove absence, exact bytes or input equivalence.",
+      "evidence": ["search_review.json", "web_search_raw.json", "web_search_followup_raw.json", "visual/page-03.png"]
+    },
+    {
+      "id": "B1-C10",
+      "status": "PASS",
+      "description": "Convergence is not presumed. beta.chi.m means are -0.3338680365, -0.1868573970, -0.3449911565, -1.5187331400; combined mean -0.5961124325 and SD .536580404 do not remove chain disagreement. MCMCSE tibble is empty; no R-hat/ESS/MCSE or equivalence test recomputed without raw draws.",
+      "evidence": ["arithmetic_checks.json", "visual/page-30.png", "visual/page-31.png", "visual/page-32.png", "visual/page-35.png"]
+    }
+  ],
+  "findings": [
+    {
+      "id": "B1-R1-F01",
+      "severity": "P2",
+      "status": "CONFIRMED",
+      "kind": "source_discrepancy_downstream_handoff",
+      "candidate_defect": false,
+      "blocks_B1_preparation_QA": false,
+      "title": "Published party sum is 107 below published Votos.Validos",
+      "location": "Archived PDF printed pages 25/33 (PDF 26/34), sapply(dat[,14:26],sum,na.rm=TRUE) and NValid construction",
+      "defect_evidence": "2240920+23725+76827+25283+2889359+260316+539081+42334+39826=6137671, versus Votos.Validos=6137778. The shown command overwrites NValid with the row sum of columns 15:23, not column 24. Inscritos=7314446 implies aggregate NAbst=1176775 under that formula. This is an internal published-source arithmetic mismatch, not a CSV transcription error.",
+      "impact": "B2 must not use 6137778 as an exact check for the model's reconstructed NValid total or silently repair ballots. Missing data prevent diagnosis of affected rows or cause.",
+      "repair": "Carry both totals and the -107 discrepancy into B2 data_validation and B3 mapping; investigate the actual input when available. Preserve published numbers and NValid=sum(parties), pending source-bound adjudication. No B1 reference-cell edit needed.",
+      "repair_safety": "safe_within_future_authorized_B2_B3_work",
+      "evidence": ["arithmetic_checks.json", "visual/page-26.png", "visual/page-34.png"]
+    },
+    {
+      "id": "B1-R1-F02",
+      "severity": "P3",
+      "status": "CONFIRMED",
+      "kind": "documentation_inaccuracy",
+      "candidate_defect": true,
+      "blocks_B1_preparation_QA": false,
+      "title": "Dictionary groups Table 1 with per-mesa tables",
+      "location": "reference_values_dictionary.md:77-78; archived PDF printed page 4 (PDF 5), Table 1",
+      "defect_evidence": "The dictionary calls Tables 1-18 per-mesa outputs. Table 1 instead reports MAS/CC digit/distribution diagnostics with bootstrap intervals, not per-mesa qbl rows. It is correctly outside the declared 51-row target, so no reference-cell omission results.",
+      "impact": "Minor source-navigation inaccuracy; no effect on the reviewed values, chain labels, interval caveats or phase mapping.",
+      "repair": "In a subsequent authorized documentation revision, distinguish Table 1 from Tables 2-18. Do not edit this frozen candidate in place and do not enlarge the 51-row target.",
+      "repair_safety": "safe",
+      "evidence": ["../reference_values_dictionary.md:77-78", "visual/page-05.png"]
+    }
+  ],
+  "acceptance_interpretation": {
+    "faithful_published_cells": "PASS",
+    "qualified_provenance_and_unknowns": "PASS",
+    "complete_operational_interval_definitions": "NOT_CERTIFIED: global level conditional; aggregate algorithm and classification rule unknown",
+    "full_historical_numerical_replication_readiness": "NOT_ESTABLISHED",
+    "reason_for_scoped_PASS": "Current request explicitly limits review to B1 preparation and accepts accurate qualifications. No material discrepancy between candidate and exact source remains. This verdict does not assert that the plan's strongest full-definition criterion is satisfied for a future algorithm-identical replication; unresolved functional definitions must be adjudicated in B3."
+  },
+  "limits": [
+    "No current remote PDF byte comparison; local archived source is the validation object.",
+    "Historical installed Bolivia commit/package versions and seeds/inits remain UNKNOWN.",
+    "Archive/source compatibility is not an identity certificate for the original fit or external scripts.",
+    "Aggregate numerical references are descriptive targets; exact estimand algorithm/classification and interval construction remain unresolved.",
+    "No empirical data adequacy, complete B3 wrapper/resource audit, estimation, compilation, package installation, deletion, new chat or external communication.",
+    "No B2/B3 approval, B4 release, G10 PASS, D/Stan validation, Brazilian inference or program completion.",
+    "Parent alone adjudicates this review and records any subsequent technical release."
+  ],
+  "artifacts": [
+    "review.md", "review.json", "independent_check.py", "independent_reference.csv",
+    "cell_comparison.json", "arithmetic_checks.json", "integrity_checks.json",
+    "pdf_raw.txt", "pdfinfo.txt", "visual_qa.json", "visual/",
+    "search_review.json", "web_search_raw.json", "web_search_followup_raw.json", "review_manifest.json"
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "date": "2026-10-01",
+  "coordinator_id": "019d795a-acfa-72c2-a210-d55a46c606c2",
+  "reviewer_id": "01a0f756-1646-7910-ac2f-986ab89aac82",
+  "candidate_manifest_sha256": "afa7b901b85b97b5c369023d75d3e68a88679a487fef37cdb873796644ccf729",
+  "review": "review/review.json",
+  "review_sha256": "ac26c97877b9ee1fab6a36ca8b4856fad5ec24a945162aed37fa66518521bce9",
+  "decision": "accept_source_transcription_and_qualified_preparation_only",
+  "gate_status": "inconclusive",
+  "strongest_B1_acceptance_met": false,
+  "reason": "51 records and 194 numeric cells are independently faithful, but complete operational interval/aggregate definitions and historical code identity remain unestablished. A scoped reviewer PASS is not promoted to full B1 acceptance or a sampling release.",
+  "findings": [
+    {"id": "B1-R1-F01", "classification": "CONFIRMED", "candidate_defect": false, "resolution": "Preserve party-sum 6137671 and printed Votos.Validos 6137778 separately. Record difference107 as a mandatory B2/B3 check; do not correct or drop rows without actual source evidence.", "evidence": ["review/arithmetic_checks.json", "review/visual/page-26.png", "reference_notes_addendum.md"]},
+    {"id": "B1-R1-F02", "classification": "CONFIRMED", "candidate_defect": true, "resolution": "Minor navigation error corrected by additive reference_notes_addendum.md, preserving frozen dictionary and reference CSV. Table1 is MAS/CC digit/distribution diagnostics, not mesa-level qbl output.", "evidence": ["review/visual/page-05.png", "reference_notes_addendum.md"]}
+  ],
+  "parent_checks": ["Read independent review and arithmetic evidence", "Viewed PDF pages26and5", "Independently recomputed nine-party sum6137671, difference107 and derived A1176775"],
+  "independent_data_preparation_allowed": true,
+  "data_adoption_approved": false,
+  "estimation_released": false,
+  "G10_approved": false,
+  "production_approved": false
+}

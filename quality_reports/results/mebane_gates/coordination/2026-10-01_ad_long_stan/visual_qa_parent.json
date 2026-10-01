@@ -1,0 +1,12 @@
+{
+  "date": "2026-10-01",
+  "reviewer": "parent coordinator",
+  "pdf": "comparison_JAGS20k_Stan2k_DC2010_v1.pdf",
+  "pdf_sha256": "cf53dffcb5e13d259b3f63aacb20dbff73c105245621a5f7adace9f8c5204888",
+  "render": "pdftoppm -png -scale-to 1400",
+  "pages_inspected": [1, 2, 3, 4],
+  "images": ["report_page-1.png", "report_page-2.png", "report_page-3.png", "report_page-4.png"],
+  "status": "legible_no_material_clipping",
+  "observations": "Tables, accents, numbers and references are legible. Table 5 continues onto page 4 with its header repeated. Table 1 caption starts on the preceding page; this is visible but does not hide or sever its definition.",
+  "independent_result_and_visual_QA": "pending separate reviewer"
+}

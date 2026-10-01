@@ -1,0 +1,119 @@
+{
+  "pi_sums": {
+    "1": {
+      "sum": "1.0000000020",
+      "deviation_from_one": "2.0E-9"
+    },
+    "2": {
+      "sum": "1.0000000015",
+      "deviation_from_one": "1.5E-9"
+    },
+    "3": {
+      "sum": "1.0000000010",
+      "deviation_from_one": "1.0E-9"
+    },
+    "4": {
+      "sum": "0.9999999948",
+      "deviation_from_one": "-5.2E-9"
+    },
+    "combined": {
+      "sum": "0.9999999999",
+      "deviation_from_one": "-1E-10"
+    }
+  },
+  "combined_means": {
+    "pi[1]": {
+      "equal_chain_mean": "0.990886874375",
+      "published": "0.9908868744",
+      "difference": "2.5E-11"
+    },
+    "pi[2]": {
+      "equal_chain_mean": "0.00038972125",
+      "published": "0.0003897213",
+      "difference": "5E-11"
+    },
+    "pi[3]": {
+      "equal_chain_mean": "0.0087234042",
+      "published": "0.0087234042",
+      "difference": "0E-10"
+    },
+    "beta.tau": {
+      "equal_chain_mean": "1.7167886950",
+      "published": "1.7167886950",
+      "difference": "0E-10"
+    },
+    "beta.nu": {
+      "equal_chain_mean": "-0.1046339132",
+      "published": "-0.1046339132",
+      "difference": "0E-10"
+    },
+    "beta.iota.m": {
+      "equal_chain_mean": "-0.071248926425",
+      "published": "-0.0712489264",
+      "difference": "2.5E-11"
+    },
+    "beta.iota.s": {
+      "equal_chain_mean": "-0.1083553735",
+      "published": "-0.1083553735",
+      "difference": "0E-10"
+    },
+    "beta.chi.m": {
+      "equal_chain_mean": "-0.5961124325",
+      "published": "-0.5961124325",
+      "difference": "0E-10"
+    },
+    "beta.chi.s": {
+      "equal_chain_mean": "0.1845173920",
+      "published": "0.1845173920",
+      "difference": "0E-10"
+    }
+  },
+  "printed_party_totals": {
+    "inputs_pdf_26_and_34": [
+      2240920,
+      23725,
+      76827,
+      25283,
+      2889359,
+      260316,
+      539081,
+      42334,
+      39826
+    ],
+    "sum_NValid_party_columns": 6137671,
+    "printed_Votos_Validos": 6137778,
+    "difference": -107,
+    "Inscritos": 7314446,
+    "derived_NAbst_from_party_sum": 1176775,
+    "Blancos": 93507,
+    "Nulos": 229337,
+    "registered_minus_valid_minus_blank_minus_null": 853931,
+    "limitation": "Printed aggregate arithmetic only. NValid is reconstructed from party columns, not Votos.Validos. No row-level B2 validation or correction inferred."
+  },
+  "class_count_sum": {
+    "no_fraud": 34277,
+    "fraud": 274,
+    "total": 34551
+  },
+  "fraud_mean_difference": "17224.020",
+  "rounding_to_printed_page_1": {
+    "22519.818": "22519.8",
+    "20479.794": "20479.8",
+    "24663.779": "24663.8",
+    "5295.798": "5295.8",
+    "4751.090": "4751.1",
+    "5880.218": "5880.2"
+  },
+  "beta_chi_m": {
+    "chain_means": [
+      "-0.3338680365",
+      "-0.1868573970",
+      "-0.3449911565",
+      "-1.5187331400"
+    ],
+    "range": "1.3318757430",
+    "combined_mean": "-0.5961124325",
+    "combined_SD": "0.536580404",
+    "interpretation": "Visible chain disagreement, not a convergence certificate or recomputed R-hat."
+  }
+}

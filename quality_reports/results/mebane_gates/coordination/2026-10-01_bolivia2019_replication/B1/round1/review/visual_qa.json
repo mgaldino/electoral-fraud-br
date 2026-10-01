@@ -1,0 +1,29 @@
+{
+  "date": "2026-10-01",
+  "reviewer": "Codex independent B1 source/reference reviewer",
+  "reviewer_thread_id": "01a0f756-1646-7910-ac2f-986ab89aac82",
+  "source_pdf": "../archive/Bolivia2019.pdf",
+  "source_pdf_sha256": "ddcdb42bebf8160abf80b6c189db37951db8ead7f0f763d5469423778f870fb7",
+  "renderer": "Existing Poppler pdftoppm; PNG; -scale-to 1700",
+  "viewer": "Native view_image tool, image pixels inspected by independent reviewer",
+  "rendered_pdf_pages": [1, 2, 3, 5, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36],
+  "visually_inspected_pdf_pages": [1, 2, 3, 5, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36],
+  "file_pattern": "visual/page-NN.png",
+  "coverage": [
+    {"pages": [1], "check": "Exact title, author, November 13 2019 date and unnumbered cover"},
+    {"pages": [2, 3], "check": "Rounded means and 99.5% intervals, manufactured versus total semantics, 274/34551, official electoral URL in footnote 5"},
+    {"pages": [5], "check": "Table 1 is MAS/CC aggregate digit/distribution diagnostics, supporting minor finding B1-R1-F02"},
+    {"pages": [25, 26, 27], "check": "R version/platform, named input, column mapping, displayed sums, NValid reconstruction, filters, intercept-only call and published settings"},
+    {"pages": [28, 29, 30], "check": "Checking versus final phases, additional adaptation, dates, visible init file names, modules, empty MCMCSE output, save/summary boundary"},
+    {"pages": [31, 32], "check": "All 36 global rows, chain identity including Chain 3 label across page break, numeric signs/exponents, SD and separated lower/upper HPD columns"},
+    {"pages": [33, 34, 35], "check": "External sources, reload, same displayed input totals, join.chains=TRUE and all 9 combined global rows"},
+    {"pages": [36], "check": "COMBO labels, both classification counts, two total means and all 8 aggregate endpoints, 95/995 level labels"}
+  ],
+  "limitations": [
+    "The source PDF has right-edge clipping in some code/log lines, especially postprocessing expressions. No unseen characters or executable script were reconstructed.",
+    "The 194 numeric target cells are legible and independently checked against raw text; this is not visual validation of all 36 document pages or all per-mesa tables.",
+    "Rendered images establish what the local archived pages display, not current remote byte identity or historical program semantics."
+  ],
+  "result": "PASS_FOR_REQUESTED_VISUAL_SOURCE_QA",
+  "rendered_files_retained": true
+}

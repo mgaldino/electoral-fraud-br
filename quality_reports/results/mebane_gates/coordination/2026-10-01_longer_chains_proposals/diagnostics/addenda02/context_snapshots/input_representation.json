@@ -1,0 +1,6 @@
+{
+  "draws_class": ["draws_array", "draws", "array"],
+  "sampler_class": ["draws_array", "draws", "array"],
+  "draws_shape": [2000, 4, 4890],
+  "sampler_shape": [2000, 4, 6]
+}

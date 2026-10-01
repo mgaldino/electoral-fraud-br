@@ -1,0 +1,18 @@
+{
+  "command": [
+    "Rscript",
+    "--vanilla",
+    "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_impl/run-20261001T105406Z-attempt03-01a0f4b5/preparation/sources/R/experimental/mebane_ad_stan/run_stan.R",
+    "sample",
+    "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_impl/run-20261001T105406Z-attempt03-01a0f4b5/preparation",
+    "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/review/stan/review.json",
+    "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan2k01"
+  ],
+  "exit_code": 0,
+  "timed_out": false,
+  "wall_seconds": 2030.2287324590143,
+  "console_sha256": "2c8db61a29e620ff70733841b1d647e603f3437d03eb93558013ad724667f285",
+  "partial_artifacts_retained": true,
+  "automatic_retry": false,
+  "executor_id": "019d795a-acfa-72c2-a210-d55a46c606c2"
+}

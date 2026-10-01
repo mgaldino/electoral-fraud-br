@@ -1,0 +1,603 @@
+{
+  "execution_status": "automated_delivery_checks_completed",
+  "checks": [
+    {
+      "id": "comparison:five-distinct-rows",
+      "pass": true
+    },
+    {
+      "id": "comparison:fixed-row-order",
+      "pass": true
+    },
+    {
+      "id": "comparison:four-JAGS-rows-reused",
+      "pass": true
+    },
+    {
+      "id": "comparison:92-JAGS-globals-and-18-groups-reused",
+      "pass": true
+    },
+    {
+      "id": "comparison:no-adoption",
+      "pass": true
+    },
+    {
+      "id": "independent:completed",
+      "pass": true
+    },
+    {
+      "id": "Stan:productive-vs-failed-attempts",
+      "pass": true
+    },
+    {
+      "id": "Stan:failed-time-explicitly-excluded",
+      "pass": true
+    },
+    {
+      "id": "Stan:repair-described",
+      "pass": true
+    },
+    {
+      "id": "Stan:compilation-scope",
+      "pass": true
+    },
+    {
+      "id": "Stan:completed",
+      "pass": true
+    },
+    {
+      "id": "Stan:HMC-status",
+      "pass": true
+    },
+    {
+      "id": "Stan:common-status",
+      "pass": true
+    },
+    {
+      "id": "Stan:115-common-global-rows",
+      "pass": true
+    },
+    {
+      "id": "Stan:pi[1]:pass",
+      "pass": true
+    },
+    {
+      "id": "Stan:pi[2]:pass",
+      "pass": true
+    },
+    {
+      "id": "Stan:pi[3]:pass",
+      "pass": true
+    },
+    {
+      "id": "Stan:tau.alpha:pass",
+      "pass": true
+    },
+    {
+      "id": "Stan:nu.alpha:pass",
+      "pass": true
+    },
+    {
+      "id": "Stan:iota.m.alpha:pass",
+      "pass": true
+    },
+    {
+      "id": "Stan:iota.s.alpha:pass",
+      "pass": true
+    },
+    {
+      "id": "Stan:chi.m.alpha:pass",
+      "pass": true
+    },
+    {
+      "id": "Stan:chi.s.alpha:pass",
+      "pass": true
+    },
+    {
+      "id": "Stan:beta.tau1:pass",
+      "pass": true
+    },
+    {
+      "id": "Stan:beta.nu1:pass",
+      "pass": true
+    },
+    {
+      "id": "Stan:beta.iota.m1:pass",
+      "pass": true
+    },
+    {
+      "id": "Stan:beta.iota.s1:pass",
+      "pass": true
+    },
+    {
+      "id": "Stan:beta.chi.m1:pass",
+      "pass": true
+    },
+    {
+      "id": "Stan:beta.chi.s1:pass",
+      "pass": true
+    },
+    {
+      "id": "Stan:tb:pass",
+      "pass": true
+    },
+    {
+      "id": "Stan:nb:pass",
+      "pass": true
+    },
+    {
+      "id": "Stan:imb:pass",
+      "pass": true
+    },
+    {
+      "id": "Stan:isb:pass",
+      "pass": true
+    },
+    {
+      "id": "Stan:cmb:pass",
+      "pass": true
+    },
+    {
+      "id": "Stan:csb:pass",
+      "pass": true
+    },
+    {
+      "id": "Stan:M_total:pass",
+      "pass": true
+    },
+    {
+      "id": "Stan:S_total:pass",
+      "pass": true
+    },
+    {
+      "id": "Stan:four-mandatory-groups",
+      "pass": true
+    },
+    {
+      "id": "comparison:22-groups",
+      "pass": true
+    },
+    {
+      "id": "engine:23-unique-differences",
+      "pass": true
+    },
+    {
+      "id": "engine:pi[1]:descriptive-only",
+      "pass": true
+    },
+    {
+      "id": "engine:pi[2]:descriptive-only",
+      "pass": true
+    },
+    {
+      "id": "engine:pi[3]:descriptive-only",
+      "pass": true
+    },
+    {
+      "id": "engine:tau.alpha:descriptive-only",
+      "pass": true
+    },
+    {
+      "id": "engine:nu.alpha:descriptive-only",
+      "pass": true
+    },
+    {
+      "id": "engine:iota.m.alpha:descriptive-only",
+      "pass": true
+    },
+    {
+      "id": "engine:iota.s.alpha:descriptive-only",
+      "pass": true
+    },
+    {
+      "id": "engine:chi.m.alpha:descriptive-only",
+      "pass": true
+    },
+    {
+      "id": "engine:chi.s.alpha:descriptive-only",
+      "pass": true
+    },
+    {
+      "id": "engine:beta.tau1:descriptive-only",
+      "pass": true
+    },
+    {
+      "id": "engine:beta.nu1:descriptive-only",
+      "pass": true
+    },
+    {
+      "id": "engine:beta.iota.m1:descriptive-only",
+      "pass": true
+    },
+    {
+      "id": "engine:beta.iota.s1:descriptive-only",
+      "pass": true
+    },
+    {
+      "id": "engine:beta.chi.m1:descriptive-only",
+      "pass": true
+    },
+    {
+      "id": "engine:beta.chi.s1:descriptive-only",
+      "pass": true
+    },
+    {
+      "id": "engine:tb:descriptive-only",
+      "pass": true
+    },
+    {
+      "id": "engine:nb:descriptive-only",
+      "pass": true
+    },
+    {
+      "id": "engine:imb:descriptive-only",
+      "pass": true
+    },
+    {
+      "id": "engine:isb:descriptive-only",
+      "pass": true
+    },
+    {
+      "id": "engine:cmb:descriptive-only",
+      "pass": true
+    },
+    {
+      "id": "engine:csb:descriptive-only",
+      "pass": true
+    },
+    {
+      "id": "engine:M_total:descriptive-only",
+      "pass": true
+    },
+    {
+      "id": "engine:S_total:descriptive-only",
+      "pass": true
+    },
+    {
+      "id": "comparison:completion-status",
+      "pass": true
+    },
+    {
+      "id": "comparison:all-current-precision",
+      "pass": true
+    },
+    {
+      "id": "report:failed-diagnostic-time-present",
+      "pass": true
+    },
+    {
+      "id": "report:productive-vs-failed-disclosure",
+      "pass": true
+    },
+    {
+      "id": "report:five-timing-and-count-rows",
+      "pass": true
+    },
+    {
+      "id": "report:timing:1:id",
+      "pass": true
+    },
+    {
+      "id": "report:counts:1:id",
+      "pass": true
+    },
+    {
+      "id": "report:timing:2:id",
+      "pass": true
+    },
+    {
+      "id": "report:counts:2:id",
+      "pass": true
+    },
+    {
+      "id": "report:timing:3:id",
+      "pass": true
+    },
+    {
+      "id": "report:counts:3:id",
+      "pass": true
+    },
+    {
+      "id": "report:timing:4:id",
+      "pass": true
+    },
+    {
+      "id": "report:counts:4:id",
+      "pass": true
+    },
+    {
+      "id": "report:timing:5:id",
+      "pass": true
+    },
+    {
+      "id": "report:counts:5:id",
+      "pass": true
+    },
+    {
+      "id": "report:HMC-four-chains",
+      "pass": true
+    },
+    {
+      "id": "report:difference-five-targets",
+      "pass": true
+    },
+    {
+      "id": "report:numeric-tables",
+      "pass": true
+    },
+    {
+      "id": "PDF:header",
+      "pass": true
+    },
+    {
+      "id": "PDF:page-count",
+      "pass": true
+    }
+  ],
+  "PDF_pages": 4,
+  "PDF_rendered": true,
+  "PDF_text_rows": [
+    {
+      "cells": [
+        "A_JAGS_2k",
+        "102,57",
+        "22,35",
+        "124,92",
+        "3,451",
+        "4,4 / 4,0"
+      ],
+      "found_in_reading_order": true
+    },
+    {
+      "cells": [
+        "D_JAGS_2k",
+        "68,25",
+        "21,72",
+        "89,97",
+        "2,472",
+        "4,8 / 5,0"
+      ],
+      "found_in_reading_order": true
+    },
+    {
+      "cells": [
+        "A_JAGS_20k",
+        "385,84",
+        "206,70",
+        "592,54",
+        "3,097",
+        "4,5 / 5,3"
+      ],
+      "found_in_reading_order": true
+    },
+    {
+      "cells": [
+        "D_JAGS_20k",
+        "261,65",
+        "202,61",
+        "464,26",
+        "1,518",
+        "7,4 / 11,2"
+      ],
+      "found_in_reading_order": true
+    },
+    {
+      "cells": [
+        "D_Stan_2k",
+        "2.030,23",
+        "52,52",
+        "2.125,92",
+        "2,693",
+        "4,7 / 18,1"
+      ],
+      "found_in_reading_order": true
+    },
+    {
+      "cells": [
+        "A_JAGS_2k",
+        "15",
+        "1.605",
+        "2.171",
+        "432"
+      ],
+      "found_in_reading_order": true
+    },
+    {
+      "cells": [
+        "D_JAGS_2k",
+        "14",
+        "1.021",
+        "1.742",
+        "392"
+      ],
+      "found_in_reading_order": true
+    },
+    {
+      "cells": [
+        "A_JAGS_20k",
+        "14",
+        "1.597",
+        "2.171",
+        "408"
+      ],
+      "found_in_reading_order": true
+    },
+    {
+      "cells": [
+        "D_JAGS_20k",
+        "13",
+        "995",
+        "1.742",
+        "352"
+      ],
+      "found_in_reading_order": true
+    },
+    {
+      "cells": [
+        "D_Stan_2k",
+        "10",
+        "1.024",
+        "1.742",
+        "420"
+      ],
+      "found_in_reading_order": true
+    },
+    {
+      "cells": [
+        "1",
+        "0",
+        "0",
+        "0,916"
+      ],
+      "found_in_reading_order": true
+    },
+    {
+      "cells": [
+        "2",
+        "0",
+        "0",
+        "0,880"
+      ],
+      "found_in_reading_order": true
+    },
+    {
+      "cells": [
+        "3",
+        "0",
+        "0",
+        "0,588"
+      ],
+      "found_in_reading_order": true
+    },
+    {
+      "cells": [
+        "4",
+        "0",
+        "0",
+        "0,827"
+      ],
+      "found_in_reading_order": true
+    },
+    {
+      "cells": [
+        "pi[1]",
+        "0,9748",
+        "0,5706",
+        "-0,4042",
+        "-12,57"
+      ],
+      "found_in_reading_order": true
+    },
+    {
+      "cells": [
+        "pi[2]",
+        "0,0182",
+        "0,4225",
+        "0,4043",
+        "12,59"
+      ],
+      "found_in_reading_order": true
+    },
+    {
+      "cells": [
+        "pi[3]",
+        "0,0071",
+        "0,0069",
+        "-0,0001",
+        "-1,53"
+      ],
+      "found_in_reading_order": true
+    },
+    {
+      "cells": [
+        "M_total",
+        "382,7",
+        "4.807,8",
+        "4.425,1",
+        "8,76"
+      ],
+      "found_in_reading_order": true
+    },
+    {
+      "cells": [
+        "S_total",
+        "106,5",
+        "9.525,1",
+        "9.418,6",
+        "3,67"
+      ],
+      "found_in_reading_order": true
+    },
+    {
+      "cells": [
+        "A_JAGS_20k / M_total",
+        "896,2",
+        "0,0",
+        "0,0",
+        "135,4"
+      ],
+      "found_in_reading_order": true
+    },
+    {
+      "cells": [
+        "A_JAGS_20k / S_total",
+        "260,8",
+        "0,0",
+        "0,0",
+        "17,2"
+      ],
+      "found_in_reading_order": true
+    },
+    {
+      "cells": [
+        "D_JAGS_20k / M_total",
+        "247,9",
+        "780,8",
+        "36,7",
+        "465,4"
+      ],
+      "found_in_reading_order": true
+    },
+    {
+      "cells": [
+        "D_JAGS_20k / S_total",
+        "54,5",
+        "199,3",
+        "5,0",
+        "167,1"
+      ],
+      "found_in_reading_order": true
+    },
+    {
+      "cells": [
+        "D_Stan_2k / M_total",
+        "3.451,0",
+        "4.458,4",
+        "5.478,1",
+        "5.843,7"
+      ],
+      "found_in_reading_order": true
+    },
+    {
+      "cells": [
+        "D_Stan_2k / S_total",
+        "7.788,0",
+        "15.225,0",
+        "1.978,2",
+        "13.109,1"
+      ],
+      "found_in_reading_order": true
+    }
+  ],
+  "text_extraction_misses_require_visual_adjudication": true,
+  "manual_visual_review": "pending_all_pages",
+  "manual_narrative_checks": [
+    "Same-target D comparison and A/D model sensitivity are distinguished.",
+    "MCSE units remain descriptive; no equivalence or precise posterior claim after failed diagnostics.",
+    "Undefined diagnostics remain a subset of failures; RB does not replace common mandatory targets.",
+    "Compilation includes the C++ interface exactly once; JAGS compilation is already included.",
+    "Timeout or partial postprocessing is reported without invented completed results.",
+    "All pages: table completeness, numbers, row alignment, captions, clipping, glyphs, page breaks and references."
+  ],
+  "final_review_pending": true
+}

@@ -1,0 +1,121 @@
+{
+  "reviewer_id": "01a0f717-7535-72e3-baf8-4db20da81abb",
+  "final_review_pending": true,
+  "files": [
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/review_stan_results/attempt02/HMC_recomputed.csv",
+      "sha256": "d414b2d00dae8a234a2d758b045339c9c43c69170ffcefa66fee24d165402b9b",
+      "bytes": 142
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/review_stan_results/attempt02/NCP_recomputed.csv",
+      "sha256": "6d28eddf53c38e329b64e4782ca31e2bd2736a5684863c31111f6ad99373a4a5",
+      "bytes": 234297
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/review_stan_results/attempt02/RB_recomputed.csv",
+      "sha256": "5aec2bc4a6665fe70cb2aa4b6ef5e9235bdf234ccd735f1445dd7dffbae167b5",
+      "bytes": 667
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/review_stan_results/attempt02/class_ranges_recomputed.csv",
+      "sha256": "10ca7b42e332e3d3528c02b256d1a4f680956e3df941231566ccba140b7c88c3",
+      "bytes": 12376
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/review_stan_results/attempt02/common_decisions.csv",
+      "sha256": "df4481e62f92d05a8be0f1fe94053dcd51f99d2a0c40e38a6b520b3f65c16345",
+      "bytes": 79975
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/review_stan_results/attempt02/delivery_checks.json",
+      "sha256": "c2fbc53772c0511be1534fcfb395c466f7596e6023470b261c903fa0441c2d4d",
+      "bytes": 11045
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/review_stan_results/attempt02/delivery_checks.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/review_stan_results/attempt02/globals_recomputed.csv",
+      "sha256": "ae6c97684807b318bd3c493c2a938cfafb2dcce8c5d70ad4d5dc0a10a6b90920",
+      "bytes": 6461
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/review_stan_results/attempt02/input_binding.json",
+      "sha256": "1018527f3e79e6d70210dfac8b289880550c585fa1bfef7df6b544526556e500",
+      "bytes": 57383
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/review_stan_results/attempt02/pdf/layout.txt",
+      "sha256": "5ef7adea6f3563ed8ba6570b3167be289f5e81f344d4992f9361a05d74de2155",
+      "bytes": 14943
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/review_stan_results/attempt02/pdf/page-1.png",
+      "sha256": "779627b3fe3a596b8a1c0d84c7745a2e24f82d6f8e75088a4e39b5e82456c85e",
+      "bytes": 341617
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/review_stan_results/attempt02/pdf/page-2.png",
+      "sha256": "deb95e46e97daccf45950e4449c405537e00490df1a4503bd9d9695939f53d9e",
+      "bytes": 275854
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/review_stan_results/attempt02/pdf/page-3.png",
+      "sha256": "01e436ff54e598ddb2eff716d76b9c50891e9586353c95de0b64e86192b4d0a5",
+      "bytes": 231165
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/review_stan_results/attempt02/pdf/page-4.png",
+      "sha256": "c236d2d13a7e192679e51d1f784ac4e4778e238b4e6826e996ba05846f34fdca",
+      "bytes": 360589
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/review_stan_results/attempt02/pdf/pdfinfo.txt",
+      "sha256": "1d01a0bbbbd29cf3d2798240c88d1837a7d3ccde75c792944a4210dacd5512a2",
+      "bytes": 639
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/review_stan_results/attempt02/pdf/reading_order.txt",
+      "sha256": "4b75d679b2adede9b2a4012512a65d6f055f004c98f3bf50b6823997f2c194d3",
+      "bytes": 12217
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/review_stan_results/attempt02/recompute.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/review_stan_results/attempt02/recompute_checks.json",
+      "sha256": "baa965ed5e4fd9f4947099fcd897b3dfcd8d59c3032a0f3b27c35e31aa72f8cb",
+      "bytes": 2021162
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/review_stan_results/attempt02/recomputed_summary.json",
+      "sha256": "592fdbd450a1298d2d2dfdaf4d8676c4d4254706d2cb02e8ff4e60d7d043b063",
+      "bytes": 763
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/review_stan_results/attempt02/reviewer_sources/check_delivery.py",
+      "sha256": "90ac18837188230fcd348df1fdc635902791e59bc22bd432dcb6d004e57b00bd",
+      "bytes": 19877
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/review_stan_results/attempt02/reviewer_sources/recompute_stan.R",
+      "sha256": "fee20211c2ce8e9475d46ad90fc4e4b30eb427d024c495640d97007737a2a8cf",
+      "bytes": 18708
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/review_stan_results/attempt02/reviewer_sources/run_qa.py",
+      "sha256": "67d34fde49647aaa0e4383e7b84c3a5fef759168a7863f6d980da9dfff5d1036",
+      "bytes": 18147
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/review_stan_results/attempt02/run_outcome.json",
+      "sha256": "2489c767da8f053e983d3a37b39533c9d820f93f33f5e81b7c58eb724821335b",
+      "bytes": 388
+    }
+  ]
+}

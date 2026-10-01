@@ -1,0 +1,41 @@
+$model
+[1] "D"
+
+$status
+[1] "computationally_inconclusive"
+
+$paired_verdict
+[1] "not_assigned_by_per_model_processor"
+
+$mandatory_targets
+[1] 1742
+
+$failed_targets
+[1] 1024
+
+$undefined_required_targets
+[1] 420
+
+$primary_global_failed
+ [1] "pi[1]"        "pi[2]"        "tau.alpha"    "nu.alpha"     "iota.m.alpha"
+ [6] "iota.s.alpha" "tb"           "nb"           "M_total"      "S_total"     
+
+$elapsed_seconds
+[1] 22.11634
+
+$raw_sha256
+[1] "65f14c223b7a6cb7e70eeb5c8d1620ffe4773b5fa86ebe5fc0e271e453b5ad0c"
+
+$contract_sha256
+[1] "e33a59939f0d55513fea6ae05a2cc90fac617f3385193ec56e4a2a7a9b6df264"
+
+$shape
+iterations     chains 
+      2000          4 
+
+$production_approved
+[1] FALSE
+
+$G10_approved
+[1] FALSE
+

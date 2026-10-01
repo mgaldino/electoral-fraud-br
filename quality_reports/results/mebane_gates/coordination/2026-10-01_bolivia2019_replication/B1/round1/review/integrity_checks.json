@@ -1,0 +1,60 @@
+{
+  "candidate_manifest_sha256": "afa7b901b85b97b5c369023d75d3e68a88679a487fef37cdb873796644ccf729",
+  "files": {
+    "extract_reference.py": {
+      "expected": "415d5ec2a7f89a61d663bd88c00b9cd0baa3b9761cf7a0308b1bf6192599706d",
+      "observed": "415d5ec2a7f89a61d663bd88c00b9cd0baa3b9761cf7a0308b1bf6192599706d"
+    },
+    "reference_values.csv": {
+      "expected": "d4b15199b6191a22fde1bae8609db7c2a9a13a143b2e966c1b9c9f82d3021fdd",
+      "observed": "d4b15199b6191a22fde1bae8609db7c2a9a13a143b2e966c1b9c9f82d3021fdd"
+    },
+    "reference_values_dictionary.md": {
+      "expected": "ccc3842bb8a44c7c41ea507685d7883c8afe263a5be115dd61ac9ca909d997e9",
+      "observed": "ccc3842bb8a44c7c41ea507685d7883c8afe263a5be115dd61ac9ca909d997e9"
+    },
+    "source_manifest.json": {
+      "expected": "2ddf2b31a90262317d528f001f5f69b38dabe70936d22746068b1cafba503689",
+      "observed": "2ddf2b31a90262317d528f001f5f69b38dabe70936d22746068b1cafba503689"
+    },
+    "search_log.json": {
+      "expected": "873d022ed3c98e27f2f3e924493613516abff82c71b14cac84f552c9aca3eccd",
+      "observed": "873d022ed3c98e27f2f3e924493613516abff82c71b14cac84f552c9aca3eccd"
+    },
+    "code_identity.md": {
+      "expected": "3c8518c562c98bbc183a15c456b5550ddd6a628b4617ad2f7cb900ab5815409a",
+      "observed": "3c8518c562c98bbc183a15c456b5550ddd6a628b4617ad2f7cb900ab5815409a"
+    },
+    "handoff.md": {
+      "expected": "564f392a12cd409690b9177050141d2ebf6ca0154d466c3cfdd1224c2edf2755",
+      "observed": "564f392a12cd409690b9177050141d2ebf6ca0154d466c3cfdd1224c2edf2755"
+    },
+    "archive/Bolivia2019.pdf": {
+      "expected": "ddcdb42bebf8160abf80b6c189db37951db8ead7f0f763d5469423778f870fb7",
+      "observed": "ddcdb42bebf8160abf80b6c189db37951db8ead7f0f763d5469423778f870fb7"
+    },
+    "archive/eforensics_commit_3017de5.json": {
+      "expected": "f48694205d445c53c1525c33145b17aa339ec8bf957cf3a0bee14b3c594cdf0d",
+      "observed": "f48694205d445c53c1525c33145b17aa339ec8bf957cf3a0bee14b3c594cdf0d"
+    },
+    "archive/eforensics_DESCRIPTION_3017de5": {
+      "expected": "4bbb33f8765b132ddac991c67eab01e59e699f82390c759a841768852fb46df9",
+      "observed": "4bbb33f8765b132ddac991c67eab01e59e699f82390c759a841768852fb46df9"
+    },
+    "archive/ef_models_3017de5.R": {
+      "expected": "7140c70f03cdc01cffc32b29f18b8ccbc785b9f460282b518df4bf3625910b4a",
+      "observed": "7140c70f03cdc01cffc32b29f18b8ccbc785b9f460282b518df4bf3625910b4a"
+    },
+    "archive/ef_summary_3017de5.R": {
+      "expected": "a7bda7e5e1415a1f04fa0673d6ef641ddadf6156e582449bb1cdf7dd5175c4fc",
+      "observed": "a7bda7e5e1415a1f04fa0673d6ef641ddadf6156e582449bb1cdf7dd5175c4fc"
+    }
+  },
+  "original_pdf_sha256": "ddcdb42bebf8160abf80b6c189db37951db8ead7f0f763d5469423778f870fb7",
+  "qbl_snapshot_sha256": "f8360126424b7a463f76a1c99efc89a8a5cb81339213bd4931559f14595fbab6",
+  "qbl_text_equal_ignoring_outer_whitespace": true,
+  "commit_author_date_utc": "2019-10-27T04:11:09Z",
+  "commit_committer_date_utc": "2019-10-27T04:11:09Z",
+  "installed_Bolivia_commit": "UNKNOWN",
+  "remote_current_pdf_byte_equality": "UNKNOWN"
+}

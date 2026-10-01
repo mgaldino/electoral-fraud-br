@@ -1,0 +1,513 @@
+{
+  "reviewer_id": "01a0f717-7535-72e3-baf8-4db20da81abb",
+  "repair_sha256": "cd9540e5df61933740a61c65800b63030163c045f539e593c73f8f2c96abf78b",
+  "created_utc": "2026-10-01T11:57:54.470222+00:00",
+  "inputs": [
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_diagnostic_repair_candidate.json",
+      "sha256": "cd9540e5df61933740a61c65800b63030163c045f539e593c73f8f2c96abf78b",
+      "bytes": 2391,
+      "authority": "user_provided_sha256"
+    },
+    {
+      "path": "R/experimental/mebane_ad_long/postprocess_stan_v2.R",
+      "sha256": "c9942429e543e521c83db799166b470fab32cf793c27b5afd737240546efb5e0",
+      "bytes": 4835,
+      "authority": "frozen_manifest"
+    },
+    {
+      "path": "R/experimental/mebane_ad_long/supervise_diagnostics_v2.py",
+      "sha256": "80587de9b918f15a1b705ee15b772575a08474f2c5e661d4f3207ca362a47f34",
+      "bytes": 993,
+      "authority": "frozen_manifest"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan2k01/manifest.json",
+      "sha256": "99fd59f1efc9d0f7f3009a1ba14a0221dc1082fef74089b6b2b16aa4c006f151",
+      "bytes": 6924,
+      "authority": "preserved_failure_source_manifest"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_diagnostic_candidate/manifest.json",
+      "sha256": "3562d593731cec1fe156ee52266a975cd0cbf6d6fe8666c26b15652298bb08b0",
+      "bytes": 5345,
+      "authority": "user_provided_sha256"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_diagnostics01.log",
+      "sha256": "dda0d4b5fc409737e7256fe988c726044220dc36b703c37ac51609e1c4a5b901",
+      "bytes": 216,
+      "authority": "frozen_manifest"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_diagnostics01_supervisor.json",
+      "sha256": "2041f560aac1c3668950c5c0361ecd1610ec849f91e04cc6c1715e3b3ee7d66f",
+      "bytes": 574,
+      "authority": "frozen_manifest"
+    },
+    {
+      "path": "tests/mebane/ad_long/test_draws_representation.R",
+      "sha256": "38010857d7bc51ffcaa3b1e8dd7d40f1b8912d413644368f6b102384255672e4",
+      "bytes": 729,
+      "authority": "frozen_manifest"
+    },
+    {
+      "path": "R/experimental/mebane_ad_long/stan_bridge.R",
+      "sha256": "aec0a5c70564b2f39fd8504240bb425cd74f2ce587f138b5839f953ff66242cc",
+      "bytes": 3081,
+      "authority": "preserved_failure_source_manifest"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_diagnostic_candidate/R/experimental/mebane_ad_long/stan_bridge.R",
+      "sha256": "aec0a5c70564b2f39fd8504240bb425cd74f2ce587f138b5839f953ff66242cc",
+      "bytes": 3081,
+      "authority": "frozen_manifest"
+    },
+    {
+      "path": "R/experimental/mebane_ad_long/postprocess_stan.R",
+      "sha256": "2bb6b838f206a0b0de16a9ea86ed5fddc562d137c96a04c9c2484ba27bef80e1",
+      "bytes": 4291,
+      "authority": "preserved_failure_source_manifest"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_diagnostic_candidate/R/experimental/mebane_ad_long/postprocess_stan.R",
+      "sha256": "2bb6b838f206a0b0de16a9ea86ed5fddc562d137c96a04c9c2484ba27bef80e1",
+      "bytes": 4291,
+      "authority": "frozen_manifest"
+    },
+    {
+      "path": "R/experimental/mebane_ad_long/diagnostics_stan.R",
+      "sha256": "a5a19974731ad2f19a13a27afe8b2641e138751e61898dbb35f77bc1b13ac1b9",
+      "bytes": 13127,
+      "authority": "frozen_manifest"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_diagnostic_candidate/R/experimental/mebane_ad_long/diagnostics_stan.R",
+      "sha256": "a5a19974731ad2f19a13a27afe8b2641e138751e61898dbb35f77bc1b13ac1b9",
+      "bytes": 13127,
+      "authority": "frozen_manifest"
+    },
+    {
+      "path": "R/experimental/mebane_ad_long/prepare_stan_diagnostics.R",
+      "sha256": "07ad322508cae42bfb076ea0735cc8cf1ebf19813accbd8bac959d48c51f678a",
+      "bytes": 1968,
+      "authority": "frozen_manifest"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_diagnostic_candidate/R/experimental/mebane_ad_long/prepare_stan_diagnostics.R",
+      "sha256": "07ad322508cae42bfb076ea0735cc8cf1ebf19813accbd8bac959d48c51f678a",
+      "bytes": 1968,
+      "authority": "frozen_manifest"
+    },
+    {
+      "path": "R/experimental/mebane_ad_long/supervise_diagnostics.py",
+      "sha256": "7af9fcf1cd3ff0b9330757298b95309d04cfd1ba98468bf23c30afc00a641df2",
+      "bytes": 990,
+      "authority": "frozen_manifest"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_diagnostic_candidate/R/experimental/mebane_ad_long/supervise_diagnostics.py",
+      "sha256": "7af9fcf1cd3ff0b9330757298b95309d04cfd1ba98468bf23c30afc00a641df2",
+      "bytes": 990,
+      "authority": "frozen_manifest"
+    },
+    {
+      "path": "R/experimental/mebane_ad_long/freeze_stan_diagnostics.R",
+      "sha256": "e20f43939934f9ec581075ca5fc29d4ec839f9b663fb9fc561cd85dd277e3768",
+      "bytes": 1127,
+      "authority": "frozen_manifest"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_diagnostic_candidate/R/experimental/mebane_ad_long/freeze_stan_diagnostics.R",
+      "sha256": "e20f43939934f9ec581075ca5fc29d4ec839f9b663fb9fc561cd85dd277e3768",
+      "bytes": 1127,
+      "authority": "frozen_manifest"
+    },
+    {
+      "path": "R/experimental/mebane_ad/diagnostics.R",
+      "sha256": "4f30f9ff1772f83b54519e941cd9c6edea24fbe359d5019836223f60b995061c",
+      "bytes": 13107,
+      "authority": "frozen_manifest"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_diagnostic_candidate/R/experimental/mebane_ad/diagnostics.R",
+      "sha256": "4f30f9ff1772f83b54519e941cd9c6edea24fbe359d5019836223f60b995061c",
+      "bytes": 13107,
+      "authority": "frozen_manifest"
+    },
+    {
+      "path": "R/experimental/mebane_ad/io.R",
+      "sha256": "913803dc29f9784d756ab9a1834b2a96b8201d754957dbd9f65286674b4abb2d",
+      "bytes": 2627,
+      "authority": "frozen_manifest"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_diagnostic_candidate/R/experimental/mebane_ad/io.R",
+      "sha256": "913803dc29f9784d756ab9a1834b2a96b8201d754957dbd9f65286674b4abb2d",
+      "bytes": 2627,
+      "authority": "frozen_manifest"
+    },
+    {
+      "path": "R/experimental/mebane_ad/run_pair.py",
+      "sha256": "48fd61410eda632517adc804174bea7c9282c09bf06f140084ec5bff6f68a7b4",
+      "bytes": 4938,
+      "authority": "frozen_manifest"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_diagnostic_candidate/R/experimental/mebane_ad/run_pair.py",
+      "sha256": "48fd61410eda632517adc804174bea7c9282c09bf06f140084ec5bff6f68a7b4",
+      "bytes": 4938,
+      "authority": "frozen_manifest"
+    },
+    {
+      "path": "tests/mebane/ad_long/test_stan_bridge.R",
+      "sha256": "f2f91006ab67a57582218589d527a884e033044d4b57b6824c7c81a6f2142523",
+      "bytes": 3179,
+      "authority": "frozen_manifest"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_diagnostic_candidate/tests/mebane/ad_long/test_stan_bridge.R",
+      "sha256": "f2f91006ab67a57582218589d527a884e033044d4b57b6824c7c81a6f2142523",
+      "bytes": 3179,
+      "authority": "frozen_manifest"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/contract.json",
+      "sha256": "fb4a296c9bf0af25812d7d8dd2ab63340fe10d4e73e806e64b5dba3f7dcf481a",
+      "bytes": 17442,
+      "authority": "preserved_failure_source_manifest"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_diagnostic_candidate/quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/contract.json",
+      "sha256": "fb4a296c9bf0af25812d7d8dd2ab63340fe10d4e73e806e64b5dba3f7dcf481a",
+      "bytes": 17442,
+      "authority": "frozen_manifest"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/contract_stan_diagnostics.json",
+      "sha256": "e33a59939f0d55513fea6ae05a2cc90fac617f3385193ec56e4a2a7a9b6df264",
+      "bytes": 17873,
+      "authority": "preserved_failure_source_manifest"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_diagnostic_candidate/quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/contract_stan_diagnostics.json",
+      "sha256": "e33a59939f0d55513fea6ae05a2cc90fac617f3385193ec56e4a2a7a9b6df264",
+      "bytes": 17873,
+      "authority": "frozen_manifest"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_diagnostic_derivation.json",
+      "sha256": "1400a5c4e7cfe1a78dbb7ba65ad43055ea7954c2eeeada2a1416323a8ba59232",
+      "bytes": 369,
+      "authority": "frozen_manifest"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_diagnostic_candidate/quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_diagnostic_derivation.json",
+      "sha256": "1400a5c4e7cfe1a78dbb7ba65ad43055ea7954c2eeeada2a1416323a8ba59232",
+      "bytes": 369,
+      "authority": "frozen_manifest"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_bridge_checks01.json",
+      "sha256": "d31166ef9a2d48c1a702aa70df0f1060206ce364232186e3dab502b57cadfb0f",
+      "bytes": 405,
+      "authority": "frozen_manifest"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_diagnostic_candidate/quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_bridge_checks01.json",
+      "sha256": "d31166ef9a2d48c1a702aa70df0f1060206ce364232186e3dab502b57cadfb0f",
+      "bytes": 405,
+      "authority": "frozen_manifest"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_impl/run-20261001T105406Z-attempt03-01a0f4b5/preparation/manifest.json",
+      "sha256": "2ad3246c3b1a5b5e0c676a85434824644b440cc75c386bc45feeabc34b789bfb",
+      "bytes": 10780,
+      "authority": "user_provided_sha256"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_impl/run-20261001T105406Z-attempt03-01a0f4b5/preparation/settings.json",
+      "sha256": "5b991adc04ada687a4f0f6dfb320484502eb5445bdef3b161e1e8a5b03ac8b74",
+      "bytes": 1342,
+      "authority": "frozen_manifest"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_impl/run-20261001T105406Z-attempt03-01a0f4b5/preparation/data.json",
+      "sha256": "fc81007f039963ed14fddf37a0727edabce20d8d7afa7d642fb581c2477b6a56",
+      "bytes": 4000,
+      "authority": "frozen_manifest"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_impl/run-20261001T105406Z-attempt03-01a0f4b5/preparation/name_map.csv",
+      "sha256": "dd274b6b4a5eb304f62786bdac1da6a32f996c6582076a983ab06914b695e758",
+      "bytes": 33432,
+      "authority": "frozen_manifest"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_impl/run-20261001T105406Z-attempt03-01a0f4b5/preparation/compile.log",
+      "sha256": "46290199ac232e8f3a01e19fadad7323cfe5069f1b1d296326a623ff04878057",
+      "bytes": 13482,
+      "authority": "frozen_manifest"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_impl/run-20261001T105406Z-attempt03-01a0f4b5/preparation/init_chain1.json",
+      "sha256": "f12e0bcd60e5f13162ab39133bd07467f1c55b7182cab53281ae61648f984218",
+      "bytes": 3603,
+      "authority": "frozen_manifest"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_impl/run-20261001T105406Z-attempt03-01a0f4b5/preparation/init_chain2.json",
+      "sha256": "c21291c51e934b832674f367164acced3d892dab79e3472e074d69a6eb493055",
+      "bytes": 3600,
+      "authority": "frozen_manifest"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_impl/run-20261001T105406Z-attempt03-01a0f4b5/preparation/init_chain3.json",
+      "sha256": "6fb11a24d4090e8d133e8a5758c592edf680a1ea4073f1f25b9efb67c3dd3903",
+      "bytes": 3601,
+      "authority": "frozen_manifest"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_impl/run-20261001T105406Z-attempt03-01a0f4b5/preparation/init_chain4.json",
+      "sha256": "52afb65042a4695e188717e09175587522c65b25dfa5162fd76981b06b4ba4f8",
+      "bytes": 3613,
+      "authority": "frozen_manifest"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_impl/run-20261001T105406Z-attempt03-01a0f4b5/preparation/build/d_multinomial",
+      "sha256": "c2d882526d9893236c2ebaeec92a8eacdfa0d327f6f19de7f961d936ab6d65f1",
+      "bytes": 2961008,
+      "authority": "frozen_manifest"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_impl/run-20261001T105406Z-attempt03-01a0f4b5/preparation/sources/sources_manifest.json",
+      "sha256": "f1ce5cde48a7e2b3ab2aaaf8a409c72ff809adc0d1ff5ba056725c7d955d19f8",
+      "bytes": 3004,
+      "authority": "frozen_manifest"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_impl/run-20261001T105406Z-attempt03-01a0f4b5/preparation/sources/R/experimental/mebane_ad_stan/common.R",
+      "sha256": "434379ec4513852bcf7ba3711942c18f204f29f4200444c7462cb4ec5e87bb5a",
+      "bytes": 8720,
+      "authority": "frozen_manifest"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_impl/run-20261001T105406Z-attempt03-01a0f4b5/preparation/sources/R/experimental/mebane_ad_stan/reference.R",
+      "sha256": "6f7e15ddeb0d98d76c103fa98d2aa547da9f50dcc31c6e5cda589319e4ddad5d",
+      "bytes": 3603,
+      "authority": "frozen_manifest"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_impl/run-20261001T105406Z-attempt03-01a0f4b5/preparation/sources/R/experimental/mebane_ad_stan/run_stan.R",
+      "sha256": "d80cf227ddc0a026b0e05584e23394de71cdd66e1c354f8d22e168e1ebc93433",
+      "bytes": 8828,
+      "authority": "frozen_manifest"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_impl/run-20261001T105406Z-attempt03-01a0f4b5/preparation/sources/R/experimental/mebane_ad_stan/prepare_stan.py",
+      "sha256": "14ae0baefafa0211103a6d5559c5031671d254b4f8efc8a17c97667b125234ae",
+      "bytes": 3530,
+      "authority": "frozen_manifest"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_impl/run-20261001T105406Z-attempt03-01a0f4b5/preparation/sources/R/experimental/mebane_ad_stan/supervise_stan.py",
+      "sha256": "631e65bb49dc193cd593a14e77738cd88439add6adda9f0ea4bb340ba500f4ef",
+      "bytes": 4877,
+      "authority": "frozen_manifest"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_impl/run-20261001T105406Z-attempt03-01a0f4b5/preparation/sources/models/experimental/mebane_ad_stan/d_multinomial.stan",
+      "sha256": "b38de93ef22b826233f35898b5d3becfae1fb46df774ead065b8d4133c127c9b",
+      "bytes": 4386,
+      "authority": "frozen_manifest"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_impl/run-20261001T105406Z-attempt03-01a0f4b5/preparation/sources/tests/mebane/ad_stan/test_stan.R",
+      "sha256": "ec9b672590124ae888f6f2e6297e0358afc1d23d474df3a453179d3f881b71ef",
+      "bytes": 17045,
+      "authority": "frozen_manifest"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_impl/run-20261001T105406Z-attempt03-01a0f4b5/preparation/sources/tests/mebane/ad_stan/test_supervisor.py",
+      "sha256": "d69b6bbae956c1d5c6f7b3ef1d15ab9cdf0647aa4507e9c23bdd4677e1529983",
+      "bytes": 3041,
+      "authority": "frozen_manifest"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_impl/run-20261001T105406Z-attempt03-01a0f4b5/preparation/sources/tests/mebane/ad_stan/run_preflight.R",
+      "sha256": "b755b6d987fb2427f57bc2fb806c2f5b107fba9b8052c00c98bf35ae664e0565",
+      "bytes": 4553,
+      "authority": "frozen_manifest"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_impl/run-20261001T105406Z-attempt03-01a0f4b5/preparation/sources/quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_impl/IMPLEMENTATION.md",
+      "sha256": "ec8a13e6e26e33908202b8f5d52b5fe796d8afc032273a6c2e7431c49910ea40",
+      "bytes": 13239,
+      "authority": "frozen_manifest"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_impl/run-20261001T105406Z-attempt03-01a0f4b5/preparation/sources/models/experimental/mebane_ad/d_multinomial.jags",
+      "sha256": "6ddb9624f60b15e196cc27ed9694852c40b6553a684a9962003168da4ecfaf5b",
+      "bytes": 2036,
+      "authority": "frozen_manifest"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_impl/run-20261001T105406Z-attempt03-01a0f4b5/preparation/sources/R/experimental/mebane_ad/model_d.R",
+      "sha256": "e5154c01c6f111cc47d5e9d9f49654f1ee081bb4001664038c840b8c0d86710a",
+      "bytes": 5043,
+      "authority": "frozen_manifest"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_impl/run-20261001T105406Z-attempt03-01a0f4b5/preparation/sources/quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/contract.json",
+      "sha256": "fb4a296c9bf0af25812d7d8dd2ab63340fe10d4e73e806e64b5dba3f7dcf481a",
+      "bytes": 17442,
+      "authority": "frozen_manifest"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_impl/run-20261001T105406Z-attempt03-01a0f4b5/preparation/sources/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/final_manifest.json",
+      "sha256": "6720193e76b60e2b7d4c73910b2e4328b7cc2fb882b6e29f095160a8dce50db3",
+      "bytes": 511854,
+      "authority": "frozen_manifest"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_impl/run-20261001T105406Z-attempt03-01a0f4b5/preparation/sources/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/data/run-20260930T235038Z-pid61600/dc2010_ad_data.rds",
+      "sha256": "b2ef611dabb751f9286acbaae841a23c34948ed0a4b6306364cbe94d9d24903e",
+      "bytes": 2539,
+      "authority": "frozen_manifest"
+    },
+    {
+      "path": "models/experimental/mebane_ad_stan/d_multinomial.stan",
+      "sha256": "b38de93ef22b826233f35898b5d3becfae1fb46df774ead065b8d4133c127c9b",
+      "bytes": 4386,
+      "authority": "frozen_manifest"
+    },
+    {
+      "path": "models/experimental/mebane_ad/d_multinomial.jags",
+      "sha256": "6ddb9624f60b15e196cc27ed9694852c40b6553a684a9962003168da4ecfaf5b",
+      "bytes": 2036,
+      "authority": "frozen_manifest"
+    },
+    {
+      "path": "R/experimental/mebane_ad_stan/run_stan.R",
+      "sha256": "d80cf227ddc0a026b0e05584e23394de71cdd66e1c354f8d22e168e1ebc93433",
+      "bytes": 8828,
+      "authority": "frozen_manifest"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan2k01/draws_array.rds",
+      "sha256": "682bcc18ab392004be25c9a87abb52f4fb299e53eb53d5f536ff9ba267f2a15a",
+      "bytes": 233853613,
+      "authority": "preserved_failure_source_manifest"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan2k01/sampler_diagnostics.rds",
+      "sha256": "bdc58529fa1f3a51c0b522e0b818bf35c0fe0c988aa67da866945e49aecfee15",
+      "bytes": 116698,
+      "authority": "preserved_failure_source_manifest"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/review/stan/review.json",
+      "sha256": "c17428bb83135426d0d05a51bc516e2bc4f429c9ba8111f8d652a05ffcc78dee",
+      "bytes": 5379,
+      "authority": "frozen_manifest"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_diagnostics01/sources/R/experimental/mebane_ad_long/postprocess_stan.R",
+      "sha256": "2bb6b838f206a0b0de16a9ea86ed5fddc562d137c96a04c9c2484ba27bef80e1",
+      "bytes": 4291,
+      "authority": "preserved_failure_source_manifest"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_diagnostics01/sources/R/experimental/mebane_ad_long/stan_bridge.R",
+      "sha256": "aec0a5c70564b2f39fd8504240bb425cd74f2ce587f138b5839f953ff66242cc",
+      "bytes": 3081,
+      "authority": "preserved_failure_source_manifest"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_diagnostics01/sources/manifest.json",
+      "sha256": "4cb8fc41776516b9938265d5a5bd32eaa6ae717ac3d8a01ad2432af3d472001c",
+      "bytes": 4466,
+      "authority": "observed_precheck_baseline"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_diagnostics01/sources/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/data/run-20260930T235038Z-pid61600/dc2010_ad_data.rds",
+      "sha256": "b2ef611dabb751f9286acbaae841a23c34948ed0a4b6306364cbe94d9d24903e",
+      "bytes": 2539,
+      "authority": "preserved_failure_source_manifest"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_diagnostics01/sources/quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/contract.json",
+      "sha256": "fb4a296c9bf0af25812d7d8dd2ab63340fe10d4e73e806e64b5dba3f7dcf481a",
+      "bytes": 17442,
+      "authority": "preserved_failure_source_manifest"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_diagnostics01/sources/quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/contract_stan_diagnostics.json",
+      "sha256": "e33a59939f0d55513fea6ae05a2cc90fac617f3385193ec56e4a2a7a9b6df264",
+      "bytes": 17873,
+      "authority": "preserved_failure_source_manifest"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_diagnostics01/sources/quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan2k01/draws_array.rds",
+      "sha256": "682bcc18ab392004be25c9a87abb52f4fb299e53eb53d5f536ff9ba267f2a15a",
+      "bytes": 233853613,
+      "authority": "preserved_failure_source_manifest"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_diagnostics01/sources/quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan2k01/manifest.json",
+      "sha256": "99fd59f1efc9d0f7f3009a1ba14a0221dc1082fef74089b6b2b16aa4c006f151",
+      "bytes": 6924,
+      "authority": "preserved_failure_source_manifest"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_diagnostics01/sources/quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan2k01/sampler_diagnostics.rds",
+      "sha256": "bdc58529fa1f3a51c0b522e0b818bf35c0fe0c988aa67da866945e49aecfee15",
+      "bytes": 116698,
+      "authority": "preserved_failure_source_manifest"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_diagnostics01/sources/quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan2k01/supervisor_finished.json",
+      "sha256": "a0a81a3c3537c59cb28fe0cbfeaf30d65328004488652972f0289a41c37d6ae3",
+      "bytes": 1115,
+      "authority": "preserved_failure_source_manifest"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_diagnostics01/sources/quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan2k01/timing.json",
+      "sha256": "6203fad644b5830fe0e31bed7679d1f52480ce082943967faafd73af464a3e75",
+      "bytes": 10721,
+      "authority": "preserved_failure_source_manifest"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan2k01/timing.json",
+      "sha256": "6203fad644b5830fe0e31bed7679d1f52480ce082943967faafd73af464a3e75",
+      "bytes": 10721,
+      "authority": "preserved_failure_source_manifest"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan2k01/supervisor_finished.json",
+      "sha256": "a0a81a3c3537c59cb28fe0cbfeaf30d65328004488652972f0289a41c37d6ae3",
+      "bytes": 1115,
+      "authority": "preserved_failure_source_manifest"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/data/run-20260930T235038Z-pid61600/dc2010_ad_data.rds",
+      "sha256": "b2ef611dabb751f9286acbaae841a23c34948ed0a4b6306364cbe94d9d24903e",
+      "bytes": 2539,
+      "authority": "preserved_failure_source_manifest"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/review_stan_results/repair_checks.R",
+      "sha256": "49fdb1bd5c3f0c44916cb68e1abd7be91c9d538df2eb5e306520035c3139bbf3",
+      "bytes": 13654,
+      "authority": "observed_precheck_baseline"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/review_stan_results/run_repair_checks.py",
+      "sha256": "0b74127ed073b78eef5f734e1276fb71efbdab4c9916122faff956fd7f59c7a5",
+      "bytes": 9987,
+      "authority": "observed_precheck_baseline"
+    }
+  ],
+  "scope": "diagnostic_representation_repair_only",
+  "final_result_QA_released": false
+}

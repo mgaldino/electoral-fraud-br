@@ -1,0 +1,22 @@
+Title:           Comparação experimental A/D em D.C. 2010
+Subject:         (unspecified)
+Keywords:        
+Author:          Projeto electoralFraud
+Creator:         (unspecified)
+Producer:        ReportLab PDF Library - (opensource)
+CreationDate:    Thu Oct  1 09:00:10 2026 -03
+ModDate:         Thu Oct  1 09:00:10 2026 -03
+Custom Metadata: no
+Metadata Stream: no
+Tagged:          no
+UserProperties:  no
+Suspects:        no
+Form:            none
+JavaScript:      no
+Pages:           4
+Encrypted:       no
+Page size:       595.276 x 841.89 pts (A4)
+Page rot:        0
+File size:       14980 bytes
+Optimized:       no
+PDF version:     1.4

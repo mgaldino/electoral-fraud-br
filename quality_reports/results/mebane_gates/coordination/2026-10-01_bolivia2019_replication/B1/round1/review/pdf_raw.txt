@@ -1,0 +1,1502 @@
+Evidence Against Fraudulent Votes Being Decisive in
+the Bolivia 2019 Election∗
+Walter R. Mebane, Jr.†
+November 13, 2019
+∗Thanks to Alvaro Molina and Zach Gan for assistance, and to Diogo Ferrari and Kirill Kalinin
+for comments.
+†Professor, Department of Political Science and Department of Statistics, Research Pro-
+fessor, Center for Political Studies, University of Michigan, Haven Hall, Ann Arbor, MI
+48109-1045 (E-mail: wmebane@umich.edu).The recent presidential election in Bolivia is controversial,1
+with fraud allegations and
+violent protests.
+A new model called eforensics2
+offers evidence that fraudulent votes in the election
+were not decisive for the result. The statistical model operationalizes the idea that
+“frauds” occur when one party gains votes by a combination of manufacturing votes from
+abstentions and stealing votes from opposing parties. The Bayesian specification3
+allows
+posterior means and credible intervals for counts of “fraudulent” votes to be determined
+both for the entire election and for individual ballot boxes (mesas).
+Using eforensics I estimate the posterior mean of the number of votes counted for the
+winner Morales (Movement Toward Socialism party, MAS) that were “fraudulent” is
+22519.8 with a 99.5% credible interval of [20479.8,24663.8]. Of these “fraudulent” counts
+eforensics estimates 5295.8 [4751.1,5880.2] are manufactured, while the rest are stolen.
+Reallocating all of the estimated “fraudulent” votes from MAS to the second-place Civic
+Community party (CC) using the mean (upper bound) estimate leaves a margin over CC of
+(2889359 − 2240920 − 22519.8)/6137778 = .10198 (.10163). Omitting the counts that the
+model says are manufactured and allocating the rest of the “fraudulent” votes to CC
+produces (2889359 − 2240920 − (22519.8 − 5295.8))/(6137778 − 5295.8) = .10293 (.10269).
+Even with estimated “fraudulent” votes removed, MAS has a margin of more than ten
+percent over CC.
+The original draft of this note (everything except this paragraph) was produced on
+November 5, 2019. On November 13 messages from a couple of people lead me to think the
+best formula for the counterfactual vote proportion with frauds reallocated, if all “stolen”
+votes are credited to CC, is
+(2889359 − 2240920 − 2(22519.8 − 5295.8) − 5295.8)/(6137778 − 5295.8) =
+0.09925756(.09866303), which would put the election results below the level need to avoid a
+1
+https://www.washingtonpost.com/politics/2019/10/30/is-bolivias-democracy-danger-heres-whats-behind-d
+2
+https://github.com/UMeforensics/eforensics_public
+3
+Ferrari, McAlister and Mebane (2018) and http://www-personal.umich.edu/~wmebane/efslides.pdf
+1runoff election.
+The “fraudulent” counts occur at 274 of the 34551 mesas for which votes are reported4
+All of these 274 mesas are for votes counted as cast in Bolivia and not in another country
+(the data5
+separate the votes coming from abroad).
+Figure 1 shows the distribution of turnout and vote proportions across mesas. The
+mesas eforensics classifies as having “fraudulent” counts are those in the upper right part
+of Figure 1(a), which shows the proportions of votes for MAS plotted against turnout
+proportions. The most notable feature of Figure 1(b), which shows the proportions of votes
+for CC plotted against turnout proportions, is the high frequency of mesas in which CC
+receives zero votes. A striking feature of both Figures 1(a)and 1(b) is the scattering of
+mesas in which the turnout proprtion is lower than .7. The eforensics model does not do
+much to respond to such places where somewhat lower participation or votes are reported.
+Figure 1(c), which plots MAS vote proportions versus CC vote proportions, shows that the
+parties tend to be strong in different places, as one expects for opposing parties.
+4
+Details are in tables at the end of this paper. Key R code snippets are also shown there.
+5
+https://computo.oep.org.bo/PubResul/acta.2019.10.25.21.09.30.xlsx
+2Figure 1: Bolivia 2019 Presidential Election Data Plots
+(a) MAS by turnout (b) CC by turnout
+0.00
+0.25
+0.50
+0.75
+1.00
+0.25 0.50 0.75 1.00
+Turnout proportion
+MAS Vote proportion
+0.00
+0.25
+0.50
+0.75
+1.00
+0.25 0.50 0.75 1.00
+Turnout proportion
+CC Vote proportion
+(c) MAS by CC
+0.00
+0.25
+0.50
+0.75
+1.00
+0.00 0.25 0.50 0.75 1.00
+MAS Vote proportion
+CC Vote proportion
+Note: plots show turnout (number voting/number eligible) and vote proportions (number
+voting for party/number voting) for the two leading parties in mesas in the Bolivia 2019
+presidential election. Plots show scatterplots with estimated bivariate densities overlaid,
+with histograms along the axes.
+3As shown in Table 1, other election forensics tests of the vote counts for the top two
+parties based on digits and distributional features show signs of anomalies principally for
+CC.6
+The 2BL statistics suggest both MAS and CC gained strategic votes (Mebane 2013)7
+,
+while the P05s statistics suggest manipulations as might be produced by corrupt agents
+only for CC votes (Rundlett and Svolik 2016; Kalinin 2017). The P05s value for CC stems
+from the abundant counts of zero votes evident in Figure 1(b). Strategic voting can explain
+why the election outcome is as close as it is to the threshold for a decisive result.
+Table 1: Bolivia 2019 Presidential Votes Election Forensics Statistics
+Party 2BL LastC P05s C05s DipT Obs
+MAS 3.776 4.47 .199 .201 .278 34551
+(3.746, 3.806) (4.441, 4.498) (.195, .203) (.197, .205) –
+CC 3.804 4.342 .206 .207 .003 34551
+(3.772, 3.836) (4.311, 4.373) (.201, .21) (.202, .211) –
+Note: “2BL,” second-digit mean; “LastC,” last-digit mean; “P05s,” mean of variable
+indicating whether the last digit of the rounded percentage of votes for the referent party
+or candidate is zero or five; “C05s,” mean of variable incicating whether the last digit of
+the vote count is zero or five; “DipT,” p-value from test of unimodality; “Obs,” number of
+precinct observations. Estimates in red differ significantly from the values expected if there
+are no anomalies. Values in parentheses are 95% nonparametric bootstrap confidence
+intervals.
+The eforensics model is new with capabilities that remain to be fully understood. The
+model works well with data generated by processes that resemble the model formulation,
+but votes produced in other ways can also be classified as “fraudulent.” To help intuition
+about the eforensics results for Bolivia I report results for a few other cases.
+The Honduras 2017 election8
+featured procedural glitches similar to some that occurred
+in Bolivia with results that were questioned. The eforensics model estimates 89051.4
+[84463.3, 91699.0] “fraudulent” votes for the winner—much larger than the margin of
+6
+Hicken and Mebane (2015) (at http://www.umich.edu/~wmebane/USAID15/guide.pdf) describes the
+statistics.
+7
+http://www.umich.edu/~wmebane/pm13.pdf
+8
+https://www.washingtonpost.com/news/monkey-cage/wp/2017/12/19/
+hondurans-are-in-the-streets-because-they-dont-believe-their-election-results/
+4victory—with 62153.1 [59372.7, 64047.7] votes manufactured.
+Among the proportional representation votes counted for the leading party United
+Russia in the 2016 Duma election in Russia,9
+5685862 [5585224, 5741961] votes are
+“fraudulent” with 4111541 [3994888, 4170489] manufactured. The mean for the number
+“fraudulent” for the single-member district votes in 2016 is 5021386. For the elections of
+2000, 2003 (PR and SMD), 2004, 2007, 2008, 2011 and 2012 the means are 1282576,
+2479084, 2250655, 4227410, 5761006, 5613840, 5621965 and 4751109. The number
+“fraudulent” doubled in 2003 and again in 2004 and remained high subsequently.
+For the first round of the 2016 election in Austria10
+eforensics estimates a mean of
+10723.3 “fraudulent” and 26452.5 for the second round. The number “fraudulent” in the
+second round is less than the margin (30863), but that election was nonetheless annulled.
+For elections in June and November of 2015 in Turkey11
+eforensics estimates means
+respectively of 552047 and 2369234.5 “fraudulent.” “Fraudulent” counts occur more often
+in the eastern part of Turkey.
+For Wisconsin12
+in the 2016 presidential election eforensics estimates a mean of
+29854.3 “fraudulent.” The “fraudulent” counts reflect not malfeasance that adds to the
+state’s winner but instead the model’s representation of voter suppression13
+in the state.
+9
+https://www.washingtonpost.com/news/monkey-cage/wp/2017/01/11/
+when-the-russians-fake-their-election-results-they-may-be-giving-us-the-statistical-finger/
+?utm_term=.d9883a717ce5
+10
+https://www.washingtonpost.com/news/monkey-cage/wp/2016/07/01/
+we-checked-austrias-extremely-close-may-2016-election-for-fraud-heres-what-we-found/
+11
+https://www.washingtonpost.com/news/monkey-cage/wp/2016/02/15/
+were-there-irregularities-in-turkeys-2015-elections-we-used-our-new-forensic-toolkit-to-check/
+12
+https://www.washingtonpost.com/news/monkey-cage/wp/2017/06/06/
+were-2016-vote-counts-in-michigan-and-wisconsin-hacked-we-double-checked/?utm_term=
+.ca70aea82a20
+13
+https://www.motherjones.com/politics/2017/10/voter-suppression-wisconsin-election-2016/
+5References
+Ferrari, Diogo, Kevin McAlister and Walter R. Mebane, Jr. 2018. “Developments in Positive
+Empirical Models of Election Frauds: Dimensions and Decisions.” Presented at the 2018
+Summer Meeting of the Political Methodology Society, Provo, UT, July 16–18.
+Hicken, Allen and Walter R. Mebane, Jr. 2015. “A Guide to Election Forensics.” Working pa-
+per for IIE/USAID subaward #DFG-10-APS-UM, “Development of an Election Forensics
+Toolkit: Using Subnational Data to Detect Anomalies”.
+Kalinin, Kirill. 2017. “The Essays on Election Fraud in Authoritarian Regimes: III. Theory of
+Loyalty: Signaling Games of Election Frauds.” Ph.D. dissertation, University of Michigan.
+Mebane, Jr., Walter R. 2013. “Election Forensics: The Meanings of Precinct Vote Counts’
+Second Digits.” Paper presented at the 2013 Summer Meeting of the Political Methodology
+Society, University of Virginia, July 18–20, 2013.
+Rundlett, Ashlea and Milan W. Svolik. 2016. “Deliver the Vote! Micromotives and Mac-
+robehavior in Electoral Fraud.” American Political Science Review 110(1):180–197.
+6Table 2: Estimated Fraudulent Vote Counts for Bolivian Election Mesas
+Fraudulent Counts
+Observed Turnout T 99.5% CI Votes V 99.5% CI
+D a
+Provincia M b
+Localidad Mesa NVoters NValid Votes Mean lo up Mean lo up
+1 Belisario
+Boeto
+1 Yunguillas 11693 111 105 103 13.5 11.1 15.1 56.7 49.7 61.5
+1 Luis Calvo 1 Tentayapi 11777 238 226 226 29.1 24.9 32.1 121.8 109.3 130.4
+1 Tomina 3 Sipicani 11292 32 31 31 4 2.9 4.7 16.6 13.4 18.6
+1 Tomina 3 Mama
+Huasi
+11296 201 192 189 24.6 20.9 27.3 102.8 91.4 110.4
+1 Tomina 3 Chavarria 11298 124 119 117 15.2 12.6 17.2 63.7 55.7 69
+2 Aroma 5 Chacoma 28462 109 107 96 13.5 11.1 15.2 54.9 48.6 59.5
+2 Murillo 3 Jankosuni 23073 212 199 179 12.6 0 27.8 52.5 0 111.8
+2 Omasuyos 2 Chojñapata 26403 96 96 85 12.1 9.8 13.7 48.4 42.6 52.4
+2 Aroma 1 Achaya 28307 146 141 141 18 15 20.1 75.1 66.4 81.1
+2 Aroma 1 Sora Sora 28312 228 219 201 20.8 0 30.7 86.3 0 123.1
+2 Gualberto
+Villarroel
+1 Janko
+Marca
+28772 223 222 213 27.9 23.8 30.8 114.5 102.2 122.3
+2 Gualberto
+Villarroel
+1 Janko
+Marca
+28773 156 154 151 19.4 16.2 21.7 80.3 71.1 86.7
+2 Gualberto
+Villarroel
+1 Ró Mulato
+Kari
+28774 220 213 186 13.3 0 29.4 54.6 0 116.6
+2 Gualberto
+Villarroel
+1 Hunto
+Chico
+Bajo
+28779 61 59 55 6.1 0 8.6 25.1 0 33.8
+2 Loayza 1 Villa
+Litoral
+(Cutty)
+27483 220 206 186 13.1 0 28.9 54.5 0 116.3
+2 Loayza 1 Vilacora 27504 128 122 113 8 0 17.2 33.8 0 69
+2 Loayza 2 Huancane
+(Sapa-
+haqui)
+27514 221 213 174 13.2 0 29.4 53.3 0 113.5
+2 Loayza 2 Huancane
+(Sapa-
+haqui)
+27515 159 152 134 9.5 0 21.3 39.2 0 84
+Notes: All mesas are in Pais Bolivia; a
+departmento; b
+municipio.
+7Table 3: Estimated Fraudulent Vote Counts for Bolivian Election Mesas
+Fraudulent Counts
+Observed Turnout T 99.5% CI Votes V 99.5% CI
+D a
+Provincia M b
+Localidad Mesa NVoters NValid Votes Mean lo up Mean lo up
+2 Loayza 2 Huayca 27542 53 53 48 6.7 5.1 7.8 26.8 22.8 29.6
+2 Inquisivi 2 Mina Ar-
+gentina
+27653 205 203 203 25.6 21.8 28.2 105.7 94.8 113.6
+2 Inquisivi 2 Mina Ar-
+gentina
+27654 147 146 122 13.7 0 20.4 54.6 0 78
+3 Ayopaya 2 Sauce
+Rancho
+32548 145 144 142 18.1 15 20.2 74.8 66.2 80.7
+3 Ayopaya 2 Tuiruni
+Grande
+32549 211 205 199 26 22.2 28.8 108 96 116
+3 Esteban
+Arze
+1 Huerta
+Mayu
+32625 215 199 197 12.9 0 28.6 54.6 0 116.4
+3 Arani 2 Rodeo A 32754 214 202 189 21 0 28.6 87.5 0 115
+3 Arque 1 Huaycha 32778 231 220 219 28.3 24.2 31.2 118.1 105.4 126.8
+3 Arque 1 Huaycha 32779 210 199 195 25.6 21.9 28.3 107.2 94.8 115.1
+3 Arque 2 Auqui
+Pampa
+32805 221 212 211 27.1 23.2 29.9 113.2 100.8 121.6
+3 Arque 2 Yarviri
+Grande
+32808 210 203 197 25.8 21.9 28.4 107.4 95.3 115.3
+3 Campero 1 Tipa
+Pampa
+32433 212 204 191 26 22.4 28.7 107.8 96.4 115.4
+3 Ayopaya 1 Cuesta
+K’uchu
+32513 166 163 162 20.6 17.3 23 85.4 75.9 92.3
+3 Ayopaya 1 Colaya 32515 109 106 104 13.5 11.2 15.2 56.1 49 61
+3 Chapare 1 Challviri 34889 241 230 216 29.5 25.3 32.4 122.6 110.3 130.9
+3 Chapare 2 Candelaria 34928 224 215 198 20.4 0 30 84.3 0 120
+3 Chapare 3 Cristal
+Mayu
+34973 227 221 209 28 23.9 30.8 115.9 103.9 123.6
+3 Chapare 3 Cristal
+Mayu
+34976 229 214 199 20.2 0 30.3 84.3 0 123.6
+3 Chapare 3 Cristal
+Mayu
+34977 58 56 54 7.1 5.5 8.2 29.7 25.5 32.8
+Notes: All mesas are in Pais Bolivia; a
+departmento; b
+municipio.
+8Table 4: Estimated Fraudulent Vote Counts for Bolivian Election Mesas
+Fraudulent Counts
+Observed Turnout T 99.5% CI Votes V 99.5% CI
+D a
+Provincia M b
+Localidad Mesa NVoters NValid Votes Mean lo up Mean lo up
+3 Chapare 3 Paractito 34993 189 182 173 23.2 19.8 25.6 96.4 86.2 103.4
+3 Chapare 3 Paractito 34994 238 226 225 29.1 25 32.1 121.8 109.6 130.1
+3 Chapare 3 Paractito 34995 182 169 166 16.8 0 24.3 71.1 0 99.4
+3 Chapare 3 Eterazama 35006 231 213 205 19.8 0 30.7 83.4 0 124.1
+3 Chapare 3 Eterazama 35015 226 213 203 13.5 0 29.9 56.7 0 121.1
+3 Chapare 3 San Jose
+(Villa
+Tunari)
+35022 228 215 205 14.7 0 30.2 61.5 0 122
+3 Chapare 3 San Jose
+(Villa
+Tunari)
+35023 221 211 206 27.1 23.2 29.8 112.9 101 121.3
+3 Chapare 3 San Jose
+(Villa
+Tunari)
+35024 231 219 215 28.2 24.2 31.1 118 105.4 126.7
+3 Chapare 3 San Jose
+(Villa
+Tunari)
+35025 231 221 217 28.3 24.3 31.1 118.1 105.6 126.8
+3 Chapare 3 San Jose
+(Villa
+Tunari)
+35026 230 216 213 28 24 30.7 117.3 105.2 125.8
+3 Chapare 3 San Jose
+(Villa
+Tunari)
+35027 230 220 217 28.2 24.2 31.1 117.7 106.2 126.4
+3 Chapare 3 San Jose
+(Villa
+Tunari)
+35028 218 209 208 26.7 22.7 29.5 111.7 100 120.1
+3 Chapare 3 Samuzabeti 35030 233 220 206 21.1 0 31.1 87.9 0 125
+3 Chapare 3 Samuzabeti 35031 229 214 210 21.6 0 30.6 90.8 0 125.2
+3 Chapare 3 Samuzabeti 35033 232 222 212 23.2 0 31.1 96.5 0 125.7
+3 Chapare 3 Samuzabeti 35034 229 219 214 28 23.9 30.9 116.8 104.2 125
+3 Chapare 3 Samuzabeti 35037 226 214 214 27.6 23.8 30.4 115.6 103.2 124.2
+Notes: All mesas are in Pais Bolivia; a
+departmento; b
+municipio.
+9Table 5: Estimated Fraudulent Vote Counts for Bolivian Election Mesas
+Fraudulent Counts
+Observed Turnout T 99.5% CI Votes V 99.5% CI
+D a
+Provincia M b
+Localidad Mesa NVoters NValid Votes Mean lo up Mean lo up
+3 Chapare 3 Samuzabeti 35038 234 219 217 14.7 0 30.9 61.7 0 125.9
+3 Chapare 3 Samuzabeti 35039 231 222 213 28.4 24 31.3 118 106.2 126.3
+3 Chapare 3 Samuzabeti 35042 139 133 133 17.1 14.2 19.1 71.4 62.6 77.2
+3 Chapare 3 Chipiriri 35045 222 211 197 14.8 0 29.5 61.7 0 119
+3 Chapare 3 San Fran-
+cisco
+35058 238 231 226 29.4 25.2 32.5 121.9 109.2 130.6
+3 Chapare 3 San Fran-
+cisco
+35059 125 117 112 7.5 0 16.9 31.8 0 67.7
+3 Chapare 3 Isinuta 35069 30 30 30 3.8 2.6 4.6 15.9 12.8 17.8
+3 Chapare 3 Villa 14
+de Sep-
+tiembre
+35079 228 217 205 22.2 0 30.6 92 0 122.7
+3 Chapare 1 Larati 34779 226 213 200 19.3 0 30.2 81.1 0 122.3
+3 Chapare 3 San
+Gabriel
+35099 227 216 213 27.8 23.8 30.5 116.1 103.5 124.4
+3 Chapare 3 San
+Gabriel
+35102 229 217 217 28 23.9 30.8 117.2 105 125.7
+3 Chapare 3 San
+Gabriel
+35107 226 208 208 15.4 0 30.1 64.3 0 122.2
+3 Chapare 3 La Es-
+trella
+35110 223 213 209 27.3 23.3 30.1 114 102.3 122.1
+3 Chapare 3 La Es-
+trella
+35111 227 219 213 27.9 23.9 30.8 116.1 103.4 124.5
+3 Chapare 3 La Es-
+trella
+35112 181 172 170 22.1 18.5 24.6 92.6 82.5 99.9
+3 Chapare 3 Moleto-
+Icoya
+35113 232 227 223 28.7 24.8 31.7 119.1 106.8 127.9
+3 Chapare 3 Moleto-
+Icoya
+35114 234 227 224 28.9 24.5 31.8 120 107 128.3
+3 Chapare 3 Moleto-
+Icoya
+35115 238 230 227 29.3 25.1 32.3 122 108.8 130.8
+Notes: All mesas are in Pais Bolivia; a
+departmento; b
+municipio.
+10Table 6: Estimated Fraudulent Vote Counts for Bolivian Election Mesas
+Fraudulent Counts
+Observed Turnout T 99.5% CI Votes V 99.5% CI
+D a
+Provincia M b
+Localidad Mesa NVoters NValid Votes Mean lo up Mean lo up
+3 Chapare 3 Moleto-
+Icoya
+35116 100 100 97 12.6 10.2 14.2 51.7 44.7 56.3
+3 Chapare 3 Nueva
+Aroma
+35117 232 221 215 28.4 24.2 31.3 118.5 105.3 127.1
+3 Chapare 3 Nueva
+Aroma
+35118 236 225 221 24 0 31.7 100.6 0 129
+3 Chapare 3 Nueva
+Aroma
+35120 230 218 210 20.7 0 30.7 86.5 0 124.5
+3 Chapare 3 Nueva
+Aroma
+35121 207 192 187 12.6 0 27.4 53 0 111.9
+3 Chapare 3 Villa Boli-
+var
+35122 230 220 215 28.2 24 31.1 117.6 104.9 126
+3 Chapare 3 Villa Boli-
+var
+35123 227 216 215 27.8 23.7 30.5 116.2 104 124.6
+3 Chapare 3 Villa Boli-
+var
+35124 233 222 220 28.5 24.4 31.2 119.1 106.1 127.6
+3 Chapare 3 Paraiso-
+Todo
+Santos
+35127 229 216 210 27.9 23.7 30.8 116.6 105 124.8
+3 Chapare 3 Nueva
+Tacopaya
+35141 232 220 204 13.9 0 30.8 58.1 0 123.9
+3 Chapare 3 Nueva
+Tacopaya
+35142 233 224 221 28.6 24.4 31.6 119.4 107.1 128.3
+3 Chapare 3 Nueva
+Tacopaya
+35143 233 220 216 28.5 24.3 31.4 119.2 107.3 127.6
+3 Chapare 3 Nueva
+Tacopaya
+35144 231 223 218 28.4 24.4 31.4 118.3 105.9 126.8
+3 Chapare 3 Nueva
+Tacopaya
+35146 234 219 215 21.5 0 31 90.7 0 128
+3 Chapare 3 Nueva
+Tacopaya
+35147 233 223 223 28.6 24.6 31.4 119.3 106.6 127.8
+Notes: All mesas are in Pais Bolivia; a
+departmento; b
+municipio.
+11Table 7: Estimated Fraudulent Vote Counts for Bolivian Election Mesas
+Fraudulent Counts
+Observed Turnout T 99.5% CI Votes V 99.5% CI
+D a
+Provincia M b
+Localidad Mesa NVoters NValid Votes Mean lo up Mean lo up
+3 Chapare 3 Independencia
+(Villa Tu-
+nari)
+35151 237 231 229 29.3 25.1 32.3 121.6 108.7 130.1
+3 Chapare 3 Independencia
+(Villa Tu-
+nari)
+35152 235 223 220 28.7 24.8 31.5 120.1 107.3 128.8
+3 Chapare 3 Independencia
+(Villa Tu-
+nari)
+35153 235 223 220 28.8 24.5 31.7 120.2 106.3 128.8
+3 Chapare 3 Independencia
+(Villa Tu-
+nari)
+35154 238 229 224 29.2 24.8 32.3 121.8 109.1 130.7
+3 Chapare 3 Independencia
+(Villa Tu-
+nari)
+35155 174 168 167 21.4 18.1 23.8 89.3 78.5 96.1
+3 Chapare 3 Norte
+Galilea
+35157 132 123 122 8.4 0 17.7 36 0 72.9
+3 Chapare 3 Tocopilla 35159 236 224 218 28.9 24.5 31.8 120.5 107.9 129.1
+3 Chapare 3 Tocopilla 35160 47 45 43 5.7 4.3 6.7 23.9 19.8 26.7
+3 Chapare 3 Primero
+de Mayo
+35163 235 221 220 22.9 0 31.6 96.4 0 128.4
+3 Chapare 3 Uncia 35165 238 233 232 29.5 24.9 32.4 122.2 109.3 131.2
+3 Chapare 3 Uncia 35166 236 226 222 29 24.8 31.8 120.8 108.1 129.3
+3 Chapare 3 Uncia 35167 237 233 232 29.4 25.2 32.4 121.9 109.2 131.1
+3 Chapare 3 Uncia 35168 29 29 29 3.7 2.6 4.4 15.4 12.2 17.2
+3 Chapare 3 Yuracare
+Limo del
+Isiboro
+35170 153 144 144 18.6 15.5 20.8 78.3 69.7 84.5
+Notes: All mesas are in Pais Bolivia; a
+departmento; b
+municipio.
+12Table 8: Estimated Fraudulent Vote Counts for Bolivian Election Mesas
+Fraudulent Counts
+Observed Turnout T 99.5% CI Votes V 99.5% CI
+D a
+Provincia M b
+Localidad Mesa NVoters NValid Votes Mean lo up Mean lo up
+3 Chapare 3 Puerto
+Patiño
+35171 238 228 222 29.2 25 32.1 121.7 109.3 130.5
+3 Chapare 3 Puerto
+Patiño
+35172 238 226 225 29.1 24.8 32 121.6 108.9 130.4
+3 Chapare 3 16 de Julio
+Capihuara
+35174 238 229 227 29.3 25.2 32.2 121.8 109.4 130.4
+3 Chapare 3 16 de Julio
+Capihuara
+35175 224 217 215 27.6 23.6 30.4 114.8 102.5 123
+3 Tapacari 1 Katariri 35227 228 212 212 27.7 23.6 30.5 116.4 104.5 125.1
+3 Tapacari 1 Katariri 35228 227 214 214 27.6 23.6 30.5 115.8 103.6 124.6
+3 Tapacari 1 Katariri 35229 37 36 36 4.6 3.4 5.5 19.2 16 21.4
+3 Tapacari 1 Arasaya 35235 237 227 227 29.1 24.7 32 121.4 108.6 130.4
+3 Tapacari 1 Arasaya 35236 27 27 27 3.4 2.4 4.1 14.3 11.4 16
+3 Carrasco 1 Rodeo
+Grande
+35266 135 126 122 8.5 0 18 35.8 0 73.5
+3 Quillacollo 1 El Paso 33521 247 236 196 14.8 0 32.2 60.1 0 128
+3 Quillacollo 2 Sauce
+Rancho
+33647 239 230 194 14.4 0 31.7 58.6 0 123.7
+3 Quillacollo 2 Viloma
+Cala Cala
+33705 240 233 205 14.5 0 32 59.7 0 126.4
+3 Quillacollo 2 Viloma
+Cala Cala
+33706 239 225 207 21.6 0 31.7 90.3 0 128.7
+3 Mizque 2 Siquimira 35752 227 214 209 21.8 0 30.4 91.3 0 123.8
+3 Mizque 4 Santiago 35781 231 216 215 28.2 24.2 31 118.3 106.4 126.8
+3 Mizque 4 Santiago 35782 125 118 112 8.8 0 16.9 37 0 67.5
+3 Tiraque 1 Iluri
+Grande
+36041 216 202 197 18.2 0 28.8 76.7 0 118.2
+3 Tiraque 2 Santa
+Rosa “ Ñ”
+36110 229 217 206 20.8 0 30.7 87.1 0 124.5
+3 Tiraque 2 San
+Isidro(Shinahota)
+36115 234 223 212 28.6 24.6 31.4 119.1 107.1 127.2
+Notes: All mesas are in Pais Bolivia; a
+departmento; b
+municipio.
+13Table 9: Estimated Fraudulent Vote Counts for Bolivian Election Mesas
+Fraudulent Counts
+Observed Turnout T 99.5% CI Votes V 99.5% CI
+D a
+Provincia M b
+Localidad Mesa NVoters NValid Votes Mean lo up Mean lo up
+3 Tiraque 2 San
+Isidro(Shinahota)
+36116 234 224 221 28.7 24.3 31.6 119.7 106.6 128.4
+3 Tiraque 2 San
+Isidro(Shinahota)
+36117 234 223 212 20.7 0 31.4 86 0 127.3
+3 Tiraque 2 San
+Isidro(Shinahota)
+36118 237 227 216 29.1 24.7 31.9 120.8 108.3 129.1
+3 Tiraque 2 San
+Isidro(Shinahota)
+36119 210 205 201 26 21.9 28.7 107.7 96.2 116
+3 Tiraque 2 4 de Abril 36120 231 223 220 28.4 24.3 31.3 118.3 105 127
+3 Tiraque 2 4 de Abril 36121 120 114 112 14.6 12.1 16.4 61.3 53.8 66.4
+3 Tiraque 2 12 de
+Agosto
+36122 236 219 215 28.7 24.7 31.5 120.5 107.9 128.8
+3 Tiraque 2 12 de
+Agosto
+36123 73 71 71 9 7.1 10.4 37.8 32.4 41.4
+3 Tiraque 2 Majo
+Pampa
+36124 237 228 219 29.1 24.9 32 121.1 108.7 130
+3 Tiraque 2 Majo
+Pampa
+36125 137 135 128 17 14.3 19.1 70.2 62.1 75.7
+3 Tiraque 2 San Luis 36128 235 221 211 21.8 0 31.4 91.4 0 128.1
+3 Tiraque 2 San Luis 36129 150 141 137 14.5 0 20.3 60.9 0 82.3
+3 Tiraque 2 Lauca Eñe 36130 236 224 201 14.1 0 31.2 58.6 0 125
+3 Tiraque 2 Lauca Eñe 36131 235 226 201 14.7 0 31.4 59.8 0 125.4
+3 Tiraque 2 Lauca Eñe 36132 71 68 65 8.7 6.8 10 36.2 30.9 39.8
+3 Tiraque 2 Agrigento
+B
+36133 239 225 215 14.4 0 31.7 60.5 0 128.4
+3 Tiraque 2 Agrigento
+B
+36134 92 88 84 11.2 9.1 12.7 46.9 41 51.1
+3 Carrasco 2 Yuthupampa35295 138 129 127 8.2 0 18.5 34.8 0 76.1
+3 Carrasco 2 Palca “C” 35297 222 212 203 22 0 29.7 91.8 0 121.3
+3 Carrasco 2 Rodeo
+“C”
+35300 196 194 169 24.4 20.7 26.9 98.3 88.9 104.7
+Notes: All mesas are in Pais Bolivia; a
+departmento; b
+municipio.
+14Table 10: Estimated Fraudulent Vote Counts for Bolivian Election Mesas
+Fraudulent Counts
+Observed Turnout T 99.5% CI Votes V 99.5% CI
+D a
+Provincia M b
+Localidad Mesa NVoters NValid Votes Mean lo up Mean lo up
+3 Carrasco 2 La Ha-
+bana
+35303 230 218 208 21.3 0 30.9 89.4 0 125
+3 Carrasco 2 Thago La-
+guna
+35305 61 59 54 3.9 0 8.5 16.2 0 33.7
+3 Carrasco 3 Conda
+Baja
+35326 229 214 203 13.6 0 30.2 57.3 0 122.6
+3 Carrasco 4 Entre Rios
+(Tacuaral)
+35384 228 216 211 27.9 24 30.6 116.6 104 124.7
+3 Carrasco 4 Entre Rios
+(Tacuaral)
+35386 26 26 25 3.3 2.3 4 13.4 10.7 15
+3 Carrasco 4 Cesar
+Zama
+(Chimore)
+35391 228 217 206 20.1 0 30.6 83.7 0 123.2
+3 Carrasco 4 Cesar
+Zama
+(Chimore)
+35393 224 210 200 18.5 0 30 77.2 0 120.5
+3 Carrasco 4 Cesar
+Zama
+(Chimore)
+35394 233 224 215 28.6 24.4 31.5 118.9 106.1 127.2
+3 Carrasco 4 Cesar
+Zama
+(Chimore)
+35395 237 226 224 29 24.7 31.9 121.3 107.9 130
+3 Carrasco 4 Cesar
+Zama
+(Chimore)
+35397 227 212 207 22.2 0 30.3 92.9 0 122.7
+3 Carrasco 4 San An-
+dres
+35407 227 215 214 22.2 0 30.5 93.1 0 123.7
+3 Carrasco 4 San An-
+dres
+35408 230 219 218 28.1 23.8 30.9 117.7 105.6 125.9
+3 Carrasco 4 San An-
+dres
+35409 148 144 142 18.3 15.3 20.5 76.1 67.2 82.5
+Notes: All mesas are in Pais Bolivia; a
+departmento; b
+municipio.
+15Table 11: Estimated Fraudulent Vote Counts for Bolivian Election Mesas
+Fraudulent Counts
+Observed Turnout T 99.5% CI Votes V 99.5% CI
+D a
+Provincia M b
+Localidad Mesa NVoters NValid Votes Mean lo up Mean lo up
+3 Carrasco 4 Senda
+“F” 27 de
+Mayo
+35412 237 229 218 29.2 25.2 32.1 121 108.3 129.2
+3 Carrasco 4 Senda
+“F” 27 de
+Mayo
+35413 38 38 37 4.8 3.5 5.7 19.8 16.3 21.9
+3 Carrasco 4 Senda “3” 35415 239 226 200 14.2 0 31.5 58.9 0 125.4
+3 Carrasco 5 Libertad 35484 231 216 207 13.8 0 30.6 58.5 0 125.3
+3 Carrasco 5 Valle
+Ivirza
+35490 230 219 212 28.2 24 31 117.5 104.8 125.9
+3 Carrasco 5 Valle
+Ivirza
+35492 229 216 208 27.9 24 30.7 116.4 104.1 124.4
+3 Carrasco 5 Valle de
+Sacta
+35498 232 218 205 19.1 0 30.9 79.5 0 124.5
+3 Carrasco 5 Valle de
+Sacta
+35500 237 227 221 29.1 24.9 32 121.2 108.5 129.7
+3 Carrasco 5 Valle de
+Sacta
+35501 225 212 206 15.3 0 30.1 64.1 0 120.9
+3 Carrasco 5 Valle de
+Sacta
+35504 230 217 211 28.1 23.9 30.9 117.3 104.8 125.5
+3 Carrasco 5 Valle de
+Sacta
+35505 223 211 204 27.2 23.2 29.9 113.8 101.9 121.8
+3 Carrasco 5 Valle de
+Sacta
+35506 231 219 210 20.7 0 30.8 86.8 0 125.9
+3 Carrasco 5 Valle de
+Sacta
+35509 228 215 205 14.3 0 30.4 59.8 0 121.8
+3 Carrasco 5 Valle de
+Sacta
+35510 226 218 207 27.8 23.6 30.5 115.2 102.7 123.2
+3 Carrasco 5 Valle de
+Sacta
+35513 233 219 212 13.9 0 30.9 59 0 126.9
+Notes: All mesas are in Pais Bolivia; a
+departmento; b
+municipio.
+16Table 12: Estimated Fraudulent Vote Counts for Bolivian Election Mesas
+Fraudulent Counts
+Observed Turnout T 99.5% CI Votes V 99.5% CI
+D a
+Provincia M b
+Localidad Mesa NVoters NValid Votes Mean lo up Mean lo up
+3 Carrasco 5 Valle de
+Sacta
+35514 228 215 210 21.4 0 30.5 89.8 0 123.5
+3 Carrasco 5 Valle de
+Sacta
+35515 231 218 202 13.8 0 30.5 57.8 0 123
+3 Carrasco 5 Valle de
+Sacta
+35517 227 219 212 27.9 23.9 30.7 116 103.2 124.1
+3 Carrasco 5 Valle Her-
+moso
+35521 227 217 207 27.8 23.8 30.6 115.7 103.1 123.3
+3 Carrasco 5 Valle Her-
+moso
+35523 227 213 207 20.8 0 30.3 87.8 0 123.6
+3 Carrasco 5 Valle Her-
+moso
+35525 226 218 215 27.8 23.7 30.7 115.8 103.2 124.2
+3 Carrasco 5 Valle Her-
+moso
+35527 235 221 211 21.2 0 31.2 89 0 127.6
+3 Carrasco 5 Villa
+Nueva
+35531 234 221 215 22.7 0 31.3 94.9 0 126.7
+3 Carrasco 5 Villa
+Nueva
+35532 223 211 200 27.1 23.4 29.9 113.2 101.2 121.1
+3 Carrasco 5 Mariposas 35539 223 211 193 13.8 0 29.6 57.1 0 119.8
+3 Carrasco 5 Mariposas 35544 226 214 204 27.6 23.6 30.4 115 103.2 123.2
+3 Carrasco 5 Ayopaya
+(Pto.
+Villarroel)
+35547 226 215 210 27.6 23.5 30.5 115.4 103.4 123.9
+3 Carrasco 5 Ayopaya
+(Pto.
+Villarroel)
+35548 233 221 209 15.8 0 31 66.4 0 126.1
+3 Carrasco 5 Ayopaya
+(Pto.
+Villarroel)
+35549 232 217 209 28.1 23.9 31.1 117.8 104.6 125.9
+3 Carrasco 5 Ayopaya
+(Pto.
+Villarroel)
+35551 20 20 19 1.3 0 3.1 5.4 0 11.5
+Notes: All mesas are in Pais Bolivia; a
+departmento; b
+municipio.
+17Table 13: Estimated Fraudulent Vote Counts for Bolivian Election Mesas
+Fraudulent Counts
+Observed Turnout T 99.5% CI Votes V 99.5% CI
+D a
+Provincia M b
+Localidad Mesa NVoters NValid Votes Mean lo up Mean lo up
+3 Carrasco 5 Cesar
+Zama
+(Pto.
+Villarroel)
+35552 233 228 218 28.9 24.4 31.7 119.2 107 127.5
+3 Carrasco 5 Cesar
+Zama
+(Pto.
+Villarroel)
+35553 45 44 42 5.6 4.2 6.6 23.1 19.2 25.5
+3 Carrasco 5 Senda 6 35554 226 216 205 20.8 0 30.3 86.4 0 122.4
+3 Carrasco 5 Senda 6 35557 226 211 204 22 0 29.8 92.5 0 122.9
+3 Carrasco 5 Senda 6 35559 229 221 211 28.1 23.9 31.1 116.9 104.1 124.9
+3 Carrasco 5 Valle Tu-
+nari
+35562 235 228 220 29 24.9 31.9 120.2 107.7 128.7
+3 Carrasco 5 Valle Tu-
+nari
+35563 229 217 213 28 24 30.8 117 104.5 125.2
+3 Carrasco 5 Valle Tu-
+nari
+35564 230 216 210 16.2 0 30.6 68.1 0 124.4
+3 Carrasco 5 Valle Tu-
+nari
+35566 223 211 208 27.3 23.4 30 114.1 102.9 122.3
+3 Carrasco 5 Valle Tu-
+nari
+35567 232 217 209 14.2 0 30.8 60 0 126.2
+3 Carrasco 5 Valle Tu-
+nari
+35568 226 211 205 21.9 0 30.1 92.3 0 123.3
+3 Carrasco 5 Valle Tu-
+nari
+35569 231 218 212 28.2 24.1 31 118 105.7 126.2
+3 Carrasco 5 Valle Tu-
+nari
+35570 179 170 163 17.7 0 24.2 74.2 0 97.8
+3 Carrasco 5 2 de
+Marzo
+35571 232 225 223 28.6 24.3 31.8 119 105.8 127.7
+3 Carrasco 5 2 de
+Marzo
+35572 236 230 222 29.1 24.9 32.2 120.8 108.4 129.3
+3 Carrasco 5 2 de
+Marzo
+35574 169 161 159 20.7 17.4 22.9 86.5 77.3 93.1
+Notes: All mesas are in Pais Bolivia; a
+departmento; b
+municipio.
+18Table 14: Estimated Fraudulent Vote Counts for Bolivian Election Mesas
+Fraudulent Counts
+Observed Turnout T 99.5% CI Votes V 99.5% CI
+D a
+Provincia M b
+Localidad Mesa NVoters NValid Votes Mean lo up Mean lo up
+3 Carrasco 5 Israel 35576 233 223 211 21.7 0 31.3 90.4 0 125.7
+3 Carrasco 5 Israel 35577 236 228 222 29.1 24.7 32 120.8 107.9 129.9
+3 Carrasco 6 Isarzama 35610 225 212 202 22.7 0 30.1 94.6 0 122.4
+3 Carrasco 6 Isarzama 35611 230 213 210 27.8 23.8 30.6 117 104.3 125.3
+3 Carrasco 6 Isarzama 35612 229 221 211 28.2 24 31 116.9 104.3 125
+3 Carrasco 6 Isarzama 35613 225 212 206 27.4 23.5 30.2 114.6 102.9 122.7
+3 Carrasco 6 Isarzama 35614 231 217 207 28 24 30.9 117.1 104.5 125.4
+3 Carrasco 6 Isarzama 35615 232 221 213 28.4 24.2 31.3 118.6 106.4 126.8
+3 Carrasco 6 Isarzama 35617 229 216 213 27.9 24 30.8 116.9 104 125.5
+3 Carrasco 6 Isarzama 35618 225 209 201 14.8 0 29.6 62.3 0 121.1
+3 Carrasco 6 Entre Rios 35632 227 217 203 14.5 0 30.2 60.6 0 122
+3 Carrasco 6 Entre Rios 35665 234 225 217 28.8 24.6 31.7 119.5 106.6 127.9
+3 Carrasco 6 Entre Rios 35666 235 226 210 28.8 24.6 31.7 119.2 107.4 127.2
+3 Carrasco 6 Entre Rios 35667 235 218 209 14.8 0 31 61.4 0 126.5
+3 Carrasco 6 Entre Rios 35668 233 220 216 22.4 0 31.2 94.1 0 127.6
+3 Carrasco 6 Entre Rios 35669 231 217 201 14.4 0 30.4 60.1 0 123
+3 Carrasco 6 Entre Rios 35670 234 225 212 28.7 24.7 31.7 119 106.6 127.3
+3 Carrasco 6 Entre Rios 35673 240 224 214 14.3 0 31.7 60.1 0 128.2
+3 Carrasco 6 Entre Rios 35674 233 218 212 28.3 24.1 31.2 118.9 106 127.6
+3 Carrasco 6 Entre Rios 35676 233 219 215 28.4 24.2 31.4 119 106.7 127.4
+3 Carrasco 6 Entre Rios 35677 234 224 211 21.4 0 31.5 89.2 0 126.5
+3 Carrasco 6 Entre Rios 35678 236 221 214 28.7 24.5 31.6 120.2 107.9 128.6
+3 Carrasco 6 14 De Sep-
+tiembre
+35687 237 229 223 29.2 24.9 32.2 121.3 109.7 129.8
+3 Carrasco 6 14 De Sep-
+tiembre
+35688 140 138 137 17.4 14.4 19.5 72.3 63.9 78.4
+Notes: All mesas are in Pais Bolivia; a
+departmento; b
+municipio.
+19Table 15: Estimated Fraudulent Vote Counts for Bolivian Election Mesas
+Fraudulent Counts
+Observed Turnout T 99.5% CI Votes V 99.5% CI
+D a
+Provincia M b
+Localidad Mesa NVoters NValid Votes Mean lo up Mean lo up
+3 Carrasco 6 Urbanización
+Chan-
+cadora
+35689 238 229 220 29.1 25.1 32.1 121.2 108.9 129.7
+3 Carrasco 6 Urbanización
+Chan-
+cadora
+35690 239 231 224 29.4 25.1 32.5 122.2 109.7 131
+3 Carrasco 6 Urbanización
+Chan-
+cadora
+35691 184 177 170 22.6 19.1 25.1 94 83.6 100.9
+5 General
+Bernardino
+Bilbao
+1 Qoaraca 52152 123 116 112 14.9 12.3 16.9 62.6 54.6 68.1
+4 Ladislao
+Cabrera
+1 Puqui 41456 54 54 45 6.8 5.2 8 26.6 22.6 29.4
+4 Sur
+Carangas
+1 Orinoca 41565 220 205 194 14.5 0 29.2 60.2 0 118.4
+4 Sur
+Carangas
+1 Orinoca 41567 91 88 86 11.2 9.1 12.8 46.8 40.6 50.9
+5 Modesto
+Omiste
+1 Lonte 52331 75 74 73 9.4 7.5 10.7 38.9 33.3 42.5
+4 Cercado 4 Lequepalca 41104 36 36 33 4.5 3.3 5.4 18.3 15.1 20.4
+4 Abaroa 1 Cacachaca 41195 217 210 187 19.8 0 29.3 81.3 0 115.4
+4 Abaroa 1 Cacachaca 41196 216 204 198 22.2 0 28.9 93.4 0 118.2
+5 Alonso de
+Ibáñez
+1 Cachari 51575 237 236 233 29.6 25.3 32.7 122 108.4 131
+5 Alonso de
+Ibáñez
+1 Cachari 51576 36 36 35 4.6 3.4 5.4 18.7 15.4 20.7
+5 Alonso de
+Ibáñez
+1 Pichuya 51577 256 255 253 32 27.5 35.1 131.7 118.4 141.3
+Notes: All mesas are in Pais Bolivia; a
+departmento; b
+municipio.
+20Table 16: Estimated Fraudulent Vote Counts for Bolivian Election Mesas
+Fraudulent Counts
+Observed Turnout T 99.5% CI Votes V 99.5% CI
+D a
+Provincia M b
+Localidad Mesa NVoters NValid Votes Mean lo up Mean lo up
+5 Chayanta 3 Collana
+Tuica
+51283 217 207 198 26.4 22.5 29.3 110.3 98.8 118
+5 Chayanta 3 Collana
+Tuica
+51284 222 213 208 27.2 23.3 30 113.5 101.3 121.7
+5 Charcas 1 Ipote 51393 222 215 213 27.4 23.4 30.1 113.9 101.9 122.2
+5 Charcas 1 Banduriri 51401 25 25 23 1.6 0 3.8 6.4 0 14.2
+5 Charcas 1 Sacana 51405 156 149 136 14.8 0 21.1 61.4 0 84.2
+5 Charcas 1 Llallaguani 51406 130 126 126 16 13.3 18 66.9 58.8 72.8
+5 Charcas 2 Tambo
+Khasa
+51427 214 209 205 26.5 22.6 29.3 109.8 97.8 117.8
+5 Charcas 2 Tambo
+Khasa
+51428 167 160 160 20.5 17.3 22.8 85.7 76.1 92.3
+5 Charcas 2 Pocosuco 51432 219 206 201 20.7 0 29.2 86.8 0 119.6
+5 Charcas 2 Vaqueria 51433 135 127 123 16.3 13.7 18.3 68.7 60.9 74.1
+5 Charcas 2 Layme
+Cotani
+51435 91 90 89 11.4 9.1 12.9 47.2 40.9 51.5
+5 Charcas 2 Quirusillani 51436 123 116 115 14.9 12.4 16.8 62.8 55.1 68.3
+5 Alonso de
+Ibáñez
+1 Sillu Sillu 51541 221 206 206 19.4 0 29.4 81.9 0 121.1
+5 Alonso de
+Ibáñez
+1 Sillu Sillu 51542 216 211 211 26.7 22.8 29.6 111 99.4 119.3
+5 Alonso de
+Ibáñez
+1 Sillu Sillu 51543 39 39 39 4.9 3.7 5.8 20.6 17.1 22.8
+5 Alonso de
+Ibáñez
+1 Carcoma 51546 217 201 200 12.8 0 28.7 54.4 0 117
+5 Alonso de
+Ibáñez
+1 Iturata 51549 222 210 206 21.7 0 29.8 91.1 0 122
+5 Alonso de
+Ibáñez
+1 Iturata 51550 71 70 63 8.8 6.9 10.2 35.8 30.6 39.1
+Notes: All mesas are in Pais Bolivia; a
+departmento; b
+municipio.
+21Table 17: Estimated Fraudulent Vote Counts for Bolivian Election Mesas
+Fraudulent Counts
+Observed Turnout T 99.5% CI Votes V 99.5% CI
+D a
+Provincia M b
+Localidad Mesa NVoters NValid Votes Mean lo up Mean lo up
+5 Alonso de
+Ibáñez
+1 Laytogo 51553 215 203 193 21.2 0 28.8 88.3 0 116
+5 Alonso de
+Ibáñez
+1 Ovejeria 51562 221 220 216 27.6 23.4 30.3 113.7 101.8 122.3
+5 Alonso de
+Ibáñez
+1 Ovejeria 51563 115 112 112 14.2 11.7 16.1 59.4 51.8 64.4
+5 Alonso de
+Ibáñez
+1 Vila Vila. 51564 218 216 210 27.2 23.2 30 111.9 99 120.5
+5 Alonso de
+Ibáñez
+1 Vila Vila. 51565 224 218 218 27.7 23.6 30.5 115 103.3 123.7
+5 Alonso de
+Ibáñez
+1 Vila Vila. 51566 229 224 223 28.4 24.2 31.4 117.7 105.4 126.1
+5 Alonso de
+Ibáñez
+1 Camacachi 51572 105 101 99 12.9 10.4 14.7 53.9 47.5 58.5
+7 Velasco 1 Comunidad
+Campesina
+Agroecológica
+Tierra
+Hermosa
+76182 203 192 186 24.7 21 27.4 103.5 92.9 111
+Notes: All mesas are in Pais Bolivia; a
+departmento; b
+municipio.
+22Table 18: Estimated Fraudulent Vote Counts for Bolivian Election Mesas
+Fraudulent Counts
+Observed Turnout T 99.5% CI Votes V 99.5% CI
+D a
+Provincia M b
+Localidad Mesa NVoters NValid Votes Mean lo up Mean lo up
+7 Ńuflo de
+Chavez
+1 Integracion
+A
+77998 239 231 217 29.4 25 32.4 121.7 108.8 130
+7 Ńuflo de
+Chavez
+2 San Pablo 78036 124 115 114 4.5 0 16 19.2 0 65.7
+7 Ńuflo de
+Chavez
+5 Monterito 78195 236 221 220 21.8 0 31.3 91.8 0 128
+7 Ńuflo de
+Chavez
+5 Monterito 78196 43 42 41 5.3 4 6.3 22.2 18.7 24.8
+7 Ńuflo de
+Chavez
+5 Palmira 78199 128 121 121 15.6 12.9 17.6 65.6 57.9 71.2
+7 Sara 2 Ró Nuevo 76806 210 202 185 21.6 0 28.4 88.6 0 113.2
+7 Sara 2 San Juan
+del Pari
+76807 238 226 203 14.8 0 31.6 60.6 0 126.8
+7 Cordillera 1 Buena
+Vista
+76850 27 26 26 3.3 2.3 4 14 11.3 15.7
+7 Cordillera 1 Potrerillos
+Los Pozos
+76851 140 134 123 17.1 14.3 19.1 70.6 62.9 76
+9 Madre de
+Dios
+2 Genechiquia 90315 142 140 140 17.7 14.9 19.8 73.4 65.1 79.4
+23runef4 Bolivia2019Clean 4c.Rout:
+R version 3.4.4 (2018-03-15) -- "Someone to Lean On"
+Copyright (C) 2018 The R Foundation for Statistical Computing
+Platform: x86_64-pc-linux-gnu (64-bit)
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type ’license()’ or ’licence()’ for distribution details.
+R is a collaborative project with many contributors.
+Type ’contributors()’ for more information and
+’citation()’ on how to cite R or R packages in publications.
+Type ’demo()’ for some demos, ’help()’ for on-line help, or
+’help.start()’ for an HTML browser interface to help.
+Type ’q()’ to quit R.
+> # eforensics model applied to various datasets
+>
+> library(eforensics);
+---------------------------------------
+Election Forensics Package (eforensics)
+---------------------------------------
+Authors:
+- Diogo Ferrari
+- Walter Mebane
+- Kevin McAlister
+- Patrick Wu
+Supported by NSF grant SES 1523355
+>
+> # Bolivia 2019 president
+>
+> dat <- read.csv("~/wxchg/data/Bolivia/Bolivia2019Clean.csv");
+> names(dat);
+[1] "X" "Pa..s" "N..mero.departamento"
+[4] "Departamento" "Provincia" "N..mero.municipio"
+[7] "Municipio" "Circunscripci..n" "Localidad"
+24[10] "Recinto" "N..mero.Mesa" "C..digo.Mesa"
+[13] "Elecci..n" "Inscritos" "CC"
+[16] "FPV" "MTS" "UCS"
+[19] "MAS...IPSP" "X21F" "PDC"
+[22] "MNR" "PAN.BOL" "Votos.V..lidos"
+[25] "Blancos" "Nulos" "Estado.acta"
+[28] "NVoters" "NValid" "Votes"
+> dim(dat);
+[1] 34551 30
+> #> names(dat);
+> # [1] "X" "Pas" "Nmero.departamento"
+> # [4] "Departamento" "Provincia" "Nmero.municipio"
+> # [7] "Municipio" "Circunscripcin" "Localidad"
+> #[10] "Recinto" "Nmero.Mesa" "Cdigo.Mesa"
+> #[13] "Eleccin" "Inscritos" "CC"
+> #[16] "FPV" "MTS" "UCS"
+> #[19] "MAS...IPSP" "X21F" "PDC"
+> #[22] "MNR" "PAN.BOL" "Votos.Vlidos"
+> #[25] "Blancos" "Nulos" "Estado.acta"
+> #[28] "NVoters" "NValid" "Votes"
+> #> dim(dat);
+> #[1] 34551 30
+>
+> sapply(dat[,14:26],sum,na.rm=TRUE);
+Inscritos CC FPV MTS UCS
+7314446 2240920 23725 76827 25283
+MAS...IPSP X21F PDC MNR PAN.BOL
+2889359 260316 539081 42334 39826
+Votos.V..lidos Blancos Nulos
+6137778 93507 229337
+> #> sapply(dat[,14:26],sum,na.rm=TRUE);
+> # Inscritos CC FPV MTS UCS
+> # 7314446 2240920 23725 76827 25283
+> # MAS...IPSP X21F PDC MNR PAN.BOL
+> # 2889359 260316 539081 42334 39826
+> #Votos.Vlidos Blancos Nulos
+> # 6137778 93507 229337
+>
+> dat$NVoters <- dat$Inscritos;
+> dat$NValid <- apply(as.matrix(dat[,15:23]),1,sum,na.rm=TRUE);
+> dat$Votes <- dat$MAS...IPSP;
+>
+> kidx <- !is.na(dat$NVoters) & (dat$NVoters >= dat$NValid) &
++ (dat$NValid > 0) & (dat$NValid >= dat$Votes);
+> if (any(is.na(kidx))) kidx[is.na(kidx)] <- FALSE;
+25> table(kidx);
+kidx
+TRUE
+34551
+> dat <- dat[kidx,];
+> dim(dat);
+[1] 34551 30
+>
+> dat$NAbst <- dat$NVoters-dat$NValid;
+>
+> ## mcmc parameters
+> ## ---------------
+> mcmc = list(burn.in=5000, n.adapt=1000, n.iter=2000, n.chains=4)
+>
+> ## samples
+> ## -------
+> ## help(eforensics)
+>
+> efout <- eforensics(
++ Votes ~ 1, NAbst ~ 1, data=dat,
++ eligible.voters="NVoters",
++ model="qbl", mcmc=mcmc,
++ parameters = "all", parComp = TRUE, autoConv = TRUE, max.auto = 2,
++ mcmc.conv.diagnostic = "MCMCSE",
++ mcmc.conv.parameters = c("pi"), mcmcse.conv.precision = .05, mcmcse.combine = TRUE
++ )
+Burn-in: 5000
+Number of MCMC samples per chain: 2000
+MCMC in progress ....
+Calling 4 simulations using the parallel method...
+Following the progress of chain 1 (the program will wait for all chains
+to finish before continuing):
+Welcome to JAGS 4.3.0 on Mon Oct 28 18:02:39 2019
+JAGS is free software and comes with ABSOLUTELY NO WARRANTY
+Loading module: basemod: ok
+Loading module: bugs: ok
+. . Reading data file data.txt
+. Compiling model graph
+Resolving undeclared variables
+Allocating nodes
+Graph information:
+26Observed stochastic nodes: 69102
+Unobserved stochastic nodes: 380082
+Total graph size: 2670483
+. Reading parameter file inits1.txt
+. Initializing model
+. Adapting 1000
+-------------------------------------------------| 1000
+++++++++++++++++++++++++++++++++++++++++++++++++++ 100%
+Adaptation successful
+. Updating 5000
+-------------------------------------------------| 5000
+************************************************** 100%
+. . Updating 2000
+-------------------------------------------------| 2000
+************************************************** 100%
+. . . . Updating 0
+. Deleting model
+Following the progress of chain 2 (the program will wait for all chains
+to finish before continuing):
+Welcome to JAGS 4.3.0 on Mon Oct 28 18:02:39 2019
+JAGS is free software and comes with ABSOLUTELY NO WARRANTY
+Loading module: basemod: ok
+Loading module: bugs: ok
+. . Reading data file data.txt
+. Compiling model graph
+Resolving undeclared variables
+Allocating nodes
+Graph information:
+Observed stochastic nodes: 69102
+Unobserved stochastic nodes: 380082
+Total graph size: 2670483
+. Reading parameter file inits2.txt
+. Initializing model
+. Adapting 1000
+-------------------------------------------------| 1000
+++++++++++++++++++++++++++++++++++++++++++++++++++ 100%
+Adaptation successful
+. Updating 5000
+-------------------------------------------------| 5000
+************************************************** 100%
+. . Updating 2000
+-------------------------------------------------| 2000
+************************************************** 100%
+. . . . Updating 0
+. Deleting model
+27All chains have finished
+Simulation complete. Reading coda files...
+Coda files loaded successfully
+Calculating summary statistics...
+Calculating the Gelman-Rubin statistic for 3 variables....
+Finished running the simulation
+Burnin Finished.
+Capturing the samples ...
+Calling 4 simulations using the parallel method...
+Following the progress of chain 1 (the program will wait for all chains
+to finish before continuing):
+Welcome to JAGS 4.3.0 on Tue Oct 29 06:51:27 2019
+JAGS is free software and comes with ABSOLUTELY NO WARRANTY
+Loading module: basemod: ok
+Loading module: bugs: ok
+. . Reading data file data.txt
+. Compiling model graph
+Resolving undeclared variables
+Allocating nodes
+Graph information:
+Observed stochastic nodes: 69102
+Unobserved stochastic nodes: 380082
+Total graph size: 2670483
+. Reading parameter file inits1.txt
+. Initializing model
+. Adapting 1000
+-------------------------------------------------| 1000
+++++++++++++++++++++++++++++++++++++++++++++++++++ 100%
+Adaptation successful
+. NOTE: Stopping adaptation
+. . . . . . . . . . . . Updating 2000
+-------------------------------------------------| 2000
+************************************************** 100%
+. . . . Updating 0
+. Deleting model
+Following the progress of chain 3 (the program will wait for all chains
+to finish before continuing):
+Welcome to JAGS 4.3.0 on Tue Oct 29 06:51:27 2019
+JAGS is free software and comes with ABSOLUTELY NO WARRANTY
+Loading module: basemod: ok
+Loading module: bugs: ok
+. . Reading data file data.txt
+28. Compiling model graph
+Resolving undeclared variables
+Allocating nodes
+Graph information:
+Observed stochastic nodes: 69102
+Unobserved stochastic nodes: 380082
+Total graph size: 2670483
+. Reading parameter file inits3.txt
+. Initializing model
+. Adapting 1000
+-------------------------------------------------| 1000
+++++++++++++++++++++++++++++++++++++++++++++++++++ 100%
+Adaptation successful
+. NOTE: Stopping adaptation
+. . . . . . . . . . . . Updating 2000
+-------------------------------------------------| 2000
+************************************************** 100%
+. . . . Updating 0
+. Deleting model
+.
+All chains have finished
+NOTE: The JAGS output file(s) appear(s) to be very large - they may
+take some time to read. Have you accidentally included a large vector
+in "monitor", or are you trying to run too many iterations without
+specifying "thin"?If the read-in process fails (or is aborted), use ?results.jags and th
+read.monitor argument to retrieve the simulationSimulation complete. Reading coda files
+Coda files loaded successfully
+Note: Summary statistics were not produced as there are >50 monitored
+variables
+[To override this behaviour see ?add.summary and ?runjags.options]
+FALSEFinished running the simulation
+Convergence diagnostic: MCMCSE
+# A tibble: 0 x 4
+# ... with 4 variables: Parameter <int>, MCMCSE <dbl>, MCMCSE.criterium <dbl>,
+# Converged <lgl>
+Estimation Completed
+>
+> save(efout,file="runef4_Bolivia2019Clean_4c.RData");
+>
+> summary(efout);
+29$‘Chain 1‘
+Parameter Covariate Mean SD HPD.lower
+1 pi[1] No Fraud 0.9924773465 0.0005785503 9.91301e-01
+2 pi[2] Incremental Fraud 0.0003864678 0.0002929926 1.48889e-07
+3 pi[3] Extreme Fraud 0.0071361877 0.0005044873 6.14445e-03
+4 beta.tau (Intercept) 1.7166579850 0.0106668545 1.68790e+00
+5 beta.nu (Intercept) -0.1045734954 0.0136564322 -1.27484e-01
+6 beta.iota.m (Intercept) -0.0174899248 0.0181483790 -5.69653e-02
+7 beta.iota.s (Intercept) -0.0348312605 0.0066016235 -4.71452e-02
+8 beta.chi.m (Intercept) -0.3338680365 0.0119406331 -3.54708e-01
+9 beta.chi.s (Intercept) 0.1955873730 0.0096970780 1.76718e-01
+HPD.upper
+1 0.993592000
+2 0.000932117
+3 0.008105520
+4 1.730440000
+5 -0.076490500
+6 0.006106840
+7 -0.024166400
+8 -0.312070000
+9 0.210340000
+$‘Chain 2‘
+Parameter Covariate Mean SD HPD.lower
+1 pi[1] No Fraud 0.9927843670 0.0005490212 9.91591e-01
+2 pi[2] Incremental Fraud 0.0003258427 0.0002351087 1.23068e-07
+3 pi[3] Extreme Fraud 0.0068897918 0.0004763863 6.01357e-03
+4 beta.tau (Intercept) 1.7265722950 0.0105278763 1.70732e+00
+5 beta.nu (Intercept) -0.0981726238 0.0100272867 -1.17531e-01
+6 beta.iota.m (Intercept) 0.0396192940 0.0118185317 2.58306e-02
+7 beta.iota.s (Intercept) 0.0611360010 0.0140609892 3.30056e-02
+8 beta.chi.m (Intercept) -0.1868573970 0.0143058370 -2.11973e-01
+9 beta.chi.s (Intercept) 0.5010675160 0.0398472915 4.28249e-01
+HPD.upper
+1 0.993759000
+2 0.000773622
+3 0.007863480
+4 1.747300000
+5 -0.078518400
+6 0.059809200
+7 0.081006300
+8 -0.167900000
+9 0.554310000
+$‘Chain 3‘
+30Parameter Covariate Mean SD HPD.lower
+1 pi[1] No Fraud 0.9915581630 0.0006050236 9.90303e-01
+2 pi[2] Incremental Fraud 0.0004318741 0.0002502098 3.65805e-05
+3 pi[3] Extreme Fraud 0.0080099639 0.0005418588 6.92579e-03
+4 beta.tau (Intercept) 1.7150409550 0.0080916626 1.70022e+00
+5 beta.nu (Intercept) -0.1009840489 0.0091813541 -1.19823e-01
+6 beta.iota.m (Intercept) -0.0659426044 0.0131354319 -8.11853e-02
+7 beta.iota.s (Intercept) 0.0874979450 0.0078811226 7.50677e-02
+8 beta.chi.m (Intercept) -0.3449911565 0.0056981201 -3.55295e-01
+9 beta.chi.s (Intercept) 0.2952925160 0.0399865023 2.33002e-01
+HPD.upper
+1 0.992689000
+2 0.000899037
+3 0.009013080
+4 1.730970000
+5 -0.084383400
+6 -0.037474400
+7 0.101862000
+8 -0.333423000
+9 0.363672000
+$‘Chain 4‘
+Parameter Covariate Mean SD HPD.lower
+1 pi[1] No Fraud 0.9867276210 0.0007672637 9.85209e-01
+2 pi[2] Incremental Fraud 0.0004147004 0.0003610805 1.53966e-07
+3 pi[3] Extreme Fraud 0.0128576734 0.0007135009 1.15418e-02
+4 beta.tau (Intercept) 1.7088835450 0.0131037522 1.68483e+00
+5 beta.nu (Intercept) -0.1148054847 0.0139168839 -1.38886e-01
+6 beta.iota.m (Intercept) -0.2411824705 0.0118042231 -2.56822e-01
+7 beta.iota.s (Intercept) -0.5472241795 0.0109064378 -5.63867e-01
+8 beta.chi.m (Intercept) -1.5187331400 0.0244596309 -1.54933e+00
+9 beta.chi.s (Intercept) -0.2538778370 0.0187851430 -2.85696e-01
+HPD.upper
+1 0.98822600
+2 0.00113301
+3 0.01435950
+4 1.72973000
+5 -0.08679060
+6 -0.21645200
+7 -0.52911200
+8 -1.47431000
+9 -0.21178100
+31wrkef2a Bolivia2019Clean 4c.Rout:
+R version 3.4.4 (2018-03-15) -- "Someone to Lean On"
+Copyright (C) 2018 The R Foundation for Statistical Computing
+Platform: x86_64-pc-linux-gnu (64-bit)
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type ’license()’ or ’licence()’ for distribution details.
+R is a collaborative project with many contributors.
+Type ’contributors()’ for more information and
+’citation()’ on how to cite R or R packages in publications.
+Type ’demo()’ for some demos, ’help()’ for on-line help, or
+’help.start()’ for an HTML browser interface to help.
+Type ’q()’ to quit R.
+> # eforensics model applied to various datasets
+>
+> library(eforensics);
+---------------------------------------
+Election Forensics Package (eforensics)
+---------------------------------------
+Authors:
+- Diogo Ferrari
+- Walter Mebane
+- Kevin McAlister
+- Patrick Wu
+Supported by NSF grant SES 1523355
+> source("wrkef.R");
+> source("obsfrauds_ciS.R")
+>
+> # Bolivia 2019 president
+>
+> dat <- read.csv("~/wxchg/data/Bolivia/Bolivia2019Clean.csv");
+> names(dat);
+32[1] "X" "Pa..s" "N..mero.departamento"
+[4] "Departamento" "Provincia" "N..mero.municipio"
+[7] "Municipio" "Circunscripci..n" "Localidad"
+[10] "Recinto" "N..mero.Mesa" "C..digo.Mesa"
+[13] "Elecci..n" "Inscritos" "CC"
+[16] "FPV" "MTS" "UCS"
+[19] "MAS...IPSP" "X21F" "PDC"
+[22] "MNR" "PAN.BOL" "Votos.V..lidos"
+[25] "Blancos" "Nulos" "Estado.acta"
+[28] "NVoters" "NValid" "Votes"
+> dim(dat);
+[1] 34551 30
+> #> names(dat);
+> # [1] "X" "Pas" "Nmero.departamento"
+> # [4] "Departamento" "Provincia" "Nmero.municipio"
+> # [7] "Municipio" "Circunscripcin" "Localidad"
+> #[10] "Recinto" "Nmero.Mesa" "Cdigo.Mesa"
+> #[13] "Eleccin" "Inscritos" "CC"
+> #[16] "FPV" "MTS" "UCS"
+> #[19] "MAS...IPSP" "X21F" "PDC"
+> #[22] "MNR" "PAN.BOL" "Votos.Vlidos"
+> #[25] "Blancos" "Nulos" "Estado.acta"
+> #[28] "NVoters" "NValid" "Votes"
+> #> dim(dat);
+> #[1] 34551 30
+>
+> sapply(dat[,14:26],sum,na.rm=TRUE);
+Inscritos CC FPV MTS UCS
+7314446 2240920 23725 76827 25283
+MAS...IPSP X21F PDC MNR PAN.BOL
+2889359 260316 539081 42334 39826
+Votos.V..lidos Blancos Nulos
+6137778 93507 229337
+> #> sapply(dat[,14:26],sum,na.rm=TRUE);
+> # Inscritos CC FPV MTS UCS
+> # 7314446 2240920 23725 76827 25283
+> # MAS...IPSP X21F PDC MNR PAN.BOL
+> # 2889359 260316 539081 42334 39826
+> #Votos.Vlidos Blancos Nulos
+> # 6137778 93507 229337
+>
+> dat$NVoters <- dat$Inscritos;
+> dat$NValid <- apply(as.matrix(dat[,15:23]),1,sum,na.rm=TRUE);
+> dat$Votes <- dat$MAS...IPSP;
+>
+33> kidx <- !is.na(dat$NVoters) & (dat$NVoters >= dat$NValid) &
++ (dat$NValid > 0) & (dat$NValid >= dat$Votes);
+> if (any(is.na(kidx))) kidx[is.na(kidx)] <- FALSE;
+> table(kidx);
+kidx
+TRUE
+34551
+> dat <- dat[kidx,];
+> dim(dat);
+[1] 34551 30
+>
+> dat$NAbst <- dat$NVoters-dat$NValid;
+>
+> load("runef4_Bolivia2019Clean_4c.RData");
+>
+> summary(efout, join.chains=TRUE);
+Parameter Covariate Mean SD HPD.lower
+1 pi[1] No Fraud 0.9908868744 0.002523558 9.85871e-01
+2 pi[2] Incremental Fraud 0.0003897213 0.000291750 1.23068e-07
+3 pi[3] Extreme Fraud 0.0087234042 0.002488432 6.11167e-03
+4 beta.tau (Intercept) 1.7167886950 0.012479284 1.68742e+00
+5 beta.nu (Intercept) -0.1046339132 0.013447711 -1.31152e-01
+6 beta.iota.m (Intercept) -0.0712489264 0.105916829 -2.54851e-01
+7 beta.iota.s (Intercept) -0.1083553735 0.257659082 -5.60062e-01
+8 beta.chi.m (Intercept) -0.5961124325 0.536580404 -1.54364e+00
+9 beta.chi.s (Intercept) 0.1845173920 0.277695162 -2.71450e-01
+HPD.upper
+1 0.993628000
+2 0.000939541
+3 0.013629700
+4 1.737890000
+5 -0.079023000
+6 0.056201500
+7 0.099526700
+8 -0.169461000
+9 0.551338000
+>
+> options(width=120)
+> elist <- effrauds_obs(dat, efout);
+> if ((!is.null(elist$CIcombo)) && dim(elist$CIcombo[["all"]][["Nfraud95"]])[[1]]>0) {
++ print("***** COMBO *****")
++ n <- dim(elist$CIcombo[["all"]][["Nfraud95"]])[[1]];
++ v <- c(dim(dat)[1]-n,n);
++ names(v) <- c("no fraud","fraud");
++ print(v);
+34+
++ evec <- c(elist$CIcombo[["all"]][["Ntfraudtotalmean"]],
++ elist$CIcombo[["all"]][["Ntfraudtotal95"]],elist$CIcombo[["all"]][["Ntfraudtotal99
++ elist$CIcombo[["all"]][["Nfraudtotalmean"]],
++ elist$CIcombo[["all"]][["Nfraudtotal95"]],elist$CIcombo[["all"]][["Nfraudtotal995"
++ names(evec) <- c("Ntfraudtotalmean",
++ paste("Nttotal95",c("lo","hi"),sep="."),paste("Nttotal995",c("lo","hi"),sep="."),
++ "Nfraudtotalmean",
++ paste("Ntotal95",c("lo","hi"),sep="."),paste("Ntotal995",c("lo","hi"),sep="."));
++ print(evec);
++
++ emat <- cbind(elist$CIcombo[["wdat"]][,c("NVoters","NValid","Votes")],
++ elist$CIcombo[["all"]][["Ntfraudmean"]],
++ elist$CIcombo[["all"]][["Ntfraud95"]],elist$CIcombo[["all"]][["Ntfraud995"]],
++ elist$CIcombo[["all"]][["Nfraudmean"]],
++ elist$CIcombo[["all"]][["Nfraud95"]],elist$CIcombo[["all"]][["Nfraud995"]]);
++ dimnames(emat)[[2]] <- c("NVoters","NValid","Votes","Ntfraudmean",
++ paste("Nt95",c("lo","hi"),sep="."),
++ paste("Nt995",c("lo","hi"),sep="."),
++ "Nfraudmean",
++ paste("N95",c("lo","hi"),sep="."),
++ paste("N995",c("lo","hi"),sep="."));
++ print(emat);
++
++ cbind(elist$CIcombo[["wdat"]][,c(2,3,5,6,9,11)],
++ emat[,c(1:3,4,7:8,9,12:13)]);
++ }
+[1] "***** COMBO *****"
+no fraud fraud
+34277 274
+Ntfraudtotalmean Nttotal95.lo Nttotal95.hi Nttotal995.lo Nttotal995.hi
+5295.798 4910.488 5734.178 4751.090 5880.218
+Nfraudtotalmean Ntotal95.lo Ntotal95.hi Ntotal995.lo Ntotal995.hi
+22519.818 20842.281 24395.891 20479.794 24663.779
+35

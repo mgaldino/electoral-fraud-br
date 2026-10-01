@@ -1,0 +1,17 @@
+{
+  "date": "2026-10-01",
+  "coordinator": "019d795a-acfa-72c2-a210-d55a46c606c2",
+  "checks": [
+    {"command": "Rscript tests/mebane/ad_long/test_draws_representation.R", "exit_code": 0, "result": "S3 dispatch failure reproduced; base array preserves values, dimensions, names and chain order"},
+    {"command": "git diff --check -- CLAUDE.md README.md R/experimental/mebane_ad_long tests/mebane/ad_long quality_reports/plans", "exit_code": 0, "result": "No whitespace errors in this scoped code/document diff; raw logs deliberately excluded and preserved"},
+    {"command": "python3 -B scripts/mebane_gates.py render --output quality_reports/plans/2026-09-28_mebane_2022_2026_gates.md", "exit_code": 0, "result": "Main plan rendered from current JSON ledger"},
+    {"check": "Current ledger gates versus before_live_docs snapshot", "result": "All 11 historical gate objects structurally identical; only top-level current-deliverable and experimental-study metadata changed"},
+    {"check": "Parse state/completion/adjudication/history/resource and two current plan JSON files", "result": "7 JSON documents parse successfully"},
+    {"command": "python3 -B R/experimental/mebane_ad_long/check_history.py quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/history_preservation.json", "exit_code": 0, "result": "1620 historical entries checked; four live-document historical versions preserved by explicit snapshots; zero unexplained changes"}
+  ],
+  "new_sampling": false,
+  "new_compilation": false,
+  "installation": false,
+  "deletion": false,
+  "scientific_precision_approval": false
+}

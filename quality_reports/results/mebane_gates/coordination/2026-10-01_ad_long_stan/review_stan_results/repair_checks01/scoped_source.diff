@@ -1,0 +1,38 @@
+--- R/experimental/mebane_ad_long/postprocess_stan.R
++++ R/experimental/mebane_ad_long/postprocess_stan_v2.R
+@@ -10,7 +10,7 @@
+   consumed <- c(file.path(run_dir,c("draws_array.rds","sampler_diagnostics.rds","timing.json","manifest.json","supervisor_finished.json")),
+                 contract_path,file.path(root,"contract.json"),data_path,
+                 "R/experimental/mebane_ad_long/stan_bridge.R",
+-                "R/experimental/mebane_ad_long/postprocess_stan.R")
++                "R/experimental/mebane_ad_long/postprocess_stan_v2.R")
+   ad_snapshot(consumed,file.path(out,"sources"))
+   original <- jsonlite::read_json(file.path(run_dir,"manifest.json"),simplifyVector=FALSE)
+   stopifnot(original$status=="sampling_completed_precision_not_assessed")
+@@ -21,6 +21,15 @@
+   payload <- readRDS(data_path)
+   draws <- readRDS(file.path(run_dir,"draws_array.rds"))
+   sampler <- readRDS(file.path(run_dir,"sampler_diagnostics.rds"))
++  representation <- list(draws_class=class(draws),sampler_class=class(sampler),
++                         draws_shape=dim(draws),sampler_shape=dim(sampler))
++  # posterior's as.matrix() merges chains; the reviewed adapter expects base arrays.
++  draws <- unclass(draws)
++  sampler <- unclass(sampler)
++  stopifnot(is.array(draws),is.array(sampler),
++            identical(dim(draws),representation$draws_shape),
++            identical(dim(sampler),representation$sampler_shape))
++  ad_json(representation,file.path(out,"input_representation.json"))
+   checks <- ad_stan_sampler_checks(draws,sampler)
+   write.csv(checks$chain_diagnostics,file.path(out,"HMC_by_chain.csv"),row.names=FALSE)
+   write.csv(checks$internal_diagnostics,file.path(out,"NCP_diagnostics.csv"),row.names=FALSE)
+--- R/experimental/mebane_ad_long/supervise_diagnostics.py
++++ R/experimental/mebane_ad_long/supervise_diagnostics_v2.py
+@@ -16,7 +16,7 @@
+     log = args.output.with_name(args.output.name + ".log")
+     result = args.output.with_name(args.output.name + "_supervisor.json")
+     assert not log.exists() and not result.exists()
+-    command = ["Rscript", "--vanilla", "R/experimental/mebane_ad_long/postprocess_stan.R",
++    command = ["Rscript", "--vanilla", "R/experimental/mebane_ad_long/postprocess_stan_v2.R",
+                str(args.run), str(args.output)]
+     record = supervisor.run_command(command, log, 3600)
+     supervisor.write_new(result, record)

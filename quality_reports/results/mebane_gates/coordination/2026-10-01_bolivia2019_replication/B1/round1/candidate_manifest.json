@@ -1,0 +1,53 @@
+{
+  "schema_version": "1.0",
+  "gate": "B1",
+  "round": 1,
+  "created_utc": "2026-10-01T11:57:01Z",
+  "status": "candidate_delivered_unreviewed",
+  "gate_pass": false,
+  "write_scope": "quality_reports/results/mebane_gates/coordination/2026-10-01_bolivia2019_replication/B1/round1/",
+  "files_sha256": {
+    "extract_reference.py": "415d5ec2a7f89a61d663bd88c00b9cd0baa3b9761cf7a0308b1bf6192599706d",
+    "reference_values.csv": "d4b15199b6191a22fde1bae8609db7c2a9a13a143b2e966c1b9c9f82d3021fdd",
+    "reference_values_dictionary.md": "ccc3842bb8a44c7c41ea507685d7883c8afe263a5be115dd61ac9ca909d997e9",
+    "source_manifest.json": "2ddf2b31a90262317d528f001f5f69b38dabe70936d22746068b1cafba503689",
+    "search_log.json": "873d022ed3c98e27f2f3e924493613516abff82c71b14cac84f552c9aca3eccd",
+    "code_identity.md": "3c8518c562c98bbc183a15c456b5550ddd6a628b4617ad2f7cb900ab5815409a",
+    "handoff.md": "564f392a12cd409690b9177050141d2ebf6ca0154d466c3cfdd1224c2edf2755",
+    "archive/Bolivia2019.pdf": "ddcdb42bebf8160abf80b6c189db37951db8ead7f0f763d5469423778f870fb7",
+    "archive/eforensics_commit_3017de5.json": "f48694205d445c53c1525c33145b17aa339ec8bf957cf3a0bee14b3c594cdf0d",
+    "archive/eforensics_DESCRIPTION_3017de5": "4bbb33f8765b132ddac991c67eab01e59e699f82390c759a841768852fb46df9",
+    "archive/ef_models_3017de5.R": "7140c70f03cdc01cffc32b29f18b8ccbc785b9f460282b518df4bf3625910b4a",
+    "archive/ef_summary_3017de5.R": "a7bda7e5e1415a1f04fa0673d6ef641ddadf6156e582449bb1cdf7dd5175c4fc"
+  },
+  "reproduction": {
+    "command": "python3 extract_reference.py",
+    "working_directory": "quality_reports/results/mebane_gates/coordination/2026-10-01_bolivia2019_replication/B1/round1/",
+    "requirements": ["Python 3 standard library", "pdftotext (Poppler)"],
+    "input_sha256_guard": "ddcdb42bebf8160abf80b6c189db37951db8ead7f0f763d5469423778f870fb7",
+    "result": "51 records; a second run verified identical bytes without overwrite"
+  },
+  "checks_executed": [
+    "pdfinfo: 36-page unencrypted PDF, 2019-11-13 metadata, %PDF-1.5 magic",
+    "local source-copy SHA-256 equality",
+    "visual executor inspection of PDF pages 31, 32, 35, 36",
+    "JSON syntax parse for source_manifest.json and search_log.json",
+    "CSV 51 unique record IDs, phase counts 36/9/6, all means inside their reported intervals",
+    "bounded public/local source search recorded in search_log.json"
+  ],
+  "not_performed": [
+    "independent review or adjudication",
+    "current remote-PDF byte comparison",
+    "Bolivia data retrieval or transformation",
+    "author script execution, MCMC, compilation or empirical estimation"
+  ],
+  "material_unknowns": [
+    "exact eforensics commit and version installed in the published Bolivia run",
+    "historical seeds, initialization contents and nonprinted package versions",
+    "exact algorithm and interval type for aggregate postprocessing functionals",
+    "classification rule for 274 fraud mesas without external scripts",
+    "Bolivia2019Clean.csv and named external scripts not located in this bounded search",
+    "current public PDF byte identity and cited official workbook bytes"
+  ],
+  "next_owner": "separate B1 reviewer, then parent coordinator for adjudication; no B2/B3 release from this candidate"
+}

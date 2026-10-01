@@ -1,0 +1,137 @@
+{
+  "sha": "3017de537450f97a01872d0157462a68bea348ee",
+  "node_id": "MDY6Q29tbWl0MTk5NzA5NjgzOjMwMTdkZTUzNzQ1MGY5N2EwMTg3MmQwMTU3NDYyYTY4YmVhMzQ4ZWU=",
+  "commit": {
+    "author": {
+      "name": "wmebane",
+      "email": "wmebane@umich.edu",
+      "date": "2019-10-27T04:11:09Z"
+    },
+    "committer": {
+      "name": "wmebane",
+      "email": "wmebane@umich.edu",
+      "date": "2019-10-27T04:11:09Z"
+    },
+    "message": "version 0.0.4 misc fixes including output of samples",
+    "tree": {
+      "sha": "192748e01ce1148574b0be54ba4b3226eba70981",
+      "url": "https://api.github.com/repos/UMeforensics/eforensics_public/git/trees/192748e01ce1148574b0be54ba4b3226eba70981"
+    },
+    "url": "https://api.github.com/repos/UMeforensics/eforensics_public/git/commits/3017de537450f97a01872d0157462a68bea348ee",
+    "comment_count": 0,
+    "verification": {
+      "verified": false,
+      "reason": "unsigned",
+      "signature": null,
+      "payload": null,
+      "verified_at": null
+    }
+  },
+  "url": "https://api.github.com/repos/UMeforensics/eforensics_public/commits/3017de537450f97a01872d0157462a68bea348ee",
+  "html_url": "https://github.com/UMeforensics/eforensics_public/commit/3017de537450f97a01872d0157462a68bea348ee",
+  "comments_url": "https://api.github.com/repos/UMeforensics/eforensics_public/commits/3017de537450f97a01872d0157462a68bea348ee/comments",
+  "author": {
+    "login": "wmebane",
+    "id": 10983106,
+    "node_id": "MDQ6VXNlcjEwOTgzMTA2",
+    "avatar_url": "https://avatars.githubusercontent.com/u/10983106?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/wmebane",
+    "html_url": "https://github.com/wmebane",
+    "followers_url": "https://api.github.com/users/wmebane/followers",
+    "following_url": "https://api.github.com/users/wmebane/following{/other_user}",
+    "gists_url": "https://api.github.com/users/wmebane/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/wmebane/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/wmebane/subscriptions",
+    "organizations_url": "https://api.github.com/users/wmebane/orgs",
+    "repos_url": "https://api.github.com/users/wmebane/repos",
+    "events_url": "https://api.github.com/users/wmebane/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/wmebane/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "committer": {
+    "login": "wmebane",
+    "id": 10983106,
+    "node_id": "MDQ6VXNlcjEwOTgzMTA2",
+    "avatar_url": "https://avatars.githubusercontent.com/u/10983106?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/wmebane",
+    "html_url": "https://github.com/wmebane",
+    "followers_url": "https://api.github.com/users/wmebane/followers",
+    "following_url": "https://api.github.com/users/wmebane/following{/other_user}",
+    "gists_url": "https://api.github.com/users/wmebane/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/wmebane/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/wmebane/subscriptions",
+    "organizations_url": "https://api.github.com/users/wmebane/orgs",
+    "repos_url": "https://api.github.com/users/wmebane/repos",
+    "events_url": "https://api.github.com/users/wmebane/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/wmebane/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "parents": [
+    {
+      "sha": "e2ab5e7a8dca6f216a2609181bc271ce5a7fa0ac",
+      "url": "https://api.github.com/repos/UMeforensics/eforensics_public/commits/e2ab5e7a8dca6f216a2609181bc271ce5a7fa0ac",
+      "html_url": "https://github.com/UMeforensics/eforensics_public/commit/e2ab5e7a8dca6f216a2609181bc271ce5a7fa0ac"
+    }
+  ],
+  "stats": {
+    "total": 10,
+    "additions": 8,
+    "deletions": 2
+  },
+  "files": [
+    {
+      "sha": "30b73575e77ac5ea3ea1610cdd1183723c51ca55",
+      "filename": "DESCRIPTION",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 1,
+      "changes": 2,
+      "blob_url": "https://github.com/UMeforensics/eforensics_public/blob/3017de537450f97a01872d0157462a68bea348ee/DESCRIPTION",
+      "raw_url": "https://github.com/UMeforensics/eforensics_public/raw/3017de537450f97a01872d0157462a68bea348ee/DESCRIPTION",
+      "contents_url": "https://api.github.com/repos/UMeforensics/eforensics_public/contents/DESCRIPTION?ref=3017de537450f97a01872d0157462a68bea348ee",
+      "patch": "@@ -1,7 +1,7 @@\n Encoding: UTF-8\n Package: eforensics\n Title: Election Forensics: Positive Empirical Models of Election Fraud\n-Version: 0.0.3\n+Version: 0.0.4\n Authors@R: c(\n  person(\"Diogo\",\"Ferrari\",email=\"diogoferrari@gmail.com\",role=\"aut\"),\n  person(\"Kevin\",\"McAlister\",email=\"kamcal@umich.edu\",role=\"aut\"), "
+    },
+    {
+      "sha": "57c4bda9e4f7d2793d12b962b8b2983c804a9908",
+      "filename": "NEWS.md",
+      "status": "modified",
+      "additions": 4,
+      "deletions": 0,
+      "changes": 4,
+      "blob_url": "https://github.com/UMeforensics/eforensics_public/blob/3017de537450f97a01872d0157462a68bea348ee/NEWS.md",
+      "raw_url": "https://github.com/UMeforensics/eforensics_public/raw/3017de537450f97a01872d0157462a68bea348ee/NEWS.md",
+      "contents_url": "https://api.github.com/repos/UMeforensics/eforensics_public/contents/NEWS.md?ref=3017de537450f97a01872d0157462a68bea348ee",
+      "patch": "@@ -5,3 +5,7 @@ initial release\n # eforensics 0.0.3\n \n fixed covariates for incremental frauds stolen\n+\n+# eforensics 0.0.4\n+\n+added samples to output in attribute"
+    },
+    {
+      "sha": "a56695194f7f16fa1611a60f32e5736b6f6589fb",
+      "filename": "R/ef_main.R",
+      "status": "modified",
+      "additions": 2,
+      "deletions": 0,
+      "changes": 2,
+      "blob_url": "https://github.com/UMeforensics/eforensics_public/blob/3017de537450f97a01872d0157462a68bea348ee/R%2Fef_main.R",
+      "raw_url": "https://github.com/UMeforensics/eforensics_public/raw/3017de537450f97a01872d0157462a68bea348ee/R%2Fef_main.R",
+      "contents_url": "https://api.github.com/repos/UMeforensics/eforensics_public/contents/R%2Fef_main.R?ref=3017de537450f97a01872d0157462a68bea348ee",
+      "patch": "@@ -792,6 +792,7 @@ eforensics_main_par   <- function(formula1, formula2, formula3, formula4, formul\n       samples = get_Z(samples[[1]])\n     }else{\n       if(!is.null(parameters) & \"Z\" %in% parameters & model.name %in% c(\"qbl\",\"bl\")){\n+        osamples <- samples\n         samples = get_Z_qbl(samplez = samples[[1]])\n         frauds = samples$frauds\n         samples = samples$samples\n@@ -801,6 +802,7 @@ eforensics_main_par   <- function(formula1, formula2, formula3, formula4, formul\n     }\n     class(samples) = \"eforensics\"\n     \n+    attr(samples, \"samples\") = osamples\n     \n     attr(samples, \"formula.w\") = formula1\n     attr(samples, \"formula.a\") = formula2"
+    },
+    {
+      "sha": "01b044c6b37476328ede82bd233fc0e747fcfa95",
+      "filename": "inst/CITATION",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 1,
+      "changes": 2,
+      "blob_url": "https://github.com/UMeforensics/eforensics_public/blob/3017de537450f97a01872d0157462a68bea348ee/inst%2FCITATION",
+      "raw_url": "https://github.com/UMeforensics/eforensics_public/raw/3017de537450f97a01872d0157462a68bea348ee/inst%2FCITATION",
+      "contents_url": "https://api.github.com/repos/UMeforensics/eforensics_public/contents/inst%2FCITATION?ref=3017de537450f97a01872d0157462a68bea348ee",
+      "patch": "@@ -7,7 +7,7 @@ citEntry(entry = \"manual\",\n          textVersion = paste(\"Mebane, W. and Ferrari, D. and McAlister, K. and Wu, P.\", \n                              \"(2019)\",\n                              \"Election Forensics: Positive Empirical Models of Election Fraud.\",\n-                             \"R package version 0.0.0.9000\",\n+                             \"R package version 0.0.4\",\n                              \"(Supported by NSF grant SES 1523355)\")\n          )\n "
+    }
+  ]
+}

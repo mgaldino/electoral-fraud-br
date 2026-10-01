@@ -1,0 +1,211 @@
+{
+  "schema_version": "1.0",
+  "date": "2026-10-01",
+  "agent": {
+    "name": "Curie / Codex",
+    "id": "01a0f756-1646-7910-ac2f-986ab89aac82"
+  },
+  "status": "awaiting_confirmation",
+  "proposal_complete": true,
+  "noMCMC": true,
+  "no_model_or_prior_edits": true,
+  "historical_gates_unchanged": true,
+  "precision_approved": false,
+  "new_runs_approved": false,
+  "main_document": "proposals.md",
+  "technical_annex": "proposal.md",
+  "principal_conclusion": "Both supplied local papers and qbl distinguish class magnitude (no/incremental/extreme) from mechanisms (manufactured/stolen), with both mechanisms in both fraud classes. The user's alternative paper/version remains unidentified, not disproved.",
+  "source_findings": [
+    {
+      "id": "SRC-01",
+      "severity": "clarification",
+      "source": "measfrauds_2022-03-06.pdf",
+      "title": "Measuring Election Frauds",
+      "authors": [
+        "Walter R. Mebane, Jr.",
+        "Diogo Ferrari",
+        "Kevin McAlister",
+        "Patrick Y. Wu"
+      ],
+      "version": "2022-03-06",
+      "printed_pages": [
+        5,
+        6
+      ],
+      "pdf_pages_1_based": [
+        7,
+        8
+      ],
+      "locators": [
+        "section 2.1",
+        "equations (2c), (2d), (3)"
+      ],
+      "finding": "Narrative contrasts moderate versus almost-all shifts of opposition AND nonvoter votes. Equations include M and S in both classes.",
+      "visually_inspected": true
+    },
+    {
+      "id": "SRC-02",
+      "severity": "clarification",
+      "source": "pm23_2023-07-02.pdf",
+      "title": "Lost Votes and Posterior Multimodality in the eforensics Model",
+      "authors": [
+        "Walter R. Mebane, Jr."
+      ],
+      "version": "2023-07-02",
+      "printed_pages": [
+        5,
+        6,
+        7
+      ],
+      "pdf_pages_1_based": [
+        7,
+        8,
+        9
+      ],
+      "locators": [
+        "section 2.1",
+        "equations (1), (2a), (2b), (4c), (4d)"
+      ],
+      "finding": "Both mechanisms in both fraud classes; author motivates partial weight ordering as deterring label switching, not as mechanism exclusivity.",
+      "visually_inspected": true
+    },
+    {
+      "id": "SRC-03",
+      "severity": "limitation",
+      "source": "pm23_2023-07-02.pdf",
+      "printed_page": 7,
+      "pdf_page_1_based": 9,
+      "locator": "equation (4d)",
+      "finding": "Rendered equation has plus sign without additive k; 2022 equation (2d) and qbl contain k. Apparent print omission, not silently repaired or certified as a theoretical change."
+    },
+    {
+      "id": "SRC-04",
+      "severity": "limitation",
+      "sources": [
+        "measfrauds_2022-03-06.pdf",
+        "pm23_2023-07-02.pdf",
+        "qbl_installed_3017de5.jags"
+      ],
+      "finding": "PDF prose puts Exponential(5) on a standard deviation; inspected qbl uses it on variance with reciprocal precision. No claim of full paper/code prior identity."
+    },
+    {
+      "id": "SRC-05",
+      "severity": "clarification",
+      "source": "qbl_installed_3017de5.jags",
+      "line_spans": [
+        [
+          37,
+          67
+        ],
+        [
+          145,
+          177
+        ],
+        [
+          187,
+          197
+        ]
+      ],
+      "finding": "Four class-by-mechanism blocks; incremental iota.m/s and extreme chi.m/s both enter p.w. Auxiliary binomial realized proportions can cross k despite ordered mean supports."
+    }
+  ],
+  "arms": [
+    {
+      "id": 1,
+      "label": "unchanged-prior baseline",
+      "selected": false,
+      "models": [
+        "A_JAGS",
+        "D_JAGS",
+        "D_Stan"
+      ],
+      "retained_draws_per_chain": {
+        "A_JAGS": 100000,
+        "D_JAGS": 100000,
+        "D_Stan": 5000
+      },
+      "chains_per_fit": 4,
+      "fixed_warmup": "Exact values pending consolidated proposal and user confirmation."
+    },
+    {
+      "id": 2,
+      "label": "D-only ordered-weight sensitivity",
+      "selected": false,
+      "target": "Baseline weight prior conditioned on pi1>=pi2>=pi3; density 2 on 0<r3<r2<1; other priors unchanged.",
+      "changes_scientific_target": true,
+      "changes_mechanism_exclusivity": false
+    },
+    {
+      "id": 3,
+      "label": "D-only intensity/shrinkage sensitivity",
+      "selected": false,
+      "illustrative_not_substantively_endorsed": true,
+      "priors": {
+        "incremental_alpha_mean": -1.791759469,
+        "incremental_alpha_sd": 0.5,
+        "extreme_alpha_mean": 0,
+        "extreme_alpha_sd": 0.5,
+        "four_fraud_variances_exp_rate": 20,
+        "other_priors": "unchanged"
+      },
+      "prior_incremental_median": 0.1,
+      "prior_incremental_95_interval": [
+        0.037648839293,
+        0.229788203486
+      ],
+      "requirement": "User must substantively justify/endorse intensity scale before any change; never choose by desired fit outcome."
+    }
+  ],
+  "prospective_policy": {
+    "adopted": false,
+    "central": {
+      "rhat_lt": 1.01,
+      "bulk_ess_ge": 400
+    },
+    "interval_quantiles": [
+      0.025,
+      0.975
+    ],
+    "mean_MCSE_relative_SD_max": 0.05,
+    "quantile_MCSE_relative_IQR_max": 0.05,
+    "quantile_ESS_floor": 400,
+    "absolute_MCSE": {
+      "weights": {
+        "mean": 0.001,
+        "quantile": 0.0025
+      },
+      "expected_vote_rates_over_total_N": {
+        "mean": 0.0001,
+        "quantile": 0.00025
+      },
+      "class_probability_mean": 0.005
+    },
+    "class_probability_ESS_mean_floor": 400,
+    "undefined_statistics": "Never automatic pass; binary quantile may be not applicable only after the probability estimand's precision is established.",
+    "tail_only_failure_label": "center_meets_prospective_rule_tails_imprecise",
+    "historical_full_PASS": false
+  },
+  "resources_user_reported": {
+    "cores": 14,
+    "RAM_GiB": 36,
+    "disk_GiB": 268,
+    "parallel_chains_per_fit": 4,
+    "max_concurrent_heavy_fits": 1
+  },
+  "checks": {
+    "rendered_pages_viewed": 5,
+    "PDF_text_extraction": "Poppler pdftotext -layout",
+    "rendering": "Existing Poppler pdftoppm, 110 dpi",
+    "new_prior_calculations_after_priority_change": false,
+    "prior_deterministic_calculations_completed_before_priority_change": true,
+    "frozen_source_hash_checks": 13,
+    "hash_mismatches": 0,
+    "empirical_rankings_or_traces_recomputed": false
+  },
+  "pending_questions": [
+    "Which exact other paper/title/passage, if any, reserves the mechanisms by class?",
+    "Which of the three arms, if any, should be executed after confirmation?",
+    "Which exact fixed warmup/burn-in, resource caps and prospective precision tolerances are confirmed?"
+  ],
+  "handoff": "Proposal only; coordinator adjudication and explicit user confirmation required. No claim of B1-B5, G3, G10, production or inference completion."
+}

@@ -1,0 +1,4 @@
+"model_engine","chains","parallel_chain_processes","threads_per_chain","adapt_per_chain","burn_or_warmup_per_chain","post_per_chain","thin","retained_total","adapt_delta","max_treedepth","fit_attempts","heavy_fits_at_once","new_sampling_authorized","prior_change_authorized"
+"A_JAGS",4,4,1,1000,2000,100000,1,400000,NA,NA,1,1,FALSE,FALSE
+"D_JAGS",4,4,1,1000,2000,100000,1,400000,NA,NA,1,1,FALSE,FALSE
+"D_Stan",4,4,1,NA,1000,5000,1,20000,0.99,12,1,1,FALSE,FALSE

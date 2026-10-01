@@ -1,0 +1,12 @@
+{
+  "status": "checkers_completed_final_review_pending",
+  "reviewer_id": "01a0f717-7535-72e3-baf8-4db20da81abb",
+  "manual_pdf_inspection_required": true,
+  "final_delivery_present": true,
+  "review_stage": "all",
+  "numerical_checks_completed": true,
+  "numerical_evidence_reused": false,
+  "delivery_checks_completed": true,
+  "MCMC_executed": false,
+  "compilation_executed": false
+}

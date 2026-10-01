@@ -1,0 +1,6 @@
+{
+  "model": "D",
+  "raw_sha256": "65f14c223b7a6cb7e70eeb5c8d1620ffe4773b5fa86ebe5fc0e271e453b5ad0c",
+  "elapsed_seconds": 1993.79302501678,
+  "timing_definition": "Stan sample call only; compilation, R loading and persistence separately reported"
+}

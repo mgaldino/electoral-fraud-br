@@ -1,0 +1,4 @@
+"run","input_file_bytes","raw_object_bytes","source_variables","current_iterations","proposed_iterations","projected_plain_draw_bytes_four_chains","projected_archive_bytes_linear"
+"A_JAGS_20k",761245542,1203739416,1880,20000,100000,6016000000,3806227710
+"D_JAGS_20k",765360859,929052696,1451,20000,100000,4643200000,3826804295
+"D_Stan_2k",76993924,93272912,1451,2000,5000,232160000,192484810

@@ -1,0 +1,36 @@
+{
+  "date": "2026-10-01",
+  "status": "delivered_for_user_confirmation_not_execution",
+  "scope": "quality_reports/results/mebane_gates/coordination/2026-10-01_longer_chains_proposals/diagnostics/",
+  "closure": "Additive short summary requested by the coordinator; no additional analysis, reprocessing, or PDF generation at closure",
+  "summary": {
+    "path": "summary.md",
+    "sha256": "e3a82ea807693d1c93eb1f84312250663ccf60bf1165a18502e0f63163971375"
+  },
+  "preserved_candidate_manifest": {
+    "path": "candidate_manifest.json",
+    "sha256": "5c061d5fb8d22a6b662da1c741b457676888d16c9bbd8eb8a942aa7da82d2907"
+  },
+  "preserved_artifact_inventory": {
+    "path": "artifact_hashes.csv",
+    "sha256": "5c2a58d97691a801ac1f5bfd823230343b60954a5df22d7712b8eae2996cb65f"
+  },
+  "canonical_resource_addendum": "addenda02/resource_payload_addendum.csv",
+  "canonical_configuration": "addenda02/proposed_protocol.csv",
+  "coordinator_reported_validation": "69 global rows / 897 cells agree with reviewed tables",
+  "independent_QA_by_executor": false,
+  "new_MCMC": false,
+  "prior_change": false,
+  "compilation": false,
+  "installation": false,
+  "deletion": false,
+  "user_confirmation_required_before_new_sampling_or_prior_change": true,
+  "all_previous_artifacts_preserved": true,
+  "limitations": [
+    "Local and NCP metrics reused, not all independently recomputed",
+    "Memory figures are numeric payloads, not total RAM or peak RSS",
+    "Parallel runtime and peak RAM remain unmeasured",
+    "Existing fits remain computationally inconclusive",
+    "Conceptual classes/mechanisms response belongs to coordinator/Curie"
+  ]
+}

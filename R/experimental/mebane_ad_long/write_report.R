@@ -9,6 +9,7 @@ g <- read.csv(file.path(input,"global_functionals.csv"),check.names=FALSE)
 groups <- read.csv(file.path(input,"diagnostic_groups.csv"),check.names=FALSE)
 diff_path <- file.path(input,"D_engine_differences.csv")
 d <- if(file.exists(diff_path))read.csv(diff_path,check.names=FALSE) else NULL
+meta <- jsonlite::read_json(file.path(input,"result.json"),simplifyVector=TRUE)
 fmt <- function(x,digits=2L) {
   if(length(x)!=1L||!is.finite(x))return("NA")
   formatC(x,digits=digits,format="f",decimal.mark=",",big.mark=".")
@@ -21,10 +22,12 @@ lines <- c("# JAGS 20 mil e Stan 2 mil: comparação no mesmo caso",
   "", "A é o qbl literal, mantido byte a byte. D é a alternativa multinomial experimental, com as mesmas prioris hierárquicas compartilhadas, mas sem as contagens auxiliares binomiais de A. A versus D é sensibilidade ao modelo. D/JAGS versus D/Stan compara o mesmo alvo posterior, sujeito à verificação numérica e aos diagnósticos de cada algoritmo.",
   "", "JAGS: quatro cadeias, 1.000 iterações de adaptação, 5.000 de aquecimento e 20.000 retidas por cadeia. Stan: quatro cadeias, 2.000 de aquecimento e 2.000 retidas por cadeia, adapt_delta=0,99 e profundidade máxima 12. Thin=1. As cadeias são processadas serialmente em ambos os casos. Há limite externo de 3.600 segundos por processo e nenhuma repetição automática.",
   "", "As rodadas JAGS de 2 mil e 20 mil reutilizam dados, inicializações e sementes; não são replicações independentes. O ajuste Stan usa semente-base 1001261 com identificadores de cadeia 1 a 4. Os processos intensivos do experimento foram separados para não contaminar os relógios. Desenvolvimento e leitura estática ocorreram em paralelo; não se presume controle de todos os demais aplicativos do computador.",
+  "", "Durante esta execução, o usuário determinou que as próximas rodadas usem cadeias em paralelo e mais núcleos sempre que possível. A instrução foi registrada em CLAUDE.md e future_parallel_chains.md. Esta rodada serial não foi reiniciada nem teve o protocolo alterado; portanto, seus relógios não estimam diretamente o desempenho futuro com quatro cadeias concorrentes.",
   "", "Stan integra a classe discreta usando a soma das três verossimilhanças ponderadas, em escala logarítmica. A parametrização não centrada preserva as seis variâncias com prior Exp(5), usando raiz quadrada para os desvios-padrão. Os pesos são (1,r2,r3)/(1+r2+r3), com r2 e r3 uniformes independentes: essa é a prior efetiva do esquema auxiliar ordenado de JAGS, não uma Dirichlet flat nem uma ordenação total entre as classes 2 e 3.",
   "", "Uma classe posterior condicional é reconstruída por unidade e draw; essa mesma classe determina probabilidades e funcionais M/S. Médias Rao-Blackwellizadas, que integram também essa reconstrução, ficam em resultados secundários separados. Nenhuma alteração de prior foi usada como solução para dificuldades de mistura.",
   "", "## 2. Tempos e critérios computacionais", "",
   "Tabela 1. Relógios de parede por execução, em segundos, e diagnósticos dos 23 alvos globais. Geração inclui o processo completo e gravação dos draws. A compilação JAGS já está dentro desse processo; a compilação Stan é medida separadamente e somada uma única vez no total. O relógio de compilação Stan inclui a interface C++ de checagem de densidade e gradientes; outras verificações e tentativas de desenvolvimento ficam fora do tempo do ajuste. Total = geração + diagnóstico + essa compilação Stan, quando aplicável. As duas primeiras linhas são o piloto histórico preservado.",
+  "", paste0("Uma primeira tentativa de diagnóstico Stan falhou em ",fmt(meta$failed_diagnostic_attempt_seconds)," s por despacho S3: as.matrix() sobre draws_array concatenava as cadeias quando o namespace posterior estava carregado. A correção converte apenas a representação local para arrays básicos, sem mudar valores, ordem, critérios ou o fit. A falha foi preservada em stan_diagnostics01; o diagnóstico válido está em stan_diagnostics02. Esse tempo de tentativa malsucedida, assim como desenvolvimento e QA, não integra o total produtivo da tabela; não houve nova amostragem."),
   "", "| Rodada | Geração (s) | Diagnóstico (s) | Total (s) | R-hat máximo | ESS mínimo bulk/cauda |",
   "|---|---|---|---|---|---|")
 for(i in seq_len(nrow(t))) lines <- c(lines,paste0("| ",t$id[i]," | ",fmt(t$generation_process_seconds[i]),
@@ -37,7 +40,12 @@ lines <- c(lines,"", "R-hat é um diagnóstico de concordância entre cadeias. E
 for(i in seq_len(nrow(t)))lines <- c(lines,paste0("| ",t$id[i]," | ",fmt(t$global_failures[i],0)," | ",
   fmt(t$failed_targets[i],0)," | ",fmt(t$mandatory_targets[i],0)," | ",fmt(t$undefined_targets[i],0)," |"))
 for(i in 3:5)lines <- c(lines,"",paste0(t$id[i],": execução e diagnóstico completos = ",t$completed[i],"; status = ",t$status[i],"."))
-hmc_path <- "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_diagnostics01/HMC_by_chain.csv"
+sg <- groups[groups$id=="D_Stan_2k",]
+for(group in c("global","local_continuous","class_count","class_indicator")) {
+  r <- sg[sg$group==group,]
+  if(nrow(r)==1L) lines <- c(lines,"",paste0("D/Stan, grupo ",group,": ",fmt(r$failed,0)," de ",fmt(r$targets,0)," alvos reprovados, incluindo ",fmt(r$undefined,0)," indefinidos. R-hat máximo finito ",fmt(r$max_Rhat,4),"; ESS mínimos bulk/cauda ",fmt(r$min_bulk_ESS,1)," / ",fmt(r$min_tail_ESS,1),"."))
+}
+hmc_path <- "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_diagnostics02/HMC_by_chain.csv"
 if(file.exists(hmc_path)) {
   h <- read.csv(hmc_path)
   lines <- c(lines,"", "Tabela 3. Diagnósticos específicos de Hamiltonian Monte Carlo (HMC). Exigem-se zero divergências, zero atingimentos da profundidade máxima e E-BFMI >= 0,3 em cada cadeia. E-BFMI mede a exploração da distribuição de energia. Os 860 parâmetros internos da parametrização não centrada recebem também os critérios R-hat/ESS, separadamente dos alvos comuns.",

@@ -1,12 +1,15 @@
 {
-  "status": "JAGS20k_complete_inconclusive_Stan2k_running",
+  "status": "completed_experiment_inconclusive",
   "date": "2026-10-01",
   "A_preserved": true,
   "old_study_preserved": true,
   "production_approved": false,
   "todos": {
     "JAGS20k": "complete and independently checked; A and D computationally inconclusive",
-    "StanD2k": "independent preflight PASS adjudicated; one 4-chain serial run underway",
-    "comparison": "JAGS 2k/20k preliminary comparison preserved in comparison_jags01; Stan pending"
-  }
+    "StanD2k": "complete; all four chains preserved; diagnostic01 representation failure preserved; diagnostic02 and independent fidelity QA accepted; computationally inconclusive",
+    "comparison": "five complete runs summarized in comparison_final01 and PDF v1; independent numerical and visual fidelity QA accepted"
+  },
+  "completion": "completion.json",
+  "next_request": "../2026-10-01_longer_chains_proposals/decision.md",
+  "new_sampling": "awaiting explicit user confirmation of agent proposals"
 }

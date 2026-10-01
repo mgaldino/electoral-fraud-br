@@ -1,0 +1,19 @@
+{
+  "execution_status": "checks_completed",
+  "reviewer_id": "01a0f717-7535-72e3-baf8-4db20da81abb",
+  "common_targets": 1742,
+  "common_failed": 1024,
+  "common_undefined_subset_failed": 420,
+  "globals_recomputed": 23,
+  "global_failed": ["pi[1]", "pi[2]", "tau.alpha", "nu.alpha", "iota.m.alpha", "iota.s.alpha", "tb", "nb", "M_total", "S_total"],
+  "global_failed_count": 10,
+  "internal_targets": 860,
+  "internal_failed": 291,
+  "HMC_pass": true,
+  "RB_is_secondary": true,
+  "status_confirmed": "computationally_inconclusive",
+  "posterior_version": "1.7.0",
+  "csvs_checked_against_original_RDS": 4,
+  "local_metric_scope": "All common decisions; raw class ranges and counts. Local Rhat/ESS not recomputed exhaustively.",
+  "final_review_pending": true
+}

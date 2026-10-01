@@ -1,0 +1,27 @@
+{
+  "status": "computationally_inconclusive",
+  "engine": "Stan_D",
+  "shape": [2000, 4, 4890],
+  "HMC_checks_pass": true,
+  "NCP_failed": 291,
+  "internal_targets": 860,
+  "common_result": {
+    "model": "D",
+    "status": "computationally_inconclusive",
+    "paired_verdict": "not_assigned_by_per_model_processor",
+    "mandatory_targets": 1742,
+    "failed_targets": 1024,
+    "undefined_required_targets": 420,
+    "primary_global_failed": ["pi[1]", "pi[2]", "tau.alpha", "nu.alpha", "iota.m.alpha", "iota.s.alpha", "tb", "nb", "M_total", "S_total"],
+    "elapsed_seconds": 22.1163449287415,
+    "raw_sha256": "65f14c223b7a6cb7e70eeb5c8d1620ffe4773b5fa86ebe5fc0e271e453b5ad0c",
+    "contract_sha256": "e33a59939f0d55513fea6ae05a2cc90fac617f3385193ec56e4a2a7a9b6df264",
+    "shape": [2000, 4],
+    "production_approved": false,
+    "G10_approved": false
+  },
+  "bridge_seconds": 27.3231599330902,
+  "total_internal_seconds": 50.2439138889313,
+  "production_approved": false,
+  "G10_approved": false
+}

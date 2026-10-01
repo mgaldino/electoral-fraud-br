@@ -1,0 +1,28 @@
+{
+  "status": "pass",
+  "reviewer_id": "01a0f717-7535-72e3-baf8-4db20da81abb",
+  "review_consistency_verified": true,
+  "requested_scope_completed": true,
+  "files": [
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/review_stan_results/review.json",
+      "sha256": "9cbd1036113cdc35725292e77a83f2f2d21678567194fc7975b4c6c51acf00a2"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/review_stan_results/review.md",
+      "sha256": "ccc55551e876e6c578e4e9975062e80d792c5e29efe0fa355584c2109aca5f91"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/review_stan_results/README.md",
+      "sha256": "44c9e79773484c9e8052f87e1b8ee2ff09a11cb322b35e1d4a07ce2b731342fd"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/review_stan_results/final_evidence.json",
+      "sha256": "2d525564a26810c5072a1bcc1226542d76afc1f634bfe9ff52166abacc805c29"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/review_stan_results/verify_review.py",
+      "sha256": "c66641842d6a324cbfe0ca61521fab47456648157fd6e962a81cd206c07154b9"
+    }
+  ]
+}

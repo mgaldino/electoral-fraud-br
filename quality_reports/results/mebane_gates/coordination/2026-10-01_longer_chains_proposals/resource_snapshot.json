@@ -1,0 +1,13 @@
+{
+  "observed_utc": "2026-10-01T12:23:57Z",
+  "scope": "Read-only resource inventory for a proposal; not a sampling release or a measured peak-RAM benchmark",
+  "cpu": {"logical": 14, "physical": 14, "source": "sysctl -n hw.logicalcpu hw.physicalcpu hw.memsize"},
+  "memory": {"bytes": 38654705664, "GiB": 36, "swap_total_M": 0, "swap_used_M": 0, "swap_source": "sysctl -n vm.swapusage", "free_memory_claimed": false},
+  "filesystem": {"total_GiB_rounded": 926, "used_GiB_rounded": 632, "available_GiB_rounded": 268, "source": "df -h ."},
+  "existing_artifacts": {"jags20k01_du_h": "2.9G", "stan2k01_du_h": "1.5G", "source": "du -sh quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/jags20k01 quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan2k01", "meaning": "Existing directory usage includes preserved artifacts; not a forecast or RAM consumption"},
+  "prospective_concurrency": {"chains_per_fit": 4, "processes_per_chain": 1, "heavy_fits_at_once": 1, "reserve_cores": true, "pre_execution_memory_check_required": true},
+  "limitations": ["Physical RAM does not equal available RAM; inactive/cache pages cannot simply be treated as unused", "Parallel-chain speedup and peak RAM have not been measured for these proposed lengths", "Disk and memory availability must be refreshed immediately before any approved run"],
+  "installation": false,
+  "deletion": false,
+  "new_MCMC": false
+}

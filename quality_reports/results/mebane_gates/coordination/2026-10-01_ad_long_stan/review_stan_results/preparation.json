@@ -1,0 +1,33 @@
+{
+  "status": "prepared_not_executed",
+  "date": "2026-10-01",
+  "reviewer_id": "01a0f717-7535-72e3-baf8-4db20da81abb",
+  "coordinator_id": "019d795a-acfa-72c2-a210-d55a46c606c2",
+  "Stan_candidate_executor_id": "01a0f4b5-4434-7b83-91b9-69ced11b40ba",
+  "goal_status": "active",
+  "execution_window_released": false,
+  "checks_executed_this_phase": false,
+  "hashes_recomputed_this_phase": false,
+  "sampling_outputs_opened_this_phase": false,
+  "source_preparation_manifest_sha256_supplied": "2ad3246c3b1a5b5e0c676a85434824644b440cc75c386bc45feeabc34b789bfb",
+  "adapter_manifest_sha256_supplied": "3562d593731cec1fe156ee52266a975cd0cbf6d6fe8666c26b15652298bb08b0",
+  "source_hash_status": "Recorded from user and static preflight record; verify after release.",
+  "scripts": ["run_qa.py", "recompute_stan.R", "check_delivery.py"],
+  "scripts_execution_status": "Not parsed, run or tested. Static reading only.",
+  "execution_stages_prepared": ["numerical", "delivery", "all"],
+  "delivery_reuses_bound_numerical_attempt": true,
+  "pending": [
+    "Explicit execution-window release and frozen result hashes",
+    "Verify source and result binding before reading draws",
+    "Execute independent original-Stan-draw reconstruction and diagnostics",
+    "Reuse the four already reviewed JAGS comparison rows",
+    "Inspect final Markdown numbers and all rendered PDF pages",
+    "Adjudicate any checker or candidate discrepancies and issue scoped review.json/md"
+  ],
+  "final_PASS_issued": false,
+  "goal_completed": false,
+  "MCMC": false,
+  "compilation": false,
+  "installations": false,
+  "deletions": false
+}

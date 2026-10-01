@@ -1,0 +1,87 @@
+{
+  "schema_version": "1.0",
+  "gate": "B1",
+  "round": 1,
+  "checked_utc": "2026-10-01T11:52:13Z",
+  "scope": "Lightweight source and printed-number validation only; no downloaded author code run and no estimation.",
+  "paper": {
+    "citation": "Mebane, Walter R., Jr. (2019). Evidence Against Fraudulent Votes Being Decisive in the Bolivia 2019 Election. November 13 version.",
+    "author_url": "https://websites.umich.edu/~wmebane/Bolivia2019.pdf",
+    "alternate_author_url": "https://public.websites.umich.edu/~wmebane/Bolivia2019.pdf",
+    "archived_path": "archive/Bolivia2019.pdf",
+    "source_copy_path": "quality_reports/results/mebane_gates/coordination/authors_replication_discovery/archive/Bolivia2019.pdf",
+    "sha256": "ddcdb42bebf8160abf80b6c189db37951db8ead7f0f763d5469423778f870fb7",
+    "bytes": 6174103,
+    "file_magic": "%PDF-",
+    "pdfinfo": {
+      "pages": 36,
+      "creator": "LaTeX with hyperref package",
+      "producer": "pdfTeX-1.40.18",
+      "creation_date_pdf_metadata": "2019-11-13 14:11:07 -03",
+      "pdf_version": "1.5"
+    },
+    "content_checks": {
+      "title_and_date": "PDF page 1: author, title and November 13, 2019",
+      "printed_page_mapping": "PDF page 1 is unnumbered cover; printed pages 1-35 are PDF pages 2-36",
+      "published_command": "printed page 26 / PDF page 27",
+      "first_phase_logs": "printed pages 26-28 / PDF pages 27-29",
+      "final_summary": "printed pages 29-31 / PDF pages 30-32",
+      "postprocessing": "printed pages 32-35 / PDF pages 33-36",
+      "visual_inspection": "PDF pages 31, 32, 35 and 36 rendered and viewed by executor; independent review pending"
+    },
+    "public_revalidation": {
+      "search_index_result": "The author's current indexed PDF result shows the same title/date and searchable command/postprocessing excerpts as the local copy.",
+      "direct_fetch": "not_completed: web open timed out and local curl could not resolve websites.umich.edu",
+      "remote_byte_identity": "unknown; current public bytes were not downloaded or hashed",
+      "claim_limit": "Local PDF identity and content checked; exact equality to the currently served public PDF not certified."
+    }
+  },
+  "archived_code_context": {
+    "repository": "https://github.com/UMeforensics/eforensics_public",
+    "commit_url": "https://github.com/UMeforensics/eforensics_public/commit/3017de537450f97a01872d0157462a68bea348ee",
+    "candidate_commit": "3017de537450f97a01872d0157462a68bea348ee",
+    "commit_author_date_utc_from_archived_api": "2019-10-27T04:11:09Z",
+    "package_version_in_description": "0.0.4",
+    "snapshot_origin": "Copies from authors_replication_discovery/archive, originally archived 2026-09-29; hashes reconfirmed for this B1 candidate.",
+    "files": [
+      {
+        "path": "archive/eforensics_commit_3017de5.json",
+        "sha256": "f48694205d445c53c1525c33145b17aa339ec8bf957cf3a0bee14b3c594cdf0d",
+        "role": "GitHub API commit metadata snapshot"
+      },
+      {
+        "path": "archive/eforensics_DESCRIPTION_3017de5",
+        "sha256": "4bbb33f8765b132ddac991c67eab01e59e699f82390c759a841768852fb46df9",
+        "role": "Version and dependency metadata"
+      },
+      {
+        "path": "archive/ef_models_3017de5.R",
+        "sha256": "7140c70f03cdc01cffc32b29f18b8ccbc785b9f460282b518df4bf3625910b4a",
+        "role": "Contemporaneous qbl model source candidate"
+      },
+      {
+        "path": "archive/ef_summary_3017de5.R",
+        "sha256": "a7bda7e5e1415a1f04fa0673d6ef641ddadf6156e582449bb1cdf7dd5175c4fc",
+        "role": "summary.eforensics and coda::HPDinterval call"
+      }
+    ],
+    "bolivia_installed_commit": "unknown",
+    "bolivia_package_version": "unknown from published log"
+  },
+  "electoral_source_cited_by_paper": {
+    "printed_page": 2,
+    "pdf_page": 3,
+    "url": "https://computo.oep.org.bo/PubResul/acta.2019.10.25.21.09.30.xlsx",
+    "publisher": "Órgano Electoral Plurinacional, Bolivia",
+    "direct_fetch": "not_completed: web open returned an error",
+    "archive_path": null,
+    "relationship_to_clean_csv": "cited electoral source, not proof of byte or row equivalence to Bolivia2019Clean.csv"
+  },
+  "missing_named_inputs": [
+    "Bolivia2019Clean.csv",
+    "wrkef.R",
+    "obsfrauds_ciS.R",
+    "runef4_Bolivia2019Clean_4c.RData"
+  ],
+  "missing_input_status": "not located in the bounded B1 search, not proved nonexistent"
+}

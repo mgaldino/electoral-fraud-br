@@ -1,0 +1,5 @@
+"run","representation","post_per_chain","chains","variables","bytes_per_numeric","numeric_payload_bytes","decimal_GB","binary_GiB","is_peak_RSS_or_total_RAM","excluded"
+"A_JAGS_20k","A_JAGS_retained_nodes",100000,4,1880,8,6016000000,6.016,5.60283660888672,FALSE,"CSV; warmup; sampler/model state; worker memory; object overhead; temporary copies; bridge and diagnostic arrays"
+"D_JAGS_20k","D_JAGS_retained_nodes",100000,4,1451,8,4643200000,4.6432,4.32431697845459,FALSE,"CSV; warmup; sampler/model state; worker memory; object overhead; temporary copies; bridge and diagnostic arrays"
+"D_Stan_2k","D_Stan_common_bridge_only",5000,4,1451,8,232160000,0.23216,0.21621584892273,FALSE,"CSV; warmup; sampler/model state; worker memory; object overhead; temporary copies; bridge and diagnostic arrays"
+"D_Stan_2k","D_Stan_full_draws_array",5000,4,4890,8,782400000,0.7824,0.72866678237915,FALSE,"CSV; warmup; sampler/model state; worker memory; object overhead; temporary copies; bridge and diagnostic arrays"

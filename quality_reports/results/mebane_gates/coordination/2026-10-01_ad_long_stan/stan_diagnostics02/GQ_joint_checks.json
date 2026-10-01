@@ -1,0 +1,7 @@
+{
+  "max_absolute_error": {
+    "M": 9.09494701772928e-12,
+    "S": 1.81898940354586e-11
+  },
+  "same_Z_reconstruction": true
+}

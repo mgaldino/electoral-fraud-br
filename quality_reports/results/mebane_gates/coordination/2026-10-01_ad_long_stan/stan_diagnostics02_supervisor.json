@@ -1,0 +1,14 @@
+{
+  "command": [
+    "Rscript",
+    "--vanilla",
+    "R/experimental/mebane_ad_long/postprocess_stan_v2.R",
+    "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan2k01",
+    "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_diagnostics02"
+  ],
+  "returncode": 0,
+  "timed_out": false,
+  "elapsed_seconds": 52.52402200002689,
+  "log": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_diagnostics02.log",
+  "log_sha256": "8054290f4e8895a84a0b94045056b51920967b6a23cc596a7111eda8b4f20a42"
+}

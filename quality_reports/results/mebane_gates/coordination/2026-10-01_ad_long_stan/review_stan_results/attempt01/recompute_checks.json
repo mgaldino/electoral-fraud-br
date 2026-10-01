@@ -1,0 +1,108 @@
+{
+  "outcome": {
+    "status": "checker_stopped_requires_adjudication",
+    "error": "CSV:1:warmup-saved"
+  },
+  "checks": [
+    {
+      "id": "data:143-units",
+      "pass": true,
+      "evidence": {}
+    },
+    {
+      "id": "raw:shape",
+      "pass": true,
+      "evidence": {}
+    },
+    {
+      "id": "sampler:shape",
+      "pass": true,
+      "evidence": {}
+    },
+    {
+      "id": "raw:unique-names",
+      "pass": true,
+      "evidence": {}
+    },
+    {
+      "id": "raw:143-Z-names",
+      "pass": true,
+      "evidence": {}
+    },
+    {
+      "id": "raw:chain-order",
+      "pass": true,
+      "evidence": {}
+    },
+    {
+      "id": "sampler:chain-order",
+      "pass": true,
+      "evidence": {}
+    },
+    {
+      "id": "CSV:four-files",
+      "pass": true,
+      "evidence": {}
+    },
+    {
+      "id": "CSV:id:metadata",
+      "pass": true,
+      "evidence": {}
+    },
+    {
+      "id": "CSV:chain-id",
+      "pass": true,
+      "evidence": {}
+    },
+    {
+      "id": "CSV:num_samples:metadata",
+      "pass": true,
+      "evidence": {}
+    },
+    {
+      "id": "CSV:1:num_samples",
+      "pass": true,
+      "evidence": {}
+    },
+    {
+      "id": "CSV:num_warmup:metadata",
+      "pass": true,
+      "evidence": {}
+    },
+    {
+      "id": "CSV:1:num_warmup",
+      "pass": true,
+      "evidence": {}
+    },
+    {
+      "id": "CSV:seed:metadata",
+      "pass": true,
+      "evidence": {}
+    },
+    {
+      "id": "CSV:1:seed",
+      "pass": true,
+      "evidence": {}
+    },
+    {
+      "id": "CSV:thin:metadata",
+      "pass": true,
+      "evidence": {}
+    },
+    {
+      "id": "CSV:1:thin",
+      "pass": true,
+      "evidence": {}
+    },
+    {
+      "id": "CSV:save_warmup:metadata",
+      "pass": true,
+      "evidence": {}
+    },
+    {
+      "id": "CSV:1:warmup-saved",
+      "pass": false,
+      "evidence": {}
+    }
+  ]
+}

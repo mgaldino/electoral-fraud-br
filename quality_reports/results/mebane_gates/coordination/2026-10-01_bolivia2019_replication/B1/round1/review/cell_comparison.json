@@ -1,0 +1,264 @@
+{
+  "rows": 51,
+  "numeric_cells_excluding_levels": 194,
+  "field_comparisons": 765,
+  "differences": 0,
+  "level_validation": "Global .95 is conditional inference, not certified historical level.",
+  "rows_detail": [
+    {
+      "record_id": "global_1_1",
+      "fields_compared": 15,
+      "differences": {}
+    },
+    {
+      "record_id": "global_1_2",
+      "fields_compared": 15,
+      "differences": {}
+    },
+    {
+      "record_id": "global_1_3",
+      "fields_compared": 15,
+      "differences": {}
+    },
+    {
+      "record_id": "global_1_4",
+      "fields_compared": 15,
+      "differences": {}
+    },
+    {
+      "record_id": "global_1_5",
+      "fields_compared": 15,
+      "differences": {}
+    },
+    {
+      "record_id": "global_1_6",
+      "fields_compared": 15,
+      "differences": {}
+    },
+    {
+      "record_id": "global_1_7",
+      "fields_compared": 15,
+      "differences": {}
+    },
+    {
+      "record_id": "global_1_8",
+      "fields_compared": 15,
+      "differences": {}
+    },
+    {
+      "record_id": "global_1_9",
+      "fields_compared": 15,
+      "differences": {}
+    },
+    {
+      "record_id": "global_2_1",
+      "fields_compared": 15,
+      "differences": {}
+    },
+    {
+      "record_id": "global_2_2",
+      "fields_compared": 15,
+      "differences": {}
+    },
+    {
+      "record_id": "global_2_3",
+      "fields_compared": 15,
+      "differences": {}
+    },
+    {
+      "record_id": "global_2_4",
+      "fields_compared": 15,
+      "differences": {}
+    },
+    {
+      "record_id": "global_2_5",
+      "fields_compared": 15,
+      "differences": {}
+    },
+    {
+      "record_id": "global_2_6",
+      "fields_compared": 15,
+      "differences": {}
+    },
+    {
+      "record_id": "global_2_7",
+      "fields_compared": 15,
+      "differences": {}
+    },
+    {
+      "record_id": "global_2_8",
+      "fields_compared": 15,
+      "differences": {}
+    },
+    {
+      "record_id": "global_2_9",
+      "fields_compared": 15,
+      "differences": {}
+    },
+    {
+      "record_id": "global_3_1",
+      "fields_compared": 15,
+      "differences": {}
+    },
+    {
+      "record_id": "global_3_2",
+      "fields_compared": 15,
+      "differences": {}
+    },
+    {
+      "record_id": "global_3_3",
+      "fields_compared": 15,
+      "differences": {}
+    },
+    {
+      "record_id": "global_3_4",
+      "fields_compared": 15,
+      "differences": {}
+    },
+    {
+      "record_id": "global_3_5",
+      "fields_compared": 15,
+      "differences": {}
+    },
+    {
+      "record_id": "global_3_6",
+      "fields_compared": 15,
+      "differences": {}
+    },
+    {
+      "record_id": "global_3_7",
+      "fields_compared": 15,
+      "differences": {}
+    },
+    {
+      "record_id": "global_3_8",
+      "fields_compared": 15,
+      "differences": {}
+    },
+    {
+      "record_id": "global_3_9",
+      "fields_compared": 15,
+      "differences": {}
+    },
+    {
+      "record_id": "global_4_1",
+      "fields_compared": 15,
+      "differences": {}
+    },
+    {
+      "record_id": "global_4_2",
+      "fields_compared": 15,
+      "differences": {}
+    },
+    {
+      "record_id": "global_4_3",
+      "fields_compared": 15,
+      "differences": {}
+    },
+    {
+      "record_id": "global_4_4",
+      "fields_compared": 15,
+      "differences": {}
+    },
+    {
+      "record_id": "global_4_5",
+      "fields_compared": 15,
+      "differences": {}
+    },
+    {
+      "record_id": "global_4_6",
+      "fields_compared": 15,
+      "differences": {}
+    },
+    {
+      "record_id": "global_4_7",
+      "fields_compared": 15,
+      "differences": {}
+    },
+    {
+      "record_id": "global_4_8",
+      "fields_compared": 15,
+      "differences": {}
+    },
+    {
+      "record_id": "global_4_9",
+      "fields_compared": 15,
+      "differences": {}
+    },
+    {
+      "record_id": "global_combined_1",
+      "fields_compared": 15,
+      "differences": {}
+    },
+    {
+      "record_id": "global_combined_2",
+      "fields_compared": 15,
+      "differences": {}
+    },
+    {
+      "record_id": "global_combined_3",
+      "fields_compared": 15,
+      "differences": {}
+    },
+    {
+      "record_id": "global_combined_4",
+      "fields_compared": 15,
+      "differences": {}
+    },
+    {
+      "record_id": "global_combined_5",
+      "fields_compared": 15,
+      "differences": {}
+    },
+    {
+      "record_id": "global_combined_6",
+      "fields_compared": 15,
+      "differences": {}
+    },
+    {
+      "record_id": "global_combined_7",
+      "fields_compared": 15,
+      "differences": {}
+    },
+    {
+      "record_id": "global_combined_8",
+      "fields_compared": 15,
+      "differences": {}
+    },
+    {
+      "record_id": "global_combined_9",
+      "fields_compared": 15,
+      "differences": {}
+    },
+    {
+      "record_id": "aggregate_manufactured_fraud_votes_0.95",
+      "fields_compared": 15,
+      "differences": {}
+    },
+    {
+      "record_id": "aggregate_manufactured_fraud_votes_0.995",
+      "fields_compared": 15,
+      "differences": {}
+    },
+    {
+      "record_id": "aggregate_total_fraud_votes_0.95",
+      "fields_compared": 15,
+      "differences": {}
+    },
+    {
+      "record_id": "aggregate_total_fraud_votes_0.995",
+      "fields_compared": 15,
+      "differences": {}
+    },
+    {
+      "record_id": "classified_mesas_no_fraud",
+      "fields_compared": 15,
+      "differences": {}
+    },
+    {
+      "record_id": "classified_mesas_fraud",
+      "fields_compared": 15,
+      "differences": {}
+    }
+  ]
+}

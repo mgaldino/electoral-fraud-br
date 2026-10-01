@@ -1,0 +1,122 @@
+{
+  "created_utc": "2026-10-01 12:27:05 UTC",
+  "inputs": [
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/contract.json",
+      "bytes": 17442,
+      "sha256": "fb4a296c9bf0af25812d7d8dd2ab63340fe10d4e73e806e64b5dba3f7dcf481a"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/jags20k01/A_diagnostics/diagnostics.csv",
+      "bytes": 643165,
+      "sha256": "56ccc0b756ba4eb751aba27acd3e21fae07098da65033a31638755c506a03384"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/jags20k01/D_diagnostics/diagnostics.csv",
+      "bytes": 556416,
+      "sha256": "9d95918394560957ccb67463d0f466132fec7807a04b73aa706ab82ed31d1488"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_diagnostics02/common_diagnostics/diagnostics.csv",
+      "bytes": 565104,
+      "sha256": "b3f1f0c2f9797d4392673cd9d2a5cdb0e2cea83f109d506fe7dfe1d386802693"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_diagnostics02/NCP_diagnostics.csv",
+      "bytes": 282800,
+      "sha256": "e29dd857ab51b9b54382ad27d1d17b5919ffa182f3fd38137bb7d605bc2b1d5d"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/jags20k01/A/raw_chains.rds",
+      "bytes": 761245542,
+      "sha256": "19d8afcb832433feb573569eac28a9a03764f91938d4f5c7ccb264f971db74cd"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/jags20k01/A/run_result.json",
+      "bytes": 1318,
+      "sha256": "0c9fb14bbd2c67bc0e1b8cd110eb6e986eb1bfd3da0bf608c835c18c6eeed0ce"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/jags20k01/A_diagnostics/joint_functionals.csv",
+      "bytes": 3059026,
+      "sha256": "f2a56ace2a8af3195cf86952c55fb6cbdbfe275c4ba482955ed7d84a8a18f119"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/jags20k01/D/raw_chains.rds",
+      "bytes": 765360859,
+      "sha256": "37630c67bc47c5efb3c1f5e126444ff448fa13956cf2b8b764472b010fde588f"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/jags20k01/D/run_result.json",
+      "bytes": 1318,
+      "sha256": "64d50121527c9353ac5b185086e41efb835c8e0f788fd42a767a540b839b9944"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/jags20k01/D_diagnostics/joint_functionals.csv",
+      "bytes": 6427338,
+      "sha256": "0c653bd7638c97d3b2958719fd6e5f58fabf282417aa3ff5d9806e0f70237ef2"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_diagnostics02/common_view/raw_chains.rds",
+      "bytes": 76993924,
+      "sha256": "65f14c223b7a6cb7e70eeb5c8d1620ffe4773b5fa86ebe5fc0e271e453b5ad0c"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_diagnostics02/common_view/run_result.json",
+      "bytes": 250,
+      "sha256": "6f40a4c519f9e08a9b2458da2024881a1f121b4d9042167b6abe3ef486aaca81"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_diagnostics02/common_diagnostics/joint_functionals.csv",
+      "bytes": 983777,
+      "sha256": "61f3b3fcd80b6352b932fe91df514e0deada1ecc92c2fdf40ead65ba33f1c9fa"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/comparison_final01/timings_diagnostics.csv",
+      "bytes": 1618,
+      "sha256": "25197a44fc82fe6d35df6f1c48652544b834d4fc524c5e1a82d7c1a551daec47"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_diagnostics02/HMC_by_chain.csv",
+      "bytes": 143,
+      "sha256": "44528d3a43251bf13b73c674c707d8f1d85a5b94e77cbee836c071076f12a7d8"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_diagnostics02/RB_diagnostics.csv",
+      "bytes": 882,
+      "sha256": "be432488d7a929cc1feafa4f1d814e8959558de345a6c6e6b2c42af3d3b51b8f"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/handoff.md",
+      "bytes": 8679,
+      "sha256": "314f795d64383e944f501f2dd637ac3a0db39c5ca7c6409565976d137450a3db"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_diagnostics02/result.json",
+      "bytes": 1004,
+      "sha256": "d65efa0630e599bcf01fd61452522a1d9035e507908233563025a97a2d83cddd"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_diagnostics02/input_representation.json",
+      "bytes": 176,
+      "sha256": "df8d72f29e857a44247d0f31780c326638dacd494e087b4f26879d6149fd18eb"
+    },
+    {
+      "path": "models/experimental/mebane_ad_stan/d_multinomial.stan",
+      "bytes": 4386,
+      "sha256": "b38de93ef22b826233f35898b5d3becfae1fb46df774ead065b8d4133c127c9b"
+    },
+    {
+      "path": "R/experimental/mebane_ad_long/stan_bridge.R",
+      "bytes": 3081,
+      "sha256": "aec0a5c70564b2f39fd8504240bb425cd74f2ce587f138b5839f953ff66242cc"
+    }
+  ],
+  "packages": {
+    "posterior": "1.7.0",
+    "jsonlite": "2.0.0",
+    "digest": "0.6.39"
+  },
+  "script_sha256": "b1210fb04d3f6ab016d5785b608781650d52c1aad99e063216eaf7313321e141",
+  "note": "Descriptive thresholds below 10/50 do not modify frozen criteria. All diagnostic metrics use unthinned draws. No sampler executed."
+}

@@ -1,0 +1,36 @@
+{
+  "date": "2026-10-01",
+  "status": "proposals_delivered_awaiting_user_confirmation",
+  "read_first": "propostas_para_confirmacao.md",
+  "conceptual_clarification": "clarificacao_classes_mecanismos.md",
+  "no_new_MCMC": true,
+  "no_model_or_prior_changes": true,
+  "no_historical_threshold_changes": true,
+  "no_installation_or_deletion": true,
+  "agents": [
+    {"id": "01a0f748-c560-7140-b832-5d2601df82b0", "role": "existing-draw diagnostics and fixed-run proposal", "goal_status": "complete", "agent_closed": true, "closure_manifest": "diagnostics/closing_manifest.json", "closure_sha256": "1a2d369d2970cdbd0dcdf71ebf95e777c92355f04cfbe9e06c36d1731082c5f0"},
+    {"id": "01a0f756-1646-7910-ac2f-986ab89aac82", "role": "model/prior/precision proposals and source-bound terminology", "goal_status": "complete", "agent_closed": true, "closure_manifest": "model_proposals/delivery_manifest.json", "closure_sha256": "cc065904d60f3684498114c1663c00184364298412d69730d5cc5d9bbda9ee1a"}
+  ],
+  "coordinator_checks": {
+    "global_ranking_rows": 69,
+    "numeric_cells": 897,
+    "largest_numeric_difference_from_reviewed_reference": 0,
+    "source_PDF_hashes_rechecked": 2,
+    "source_PDF_pages_read_visually": 3,
+    "diagnostic_inventory_hashes": 49,
+    "model_source_hashes": 13,
+    "model_delivery_hashes": 17,
+    "hash_failures": 0,
+    "notes": "Independent source reading and ranking checks accept these as proposals, not new inference. Resources were measured by the coordinator, not reported by the user."
+  },
+  "conceptual_result": "In the exact 2022/2023 sources, incremental/extreme concern intensity and both contain manufactured/stolen mechanisms. Another paper not identified by the user remains outside this conclusion.",
+  "configuration_proposals": {
+    "common": {"case": "DC2010, same 143 units", "JAGS_postwarmup_per_chain": 100000, "Stan_postwarmup_per_chain": 5000, "chains": 4, "parallel_chains": 4, "heavy_fits_at_once": 1},
+    "coordinator_recommended_conservative": {"JAGS_adapt": 1000, "JAGS_burn": 5000, "Stan_warmup": 2000},
+    "Maxwell_shorter": {"JAGS_adapt": 1000, "JAGS_burn": 2000, "Stan_warmup": 1000},
+    "selected": null,
+    "prior_arms_selected": []
+  },
+  "remaining_before_sampling": ["User confirmation of configuration/arms/resource limits and any prospective precision policy", "Independent preflight of the exact parallel runner and frozen configuration; not yet performed"],
+  "limits": ["No exhaustive new independent recomputation of all local diagnostics", "New prior intensities are illustrative and not substantively justified for this case", "No measured parallel runtime or peak-RAM benchmark", "Historical fits remain computationally inconclusive; no national production or gate approval"]
+}

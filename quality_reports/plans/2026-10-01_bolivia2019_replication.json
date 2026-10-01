@@ -1,0 +1,135 @@
+{
+  "schema_version": "1.0",
+  "plan_id": "BOL2019-AUTHORS-REPLICATION",
+  "date": "2026-10-01",
+  "status": "B1_reference_verified_operational_gaps_remain",
+  "objective": "Replicar de forma documentada a aplicacao publicada de Mebane a Bolivia 2019, separando fidelidade da implementacao, reproducao numerica e qualidade da amostragem; sem inferencia eleitoral nova.",
+  "authorization": {
+    "source": "quality_reports/results/mebane_gates/coordination/2026-10-01_bolivia2019_replication/user_request.txt",
+    "preparation": true,
+    "published_protocol_execution": "authorized only after B1-B3 independently reviewed and adjudicated, with approved data, specification and resource contracts, and no interference with D.C./Stan timings",
+    "not_authorized": ["package installation or replacement", "file deletion", "result overwrite", "arbitrary chain extensions", "new Brazilian inference", "external communication"]
+  },
+  "connections": {
+    "main_ledger": "quality_reports/plans/mebane_2022_2026_gates.json",
+    "external_replication_gate": "G10",
+    "crosswalk": {"B1": ["G10-T1"], "B2": ["G10-T1", "G10-T2"], "B3": ["G10-T2"], "B4": ["G10-T3"], "B5": ["G10-T4"]},
+    "historical_gates_unchanged": true,
+    "G10_pass_is_not_automatic": true,
+    "DC_Stan_validation_is_not_automatic": true,
+    "Brazil_production_approval": false
+  },
+  "coordination": {
+    "coordinator": "Parent agent: freezes candidates, dispatches disjoint goals, adjudicates each independent review, and records technical releases under the existing authorization.",
+    "executor": "Sol for source collection, extraction, data pipelines, runtime harnesses, diagnostics and report construction.",
+    "reviewer": "A separate agent that did not implement the candidate; methodological review is inherited from the principal model where needed.",
+    "goal_rule": "Each started gate has a finite executor goal and then a distinct reviewer goal. Use native goals if available, without a token budget unless requested. Do not claim completion of the broad historical coordination goal.",
+    "write_rule": "One writer per file. Parent owns plans and releases. Executor writes only its gate/round candidate. Reviewer writes only that round's review directory. No deletion or overwrite of prior rounds.",
+    "sampling_concurrency": "Prefer four independent parallel chain processes as published (parComp=TRUE), after RAM/core/disk preflight. Record cores and peak resource evidence; do not silently switch protocol if resources fail.",
+    "timing_isolation": "Light preparation may run now. No Bolivia sampling, heavy compilation or benchmark while D.C./Stan measured processes are active.",
+    "status_rule": "Candidate delivery is not gate pass. Status pass requires source-bound independent review and adjudication. Missing indispensable input yields an explicit unresolved dependency, not an invented reconstruction or an unqualified native blocked status."
+  },
+  "sources_to_revalidate": {
+    "paper": "Mebane, Walter R., Jr. (2019). Evidence Against Fraudulent Votes Being Decisive in the Bolivia 2019 Election. Version of 13 November.",
+    "url": "https://websites.umich.edu/~wmebane/Bolivia2019.pdf",
+    "local_pdf": "quality_reports/results/mebane_gates/coordination/authors_replication_discovery/archive/Bolivia2019.pdf",
+    "discovery": "quality_reports/results/mebane_gates/coordination/authors_replication_discovery/discovery.md",
+    "candidate_package_commit": "3017de537450f97a01872d0157462a68bea348ee",
+    "unverified_context": ["34551 mesas", "qbl intercept-only", "four parallel chains", "JAGS 4.3.0 and R 3.4.4", "printed pages 24-31 contain command and logs", "published log does not establish package commit", "Bolivia2019Clean.csv, wrkef.R and obsfrauds_ciS.R were not located previously"]
+  },
+  "gates": [
+    {
+      "id": "B1",
+      "title": "Fontes e referencia externa",
+      "status": "inconclusive",
+      "executor_id": "01a0f748-c560-7140-b832-5d2601df82b0",
+      "executor_model": "gpt-6-sol",
+      "executor_effort": "xhigh",
+      "reviewer_id": "01a0f756-1646-7910-ac2f-986ab89aac82",
+      "candidate_manifest": "quality_reports/results/mebane_gates/coordination/2026-10-01_bolivia2019_replication/B1/round1/candidate_manifest.json",
+      "candidate_manifest_sha256": "afa7b901b85b97b5c369023d75d3e68a88679a487fef37cdb873796644ccf729",
+      "adjudication": "quality_reports/results/mebane_gates/coordination/2026-10-01_bolivia2019_replication/B1/round1/adjudication.json",
+      "accepted_scope": "Independent verification of 51 records and 194 numeric cells, accurately qualified source identity. Not full operational definitions or historical-input identity; strongest B1 acceptance remains unresolved.",
+      "depends_on": [],
+      "goal": "Entregar fontes arquivadas e uma referencia numerica externa transcrita, rastreavel e independentemente conferida.",
+      "write_scope": "quality_reports/results/mebane_gates/coordination/2026-10-01_bolivia2019_replication/B1/round1/",
+      "todos": [
+        {"id": "B1-T1", "task": "Revalidar PDF/versao, arquivar URL, acesso, hashes, numeracao impressa versus pagina PDF e fontes contemporaneas do pacote.", "status": "todo"},
+        {"id": "B1-T2", "task": "Extrair parametros, medias, intervalos, nivel/tipo dos intervalos e cadeia/tabela/pagina; marcar ausentes como desconhecidos. Separar saidas de verificacao, finais e pos-processamento.", "status": "todo"},
+        {"id": "B1-T3", "task": "Refazer busca delimitada por Bolivia2019Clean.csv, wrkef.R e obsfrauds_ciS.R e fonte eleitoral citada; preservar evidencia de encontrados e nao localizados.", "status": "todo"},
+        {"id": "B1-T4", "task": "Separar identidade demonstrada, compatibilidade plausivel e desconhecido para qbl/commit, sementes, inicializacoes, versoes e scripts externos.", "status": "todo"},
+        {"id": "B1-T5", "task": "Congelar candidato; revisor reconfere transcricao no PDF e procedencia; coordenador adjudica antes de liberar os insumos dependentes.", "status": "todo"}
+      ],
+      "acceptance": ["Every target cell has an unambiguous source and interval definition.", "Independent transcription check has no unresolved material discrepancy.", "Unknown source versions/seeds/scripts remain explicit; no identity inferred from a matching model name."],
+      "evidence": ["source_manifest.json", "reference_values.csv", "reference_values_dictionary.md", "reference_notes_addendum.md", "search_log.json", "code_identity.md", "candidate_manifest.json", "review/review.json", "adjudication.json"]
+    },
+    {
+      "id": "B2",
+      "title": "Dados",
+      "status": "queued",
+      "independent_preparation_allowed": "Source retrieval and reconstruction drafting can proceed under the user's independent-work clause despite unresolved B1 operational definitions. No input adoption or estimation without the full required reviews.",
+      "mandatory_source_discrepancy": "Published party-sum6137671 differs from printed Votos.Validos6137778 by107. Preserve NValid=sum(parties); investigate actual rows and cause when available, never silently correct.",
+      "depends_on": ["B1"],
+      "goal": "Entregar o input original ou uma reconstrucao explicitamente qualificada, com transformacoes reexecutaveis e adequacao revisada antes de estimar.",
+      "write_scope": "quality_reports/results/mebane_gates/coordination/2026-10-01_bolivia2019_replication/B2/round1/",
+      "todos": [
+        {"id": "B2-T1", "task": "Preservar fonte bruta original ou oficial citada; descrever acesso, formato, versao e limites de equivalencia ao CSV limpo do autor.", "status": "todo"},
+        {"id": "B2-T2", "task": "Implementar em R N=Inscritos, W=MAS, V=soma dos votos dos partidos e A=N-V; verificar separadamente brancos/nulos, exclusoes e ordem das linhas.", "status": "todo"},
+        {"id": "B2-T3", "task": "Validar identificadores, tipos, ausencias, duplicatas, mesas, denominadores, limites das contagens, totais e qualquer filtro; nao equiparar totais iguais a linhas iguais.", "status": "todo"},
+        {"id": "B2-T4", "task": "Revisor independente recompila a base e avalia comparabilidade; registrar original_verified ou reconstructed_qualified, com consequencias para o que pode ser chamado de replicacao.", "status": "todo"}
+      ],
+      "acceptance": ["All rows and transformations have traceable provenance and deterministic tests.", "No silent substitution of data or electoral denominator.", "A reconstructed input is accepted only with explicit independent assessment of the qualified target; exact historical-input identity remains unproven."],
+      "evidence": ["prepare_data.R", "input_manifest.json", "data_validation.json", "data_equivalence.md", "candidate_manifest.json", "review/review.json", "adjudication.json"]
+    },
+    {
+      "id": "B3",
+      "title": "Modelo, protocolo e recursos",
+      "status": "queued",
+      "depends_on": ["B1", "B2"],
+      "goal": "Congelar o alvo qbl publicado, o fluxo efetivo do wrapper, criterios de comparacao e limites numericos de recursos, antes de observar qualquer novo ajuste.",
+      "write_scope": "quality_reports/results/mebane_gates/coordination/2026-10-01_bolivia2019_replication/B3/round1/",
+      "todos": [
+        {"id": "B3-T1", "task": "Comparar likelihood, latentes e prioris ao A de D.C., sem substituir por D; conferir pi parcialmente ordenada, k=.7, seis efeitos locais, auxiliares e extremos; Exp(5) nas variancias do qbl arquivado.", "status": "todo"},
+        {"id": "B3-T2", "task": "Revalidar chamada publicada e wrapper: burn.in=5000, n.adapt=1000, n.iter=2000, n.chains=4, parameters=all, parComp=TRUE, autoConv=TRUE, max.auto=2, MCMCSE sobre pi, precisao .05, mcmcse.combine=TRUE; distinguir verificacao 2k de draws finais 2k e nova adaptacao.", "status": "todo"},
+        {"id": "B3-T3", "task": "Fixar diferencas necessarias de ambiente, sementes e inits prospectivas (nao historicas inventadas), modulos, preservacao de estados e todos os segmentos; testar o supervisor sem estimacao empirica.", "status": "todo"},
+        {"id": "B3-T4", "task": "Estimar pico de RAM, disco e tempo para 34551 mesas e parameters=all, incluindo quatro processos, segmentos adaptativos, serializacao, diagnosticos e copias; congelar limites numericos, timeout, cores e margem de seguranca. Falta de RAM/disco bloqueia B4; nao remover monitores nem serializar silenciosamente.", "status": "todo"},
+        {"id": "B3-T5", "task": "Fixar alvos por cadeia/agregados e tolerancias de arredondamento/Monte Carlo antes do ajuste. Sem draws/MCSE publicados adequados, limitar a conclusao de igualdade numerica e nao inventar teste de equivalencia.", "status": "todo"},
+        {"id": "B3-T6", "task": "Revisao metodologica independente do contrato, dos fixtures, da contabilizacao das iteracoes e dos recursos; coordenador registra liberacao tecnica de B4 somente apos B1-B3 pass e janela de timings livre.", "status": "todo"}
+      ],
+      "acceptance": ["Frozen reviewed replication_contract.json binds exact inputs, code and expected outputs before new sampling.", "Published wrapper trajectory is verified, not inferred from n.iter alone.", "Resources and concurrency are feasible without an unauthorized protocol change.", "No active D.C./Stan measured process at B4 release."],
+      "evidence": ["model_audit.md", "qbl.jags", "wrapper_protocol.md", "replication_contract.json", "resource_preflight.json", "fixture_results.json", "candidate_manifest.json", "review/review.json", "adjudication.json", "execution_release.json"]
+    },
+    {
+      "id": "B4",
+      "title": "Execucao e diagnosticos",
+      "status": "queued",
+      "depends_on": ["B1", "B2", "B3"],
+      "goal": "Executar primeiro o protocolo publicado sob o contrato aprovado e entregar todos os artefatos e comparacoes, inclusive falhas e inconclusividade.",
+      "write_scope": "quality_reports/results/mebane_gates/coordination/2026-10-01_bolivia2019_replication/B4/round1/",
+      "todos": [
+        {"id": "B4-T1", "task": "Executar uma tentativa autorizada do protocolo com cadeias paralelas, preservando draws por segmento, logs, inits/estados finais, versoes/modulos/avisos e tempos por etapa; manter extensoes internas apenas se previstas no wrapper congelado.", "status": "todo"},
+        {"id": "B4-T2", "task": "Reproduzir MCMCSE original e acrescentar trace plots, ACF, R-hat rank-normalized, ESS bulk/tail e MCSE dos estimandos registrados; nao descartar cadeias ou substituir sementes/prioris.", "status": "todo"},
+        {"id": "B4-T3", "task": "Comparar publicado versus reproduzido por cadeia e agregado, preservando incerteza e definicoes dos funcionais; falta de precisao mantem a comparacao descritiva.", "status": "todo"},
+        {"id": "B4-T4", "task": "Congelar manifesto e candidato de execucao. Timeout/falha preserva saidas parciais e encerra a tentativa; nao repetir ou ampliar silenciosamente.", "status": "todo"}
+      ],
+      "acceptance": ["Complete or explicitly partial run evidence is preserved without silent repairs to the target or protocol.", "Published and modern diagnostics are reported separately, including chain disagreement in beta.chi.m if present.", "B4 complete means delivery for B5 review, never automatic convergence."],
+      "evidence": ["run_replication.R", "run_manifest.json", "raw_chains/", "logs/", "timings.csv", "original_diagnostics.csv", "modern_diagnostics.csv", "published_vs_reproduced.csv", "figures/", "candidate_manifest.json"]
+    },
+    {
+      "id": "B5",
+      "title": "Checagem independente e entrega",
+      "status": "queued",
+      "depends_on": ["B4"],
+      "goal": "Entregar revisao independente e relatorio reproduzivel que distinga fidelidade, reproducao externa e qualidade de amostragem.",
+      "write_scope": "quality_reports/results/mebane_gates/coordination/2026-10-01_bolivia2019_replication/B5/round1/",
+      "todos": [
+        {"id": "B5-T1", "task": "Revisor separado recompõe comparacoes a partir dos dados/draws brutos e confere fontes, codigo, protocolo, todos os segmentos e figuras; revisar transcricao sem presumir convergencia publicada.", "status": "todo"},
+        {"id": "B5-T2", "task": "Executor entrega relatorio Markdown/PDF, scripts R, fontes, manifesto e handoff; QA visual do PDF e adjudicacao dos achados pelo coordenador.", "status": "todo"},
+        {"id": "B5-T3", "task": "Registrar tres vereditos separados: fidelidade de implementacao, reproducao dos resultados publicados e qualidade da amostragem. Vincular evidencia a G10 sem aprovacao automatica de G10, D/Stan ou producao brasileira.", "status": "todo"},
+        {"id": "B5-T4", "task": "Se algum insumo indispensavel permanecer ausente, encerrar a preparacao independente possivel com handoff preciso; nao declarar replicacao completa nem gates executados.", "status": "todo"}
+      ],
+      "acceptance": ["Independent raw-artifact checks and all material adjudications are recorded.", "Report and rendered PDF have consistent, traceable numbers and explicit limits.", "Separate verdicts and remaining dependencies are intelligible without this chat."],
+      "evidence": ["review/review.json", "review/review.md", "adjudication.json", "report.md", "report.pdf", "visual_qa.json", "handoff.md", "completion.json", "final_manifest.json"]
+    }
+  ]
+}

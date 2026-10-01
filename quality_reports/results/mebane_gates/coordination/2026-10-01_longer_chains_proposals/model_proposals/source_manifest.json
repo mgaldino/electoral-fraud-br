@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.0",
+  "reviewer": "Curie / Codex",
+  "agent_id": "01a0f756-1646-7910-ac2f-986ab89aac82",
+  "date": "2026-10-01",
+  "scope": "Exact local archived PDFs, model sources and frozen summaries. No certification of current remote byte equality.",
+  "all_13_frozen_sources_rehashed_unchanged": true,
+  "files": [
+    {
+      "path": "quality_reports/results/mebane_gates/G0/round1/qbl_installed_3017de5.jags",
+      "sha256": "f8360126424b7a463f76a1c99efc89a8a5cb81339213bd4931559f14595fbab6"
+    },
+    {
+      "path": "models/experimental/mebane_ad/d_multinomial.jags",
+      "sha256": "6ddb9624f60b15e196cc27ed9694852c40b6553a684a9962003168da4ecfaf5b"
+    },
+    {
+      "path": "models/experimental/mebane_ad_stan/d_multinomial.stan",
+      "sha256": "b38de93ef22b826233f35898b5d3becfae1fb46df774ead065b8d4133c127c9b"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/comparison_final01/global_functionals.csv",
+      "sha256": "702750d31aeec20c2243832805da79b86c3b2466c3130c02c6b21c61e16af95a"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/comparison_final01/diagnostic_groups.csv",
+      "sha256": "ae313d9574806339322db6bbe61cbbd140043e7bf518cc9c96f7582ec7ebfbfd"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/comparison_final01/timings_diagnostics.csv",
+      "sha256": "25197a44fc82fe6d35df6f1c48652544b834d4fc524c5e1a82d7c1a551daec47"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/comparison_final01/result.json",
+      "sha256": "f44fd6dc331ee9f48da957802e7ff980d01eaf843e1fe6539bedb959ab35ec06"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/comparison_final01/manifest.json",
+      "sha256": "2a1afc49e27ba653cec39ebeed6c19cae95ed32d96e6f759a9ed8a6262889537"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/contract.json",
+      "sha256": "fb4a296c9bf0af25812d7d8dd2ab63340fe10d4e73e806e64b5dba3f7dcf481a"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/contract_stan_diagnostics.json",
+      "sha256": "e33a59939f0d55513fea6ae05a2cc90fac617f3385193ec56e4a2a7a9b6df264"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/review_stan_results/review.json",
+      "sha256": "9cbd1036113cdc35725292e77a83f2f2d21678567194fc7975b4c6c51acf00a2"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/authors_replication_discovery/archive/measfrauds_2022-03-06.pdf",
+      "sha256": "ad3b1cd473d48540877fb00cdffaaa09df1a21a98e4a2b4fa0a03c227ec50d76"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/authors_replication_discovery/archive/pm23_2023-07-02.pdf",
+      "sha256": "615ddab21034e22ca55d891e01f14b85a2e7d80e12238bfbfb142ff214531431"
+    }
+  ],
+  "decision_reference": {
+    "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_longer_chains_proposals/decision.md",
+    "observed_sha256": "e2ffc93095f96d6ccbb21e5b8912ace2e54f614a51ed61ac2db8ff7b8201088f",
+    "scope": "Live coordinator document, snapshot at read; not frozen by this agent."
+  }
+}

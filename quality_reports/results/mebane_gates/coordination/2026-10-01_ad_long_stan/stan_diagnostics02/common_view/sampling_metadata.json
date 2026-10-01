@@ -1,0 +1,9 @@
+{
+  "model": "D",
+  "contract_sha256": "e33a59939f0d55513fea6ae05a2cc90fac617f3385193ec56e4a2a7a9b6df264",
+  "data_sha256": "b2ef611dabb751f9286acbaae841a23c34948ed0a4b6306364cbe94d9d24903e",
+  "engine": "Stan",
+  "base_seed": 1001261,
+  "chain_ids": [1, 2, 3, 4],
+  "chains_are_distinct_streams": true
+}

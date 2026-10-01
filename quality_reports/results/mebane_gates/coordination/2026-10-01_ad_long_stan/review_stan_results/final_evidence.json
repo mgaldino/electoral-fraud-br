@@ -1,0 +1,205 @@
+{
+  "status": "pass",
+  "reviewer_id": "01a0f717-7535-72e3-baf8-4db20da81abb",
+  "issued_utc": "2026-10-01T12:12:55.611859+00:00",
+  "candidate_sha256": "d4479f0c060e0cf757bada81c916c852b639fbbed86be73a857211b295ce45f8",
+  "candidate_explicit_files": 45,
+  "bound_input_files_unchanged": 202,
+  "numerical_assertions": 21551,
+  "delivery_named_checks": 83,
+  "PDF_numeric_data_rows_checked": 25,
+  "CSV_settings_and_initialization_bindings": [
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan2k01/csv/D_Stan-1.csv",
+      "settings": {
+        "id": "1",
+        "num_samples": "2000",
+        "num_warmup": "2000",
+        "thin": "1",
+        "seed": "1001261",
+        "save_warmup": "true",
+        "delta": "0.99",
+        "max_depth": "12",
+        "num_threads": "1",
+        "sig_figs": "17"
+      },
+      "init": "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_impl/run-20261001T105406Z-attempt03-01a0f4b5/preparation/init_chain1.json"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan2k01/csv/D_Stan-2.csv",
+      "settings": {
+        "id": "2",
+        "num_samples": "2000",
+        "num_warmup": "2000",
+        "thin": "1",
+        "seed": "1001261",
+        "save_warmup": "true",
+        "delta": "0.99",
+        "max_depth": "12",
+        "num_threads": "1",
+        "sig_figs": "17"
+      },
+      "init": "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_impl/run-20261001T105406Z-attempt03-01a0f4b5/preparation/init_chain2.json"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan2k01/csv/D_Stan-3.csv",
+      "settings": {
+        "id": "3",
+        "num_samples": "2000",
+        "num_warmup": "2000",
+        "thin": "1",
+        "seed": "1001261",
+        "save_warmup": "true",
+        "delta": "0.99",
+        "max_depth": "12",
+        "num_threads": "1",
+        "sig_figs": "17"
+      },
+      "init": "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_impl/run-20261001T105406Z-attempt03-01a0f4b5/preparation/init_chain3.json"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan2k01/csv/D_Stan-4.csv",
+      "settings": {
+        "id": "4",
+        "num_samples": "2000",
+        "num_warmup": "2000",
+        "thin": "1",
+        "seed": "1001261",
+        "save_warmup": "true",
+        "delta": "0.99",
+        "max_depth": "12",
+        "num_threads": "1",
+        "sig_figs": "17"
+      },
+      "init": "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_impl/run-20261001T105406Z-attempt03-01a0f4b5/preparation/init_chain4.json"
+    }
+  ],
+  "JAGS_source_preservation": [
+    {
+      "model": "A",
+      "sha256": "f8360126424b7a463f76a1c99efc89a8a5cb81339213bd4931559f14595fbab6",
+      "paths": [
+        "quality_reports/results/mebane_gates/G0/round1/qbl_installed_3017de5.jags",
+        "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/A/consumed_sources/quality_reports/results/mebane_gates/G0/round1/qbl_installed_3017de5.jags",
+        "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/jags20k01/A/consumed_sources/quality_reports/results/mebane_gates/G0/round1/qbl_installed_3017de5.jags"
+      ],
+      "all_identical": true
+    },
+    {
+      "model": "D",
+      "sha256": "6ddb9624f60b15e196cc27ed9694852c40b6553a684a9962003168da4ecfaf5b",
+      "paths": [
+        "models/experimental/mebane_ad/d_multinomial.jags",
+        "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/D/consumed_sources/models/experimental/mebane_ad/d_multinomial.jags",
+        "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/jags20k01/D/consumed_sources/models/experimental/mebane_ad/d_multinomial.jags"
+      ],
+      "all_identical": true
+    }
+  ],
+  "repair_adjudication_sha256": "329be8dd8ff7c0da2126fa352620fc0f980af18c1c5021655130319bb7a7bb2b",
+  "global_extremes": {
+    "max_rhat": 2.69279480328346,
+    "min_ess_bulk": 4.69041823012559,
+    "min_ess_tail": 18.0753347851395
+  },
+  "max_absolute_differences_by_check_prefix": {
+    "CSV:": 7.275957614183426e-12,
+    "mu:": 3.885780586188048e-16,
+    "global:": 4.729372449219227e-11,
+    "NCP:": 5.093170329928398e-11,
+    "joint:": 5.638867150992155e-11,
+    "RB:": 4.729372449219227e-11,
+    "HMC:": 7.771561172376096e-16
+  },
+  "productive_Stan_total_seconds": 2125.91694260563,
+  "failed_diagnostic_seconds_excluded": 11.42581279197475,
+  "productive_plus_failed_diagnostic_seconds_for_transparency": 2137.342755397605,
+  "all_automated_and_visual_checks_passed": true,
+  "independent_scientific_precision_approval": false,
+  "evidence": [
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/review_stan_results/attempt02/input_binding.json",
+      "sha256": "1018527f3e79e6d70210dfac8b289880550c585fa1bfef7df6b544526556e500"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/review_stan_results/attempt02/run_outcome.json",
+      "sha256": "2489c767da8f053e983d3a37b39533c9d820f93f33f5e81b7c58eb724821335b"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/review_stan_results/attempt02/review_artifacts.json",
+      "sha256": "b0605da81de2bb0fd4b8114898b53b29944a1ec56f177a98f1469813ea6d9425"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/review_stan_results/attempt02/recomputed_summary.json",
+      "sha256": "592fdbd450a1298d2d2dfdaf4d8676c4d4254706d2cb02e8ff4e60d7d043b063"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/review_stan_results/attempt02/recompute_checks.json",
+      "sha256": "baa965ed5e4fd9f4947099fcd897b3dfcd8d59c3032a0f3b27c35e31aa72f8cb"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/review_stan_results/attempt02/globals_recomputed.csv",
+      "sha256": "ae6c97684807b318bd3c493c2a938cfafb2dcce8c5d70ad4d5dc0a10a6b90920"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/review_stan_results/attempt02/NCP_recomputed.csv",
+      "sha256": "6d28eddf53c38e329b64e4782ca31e2bd2736a5684863c31111f6ad99373a4a5"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/review_stan_results/attempt02/HMC_recomputed.csv",
+      "sha256": "d414b2d00dae8a234a2d758b045339c9c43c69170ffcefa66fee24d165402b9b"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/review_stan_results/attempt02/RB_recomputed.csv",
+      "sha256": "5aec2bc4a6665fe70cb2aa4b6ef5e9235bdf234ccd735f1445dd7dffbae167b5"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/review_stan_results/attempt02/common_decisions.csv",
+      "sha256": "df4481e62f92d05a8be0f1fe94053dcd51f99d2a0c40e38a6b520b3f65c16345"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/review_stan_results/attempt02/delivery_checks.json",
+      "sha256": "c2fbc53772c0511be1534fcfb395c466f7596e6023470b261c903fa0441c2d4d"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/review_stan_results/repair_review.json",
+      "sha256": "daf6cac7ab6fdb5ecd64c199b95c7268cc9c426c961440a5da17988fb4c2c1d6"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/review_stan_results/repair_review.md",
+      "sha256": "8bdda5be3f7fed3a86e2073aca8db717361d540d380f5ae2c198a52497249b2e"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/review_stan_results/checker_corrections.md",
+      "sha256": "43dcd69f9e5c4db99b5abce3d19a0dda90f53f653306ce4c4eb9eaf461cfbb08"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/review_stan_results/release.json",
+      "sha256": "705d6a87d94ee640f43fe6f95e11d1b6036ecb74b233bb90736d08772cc8edf4"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/review_stan_results/seal_evidence.py",
+      "sha256": "c49c858027529fcc61c638932a6421b990f340a721eec1b549c43d81183e3800"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/review_stan_results/visual_checks01/visual_review.json",
+      "sha256": "fbd09c440a286b4200ecb5574e4e9c1f876587e16961555042d9fe6f0f98fa7d"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/diagnostic_repair_adjudication.json",
+      "sha256": "329be8dd8ff7c0da2126fa352620fc0f980af18c1c5021655130319bb7a7bb2b"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/review_stan_results/visual_checks01/footer-detail-2.png",
+      "sha256": "51db6c199f51c7d8b8439ce60410dadf363761c8bb27335eadd97e03a295fece"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/review_stan_results/visual_checks01/footer-detail-3.png",
+      "sha256": "59a23b4b4b801336ded2d7b31516ba52e286f688b14e7929c614e670ccba8dc7"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/review_stan_results/visual_checks01/page3-full-small.png",
+      "sha256": "d52f744f457b76597dbaf41207b52fe53ae05851378bd9a8984baba41ee93f97"
+    }
+  ]
+}

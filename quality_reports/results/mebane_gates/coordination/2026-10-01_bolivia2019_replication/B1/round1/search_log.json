@@ -1,0 +1,90 @@
+{
+  "schema_version": "1.0",
+  "searched_utc": "2026-10-01T11:52:13Z",
+  "scope": "Bounded primary-source renewal for three named author files and the electoral workbook explicitly cited in the PDF. No large download, author-code execution, or third-party mirror adoption.",
+  "local_search": {
+    "command": "rg --files -g '*Bolivia2019Clean*' -g '*wrkef*' -g '*obsfrauds_ciS*' -g '*acta.2019.10.25.21.09.30*' .",
+    "cwd": "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud",
+    "matches": [],
+    "interpretation": "No matching tracked or visible untracked filename in this checkout; not a search of all external storage."
+  },
+  "web_searches": [
+    {
+      "queries": [
+        "site:github.com/UMeforensics/eforensics_public \"Bolivia2019Clean.csv\"",
+        "\"Bolivia2019Clean.csv\" -Bolivia2019.pdf",
+        "site:websites.umich.edu/~wmebane/ \"Bolivia2019Clean.csv\""
+      ],
+      "result": "No downloadable primary-source CSV located; indexed occurrences point back to the author PDF."
+    },
+    {
+      "queries": [
+        "\"wrkef.R\" \"obsfrauds_ciS.R\" Bolivia",
+        "\"wrkef.R\" eforensics Mebane -Bolivia2019.pdf",
+        "\"obsfrauds_ciS.R\" -Bolivia2019.pdf",
+        "site:github.com/UMeforensics/eforensics_public \"obsfrauds_ciS.R\""
+      ],
+      "result": "The names appear in the author's PDF log, but no primary downloadable script was located in these queries."
+    },
+    {
+      "queries": [
+        "site:computo.oep.org.bo/PubResul/acta.2019.10.25.21.09.30.xlsx",
+        "site:oep.org.bo \"acta.2019.10.25.21.09.30.xlsx\"",
+        "\"acta.2019.10.25.21.09.30.xlsx\""
+      ],
+      "result": "Exact official URL is in author PDF footnote 5 (printed p. 2 / PDF p. 3). An OEP-hosted news-monitoring page quotes the same URL. An indexed third-party GitHub copy exists but was not treated as the official workbook or downloaded.",
+      "official_url": "https://computo.oep.org.bo/PubResul/acta.2019.10.25.21.09.30.xlsx",
+      "secondary_oep_page": "https://sisin.oep.org.bo/medios_digitales/56569/detalle",
+      "unaccepted_mirror": "https://github.com/ViscidKonrad/Bolivia-Elections-2019"
+    },
+    {
+      "queries": [
+        "site:websites.umich.edu/~wmebane/Bolivia2019.pdf Mebane Bolivia 2019",
+        "site:github.com/UMeforensics/eforensics_public Bolivia2019Clean wrkef obsfrauds"
+      ],
+      "result": "Author PDF and package repository indexed; no separate replication bundle located."
+    }
+  ],
+  "direct_access_attempts": [
+    {
+      "url": "https://websites.umich.edu/~wmebane/Bolivia2019.pdf",
+      "method": "web open",
+      "result": "fetch timeout"
+    },
+    {
+      "url": "https://public.websites.umich.edu/~wmebane/Bolivia2019.pdf",
+      "method": "web open",
+      "result": "fetch timeout"
+    },
+    {
+      "url": "https://websites.umich.edu/~wmebane/Bolivia2019.pdf",
+      "method": "curl -IL --max-time 20",
+      "result": "could not resolve host in local sandbox"
+    },
+    {
+      "url": "https://computo.oep.org.bo/PubResul/acta.2019.10.25.21.09.30.xlsx",
+      "method": "web open",
+      "result": "fetch error; no workbook obtained"
+    },
+    {
+      "url": "https://www.oep.org.bo/elecciones-generales-2019",
+      "method": "web open",
+      "result": "502 Bad Gateway"
+    }
+  ],
+  "primary_source_results": {
+    "paper": {
+      "status": "local copy revalidated; public search-index content matched title/date and selected log excerpts; remote byte identity unknown",
+      "url": "https://websites.umich.edu/~wmebane/Bolivia2019.pdf"
+    },
+    "package": {
+      "status": "2019-10-27 commit snapshot available locally; not proof of Bolivia installed commit",
+      "url": "https://github.com/UMeforensics/eforensics_public/commit/3017de537450f97a01872d0157462a68bea348ee"
+    },
+    "Bolivia2019Clean.csv": "not located in this search",
+    "wrkef.R": "not located in this search",
+    "obsfrauds_ciS.R": "not located in this search",
+    "official_electoral_workbook": "cited exact URL identified but workbook not retrieved in this search"
+  },
+  "limitation": "Search-engine indexing and one checkout are not exhaustive; none of the missing-file statuses establishes nonexistence."
+}

@@ -1,0 +1,4 @@
+Error in ad_diagnostic_row(as.matrix(draws[, , name]), name, "Stan_internal") : 
+  ncol(x) == 4L is not TRUE
+Calls: ad_postprocess_stan ... do.call -> lapply -> FUN -> ad_diagnostic_row -> stopifnot
+Execution halted

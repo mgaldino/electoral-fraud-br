@@ -1,0 +1,4 @@
+"run","globals","original_failures","bulk_below_10","bulk_below_50","bulk_below_400","tail_below_400","undefined_bulk","undefined_tail","rhat_max","worst_bulk_target"
+"A_JAGS_20k",23,14,8,12,14,12,0,0,3.09689211459153,"iota.m.alpha"
+"D_JAGS_20k",23,13,2,8,13,11,0,0,1.51763934751628,"M_total"
+"D_Stan_2k",23,10,6,9,10,9,0,0,2.69279480328346,"S_total"

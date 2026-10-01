@@ -1,0 +1,29 @@
+{
+  "A_JAGS_20k": {
+    "iterations": 20000,
+    "chains": 4,
+    "source_variables": 1880,
+    "focused_variables": 26,
+    "source_class": "mcmc.list",
+    "per_chain_class": "mcmc",
+    "normalization": "unclass before slicing; explicit base iteration-by-chain matrix; no thinning"
+  },
+  "D_JAGS_20k": {
+    "iterations": 20000,
+    "chains": 4,
+    "source_variables": 1451,
+    "focused_variables": 26,
+    "source_class": "mcmc.list",
+    "per_chain_class": "mcmc",
+    "normalization": "unclass before slicing; explicit base iteration-by-chain matrix; no thinning"
+  },
+  "D_Stan_2k": {
+    "iterations": 2000,
+    "chains": 4,
+    "source_variables": 1451,
+    "focused_variables": 26,
+    "source_class": "mcmc.list",
+    "per_chain_class": "mcmc",
+    "normalization": "unclass before slicing; explicit base iteration-by-chain matrix; no thinning"
+  }
+}

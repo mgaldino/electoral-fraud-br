@@ -1,0 +1,21 @@
+{
+  "date": "2026-10-01",
+  "status": "accepted_representation_repair_only",
+  "coordinator_id": "019d795a-acfa-72c2-a210-d55a46c606c2",
+  "reviewer_id": "01a0f717-7535-72e3-baf8-4db20da81abb",
+  "candidate_manifest": "stan_diagnostic_repair_candidate.json",
+  "candidate_manifest_sha256": "cd9540e5df61933740a61c65800b63030163c045f539e593c73f8f2c96abf78b",
+  "review": "review_stan_results/repair_review.json",
+  "review_sha256": "daf6cac7ab6fdb5ecd64c199b95c7268cc9c426c961440a5da17988fb4c2c1d6",
+  "finding": {
+    "id": "REP-01",
+    "classification": "CONFIRMED",
+    "resolution": "Fixed by local unclass() normalization in a new wrapper, independently checked on all original values and class-aware fixtures; old sources and failed attempt retained. No change in statistical criteria or raw draws.",
+    "evidence": ["review_stan_results/repair_checks01/representation_checks.json", "review_stan_results/repair_checks01/preservation_checks.json", "stan_diagnostics01.log", "tests/mebane/ad_long/test_draws_representation.R"]
+  },
+  "independent_checks": {"binding_diff_process": 115, "representation": 52, "bound_files_unchanged": 84},
+  "workflow_note": "Diagnostic02 was generated as an unapproved postprocessing candidate while the representation review finished. No new empirical sampling occurred. Its numerical acceptance remains contingent on separate result QA.",
+  "resampling": false,
+  "precision_approved": false,
+  "production_approved": false
+}

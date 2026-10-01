@@ -1,0 +1,21 @@
+{
+  "execution_window_released": true,
+  "authorization_reference": "User: RELEASE FULL numerical + delivery QA once scoped repair review is recorded; repeated explicit instruction to proceed with no further approval.",
+  "analysis_mode": "completed",
+  "report_markdown": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/comparison_report.md",
+  "failure_manifest": null,
+  "repair_scope_completed_separately": true,
+  "input_hashes": {
+    "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/results_candidate_manifest.json": "d4479f0c060e0cf757bada81c916c852b639fbbed86be73a857211b295ce45f8",
+    "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan2k01/manifest.json": "99fd59f1efc9d0f7f3009a1ba14a0221dc1082fef74089b6b2b16aa4c006f151",
+    "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan2k01/supervisor_finished.json": "a0a81a3c3537c59cb28fe0cbfeaf30d65328004488652972f0289a41c37d6ae3",
+    "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_diagnostics02/manifest.json": "aa8bdbf8596b511eb1093cab14ef03cb934c6e67c221a83eac0bc64c9122ef44",
+    "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_diagnostics02_supervisor.json": "850d7a6d4501057c1d30ef74da9835353d5b86f81029b7667026fac89148fa92",
+    "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_diagnostics01_supervisor.json": "2041f560aac1c3668950c5c0361ecd1610ec849f91e04cc6c1715e3b3ee7d66f",
+    "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/comparison_final01/manifest.json": "2a1afc49e27ba653cec39ebeed6c19cae95ed32d96e6f759a9ed8a6262889537",
+    "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/comparison_report.md": "32a899467b576754fe1cb13350b8d0aa1dfcca5258268b993a6fe5286f35a602",
+    "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/comparison_JAGS20k_Stan2k_DC2010_v1.pdf": "cf53dffcb5e13d259b3f63aacb20dbff73c105245621a5f7adace9f8c5204888",
+    "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_diagnostic_repair_candidate.json": "cd9540e5df61933740a61c65800b63030163c045f539e593c73f8f2c96abf78b",
+    "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/review_stan_results/repair_review.json": "daf6cac7ab6fdb5ecd64c199b95c7268cc9c426c961440a5da17988fb4c2c1d6"
+  }
+}

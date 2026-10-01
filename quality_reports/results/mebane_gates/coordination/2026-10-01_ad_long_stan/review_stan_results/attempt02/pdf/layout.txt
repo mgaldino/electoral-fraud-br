@@ -1,0 +1,218 @@
+ JAGS 20 mil e Stan 2 mil: comparação no mesmo
+ caso
+ Experimento de 1 de outubro de 2026. Dados D.C. 2010, 143 unidades. Preserva A, estuda D e compara D
+ entre JAGS e Stan. Não é uma nova estimação para o Brasil nem uma validação inferencial do modelo.
+
+ 1. Pergunta e protocolo
+ A hipótese proposta pelo usuário é que JAGS necessita de cadeias mais longas, enquanto 2 mil amostras
+ por cadeia podem ser suficientes em Stan. Esta rodada testa essa possibilidade, sem pressupor que o
+ número nominal de iterações determine a precisão.
+ A é o qbl literal, mantido byte a byte. D é a alternativa multinomial experimental, com as mesmas prioris
+ hierárquicas compartilhadas, mas sem as contagens auxiliares binomiais de A. A versus D é sensibilidade
+ ao modelo. D/JAGS versus D/Stan compara o mesmo alvo posterior, sujeito à verificação numérica e aos
+ diagnósticos de cada algoritmo.
+ JAGS: quatro cadeias, 1.000 iterações de adaptação, 5.000 de aquecimento e 20.000 retidas por cadeia.
+ Stan: quatro cadeias, 2.000 de aquecimento e 2.000 retidas por cadeia, adapt_delta=0,99 e profundidade
+ máxima 12. Thin=1. As cadeias são processadas serialmente em ambos os casos. Há limite externo de
+ 3.600 segundos por processo e nenhuma repetição automática.
+ As rodadas JAGS de 2 mil e 20 mil reutilizam dados, inicializações e sementes; não são replicações
+ independentes. O ajuste Stan usa semente-base 1001261 com identificadores de cadeia 1 a 4. Os processos
+ intensivos do experimento foram separados para não contaminar os relógios. Desenvolvimento e leitura
+ estática ocorreram em paralelo; não se presume controle de todos os demais aplicativos do computador.
+ Durante esta execução, o usuário determinou que as próximas rodadas usem cadeias em paralelo e mais
+ núcleos sempre que possível. A instrução foi registrada em CLAUDE.md e future_parallel_chains.md.
+ Esta rodada serial não foi reiniciada nem teve o protocolo alterado; portanto, seus relógios não estimam
+ diretamente o desempenho futuro com quatro cadeias concorrentes.
+ Stan integra a classe discreta usando a soma das três verossimilhanças ponderadas, em escala logarítmica.
+ A parametrização não centrada preserva as seis variâncias com prior Exp(5), usando raiz quadrada para os
+ desvios-padrão. Os pesos são (1,r2,r3)/(1+r2+r3), com r2 e r3 uniformes independentes: essa é a prior
+ efetiva do esquema auxiliar ordenado de JAGS, não uma Dirichlet flat nem uma ordenação total entre as
+ classes 2 e 3.
+ Uma classe posterior condicional é reconstruída por unidade e draw; essa mesma classe determina
+ probabilidades e funcionais M/S. Médias Rao-Blackwellizadas, que integram também essa reconstrução,
+ ficam em resultados secundários separados. Nenhuma alteração de prior foi usada como solução para
+ dificuldades de mistura.
+
+ 2. Tempos e critérios computacionais
+ Tabela 1. Relógios de parede por execução, em segundos, e diagnósticos dos 23 alvos globais. Geração
+ inclui o processo completo e gravação dos draws. A compilação JAGS já está dentro desse processo; a
+ compilação Stan é medida separadamente e somada uma única vez no total. O relógio de compilação Stan
+ inclui a interface C++ de checagem de densidade e gradientes; outras verificações e tentativas de
+ desenvolvimento ficam fora do tempo do ajuste. Total = geração + diagnóstico + essa compilação Stan,
+ quando aplicável. As duas primeiras linhas são o piloto histórico preservado.
+
+
+
+
+Estudo A/D | Comparação experimental, não inferência eleitoral                                               1
+ Uma primeira tentativa de diagnóstico Stan falhou em 11,43 s por despacho S3: as.matrix() sobre
+ draws_array concatenava as cadeias quando o namespace posterior estava carregado. A correção converte
+ apenas a representação local para arrays básicos, sem mudar valores, ordem, critérios ou o fit. A falha foi
+ preservada em stan_diagnostics01; o diagnóstico válido está em stan_diagnostics02. Esse tempo de
+ tentativa malsucedida, assim como desenvolvimento e QA, não integra o total produtivo da tabela; não
+ houve nova amostragem.
+
+   Rodada                Geração (s)           Diagnóstico (s)         Total (s)            R-hat máximo         ESS mínimo
+                                                                                                                 bulk/cauda
+
+   A_JAGS_2k             102,57                22,35                   124,92               3,451                4,4 / 4,0
+
+   D_JAGS_2k             68,25                 21,72                   89,97                2,472                4,8 / 5,0
+
+   A_JAGS_20k            385,84                206,70                  592,54               3,097                4,5 / 5,3
+
+   D_JAGS_20k            261,65                202,61                  464,26               1,518                7,4 / 11,2
+
+   D_Stan_2k             2.030,23              52,52                   2.125,92             2,693                4,7 / 18,1
+
+ R-hat é um diagnóstico de concordância entre cadeias. ESS é o tamanho efetivo da amostra, distinto do
+ número nominal de draws. Exigem-se R-hat < 1,01 e ESS bulk e cauda >= 400 para todos os alvos
+ obrigatórios; as classificações têm também limite prospectivo de discrepância entre cadeias. Estatísticas
+ indefinidas não recebem aprovação automática, mas sua indefinição isolada tampouco demonstra não
+ convergência.
+ Tabela 2. Falhas dos critérios prospectivos. A coluna de indefinidos é subconjunto das falhas, não um
+ grupo a somar. Falhas globais e locais são separadas dos indicadores de classes raras no CSV
+ diagnostic_groups.csv.
+
+   Rodada                    Globais reprovados /       Obrigatórios               Obrigatórios totais     Indefinidos
+                             23                         reprovados
+
+   A_JAGS_2k                 15                         1.605                      2.171                   432
+
+   D_JAGS_2k                 14                         1.021                      1.742                   392
+
+   A_JAGS_20k                14                         1.597                      2.171                   408
+
+   D_JAGS_20k                13                         995                        1.742                   352
+
+   D_Stan_2k                 10                         1.024                      1.742                   420
+
+ A_JAGS_20k: execução e diagnóstico completos = TRUE; status = computationally_inconclusive.
+ D_JAGS_20k: execução e diagnóstico completos = TRUE; status = computationally_inconclusive.
+ D_Stan_2k: execução e diagnóstico completos = TRUE; status = computationally_inconclusive.
+ D/Stan, grupo global: 10 de 23 alvos reprovados, incluindo 0 indefinidos. R-hat máximo finito 2,6928;
+ ESS mínimos bulk/cauda 4,7 / 18,1.
+ D/Stan, grupo local_continuous: 582 de 1.287 alvos reprovados, incluindo 0 indefinidos. R-hat máximo
+ finito 1,8802; ESS mínimos bulk/cauda 5,7 / 16,5.
+ D/Stan, grupo class_count: 3 de 3 alvos reprovados, incluindo 2 indefinidos. R-hat máximo finito 2,2642;
+ ESS mínimos bulk/cauda 5,1 / 18,9.
+ D/Stan, grupo class_indicator: 429 de 429 alvos reprovados, incluindo 418 indefinidos. R-hat máximo
+ finito 2,8218; ESS mínimos bulk/cauda 4,6 / 29,6.
+
+
+
+Estudo A/D | Comparação experimental, não inferência eleitoral                                                                2
+ Tabela 3. Diagnósticos específicos de Hamiltonian Monte Carlo (HMC). Exigem-se zero divergências,
+ zero atingimentos da profundidade máxima e E-BFMI >= 0,3 em cada cadeia. E-BFMI mede a exploração
+ da distribuição de energia. Os 860 parâmetros internos da parametrização não centrada recebem também
+ os critérios R-hat/ESS, separadamente dos alvos comuns.
+
+   Cadeia                            Divergências                    Profundidade máxima    E-BFMI
+                                                                     atingida
+
+   1                                 0                               0                      0,916
+
+   2                                 0                               0                      0,880
+
+   3                                 0                               0                      0,588
+
+   4                                 0                               0                      0,827
+
+ Critérios HMC atendidos: TRUE. Parâmetros internos reprovados: 291 de 860. A precisão dos resultados
+ comuns continua sujeita à Tabela 2; bom comportamento HMC não dispensa esses controles.
+
+ 3. Comparação descritiva entre engines
+ Os resumos seguintes descrevem draws, não eventos eleitorais observados. pi são pesos de mistura.
+ M=N(1-tau)m e S=N tau(1-nu)s representam transferências esperadas no mecanismo estatístico: tau é
+ participação inicial, nu é preferência inicial pelo candidato focal, m e s são intensidades da classe latente.
+ As somas são feitas dentro de cada draw conjunto, preservando dependência.
+ Tabela 4. D no mesmo alvo: médias amostrais JAGS 20 mil versus Stan 2 mil. A última coluna divide a
+ diferença Stan-JAGS pela raiz da soma dos quadrados dos erros-padrão Monte Carlo (MCSE). É
+ descritiva, não um teste de equivalência; MCSE não é uma referência confiável se a exploração posterior
+ falhou.
+
+   Funcional                 JAGS 20 mil                Stan 2 mil              Diferença           Diferença / MCSE
+                                                                                                    combinado
+
+   pi[1]                     0,9748                     0,5706                  -0,4042             -12,57
+
+   pi[2]                     0,0182                     0,4225                  0,4043              12,59
+
+   pi[3]                     0,0071                     0,0069                  -0,0001             -1,53
+
+   M_total                   382,7                      4.807,8                 4.425,1             8,76
+
+   S_total                   106,5                      9.525,1                 9.418,6             3,67
+
+ Tabela 5. Médias de M e S por cadeia nas novas rodadas. Diferenças persistentes entre cadeias são
+ importantes mesmo quando uma média agregada parece plausível. Estes valores não são contagens
+ comprovadas de fraude.
+
+   Rodada / funcional        Cadeia 1                   Cadeia 2                Cadeia 3            Cadeia 4
+
+   A_JAGS_20k /              896,2                      0,0                     0,0                 135,4
+   M_total
+
+   A_JAGS_20k / S_total      260,8                      0,0                     0,0                 17,2
+
+   D_JAGS_20k /              247,9                      780,8                   36,7                465,4
+   M_total
+
+   D_JAGS_20k / S_total      54,5                       199,3                   5,0                 167,1
+
+   D_Stan_2k / M_total       3.451,0                    4.458,4                 5.478,1             5.843,7
+
+
+
+
+Estudo A/D | Comparação experimental, não inferência eleitoral                                                         3
+   Rodada / funcional        Cadeia 1                   Cadeia 2    Cadeia 3             Cadeia 4
+
+   D_Stan_2k / S_total       7.788,0                    15.225,0    1.978,2              13.109,1
+
+
+ 4. Alcance e próximos passos
+ O número de iterações deve ser julgado pela precisão obtida, não pela reputação da engine. Tempos e ESS
+ por segundo somente sustentam uma comparação de eficiência nos alvos cuja precisão esteja demonstrada.
+ Este experimento não decide que uma prior é errada a partir de dificuldade de amostragem e não trata a
+ execução JAGS anterior como prova suficiente de convergência.
+ A implementação Stan preserva o alvo, mas combina HMC, parametrização não centrada e marginalização
+ das classes e da escala auxiliar dos pesos. Assim, uma diferença de desempenho se refere a essas
+ implementações completas; não identifica isoladamente o efeito de trocar Gibbs por HMC.
+ A permanece preservada, com seus limites de suporte já documentados. D corrige o suporte conjunto por
+ construção, mas ainda requer estudo de identificação, heterogeneidade legítima, recuperação em dados
+ sintéticos e replicação externa com referência numérica dos autores. Esses requisitos científicos não são
+ resolvidos apenas por cadeias mais longas ou HMC.
+ Nenhum gate histórico foi retroativamente aprovado. G3 permanece inconclusivo e G10 continua pendente
+ de replicação numérica externa. Não houve nova estimação brasileira, mudança de filtros dos dados ou
+ adoção de engine de produção. Os dados D.C. usam A=NVoters-NValid na codificação dos autores; não se
+ deve transportar esse denominador automaticamente para abstenção no Brasil.
+ O próximo passo deve partir do diagnóstico observado nesta rodada: distinguir dificuldades globais/locais
+ de indicadores discretos raros, examinar a geometria e as cadeias preservadas e definir qualquer nova
+ intervenção prospectivamente. Depois da validação do alvo e da replicação externa, retomar o caso
+ brasileiro aprovado e os gates de escala/ingestão de 2026.
+
+ 5. Fontes e reprodução
+ Ferrari, Diogo; McAlister, Kevin; Mebane, Walter R., Jr.; Wu, Patrick Y. (2019). eforensics 0.0.4. Commit
+ 3017de537450f97a01872d0157462a68bea348ee. Vignette Introduction to eforensics, 16/08/2019; dados
+ D.C. 2010. Repositório dos autores. Snapshot local preservado. D é uma derivação experimental deste
+ projeto, não uma implementação publicada pelos autores.
+ Mebane, Walter R., Jr. (2023). Lost Votes and Posterior Multimodality in the eforensics Model. PolMeth
+ 2023, Stanford, 9-11 de julho; versão de 2 de julho de 2023. Texto do autor.
+ Vehtari, Aki; Gelman, Andrew; Simpson, Daniel; Carpenter, Bob; Bürkner, Paul-Christian (2021).
+ Rank-Normalization, Folding, and Localization: An Improved R-hat for Assessing Convergence of
+ MCMC (with Discussion). Bayesian Analysis, 16(2), 667-718. DOI 10.1214/20-BA1221.
+ Stan Development Team. Stan User's Guide: Latent Discrete Parameters; Diagnostics and Warnings.
+ Marginalização e diagnósticos, consultados em 01/10/2026. A documentação web consultada é atual; a
+ engine instalada e usada é CmdStan 2.37.0, via cmdstanr 0.9.0.
+ Cálculos: R/experimental/mebane_ad_long/compare_engines.R, a partir dos diagnósticos persistidos.
+ Apresentação: R/experimental/mebane_ad_long/write_report.R. Renderizador PDF preservado do estudo
+ anterior. Contrato, revisão, fontes, dados e resultados estão vinculados pelos manifestos desta rodada;
+ draws/CSV grandes e binários permanecem localmente preservados, sem excluir artefatos históricos nem
+ instalar pacotes.
+
+
+
+
+Estudo A/D | Comparação experimental, não inferência eleitoral                                               4
+

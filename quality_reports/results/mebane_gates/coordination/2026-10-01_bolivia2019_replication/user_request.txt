@@ -1,0 +1,55 @@
+Prepare e execute uma replicação documentada da aplicação de Mebane à Bolívia 2019, como frente complementar ao estudo D.C. 2010 A/D e à tradução para Stan. O objetivo é verificar nossa implementação contra uma aplicação dos autores com resultados numéricos publicados, não produzir inferência eleitoral nova.
+
+Repositório:
+ /Users/manoelgaldino/Documents/DCP/Papers/electoralFraud
+
+Fontes iniciais:
+- Mebane, Walter R., Jr. (2019). Evidence Against Fraudulent Votes Being Decisive in the Bolivia 2019 Election. Versão de 13 de novembro.
+- PDF: https://websites.umich.edu/~wmebane/Bolivia2019.pdf
+- Arquivo local: /Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/coordination/authors_replication_discovery/archive/Bolivia2019.pdf
+- Descoberta anterior: /Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/coordination/authors_replication_discovery/discovery.md
+
+CONTEXTO A REVALIDAR
+O PDF contém o comando e os logs nas páginas impressas 24–31 e resultados de pós-processamento nas páginas seguintes. Não é uma vignette.
+A aplicação usa 34.551 mesas, qbl intercept-only, quatro cadeias paralelas, JAGS 4.3.0 e R 3.4.4.
+O modelo A usado em D.C. coincide com qbl() do pacote público, commit 3017de537450f97a01872d0157462a68bea348ee. Contudo, o log boliviano não identifica o commit instalado: não presumir identidade exata.
+O CSV Bolivia2019Clean.csv e os scripts externos wrkef.R e obsfrauds_ciS.R não foram localizados na investigação anterior. Verificar novamente, sem tratar essa ausência como definitiva.
+
+COORDENAÇÃO
+Organize os gates abaixo como goals com todos, dependências, critérios de conclusão e evidências. Você coordena; separe execução e revisão independente. Use Sol nas tarefas mecânicas bem delimitadas quando adequado, sem dispensar revisão metodológica.
+A preparação pode ocorrer em paralelo ao trabalho atual. A estimação só começa depois dos gates de dados, especificação e recursos aprovados e sem interferir nos timings de D.C./Stan.
+Este pedido autoriza a execução do protocolo publicado após essas verificações. Não autoriza instalar/substituir pacotes, excluir arquivos, sobrescrever resultados, ampliar cadeias arbitrariamente ou iniciar inferência brasileira.
+
+GATE 1 — FONTES E REFERÊNCIA EXTERNA
+Localize o material dos autores e arquive fontes, versões, URLs, datas e hashes.
+Extraia tabelas de referência com parâmetros, médias, intervalos e identificação das cadeias; confira a transcrição independentemente.
+Verifique o código qbl contemporâneo à execução. Separe identidade comprovada, compatibilidade plausível e informação desconhecida.
+Registre sementes, inicializações e versões não publicadas como desconhecidas, sem inventá-las.
+
+GATE 2 — DADOS
+Recupere o CSV original ou reconstrua o input a partir da fonte eleitoral citada pelo autor, documentando cada transformação.
+Reproduza N=Inscritos, W=MAS, V=soma dos votos dos partidos e A=N−V, conforme o código publicado, conferindo o tratamento de brancos/nulos.
+Valide identificadores, tipos, ausências, duplicatas, filtros, contagens por mesa e totais publicados. Igualdade dos totais não demonstra igualdade das linhas.
+Se a base for reconstruída sem confirmação do input original, declare esse limite e submeta a adequação do alvo à revisão antes de estimar.
+
+GATE 3 — MODELO E PROTOCOLO
+Compare a likelihood, latentes e priors com A em D.C.; não substitua qbl pelo modelo D.
+Confira prior parcialmente ordenada de pi, k=0,7, seis efeitos locais, contagens auxiliares e tratamentos dos extremos.
+Atenção: no qbl arquivado, Exponencial(5) incide nas variâncias dos efeitos, não nos desvios-padrão.
+Reproduza a chamada publicada: burn.in=5000, n.adapt=1000, n.iter=2000, n.chains=4, parameters="all", parComp=TRUE, autoConv=TRUE, max.auto=2, diagnóstico MCMCSE sobre pi, precisão 0,05 e mcmcse.combine=TRUE.
+Confira a lógica efetiva do wrapper: o log mostra 2.000 iterações de verificação e mais 2.000 finais, com nova adaptação. Não confundir n.iter com o total percorrido.
+Documente qualquer diferença necessária de versão, sementes ou inicialização. Defina previamente limites de tempo, memória, disco e concorrência.
+
+GATE 4 — EXECUÇÃO E DIAGNÓSTICOS
+Execute primeiro o protocolo publicado, preservando cadeias, logs completos, entradas, estados iniciais/finais, versões, módulos, avisos e tempos por etapa.
+Não descarte cadeias, troque sementes, altere priors ou prolongue o ajuste silenciosamente.
+Reproduza o diagnóstico original e acrescente trace plots, autocorrelação, R-hat moderno, ESS bulk/tail e MCSE dos estimandos relevantes.
+Compare valores publicados e reproduzidos por cadeia e agregados, com critérios definidos antes de observar os novos resultados. Sem precisão adequada, a comparação permanece descritiva.
+
+GATE 5 — CHECAGEM INDEPENDENTE E ENTREGA
+O revisor deve recomputar as comparações a partir dos artefatos brutos e conferir código, dados, protocolo e figuras.
+Não suponha que o ajuste publicado convergiu: o PDF mostra discrepâncias entre cadeias, inclusive em beta.chi.m.
+Separe três conclusões: fidelidade de implementação, reprodução dos resultados publicados e qualidade da amostragem. Uma não implica as outras.
+Entregue scripts R reexecutáveis, fontes do modelo, manifesto, resultados, relatório Markdown/PDF e handoff com pendências.
+Integre a evidência ao planejamento de replicação externa existente, sem declarar automaticamente G10 aprovado, validar D/Stan ou liberar produção no Brasil.
+Se faltar um insumo indispensável, conclua o trabalho independente possível e reporte precisamente o que impede a replicação completa.

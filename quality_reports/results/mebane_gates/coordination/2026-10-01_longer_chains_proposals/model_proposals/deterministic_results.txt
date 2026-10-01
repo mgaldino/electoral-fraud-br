@@ -1,0 +1,48 @@
+DETERMINISTIC CHECKS ONLY; PROPOSAL NOT APPROVED
+No MCMC, random draws, model edits or empirical diagnostic recalculation.
+
+Prior E(pi), partial order:
+[1] 0.523248143765 0.238375928118 0.238375928118
+Prior E(pi), full order by conditioning:
+[1] 0.523248143765 0.323959216501 0.152792639734
+P(pi2>=pi3) under baseline = 0.5
+Marginal prior scale (quadrature):
+                   scenario       location alpha_sd variance_rate
+       baseline_incremental  0.00000000000      1.0             5
+           baseline_extreme  0.00000000000      1.0             5
+ illustrative_C_incremental -1.79175946923      0.5            20
+     illustrative_C_extreme  0.00000000000      0.5            20
+ marginal_intensity_q025 marginal_intensity_median marginal_intensity_q975
+         0.0729533053428                      0.35          0.627046694657
+         0.7312657022898                      0.85          0.968734297710
+         0.0376488392928                      0.10          0.229788203486
+         0.7762942341722                      0.85          0.923705765828
+ E_variance local_SD_median   local_SD_q95
+       0.20  0.372329741106 0.774045512041
+       0.20  0.372329741106 0.774045512041
+       0.05  0.186164870553 0.387022756020
+       0.05  0.186164870553 0.387022756020
+ prior_mean_count_at_200_opportunities_q025
+                             14.59066106857
+                            146.25314045796
+                              7.52976785857
+                            155.25884683443
+ prior_mean_count_at_200_opportunities_median
+                                           70
+                                          170
+                                           20
+                                          170
+ prior_mean_count_at_200_opportunities_q975
+                             125.4093389314
+                             193.7468595420
+                              45.9576406972
+                             184.7411531656
+Identical D probabilities for three different parameter settings:
+               pA  pW  pO
+no_fraud      0.2 0.5 0.3
+incremental_1 0.2 0.5 0.3
+incremental_2 0.2 0.5 0.3
+Example m=.2 < s=.4 but M=140 > S=48 votes
+Three fixed-run anchors: 21 rows, no missing/nonfinite values, unique id/target.
+R version: R version 4.4.2 (2024-10-31)
+All deterministic assertions passed.

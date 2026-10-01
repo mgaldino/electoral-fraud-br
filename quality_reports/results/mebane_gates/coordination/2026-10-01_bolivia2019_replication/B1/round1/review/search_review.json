@@ -1,0 +1,48 @@
+{
+  "reviewer": "Codex independent B1 reviewer",
+  "reviewer_thread_id": "01a0f756-1646-7910-ac2f-986ab89aac82",
+  "date": "2026-10-01",
+  "scope": "Review executor's bounded search record and perform a separate bounded renewal. No exhaustive absence claim; no data adoption or external messages.",
+  "executor_record": "../search_log.json",
+  "executor_record_assessment": "Names, query strings, official electoral URL and limitations are explicit. Direct-fetch failures are executor-reported; reviewer did not reproduce those historical network failures. The candidate does not certify remote byte equality.",
+  "independent_local_checks": [
+    {
+      "command": "rg --files -g '*Bolivia2019Clean*' -g '*wrkef*' -g '*obsfrauds_ciS*' -g '*acta.2019.10.25.21.09.30*' .",
+      "cwd": "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud",
+      "exit_code": 1,
+      "stdout": "",
+      "interpretation": "No matching filename in the rg-visible checkout at review time. Ignored paths and other storage are not exhausted."
+    },
+    {
+      "command": "rg -n 'Bolivia2019Clean|wrkef\\.R|obsfrauds_ciS|effrauds_obs' quality_reports/results/mebane_gates/coordination/authors_replication_discovery/archive/UMeforensics-eforensics_public-3017de5",
+      "exit_code": 1,
+      "stdout": "",
+      "interpretation": "No matching content found in the rg-visible archived package snapshot."
+    }
+  ],
+  "independent_web_queries": [
+    "\"Bolivia2019Clean.csv\" -Bolivia2019.pdf",
+    "\"wrkef.R\" \"obsfrauds_ciS.R\" Bolivia",
+    "\"acta.2019.10.25.21.09.30.xlsx\"",
+    "site.stat.ethz.ch coda HPDinterval prob 0.95",
+    "\"wrkef.R\" eforensics Mebane -Bolivia2019.pdf",
+    "\"obsfrauds_ciS.R\" -Bolivia2019.pdf",
+    "site:github.com/UMeforensics/eforensics_public \"Bolivia2019Clean.csv\""
+  ],
+  "raw_responses": ["web_search_raw.json", "web_search_followup_raw.json"],
+  "direct_primary_documentation_read": "https://search.r-project.org/CRAN/refmans/coda/html/HPDinterval.html",
+  "documentation_limit": "Current coda documentation supports the nominal prob=0.95 default. It does not identify the historical Bolivia coda or eforensics installation.",
+  "results": {
+    "Bolivia2019Clean.csv": "not located as a downloadable primary-source input in this bounded renewal",
+    "wrkef.R": "not located as a downloadable primary-source script in this bounded renewal",
+    "obsfrauds_ciS.R": "not located as a downloadable primary-source script in this bounded renewal",
+    "runef4_Bolivia2019Clean_4c.RData": "not supplied with the reviewed candidate; not independently targeted in the web renewal, so no separate exhaustive search claim",
+    "official_workbook": "Exact URL independently confirmed in PDF page 3 footnote 5; workbook not downloaded or validated in this review",
+    "official_workbook_url": "https://computo.oep.org.bo/PubResul/acta.2019.10.25.21.09.30.xlsx",
+    "indexed_oep_reference": "https://sisin.oep.org.bo/medios_digitales/56569/detalle",
+    "unaccepted_mirror": "https://github.com/ViscidKonrad/Bolivia-Elections-2019",
+    "mirror_policy": "Search lead only, not evidence of the exact official bytes, original clean input, or data adequacy",
+    "current_remote_pdf_byte_equality": "UNKNOWN; no current remote bytes hashed by reviewer"
+  },
+  "conclusion": "The bounded not-located narrative is supported and remains properly qualified. Search results do not prove that any named file does not exist."
+}

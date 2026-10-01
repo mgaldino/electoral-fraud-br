@@ -1,0 +1,52 @@
+{
+  "created_utc": "2026-10-01T11:48:50.011999+00:00",
+  "scope": [
+    "R/experimental/mebane_ad_long/postprocess_stan_v2.R",
+    "R/experimental/mebane_ad_long/supervise_diagnostics_v2.py",
+    "tests/mebane/ad_long/test_draws_representation.R",
+    "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan2k01/manifest.json",
+    "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_diagnostic_candidate/manifest.json",
+    "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_diagnostics01.log",
+    "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_diagnostics01_supervisor.json"
+  ],
+  "meaning": "Byte integrity of these explicit inputs, not statistical approval or an audit of every historical artifact",
+  "files": [
+    {
+      "path": "R/experimental/mebane_ad_long/postprocess_stan_v2.R",
+      "bytes": 4835,
+      "sha256": "c9942429e543e521c83db799166b470fab32cf793c27b5afd737240546efb5e0"
+    },
+    {
+      "path": "R/experimental/mebane_ad_long/supervise_diagnostics_v2.py",
+      "bytes": 993,
+      "sha256": "80587de9b918f15a1b705ee15b772575a08474f2c5e661d4f3207ca362a47f34"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan2k01/manifest.json",
+      "bytes": 6924,
+      "sha256": "99fd59f1efc9d0f7f3009a1ba14a0221dc1082fef74089b6b2b16aa4c006f151"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_diagnostic_candidate/manifest.json",
+      "bytes": 5345,
+      "sha256": "3562d593731cec1fe156ee52266a975cd0cbf6d6fe8666c26b15652298bb08b0"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_diagnostics01.log",
+      "bytes": 216,
+      "sha256": "dda0d4b5fc409737e7256fe988c726044220dc36b703c37ac51609e1c4a5b901"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_diagnostics01_supervisor.json",
+      "bytes": 574,
+      "sha256": "2041f560aac1c3668950c5c0361ecd1610ec849f91e04cc6c1715e3b3ee7d66f"
+    },
+    {
+      "path": "tests/mebane/ad_long/test_draws_representation.R",
+      "bytes": 729,
+      "sha256": "38010857d7bc51ffcaa3b1e8dd7d40f1b8912d413644368f6b102384255672e4"
+    }
+  ],
+  "file_count": 7,
+  "bytes_total": 19616
+}
