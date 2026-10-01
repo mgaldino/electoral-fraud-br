@@ -1,0 +1,91 @@
+{
+  "schema_version": "1.0-independent-jags20k-results-review",
+  "review_date": "2026-10-01",
+  "status": "pass",
+  "status_scope": "Fidelidade quantitativa e documental dos resultados JAGS20k A/D e da comparacao descritiva 2k/20k. Nao e aprovacao de precisao posterior, G3/G10, Stan, PDF, producao ou inferencia eleitoral.",
+  "reviewer_id": "01a0f717-7535-72e3-baf8-4db20da81abb",
+  "executor_id": "019d795a-acfa-72c2-a210-d55a46c606c2",
+  "reviewer_identity_evidence": "create_goal retornou o threadId; distinto do executor em sampling_metadata.json",
+  "repository_root": "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud",
+  "paths_relative_to": "repository_root",
+  "binding": {
+    "candidate_manifest": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/jags_candidate/manifest.json",
+    "candidate_manifest_sha256": "61ad865465a2696bf5986d2253defbf6fe64c09aaa2d7f290c8ce64f15692066",
+    "contract": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/contract.json",
+    "contract_sha256": "fb4a296c9bf0af25812d7d8dd2ab63340fe10d4e73e806e64b5dba3f7dcf481a",
+    "shared_data_sha256": "b2ef611dabb751f9286acbaae841a23c34948ed0a4b6306364cbe94d9d24903e",
+    "A_raw_sha256": "19d8afcb832433feb573569eac28a9a03764f91938d4f5c7ccb264f971db74cd",
+    "D_raw_sha256": "37630c67bc47c5efb3c1f5e126444ff448fa13956cf2b8b764472b010fde588f",
+    "comparison_manifest_sha256": "0ad269a9254a658a469ad5bcd15f9a29f4131de6bd44bc7d71e266ae1c531ccf",
+    "A_source_sha256": "f8360126424b7a463f76a1c99efc89a8a5cb81339213bd4931559f14595fbab6",
+    "D_source_sha256": "6ddb9624f60b15e196cc27ed9694852c40b6553a684a9962003168da4ecfaf5b"
+  },
+  "findings": [],
+  "checks": [
+    {
+      "id": "J20-INTEGRITY",
+      "status": "pass",
+      "result": "Seis manifests e 108 entradas byte/hash conferidos; raw RDS e fontes A/D atuais coincidem com snapshots congelados. Fontes A/D antigas preservadas e iguais as fontes consumidas agora.",
+      "evidence": [
+        "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/review_jags_results/binding_results.json",
+        "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/jags20k01/A/manifest.json",
+        "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/jags20k01/D/manifest.json"
+      ]
+    },
+    {
+      "id": "J20-RAW-GLOBALS",
+      "status": "pass",
+      "result": "Recompostos diretamente dos quatro raw_chains 23 globais por modelo, incluindo M/S por draw com Z, N, mu, fracoes auxiliares de A e endpoint .999. Conferidos medias, SD, quantis, quatro medias por cadeia, rank R-hat, ESS bulk/tail e MCSE; maior diferenca absoluta de metrica 5.10e-11 e de M/S por draw 5.69e-12.",
+      "evidence": [
+        "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/review_jags_results/recompute.R",
+        "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/review_jags_results/recomputed_results.json",
+        "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/jags20k01/A_diagnostics/joint_functionals.csv",
+        "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/jags20k01/D_diagnostics/joint_functionals.csv"
+      ]
+    },
+    {
+      "id": "J20-DECISIONS",
+      "status": "pass",
+      "result": "Universo obrigatorio, unicidade, 3913 flags e contagens recalculados dos CSVs com R-hat<1.01, ESS bulk/tail>=400 e range<=.05 para classes. NA nao passa; as 760 linhas indefinidas sao subconjunto das 2592 falhas. Faixas das 429 classes por modelo, 3 contagens de classe e probabilidades de classe foram reconferidas dos raw. Metricas de alvos locais foram conferidas por amostra estratificada, nao exaustivamente.",
+      "evidence": [
+        "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/contract.json",
+        "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/review_jags_results/recomputed_results.json",
+        "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/jags20k01/A_diagnostics/diagnostics.csv",
+        "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/jags20k01/D_diagnostics/diagnostics.csv"
+      ]
+    },
+    {
+      "id": "J20-PROTOCOL-COMPARISON",
+      "status": "pass",
+      "result": "143 unidades e ordem, N=452992, dados efetivamente passados, quatro cadeias 20000x, mcpar 6001:26000, seeds 930261:930264 e inits basicas conferidos. Eventos mostram A antes de D; nenhum retry ou timeout. Comparacao reproduz 92 linhas globais, 18 linhas de grupo, tempos e ESS/s; dois registros 2k remetem a evidencia antiga ja revisada. Compilacao contada dentro da geracao, sem soma duplicada. Stan permanece not_available.",
+      "evidence": [
+        "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/review_jags_results/binding_results.json",
+        "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/jags20k01/execution.json",
+        "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/comparison_jags01/timings_diagnostics.csv",
+        "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/review_results/review.json"
+      ]
+    }
+  ],
+  "computational_verdict": {
+    "A": {"mandatory": 2171, "failed": 1597, "undefined_subset_of_failed": 408, "global_failed": 14, "global_total": 23, "max_global_rhat": 3.09689211459153, "min_global_bulk_ess": 4.48422296877321, "min_global_tail_ess": 5.26116309831772, "status": "computationally_inconclusive"},
+    "D": {"mandatory": 1742, "failed": 995, "undefined_subset_of_failed": 352, "global_failed": 13, "global_total": 23, "max_global_rhat": 1.51763934751628, "min_global_bulk_ess": 7.35928613792273, "min_global_tail_ess": 11.1846436147469, "status": "computationally_inconclusive"},
+    "interpretation": "Falhas globais substanciais em ambos os modelos; nao se limitam a classes raras. Os resumos M/S ainda refletem mistura inadequada e nao devem sustentar comparacao posterior precisa. Estatistica indefinida nao demonstra, isoladamente, nao convergencia."
+  },
+  "timing_seconds": {
+    "A_2k_generation_plus_diagnostics": 124.917878542037,
+    "D_2k_generation_plus_diagnostics": 89.9686062500114,
+    "A_20k_generation_plus_diagnostics": 592.539835748961,
+    "D_20k_generation_plus_diagnostics": 464.264290666964
+  },
+  "limitations": [
+    {"scope": "As 3913 decisoes foram reaplicadas as metricas persistidas; R-hat/ESS/MCSE de todos os alvos locais nao foram recomputados dos raw. Globais e exemplos locais/discretos foram reconferidos diretamente.", "evidence": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/review_jags_results/recompute.R"},
+    {"scope": "Piloto 2k nao reexecutado nem reauditado; usados review_results/review.json e CSVs antigos somente para correspondencia descritiva.", "evidence": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/review_results/review.json"},
+    {"scope": "A e D mudam conjuntamente likelihood e construcao latente; comparacao nao isola uma causa. A preserva os limites F1/F2 e D nao tem identificacao demonstrada.", "evidence": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/contract.json"},
+    {"scope": "Stan e PDF reservados a QA separada; linha Stan em comparison_jags01 e NA/not_available.", "evidence": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/comparison_jags01/timings_diagnostics.csv"}
+  ],
+  "executed": [
+    "env LC_ALL=C LANG=C Rscript --vanilla quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/review_jags_results/recompute.R",
+    "env PYTHONDONTWRITEBYTECODE=1 python3 quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/review_jags_results/check_binding.py"
+  ],
+  "boundary": {"candidate_files_edited": false, "new_MCMC": false, "installs": false, "deletions": false, "Stan_reviewed": false, "PDF_reviewed": false, "production_approved": false, "G3_approved": false, "G10_approved": false}
+}
