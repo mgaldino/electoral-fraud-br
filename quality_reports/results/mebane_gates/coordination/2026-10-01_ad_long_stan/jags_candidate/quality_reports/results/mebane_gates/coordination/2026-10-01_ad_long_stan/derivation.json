@@ -1,0 +1,21 @@
+{
+  "copies": {
+    "run_jags.R": {
+      "source": "R/experimental/mebane_ad/run_jags.R",
+      "source_sha256": "7a92fdc9d234c8652cf6ae764f2dd22d86ef0b0f10ab8b929c8c2b4461dc651d",
+      "destination": "R/experimental/mebane_ad_long/run_jags.R",
+      "sha256": "41b3d046d81d78be8730fb9525428acc43e7d04147ba2596f8574252bf6a7a90",
+      "replacements": ["contract_id only", "2000 -> 20000 only", "self-source snapshot path only"]
+    },
+    "diagnostics.R": {
+      "source": "R/experimental/mebane_ad/diagnostics.R",
+      "source_sha256": "4f30f9ff1772f83b54519e941cd9c6edea24fbe359d5019836223f60b995061c",
+      "destination": "R/experimental/mebane_ad_long/diagnostics.R",
+      "sha256": "273e8fc0b9a35060d7f0c7d08b4d26a883cb0e90b836f67ec2823726b1e8f736",
+      "replacements": ["contract_id only", "2000 -> 20000 only", "self-source snapshot path only"]
+    }
+  },
+  "old_contract_sha256": "d17b7f508a7ce87eec3ca71ed7df67666b528c755e005ec9e1299e5ff9deb509",
+  "new_contract_sha256": "fb4a296c9bf0af25812d7d8dd2ab63340fe10d4e73e806e64b5dba3f7dcf481a",
+  "MCMC": false
+}

@@ -1,0 +1,81 @@
+{
+  "note": "Bounded raw run; independent diagnostics and review pending",
+  "files": [
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/review/timing_repeat/compile_failure/actual_initial_values.rds",
+      "bytes": 704,
+      "sha256": "2879f39af87897208cd20b8449644d17e70fa10865e9b9ff93a3bcb71326f81a"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/review/timing_repeat/compile_failure/actual_jags_data.rds",
+      "bytes": 1907,
+      "sha256": "01f4653485b3075c4b84a08d1e1bdae32b1df851c5f321e594210c2da10713f7"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/review/timing_repeat/compile_failure/consumed_sources/R/experimental/mebane_ad/io.R",
+      "bytes": 2627,
+      "sha256": "913803dc29f9784d756ab9a1834b2a96b8201d754957dbd9f65286674b4abb2d"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/review/timing_repeat/compile_failure/consumed_sources/R/experimental/mebane_ad/prepare_dc2010.R",
+      "bytes": 10287,
+      "sha256": "051f0421448bd349ffdfa9a668ac78ac22bccc09bf4b8ff5718cd80c7e788313"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/review/timing_repeat/compile_failure/consumed_sources/R/experimental/mebane_ad/timing.md",
+      "bytes": 1852,
+      "sha256": "db3f96e88cb28ae54c42f539a377fcf5fe3ec4bd716adf0249e6e8c9044433f8"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/review/timing_repeat/compile_failure/consumed_sources/R/experimental/mebane_ad_long/run_jags.R",
+      "bytes": 8424,
+      "sha256": "41b3d046d81d78be8730fb9525428acc43e7d04147ba2596f8574252bf6a7a90"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/review/timing_repeat/compile_failure/consumed_sources/manifest.json",
+      "bytes": 3860,
+      "sha256": "7f0ae56b0048c3bd57e2887aada509cbc3f4411153cdaf39c41e845b2aae56f5"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/review/timing_repeat/compile_failure/consumed_sources/models/experimental/mebane_ad/d_multinomial.jags",
+      "bytes": 2036,
+      "sha256": "6ddb9624f60b15e196cc27ed9694852c40b6553a684a9962003168da4ecfaf5b"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/review/timing_repeat/compile_failure/consumed_sources/quality_reports/results/mebane_gates/G2/round2/benchmark_contract.json",
+      "bytes": 14203,
+      "sha256": "63b61fb0594d0302a03d999bcff6c62967b6e999f37b4c9a8821f0f8e9ed18d2"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/review/timing_repeat/compile_failure/consumed_sources/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/data/run-20260930T235038Z-pid61600/dc2010_ad_data.rds",
+      "bytes": 2539,
+      "sha256": "b2ef611dabb751f9286acbaae841a23c34948ed0a4b6306364cbe94d9d24903e"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/review/timing_repeat/compile_failure/consumed_sources/quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/contract.json",
+      "bytes": 17442,
+      "sha256": "fb4a296c9bf0af25812d7d8dd2ab63340fe10d4e73e806e64b5dba3f7dcf481a"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/review/timing_repeat/compile_failure/consumed_sources/quality_reports/results/mebane_gates/coordination/authors_replication_discovery/archive/UMeforensics-eforensics_public-3017de5/data/dc2010.rda",
+      "bytes": 2010,
+      "sha256": "0386dcc86155e543382c2725e9eb61ebf365b2e6f96a2b037324dbee80005196"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/review/timing_repeat/compile_failure/events.jsonl",
+      "bytes": 504,
+      "sha256": "f51b567a88b9690c5debc68343ae6d65a309aed73e5f375d191e8c4d3e795637"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/review/timing_repeat/compile_failure/run_result.json",
+      "bytes": 688,
+      "sha256": "b1d3614afcb5cb782b5d3a09476183436baf9967088b7914c0739bf7fca29f79"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/review/timing_repeat/compile_failure/sampling_metadata.json",
+      "bytes": 2777,
+      "sha256": "caa5ec8bb0ca237d6a9b0f677cf5c967223630d76055c5c9bdcf47dce6809d29"
+    }
+  ],
+  "excluded": "This manifest itself; active outer process logs are sealed separately"
+}

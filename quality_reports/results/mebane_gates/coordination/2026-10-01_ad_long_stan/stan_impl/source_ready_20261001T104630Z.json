@@ -1,0 +1,37 @@
+{
+  "executor_id": "01a0f4b5-4434-7b83-91b9-69ced11b40ba",
+  "recorded_utc": "2026-10-01 10:46:30 UTC",
+  "status": "sources_ready_for_first_compile_awaiting_compute_window_release",
+  "checkpoint_not_a_test_run": true,
+  "compilation_started": false,
+  "Stan_tests_executed": false,
+  "empirical_sampling": false,
+  "independent_QA_pass": false,
+  "constraint": "Do not start compilation, log_prob, fixed_param or MCMC until the user releases the window after JAGS generation and diagnostics.",
+  "planned_output_schema": {
+    "draws_array.rds": "2000 by 4 by all variables; post-warmup posterior::draws_array",
+    "sampler_diagnostics.rds": "2000 by 4 by HMC diagnostic variables; post-warmup",
+    "fit.rds": "Lazy CmdStanMCMC handle referencing persistent absolute CSV paths",
+    "csv": "Four serial-chain CSVs, including 2000 warmup and 2000 retained draws",
+    "timing": "timing.json and chain_timing.csv; compilation excluded from generation walltime"
+  },
+  "source_hash_algorithm": "SHA-256",
+  "source_hash_command": "shasum -a 256 <each path in files>",
+  "files": [
+    {"path": "models/experimental/mebane_ad_stan/d_multinomial.stan", "sha256": "b38de93ef22b826233f35898b5d3becfae1fb46df774ead065b8d4133c127c9b"},
+    {"path": "R/experimental/mebane_ad_stan/common.R", "sha256": "434379ec4513852bcf7ba3711942c18f204f29f4200444c7462cb4ec5e87bb5a"},
+    {"path": "R/experimental/mebane_ad_stan/reference.R", "sha256": "6f7e15ddeb0d98d76c103fa98d2aa547da9f50dcc31c6e5cda589319e4ddad5d"},
+    {"path": "R/experimental/mebane_ad_stan/run_stan.R", "sha256": "d52af3a2a9273f776a869188e421d7c7de76d0a32475e66d82e801f66537e119"},
+    {"path": "R/experimental/mebane_ad_stan/prepare_stan.py", "sha256": "14ae0baefafa0211103a6d5559c5031671d254b4f8efc8a17c97667b125234ae"},
+    {"path": "R/experimental/mebane_ad_stan/supervise_stan.py", "sha256": "631e65bb49dc193cd593a14e77738cd88439add6adda9f0ea4bb340ba500f4ef"},
+    {"path": "tests/mebane/ad_stan/test_stan.R", "sha256": "ed008fa256db8d3562668444b20d36e6221e7f70e099349a75fe818782d8e143"},
+    {"path": "tests/mebane/ad_stan/test_supervisor.py", "sha256": "d69b6bbae956c1d5c6f7b3ef1d15ab9cdf0647aa4507e9c23bdd4677e1529983"},
+    {"path": "tests/mebane/ad_stan/run_preflight.R", "sha256": "b755b6d987fb2427f57bc2fb806c2f5b107fba9b8052c00c98bf35ae664e0565"},
+    {"path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_impl/IMPLEMENTATION.md", "sha256": "d53a4ef66dc3a3cf0c72b03b972448882ec973d4a7febba7d685a1ce1cc88aa2"}
+  ],
+  "limitations": [
+    "Source-level inspection only at this checkpoint; no executable evidence yet.",
+    "The complete goal remains active until deterministic compiled validation and reviewable delivery.",
+    "No approval of equivalence, empirical precision, production or G10 is claimed."
+  ]
+}

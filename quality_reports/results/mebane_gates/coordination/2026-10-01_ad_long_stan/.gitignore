@@ -1,0 +1,9 @@
+# Raw draws and compiled artifacts remain local and are bound by SHA-256 manifests.
+stan2k*/csv/*.csv
+stan_impl/**/build/
+stan_impl/**/cmdstan/
+stan_impl/**/rstan_build/
+*.o
+*.so
+*.dylib
+*.hpp

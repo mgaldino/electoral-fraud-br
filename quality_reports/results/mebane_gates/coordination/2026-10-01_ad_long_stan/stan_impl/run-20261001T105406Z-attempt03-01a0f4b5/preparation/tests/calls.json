@@ -1,0 +1,213 @@
+{
+  "executor_id": "01a0f4b5-4434-7b83-91b9-69ced11b40ba",
+  "empirical_sampling": false,
+  "calls": [
+    {
+      "api": "model$expose_functions",
+      "arguments": {
+        "source_sha256": "b38de93ef22b826233f35898b5d3becfae1fb46df774ead065b8d4133c127c9b",
+        "global": false,
+        "verbose": true
+      }
+    },
+    {
+      "api": "compiled_functions_grid",
+      "arguments": {
+        "eta": [
+          [-1.2, 0.8, -0.4, 1.1, 0.3, -0.7],
+          [0, 0, 0, 0, 0, 0],
+          [8, -8, -6, 6, 4, -4],
+          [100, 100, 100, 100, 100, 100],
+          [-100, -100, -100, -100, -100, -100],
+          [-800, 800, -800, 800, -800, 800],
+          [800, -800, 800, -800, 800, -800]
+        ],
+        "classes": [1, 2, 3],
+        "N": [0, 1, 2, 3, 4],
+        "order": ["A", "W", "O"]
+      }
+    },
+    {
+      "api": "model$sample",
+      "arguments": {
+        "data": {
+          "n": 3,
+          "N": [3, 4, 2],
+          "observed": [
+            [1, 2, 0],
+            [0, 1, 3],
+            [1, 0, 1]
+          ]
+        },
+        "init": {
+          "alpha": [-0.3, 0.7, -0.8, 0.6, -1.1, 0.9],
+          "b0": [-0.006, 0.004, 0.001, -0.009, 0.003, 0.002],
+          "v": [0.05, 0.2, 0.4, 0.1, 0.8, 0.3],
+          "z": [
+            [-0.9, -0.6, -0.3, 0, 0.3, 0.6],
+            [-0.8, -0.5, -0.2, 0.1, 0.4, 0.7],
+            [-0.7, -0.4, -0.1, 0.2, 0.5, 0.8]
+          ],
+          "r": [0.17, 0.63]
+        },
+        "fixed_param": true,
+        "seed": 1001267,
+        "chains": 1,
+        "parallel_chains": 1,
+        "iter_warmup": 0,
+        "iter_sampling": 256,
+        "output_dir": "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_impl/run-20261001T105406Z-attempt03-01a0f4b5/preparation/tests/fixed_parameter",
+        "sig_figs": 17
+      }
+    },
+    {
+      "api": "fit$init_model_methods",
+      "arguments": {
+        "data": "synthetic_data.json"
+      }
+    },
+    {
+      "api": "fit$unconstrain_variables",
+      "arguments": {
+        "alpha": [-0.3, 0.7, -0.8, 0.6, -1.1, 0.9],
+        "b0": [-0.006, 0.004, 0.001, -0.009, 0.003, 0.002],
+        "v": [0.05, 0.2, 0.4, 0.1, 0.8, 0.3],
+        "z": [
+          [-0.9, -0.6, -0.3, 0, 0.3, 0.6],
+          [-0.8, -0.5, -0.2, 0.1, 0.4, 0.7],
+          [-0.7, -0.4, -0.1, 0.2, 0.5, 0.8]
+        ],
+        "r": [0.17, 0.63]
+      }
+    },
+    {
+      "api": "fit$log_prob",
+      "arguments": {
+        "case": "asymmetric",
+        "unconstrained_variables": [-0.3, 0.7, -0.8, 0.6, -1.1, 0.9, -0.006, 0.004, 0.001, -0.009, 0.003, 0.002, -2.99573227355399, -1.6094379124341, -0.916290731874155, -2.30258509299405, -0.22314355131421, -1.20397280432594, -0.9, -0.8, -0.7, -0.6, -0.5, -0.4, -0.3, -0.2, -0.1, 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, -1.58562726374038, 0.532216813747308],
+        "jacobian": [false, true]
+      }
+    },
+    {
+      "api": "fit$grad_log_prob",
+      "arguments": {
+        "case": "asymmetric",
+        "jacobian": false,
+        "finite_difference_step": "1e-5 * max(1,abs(u[j]))"
+      }
+    },
+    {
+      "api": "fit$grad_log_prob",
+      "arguments": {
+        "case": "asymmetric",
+        "jacobian": true,
+        "finite_difference_step": "1e-5 * max(1,abs(u[j]))"
+      }
+    },
+    {
+      "api": "fit$log_prob",
+      "arguments": {
+        "case": "reverse_r",
+        "unconstrained_variables": [-0.3, 0.7, -0.8, 0.6, -1.1, 0.9, -0.006, 0.004, 0.001, -0.009, 0.003, 0.002, -2.99573227355399, -1.6094379124341, -0.916290731874155, -2.30258509299405, -0.22314355131421, -1.20397280432594, -0.9, -0.8, -0.7, -0.6, -0.5, -0.4, -0.3, -0.2, -0.1, 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.532216813747308, -1.58562726374038],
+        "jacobian": [false, true]
+      }
+    },
+    {
+      "api": "fit$grad_log_prob",
+      "arguments": {
+        "case": "reverse_r",
+        "jacobian": false,
+        "finite_difference_step": "1e-5 * max(1,abs(u[j]))"
+      }
+    },
+    {
+      "api": "fit$grad_log_prob",
+      "arguments": {
+        "case": "reverse_r",
+        "jacobian": true,
+        "finite_difference_step": "1e-5 * max(1,abs(u[j]))"
+      }
+    },
+    {
+      "api": "fit$log_prob",
+      "arguments": {
+        "case": "small_variance",
+        "unconstrained_variables": [-0.3, 0.7, -0.8, 0.6, -1.1, 0.9, -0.006, 0.004, 0.001, -0.009, 0.003, 0.002, -18.4206807439524, -18.4206807439524, -18.4206807439524, -18.4206807439524, -18.4206807439524, -18.4206807439524, -0.9, -0.8, -0.7, -0.6, -0.5, -0.4, -0.3, -0.2, -0.1, 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, -1.58562726374038, 0.532216813747308],
+        "jacobian": [false, true]
+      }
+    },
+    {
+      "api": "fit$grad_log_prob",
+      "arguments": {
+        "case": "small_variance",
+        "jacobian": false,
+        "finite_difference_step": "1e-5 * max(1,abs(u[j]))"
+      }
+    },
+    {
+      "api": "fit$grad_log_prob",
+      "arguments": {
+        "case": "small_variance",
+        "jacobian": true,
+        "finite_difference_step": "1e-5 * max(1,abs(u[j]))"
+      }
+    },
+    {
+      "api": "fit$log_prob",
+      "arguments": {
+        "case": "rare_classes",
+        "unconstrained_variables": [-0.3, 0.7, -0.8, 0.6, -1.1, 0.9, -0.006, 0.004, 0.001, -0.009, 0.003, 0.002, -2.99573227355399, -1.6094379124341, -0.916290731874155, -2.30258509299405, -0.22314355131421, -1.20397280432594, -0.9, -0.8, -0.7, -0.6, -0.5, -0.4, -0.3, -0.2, -0.1, 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, -23.0258509298405, 23.0258508471001],
+        "jacobian": [false, true]
+      }
+    },
+    {
+      "api": "fit$grad_log_prob",
+      "arguments": {
+        "case": "rare_classes",
+        "jacobian": false,
+        "finite_difference_step": "1e-5 * max(1,abs(u[j]))"
+      }
+    },
+    {
+      "api": "fit$grad_log_prob",
+      "arguments": {
+        "case": "rare_classes",
+        "jacobian": true,
+        "finite_difference_step": "1e-5 * max(1,abs(u[j]))"
+      }
+    },
+    {
+      "api": "fit$log_prob",
+      "arguments": {
+        "case": "large_predictors",
+        "unconstrained_variables": [-80, 80, -80, 80, -80, 80, -0.006, 0.004, 0.001, -0.009, 0.003, 0.002, -2.99573227355399, -1.6094379124341, -0.916290731874155, -2.30258509299405, -0.22314355131421, -1.20397280432594, -0.9, -0.8, -0.7, -0.6, -0.5, -0.4, -0.3, -0.2, -0.1, 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, -1.58562726374038, 0.532216813747308],
+        "jacobian": [false, true]
+      }
+    },
+    {
+      "api": "fit$grad_log_prob",
+      "arguments": {
+        "case": "large_predictors",
+        "jacobian": false,
+        "finite_difference_step": "1e-5 * max(1,abs(u[j]))"
+      }
+    },
+    {
+      "api": "fit$grad_log_prob",
+      "arguments": {
+        "case": "large_predictors",
+        "jacobian": true,
+        "finite_difference_step": "1e-5 * max(1,abs(u[j]))"
+      }
+    },
+    {
+      "api": "fit$draws",
+      "arguments": {
+        "format": "draws_matrix",
+        "retained": 256,
+        "warmup": 0
+      }
+    }
+  ],
+  "standalone_function_compilation_seconds": 8.45390295982361
+}

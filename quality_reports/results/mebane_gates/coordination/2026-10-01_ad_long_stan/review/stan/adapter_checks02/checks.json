@@ -1,0 +1,163 @@
+{
+  "status": "needs_revision",
+  "adapter_manifest_sha256": "3562d593731cec1fe156ee52266a975cd0cbf6d6fe8666c26b15652298bb08b0",
+  "candidate_freeze_received": true,
+  "target_preparation_pending": true,
+  "empirical_MCMC": false,
+  "reviewer_id": "01a0f4b8-962b-77a3-a418-6247c6219e8b",
+  "coordinator_id": "019d795a-acfa-72c2-a210-d55a46c606c2",
+  "date_utc": "2026-10-01 10:55:38 UTC",
+  "checks": [
+    {
+      "name": "ratios_change_of_variables_18_points",
+      "pass": true,
+      "error": {}
+    },
+    {
+      "name": "common_processor_exact_two_substitution_delta",
+      "pass": true,
+      "error": {}
+    },
+    {
+      "name": "prospective_common_thresholds_unchanged",
+      "pass": true,
+      "error": {}
+    },
+    {
+      "name": "all_1451_columns_by_all_four_chains_exact",
+      "pass": true,
+      "error": {}
+    },
+    {
+      "name": "860_exact_internal_names_and_mandatory_rows",
+      "pass": true,
+      "error": {}
+    },
+    {
+      "name": "HMC_energy_formula_independent",
+      "pass": true,
+      "error": {}
+    },
+    {
+      "name": "M_S_same_Z_positive_control",
+      "pass": true,
+      "error": {}
+    },
+    {
+      "name": "M_S_wrong_total_negative_control",
+      "pass": true,
+      "error": {}
+    },
+    {
+      "name": "HMC_rejects_divergence",
+      "pass": true,
+      "error": {}
+    },
+    {
+      "name": "HMC_rejects_treedepth",
+      "pass": true,
+      "error": {}
+    },
+    {
+      "name": "HMC_rejects_constant_energy",
+      "pass": true,
+      "error": {}
+    },
+    {
+      "name": "HMC_rejects_low_EBFMI",
+      "pass": true,
+      "error": {}
+    },
+    {
+      "name": "NCP_rejects_constant",
+      "pass": true,
+      "error": {}
+    },
+    {
+      "name": "NCP_rejects_separated",
+      "pass": true,
+      "error": {}
+    },
+    {
+      "name": "full_process_1742_plus_860_required_targets",
+      "pass": true,
+      "error": {}
+    },
+    {
+      "name": "full_process_joint_order_and_totals",
+      "pass": true,
+      "error": {}
+    },
+    {
+      "name": "full_process_secondary_RB_not_common_targets",
+      "pass": true,
+      "error": {}
+    },
+    {
+      "name": "full_process_decisions_recomputed_all_rows",
+      "pass": true,
+      "error": {}
+    },
+    {
+      "name": "full_process_ESS_denominator_exact_and_explicit",
+      "pass": false,
+      "error": "!anyNA(actual) is not TRUE"
+    },
+    {
+      "name": "all_consumed_live_sources_unchanged_during_check",
+      "pass": true,
+      "error": {}
+    }
+  ],
+  "passed": 19,
+  "failed": 1,
+  "consumed_sources": [
+    {
+      "path": "R/experimental/mebane_ad/io.R",
+      "snapshot": "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/review/stan/adapter_checks02/tree/R/experimental/mebane_ad/io.R",
+      "sha256": "913803dc29f9784d756ab9a1834b2a96b8201d754957dbd9f65286674b4abb2d"
+    },
+    {
+      "path": "R/experimental/mebane_ad/diagnostics.R",
+      "snapshot": "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/review/stan/adapter_checks02/tree/R/experimental/mebane_ad/diagnostics.R",
+      "sha256": "4f30f9ff1772f83b54519e941cd9c6edea24fbe359d5019836223f60b995061c"
+    },
+    {
+      "path": "R/experimental/mebane_ad_long/stan_bridge.R",
+      "snapshot": "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/review/stan/adapter_checks02/tree/R/experimental/mebane_ad_long/stan_bridge.R",
+      "sha256": "aec0a5c70564b2f39fd8504240bb425cd74f2ce587f138b5839f953ff66242cc"
+    },
+    {
+      "path": "R/experimental/mebane_ad_long/postprocess_stan.R",
+      "snapshot": "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/review/stan/adapter_checks02/tree/R/experimental/mebane_ad_long/postprocess_stan.R",
+      "sha256": "2bb6b838f206a0b0de16a9ea86ed5fddc562d137c96a04c9c2484ba27bef80e1"
+    },
+    {
+      "path": "R/experimental/mebane_ad_long/diagnostics_stan.R",
+      "snapshot": "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/review/stan/adapter_checks02/tree/R/experimental/mebane_ad_long/diagnostics_stan.R",
+      "sha256": "a5a19974731ad2f19a13a27afe8b2641e138751e61898dbb35f77bc1b13ac1b9"
+    },
+    {
+      "path": "R/experimental/mebane_ad_long/prepare_stan_diagnostics.R",
+      "snapshot": "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/review/stan/adapter_checks02/tree/R/experimental/mebane_ad_long/prepare_stan_diagnostics.R",
+      "sha256": "07ad322508cae42bfb076ea0735cc8cf1ebf19813accbd8bac959d48c51f678a"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/contract.json",
+      "snapshot": "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/review/stan/adapter_checks02/tree/quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/contract.json",
+      "sha256": "fb4a296c9bf0af25812d7d8dd2ab63340fe10d4e73e806e64b5dba3f7dcf481a"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/contract_stan_diagnostics.json",
+      "snapshot": "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/review/stan/adapter_checks02/tree/quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/contract_stan_diagnostics.json",
+      "sha256": "e33a59939f0d55513fea6ae05a2cc90fac617f3385193ec56e4a2a7a9b6df264"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/data/run-20260930T235038Z-pid61600/dc2010_ad_data.rds",
+      "snapshot": "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/review/stan/adapter_checks02/tree/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/data/run-20260930T235038Z-pid61600/dc2010_ad_data.rds",
+      "sha256": "b2ef611dabb751f9286acbaae841a23c34948ed0a4b6306364cbe94d9d24903e"
+    }
+  ],
+  "R": "R version 4.4.2 (2024-10-31)",
+  "posterior": "1.7.0"
+}

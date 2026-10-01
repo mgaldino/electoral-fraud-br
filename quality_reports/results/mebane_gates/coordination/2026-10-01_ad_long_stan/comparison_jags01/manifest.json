@@ -1,0 +1,136 @@
+{
+  "note": "Descriptive 2k/20k JAGS and exact-D Stan comparison; not proof of convergence or election inference",
+  "files": [
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/comparison_jags01/diagnostic_groups.csv",
+      "bytes": 1604,
+      "sha256": "715d6f28a76366a8585bb562d8f5be82b88976afed04def1cde89838ca9167a8"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/comparison_jags01/global_functionals.csv",
+      "bytes": 37378,
+      "sha256": "8dd9e2d6183d0857466ae01254e40ac5f810dfb7d31823eba3b0db7f137b1d66"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/comparison_jags01/result.json",
+      "bytes": 425,
+      "sha256": "62a2e3659536569cc1949413e6226f669cc6cbc26adb210d5b896043fc140654"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/comparison_jags01/sources/R/experimental/mebane_ad_long/compare_engines.R",
+      "bytes": 7280,
+      "sha256": "c98e7e705220b980d7a65537f5adc25652198c7f5033a22f42a58dd95b130a69"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/comparison_jags01/sources/manifest.json",
+      "bytes": 9815,
+      "sha256": "e5c56f16f432d4414c430ad5f7fe6bf482c145fb307bbdcdb6c0a034075e8da3"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/comparison_jags01/sources/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/A/run_result.json",
+      "bytes": 1308,
+      "sha256": "feddc59c03ccc21b127b4460c2aa342033c08c3958907a80ec0f90d4780be341"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/comparison_jags01/sources/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/A_diagnostics/diagnostic_result.json",
+      "bytes": 695,
+      "sha256": "17527e97910ab252bfbef20332be5eac82ce197444a51a86d46e817b5db6cfaf"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/comparison_jags01/sources/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/A_diagnostics/diagnostics.csv",
+      "bytes": 632065,
+      "sha256": "8e7bc585ee0f3ee1513cc47556bc451ba001a27849f5cde0291380851a62c079"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/comparison_jags01/sources/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/A_diagnostics_supervisor.json",
+      "bytes": 785,
+      "sha256": "18e7e8323221045df0fe585cf290d3bc76fe80df6308dc3230a669ac69265f4d"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/comparison_jags01/sources/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/A_supervisor.json",
+      "bytes": 705,
+      "sha256": "aac26c6b6b5a170c9d6418c0813c7efae9471355846e6efec957f73e66e7cb28"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/comparison_jags01/sources/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/D/run_result.json",
+      "bytes": 1320,
+      "sha256": "d61e701a54404e35c9f23c7cd525b55f2b4772a148ea26b9277cdfb7f7c9db76"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/comparison_jags01/sources/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/D_diagnostics/diagnostic_result.json",
+      "bytes": 690,
+      "sha256": "5d6e90a2d670f516a3ffac344824429793b69a7499904c08b7459f6d9f2b327f"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/comparison_jags01/sources/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/D_diagnostics/diagnostics.csv",
+      "bytes": 543193,
+      "sha256": "2a4b4fec9f5f52652483f1e4c9bcef6706cc5ca025dfdea60aadfe26da9987a6"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/comparison_jags01/sources/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/D_diagnostics_supervisor.json",
+      "bytes": 785,
+      "sha256": "778b6709c3a249b856c4072f53e4e669fdd44fb8538f468d0b3ef52f8ef39591"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/comparison_jags01/sources/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/D_supervisor.json",
+      "bytes": 704,
+      "sha256": "578576823d3a448f16d9adba7cbb93ebe676f86393c8caa50c567ae69f3c7067"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/comparison_jags01/sources/quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/jags20k01/A/run_result.json",
+      "bytes": 1318,
+      "sha256": "0c9fb14bbd2c67bc0e1b8cd110eb6e986eb1bfd3da0bf608c835c18c6eeed0ce"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/comparison_jags01/sources/quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/jags20k01/A_diagnostics/diagnostic_result.json",
+      "bytes": 683,
+      "sha256": "036da728154d5163d1dc022e36977ad25d0b2dbea47f56affc421158184c8574"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/comparison_jags01/sources/quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/jags20k01/A_diagnostics/diagnostics.csv",
+      "bytes": 643165,
+      "sha256": "56ccc0b756ba4eb751aba27acd3e21fae07098da65033a31638755c506a03384"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/comparison_jags01/sources/quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/jags20k01/A_diagnostics_supervisor.json",
+      "bytes": 850,
+      "sha256": "f0154a9e26e461dac586121bfd0c0b49ab1b2334302cc9dbc46c8935630b7086"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/comparison_jags01/sources/quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/jags20k01/A_supervisor.json",
+      "bytes": 745,
+      "sha256": "2c1afda17494c3a0413f47a53d8b4d7546a93314b106d39b75a7a0be0e8910ff"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/comparison_jags01/sources/quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/jags20k01/D/run_result.json",
+      "bytes": 1318,
+      "sha256": "64d50121527c9353ac5b185086e41efb835c8e0f788fd42a767a540b839b9944"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/comparison_jags01/sources/quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/jags20k01/D_diagnostics/diagnostic_result.json",
+      "bytes": 676,
+      "sha256": "4713cfe54f03720794f4c045f89705598f1d6fe66d2e5027edbd2c5717baf0a8"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/comparison_jags01/sources/quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/jags20k01/D_diagnostics/diagnostics.csv",
+      "bytes": 556416,
+      "sha256": "9d95918394560957ccb67463d0f466132fec7807a04b73aa706ab82ed31d1488"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/comparison_jags01/sources/quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/jags20k01/D_diagnostics_supervisor.json",
+      "bytes": 849,
+      "sha256": "a58e2c07ea04ec2b931959e1ee8096757070a4c6cfaea3c591e85d12a5bfd704"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/comparison_jags01/sources/quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/jags20k01/D_supervisor.json",
+      "bytes": 746,
+      "sha256": "0ae89bf361cd9a774024bffd5443528804c6dbe7494913e3f81b53034a61954a"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/comparison_jags01/timings_diagnostics.csv",
+      "bytes": 1487,
+      "sha256": "3812426b5fd86a3c6d9ee799968948f31ff837fdf90eb5a061acc9f729f763fd"
+    }
+  ],
+  "excluded": "This manifest itself; active outer process logs are sealed separately"
+}

@@ -1,0 +1,922 @@
+{
+  "executor_id": "01a0f4b5-4434-7b83-91b9-69ced11b40ba",
+  "checks": [
+    {
+      "name": "frozen_design_4_serial_2000_2000",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "static_prior_variance_and_separate_intercepts",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "prior_auxiliary_change_of_variables",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "prior_simplex_jacobian_and_partial_not_total_order",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "compiled_log_probabilities_eta1_class1",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "smallN_logmass_eta1_class1_N0",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "smallN_logmass_eta1_class1_N1",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "smallN_logmass_eta1_class1_N2",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "smallN_logmass_eta1_class1_N3",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "smallN_logmass_eta1_class1_N4",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "compiled_log_probabilities_eta1_class2",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "smallN_logmass_eta1_class2_N0",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "smallN_logmass_eta1_class2_N1",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "smallN_logmass_eta1_class2_N2",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "smallN_logmass_eta1_class2_N3",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "smallN_logmass_eta1_class2_N4",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "compiled_log_probabilities_eta1_class3",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "smallN_logmass_eta1_class3_N0",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "smallN_logmass_eta1_class3_N1",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "smallN_logmass_eta1_class3_N2",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "smallN_logmass_eta1_class3_N3",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "smallN_logmass_eta1_class3_N4",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "compiled_log_probabilities_eta2_class1",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "smallN_logmass_eta2_class1_N0",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "smallN_logmass_eta2_class1_N1",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "smallN_logmass_eta2_class1_N2",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "smallN_logmass_eta2_class1_N3",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "smallN_logmass_eta2_class1_N4",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "compiled_log_probabilities_eta2_class2",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "smallN_logmass_eta2_class2_N0",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "smallN_logmass_eta2_class2_N1",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "smallN_logmass_eta2_class2_N2",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "smallN_logmass_eta2_class2_N3",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "smallN_logmass_eta2_class2_N4",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "compiled_log_probabilities_eta2_class3",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "smallN_logmass_eta2_class3_N0",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "smallN_logmass_eta2_class3_N1",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "smallN_logmass_eta2_class3_N2",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "smallN_logmass_eta2_class3_N3",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "smallN_logmass_eta2_class3_N4",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "compiled_log_probabilities_eta3_class1",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "smallN_logmass_eta3_class1_N0",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "smallN_logmass_eta3_class1_N1",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "smallN_logmass_eta3_class1_N2",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "smallN_logmass_eta3_class1_N3",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "smallN_logmass_eta3_class1_N4",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "compiled_log_probabilities_eta3_class2",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "smallN_logmass_eta3_class2_N0",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "smallN_logmass_eta3_class2_N1",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "smallN_logmass_eta3_class2_N2",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "smallN_logmass_eta3_class2_N3",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "smallN_logmass_eta3_class2_N4",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "compiled_log_probabilities_eta3_class3",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "smallN_logmass_eta3_class3_N0",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "smallN_logmass_eta3_class3_N1",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "smallN_logmass_eta3_class3_N2",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "smallN_logmass_eta3_class3_N3",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "smallN_logmass_eta3_class3_N4",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "compiled_log_probabilities_eta4_class1",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "smallN_logmass_eta4_class1_N0",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "smallN_logmass_eta4_class1_N1",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "smallN_logmass_eta4_class1_N2",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "smallN_logmass_eta4_class1_N3",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "smallN_logmass_eta4_class1_N4",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "compiled_log_probabilities_eta4_class2",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "smallN_logmass_eta4_class2_N0",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "smallN_logmass_eta4_class2_N1",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "smallN_logmass_eta4_class2_N2",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "smallN_logmass_eta4_class2_N3",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "smallN_logmass_eta4_class2_N4",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "compiled_log_probabilities_eta4_class3",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "smallN_logmass_eta4_class3_N0",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "smallN_logmass_eta4_class3_N1",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "smallN_logmass_eta4_class3_N2",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "smallN_logmass_eta4_class3_N3",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "smallN_logmass_eta4_class3_N4",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "compiled_log_probabilities_eta5_class1",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "smallN_logmass_eta5_class1_N0",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "smallN_logmass_eta5_class1_N1",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "smallN_logmass_eta5_class1_N2",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "smallN_logmass_eta5_class1_N3",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "smallN_logmass_eta5_class1_N4",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "compiled_log_probabilities_eta5_class2",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "smallN_logmass_eta5_class2_N0",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "smallN_logmass_eta5_class2_N1",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "smallN_logmass_eta5_class2_N2",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "smallN_logmass_eta5_class2_N3",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "smallN_logmass_eta5_class2_N4",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "compiled_log_probabilities_eta5_class3",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "smallN_logmass_eta5_class3_N0",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "smallN_logmass_eta5_class3_N1",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "smallN_logmass_eta5_class3_N2",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "smallN_logmass_eta5_class3_N3",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "smallN_logmass_eta5_class3_N4",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "compiled_log_probabilities_eta6_class1",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "smallN_logmass_eta6_class1_N0",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "smallN_logmass_eta6_class1_N1",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "smallN_logmass_eta6_class1_N2",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "smallN_logmass_eta6_class1_N3",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "smallN_logmass_eta6_class1_N4",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "compiled_log_probabilities_eta6_class2",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "smallN_logmass_eta6_class2_N0",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "smallN_logmass_eta6_class2_N1",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "smallN_logmass_eta6_class2_N2",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "smallN_logmass_eta6_class2_N3",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "smallN_logmass_eta6_class2_N4",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "compiled_log_probabilities_eta6_class3",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "smallN_logmass_eta6_class3_N0",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "smallN_logmass_eta6_class3_N1",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "smallN_logmass_eta6_class3_N2",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "smallN_logmass_eta6_class3_N3",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "smallN_logmass_eta6_class3_N4",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "compiled_log_probabilities_eta7_class1",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "smallN_logmass_eta7_class1_N0",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "smallN_logmass_eta7_class1_N1",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "smallN_logmass_eta7_class1_N2",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "smallN_logmass_eta7_class1_N3",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "smallN_logmass_eta7_class1_N4",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "compiled_log_probabilities_eta7_class2",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "smallN_logmass_eta7_class2_N0",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "smallN_logmass_eta7_class2_N1",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "smallN_logmass_eta7_class2_N2",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "smallN_logmass_eta7_class2_N3",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "smallN_logmass_eta7_class2_N4",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "compiled_log_probabilities_eta7_class3",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "smallN_logmass_eta7_class3_N0",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "smallN_logmass_eta7_class3_N1",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "smallN_logmass_eta7_class3_N2",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "smallN_logmass_eta7_class3_N3",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "smallN_logmass_eta7_class3_N4",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "exact_probability_boundary_1_0_0",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "exact_probability_boundary_0_1_0",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "exact_probability_boundary_0_0_1",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "exact_probability_boundary_0.2_0_0.8",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "invalid_class_rejected",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "unconstrained_parameter_order",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "compiled_constrain_roundtrip",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "compiled_lp_no_jacobian_asymmetric",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "compiled_lp_with_constraint_jacobian_asymmetric",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "NCP_centered_density_change_of_variables_asymmetric",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "finite_gradients_R_finite_difference_asymmetric_jacFALSE",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "finite_gradients_R_finite_difference_asymmetric_jacTRUE",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "compiled_lp_no_jacobian_reverse_r",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "compiled_lp_with_constraint_jacobian_reverse_r",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "NCP_centered_density_change_of_variables_reverse_r",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "finite_gradients_R_finite_difference_reverse_r_jacFALSE",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "finite_gradients_R_finite_difference_reverse_r_jacTRUE",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "compiled_lp_no_jacobian_small_variance",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "compiled_lp_with_constraint_jacobian_small_variance",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "NCP_centered_density_change_of_variables_small_variance",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "finite_gradients_R_finite_difference_small_variance_jacFALSE",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "finite_gradients_R_finite_difference_small_variance_jacTRUE",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "compiled_lp_no_jacobian_rare_classes",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "compiled_lp_with_constraint_jacobian_rare_classes",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "NCP_centered_density_change_of_variables_rare_classes",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "finite_gradients_R_finite_difference_rare_classes_jacFALSE",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "finite_gradients_R_finite_difference_rare_classes_jacTRUE",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "compiled_lp_no_jacobian_large_predictors",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "compiled_lp_with_constraint_jacobian_large_predictors",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "NCP_centered_density_change_of_variables_large_predictors",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "finite_gradients_R_finite_difference_large_predictors_jacFALSE",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "finite_gradients_R_finite_difference_large_predictors_jacTRUE",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "class_mixture_is_not_multinomial_at_mean_probability",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "fixed_parameters_not_updated",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "GQ_responsibilities_and_log_lik_row1",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "GQ_mu_mapping_row1",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "GQ_same_Z_active_and_RB_row1",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "GQ_responsibilities_and_log_lik_row2",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "GQ_mu_mapping_row2",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "GQ_same_Z_active_and_RB_row2",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "GQ_responsibilities_and_log_lik_row3",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "GQ_mu_mapping_row3",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "GQ_same_Z_active_and_RB_row3",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "GQ_joint_draw_totals",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "generated_Z_has_nonconstant_synthetic_reconstruction",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "lazy_fit_RDS_CSV_roundtrip",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "name_map_has_required_complete_unambiguous_names",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "serial_initialization_matches_LONG",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "QA_rejects_pending",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "QA_rejects_self_review",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "QA_rejects_wrong_hash",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "existing_output_refused",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "all_frozen_sources_unchanged",
+      "pass": true,
+      "error": null
+    }
+  ],
+  "passed": 183,
+  "failed": 0
+}

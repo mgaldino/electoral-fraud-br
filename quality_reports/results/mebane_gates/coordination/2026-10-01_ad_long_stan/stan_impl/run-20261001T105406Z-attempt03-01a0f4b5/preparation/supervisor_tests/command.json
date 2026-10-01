@@ -1,0 +1,4 @@
+{
+  "executor_id": "01a0f4b5-4434-7b83-91b9-69ced11b40ba",
+  "command": ["/opt/homebrew/bin/python3", "-B", "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_impl/run-20261001T105406Z-attempt03-01a0f4b5/preparation/sources/tests/mebane/ad_stan/test_supervisor.py", "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_impl/run-20261001T105406Z-attempt03-01a0f4b5/preparation/sources/R/experimental/mebane_ad_stan/supervise_stan.py", "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_impl/run-20261001T105406Z-attempt03-01a0f4b5/preparation/supervisor_tests"]
+}

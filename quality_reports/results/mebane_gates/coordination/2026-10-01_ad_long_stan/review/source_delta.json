@@ -1,0 +1,132 @@
+{
+  "candidate_manifest_sha256": "61ad865465a2696bf5986d2253defbf6fe64c09aaa2d7f290c8ce64f15692066",
+  "contract_sha256": "fb4a296c9bf0af25812d7d8dd2ab63340fe10d4e73e806e64b5dba3f7dcf481a",
+  "frozen_entries": 21,
+  "reused_unchanged_paths": [
+    "R/experimental/mebane_ad/run_pair.py",
+    "R/experimental/mebane_ad/io.R",
+    "R/experimental/mebane_ad/prepare_dc2010.R",
+    "R/experimental/mebane_ad/timing.md",
+    "models/experimental/mebane_ad/d_multinomial.jags",
+    "quality_reports/results/mebane_gates/G0/round1/qbl_installed_3017de5.jags",
+    "quality_reports/results/mebane_gates/G2/round2/benchmark_contract.json",
+    "quality_reports/results/mebane_gates/coordination/authors_replication_discovery/archive/UMeforensics-eforensics_public-3017de5/data/dc2010.rda",
+    "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/data/run-20260930T235038Z-pid61600/dc2010_ad_data.rds"
+  ],
+  "contract_delta": [
+    {
+      "path": "/authorization_quote",
+      "before": "Isso, vamos preservar A e estudar D. IDealmente aplicando no mesmo caso e ver como se comparam.",
+      "after": "Em JAGS, as cadeias precisam ser bem grandes. Em Stan 2k pode ser efetivo, mas Jags precisa ser algo como 20k. Rode com 20k. Em paralelo, veja se d<c3><a1> para adaptar pra Stan e como fica rodando 2k cadeias."
+    },
+    {
+      "path": "/checkpoints",
+      "before": [
+        "Independent contract review and adjudication before target implementation or MCMC; v1 math accepted, v2 closes prospective diagnostic decision rule before pilot",
+        "Independent executable/preflight review and adjudication before real-case MCMC",
+        "Independent result review before claims in the user-facing report"
+      ],
+      "after": [
+        "Independent delta review of JAGS copies and new protocol before JAGS sampling",
+        "Independent D/Stan target and executable review before Stan sampling",
+        "Independent quantitative result review before final comparative claims"
+      ]
+    },
+    {
+      "path": "/comparison/new_round",
+      "before": null,
+      "after": {
+        "historical": "Compare old2k vs new20k descriptively; fresh run with same starting seeds/inits is not an independent replication and no prefix equivalence is presumed",
+        "D_engine": "Same target not asserted by mean agreement: independent density/Jacobian/likelihood checks required first",
+        "MCSE": "For the 23 common globals report difference and sqrt(MCSE_JAGS^2+MCSE_Stan^2), plus absolute standardized difference; no equivalence claim unless both relevant precision checks pass. No posthoc tolerance or new posterior acceptance test.",
+        "group_status": "Report global continuous, local, discrete and sampler groups separately as diagnostics; all-target verdict still requires all mandatory targets. No waiver for rare classes or added GQ randomness."
+      }
+    },
+    {
+      "path": "/contract_id",
+      "before": "AD-DC2010-v2",
+      "after": "AD-DC2010-LONG-v1"
+    },
+    {
+      "path": "/date",
+      "before": "2026-09-30",
+      "after": "2026-10-01"
+    },
+    {
+      "path": "/paired_design/max_elapsed_seconds_per_model",
+      "before": 1200,
+      "after": 3600
+    },
+    {
+      "path": "/paired_design/max_postprocess_seconds_per_model",
+      "before": null,
+      "after": 3600
+    },
+    {
+      "path": "/paired_design/post_iterations",
+      "before": 2000,
+      "after": 20000
+    },
+    {
+      "path": "/paired_design/timing",
+      "before": "separate setup/compile/adaptation/burn/sampling/postprocessing and total elapsed; concurrent-model timings prohibited; seconds alone are not effective precision",
+      "after": "One four-chain rjags object; A then D and diagnostics sequential; avoid compilation/other sampling during measured processes. Record overlap if accidental; no automatic resampling."
+    },
+    {
+      "path": "/purpose",
+      "before": "Paired exploratory model comparison on one author-packaged empirical case, not inference or numeric reproduction of published estimates",
+      "after": "New authorized A/D JAGS20k experiment and same-target D Stan2k comparison; old pilot and its verdict preserved"
+    },
+    {
+      "path": "/stan_design",
+      "before": null,
+      "after": {
+        "model": "D only, exact marginal target",
+        "chains": 4,
+        "warmup_iterations": 2000,
+        "post_iterations": 2000,
+        "parallel_chains": 1,
+        "thin": 1,
+        "seed": 1001261,
+        "chain_ids": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "adapt_delta": 0.99,
+        "max_treedepth": 12,
+        "max_elapsed_seconds": 3600,
+        "save_warmup": true,
+        "parametrization": "Noncentered h=alpha+sqrt(v)*z; z~N(0,1); v~Exp(5) on VARIANCE; b0 and alpha kept separate",
+        "pi": "r2,r3 iid Uniform(0,1); pi=(1,r2,r3)/(1+r2+r3). Integrate nuisance u1 exactly; Jacobian u1^2 cancels conditional-uniform density 1/u1^2",
+        "likelihood": "Sum all 3 class-weighted multinomial masses by log_sum_exp per precinct; no clamp or approximate A substitution",
+        "output": "Conditional class probabilities and categorical Z reconstruction per draw; joint M/S and active pA/pW/pO from the SAME Z, plus Rao-Blackwell summaries separately",
+        "initialization": "Map the previous four initial values: alpha/b0/v identical, z=0, r2=.25,r3=.125; no claim seeds match JAGS RNG",
+        "runtime_diagnostics": {
+          "divergences_max": 0,
+          "treedepth_hits_max": 0,
+          "ebfmi_min": 0.3,
+          "internal_NCP_parameters": "All z and r parameters require rank Rhat<1.01, bulk/tail ESS>=400. Common augmented targets retain prior thresholds; NAs never pass."
+        },
+        "installation_allowed": false,
+        "automatic_retry": false
+      }
+    },
+    {
+      "path": "/supersedes/path",
+      "before": "contract_v1.json",
+      "after": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/contract_v2.json"
+    },
+    {
+      "path": "/supersedes/reason",
+      "before": "Prospective closure of AD-CONTRACT-QA-01 before any empirical MCMC",
+      "after": "New explicit user authorization; prior pilot remains immutable, not retrospectively extended or reclassified"
+    },
+    {
+      "path": "/supersedes/sha256",
+      "before": "8f0783b5f3520958a2b1a6d6de5bb217e2ea4ac8656a6ac114024b9d6a95dc17",
+      "after": "d17b7f508a7ce87eec3ca71ed7df67666b528c755e005ec9e1299e5ff9deb509"
+    }
+  ]
+}

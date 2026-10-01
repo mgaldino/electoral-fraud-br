@@ -1,0 +1,79 @@
+{
+  "records": [
+    {
+      "command": [
+        "Rscript",
+        "--vanilla",
+        "R/experimental/mebane_ad_long/run_jags.R",
+        "A",
+        "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/contract.json",
+        "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/data/run-20260930T235038Z-pid61600/dc2010_ad_data.rds",
+        "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/jags20k01/A"
+      ],
+      "returncode": 0,
+      "timed_out": false,
+      "elapsed_seconds": 385.836650540994,
+      "log": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/jags20k01/A_sampling.log",
+      "log_sha256": "99d88ec9a963aa5a245a9ff8f5e9b14662d36e12ef3a9cb021141439506c04ea",
+      "model": "A",
+      "kind": "generation"
+    },
+    {
+      "command": [
+        "Rscript",
+        "--vanilla",
+        "R/experimental/mebane_ad_long/run_jags.R",
+        "D",
+        "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/contract.json",
+        "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/data/run-20260930T235038Z-pid61600/dc2010_ad_data.rds",
+        "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/jags20k01/D"
+      ],
+      "returncode": 0,
+      "timed_out": false,
+      "elapsed_seconds": 261.6517533749575,
+      "log": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/jags20k01/D_sampling.log",
+      "log_sha256": "a203dcfee97072e3c8496badaf150128307584f798433e8ad6de49768a100ee3",
+      "model": "D",
+      "kind": "generation"
+    },
+    {
+      "command": [
+        "Rscript",
+        "--vanilla",
+        "R/experimental/mebane_ad_long/diagnostics.R",
+        "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/jags20k01/A",
+        "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/data/run-20260930T235038Z-pid61600/dc2010_ad_data.rds",
+        "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/contract.json",
+        "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/jags20k01/A_diagnostics"
+      ],
+      "returncode": 0,
+      "timed_out": false,
+      "elapsed_seconds": 206.70318520796718,
+      "log": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/jags20k01/A_diagnostics.log",
+      "log_sha256": "0d228126bfaf4272e400ec4b4e3ed4401d7c64cec138f13d6c4d4da7008ee658",
+      "model": "A",
+      "kind": "diagnostics"
+    },
+    {
+      "command": [
+        "Rscript",
+        "--vanilla",
+        "R/experimental/mebane_ad_long/diagnostics.R",
+        "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/jags20k01/D",
+        "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/data/run-20260930T235038Z-pid61600/dc2010_ad_data.rds",
+        "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/contract.json",
+        "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/jags20k01/D_diagnostics"
+      ],
+      "returncode": 0,
+      "timed_out": false,
+      "elapsed_seconds": 202.6125372920069,
+      "log": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/jags20k01/D_diagnostics.log",
+      "log_sha256": "1d7f8466455703b1e5dde217a3c151afb3941878fee72ee866dd7b899afe820a",
+      "model": "D",
+      "kind": "diagnostics"
+    }
+  ],
+  "retries": 0,
+  "release_sha256": "42b042b123d6a3334979d0e731bdb31e20593efc00a44dab436d5b6c91acfcf7",
+  "production_approved": false
+}

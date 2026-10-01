@@ -1,0 +1,19 @@
+{
+  "command": [
+    "Rscript",
+    "--vanilla",
+    "R/experimental/mebane_ad_long/run_jags.R",
+    "A",
+    "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/contract.json",
+    "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/data/run-20260930T235038Z-pid61600/dc2010_ad_data.rds",
+    "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/review/fake_orchestration/timeout/A"
+  ],
+  "returncode": 2,
+  "timed_out": true,
+  "elapsed_seconds": 0,
+  "log": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/review/fake_orchestration/timeout/A_sampling.log",
+  "fixture_only": true,
+  "log_sha256": "d690222e1be5b28f7c308a000b8734126e97ff250dbff63fbfa7d0307e8a5b27",
+  "model": "A",
+  "kind": "generation"
+}

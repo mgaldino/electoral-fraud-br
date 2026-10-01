@@ -1,0 +1,12 @@
+{
+  "status": "accepted_scoped_preflight",
+  "review_sha256": "de10bfa08ff0b7221f5c04e0ceb1ca0dbf849877475a0756f68b4b6270c53fe3",
+  "candidate_manifest_sha256": "61ad865465a2696bf5986d2253defbf6fe64c09aaa2d7f290c8ce64f15692066",
+  "findings_received": 0,
+  "blocking_findings": 0,
+  "decision": "One new A/D JAGS round, 20k retained per chain, authorized by the user",
+  "evidence": "Source delta, frozen hash inventory, prospective settings and independently repeated fixture evidence inspected",
+  "runtime_and_precision_not_yet_observed": true,
+  "Stan_approved": false,
+  "production_approved": false
+}

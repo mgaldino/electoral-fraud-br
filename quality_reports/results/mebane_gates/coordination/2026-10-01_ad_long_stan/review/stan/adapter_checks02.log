@@ -1,0 +1,61 @@
+PASS ratios_change_of_variables_18_points  
+PASS common_processor_exact_two_substitution_delta  
+PASS prospective_common_thresholds_unchanged  
+PASS all_1451_columns_by_all_four_chains_exact  
+PASS 860_exact_internal_names_and_mandatory_rows  
+PASS HMC_energy_formula_independent  
+PASS M_S_same_Z_positive_control  
+PASS M_S_wrong_total_negative_control  
+PASS HMC_rejects_divergence  
+PASS HMC_rejects_treedepth  
+PASS HMC_rejects_constant_energy  
+PASS HMC_rejects_low_EBFMI  
+PASS NCP_rejects_constant  
+PASS NCP_rejects_separated  
+$model
+[1] "D"
+
+$status
+[1] "computationally_inconclusive"
+
+$paired_verdict
+[1] "not_assigned_by_per_model_processor"
+
+$mandatory_targets
+[1] 1742
+
+$failed_targets
+[1] 429
+
+$undefined_required_targets
+[1] 429
+
+$primary_global_failed
+character(0)
+
+$elapsed_seconds
+[1] 23.01699
+
+$raw_sha256
+[1] "0a1b0c1aaae375d3493dafd6adb012697fa7515835f5e0847cc7ba645bc01a28"
+
+$contract_sha256
+[1] "e33a59939f0d55513fea6ae05a2cc90fac617f3385193ec56e4a2a7a9b6df264"
+
+$shape
+iterations     chains 
+      2000          4 
+
+$production_approved
+[1] FALSE
+
+$G10_approved
+[1] FALSE
+
+PASS full_process_1742_plus_860_required_targets  
+PASS full_process_joint_order_and_totals  
+PASS full_process_secondary_RB_not_common_targets  
+PASS full_process_decisions_recomputed_all_rows  
+FAIL full_process_ESS_denominator_exact_and_explicit !anyNA(actual) is not TRUE 
+PASS all_consumed_live_sources_unchanged_during_check  
+Finished synthetic adapter checks; no sampler or compiled Stan method invoked.

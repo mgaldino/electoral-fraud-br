@@ -1,0 +1,5 @@
+{
+  "status": "pass",
+  "checks": ["all_chains_shape", "local_column_mapping", "global_column_mapping", "probability_column_mapping", "MCMC_iteration_metadata", "wrong_shape_rejected", "joint_GQ_reconstruction", "wrong_joint_GQ_rejected", "HMC_NCP_valid_fixture", "divergence_rejected", "treedepth_rejected", "undefined_EBFMI_rejected", "NCP_chain_disagreement_rejected"],
+  "empirical_sampling": false
+}

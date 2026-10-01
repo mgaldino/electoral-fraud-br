@@ -1,0 +1,23 @@
+--- R/experimental/mebane_ad/run_jags.R
++++ R/experimental/mebane_ad_long/run_jags.R
+@@ -100,9 +100,9 @@
+   result <- tryCatch(withCallingHandlers({
+     timed("setup", {
+       contract <- jsonlite::read_json(contract_path, simplifyVector = TRUE)
+-      stopifnot(contract$contract_id == "AD-DC2010-v2", model %in% c("A", "D"),
++      stopifnot(contract$contract_id == "AD-DC2010-LONG-v1", model %in% c("A", "D"),
+                 contract$paired_design$chains == 4L,
+-                contract$paired_design$post_iterations == 2000L)
++                contract$paired_design$post_iterations == 20000L)
+       payload <- readRDS(data_path)
+       ad_check_payload(payload, contract)
+       engine <- ad_jags_engine()
+@@ -112,7 +112,7 @@
+       files <- c(contract_path, data_path, contract$case$source,
+                  contract$A$specification_contract, model_path,
+                  "R/experimental/mebane_ad/io.R", "R/experimental/mebane_ad/prepare_dc2010.R",
+-                 "R/experimental/mebane_ad/run_jags.R", "R/experimental/mebane_ad/timing.md")
++                 "R/experimental/mebane_ad_long/run_jags.R", "R/experimental/mebane_ad/timing.md")
+       ad_snapshot(files, file.path(out, "consumed_sources"))
+       dat <- ad_model_data(model, payload)
+       inits <- ad_initial_values(model, payload, contract)

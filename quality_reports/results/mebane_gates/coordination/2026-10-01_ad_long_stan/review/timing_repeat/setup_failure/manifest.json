@@ -1,0 +1,16 @@
+{
+  "note": "Bounded raw run; independent diagnostics and review pending",
+  "files": [
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/review/timing_repeat/setup_failure/events.jsonl",
+      "bytes": 606,
+      "sha256": "e40627b253a3205a1eb65452a41cb671e38605bd961dd1ad7ab1820d9641eebf"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/review/timing_repeat/setup_failure/run_result.json",
+      "bytes": 834,
+      "sha256": "50258e151249dd102f1cfa6d42eda7972bd38343c655ac61d4d7376dff0ef02a"
+    }
+  ],
+  "excluded": "This manifest itself; active outer process logs are sealed separately"
+}

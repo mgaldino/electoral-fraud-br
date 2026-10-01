@@ -1,0 +1,157 @@
+[
+  {
+    "scenario": "success",
+    "calls": [
+      {
+        "kind": "generation",
+        "model": "A",
+        "command": [
+          "Rscript",
+          "--vanilla",
+          "R/experimental/mebane_ad_long/run_jags.R",
+          "A",
+          "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/contract.json",
+          "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/data/run-20260930T235038Z-pid61600/dc2010_ad_data.rds",
+          "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/review/fake_orchestration/success/A"
+        ],
+        "timeout": 3600
+      },
+      {
+        "kind": "generation",
+        "model": "D",
+        "command": [
+          "Rscript",
+          "--vanilla",
+          "R/experimental/mebane_ad_long/run_jags.R",
+          "D",
+          "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/contract.json",
+          "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/data/run-20260930T235038Z-pid61600/dc2010_ad_data.rds",
+          "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/review/fake_orchestration/success/D"
+        ],
+        "timeout": 3600
+      },
+      {
+        "kind": "diagnostics",
+        "model": "A",
+        "command": [
+          "Rscript",
+          "--vanilla",
+          "R/experimental/mebane_ad_long/diagnostics.R",
+          "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/review/fake_orchestration/success/A",
+          "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/data/run-20260930T235038Z-pid61600/dc2010_ad_data.rds",
+          "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/contract.json",
+          "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/review/fake_orchestration/success/A_diagnostics"
+        ],
+        "timeout": 3600
+      },
+      {
+        "kind": "diagnostics",
+        "model": "D",
+        "command": [
+          "Rscript",
+          "--vanilla",
+          "R/experimental/mebane_ad_long/diagnostics.R",
+          "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/review/fake_orchestration/success/D",
+          "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/data/run-20260930T235038Z-pid61600/dc2010_ad_data.rds",
+          "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/contract.json",
+          "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/review/fake_orchestration/success/D_diagnostics"
+        ],
+        "timeout": 3600
+      }
+    ]
+  },
+  {
+    "scenario": "failure",
+    "calls": [
+      {
+        "kind": "generation",
+        "model": "A",
+        "command": [
+          "Rscript",
+          "--vanilla",
+          "R/experimental/mebane_ad_long/run_jags.R",
+          "A",
+          "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/contract.json",
+          "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/data/run-20260930T235038Z-pid61600/dc2010_ad_data.rds",
+          "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/review/fake_orchestration/failure/A"
+        ],
+        "timeout": 3600
+      },
+      {
+        "kind": "generation",
+        "model": "D",
+        "command": [
+          "Rscript",
+          "--vanilla",
+          "R/experimental/mebane_ad_long/run_jags.R",
+          "D",
+          "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/contract.json",
+          "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/data/run-20260930T235038Z-pid61600/dc2010_ad_data.rds",
+          "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/review/fake_orchestration/failure/D"
+        ],
+        "timeout": 3600
+      },
+      {
+        "kind": "diagnostics",
+        "model": "D",
+        "command": [
+          "Rscript",
+          "--vanilla",
+          "R/experimental/mebane_ad_long/diagnostics.R",
+          "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/review/fake_orchestration/failure/D",
+          "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/data/run-20260930T235038Z-pid61600/dc2010_ad_data.rds",
+          "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/contract.json",
+          "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/review/fake_orchestration/failure/D_diagnostics"
+        ],
+        "timeout": 3600
+      }
+    ]
+  },
+  {
+    "scenario": "timeout",
+    "calls": [
+      {
+        "kind": "generation",
+        "model": "A",
+        "command": [
+          "Rscript",
+          "--vanilla",
+          "R/experimental/mebane_ad_long/run_jags.R",
+          "A",
+          "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/contract.json",
+          "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/data/run-20260930T235038Z-pid61600/dc2010_ad_data.rds",
+          "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/review/fake_orchestration/timeout/A"
+        ],
+        "timeout": 3600
+      },
+      {
+        "kind": "generation",
+        "model": "D",
+        "command": [
+          "Rscript",
+          "--vanilla",
+          "R/experimental/mebane_ad_long/run_jags.R",
+          "D",
+          "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/contract.json",
+          "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/data/run-20260930T235038Z-pid61600/dc2010_ad_data.rds",
+          "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/review/fake_orchestration/timeout/D"
+        ],
+        "timeout": 3600
+      },
+      {
+        "kind": "diagnostics",
+        "model": "D",
+        "command": [
+          "Rscript",
+          "--vanilla",
+          "R/experimental/mebane_ad_long/diagnostics.R",
+          "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/review/fake_orchestration/timeout/D",
+          "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/data/run-20260930T235038Z-pid61600/dc2010_ad_data.rds",
+          "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/contract.json",
+          "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/review/fake_orchestration/timeout/D_diagnostics"
+        ],
+        "timeout": 3600
+      }
+    ]
+  }
+]

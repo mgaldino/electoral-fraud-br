@@ -1,0 +1,15 @@
+{
+  "model": "D",
+  "status": "computationally_inconclusive",
+  "paired_verdict": "not_assigned_by_per_model_processor",
+  "mandatory_targets": 1742,
+  "failed_targets": 429,
+  "undefined_required_targets": 429,
+  "primary_global_failed": [],
+  "elapsed_seconds": 23.0169911384583,
+  "raw_sha256": "0a1b0c1aaae375d3493dafd6adb012697fa7515835f5e0847cc7ba645bc01a28",
+  "contract_sha256": "e33a59939f0d55513fea6ae05a2cc90fac617f3385193ec56e4a2a7a9b6df264",
+  "shape": [2000, 4],
+  "production_approved": false,
+  "G10_approved": false
+}

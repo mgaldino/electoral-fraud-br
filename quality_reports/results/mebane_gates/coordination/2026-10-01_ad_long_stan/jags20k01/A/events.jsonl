@@ -1,0 +1,13 @@
+{"utc":"2026-10-01 10:31:02 UTC","model":"A","stage":"setup","type":"start","value":"setup"} 
+{"utc":"2026-10-01 10:31:03 UTC","model":"A","stage":"setup","type":"complete","value":0.742} 
+{"utc":"2026-10-01 10:31:03 UTC","model":"A","stage":"compile","type":"start","value":"compile"} 
+{"utc":"2026-10-01 10:31:03 UTC","model":"A","stage":"compile","type":"complete","value":0.219} 
+{"utc":"2026-10-01 10:31:03 UTC","model":"A","stage":"adapt","type":"start","value":"adapt"} 
+{"utc":"2026-10-01 10:31:15 UTC","model":"A","stage":"adapt","type":"complete","value":12.007} 
+{"utc":"2026-10-01 10:31:15 UTC","model":"A","stage":"adapt","type":"adaptation_adequate","value":true} 
+{"utc":"2026-10-01 10:31:15 UTC","model":"A","stage":"burn","type":"start","value":"burn"} 
+{"utc":"2026-10-01 10:32:14 UTC","model":"A","stage":"burn","type":"complete","value":58.853} 
+{"utc":"2026-10-01 10:32:14 UTC","model":"A","stage":"sample","type":"start","value":"sample"} 
+{"utc":"2026-10-01 10:36:18 UTC","model":"A","stage":"sample","type":"complete","value":243.865} 
+{"utc":"2026-10-01 10:36:18 UTC","model":"A","stage":"persist_raw","type":"start","value":"persist_raw"} 
+{"utc":"2026-10-01 10:37:21 UTC","model":"A","stage":"persist_raw","type":"complete","value":63.028} 

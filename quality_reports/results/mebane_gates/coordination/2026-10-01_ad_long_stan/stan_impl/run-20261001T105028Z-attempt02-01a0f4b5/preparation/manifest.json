@@ -1,0 +1,153 @@
+{
+  "executor_id": "01a0f4b5-4434-7b83-91b9-69ced11b40ba",
+  "status": "prepared_awaiting_independent_QA",
+  "created_utc": "2026-10-01 10:51:38 UTC",
+  "repository_root": "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud",
+  "executable": "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_impl/run-20261001T105028Z-attempt02-01a0f4b5/preparation/build/d_multinomial",
+  "compile_seconds": 62.8041050434113,
+  "runtime": {
+    "R": "R version 4.4.2 (2024-10-31)",
+    "platform": "aarch64-apple-darwin20",
+    "cmdstan_version": "2.37.0",
+    "cmdstan_path": "/Users/manoelgaldino/.cmdstan/cmdstan-2.37.0",
+    "packages": {
+      "cmdstanr": "0.9.0",
+      "posterior": "1.7.0",
+      "jsonlite": "2.0.0",
+      "digest": "0.6.39",
+      "processx": "3.8.7",
+      "rstan": "2.32.7"
+    },
+    "library_paths": ["/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/renv/library/macos/R-4.4/aarch64-apple-darwin20", "/Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/library"]
+  },
+  "deterministic_methods_compiled": true,
+  "contract_sha256": "fb4a296c9bf0af25812d7d8dd2ab63340fe10d4e73e806e64b5dba3f7dcf481a",
+  "files": [
+    {
+      "path": "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_impl/run-20261001T105028Z-attempt02-01a0f4b5/preparation/settings.json",
+      "sha256": "5b991adc04ada687a4f0f6dfb320484502eb5445bdef3b161e1e8a5b03ac8b74",
+      "bytes": 1342
+    },
+    {
+      "path": "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_impl/run-20261001T105028Z-attempt02-01a0f4b5/preparation/data.json",
+      "sha256": "fc81007f039963ed14fddf37a0727edabce20d8d7afa7d642fb581c2477b6a56",
+      "bytes": 4000
+    },
+    {
+      "path": "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_impl/run-20261001T105028Z-attempt02-01a0f4b5/preparation/name_map.csv",
+      "sha256": "dd274b6b4a5eb304f62786bdac1da6a32f996c6582076a983ab06914b695e758",
+      "bytes": 33432
+    },
+    {
+      "path": "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_impl/run-20261001T105028Z-attempt02-01a0f4b5/preparation/compile.log",
+      "sha256": "7356905562cea2df7856141eb3b7fdaf014857d115876edeea093bf9afe13f55",
+      "bytes": 13482
+    },
+    {
+      "path": "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_impl/run-20261001T105028Z-attempt02-01a0f4b5/preparation/init_chain1.json",
+      "sha256": "f12e0bcd60e5f13162ab39133bd07467f1c55b7182cab53281ae61648f984218",
+      "bytes": 3603
+    },
+    {
+      "path": "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_impl/run-20261001T105028Z-attempt02-01a0f4b5/preparation/init_chain2.json",
+      "sha256": "c21291c51e934b832674f367164acced3d892dab79e3472e074d69a6eb493055",
+      "bytes": 3600
+    },
+    {
+      "path": "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_impl/run-20261001T105028Z-attempt02-01a0f4b5/preparation/init_chain3.json",
+      "sha256": "6fb11a24d4090e8d133e8a5758c592edf680a1ea4073f1f25b9efb67c3dd3903",
+      "bytes": 3601
+    },
+    {
+      "path": "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_impl/run-20261001T105028Z-attempt02-01a0f4b5/preparation/init_chain4.json",
+      "sha256": "52afb65042a4695e188717e09175587522c65b25dfa5162fd76981b06b4ba4f8",
+      "bytes": 3613
+    },
+    {
+      "path": "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_impl/run-20261001T105028Z-attempt02-01a0f4b5/preparation/build/d_multinomial",
+      "sha256": "0b3b778522a8696dc7eb9d3f77249489f54cb151a5bc492f15ead80525a8f752",
+      "bytes": 2961008
+    },
+    {
+      "path": "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_impl/run-20261001T105028Z-attempt02-01a0f4b5/preparation/sources/sources_manifest.json",
+      "sha256": "4c5fd8a8eecd43871e51c0e15ac17375fde25a8070f4207efa3ffc87b321a2ac",
+      "bytes": 3004
+    },
+    {
+      "path": "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_impl/run-20261001T105028Z-attempt02-01a0f4b5/preparation/sources/R/experimental/mebane_ad_stan/common.R",
+      "sha256": "434379ec4513852bcf7ba3711942c18f204f29f4200444c7462cb4ec5e87bb5a",
+      "bytes": 8720
+    },
+    {
+      "path": "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_impl/run-20261001T105028Z-attempt02-01a0f4b5/preparation/sources/R/experimental/mebane_ad_stan/reference.R",
+      "sha256": "6f7e15ddeb0d98d76c103fa98d2aa547da9f50dcc31c6e5cda589319e4ddad5d",
+      "bytes": 3603
+    },
+    {
+      "path": "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_impl/run-20261001T105028Z-attempt02-01a0f4b5/preparation/sources/R/experimental/mebane_ad_stan/run_stan.R",
+      "sha256": "d52af3a2a9273f776a869188e421d7c7de76d0a32475e66d82e801f66537e119",
+      "bytes": 8470
+    },
+    {
+      "path": "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_impl/run-20261001T105028Z-attempt02-01a0f4b5/preparation/sources/R/experimental/mebane_ad_stan/prepare_stan.py",
+      "sha256": "14ae0baefafa0211103a6d5559c5031671d254b4f8efc8a17c97667b125234ae",
+      "bytes": 3530
+    },
+    {
+      "path": "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_impl/run-20261001T105028Z-attempt02-01a0f4b5/preparation/sources/R/experimental/mebane_ad_stan/supervise_stan.py",
+      "sha256": "631e65bb49dc193cd593a14e77738cd88439add6adda9f0ea4bb340ba500f4ef",
+      "bytes": 4877
+    },
+    {
+      "path": "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_impl/run-20261001T105028Z-attempt02-01a0f4b5/preparation/sources/models/experimental/mebane_ad_stan/d_multinomial.stan",
+      "sha256": "b38de93ef22b826233f35898b5d3becfae1fb46df774ead065b8d4133c127c9b",
+      "bytes": 4386
+    },
+    {
+      "path": "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_impl/run-20261001T105028Z-attempt02-01a0f4b5/preparation/sources/tests/mebane/ad_stan/test_stan.R",
+      "sha256": "eb7a0d3416864ec28595523bfb7b0ae2f6068eb1da8a734f0058058e2b68b252",
+      "bytes": 16718
+    },
+    {
+      "path": "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_impl/run-20261001T105028Z-attempt02-01a0f4b5/preparation/sources/tests/mebane/ad_stan/test_supervisor.py",
+      "sha256": "d69b6bbae956c1d5c6f7b3ef1d15ab9cdf0647aa4507e9c23bdd4677e1529983",
+      "bytes": 3041
+    },
+    {
+      "path": "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_impl/run-20261001T105028Z-attempt02-01a0f4b5/preparation/sources/tests/mebane/ad_stan/run_preflight.R",
+      "sha256": "b755b6d987fb2427f57bc2fb806c2f5b107fba9b8052c00c98bf35ae664e0565",
+      "bytes": 4553
+    },
+    {
+      "path": "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_impl/run-20261001T105028Z-attempt02-01a0f4b5/preparation/sources/quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_impl/IMPLEMENTATION.md",
+      "sha256": "d53a4ef66dc3a3cf0c72b03b972448882ec973d4a7febba7d685a1ce1cc88aa2",
+      "bytes": 12626
+    },
+    {
+      "path": "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_impl/run-20261001T105028Z-attempt02-01a0f4b5/preparation/sources/models/experimental/mebane_ad/d_multinomial.jags",
+      "sha256": "6ddb9624f60b15e196cc27ed9694852c40b6553a684a9962003168da4ecfaf5b",
+      "bytes": 2036
+    },
+    {
+      "path": "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_impl/run-20261001T105028Z-attempt02-01a0f4b5/preparation/sources/R/experimental/mebane_ad/model_d.R",
+      "sha256": "e5154c01c6f111cc47d5e9d9f49654f1ee081bb4001664038c840b8c0d86710a",
+      "bytes": 5043
+    },
+    {
+      "path": "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_impl/run-20261001T105028Z-attempt02-01a0f4b5/preparation/sources/quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/contract.json",
+      "sha256": "fb4a296c9bf0af25812d7d8dd2ab63340fe10d4e73e806e64b5dba3f7dcf481a",
+      "bytes": 17442
+    },
+    {
+      "path": "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_impl/run-20261001T105028Z-attempt02-01a0f4b5/preparation/sources/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/final_manifest.json",
+      "sha256": "6720193e76b60e2b7d4c73910b2e4328b7cc2fb882b6e29f095160a8dce50db3",
+      "bytes": 511854
+    },
+    {
+      "path": "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_impl/run-20261001T105028Z-attempt02-01a0f4b5/preparation/sources/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/data/run-20260930T235038Z-pid61600/dc2010_ad_data.rds",
+      "sha256": "b2ef611dabb751f9286acbaae841a23c34948ed0a4b6306364cbe94d9d24903e",
+      "bytes": 2539
+    }
+  ],
+  "empirical_sampling": false
+}

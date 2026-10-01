@@ -1,0 +1,135 @@
+{
+  "status": "approved_for_JAGS20k",
+  "fixture_only": true,
+  "warning": "SYNTHETIC RELEASE FOR FAKE SUPERVISOR; NOT AN EMPIRICAL RELEASE",
+  "files": [
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/contract.json",
+      "snapshot": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/jags_candidate/quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/contract.json",
+      "bytes": 17442,
+      "sha256": "fb4a296c9bf0af25812d7d8dd2ab63340fe10d4e73e806e64b5dba3f7dcf481a"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/derivation.json",
+      "snapshot": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/jags_candidate/quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/derivation.json",
+      "bytes": 1075,
+      "sha256": "124c98b43c36165bfcbb4f5b367a4d175667261f445603b0f44b6403a10b932f"
+    },
+    {
+      "path": "R/experimental/mebane_ad_long/diagnostics.R",
+      "snapshot": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/jags_candidate/R/experimental/mebane_ad_long/diagnostics.R",
+      "bytes": 13123,
+      "sha256": "273e8fc0b9a35060d7f0c7d08b4d26a883cb0e90b836f67ec2823726b1e8f736"
+    },
+    {
+      "path": "R/experimental/mebane_ad_long/freeze_jags.R",
+      "snapshot": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/jags_candidate/R/experimental/mebane_ad_long/freeze_jags.R",
+      "bytes": 1142,
+      "sha256": "7f63245cfb5fe4d32a612de303db85b008e1dfb95782a42d5e3b21385a386ce7"
+    },
+    {
+      "path": "R/experimental/mebane_ad_long/prepare_checks.R",
+      "snapshot": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/jags_candidate/R/experimental/mebane_ad_long/prepare_checks.R",
+      "bytes": 718,
+      "sha256": "46666fac5d145932f12e53da91744ae3e357448fe6ca4c03fc9d7d5a6f0227a0"
+    },
+    {
+      "path": "R/experimental/mebane_ad_long/prepare_round.R",
+      "snapshot": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/jags_candidate/R/experimental/mebane_ad_long/prepare_round.R",
+      "bytes": 5386,
+      "sha256": "f2062359fb5d3557851afc6c5c166a4a75d9e895f5b68238c1e6407a86148b8c"
+    },
+    {
+      "path": "R/experimental/mebane_ad_long/run.py",
+      "snapshot": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/jags_candidate/R/experimental/mebane_ad_long/run.py",
+      "bytes": 2617,
+      "sha256": "60e85eed08f9e0358e94dc3e09437f552330004c1951ff7709e51de98724f05d"
+    },
+    {
+      "path": "R/experimental/mebane_ad_long/run_jags.R",
+      "snapshot": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/jags_candidate/R/experimental/mebane_ad_long/run_jags.R",
+      "bytes": 8424,
+      "sha256": "41b3d046d81d78be8730fb9525428acc43e7d04147ba2596f8574252bf6a7a90"
+    },
+    {
+      "path": "tests/mebane/ad_long/test_runner.R",
+      "snapshot": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/jags_candidate/tests/mebane/ad_long/test_runner.R",
+      "bytes": 5194,
+      "sha256": "54616bcf2a8618d169b727c9f4b05fa3eff87f2515e031a991698dc3faedfe36"
+    },
+    {
+      "path": "tests/mebane/ad_long/test_timing.R",
+      "snapshot": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/jags_candidate/tests/mebane/ad_long/test_timing.R",
+      "bytes": 2691,
+      "sha256": "ab4a47df9b00ff7b19e93f176cf2d63355c5d0338d85a143eefba84d608cc76b"
+    },
+    {
+      "path": "R/experimental/mebane_ad/run_pair.py",
+      "snapshot": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/jags_candidate/R/experimental/mebane_ad/run_pair.py",
+      "bytes": 4938,
+      "sha256": "48fd61410eda632517adc804174bea7c9282c09bf06f140084ec5bff6f68a7b4"
+    },
+    {
+      "path": "R/experimental/mebane_ad/io.R",
+      "snapshot": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/jags_candidate/R/experimental/mebane_ad/io.R",
+      "bytes": 2627,
+      "sha256": "913803dc29f9784d756ab9a1834b2a96b8201d754957dbd9f65286674b4abb2d"
+    },
+    {
+      "path": "R/experimental/mebane_ad/prepare_dc2010.R",
+      "snapshot": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/jags_candidate/R/experimental/mebane_ad/prepare_dc2010.R",
+      "bytes": 10287,
+      "sha256": "051f0421448bd349ffdfa9a668ac78ac22bccc09bf4b8ff5718cd80c7e788313"
+    },
+    {
+      "path": "R/experimental/mebane_ad/timing.md",
+      "snapshot": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/jags_candidate/R/experimental/mebane_ad/timing.md",
+      "bytes": 1852,
+      "sha256": "db3f96e88cb28ae54c42f539a377fcf5fe3ec4bd716adf0249e6e8c9044433f8"
+    },
+    {
+      "path": "models/experimental/mebane_ad/d_multinomial.jags",
+      "snapshot": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/jags_candidate/models/experimental/mebane_ad/d_multinomial.jags",
+      "bytes": 2036,
+      "sha256": "6ddb9624f60b15e196cc27ed9694852c40b6553a684a9962003168da4ecfaf5b"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G0/round1/qbl_installed_3017de5.jags",
+      "snapshot": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/jags_candidate/quality_reports/results/mebane_gates/G0/round1/qbl_installed_3017de5.jags",
+      "bytes": 6761,
+      "sha256": "f8360126424b7a463f76a1c99efc89a8a5cb81339213bd4931559f14595fbab6"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G2/round2/benchmark_contract.json",
+      "snapshot": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/jags_candidate/quality_reports/results/mebane_gates/G2/round2/benchmark_contract.json",
+      "bytes": 14203,
+      "sha256": "63b61fb0594d0302a03d999bcff6c62967b6e999f37b4c9a8821f0f8e9ed18d2"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/authors_replication_discovery/archive/UMeforensics-eforensics_public-3017de5/data/dc2010.rda",
+      "snapshot": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/jags_candidate/quality_reports/results/mebane_gates/coordination/authors_replication_discovery/archive/UMeforensics-eforensics_public-3017de5/data/dc2010.rda",
+      "bytes": 2010,
+      "sha256": "0386dcc86155e543382c2725e9eb61ebf365b2e6f96a2b037324dbee80005196"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/data/run-20260930T235038Z-pid61600/dc2010_ad_data.rds",
+      "snapshot": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/jags_candidate/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/data/run-20260930T235038Z-pid61600/dc2010_ad_data.rds",
+      "bytes": 2539,
+      "sha256": "b2ef611dabb751f9286acbaae841a23c34948ed0a4b6306364cbe94d9d24903e"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/checks_runner/result.json",
+      "snapshot": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/jags_candidate/quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/checks_runner/result.json",
+      "bytes": 227,
+      "sha256": "40eafe01393fe2cdf307c30b460a98c68449ed87575be0ada8b136a123617601"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/checks_timing/result.json",
+      "snapshot": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/jags_candidate/quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/checks_timing/result.json",
+      "bytes": 134,
+      "sha256": "ed62ee7f3acfaaae4e3835140c953d836cf472a4bd4769c244f4b9bbbb0ec350"
+    }
+  ],
+  "contract_path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/contract.json",
+  "data_path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/data/run-20260930T235038Z-pid61600/dc2010_ad_data.rds"
+}

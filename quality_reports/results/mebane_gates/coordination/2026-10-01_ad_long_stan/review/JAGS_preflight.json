@@ -1,0 +1,117 @@
+{
+  "schema_version": "1.0-independent-JAGS-long-delta-review",
+  "status": "pass",
+  "date": "2026-10-01",
+  "scope": "Preflight independente e proporcional do delta JAGS 2k -> 20k e do novo orquestrador. O coordenador delimitou esta entrega a JAGS; o pedido do usuário inclui Stan também, cuja revisão e a dos resultados futuros ficam para etapas próprias.",
+  "executor_id": "019d795a-acfa-72c2-a210-d55a46c606c2",
+  "reviewer_id": "01a0f4b8-962b-77a3-a418-6247c6219e8b",
+  "reviewer_identity_evidence": "Own get_goal threadId; distinto do executor e do implementador D.",
+  "repository_root": "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud",
+  "candidate_manifest_path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/jags_candidate/manifest.json",
+  "candidate_manifest_sha256": "61ad865465a2696bf5986d2253defbf6fe64c09aaa2d7f290c8ce64f15692066",
+  "contract_id": "AD-DC2010-LONG-v1",
+  "contract_path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/contract.json",
+  "contract_sha256": "fb4a296c9bf0af25812d7d8dd2ab63340fe10d4e73e806e64b5dba3f7dcf481a",
+  "findings": [],
+  "blocking_findings": 0,
+  "summary": "Nenhum defeito novo identificado no delta JAGS. As duas fontes R são exatamente as derivadas pelas três substituições declaradas; o contrato científico e as regras v2 são idênticos. Os 21 inputs congelados conferem antes e depois dos fixtures. O orquestrador usa os novos limites de 3600 segundos separadamente para geração e diagnóstico, preservando ordem, tentativas únicas, hashes e proteção contra sobrescrita.",
+  "frozen_source_prefix": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/jags_candidate/",
+  "evidence_rule": "Os paths de código/contrato nas evidências abaixo são relativos à raiz do repositório. As mesmas linhas estão preservadas sob frozen_source_prefix + path e vinculadas ao manifesto acima.",
+  "checks": [
+    {
+      "id": "JAGS-LONG-HASH",
+      "status": "pass",
+      "result": "21/21 entradas: hash e tamanho do original conferem, e o snapshot é byte-idêntico. Nove entradas também coincidem com os hashes de full02. As duas fontes R históricas 2k, o contrato v2 e o parecer delta anterior permanecem íntegros. Todos os inputs e o manifesto foram reconferidos após os testes.",
+      "artifact": "source_delta.json"
+    },
+    {
+      "id": "JAGS-LONG-R-DELTA",
+      "status": "pass",
+      "result": "Reconstrução independente byte a byte: somente AD-DC2010-v2 -> AD-DC2010-LONG-v1, 2000 -> 20000 e path do próprio source snapshot. Nenhuma alteração em dados, priors, parâmetros, inicializações, monitores, argumentos de engine ou definição dos diagnósticos além do comprimento retido. O programa executa 1000 de adaptação, 5000 de burn e 20000 retidas em quatro cadeias, thin=1.",
+      "artifacts": ["run_jags.R.diff", "diagnostics.R.diff", "checks_jags_delta.json"],
+      "evidence": [
+        {"path": "R/experimental/mebane_ad_long/run_jags.R", "line_start": 101, "line_end": 138},
+        {"path": "R/experimental/mebane_ad_long/diagnostics.R", "line_start": 29, "line_end": 38},
+        {"path": "R/experimental/mebane_ad_long/diagnostics.R", "line_start": 65, "line_end": 87},
+        {"path": "R/experimental/mebane_ad_long/diagnostics.R", "line_start": 148, "line_end": 151},
+        {"path": "R/experimental/mebane_ad_long/diagnostics.R", "line_start": 181, "line_end": 187},
+        {"path": "R/experimental/mebane_ad_long/diagnostics.R", "line_start": 220, "line_end": 235}
+      ]
+    },
+    {
+      "id": "JAGS-LONG-CONTRACT",
+      "status": "pass",
+      "result": "Comparação estrutural confirmou case, A, D, monitoring, diagnostics e preflight_tests integralmente iguais a v2. Sementes, inicializações, modelos e dados são preservados. A tabela obrigatória mantém 2171 alvos A e 1742 D, sem isenção de NA; o universo de alvos não depende do aumento de iterações. A nova autorização cria lote distinto, não altera o veredicto antigo. O bloco Stan é prospectivo e não recebe liberação neste parecer.",
+      "evidence": [
+        {"path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/contract.json", "line_start": 102, "line_end": 142},
+        {"path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/contract.json", "line_start": 193, "line_end": 282},
+        {"path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/contract.json", "line_start": 305, "line_end": 322}
+      ]
+    },
+    {
+      "id": "JAGS-LONG-ORCHESTRATION",
+      "status": "pass",
+      "result": "Novo main executado com run_command falso em sucesso, erro A e timeout A. Sucesso chama geração A, geração D, diagnóstico A, diagnóstico D, sequencialmente; falha sem raw não é diagnosticada e D pode terminar. Todos os processos recebem 3600 s e os novos entrypoints R, com paths corretos de contrato e dados. Não há retry. Reexecução no mesmo output e release com hash incorreto são rejeitados antes de novas chamadas. A função real de timeout de grupos é importada de fonte byte-idêntica à anteriormente testada, sem reauditar sua implementação.",
+      "artifact": "orchestration_calls.json",
+      "evidence": [
+        {"path": "R/experimental/mebane_ad_long/run.py", "line_start": 7, "line_end": 47},
+        {"path": "R/experimental/mebane_ad/run_pair.py", "line_start": 25, "line_end": 52}
+      ]
+    },
+    {
+      "id": "JAGS-LONG-CLOCKS",
+      "status": "pass",
+      "result": "Precedência explícita nesta rodada: contract LONG determina 3600 s para cada processo de geração e 3600 s para cada diagnóstico. Os 1200 s em timing.md documentam o lote v2 antigo, não governam LONG; reutilizam-se somente as definições de relógio. Setup/compile/adapt/burn/sample/persist_raw continuam separados e o denominador ESS interno mantém o nome explícito. O teste de timing com engine falsa confirmou sucesso e durações parciais em falhas de setup/compile.",
+      "evidence": [
+        {"path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/contract.json", "line_start": 126, "line_end": 142},
+        {"path": "R/experimental/mebane_ad_long/run.py", "line_start": 30, "line_end": 42},
+        {"path": "R/experimental/mebane_ad/timing.md", "line_start": 3, "line_end": 24},
+        {"path": "R/experimental/mebane_ad_long/diagnostics.R", "line_start": 206, "line_end": 208}
+      ]
+    }
+  ],
+  "executed_checks": {
+    "independent_delta": {"passed": 92, "failed": 0, "note": "Inclui verificações de hash por arquivo antes/depois, igualdade de deltas, contrato e cenários falsos de orquestração; não são 92 testes científicos distintos."},
+    "supplied_runner_reexecuted": {"passed": 69, "failed": 0, "output": "runner_repeat/result.json"},
+    "supplied_timing_reexecuted": {"status": "pass", "scenarios": ["success", "compile_failure", "setup_failure"], "output": "timing_repeat/result.json"},
+    "command": "env PYTHONDONTWRITEBYTECODE=1 python3 quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/review/check_jags_delta.py > quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/review/check_jags_delta.log 2>&1",
+    "working_directory": "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud",
+    "nested_R_commands": "Registrados integralmente em checks_jags_delta.json. Usam Rscript --vanilla, LC_ALL=C, LANG=C e apenas testes com engine falsa ou draws sintéticos.",
+    "interruption": "Nenhum processo ou teste estava ativo na interrupção solicitada pelo coordenador; somente leituras haviam sido executadas. Não houve tentativa de teste abortada nesta revisão.",
+    "reproduction": "Script e helpers recusam sobrescrita. Uma reprodução deve usar novo diretório de saída autorizado; não limpar esta tentativa. Os arquivos raw_chains.rds da orquestração falsa são marcadores textuais deliberados, identificados como não-RDS, e nunca foram lidos como draws."
+  },
+  "reused_review": {
+    "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/review_preflight_delta/review.json",
+    "sha256": "fad1ec65544cb5e43647a3bee359b30f2eb379bc2bfb6f34f31d3d1fe7f3f37d",
+    "basis": "Fontes comuns e ciência inalteradas; revisão anterior de 67 controles comuns, 27 D, 49 do reparo e nove do supervisor reaproveitada sem repetir a árvore ou o estudo antigo."
+  },
+  "artifact_hashes": {
+    "check_jags_delta.py": "05cdd74337d3949cd804b5ad1987db8f067ebe609778fadd6f558047a0096077",
+    "checks_jags_delta.json": "d0a96f1a13397b231c667d75ffd7a8cc05b0d7ce613ecc68998ec420a9599841",
+    "source_delta.json": "5bf79285e8d08f1197085db852f88cbfa52aa0d48773ec89524412c3d09f9728",
+    "orchestration_calls.json": "bd25de91e49dc229c88aa2181c53764395ac722cefbb56e08872569b07b7b9b8"
+  },
+  "deliberate_limits": [
+    "Não foi reexecutado process_draws sobre todas as unidades em 20k: o delta byte-exato cobre todos os limites de loops, os fixtures exercitam a nova forma iteracao x cadeia e a extração/reconstrução comum já passou na revisão anterior.",
+    "Não foram medidos desempenho, RAM, adaptação ou precisão empírica em 20k. Timeout continua sendo possibilidade legítima e deve ser preservado, sem retry automático.",
+    "Não foi refeito teste real de encerramento de descendentes: run_command permanece byte-idêntico ao reparo independentemente validado. Os timeouts nesta revisão são respostas simuladas do supervisor.",
+    "Stan, seu contrato operacional completo, implementação, compilação, amostragem e resultados ficam para revisão própria; nenhuma pendência Stan bloqueia o preflight JAGS independente.",
+    "Sem reabertura de matemática ou história G2/G3, identificação, poder ou inferência. Permanecem ausência de referência numérica externa, limitações de A e distinção DC2010/Brasil."
+  ],
+  "authorization_boundary": {
+    "recommendation": "JAGS tecnicamente apto para adjudicação e release do lote novo exatamente congelado; nenhuma correção impeditiva solicitada.",
+    "coordinator_adjudication_required": true,
+    "empirical_MCMC_by_reviewer": false,
+    "model_engine_invoked": false,
+    "candidate_edited": false,
+    "installs": false,
+    "deletions": false,
+    "Stan_preflight_pass": false,
+    "posterior_precision_approved": false,
+    "production_approved": false,
+    "G3_approved": false,
+    "G10_approved": false,
+    "write_scope": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/review/",
+    "goal_scope_resolution": "O coordenador delimitou a entrega e o goal finito atuais exclusivamente ao preflight delta JAGS. O pedido do usuário inclui Stan também; a revisão Stan seguirá em novo goal separado, após envio do freeze."
+  }
+}

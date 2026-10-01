@@ -1,0 +1,10 @@
+{
+  "status": "preflight_failed_artifacts_retained",
+  "error": "is.function(lp_fun) is not TRUE",
+  "executor_id": "01a0f4b5-4434-7b83-91b9-69ced11b40ba",
+  "empirical_sampling": false,
+  "independent_QA_pass": false,
+  "production_or_G10_approved": false,
+  "completed_utc": "2026-10-01 10:51:38 UTC",
+  "elapsed_seconds": 63.3862779140472
+}

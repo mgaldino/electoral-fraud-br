@@ -1,0 +1,4 @@
+{"utc":"2026-10-01 10:20:06 UTC","model":"D","stage":"setup","type":"start","value":"setup"} 
+{"utc":"2026-10-01 10:20:06 UTC","model":"D","stage":"setup","type":"warning","value":"cannot open compressed file 'quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/data/run-20260930T235038Z-pid61600/dc2010_ad_data.rds.absent', probable reason 'No such file or directory'"} 
+{"utc":"2026-10-01 10:20:06 UTC","model":"D","stage":"setup","type":"failed_elapsed","value":0.002} 
+{"utc":"2026-10-01 10:20:06 UTC","model":"D","stage":"setup","type":"error","value":"cannot open the connection"} 

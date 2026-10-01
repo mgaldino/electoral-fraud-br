@@ -1,0 +1,8 @@
+executor_id: 01a0f4b5-4434-7b83-91b9-69ced11b40ba 
+source_manifest_sha256: 4c5fd8a8eecd43871e51c0e15ac17375fde25a8070f4207efa3ffc87b321a2ac 
+PASS frozen_design_4_serial_2000_2000  
+PASS static_prior_variance_and_separate_intercepts  
+PASS prior_auxiliary_change_of_variables  
+PASS prior_simplex_jacobian_and_partial_not_total_order  
+CALL model$expose_functions {"source_sha256":"b38de93ef22b826233f35898b5d3becfae1fb46df774ead065b8d4133c127c9b"} 
+Functions already compiled, nothing to do!

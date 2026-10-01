@@ -1,0 +1,18 @@
+{
+  "status": "sampling_completed_precision_not_assessed",
+  "fixture_only": true,
+  "artifacts": [
+    {
+      "path": "synthetic_stan_run/draws_array.rds",
+      "sha256": "230df1641458635441ae92d26c7be192debc4634231256ee11cfb74f18a01b49"
+    },
+    {
+      "path": "synthetic_stan_run/sampler_diagnostics.rds",
+      "sha256": "df2041cb85d2e4efe85f15c68a0fa4b7e690b7de0588bc7ec62ca55143675ef7"
+    },
+    {
+      "path": "synthetic_stan_run/timing.json",
+      "sha256": "b10314f38acf0d9de08cca84d84f9f527cd5475e1004d70ac407d7ace01dfcd2"
+    }
+  ]
+}

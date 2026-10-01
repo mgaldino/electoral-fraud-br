@@ -1,0 +1,47 @@
+{
+  "created_utc": "2026-10-01 10:55:15 UTC",
+  "files": [
+    {
+      "path": "postprocessed/common_view/raw_chains.rds",
+      "snapshot": "postprocessed/common_diagnostics/consumed_sources/postprocessed/common_view/raw_chains.rds",
+      "bytes": 78650628,
+      "sha256": "0a1b0c1aaae375d3493dafd6adb012697fa7515835f5e0847cc7ba645bc01a28"
+    },
+    {
+      "path": "postprocessed/common_view/run_result.json",
+      "snapshot": "postprocessed/common_diagnostics/consumed_sources/postprocessed/common_view/run_result.json",
+      "bytes": 237,
+      "sha256": "b338cef5359b2f8c247ece76cb07292db31b04e3dd56a99db04225aa0f450084"
+    },
+    {
+      "path": "postprocessed/common_view/sampling_metadata.json",
+      "snapshot": "postprocessed/common_diagnostics/consumed_sources/postprocessed/common_view/sampling_metadata.json",
+      "bytes": 305,
+      "sha256": "6660c7d7059bc6e1b6492670c2158d0830d701aa0686723fbf4e86c020fb0182"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/data/run-20260930T235038Z-pid61600/dc2010_ad_data.rds",
+      "snapshot": "postprocessed/common_diagnostics/consumed_sources/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/data/run-20260930T235038Z-pid61600/dc2010_ad_data.rds",
+      "bytes": 2539,
+      "sha256": "b2ef611dabb751f9286acbaae841a23c34948ed0a4b6306364cbe94d9d24903e"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/contract_stan_diagnostics.json",
+      "snapshot": "postprocessed/common_diagnostics/consumed_sources/quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/contract_stan_diagnostics.json",
+      "bytes": 17873,
+      "sha256": "e33a59939f0d55513fea6ae05a2cc90fac617f3385193ec56e4a2a7a9b6df264"
+    },
+    {
+      "path": "R/experimental/mebane_ad_long/diagnostics_stan.R",
+      "snapshot": "postprocessed/common_diagnostics/consumed_sources/R/experimental/mebane_ad_long/diagnostics_stan.R",
+      "bytes": 13127,
+      "sha256": "a5a19974731ad2f19a13a27afe8b2641e138751e61898dbb35f77bc1b13ac1b9"
+    },
+    {
+      "path": "R/experimental/mebane_ad/io.R",
+      "snapshot": "postprocessed/common_diagnostics/consumed_sources/R/experimental/mebane_ad/io.R",
+      "bytes": 2627,
+      "sha256": "913803dc29f9784d756ab9a1834b2a96b8201d754957dbd9f65286674b4abb2d"
+    }
+  ]
+}

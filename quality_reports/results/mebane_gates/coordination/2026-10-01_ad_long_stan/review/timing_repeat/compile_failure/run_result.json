@@ -1,0 +1,24 @@
+{
+  "status": "error",
+  "failed_stage": "compile",
+  "message": "fixture compile failure",
+  "model": "D",
+  "warnings": [],
+  "phases": {
+    "setup": {
+      "user.self": 0.014,
+      "sys.self": 0.007,
+      "elapsed": 0.074,
+      "completed": true
+    },
+    "compile": {
+      "user.self": 0,
+      "sys.self": 0,
+      "elapsed": 0.035,
+      "completed": false
+    }
+  },
+  "elapsed_seconds": 0.111,
+  "timing_scope": "Internal generation: function entry through raw persistence/error handling; excludes R bootstrap and final result/manifest writes. Supervisor measures the whole generation process; diagnostics have a separate clock.",
+  "posterior_or_model_validated": false
+}

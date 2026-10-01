@@ -1,0 +1,23 @@
+{
+  "executor_id": "01a0f4b5-4434-7b83-91b9-69ced11b40ba",
+  "started_utc": "2026-10-01 10:50:35 UTC",
+  "command": ["/Library/Frameworks/R.framework/Resources/bin/exec/R", "--no-echo", "--no-restore", "--vanilla", "--file=/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/tests/mebane/ad_stan/run_preflight.R", "--args", "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud", "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_impl/run-20261001T105028Z-attempt02-01a0f4b5/preparation"],
+  "source_snapshot_manifest_sha256": "4c5fd8a8eecd43871e51c0e15ac17375fde25a8070f4207efa3ffc87b321a2ac",
+  "runtime": {
+    "R": "R version 4.4.2 (2024-10-31)",
+    "platform": "aarch64-apple-darwin20",
+    "cmdstan_version": "2.37.0",
+    "cmdstan_path": "/Users/manoelgaldino/.cmdstan/cmdstan-2.37.0",
+    "packages": {
+      "cmdstanr": "0.9.0",
+      "posterior": "1.7.0",
+      "jsonlite": "2.0.0",
+      "digest": "0.6.39",
+      "processx": "3.8.7",
+      "rstan": "2.32.7"
+    },
+    "library_paths": ["/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/renv/library/macos/R-4.4/aarch64-apple-darwin20", "/Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/library"]
+  },
+  "empirical_sampling": false,
+  "allowed_execution": "Compilation, compiled log density/gradient calls, and fixed-parameter generated quantities on three synthetic rows only"
+}

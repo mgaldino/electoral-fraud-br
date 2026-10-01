@@ -1,0 +1,27 @@
+{
+  "model": "D only, exact marginal target",
+  "chains": 4,
+  "warmup_iterations": 2000,
+  "post_iterations": 2000,
+  "parallel_chains": 1,
+  "thin": 1,
+  "seed": 1001261,
+  "chain_ids": [1, 2, 3, 4],
+  "adapt_delta": 0.99,
+  "max_treedepth": 12,
+  "max_elapsed_seconds": 3600,
+  "save_warmup": true,
+  "parametrization": "Noncentered h=alpha+sqrt(v)*z; z~N(0,1); v~Exp(5) on VARIANCE; b0 and alpha kept separate",
+  "pi": "r2,r3 iid Uniform(0,1); pi=(1,r2,r3)/(1+r2+r3). Integrate nuisance u1 exactly; Jacobian u1^2 cancels conditional-uniform density 1/u1^2",
+  "likelihood": "Sum all 3 class-weighted multinomial masses by log_sum_exp per precinct; no clamp or approximate A substitution",
+  "output": "Conditional class probabilities and categorical Z reconstruction per draw; joint M/S and active pA/pW/pO from the SAME Z, plus Rao-Blackwell summaries separately",
+  "initialization": "Map the previous four initial values: alpha/b0/v identical, z=0, r2=.25,r3=.125; no claim seeds match JAGS RNG",
+  "runtime_diagnostics": {
+    "divergences_max": 0,
+    "treedepth_hits_max": 0,
+    "ebfmi_min": 0.3,
+    "internal_NCP_parameters": "All z and r parameters require rank Rhat<1.01, bulk/tail ESS>=400. Common augmented targets retain prior thresholds; NAs never pass."
+  },
+  "installation_allowed": false,
+  "automatic_retry": false
+}

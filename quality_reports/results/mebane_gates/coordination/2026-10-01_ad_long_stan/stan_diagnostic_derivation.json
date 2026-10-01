@@ -1,0 +1,8 @@
+{
+  "source": "R/experimental/mebane_ad/diagnostics.R",
+  "source_sha256": "4f30f9ff1772f83b54519e941cd9c6edea24fbe359d5019836223f60b995061c",
+  "destination": "R/experimental/mebane_ad_long/diagnostics_stan.R",
+  "sha256": "a5a19974731ad2f19a13a27afe8b2641e138751e61898dbb35f77bc1b13ac1b9",
+  "changes": ["contract ID", "self-source snapshot path"],
+  "MCMC": false
+}

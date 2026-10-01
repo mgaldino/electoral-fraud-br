@@ -1,0 +1,50 @@
+{
+  "status": "sampled_not_diagnosed",
+  "adaptation_adequate": true,
+  "chains": 4,
+  "iterations": [20000, 20000, 20000, 20000],
+  "raw_sha256": "37630c67bc47c5efb3c1f5e126444ff448fa13956cf2b8b764472b010fde588f",
+  "model": "D",
+  "warnings": [],
+  "phases": {
+    "setup": {
+      "user.self": 0.092,
+      "sys.self": 0.016,
+      "elapsed": 0.125,
+      "completed": true
+    },
+    "compile": {
+      "user.self": 0.225,
+      "sys.self": 0.002,
+      "elapsed": 0.227,
+      "completed": true
+    },
+    "adapt": {
+      "user.self": 7.702,
+      "sys.self": 0.044,
+      "elapsed": 7.753,
+      "completed": true
+    },
+    "burn": {
+      "user.self": 38.693,
+      "sys.self": 0.221,
+      "elapsed": 38.923,
+      "completed": true
+    },
+    "sample": {
+      "user.self": 160.596,
+      "sys.self": 3.241,
+      "elapsed": 163.905,
+      "completed": true
+    },
+    "persist_raw": {
+      "user.self": 42.637,
+      "sys.self": 0.856,
+      "elapsed": 43.596,
+      "completed": true
+    }
+  },
+  "elapsed_seconds": 257.907,
+  "timing_scope": "Internal generation: function entry through raw persistence/error handling; excludes R bootstrap and final result/manifest writes. Supervisor measures the whole generation process; diagnostics have a separate clock.",
+  "posterior_or_model_validated": false
+}

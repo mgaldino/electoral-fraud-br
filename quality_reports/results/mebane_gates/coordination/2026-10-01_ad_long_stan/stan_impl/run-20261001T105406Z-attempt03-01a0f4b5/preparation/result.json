@@ -1,0 +1,12 @@
+{
+  "status": "deterministic_tests_pass_candidate_requires_independent_QA",
+  "R_checks_passed": 183,
+  "R_checks_failed": 0,
+  "supervisor_exit_code": 0,
+  "executor_id": "01a0f4b5-4434-7b83-91b9-69ced11b40ba",
+  "empirical_sampling": false,
+  "independent_QA_pass": false,
+  "production_or_G10_approved": false,
+  "completed_utc": "2026-10-01 10:55:07 UTC",
+  "elapsed_seconds": 52.8905439376831
+}

@@ -1,0 +1,60 @@
+--- R/experimental/mebane_ad/diagnostics.R
++++ R/experimental/mebane_ad_long/diagnostics.R
+@@ -29,7 +29,7 @@
+ ad_diagnostic_row <- function(x, target, group, mandatory = TRUE,
+                               range_divisor = 1, range_limit = Inf,
+                               analytic_constant = FALSE) {
+-  stopifnot(is.matrix(x), is.numeric(x), ncol(x) == 4L, nrow(x) == 2000L,
++  stopifnot(is.matrix(x), is.numeric(x), ncol(x) == 4L, nrow(x) == 20000L,
+             all(is.finite(x)), range_divisor > 0)
+   sampled_constant <- length(unique(as.vector(x))) == 1L
+   if (analytic_constant && !sampled_constant) stop("False analytic-constant declaration")
+@@ -66,7 +66,7 @@
+   start <- Sys.time()
+   ad_new_dir(out)
+   contract <- jsonlite::read_json(contract_path, simplifyVector = TRUE)
+-  stopifnot(contract$contract_id == "AD-DC2010-v2",
++  stopifnot(contract$contract_id == "AD-DC2010-LONG-v1",
+             length(contract$diagnostics$analytic_exemptions_in_empirical_pilot) == 0L)
+   input_path <- file.path(run_dir, "raw_chains.rds")
+   payload <- readRDS(data_path)
+@@ -80,10 +80,10 @@
+             raw$contract_sha256 == ad_sha(contract_path),
+             identical(as.integer(raw$seeds), as.integer(contract$paired_design$chain_seeds)),
+             length(raw$draws) == 4L,
+-            all(vapply(raw$draws, nrow, integer(1)) == 2000L))
++            all(vapply(raw$draws, nrow, integer(1)) == 20000L))
+   ad_snapshot(c(input_path, file.path(run_dir, "run_result.json"),
+                 file.path(run_dir, "sampling_metadata.json"), data_path,
+-                contract_path, "R/experimental/mebane_ad/diagnostics.R",
++                contract_path, "R/experimental/mebane_ad_long/diagnostics.R",
+                 "R/experimental/mebane_ad/io.R"), file.path(out, "consumed_sources"))
+   matrices <- lapply(raw$draws, as.matrix)
+   stopifnot(all(vapply(matrices, function(x) identical(colnames(x), colnames(matrices[[1]])), logical(1))))
+@@ -145,7 +145,7 @@
+   if (model == "A") for (name in paste0("N.", blocks[3:6])) {
+     for (i in seq_len(n)) add(ad_node(matrices, name, i), paste0(name, "[", i, "]"), "A_auxiliary")
+   }
+-  joint <- data.frame(iteration = rep(1:2000, 4), chain = rep(1:4, each = 2000),
++  joint <- data.frame(iteration = rep(1:20000, 4), chain = rep(1:4, each = 20000),
+                       M = as.vector(M_total), S = as.vector(S_total),
+                       M_fraction_N = as.vector(M_total / sum(N)),
+                       S_fraction_N = as.vector(S_total / sum(N)))
+@@ -178,7 +178,7 @@
+       positive <- denominator > 0
+       M_cond_mean[, , i][positive] <- W[i] * qM[positive] / denominator[positive]
+       S_cond_mean[, , i][positive] <- W[i] * qS[positive] / denominator[positive]
+-      for (chain in 1:4) for (iteration in 1:2000) {
++      for (chain in 1:4) for (iteration in 1:20000) {
+         q <- c(qL[iteration, chain], qM[iteration, chain], qS[iteration, chain])
+         x <- if (sum(q) == 0) c(0, 0, 0) else
+           as.vector(rmultinom(1, size = W[i], prob = q / sum(q)))
+@@ -231,7 +231,7 @@
+                    diagnostics$group == "global" & !diagnostics$diagnostic_pass]),
+                  elapsed_seconds = as.numeric(difftime(Sys.time(), start, units = "secs")),
+                  raw_sha256 = ad_sha(input_path), contract_sha256 = ad_sha(contract_path),
+-                 shape = c(iterations = 2000L, chains = 4L),
++                 shape = c(iterations = 20000L, chains = 4L),
+                  production_approved = FALSE, G10_approved = FALSE)
+   ad_json(result, file.path(out, "diagnostic_result.json"))
+   ad_manifest(out, note = "Raw draw diagnostics, joint functionals and secondary D reconstruction; not electoral inference")

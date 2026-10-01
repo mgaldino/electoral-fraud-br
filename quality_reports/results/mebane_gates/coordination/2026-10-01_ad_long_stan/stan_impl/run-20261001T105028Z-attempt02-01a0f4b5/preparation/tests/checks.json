@@ -1,0 +1,27 @@
+{
+  "executor_id": "01a0f4b5-4434-7b83-91b9-69ced11b40ba",
+  "checks": [
+    {
+      "name": "frozen_design_4_serial_2000_2000",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "static_prior_variance_and_separate_intercepts",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "prior_auxiliary_change_of_variables",
+      "pass": true,
+      "error": null
+    },
+    {
+      "name": "prior_simplex_jacobian_and_partial_not_total_order",
+      "pass": true,
+      "error": null
+    }
+  ],
+  "passed": 4,
+  "failed": 0
+}

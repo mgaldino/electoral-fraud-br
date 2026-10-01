@@ -1,0 +1,261 @@
+executor_id: 01a0f4b5-4434-7b83-91b9-69ced11b40ba 
+source_manifest_sha256: f1ce5cde48a7e2b3ab2aaaf8a409c72ff809adc0d1ff5ba056725c7d955d19f8 
+PASS frozen_design_4_serial_2000_2000  
+PASS static_prior_variance_and_separate_intercepts  
+PASS prior_auxiliary_change_of_variables  
+PASS prior_simplex_jacobian_and_partial_not_total_order  
+CALL model$expose_functions {"source_sha256":"b38de93ef22b826233f35898b5d3becfae1fb46df774ead065b8d4133c127c9b","global":false,"verbose":true} 
+
+Generated extern "C" functions 
+--------------------------------------------------------
+
+
+#include <Rcpp.h>
+#ifdef RCPP_USE_GLOBAL_ROSTREAM
+Rcpp::Rostream<true>&  Rcpp::Rcout = Rcpp::Rcpp_cout_get();
+Rcpp::Rostream<false>& Rcpp::Rcerr = Rcpp::Rcpp_cerr_get();
+#endif
+
+// ad_log_probabilities
+Eigen::Matrix<double,-1,1> ad_log_probabilities(const Eigen::Matrix<double,-1,1>& eta, const int& class_id);
+RcppExport SEXP sourceCpp_3_ad_log_probabilities(SEXP etaSEXP, SEXP class_idSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< const Eigen::Matrix<double,-1,1>& >::type eta(etaSEXP);
+    Rcpp::traits::input_parameter< const int& >::type class_id(class_idSEXP);
+    rcpp_result_gen = Rcpp::wrap(ad_log_probabilities(eta, class_id));
+    return rcpp_result_gen;
+END_RCPP
+}
+// ad_count_log_lpmf
+double ad_count_log_lpmf(const std::vector<int>& y, const Eigen::Matrix<double,-1,1>& log_p);
+RcppExport SEXP sourceCpp_3_ad_count_log_lpmf(SEXP ySEXP, SEXP log_pSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< const std::vector<int>& >::type y(ySEXP);
+    Rcpp::traits::input_parameter< const Eigen::Matrix<double,-1,1>& >::type log_p(log_pSEXP);
+    rcpp_result_gen = Rcpp::wrap(ad_count_log_lpmf(y, log_p));
+    return rcpp_result_gen;
+END_RCPP
+}
+
+Generated R functions 
+-------------------------------------------------------
+
+`.sourceCpp_3_DLLInfo` <- dyn.load('/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_impl/run-20261001T105406Z-attempt03-01a0f4b5/tmp/RtmpYOeviT/sourceCpp-aarch64-apple-darwin20-1.1.1/sourcecpp_115aa51870d84/sourceCpp_4.so')
+
+ad_log_probabilities <- Rcpp:::sourceCppFunction(function(eta, class_id) {}, FALSE, `.sourceCpp_3_DLLInfo`, 'sourceCpp_3_ad_log_probabilities')
+ad_count_log_lpmf <- Rcpp:::sourceCppFunction(function(y, log_p) {}, FALSE, `.sourceCpp_3_DLLInfo`, 'sourceCpp_3_ad_count_log_lpmf')
+
+rm(`.sourceCpp_3_DLLInfo`)
+
+Building shared library
+--------------------------------------------------------
+
+DIR: /Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_impl/run-20261001T105406Z-attempt03-01a0f4b5/tmp/RtmpYOeviT/sourceCpp-aarch64-apple-darwin20-1.1.1/sourcecpp_115aa51870d84
+
+/Library/Frameworks/R.framework/Resources/bin/R CMD SHLIB -o 'sourceCpp_4.so' 'file115aa458d9268.cpp' 
+CALL compiled_functions_grid {"eta":[[-1.2,0.8,-0.4,1.1,0.3,-0.7],[0,0,0,0,0,0],[8,-8,-6,6,4,-4],[100,100,100,100,100,100],[-100,-100,-100,-100,-100,-100],[-800,800,-800,800,-800,800],[800,-800,800,-800,800,-800]],"classes":[1,2,3],"N":[0,1,2,3,4],"order":["A","W","O"]} 
+PASS compiled_log_probabilities_eta1_class1  
+PASS smallN_logmass_eta1_class1_N0  
+PASS smallN_logmass_eta1_class1_N1  
+PASS smallN_logmass_eta1_class1_N2  
+PASS smallN_logmass_eta1_class1_N3  
+PASS smallN_logmass_eta1_class1_N4  
+PASS compiled_log_probabilities_eta1_class2  
+PASS smallN_logmass_eta1_class2_N0  
+PASS smallN_logmass_eta1_class2_N1  
+PASS smallN_logmass_eta1_class2_N2  
+PASS smallN_logmass_eta1_class2_N3  
+PASS smallN_logmass_eta1_class2_N4  
+PASS compiled_log_probabilities_eta1_class3  
+PASS smallN_logmass_eta1_class3_N0  
+PASS smallN_logmass_eta1_class3_N1  
+PASS smallN_logmass_eta1_class3_N2  
+PASS smallN_logmass_eta1_class3_N3  
+PASS smallN_logmass_eta1_class3_N4  
+PASS compiled_log_probabilities_eta2_class1  
+PASS smallN_logmass_eta2_class1_N0  
+PASS smallN_logmass_eta2_class1_N1  
+PASS smallN_logmass_eta2_class1_N2  
+PASS smallN_logmass_eta2_class1_N3  
+PASS smallN_logmass_eta2_class1_N4  
+PASS compiled_log_probabilities_eta2_class2  
+PASS smallN_logmass_eta2_class2_N0  
+PASS smallN_logmass_eta2_class2_N1  
+PASS smallN_logmass_eta2_class2_N2  
+PASS smallN_logmass_eta2_class2_N3  
+PASS smallN_logmass_eta2_class2_N4  
+PASS compiled_log_probabilities_eta2_class3  
+PASS smallN_logmass_eta2_class3_N0  
+PASS smallN_logmass_eta2_class3_N1  
+PASS smallN_logmass_eta2_class3_N2  
+PASS smallN_logmass_eta2_class3_N3  
+PASS smallN_logmass_eta2_class3_N4  
+PASS compiled_log_probabilities_eta3_class1  
+PASS smallN_logmass_eta3_class1_N0  
+PASS smallN_logmass_eta3_class1_N1  
+PASS smallN_logmass_eta3_class1_N2  
+PASS smallN_logmass_eta3_class1_N3  
+PASS smallN_logmass_eta3_class1_N4  
+PASS compiled_log_probabilities_eta3_class2  
+PASS smallN_logmass_eta3_class2_N0  
+PASS smallN_logmass_eta3_class2_N1  
+PASS smallN_logmass_eta3_class2_N2  
+PASS smallN_logmass_eta3_class2_N3  
+PASS smallN_logmass_eta3_class2_N4  
+PASS compiled_log_probabilities_eta3_class3  
+PASS smallN_logmass_eta3_class3_N0  
+PASS smallN_logmass_eta3_class3_N1  
+PASS smallN_logmass_eta3_class3_N2  
+PASS smallN_logmass_eta3_class3_N3  
+PASS smallN_logmass_eta3_class3_N4  
+PASS compiled_log_probabilities_eta4_class1  
+PASS smallN_logmass_eta4_class1_N0  
+PASS smallN_logmass_eta4_class1_N1  
+PASS smallN_logmass_eta4_class1_N2  
+PASS smallN_logmass_eta4_class1_N3  
+PASS smallN_logmass_eta4_class1_N4  
+PASS compiled_log_probabilities_eta4_class2  
+PASS smallN_logmass_eta4_class2_N0  
+PASS smallN_logmass_eta4_class2_N1  
+PASS smallN_logmass_eta4_class2_N2  
+PASS smallN_logmass_eta4_class2_N3  
+PASS smallN_logmass_eta4_class2_N4  
+PASS compiled_log_probabilities_eta4_class3  
+PASS smallN_logmass_eta4_class3_N0  
+PASS smallN_logmass_eta4_class3_N1  
+PASS smallN_logmass_eta4_class3_N2  
+PASS smallN_logmass_eta4_class3_N3  
+PASS smallN_logmass_eta4_class3_N4  
+PASS compiled_log_probabilities_eta5_class1  
+PASS smallN_logmass_eta5_class1_N0  
+PASS smallN_logmass_eta5_class1_N1  
+PASS smallN_logmass_eta5_class1_N2  
+PASS smallN_logmass_eta5_class1_N3  
+PASS smallN_logmass_eta5_class1_N4  
+PASS compiled_log_probabilities_eta5_class2  
+PASS smallN_logmass_eta5_class2_N0  
+PASS smallN_logmass_eta5_class2_N1  
+PASS smallN_logmass_eta5_class2_N2  
+PASS smallN_logmass_eta5_class2_N3  
+PASS smallN_logmass_eta5_class2_N4  
+PASS compiled_log_probabilities_eta5_class3  
+PASS smallN_logmass_eta5_class3_N0  
+PASS smallN_logmass_eta5_class3_N1  
+PASS smallN_logmass_eta5_class3_N2  
+PASS smallN_logmass_eta5_class3_N3  
+PASS smallN_logmass_eta5_class3_N4  
+PASS compiled_log_probabilities_eta6_class1  
+PASS smallN_logmass_eta6_class1_N0  
+PASS smallN_logmass_eta6_class1_N1  
+PASS smallN_logmass_eta6_class1_N2  
+PASS smallN_logmass_eta6_class1_N3  
+PASS smallN_logmass_eta6_class1_N4  
+PASS compiled_log_probabilities_eta6_class2  
+PASS smallN_logmass_eta6_class2_N0  
+PASS smallN_logmass_eta6_class2_N1  
+PASS smallN_logmass_eta6_class2_N2  
+PASS smallN_logmass_eta6_class2_N3  
+PASS smallN_logmass_eta6_class2_N4  
+PASS compiled_log_probabilities_eta6_class3  
+PASS smallN_logmass_eta6_class3_N0  
+PASS smallN_logmass_eta6_class3_N1  
+PASS smallN_logmass_eta6_class3_N2  
+PASS smallN_logmass_eta6_class3_N3  
+PASS smallN_logmass_eta6_class3_N4  
+PASS compiled_log_probabilities_eta7_class1  
+PASS smallN_logmass_eta7_class1_N0  
+PASS smallN_logmass_eta7_class1_N1  
+PASS smallN_logmass_eta7_class1_N2  
+PASS smallN_logmass_eta7_class1_N3  
+PASS smallN_logmass_eta7_class1_N4  
+PASS compiled_log_probabilities_eta7_class2  
+PASS smallN_logmass_eta7_class2_N0  
+PASS smallN_logmass_eta7_class2_N1  
+PASS smallN_logmass_eta7_class2_N2  
+PASS smallN_logmass_eta7_class2_N3  
+PASS smallN_logmass_eta7_class2_N4  
+PASS compiled_log_probabilities_eta7_class3  
+PASS smallN_logmass_eta7_class3_N0  
+PASS smallN_logmass_eta7_class3_N1  
+PASS smallN_logmass_eta7_class3_N2  
+PASS smallN_logmass_eta7_class3_N3  
+PASS smallN_logmass_eta7_class3_N4  
+PASS exact_probability_boundary_1_0_0  
+PASS exact_probability_boundary_0_1_0  
+PASS exact_probability_boundary_0_0_1  
+PASS exact_probability_boundary_0.2_0_0.8  
+PASS invalid_class_rejected  
+CALL model$sample {"data":{"n":3,"N":[3,4,2],"observed":[[1,2,0],[0,1,3],[1,0,1]]},"init":{"alpha":[-0.3,0.7,-0.8,0.6,-1.1,0.9],"b0":[-0.006,0.004,0.001,-0.009,0.003,0.002],"v":[0.05,0.2,0.4,0.1,0.8,0.3],"z":[[-0.9,-0.6,-0.3,0,0.3,0.6],[-0.8,-0.5,-0.2,0.1,0.4,0.7],[-0.7,-0.4,-0.1,0.2,0.5,0.8]],"r":[0.17,0.63]},"fixed_param":true,"seed":1001267,"chains":1,"parallel_chains":1,"iter_warmup":0,"iter_sampling":256,"output_dir":"/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_impl/run-20261001T105406Z-attempt03-01a0f4b5/preparation/tests/fixed_parameter","sig_figs":17} 
+Running MCMC with 1 chain...
+
+Chain 1 finished in 0.0 seconds.
+CALL fit$init_model_methods {"data":"synthetic_data.json"} 
+CALL fit$unconstrain_variables {"alpha":[-0.3,0.7,-0.8,0.6,-1.1,0.9],"b0":[-0.006,0.004,0.001,-0.009,0.003,0.002],"v":[0.05,0.2,0.4,0.1,0.8,0.3],"z":[[-0.9,-0.6,-0.3,0,0.3,0.6],[-0.8,-0.5,-0.2,0.1,0.4,0.7],[-0.7,-0.4,-0.1,0.2,0.5,0.8]],"r":[0.17,0.63]} 
+PASS unconstrained_parameter_order  
+PASS compiled_constrain_roundtrip  
+CALL fit$log_prob {"case":"asymmetric","unconstrained_variables":[-0.3,0.7,-0.8,0.6,-1.1,0.9,-0.006,0.004,0.001,-0.009,0.003,0.002,-2.99573227355399,-1.6094379124341,-0.916290731874155,-2.30258509299405,-0.22314355131421,-1.20397280432594,-0.9,-0.8,-0.7,-0.6,-0.5,-0.4,-0.3,-0.2,-0.1,0,0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,-1.58562726374038,0.532216813747308],"jacobian":[false,true]} 
+PASS compiled_lp_no_jacobian_asymmetric  
+PASS compiled_lp_with_constraint_jacobian_asymmetric  
+PASS NCP_centered_density_change_of_variables_asymmetric  
+CALL fit$grad_log_prob {"case":"asymmetric","jacobian":false,"finite_difference_step":"1e-5 * max(1,abs(u[j]))"} 
+PASS finite_gradients_R_finite_difference_asymmetric_jacFALSE  
+CALL fit$grad_log_prob {"case":"asymmetric","jacobian":true,"finite_difference_step":"1e-5 * max(1,abs(u[j]))"} 
+PASS finite_gradients_R_finite_difference_asymmetric_jacTRUE  
+CALL fit$log_prob {"case":"reverse_r","unconstrained_variables":[-0.3,0.7,-0.8,0.6,-1.1,0.9,-0.006,0.004,0.001,-0.009,0.003,0.002,-2.99573227355399,-1.6094379124341,-0.916290731874155,-2.30258509299405,-0.22314355131421,-1.20397280432594,-0.9,-0.8,-0.7,-0.6,-0.5,-0.4,-0.3,-0.2,-0.1,0,0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.532216813747308,-1.58562726374038],"jacobian":[false,true]} 
+PASS compiled_lp_no_jacobian_reverse_r  
+PASS compiled_lp_with_constraint_jacobian_reverse_r  
+PASS NCP_centered_density_change_of_variables_reverse_r  
+CALL fit$grad_log_prob {"case":"reverse_r","jacobian":false,"finite_difference_step":"1e-5 * max(1,abs(u[j]))"} 
+PASS finite_gradients_R_finite_difference_reverse_r_jacFALSE  
+CALL fit$grad_log_prob {"case":"reverse_r","jacobian":true,"finite_difference_step":"1e-5 * max(1,abs(u[j]))"} 
+PASS finite_gradients_R_finite_difference_reverse_r_jacTRUE  
+CALL fit$log_prob {"case":"small_variance","unconstrained_variables":[-0.3,0.7,-0.8,0.6,-1.1,0.9,-0.006,0.004,0.001,-0.009,0.003,0.002,-18.4206807439524,-18.4206807439524,-18.4206807439524,-18.4206807439524,-18.4206807439524,-18.4206807439524,-0.9,-0.8,-0.7,-0.6,-0.5,-0.4,-0.3,-0.2,-0.1,0,0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,-1.58562726374038,0.532216813747308],"jacobian":[false,true]} 
+PASS compiled_lp_no_jacobian_small_variance  
+PASS compiled_lp_with_constraint_jacobian_small_variance  
+PASS NCP_centered_density_change_of_variables_small_variance  
+CALL fit$grad_log_prob {"case":"small_variance","jacobian":false,"finite_difference_step":"1e-5 * max(1,abs(u[j]))"} 
+PASS finite_gradients_R_finite_difference_small_variance_jacFALSE  
+CALL fit$grad_log_prob {"case":"small_variance","jacobian":true,"finite_difference_step":"1e-5 * max(1,abs(u[j]))"} 
+PASS finite_gradients_R_finite_difference_small_variance_jacTRUE  
+CALL fit$log_prob {"case":"rare_classes","unconstrained_variables":[-0.3,0.7,-0.8,0.6,-1.1,0.9,-0.006,0.004,0.001,-0.009,0.003,0.002,-2.99573227355399,-1.6094379124341,-0.916290731874155,-2.30258509299405,-0.22314355131421,-1.20397280432594,-0.9,-0.8,-0.7,-0.6,-0.5,-0.4,-0.3,-0.2,-0.1,0,0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,-23.0258509298405,23.0258508471001],"jacobian":[false,true]} 
+PASS compiled_lp_no_jacobian_rare_classes  
+PASS compiled_lp_with_constraint_jacobian_rare_classes  
+PASS NCP_centered_density_change_of_variables_rare_classes  
+CALL fit$grad_log_prob {"case":"rare_classes","jacobian":false,"finite_difference_step":"1e-5 * max(1,abs(u[j]))"} 
+PASS finite_gradients_R_finite_difference_rare_classes_jacFALSE  
+CALL fit$grad_log_prob {"case":"rare_classes","jacobian":true,"finite_difference_step":"1e-5 * max(1,abs(u[j]))"} 
+PASS finite_gradients_R_finite_difference_rare_classes_jacTRUE  
+CALL fit$log_prob {"case":"large_predictors","unconstrained_variables":[-80,80,-80,80,-80,80,-0.006,0.004,0.001,-0.009,0.003,0.002,-2.99573227355399,-1.6094379124341,-0.916290731874155,-2.30258509299405,-0.22314355131421,-1.20397280432594,-0.9,-0.8,-0.7,-0.6,-0.5,-0.4,-0.3,-0.2,-0.1,0,0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,-1.58562726374038,0.532216813747308],"jacobian":[false,true]} 
+PASS compiled_lp_no_jacobian_large_predictors  
+PASS compiled_lp_with_constraint_jacobian_large_predictors  
+PASS NCP_centered_density_change_of_variables_large_predictors  
+CALL fit$grad_log_prob {"case":"large_predictors","jacobian":false,"finite_difference_step":"1e-5 * max(1,abs(u[j]))"} 
+PASS finite_gradients_R_finite_difference_large_predictors_jacFALSE  
+CALL fit$grad_log_prob {"case":"large_predictors","jacobian":true,"finite_difference_step":"1e-5 * max(1,abs(u[j]))"} 
+PASS finite_gradients_R_finite_difference_large_predictors_jacTRUE  
+PASS class_mixture_is_not_multinomial_at_mean_probability  
+CALL fit$draws {"format":"draws_matrix","retained":256,"warmup":0} 
+PASS fixed_parameters_not_updated  
+PASS GQ_responsibilities_and_log_lik_row1  
+PASS GQ_mu_mapping_row1  
+PASS GQ_same_Z_active_and_RB_row1  
+PASS GQ_responsibilities_and_log_lik_row2  
+PASS GQ_mu_mapping_row2  
+PASS GQ_same_Z_active_and_RB_row2  
+PASS GQ_responsibilities_and_log_lik_row3  
+PASS GQ_mu_mapping_row3  
+PASS GQ_same_Z_active_and_RB_row3  
+PASS GQ_joint_draw_totals  
+PASS generated_Z_has_nonconstant_synthetic_reconstruction  
+PASS lazy_fit_RDS_CSV_roundtrip  
+PASS name_map_has_required_complete_unambiguous_names  
+PASS serial_initialization_matches_LONG  
+PASS QA_rejects_pending  
+PASS QA_rejects_self_review  
+PASS QA_rejects_wrong_hash  
+PASS existing_output_refused  
+PASS all_frozen_sources_unchanged  

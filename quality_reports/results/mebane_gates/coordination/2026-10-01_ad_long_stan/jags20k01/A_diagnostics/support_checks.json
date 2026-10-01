@@ -1,0 +1,8 @@
+{
+  "model": "A",
+  "expected_functionals_are_ballot_counts": false,
+  "A_literal_source_preserved": true,
+  "expected_M_plus_S_gt_observed_W_fraction": 5.24475524475524e-07,
+  "N_total": 452992,
+  "W_total": 97978
+}

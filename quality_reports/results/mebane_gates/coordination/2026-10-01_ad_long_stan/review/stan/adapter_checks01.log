@@ -1,0 +1,4 @@
+Error: unexpected ',' in:
+"                  consumed_sources = records,
+                  R = R.version.string, posterior = as.character(utils::packageVersion("posterior"))),"
+Execution halted

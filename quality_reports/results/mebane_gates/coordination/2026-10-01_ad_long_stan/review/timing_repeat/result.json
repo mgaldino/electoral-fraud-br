@@ -1,0 +1,6 @@
+{
+  "status": "pass",
+  "scenarios": ["success", "compile_failure", "setup_failure"],
+  "actual_MCMC": false,
+  "fake_engine": true
+}

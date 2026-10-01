@@ -1,0 +1,11 @@
+
+test_disappeared_group_is_not_an_error (__main__.SupervisorTests.test_disappeared_group_is_not_an_error) ... ok
+test_leader_exits_but_descendant_is_still_killed (__main__.SupervisorTests.test_leader_exits_but_descendant_is_still_killed) ... ok
+test_leader_survives_grace (__main__.SupervisorTests.test_leader_survives_grace) ... ok
+test_success_keeps_log_and_never_kills (__main__.SupervisorTests.test_success_keeps_log_and_never_kills) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.003s
+
+OK
+

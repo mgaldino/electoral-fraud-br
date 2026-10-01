@@ -1,0 +1,5 @@
+{"utc":"2026-10-01 10:20:05 UTC","model":"D","stage":"setup","type":"start","value":"setup"} 
+{"utc":"2026-10-01 10:20:06 UTC","model":"D","stage":"setup","type":"complete","value":0.081} 
+{"utc":"2026-10-01 10:20:06 UTC","model":"D","stage":"compile","type":"start","value":"compile"} 
+{"utc":"2026-10-01 10:20:06 UTC","model":"D","stage":"compile","type":"failed_elapsed","value":0.036} 
+{"utc":"2026-10-01 10:20:06 UTC","model":"D","stage":"compile","type":"error","value":"fixture compile failure"} 

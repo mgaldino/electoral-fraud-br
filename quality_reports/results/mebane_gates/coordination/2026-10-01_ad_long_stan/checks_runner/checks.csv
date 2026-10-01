@@ -1,0 +1,70 @@
+"check","pass"
+"actual common data match source",TRUE
+"swapped A responses rejected by actual runner",TRUE
+"swapped D observed columns rejected",TRUE
+"unit permutation rejected",TRUE
+"A exact outgoing payload",TRUE
+"D exact outgoing payload",TRUE
+"A four initial states",TRUE
+"A 1 class and RNG",TRUE
+"A 1 six nonzero variances",TRUE
+"A 1 partial pi ordering",TRUE
+"A 1 finite starting observation masses",TRUE
+"A 1 iota.m counts exact",TRUE
+"A 1 iota.s counts exact",TRUE
+"A 1 chi.m counts exact",TRUE
+"A 1 chi.s counts exact",TRUE
+"A 2 class and RNG",TRUE
+"A 2 six nonzero variances",TRUE
+"A 2 partial pi ordering",TRUE
+"A 2 finite starting observation masses",TRUE
+"A 2 iota.m counts exact",TRUE
+"A 2 iota.s counts exact",TRUE
+"A 2 chi.m counts exact",TRUE
+"A 2 chi.s counts exact",TRUE
+"A 3 class and RNG",TRUE
+"A 3 six nonzero variances",TRUE
+"A 3 partial pi ordering",TRUE
+"A 3 finite starting observation masses",TRUE
+"A 3 iota.m counts exact",TRUE
+"A 3 iota.s counts exact",TRUE
+"A 3 chi.m counts exact",TRUE
+"A 3 chi.s counts exact",TRUE
+"A 4 class and RNG",TRUE
+"A 4 six nonzero variances",TRUE
+"A 4 partial pi ordering",TRUE
+"A 4 finite starting observation masses",TRUE
+"A 4 iota.m counts exact",TRUE
+"A 4 iota.s counts exact",TRUE
+"A 4 chi.m counts exact",TRUE
+"A 4 chi.s counts exact",TRUE
+"D four initial states",TRUE
+"D 1 class and RNG",TRUE
+"D 1 six nonzero variances",TRUE
+"D 1 partial pi ordering",TRUE
+"D 1 finite starting observation masses",TRUE
+"D 2 class and RNG",TRUE
+"D 2 six nonzero variances",TRUE
+"D 2 partial pi ordering",TRUE
+"D 2 finite starting observation masses",TRUE
+"D 3 class and RNG",TRUE
+"D 3 six nonzero variances",TRUE
+"D 3 partial pi ordering",TRUE
+"D 3 finite starting observation masses",TRUE
+"D 4 class and RNG",TRUE
+"D 4 six nonzero variances",TRUE
+"D 4 partial pi ordering",TRUE
+"D 4 finite starting observation masses",TRUE
+"between-chain separation detected",TRUE
+"sample-only constant stays inconclusive",TRUE
+"analytic fixture labelled separately",TRUE
+"empirical contract permits no analytic exemptions",TRUE
+"range alone can fail finite good metrics",TRUE
+"range boundary inclusive",TRUE
+"required NA cannot pass",TRUE
+"bad adaptation is inconclusive",TRUE
+"missing run is inconclusive",TRUE
+"scalar node preserves chains",TRUE
+"indexed node preserves chains",TRUE
+"wrong draw shape rejected",TRUE
+"absent node rejected",TRUE

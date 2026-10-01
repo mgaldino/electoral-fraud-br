@@ -1,0 +1,187 @@
+executor_id: 01a0f4b5-4434-7b83-91b9-69ced11b40ba 
+Stan source SHA256: b38de93ef22b826233f35898b5d3becfae1fb46df774ead065b8d4133c127c9b 
+
+--- Translating Stan model to C++ code ---
+bin/stanc --name='d_multinomial_model' --o=/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_impl/run-20261001T105406Z-attempt03-01a0f4b5/tmp/RtmpYOeviT/model-115aa34ed9e82.hpp /Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_impl/run-20261001T105406Z-attempt03-01a0f4b5/tmp/RtmpYOeviT/model-115aa34ed9e82.stan
+
+--- Compiling C++ code ---
+clang++ -Wno-deprecated-declarations -std=c++17 -Wno-unknown-warning-option -Wno-tautological-compare -Wno-sign-compare -D_REENTRANT -ffp-contract=off -Wno-ignored-attributes      -I stan/lib/stan_math/lib/tbb_2020.3/include    -O3 -I src -I stan/src -I stan/lib/rapidjson_1.1.0/ -I lib/CLI11-1.9.1/ -I stan/lib/stan_math/ -I stan/lib/stan_math/lib/eigen_3.4.0 -I stan/lib/stan_math/lib/boost_1.87.0 -I stan/lib/stan_math/lib/sundials_6.1.1/include -I stan/lib/stan_math/lib/sundials_6.1.1/src/sundials    -DBOOST_DISABLE_ASSERTS          -c  -x c++ -o /Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_impl/run-20261001T105406Z-attempt03-01a0f4b5/tmp/RtmpYOeviT/model-115aa34ed9e82.o /Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_impl/run-20261001T105406Z-attempt03-01a0f4b5/tmp/RtmpYOeviT/model-115aa34ed9e82.hpp
+
+--- Linking model ---
+clang++ -Wno-deprecated-declarations -std=c++17 -Wno-unknown-warning-option -Wno-tautological-compare -Wno-sign-compare -D_REENTRANT -ffp-contract=off -Wno-ignored-attributes      -I stan/lib/stan_math/lib/tbb_2020.3/include    -O3 -I src -I stan/src -I stan/lib/rapidjson_1.1.0/ -I lib/CLI11-1.9.1/ -I stan/lib/stan_math/ -I stan/lib/stan_math/lib/eigen_3.4.0 -I stan/lib/stan_math/lib/boost_1.87.0 -I stan/lib/stan_math/lib/sundials_6.1.1/include -I stan/lib/stan_math/lib/sundials_6.1.1/src/sundials    -DBOOST_DISABLE_ASSERTS               -Wl,-L,"/Users/manoelgaldino/.cmdstan/cmdstan-2.37.0/stan/lib/stan_math/lib/tbb"   -Wl,-rpath,"/Users/manoelgaldino/.cmdstan/cmdstan-2.37.0/stan/lib/stan_math/lib/tbb"      /Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_impl/run-20261001T105406Z-attempt03-01a0f4b5/tmp/RtmpYOeviT/model-115aa34ed9e82.o src/cmdstan/main.o       -ltbb   stan/lib/stan_math/lib/sundials_6.1.1/lib/libsundials_nvecserial.a stan/lib/stan_math/lib/sundials_6.1.1/lib/libsundials_cvodes.a stan/lib/stan_math/lib/sundials_6.1.1/lib/libsundials_idas.a stan/lib/stan_math/lib/sundials_6.1.1/lib/libsundials_kinsol.a  stan/lib/stan_math/lib/tbb/libtbb.dylib stan/lib/stan_math/lib/tbb/libtbbmalloc.dylib stan/lib/stan_math/lib/tbb/libtbbmalloc_proxy.dylib -o /Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_impl/run-20261001T105406Z-attempt03-01a0f4b5/tmp/RtmpYOeviT/model-115aa34ed9e82
+rm /Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_impl/run-20261001T105406Z-attempt03-01a0f4b5/tmp/RtmpYOeviT/model-115aa34ed9e82.o /Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_impl/run-20261001T105406Z-attempt03-01a0f4b5/tmp/RtmpYOeviT/model-115aa34ed9e82.hpp
+
+Generated extern "C" functions 
+--------------------------------------------------------
+
+
+#include <Rcpp.h>
+#ifdef RCPP_USE_GLOBAL_ROSTREAM
+Rcpp::Rostream<true>&  Rcpp::Rcout = Rcpp::Rcpp_cout_get();
+Rcpp::Rostream<false>& Rcpp::Rcerr = Rcpp::Rcpp_cerr_get();
+#endif
+
+// model_ptr
+Rcpp::List model_ptr(std::string data_path, boost::uint32_t seed);
+RcppExport SEXP sourceCpp_1_model_ptr(SEXP data_pathSEXP, SEXP seedSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< std::string >::type data_path(data_pathSEXP);
+    Rcpp::traits::input_parameter< boost::uint32_t >::type seed(seedSEXP);
+    rcpp_result_gen = Rcpp::wrap(model_ptr(data_path, seed));
+    return rcpp_result_gen;
+END_RCPP
+}
+// log_prob
+double log_prob(SEXP ext_model_ptr, Eigen::VectorXd upars, bool jac_adjust);
+RcppExport SEXP sourceCpp_1_log_prob(SEXP ext_model_ptrSEXP, SEXP uparsSEXP, SEXP jac_adjustSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< SEXP >::type ext_model_ptr(ext_model_ptrSEXP);
+    Rcpp::traits::input_parameter< Eigen::VectorXd >::type upars(uparsSEXP);
+    Rcpp::traits::input_parameter< bool >::type jac_adjust(jac_adjustSEXP);
+    rcpp_result_gen = Rcpp::wrap(log_prob(ext_model_ptr, upars, jac_adjust));
+    return rcpp_result_gen;
+END_RCPP
+}
+// grad_log_prob
+Rcpp::NumericVector grad_log_prob(SEXP ext_model_ptr, Eigen::VectorXd upars, bool jac_adjust);
+RcppExport SEXP sourceCpp_1_grad_log_prob(SEXP ext_model_ptrSEXP, SEXP uparsSEXP, SEXP jac_adjustSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< SEXP >::type ext_model_ptr(ext_model_ptrSEXP);
+    Rcpp::traits::input_parameter< Eigen::VectorXd >::type upars(uparsSEXP);
+    Rcpp::traits::input_parameter< bool >::type jac_adjust(jac_adjustSEXP);
+    rcpp_result_gen = Rcpp::wrap(grad_log_prob(ext_model_ptr, upars, jac_adjust));
+    return rcpp_result_gen;
+END_RCPP
+}
+// hessian
+Rcpp::List hessian(SEXP ext_model_ptr, Eigen::VectorXd upars, bool jacobian);
+RcppExport SEXP sourceCpp_1_hessian(SEXP ext_model_ptrSEXP, SEXP uparsSEXP, SEXP jacobianSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< SEXP >::type ext_model_ptr(ext_model_ptrSEXP);
+    Rcpp::traits::input_parameter< Eigen::VectorXd >::type upars(uparsSEXP);
+    Rcpp::traits::input_parameter< bool >::type jacobian(jacobianSEXP);
+    rcpp_result_gen = Rcpp::wrap(hessian(ext_model_ptr, upars, jacobian));
+    return rcpp_result_gen;
+END_RCPP
+}
+// get_num_upars
+size_t get_num_upars(SEXP ext_model_ptr);
+RcppExport SEXP sourceCpp_1_get_num_upars(SEXP ext_model_ptrSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< SEXP >::type ext_model_ptr(ext_model_ptrSEXP);
+    rcpp_result_gen = Rcpp::wrap(get_num_upars(ext_model_ptr));
+    return rcpp_result_gen;
+END_RCPP
+}
+// get_param_metadata
+Rcpp::List get_param_metadata(SEXP ext_model_ptr);
+RcppExport SEXP sourceCpp_1_get_param_metadata(SEXP ext_model_ptrSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< SEXP >::type ext_model_ptr(ext_model_ptrSEXP);
+    rcpp_result_gen = Rcpp::wrap(get_param_metadata(ext_model_ptr));
+    return rcpp_result_gen;
+END_RCPP
+}
+// unconstrain_variables
+Eigen::VectorXd unconstrain_variables(SEXP ext_model_ptr, Eigen::VectorXd variables);
+RcppExport SEXP sourceCpp_1_unconstrain_variables(SEXP ext_model_ptrSEXP, SEXP variablesSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< SEXP >::type ext_model_ptr(ext_model_ptrSEXP);
+    Rcpp::traits::input_parameter< Eigen::VectorXd >::type variables(variablesSEXP);
+    rcpp_result_gen = Rcpp::wrap(unconstrain_variables(ext_model_ptr, variables));
+    return rcpp_result_gen;
+END_RCPP
+}
+// unconstrain_draws
+Rcpp::List unconstrain_draws(SEXP ext_model_ptr, Eigen::MatrixXd variables);
+RcppExport SEXP sourceCpp_1_unconstrain_draws(SEXP ext_model_ptrSEXP, SEXP variablesSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< SEXP >::type ext_model_ptr(ext_model_ptrSEXP);
+    Rcpp::traits::input_parameter< Eigen::MatrixXd >::type variables(variablesSEXP);
+    rcpp_result_gen = Rcpp::wrap(unconstrain_draws(ext_model_ptr, variables));
+    return rcpp_result_gen;
+END_RCPP
+}
+// constrain_variables
+std::vector<double> constrain_variables(SEXP ext_model_ptr, SEXP base_rng, std::vector<double> upars, bool return_trans_pars, bool return_gen_quants);
+RcppExport SEXP sourceCpp_1_constrain_variables(SEXP ext_model_ptrSEXP, SEXP base_rngSEXP, SEXP uparsSEXP, SEXP return_trans_parsSEXP, SEXP return_gen_quantsSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< SEXP >::type ext_model_ptr(ext_model_ptrSEXP);
+    Rcpp::traits::input_parameter< SEXP >::type base_rng(base_rngSEXP);
+    Rcpp::traits::input_parameter< std::vector<double> >::type upars(uparsSEXP);
+    Rcpp::traits::input_parameter< bool >::type return_trans_pars(return_trans_parsSEXP);
+    Rcpp::traits::input_parameter< bool >::type return_gen_quants(return_gen_quantsSEXP);
+    rcpp_result_gen = Rcpp::wrap(constrain_variables(ext_model_ptr, base_rng, upars, return_trans_pars, return_gen_quants));
+    return rcpp_result_gen;
+END_RCPP
+}
+// unconstrained_param_names
+std::vector<std::string> unconstrained_param_names(SEXP ext_model_ptr, bool return_trans_pars, bool return_gen_quants);
+RcppExport SEXP sourceCpp_1_unconstrained_param_names(SEXP ext_model_ptrSEXP, SEXP return_trans_parsSEXP, SEXP return_gen_quantsSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< SEXP >::type ext_model_ptr(ext_model_ptrSEXP);
+    Rcpp::traits::input_parameter< bool >::type return_trans_pars(return_trans_parsSEXP);
+    Rcpp::traits::input_parameter< bool >::type return_gen_quants(return_gen_quantsSEXP);
+    rcpp_result_gen = Rcpp::wrap(unconstrained_param_names(ext_model_ptr, return_trans_pars, return_gen_quants));
+    return rcpp_result_gen;
+END_RCPP
+}
+// constrained_param_names
+std::vector<std::string> constrained_param_names(SEXP ext_model_ptr, bool return_trans_pars, bool return_gen_quants);
+RcppExport SEXP sourceCpp_1_constrained_param_names(SEXP ext_model_ptrSEXP, SEXP return_trans_parsSEXP, SEXP return_gen_quantsSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< SEXP >::type ext_model_ptr(ext_model_ptrSEXP);
+    Rcpp::traits::input_parameter< bool >::type return_trans_pars(return_trans_parsSEXP);
+    Rcpp::traits::input_parameter< bool >::type return_gen_quants(return_gen_quantsSEXP);
+    rcpp_result_gen = Rcpp::wrap(constrained_param_names(ext_model_ptr, return_trans_pars, return_gen_quants));
+    return rcpp_result_gen;
+END_RCPP
+}
+
+Generated R functions 
+-------------------------------------------------------
+
+`.sourceCpp_1_DLLInfo` <- dyn.load('/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_impl/run-20261001T105406Z-attempt03-01a0f4b5/tmp/RtmpYOeviT/sourceCpp-aarch64-apple-darwin20-1.1.1/sourcecpp_115aa10ddd9e4/sourceCpp_2.so')
+
+model_ptr <- Rcpp:::sourceCppFunction(function(data_path, seed) {}, FALSE, `.sourceCpp_1_DLLInfo`, 'sourceCpp_1_model_ptr')
+log_prob <- Rcpp:::sourceCppFunction(function(ext_model_ptr, upars, jac_adjust) {}, FALSE, `.sourceCpp_1_DLLInfo`, 'sourceCpp_1_log_prob')
+grad_log_prob <- Rcpp:::sourceCppFunction(function(ext_model_ptr, upars, jac_adjust) {}, FALSE, `.sourceCpp_1_DLLInfo`, 'sourceCpp_1_grad_log_prob')
+hessian <- Rcpp:::sourceCppFunction(function(ext_model_ptr, upars, jacobian) {}, FALSE, `.sourceCpp_1_DLLInfo`, 'sourceCpp_1_hessian')
+get_num_upars <- Rcpp:::sourceCppFunction(function(ext_model_ptr) {}, FALSE, `.sourceCpp_1_DLLInfo`, 'sourceCpp_1_get_num_upars')
+get_param_metadata <- Rcpp:::sourceCppFunction(function(ext_model_ptr) {}, FALSE, `.sourceCpp_1_DLLInfo`, 'sourceCpp_1_get_param_metadata')
+unconstrain_variables <- Rcpp:::sourceCppFunction(function(ext_model_ptr, variables) {}, FALSE, `.sourceCpp_1_DLLInfo`, 'sourceCpp_1_unconstrain_variables')
+unconstrain_draws <- Rcpp:::sourceCppFunction(function(ext_model_ptr, variables) {}, FALSE, `.sourceCpp_1_DLLInfo`, 'sourceCpp_1_unconstrain_draws')
+constrain_variables <- Rcpp:::sourceCppFunction(function(ext_model_ptr, base_rng, upars, return_trans_pars, return_gen_quants) {}, FALSE, `.sourceCpp_1_DLLInfo`, 'sourceCpp_1_constrain_variables')
+unconstrained_param_names <- Rcpp:::sourceCppFunction(function(ext_model_ptr, return_trans_pars, return_gen_quants) {}, FALSE, `.sourceCpp_1_DLLInfo`, 'sourceCpp_1_unconstrained_param_names')
+constrained_param_names <- Rcpp:::sourceCppFunction(function(ext_model_ptr, return_trans_pars, return_gen_quants) {}, FALSE, `.sourceCpp_1_DLLInfo`, 'sourceCpp_1_constrained_param_names')
+
+rm(`.sourceCpp_1_DLLInfo`)
+
+Building shared library
+--------------------------------------------------------
+
+DIR: /Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_impl/run-20261001T105406Z-attempt03-01a0f4b5/tmp/RtmpYOeviT/sourceCpp-aarch64-apple-darwin20-1.1.1/sourcecpp_115aa10ddd9e4
+
+/Library/Frameworks/R.framework/Resources/bin/R CMD SHLIB -o 'sourceCpp_2.so' 'file115aa1d372ad8.cpp' 

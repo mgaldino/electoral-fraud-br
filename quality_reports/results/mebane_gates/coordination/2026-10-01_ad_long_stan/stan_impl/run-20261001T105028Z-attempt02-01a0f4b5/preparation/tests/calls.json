@@ -1,0 +1,12 @@
+{
+  "executor_id": "01a0f4b5-4434-7b83-91b9-69ced11b40ba",
+  "empirical_sampling": false,
+  "calls": [
+    {
+      "api": "model$expose_functions",
+      "arguments": {
+        "source_sha256": "b38de93ef22b826233f35898b5d3becfae1fb46df774ead065b8d4133c127c9b"
+      }
+    }
+  ]
+}

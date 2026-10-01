@@ -1,0 +1,7 @@
+Error in parse(n = -1, file = file, srcfile = NULL, keep.source = FALSE) : 
+  317:76: unexpected ')'
+316:   invisible(list(passed = sum(vapply(results, `[[`, logical(1), "pass")),
+317:                  failed = sum(!vapply(results, `[[`, logical(1), "pass")))))
+                                                                                ^
+Calls: sys.source -> parse
+Execution halted
