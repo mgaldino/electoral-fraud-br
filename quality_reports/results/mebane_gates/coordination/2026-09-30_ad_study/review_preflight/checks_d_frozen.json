@@ -1,0 +1,148 @@
+{
+  "status": "pass",
+  "checks": [
+    {
+      "id": "D-frozen-source-hash",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "all-stochastic-nodes-conditioned-no-samplers",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "native-coda-four-chains-one-deterministic-read",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "native-extraction-mu.tau",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "precision-is-inverse-variance-tau",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "native-extraction-mu.nu",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "precision-is-inverse-variance-nu",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "native-extraction-mu.iota.m",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "precision-is-inverse-variance-iota.m",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "native-extraction-mu.iota.s",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "precision-is-inverse-variance-iota.s",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "native-extraction-mu.chi.m",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "precision-is-inverse-variance-chi.m",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "native-extraction-mu.chi.s",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "precision-is-inverse-variance-chi.s",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "native-probability-1",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "native-probability-2",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "native-probability-3",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "pi-partial-order-allows-third-above-second",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "R-loglik-independent-dmultinom-1",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "R-conditional-mean-covariance-1",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "R-loglik-independent-dmultinom-2",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "R-conditional-mean-covariance-2",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "R-loglik-independent-dmultinom-3",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "R-conditional-mean-covariance-3",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "R-loglik-independent-dmultinom-4",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "R-conditional-mean-covariance-4",
+      "pass": true,
+      "detail": {}
+    }
+  ],
+  "samplers": {},
+  "empirical_MCMC": false,
+  "posterior_fit": false,
+  "JAGS_scope": "four synthetic rows; all stochastic nodes fixed as data; one deterministic coda read per chain",
+  "created_utc": "2026-10-01 00:31:04 UTC",
+  "reviewer_id": "01a0f4b8-962b-77a3-a418-6247c6219e8b",
+  "D_model_sha256": "6ddb9624f60b15e196cc27ed9694852c40b6553a684a9962003168da4ecfaf5b",
+  "D_helper_sha256": "e5154c01c6f111cc47d5e9d9f49654f1ee081bb4001664038c840b8c0d86710a"
+}

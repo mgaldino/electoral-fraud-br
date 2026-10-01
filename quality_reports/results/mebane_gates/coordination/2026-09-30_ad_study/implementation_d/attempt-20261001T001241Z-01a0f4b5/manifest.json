@@ -1,0 +1,12 @@
+{
+  "attempt_id": "attempt-20261001T001241Z-01a0f4b5",
+  "executor_id": "01a0f4b5-4434-7b83-91b9-69ced11b40ba",
+  "status": "passed_preflight_superseded_by_expanded_checks",
+  "exit_code": 0,
+  "source_snapshot_manifest_sha256": "0522c606dc1d529d7cc965db4d5b6a91ebbcad9002b22b52864b286e51f304b5",
+  "test_log_sha256": "6ffa1dce1f8043c2b4c9a914dc6b1f157c8156f9f659ec201e322113a2cd2442",
+  "test_source_sha256": "3b925eecf95851425651d1d2826d44c219668dc96ffb22289eaf32bf4a86cbbc",
+  "model_r_sha256": "e5154c01c6f111cc47d5e9d9f49654f1ee081bb4001664038c840b8c0d86710a",
+  "model_jags_sha256": "6ddb9624f60b15e196cc27ed9694852c40b6553a684a9962003168da4ecfaf5b",
+  "no_empirical_pilot": true
+}

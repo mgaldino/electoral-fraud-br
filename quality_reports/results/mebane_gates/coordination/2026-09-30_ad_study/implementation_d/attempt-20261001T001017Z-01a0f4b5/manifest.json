@@ -1,0 +1,13 @@
+{
+  "attempt_id": "attempt-20261001T001017Z-01a0f4b5",
+  "executor_id": "01a0f4b5-4434-7b83-91b9-69ced11b40ba",
+  "status": "failed_preflight",
+  "exit_code": 1,
+  "failure": "jags.version() object cannot be coerced by as.numeric in test; before mathematical grid or JAGS model compile",
+  "source_snapshot_manifest_sha256": "147418e90d8e1e1a89159e7560861869f3e02f95a543450225380b93218a346a",
+  "test_log_sha256": "68910085e022aa03914ae627934b3bfdafd06d090a797ef1d0b872adf0e8d68b",
+  "test_source_sha256": "5b42d5cf749c3f0ed77e4e628ff0ac548db197549de7cbc0dcbbbdd224d4e3c1",
+  "model_r_sha256": "e5154c01c6f111cc47d5e9d9f49654f1ee081bb4001664038c840b8c0d86710a",
+  "model_jags_sha256": "6ddb9624f60b15e196cc27ed9694852c40b6553a684a9962003168da4ecfaf5b",
+  "no_empirical_pilot": true
+}

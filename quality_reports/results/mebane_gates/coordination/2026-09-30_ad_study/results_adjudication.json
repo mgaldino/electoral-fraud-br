@@ -1,0 +1,10 @@
+{
+  "schema_version": "1.0",
+  "adjudication_id": "AD-DC2010:pilot01-comparison01",
+  "source": {"reviewed_artifact": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/comparison01/manifest.json", "sha256": "3bfbdaf1018518e09f0abe78deb2554a92906692e64e32d6570f0b3f79062545", "artifact_intact": true},
+  "contract": {"required": false, "path": null, "sha256": null, "contract_id": null, "artifact_sha256": null, "status": null, "stale": false},
+  "review_sources": [{"review_id": "AD-4-RESULTS", "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/review_results/review.json", "sha256": "8e1468d21bae539347e4d7b2c312fa8b77159949988503b2a944b95bc1dbc5a5"}],
+  "findings": [],
+  "summary": {"total": 0, "confirmed": 0, "partial": 0, "refuted": 0, "unresolved": 0, "held_decisions": 0},
+  "adjudication": {"verdict": "NO_CONFIRMED_DEFECTS", "checked_at": "2026-09-30", "reasons": ["Independent review verified 46 central targets from raw by chain and all 3913 mandatory decisions; 91 result checks and 22 report/PDF checks passed.", "The coordinator inspected exact review, source bindings and actual summaries. Fidelity of the delivered comparison is accepted. Both A and D remain computationally_inconclusive, with large global R-hat and low ESS, not only undefined discrete diagnostics.", "The report/PDF, time denominators and same-case input correspondence are confirmed. Local R-hat/ESS were not all independently recomputed from raw; their reviewed processor and full decision-rule recheck are the scoped evidence.", "This closes only the bounded experimental delivery. It does not approve either posterior, electoral inference, identification, production, historical G3, or external numerical replication G10. No additional MCMC is launched."]}
+}

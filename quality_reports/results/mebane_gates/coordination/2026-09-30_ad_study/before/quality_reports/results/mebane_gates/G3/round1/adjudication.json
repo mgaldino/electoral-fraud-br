@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.0",
+  "adjudication_id": "mebane-G3:round1:revision3-closure",
+  "gate_id": "G3",
+  "round": "round1",
+  "status": "inconclusive",
+  "contract_sha256": "1b26bbed0577e159a57af93567f14d38d511ea7f26216ca6d5aba22e56a2dacf",
+  "candidate_manifest_sha256": "63855471a88dbfc3840b1172aef71118f7cffbdfe425e0241f1d689bf5e67966",
+  "review_sha256": "c5fee3d48a7d23615bde07e866622cbea26964693ea40738e8aeb0dfe5c72955",
+  "coordinator_id": "019d795a-acfa-72c2-a210-d55a46c606c2",
+  "source": {
+    "reviewed_artifact": "quality_reports/results/mebane_gates/G3/round1/revision3/candidate_manifest.json",
+    "sha256": "63855471a88dbfc3840b1172aef71118f7cffbdfe425e0241f1d689bf5e67966",
+    "artifact_intact": true
+  },
+  "contract": {"required": false, "path": null, "sha256": null, "contract_id": null, "artifact_sha256": null, "status": null, "stale": false},
+  "review_sources": [
+    {"review_id": "G3-QA-FIDELIDADE-R3-FINAL", "path": "quality_reports/results/mebane_gates/G3/round1/review/review.json", "sha256": "c5fee3d48a7d23615bde07e866622cbea26964693ea40738e8aeb0dfe5c72955"},
+    {"review_id": "QA-DOCUMENTARY-SUPPLEMENT", "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/review/documentary_attempt01/result.json", "sha256": "1a31547fad57217106c5a1764de28f62664745e08793c0798fcaddd2ec17b822"}
+  ],
+  "findings": [],
+  "summary": {"total": 0, "confirmed": 0, "partial": 0, "refuted": 0, "unresolved": 0, "held_decisions": 0},
+  "adjudication": {
+    "verdict": "NO_CONFIRMED_DEFECTS",
+    "checked_at": "2026-09-30",
+    "reasons": [
+      "This verdict concerns outstanding defects in the bounded seven-source documentary repair only, not scientific validity of G3.",
+      "The earlier confirmed documentary finding is resolved within its seven-hash scope after independent verification; the original review is not rewritten.",
+      "The whole gate is inconclusive because source support and prospective diagnostic decisions remain open."
+    ]
+  },
+  "resolved_prior_findings": [
+    {"id": "G3-QA-R2-INPUT-01", "status": "CONFIRMED", "resolved": true, "resolution_scope": "Exactly seven missing historical source identities, five affected commands and preserved logs.", "evidence": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/provenance_repair/closure_manifest.json", "evidence_sha256": "b6b56b80a7b40863d34f5f48b1de6641c1c54572121d949e9e6052ec46723965", "independent_checks": 914},
+    {"id": "G3-COORD-DRAW-01", "status": "CONFIRMED", "resolved": true, "resolution_scope": "One explicitly new conditioned reproduction was persisted in revision2. Old missing draws were not recovered."},
+    {"id": "G3-COORD-DIAG-01", "status": "CONFIRMED", "resolved": true, "resolution_scope": "Revision3 uses the unchanged raw draws in a 2000 x 4 matrix. QA reproduced all postprocessing outputs; no new sampling."},
+    {"id": "G3-QA-R2-META-01", "status": "CONFIRMED", "resolved": true, "resolution_scope": "Active revision3 metadata only; historical metadata are preserved."}
+  ],
+  "scientific_requirements_not_satisfied": [
+    {"id": "F1", "status": "CONFIRMED", "held_decision": true, "proposed_fix_assessment": "needs_design", "evidence": "Literal source permits pW=499.5 on positive parent mass. No unrestricted valid generator is established."},
+    {"id": "F2", "status": "CONFIRMED", "held_decision": true, "proposed_fix_assessment": "needs_design", "evidence": "Literal source permits N=2,A=1,W=2 with mass 1/32, outside physical support."},
+    {"id": "G3-FROZEN-DISCRETE-DIAGNOSTIC-LIMIT", "status": "CONFIRMED", "held_decision": true, "proposed_fix_assessment": "needs_design", "evidence": "Nine nonconstant tail ESS values are undefined. This does not satisfy the frozen criterion and is not by itself evidence of nonconvergence. No criterion changed retrospectively."}
+  ],
+  "historical_input_closure": {
+    "seven_source_gap_closed": true,
+    "universal_closure_claimed": false,
+    "limit": "The event sequence does not reconstruct test_ar02_interface.R; no version was invented. The supplement covers the seven adjudicated versions, not every historical runtime input."
+  },
+  "scope": "Close the reviewed G3 round as inconclusive. Approve only the stated documentary repairs; preserve the literal benchmark and all historical artifacts.",
+  "production_engine_decision": "No engine approved for production. JAGS remains literal software reference; historical Stan is not an exact equivalent.",
+  "production_validated": false,
+  "new_estimation_this_closure": false,
+  "G4_released": false,
+  "G10_released": false
+}

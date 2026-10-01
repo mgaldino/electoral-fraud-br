@@ -1,0 +1,25 @@
+{
+  "status": "sampled_not_diagnosed",
+  "adaptation_adequate": true,
+  "elapsed_seconds": 15,
+  "phases": {
+    "setup": {
+      "elapsed": 1
+    },
+    "compile": {
+      "elapsed": 1
+    },
+    "adapt": {
+      "elapsed": 2
+    },
+    "burn": {
+      "elapsed": 4
+    },
+    "sample": {
+      "elapsed": 6
+    },
+    "persist_raw": {
+      "elapsed": 1
+    }
+  }
+}

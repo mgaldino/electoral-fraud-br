@@ -1,0 +1,178 @@
+PASS source-RDA-sha 
+PASS literal-A-sha 
+PASS G2-sha 
+PASS full-outgoing-payload-matches-archived-source 
+PASS independent-row-mapping 
+PASS design-Xa 
+PASS design-Xw 
+PASS design-X.iota.m 
+PASS design-X.iota.s 
+PASS design-X.chi.m 
+PASS design-X.chi.s 
+PASS reject-swap-A 
+PASS reject-swap-D 
+PASS reject-permute-ID 
+PASS reject-permute-all-rows 
+PASS A 1 init-nodes 
+PASS A 2 init-nodes 
+PASS A 3 init-nodes 
+PASS A 4 init-nodes 
+PASS D 1 init-nodes 
+PASS D 2 init-nodes 
+PASS D 3 init-nodes 
+PASS D 4 init-nodes 
+PASS rule-rhat-strict 
+PASS rule-ESS-inclusive 
+PASS rule-bulk-below 
+PASS rule-tail-below 
+PASS rule-range-inclusive 
+PASS rule-range-above 
+PASS rule-NA 
+PASS sample-constant-NA-inconclusive 
+PASS adaptation-fails-closed 
+PASS completion-fails-closed 
+SYNTHETIC MODEL FORMAT A no JAGS/MCMC
+$model
+[1] "A"
+
+$status
+[1] "computationally_inconclusive"
+
+$paired_verdict
+[1] "not_assigned_by_per_model_processor"
+
+$mandatory_targets
+[1] 2171
+
+$failed_targets
+[1] 1155
+
+$undefined_required_targets
+[1] 1004
+
+$primary_global_failed
+[1] "tau.alpha"    "nu.alpha"     "iota.m.alpha" "iota.s.alpha" "chi.m.alpha" 
+[6] "chi.s.alpha"  "M_total"      "S_total"     
+
+$elapsed_seconds
+[1] 20.57252
+
+$raw_sha256
+[1] "3f18a4792695db01b7526876124091be89538c9bca9769ec27aa4646c013f396"
+
+$contract_sha256
+[1] "d17b7f508a7ce87eec3ca71ed7df67666b528c755e005ec9e1299e5ff9deb509"
+
+$shape
+iterations     chains 
+      2000          4 
+
+$production_approved
+[1] FALSE
+
+$G10_approved
+[1] FALSE
+
+PASS A actual-mandatory-target-count 
+PASS A no-duplicate-diagnostic-targets 
+PASS A shape-iteration-chain 
+PASS A joint-M-exact 
+PASS A joint-S-exact 
+PASS A fixed-denominator 
+PASS A all-direct-extractions-chain-means 
+PASS A actual-Rhat-preserves-chains 
+PASS A all-class-probabilities-rowmapping 
+PASS A class-count-range-divided-by-n 
+PASS A ties-preserved 
+PASS A every-row-v2-decision 
+PASS A synthetic-inconclusive-not-pair-release 
+PASS A postprocess-manifest-all-hashes 
+PASS A process-refuses-overwrite 
+SYNTHETIC MODEL FORMAT D no JAGS/MCMC
+$model
+[1] "D"
+
+$status
+[1] "computationally_inconclusive"
+
+$paired_verdict
+[1] "not_assigned_by_per_model_processor"
+
+$mandatory_targets
+[1] 1742
+
+$failed_targets
+[1] 726
+
+$undefined_required_targets
+[1] 432
+
+$primary_global_failed
+[1] "tau.alpha"    "nu.alpha"     "iota.m.alpha" "iota.s.alpha" "chi.m.alpha" 
+[6] "chi.s.alpha"  "M_total"      "S_total"     
+
+$elapsed_seconds
+[1] 20.53144
+
+$raw_sha256
+[1] "77ff5bb3608be05a17b6d3f455020046cd9151e41a2413e4f9ccb80fad5253bc"
+
+$contract_sha256
+[1] "d17b7f508a7ce87eec3ca71ed7df67666b528c755e005ec9e1299e5ff9deb509"
+
+$shape
+iterations     chains 
+      2000          4 
+
+$production_approved
+[1] FALSE
+
+$G10_approved
+[1] FALSE
+
+PASS D actual-mandatory-target-count 
+PASS D no-duplicate-diagnostic-targets 
+PASS D shape-iteration-chain 
+PASS D joint-M-exact 
+PASS D joint-S-exact 
+PASS D fixed-denominator 
+PASS D all-direct-extractions-chain-means 
+PASS D actual-Rhat-preserves-chains 
+PASS D all-class-probabilities-rowmapping 
+PASS D class-count-range-divided-by-n 
+PASS D ties-preserved 
+PASS D every-row-v2-decision 
+PASS D synthetic-inconclusive-not-pair-release 
+PASS D-conditional-means-exact 
+PASS D-count-array-and-capacities 
+PASS D-count-joint-aggregation 
+PASS D-all-conditional-draws-same-Z-and-seed 
+PASS D postprocess-manifest-all-hashes 
+PASS D process-refuses-overwrite 
+PASS 67 independent executable checks; synthetic payloads only
+R version 4.4.2 (2024-10-31)
+Platform: aarch64-apple-darwin20
+Running under: macOS Sonoma 14.7.3
+
+Matrix products: default
+BLAS:   /Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/lib/libRblas.0.dylib 
+LAPACK: /Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/lib/libRlapack.dylib;  LAPACK version 3.12.0
+
+locale:
+[1] C
+
+time zone: America/Sao_Paulo
+tzcode source: internal
+
+attached base packages:
+[1] stats     graphics  grDevices utils     datasets  methods   base     
+
+loaded via a namespace (and not attached):
+ [1] digest_0.6.39        tensorA_0.36.2.1     backports_1.5.1     
+ [4] lattice_0.22-6       coda_0.19-4.1        magrittr_2.0.5      
+ [7] posterior_1.7.0      matrixStats_1.5.0    glue_1.8.0          
+[10] abind_1.4-8          tibble_3.3.1         pkgconfig_2.0.3     
+[13] generics_0.1.4       lifecycle_1.0.5      cli_3.6.6           
+[16] grid_4.4.2           vctrs_0.7.2          compiler_4.4.2      
+[19] distributional_0.7.0 checkmate_2.3.4      pillar_1.11.1       
+[22] rlang_1.2.0          jsonlite_2.0.0      

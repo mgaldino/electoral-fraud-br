@@ -1,0 +1,73 @@
+model {
+  k <- 0.7
+
+  pi.aux1 ~ dunif(0, 1)
+  pi.aux2 ~ dunif(0, pi.aux1)
+  pi.aux3 ~ dunif(0, pi.aux1)
+  pi[1] <- pi.aux1 / (pi.aux1 + pi.aux2 + pi.aux3)
+  pi[2] <- pi.aux2 / (pi.aux1 + pi.aux2 + pi.aux3)
+  pi[3] <- pi.aux3 / (pi.aux1 + pi.aux2 + pi.aux3)
+
+  tau.alpha ~ dnorm(0, 1)
+  nu.alpha ~ dnorm(0, 1)
+  iota.m.alpha ~ dnorm(0, 1)
+  iota.s.alpha ~ dnorm(0, 1)
+  chi.m.alpha ~ dnorm(0, 1)
+  chi.s.alpha ~ dnorm(0, 1)
+
+  beta.tau1 ~ dnorm(0, 10000)
+  beta.nu1 ~ dnorm(0, 10000)
+  beta.iota.m1 ~ dnorm(0, 10000)
+  beta.iota.s1 ~ dnorm(0, 10000)
+  beta.chi.m1 ~ dnorm(0, 10000)
+  beta.chi.s1 ~ dnorm(0, 10000)
+
+  tb ~ dexp(5)
+  nb ~ dexp(5)
+  imb ~ dexp(5)
+  isb ~ dexp(5)
+  cmb ~ dexp(5)
+  csb ~ dexp(5)
+  tau.beta <- 1 / tb
+  nu.beta <- 1 / nb
+  iota.m.beta <- 1 / imb
+  iota.s.beta <- 1 / isb
+  chi.m.beta <- 1 / cmb
+  chi.s.beta <- 1 / csb
+
+  for (i in 1:n) {
+    th[i] ~ dnorm(tau.alpha, tau.beta)
+    nh[i] ~ dnorm(nu.alpha, nu.beta)
+    imh[i] ~ dnorm(iota.m.alpha, iota.m.beta)
+    ish[i] ~ dnorm(iota.s.alpha, iota.s.beta)
+    cmh[i] ~ dnorm(chi.m.alpha, chi.m.beta)
+    csh[i] ~ dnorm(chi.s.alpha, chi.s.beta)
+
+    mu.tau[i] <- ilogit(th[i] + beta.tau1)
+    mu.nu[i] <- ilogit(nh[i] + beta.nu1)
+    mu.iota.m[i] <- k * ilogit(imh[i] + beta.iota.m1)
+    mu.iota.s[i] <- k * ilogit(ish[i] + beta.iota.s1)
+    mu.chi.m[i] <- k + (1 - k) * ilogit(cmh[i] + beta.chi.m1)
+    mu.chi.s[i] <- k + (1 - k) * ilogit(csh[i] + beta.chi.s1)
+
+    m[i, 1] <- 0
+    s[i, 1] <- 0
+    m[i, 2] <- mu.iota.m[i]
+    s[i, 2] <- mu.iota.s[i]
+    m[i, 3] <- mu.chi.m[i]
+    s[i, 3] <- mu.chi.s[i]
+
+    Z[i] ~ dcat(pi[])
+    m.active[i] <- m[i, Z[i]]
+    s.active[i] <- s[i, Z[i]]
+    p.a[i] <- (1 - mu.tau[i]) * (1 - m.active[i])
+    p.w[i] <- mu.tau[i] * mu.nu[i] +
+              (1 - mu.tau[i]) * m.active[i] +
+              mu.tau[i] * (1 - mu.nu[i]) * s.active[i]
+    p.o[i] <- mu.tau[i] * (1 - mu.nu[i]) * (1 - s.active[i])
+    p[i, 1] <- p.a[i]
+    p[i, 2] <- p.w[i]
+    p[i, 3] <- p.o[i]
+    observed[i, 1:3] ~ dmulti(p[i, 1:3], N[i])
+  }
+}

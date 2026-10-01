@@ -1,0 +1,12 @@
+Started UTC: 2026-09-30 23:54:38 UTC 
+Command: env LC_ALL=C LANG=C Rscript --vanilla quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/review_contract/independent_checks.R '/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud' 
+Nine source hashes match the frozen values.
+Mechanism distributions: 2504 positive conditionals: 11294 zero cells: 9990 
+                 simplex            normalization                mechanism 
+0.0000000000000002220446 0.0000000000000008881784 0.0000000000000009992007 
+                log_mass               sequential        conditional_joint 
+0.0000000000000142108547 0.0000000000000006661338 0.0000000000000008881784 
+     conditional_moments   conditional_covariance        no_transfer_match 
+0.0000000000000008881784 0.0000000000000007771561 0.0000000000000002398082 
+                 mixture 
+0.0000000000000002498002 

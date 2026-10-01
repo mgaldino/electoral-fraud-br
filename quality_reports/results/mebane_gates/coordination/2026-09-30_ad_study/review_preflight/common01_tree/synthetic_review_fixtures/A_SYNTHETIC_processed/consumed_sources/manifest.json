@@ -1,0 +1,47 @@
+{
+  "created_utc": "2026-10-01 00:22:08 UTC",
+  "files": [
+    {
+      "path": "synthetic_review_fixtures/A_SYNTHETIC/raw_chains.rds",
+      "snapshot": "synthetic_review_fixtures/A_SYNTHETIC_processed/consumed_sources/synthetic_review_fixtures/A_SYNTHETIC/raw_chains.rds",
+      "bytes": 71682677,
+      "sha256": "3f18a4792695db01b7526876124091be89538c9bca9769ec27aa4646c013f396"
+    },
+    {
+      "path": "synthetic_review_fixtures/A_SYNTHETIC/run_result.json",
+      "snapshot": "synthetic_review_fixtures/A_SYNTHETIC_processed/consumed_sources/synthetic_review_fixtures/A_SYNTHETIC/run_result.json",
+      "bytes": 194,
+      "sha256": "6668eeeb34fee7d8ff851ffff9820586918253cc0865bc1678ba43471ce17507"
+    },
+    {
+      "path": "synthetic_review_fixtures/A_SYNTHETIC/sampling_metadata.json",
+      "snapshot": "synthetic_review_fixtures/A_SYNTHETIC_processed/consumed_sources/synthetic_review_fixtures/A_SYNTHETIC/sampling_metadata.json",
+      "bytes": 223,
+      "sha256": "ecd81a2284564b10cccdd6d4f1f727c6dddd3cac6c4b5c86cfa097f11ab000c6"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/data/run-20260930T235038Z-pid61600/dc2010_ad_data.rds",
+      "snapshot": "synthetic_review_fixtures/A_SYNTHETIC_processed/consumed_sources/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/data/run-20260930T235038Z-pid61600/dc2010_ad_data.rds",
+      "bytes": 2539,
+      "sha256": "b2ef611dabb751f9286acbaae841a23c34948ed0a4b6306364cbe94d9d24903e"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/contract_v2.json",
+      "snapshot": "synthetic_review_fixtures/A_SYNTHETIC_processed/consumed_sources/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/contract_v2.json",
+      "bytes": 15010,
+      "sha256": "d17b7f508a7ce87eec3ca71ed7df67666b528c755e005ec9e1299e5ff9deb509"
+    },
+    {
+      "path": "R/experimental/mebane_ad/diagnostics.R",
+      "snapshot": "synthetic_review_fixtures/A_SYNTHETIC_processed/consumed_sources/R/experimental/mebane_ad/diagnostics.R",
+      "bytes": 13087,
+      "sha256": "aba092e20273a00d29f229edd2c54f65d5aac3c14489367a875785df07d5d8b3"
+    },
+    {
+      "path": "R/experimental/mebane_ad/io.R",
+      "snapshot": "synthetic_review_fixtures/A_SYNTHETIC_processed/consumed_sources/R/experimental/mebane_ad/io.R",
+      "bytes": 2627,
+      "sha256": "913803dc29f9784d756ab9a1834b2a96b8201d754957dbd9f65286674b4abb2d"
+    }
+  ]
+}

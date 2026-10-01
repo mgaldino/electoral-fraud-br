@@ -1,0 +1,18 @@
+{
+  "status": "error",
+  "failed_stage": "setup",
+  "message": "SYNTHETIC failure setup",
+  "model": "D",
+  "warnings": [],
+  "phases": {
+    "setup": {
+      "user.self": 0.00300000000000011,
+      "sys.self": 0.00200000000000067,
+      "elapsed": 0.0219999999999985,
+      "completed": false
+    }
+  },
+  "elapsed_seconds": 0.0240000000000009,
+  "timing_scope": "Internal generation: function entry through raw persistence/error handling; excludes R bootstrap and final result/manifest writes. Supervisor measures the whole generation process; diagnostics have a separate clock.",
+  "posterior_or_model_validated": false
+}

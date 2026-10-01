@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.0-independent-review-delivery",
+  "created_at_utc": "2026-10-01 00:00:47 UTC",
+  "executor_id": "019d795a-acfa-72c2-a210-d55a46c606c2",
+  "reviewer_id": "01a0f4b8-962b-77a3-a418-6247c6219e8b",
+  "contract_sha256": "8f0783b5f3520958a2b1a6d6de5bb217e2ea4ac8656a6ac114024b9d6a95dc17",
+  "validation": "pass_delivery_integrity_not_scientific_approval",
+  "evidence_ranges_checked": 26,
+  "markdown_links_checked": 22,
+  "candidate_and_reference_hashes_unchanged": true,
+  "command": "env LC_ALL=C LANG=C Rscript --vanilla quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/review_contract/verify_delivery.R /Users/manoelgaldino/Documents/DCP/Papers/electoralFraud",
+  "files": [
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/review_contract/checks.json",
+      "sha256": "682b62e7b44700048f67b38b5e1814255782a372efaaaf6e2b885b1dfe1d599a",
+      "bytes": 9182
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/review_contract/checks.log",
+      "sha256": "f69543fa778872f7c3513c77009f2a211e70cf646ea7f7e6fa32ed23b778c173",
+      "bytes": 881
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/review_contract/checks_retry1.log",
+      "sha256": "277020e79082cb6eb772abc8d0d23a19b59e284a4a0777d738579e2c4eccb90c",
+      "bytes": 3725
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/review_contract/independent_checks.R",
+      "sha256": "c90df5bb6f8945a299590b358e20fbf0d0e07902afdd473ab2f4a94b5638566e",
+      "bytes": 14306
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/review_contract/independent_checks_retry1.R",
+      "sha256": "805895d61ef29b620c1431b85e32cd4fc5b15e0610d7dddeaf1367a58d2722a8",
+      "bytes": 14411
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/review_contract/review.json",
+      "sha256": "01090a2482c83dd6f7f0fa0233a94f6baf44899fb42b26eaff44e67d9945aedd",
+      "bytes": 14461
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/review_contract/review.md",
+      "sha256": "bfb38c46a1ba75c8accaac36fe7abbd083ce2abb0bd350571e1d46407e840c75",
+      "bytes": 13026
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/review_contract/verify_delivery.R",
+      "sha256": "268bda7d10568e4be627f06d358710a997e0ee3c44c8e9fed6d4320d26cce5f1",
+      "bytes": 3428
+    }
+  ],
+  "self_hash_excluded": true
+}

@@ -1,0 +1,15 @@
+{
+  "model": "D",
+  "status": "computationally_inconclusive",
+  "paired_verdict": "not_assigned_by_per_model_processor",
+  "mandatory_targets": 1742,
+  "failed_targets": 1021,
+  "undefined_required_targets": 392,
+  "primary_global_failed": ["pi[1]", "pi[2]", "tau.alpha", "iota.m.alpha", "iota.s.alpha", "chi.m.alpha", "chi.s.alpha", "beta.tau1", "imb", "isb", "cmb", "csb", "M_total", "S_total"],
+  "elapsed_seconds": 20.4127728939056,
+  "raw_sha256": "6fe3da66426201efe6da0176f7c880755df868cb9fb6b318a7a9eb1f6bed13ac",
+  "contract_sha256": "d17b7f508a7ce87eec3ca71ed7df67666b528c755e005ec9e1299e5ff9deb509",
+  "shape": [2000, 4],
+  "production_approved": false,
+  "G10_approved": false
+}

@@ -1,0 +1,91 @@
+{
+  "note": "Bounded raw run; independent diagnostics and review pending",
+  "files": [
+    {
+      "path": "delta_fixtures/D_FAKE_ENGINE/actual_initial_values.rds",
+      "bytes": 704,
+      "sha256": "2879f39af87897208cd20b8449644d17e70fa10865e9b9ff93a3bcb71326f81a"
+    },
+    {
+      "path": "delta_fixtures/D_FAKE_ENGINE/actual_jags_data.rds",
+      "bytes": 1907,
+      "sha256": "01f4653485b3075c4b84a08d1e1bdae32b1df851c5f321e594210c2da10713f7"
+    },
+    {
+      "path": "delta_fixtures/D_FAKE_ENGINE/consumed_sources/R/experimental/mebane_ad/io.R",
+      "bytes": 2627,
+      "sha256": "913803dc29f9784d756ab9a1834b2a96b8201d754957dbd9f65286674b4abb2d"
+    },
+    {
+      "path": "delta_fixtures/D_FAKE_ENGINE/consumed_sources/R/experimental/mebane_ad/prepare_dc2010.R",
+      "bytes": 10287,
+      "sha256": "051f0421448bd349ffdfa9a668ac78ac22bccc09bf4b8ff5718cd80c7e788313"
+    },
+    {
+      "path": "delta_fixtures/D_FAKE_ENGINE/consumed_sources/R/experimental/mebane_ad/run_jags.R",
+      "bytes": 8413,
+      "sha256": "7a92fdc9d234c8652cf6ae764f2dd22d86ef0b0f10ab8b929c8c2b4461dc651d"
+    },
+    {
+      "path": "delta_fixtures/D_FAKE_ENGINE/consumed_sources/R/experimental/mebane_ad/timing.md",
+      "bytes": 1852,
+      "sha256": "db3f96e88cb28ae54c42f539a377fcf5fe3ec4bd716adf0249e6e8c9044433f8"
+    },
+    {
+      "path": "delta_fixtures/D_FAKE_ENGINE/consumed_sources/manifest.json",
+      "bytes": 3110,
+      "sha256": "3132553d0f827509a0f9b16fa860f417755607eadc8a1328594d1879503733bd"
+    },
+    {
+      "path": "delta_fixtures/D_FAKE_ENGINE/consumed_sources/models/experimental/mebane_ad/d_multinomial.jags",
+      "bytes": 2036,
+      "sha256": "6ddb9624f60b15e196cc27ed9694852c40b6553a684a9962003168da4ecfaf5b"
+    },
+    {
+      "path": "delta_fixtures/D_FAKE_ENGINE/consumed_sources/quality_reports/results/mebane_gates/G2/round2/benchmark_contract.json",
+      "bytes": 14203,
+      "sha256": "63b61fb0594d0302a03d999bcff6c62967b6e999f37b4c9a8821f0f8e9ed18d2"
+    },
+    {
+      "path": "delta_fixtures/D_FAKE_ENGINE/consumed_sources/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/contract_v2.json",
+      "bytes": 15010,
+      "sha256": "d17b7f508a7ce87eec3ca71ed7df67666b528c755e005ec9e1299e5ff9deb509"
+    },
+    {
+      "path": "delta_fixtures/D_FAKE_ENGINE/consumed_sources/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/data/run-20260930T235038Z-pid61600/dc2010_ad_data.rds",
+      "bytes": 2539,
+      "sha256": "b2ef611dabb751f9286acbaae841a23c34948ed0a4b6306364cbe94d9d24903e"
+    },
+    {
+      "path": "delta_fixtures/D_FAKE_ENGINE/consumed_sources/quality_reports/results/mebane_gates/coordination/authors_replication_discovery/archive/UMeforensics-eforensics_public-3017de5/data/dc2010.rda",
+      "bytes": 2010,
+      "sha256": "0386dcc86155e543382c2725e9eb61ebf365b2e6f96a2b037324dbee80005196"
+    },
+    {
+      "path": "delta_fixtures/D_FAKE_ENGINE/events.jsonl",
+      "bytes": 1263,
+      "sha256": "5710c36ae9b3c8ca6e94d19b59570617c9d064a4ae72013e88f990341966b8c7"
+    },
+    {
+      "path": "delta_fixtures/D_FAKE_ENGINE/final_jags_state.rds",
+      "bytes": 89,
+      "sha256": "b151a689639dcb3ae88e32163bd47d6f5221025e4310c9a051f330847e03ab64"
+    },
+    {
+      "path": "delta_fixtures/D_FAKE_ENGINE/raw_chains.rds",
+      "bytes": 75932873,
+      "sha256": "6213dc4498c0387f7c677551b6f98b7315dfbced7167449770311590bbb6c1a5"
+    },
+    {
+      "path": "delta_fixtures/D_FAKE_ENGINE/run_result.json",
+      "bytes": 1388,
+      "sha256": "4b96040ce76291dcff55adf88516a1a42638306eba2086693a923f1d3b08940c"
+    },
+    {
+      "path": "delta_fixtures/D_FAKE_ENGINE/sampling_metadata.json",
+      "bytes": 2711,
+      "sha256": "8b1c6b7fcdd9a695a34d4bc8fdcf1180c341920a7399e5b89ba2b71123f6b0f7"
+    }
+  ],
+  "excluded": "This manifest itself; active outer process logs are sealed separately"
+}

@@ -1,0 +1,502 @@
+{
+  "status": "pass",
+  "created_utc": "2026-10-01 00:59:37 UTC",
+  "reviewer_id": "01a0f4b8-962b-77a3-a418-6247c6219e8b",
+  "checks": [
+    {
+      "id": "actual-source-rowmapping-no-exclusions",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "A raw-shape-and-chain-columns",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "A iterations-thin-1",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "A metadata-raw-run-identity",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "A actual-JAGS-inputs-identical",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "A actual-inits-and-seeds",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "A completed-adapted-no-timeout",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "A class-probabilities-indicators-ranges-constants",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "A class-count-range-over-n 1",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "A class-count-range-over-n 2",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "A class-count-range-over-n 3",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "A joint-draw-order-and-M-S",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "A raw-global pi[1]",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "A raw-global pi[2]",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "A raw-global pi[3]",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "A raw-global tau.alpha",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "A raw-global nu.alpha",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "A raw-global iota.m.alpha",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "A raw-global iota.s.alpha",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "A raw-global chi.m.alpha",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "A raw-global chi.s.alpha",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "A raw-global tb",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "A raw-global nb",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "A raw-global imb",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "A raw-global isb",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "A raw-global cmb",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "A raw-global csb",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "A raw-global beta.tau1",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "A raw-global beta.nu1",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "A raw-global beta.iota.m1",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "A raw-global beta.iota.s1",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "A raw-global beta.chi.m1",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "A raw-global beta.chi.s1",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "A raw-global M_total",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "A raw-global S_total",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "A full-mandatory-universe",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "A mandatory-unique-complete-no-exemptions",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "A every-target-v2-decision",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "A counts-and-per-model-verdict",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "A timing-sources-and-no-double-count",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "A all-phase-times",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "A common-table-identical-source-rows",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "A all-four-ESS-s-denominators",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "A global-extremes-complete-and-runtime-counts",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "D raw-shape-and-chain-columns",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "D iterations-thin-1",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "D metadata-raw-run-identity",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "D actual-JAGS-inputs-identical",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "D actual-inits-and-seeds",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "D completed-adapted-no-timeout",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "D-secondary-count-shape-IDs-seed",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "D class-probabilities-indicators-ranges-constants",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "D class-count-range-over-n 1",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "D class-count-range-over-n 2",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "D class-count-range-over-n 3",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "D joint-draw-order-and-M-S",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "D-secondary-count-support-aggregation-conditional-means",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "D raw-global pi[1]",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "D raw-global pi[2]",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "D raw-global pi[3]",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "D raw-global tau.alpha",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "D raw-global nu.alpha",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "D raw-global iota.m.alpha",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "D raw-global iota.s.alpha",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "D raw-global chi.m.alpha",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "D raw-global chi.s.alpha",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "D raw-global tb",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "D raw-global nb",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "D raw-global imb",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "D raw-global isb",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "D raw-global cmb",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "D raw-global csb",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "D raw-global beta.tau1",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "D raw-global beta.nu1",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "D raw-global beta.iota.m1",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "D raw-global beta.iota.s1",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "D raw-global beta.chi.m1",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "D raw-global beta.chi.s1",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "D raw-global M_total",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "D raw-global S_total",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "D full-mandatory-universe",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "D mandatory-unique-complete-no-exemptions",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "D every-target-v2-decision",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "D counts-and-per-model-verdict",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "D timing-sources-and-no-double-count",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "D all-phase-times",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "D common-table-identical-source-rows",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "D all-four-ESS-s-denominators",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "D global-extremes-complete-and-runtime-counts",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "class-comparison-identities-values-ties",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "paired-status-inconclusive-and-no-inferential-approval",
+      "pass": true,
+      "detail": {}
+    }
+  ],
+  "models": {
+    "A": {
+      "mandatory": 2171,
+      "failed": 1605,
+      "undefined": 432,
+      "global_failed": 15,
+      "global_rhat_max": 3.45062748935555,
+      "global_bulk_ESS_min": 4.41177089703738,
+      "global_tail_ESS_min": 4.01606425702811,
+      "M_mean": 514.136566719402,
+      "S_mean": 64.0084749998354,
+      "M_chain": [1814.52985548691, 0, 0, 242.016411390798],
+      "S_chain": [240.373793924463, 0, 0, 15.6601060748919],
+      "generation_seconds": 102.570545708004,
+      "postprocessing_seconds": 22.3473328340333,
+      "end_to_end_compute_seconds": 124.917878542037,
+      "mcpar": [6001, 8000, 1]
+    },
+    "D": {
+      "mandatory": 1742,
+      "failed": 1021,
+      "undefined": 392,
+      "global_failed": 14,
+      "global_rhat_max": 2.47192994285672,
+      "global_bulk_ESS_min": 4.84288900094801,
+      "global_tail_ESS_min": 4.99167376973706,
+      "M_mean": 598.355721521761,
+      "S_mean": 62.4871720915568,
+      "M_chain": [168.230358162395, 1269.1718712398, 0, 956.020656684862],
+      "S_chain": [28.766078847779, 118.90770519874, 0, 102.274904319707],
+      "generation_seconds": 68.2468318750034,
+      "postprocessing_seconds": 21.721774375008,
+      "end_to_end_compute_seconds": 89.9686062500114,
+      "mcpar": [6001, 8000, 1]
+    }
+  },
+  "global_statistics_recomputed_from_raw": 46,
+  "all_mandatory_rules_recomputed": 3913,
+  "local_Rhat_ESS_not_recomputed": true,
+  "new_MCMC": false
+}

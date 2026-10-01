@@ -1,0 +1,10 @@
+{
+  "schema_version": "1.0",
+  "adjudication_id": "AD-DC2010:d17b7f508a7c:round2",
+  "source": {"reviewed_artifact": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/contract_v2.json", "sha256": "d17b7f508a7ce87eec3ca71ed7df67666b528c755e005ec9e1299e5ff9deb509", "artifact_intact": true},
+  "contract": {"required": false, "path": null, "sha256": null, "contract_id": null, "artifact_sha256": null, "status": null, "stale": false},
+  "review_sources": [{"review_id": "AD-CONTRACT-QA-V2", "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/review_contract/review_v2.json", "sha256": "8652c016c90b86d66fdf308d2094766973ea4e0d70364399e29d834ea801bc90"}],
+  "findings": [],
+  "summary": {"total": 0, "confirmed": 0, "partial": 0, "refuted": 0, "unresolved": 0, "held_decisions": 0},
+  "adjudication": {"verdict": "NO_CONFIRMED_DEFECTS", "checked_at": "2026-09-30", "reasons": ["Independent delta review confirms closure of AD-CONTRACT-QA-01. Mandatory target counts, statistics, thresholds and failure/NA actions are explicit before empirical draws.", "The previous finding remains CONFIRMED historically; its repair is verified, not refuted.", "Model/data/seed/iteration choices remain identical. This approves only the experimental contract; code/preflight review is still required before the bounded pilot."]}
+}

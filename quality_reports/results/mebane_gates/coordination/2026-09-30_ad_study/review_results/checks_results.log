@@ -1,0 +1,42 @@
+PASS actual-source-rowmapping-no-exclusions 
+PASS A raw-shape-and-chain-columns 
+PASS A iterations-thin-1 
+PASS A metadata-raw-run-identity 
+PASS A actual-JAGS-inputs-identical 
+PASS A actual-inits-and-seeds 
+PASS A completed-adapted-no-timeout 
+PASS A class-probabilities-indicators-ranges-constants 
+PASS A class-count-range-over-n 1 
+PASS A class-count-range-over-n 2 
+PASS A class-count-range-over-n 3 
+PASS A joint-draw-order-and-M-S 
+PASS A raw-global pi[1] 
+PASS A raw-global pi[2] 
+PASS A raw-global pi[3] 
+PASS A raw-global tau.alpha 
+PASS A raw-global nu.alpha 
+PASS A raw-global iota.m.alpha 
+PASS A raw-global iota.s.alpha 
+PASS A raw-global chi.m.alpha 
+PASS A raw-global chi.s.alpha 
+PASS A raw-global tb 
+PASS A raw-global nb 
+PASS A raw-global imb 
+PASS A raw-global isb 
+PASS A raw-global cmb 
+PASS A raw-global csb 
+PASS A raw-global beta.tau1 
+PASS A raw-global beta.nu1 
+PASS A raw-global beta.iota.m1 
+PASS A raw-global beta.iota.s1 
+PASS A raw-global beta.chi.m1 
+PASS A raw-global beta.chi.s1 
+PASS A raw-global M_total 
+PASS A raw-global S_total 
+PASS A full-mandatory-universe 
+PASS A mandatory-unique-complete-no-exemptions 
+PASS A every-target-v2-decision 
+PASS A counts-and-per-model-verdict 
+PASS A timing-sources-and-no-double-count 
+PASS A all-phase-times 
+FAIL A common-table-identical-source-rows 

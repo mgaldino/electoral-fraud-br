@@ -1,0 +1,295 @@
+[[1]]
+[[1]]$path
+[1] "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/contract_v2.json"
+
+[[1]]$snapshot
+[1] "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/review_results/comparison_fixtures/diagnostic_failure_comparison/consumed_sources/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/contract_v2.json"
+
+[[1]]$bytes
+[1] 15010
+
+[[1]]$sha256
+[1] "d17b7f508a7ce87eec3ca71ed7df67666b528c755e005ec9e1299e5ff9deb509"
+
+
+[[2]]
+[[2]]$path
+[1] "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/data/run-20260930T235038Z-pid61600/dc2010_ad_data.rds"
+
+[[2]]$snapshot
+[1] "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/review_results/comparison_fixtures/diagnostic_failure_comparison/consumed_sources/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/data/run-20260930T235038Z-pid61600/dc2010_ad_data.rds"
+
+[[2]]$bytes
+[1] 2539
+
+[[2]]$sha256
+[1] "b2ef611dabb751f9286acbaae841a23c34948ed0a4b6306364cbe94d9d24903e"
+
+
+[[3]]
+[[3]]$path
+[1] "R/experimental/mebane_ad/io.R"
+
+[[3]]$snapshot
+[1] "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/review_results/comparison_fixtures/diagnostic_failure_comparison/consumed_sources/R/experimental/mebane_ad/io.R"
+
+[[3]]$bytes
+[1] 2627
+
+[[3]]$sha256
+[1] "913803dc29f9784d756ab9a1834b2a96b8201d754957dbd9f65286674b4abb2d"
+
+
+[[4]]
+[[4]]$path
+[1] "R/experimental/mebane_ad/compare_runs.R"
+
+[[4]]$snapshot
+[1] "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/review_results/comparison_fixtures/diagnostic_failure_comparison/consumed_sources/R/experimental/mebane_ad/compare_runs.R"
+
+[[4]]$bytes
+[1] 16236
+
+[[4]]$sha256
+[1] "ba835f6244341f26e425a4173f53edb1457162820dc0deed0649ea1cf2bae81f"
+
+
+[[5]]
+[[5]]$path
+[1] "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/review_results/comparison_fixtures/diagnostic_failure/execution.json"
+
+[[5]]$snapshot
+[1] "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/review_results/comparison_fixtures/diagnostic_failure_comparison/consumed_sources/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/review_results/comparison_fixtures/diagnostic_failure/execution.json"
+
+[[5]]$bytes
+[1] 24
+
+[[5]]$sha256
+[1] "efa82530f0281abdf7bff98dbf617ee4427f964100fa5fe3f2e8673792b268cf"
+
+
+[[6]]
+[[6]]$path
+[1] "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/review_results/comparison_fixtures/diagnostic_failure/A/run_result.json"
+
+[[6]]$snapshot
+[1] "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/review_results/comparison_fixtures/diagnostic_failure_comparison/consumed_sources/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/review_results/comparison_fixtures/diagnostic_failure/A/run_result.json"
+
+[[6]]$bytes
+[1] 368
+
+[[6]]$sha256
+[1] "65fb8956a63436da30870d6cf9b8deb6788b33ae574ab669d2d55b495b9854ba"
+
+
+[[7]]
+[[7]]$path
+[1] "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/review_results/comparison_fixtures/diagnostic_failure/A_diagnostics/diagnostic_result.json"
+
+[[7]]$snapshot
+[1] "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/review_results/comparison_fixtures/diagnostic_failure_comparison/consumed_sources/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/review_results/comparison_fixtures/diagnostic_failure/A_diagnostics/diagnostic_result.json"
+
+[[7]]$bytes
+[1] 158
+
+[[7]]$sha256
+[1] "340e16fe0f2913be0234c9cf4dd6ec83e129a4b748f338b1fdedde63bb5b281d"
+
+
+[[8]]
+[[8]]$path
+[1] "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/review_results/comparison_fixtures/diagnostic_failure/A_diagnostics/diagnostics.csv"
+
+[[8]]$snapshot
+[1] "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/review_results/comparison_fixtures/diagnostic_failure_comparison/consumed_sources/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/review_results/comparison_fixtures/diagnostic_failure/A_diagnostics/diagnostics.csv"
+
+[[8]]$bytes
+[1] 202
+
+[[8]]$sha256
+[1] "ea2f300a261fe635ce8a6620b641b2dc26178d4b1176157acad3f4b8e0fc3207"
+
+
+[[9]]
+[[9]]$path
+[1] "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/review_results/comparison_fixtures/diagnostic_failure/A_diagnostics/class_probabilities.csv"
+
+[[9]]$snapshot
+[1] "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/review_results/comparison_fixtures/diagnostic_failure_comparison/consumed_sources/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/review_results/comparison_fixtures/diagnostic_failure/A_diagnostics/class_probabilities.csv"
+
+[[9]]$bytes
+[1] 112
+
+[[9]]$sha256
+[1] "ba856126453f264a0df4def34b7dcd30793250e421c368b6bcc5c948873098e1"
+
+
+[[10]]
+[[10]]$path
+[1] "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/review_results/comparison_fixtures/diagnostic_failure/A_supervisor.json"
+
+[[10]]$snapshot
+[1] "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/review_results/comparison_fixtures/diagnostic_failure_comparison/consumed_sources/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/review_results/comparison_fixtures/diagnostic_failure/A_supervisor.json"
+
+[[10]]$bytes
+[1] 352
+
+[[10]]$sha256
+[1] "14a00595607950f928be57644db487c73788b1e41f4d5cc39d725d0c458bb638"
+
+
+[[11]]
+[[11]]$path
+[1] "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/review_results/comparison_fixtures/diagnostic_failure/A_diagnostics_supervisor.json"
+
+[[11]]$snapshot
+[1] "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/review_results/comparison_fixtures/diagnostic_failure_comparison/consumed_sources/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/review_results/comparison_fixtures/diagnostic_failure/A_diagnostics_supervisor.json"
+
+[[11]]$bytes
+[1] 351
+
+[[11]]$sha256
+[1] "3f1d70b59778f95b5ad738ff3fc5bcca08acbc620c089b340bc4dd4bcbdb39a3"
+
+
+[[12]]
+[[12]]$path
+[1] "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/review_results/comparison_fixtures/diagnostic_failure/A/manifest.json"
+
+[[12]]$snapshot
+[1] "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/review_results/comparison_fixtures/diagnostic_failure_comparison/consumed_sources/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/review_results/comparison_fixtures/diagnostic_failure/A/manifest.json"
+
+[[12]]$bytes
+[1] 453
+
+[[12]]$sha256
+[1] "c351ff6c9fa5bdb32d5d4e03574947455ffd6b0af15545f5c6eb5f1ef5e31683"
+
+
+[[13]]
+[[13]]$path
+[1] "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/review_results/comparison_fixtures/diagnostic_failure/A_diagnostics/manifest.json"
+
+[[13]]$snapshot
+[1] "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/review_results/comparison_fixtures/diagnostic_failure_comparison/consumed_sources/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/review_results/comparison_fixtures/diagnostic_failure/A_diagnostics/manifest.json"
+
+[[13]]$bytes
+[1] 1168
+
+[[13]]$sha256
+[1] "7ed42523d5b6e262119969c11de732ff3650d6d960f4558f6f532f2923496c7d"
+
+
+[[14]]
+[[14]]$path
+[1] "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/review_results/comparison_fixtures/diagnostic_failure/D/run_result.json"
+
+[[14]]$snapshot
+[1] "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/review_results/comparison_fixtures/diagnostic_failure_comparison/consumed_sources/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/review_results/comparison_fixtures/diagnostic_failure/D/run_result.json"
+
+[[14]]$bytes
+[1] 368
+
+[[14]]$sha256
+[1] "65fb8956a63436da30870d6cf9b8deb6788b33ae574ab669d2d55b495b9854ba"
+
+
+[[15]]
+[[15]]$path
+[1] "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/review_results/comparison_fixtures/diagnostic_failure/D_diagnostics/diagnostic_result.json"
+
+[[15]]$snapshot
+[1] "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/review_results/comparison_fixtures/diagnostic_failure_comparison/consumed_sources/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/review_results/comparison_fixtures/diagnostic_failure/D_diagnostics/diagnostic_result.json"
+
+[[15]]$bytes
+[1] 158
+
+[[15]]$sha256
+[1] "340e16fe0f2913be0234c9cf4dd6ec83e129a4b748f338b1fdedde63bb5b281d"
+
+
+[[16]]
+[[16]]$path
+[1] "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/review_results/comparison_fixtures/diagnostic_failure/D_diagnostics/diagnostics.csv"
+
+[[16]]$snapshot
+[1] "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/review_results/comparison_fixtures/diagnostic_failure_comparison/consumed_sources/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/review_results/comparison_fixtures/diagnostic_failure/D_diagnostics/diagnostics.csv"
+
+[[16]]$bytes
+[1] 202
+
+[[16]]$sha256
+[1] "ea2f300a261fe635ce8a6620b641b2dc26178d4b1176157acad3f4b8e0fc3207"
+
+
+[[17]]
+[[17]]$path
+[1] "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/review_results/comparison_fixtures/diagnostic_failure/D_diagnostics/class_probabilities.csv"
+
+[[17]]$snapshot
+[1] "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/review_results/comparison_fixtures/diagnostic_failure_comparison/consumed_sources/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/review_results/comparison_fixtures/diagnostic_failure/D_diagnostics/class_probabilities.csv"
+
+[[17]]$bytes
+[1] 112
+
+[[17]]$sha256
+[1] "ba856126453f264a0df4def34b7dcd30793250e421c368b6bcc5c948873098e1"
+
+
+[[18]]
+[[18]]$path
+[1] "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/review_results/comparison_fixtures/diagnostic_failure/D_supervisor.json"
+
+[[18]]$snapshot
+[1] "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/review_results/comparison_fixtures/diagnostic_failure_comparison/consumed_sources/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/review_results/comparison_fixtures/diagnostic_failure/D_supervisor.json"
+
+[[18]]$bytes
+[1] 352
+
+[[18]]$sha256
+[1] "bd662c48376fd9cf78338ef4e34b376ed1f8cc5706778d2d3ca288785dcdc545"
+
+
+[[19]]
+[[19]]$path
+[1] "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/review_results/comparison_fixtures/diagnostic_failure/D_diagnostics_supervisor.json"
+
+[[19]]$snapshot
+[1] "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/review_results/comparison_fixtures/diagnostic_failure_comparison/consumed_sources/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/review_results/comparison_fixtures/diagnostic_failure/D_diagnostics_supervisor.json"
+
+[[19]]$bytes
+[1] 351
+
+[[19]]$sha256
+[1] "b428c624e580ed7a45283a1466bded6e5697e2e553ea518deed7fba91a978111"
+
+
+[[20]]
+[[20]]$path
+[1] "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/review_results/comparison_fixtures/diagnostic_failure/D/manifest.json"
+
+[[20]]$snapshot
+[1] "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/review_results/comparison_fixtures/diagnostic_failure_comparison/consumed_sources/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/review_results/comparison_fixtures/diagnostic_failure/D/manifest.json"
+
+[[20]]$bytes
+[1] 453
+
+[[20]]$sha256
+[1] "5f37064d3c0db69678cc9a7475e11a237a9bbfeb524e8d55af3fb791c1a1efcc"
+
+
+[[21]]
+[[21]]$path
+[1] "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/review_results/comparison_fixtures/diagnostic_failure/D_diagnostics/manifest.json"
+
+[[21]]$snapshot
+[1] "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/review_results/comparison_fixtures/diagnostic_failure_comparison/consumed_sources/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/review_results/comparison_fixtures/diagnostic_failure/D_diagnostics/manifest.json"
+
+[[21]]$bytes
+[1] 1168
+
+[[21]]$sha256
+[1] "62a74c0aa86cc0514789dd2412a00222e4cdc320987bdb1131ae2a7e7a523902"
+
+
+computationally_inconclusive 

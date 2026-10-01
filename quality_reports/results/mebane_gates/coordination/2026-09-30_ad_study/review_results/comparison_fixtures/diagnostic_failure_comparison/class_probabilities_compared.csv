@@ -1,0 +1,4 @@
+"precinct","class","probability_A","probability_D","difference_D_minus_A","modal_A","modal_D"
+"SYNTHETIC",1,0.8,0.8,0,TRUE,TRUE
+"SYNTHETIC",2,0.1,0.1,0,FALSE,FALSE
+"SYNTHETIC",3,0.1,0.1,0,FALSE,FALSE

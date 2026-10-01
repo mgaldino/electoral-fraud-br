@@ -1,0 +1,142 @@
+{
+  "schema_version": "1.0-independent-ad-contract-review",
+  "review_date": "2026-09-30",
+  "executor_id": "019d795a-acfa-72c2-a210-d55a46c606c2",
+  "reviewer_id": "01a0f4b8-962b-77a3-a418-6247c6219e8b",
+  "reviewer_identity_evidence": "Own get_goal/create_goal response and CODEX_THREAD_ID agree; distinct from executor_id",
+  "repository_root": "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud",
+  "evidence_paths_relative_to": "repository_root",
+  "contract_id": "AD-DC2010-v1",
+  "contract_path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/contract_v1.json",
+  "contract_sha256": "8f0783b5f3520958a2b1a6d6de5bb217e2ea4ac8656a6ac114024b9d6a95dc17",
+  "decision_sha256": "d2940550c1d693a306de1e112d5e634ae2376b3530ed6762176bd2629dec0635",
+  "status": "changes_requested",
+  "summary": "Uma lacuna prospectiva na regra de decisão dos diagnósticos discretos impede considerar o piloto integralmente pré-especificado. Não foi encontrado impedimento matemático à pequena implementação experimental de D nem pressuposto substantivo adicional não autorizado. A mudança solicitada é no protocolo, antes de implementação/estimação e adjudicação; não é reauditoria de G2/G3 nem revisão de código futuro.",
+  "independent_review_only": true,
+  "coordinator_adjudication_required": true,
+  "production_approval": false,
+  "G3_approved": false,
+  "G10_approved": false,
+  "findings": [
+    {
+      "id": "AD-CONTRACT-QA-01",
+      "priority": "P2",
+      "classification": "blocking_prospective_pilot_verdict",
+      "title": "Fixar regra executável para diagnósticos discretos e relevância dos alvos",
+      "description": "As probabilidades de classe por precinct são resultados principais, mas diagnostics.discrete apenas manda reportar ocupação, diferenças entre cadeias e estatísticas indefinidas. Os limiares numéricos aparecem sob primary_continuous_targets. Falta decidir quais diagnósticos e limiares se aplicam a Z, indicadores de classe e, quando relevantes, auxiliares discretos de A. A expressão all predeclared diagnostics relevant to reported comparisons pass não determina um veredicto para divergências finitas entre cadeias nem fixa a relevância dos alvos antes dos resultados.",
+      "impact": "Dois executores podem produzir veredictos distintos a partir das mesmas ocupações/classes sem violar um critério numérico explícito. A regra NA não é pass está correta e deve permanecer, mas não supre o critério para diferenças finitas nem a lista de alvos. Não foi observado resultado MCMC novo.",
+      "requested_change": "Antes de executar o piloto, versionar o contrato e congelar uma tabela alvo -> estatística -> limiar -> ação, incluindo probabilidades/indicadores de classe que serão comparados. Declarar se R-hat/ESS existentes também se aplicam aos alvos discretos, ou adotar critérios de MCSE/precisão absoluta e discrepância entre cadeias definidos prospectivamente. Fixar quais auxiliares de A e contagens posteriores secundárias condicionam o veredicto, ou rotulá-los prospectivamente como saídas sem precisão certificada. Quantidades apenas constantes na amostra e qualquer diagnóstico obrigatório indefinido continuam inconclusivos. Não escolher valores ou remover alvos depois dos resultados.",
+      "closure_test": "Na revisão executável futura, fixtures determinísticos com ocupação divergente, estatística obrigatória NA, constante analítica e constante apenas amostral devem receber veredictos previamente determinados. O coordenador adjudica a versão corrigida; este parecer não a aprova antecipadamente.",
+      "evidence": [
+        {"path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/contract_v1.json", "line_start": 99, "line_end": 102},
+        {"path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/contract_v1.json", "line_start": 108, "line_end": 118},
+        {"path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/proposal_v1.md", "line_start": 68, "line_end": 70}
+      ]
+    }
+  ],
+  "accepted_checks": [
+    {
+      "id": "AD-OK-HASH",
+      "result": "Nove hashes conferidos; A, G2 e RDA coincidem com os valores declarados. Contrato, decisão, proposta, vignette, wrapper e metadados também vinculados por hash em checks.json.",
+      "evidence": [{"path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/review_contract/checks.json", "line_start": 131, "line_end": 184}]
+    },
+    {
+      "id": "AD-OK-D",
+      "result": "Probabilidades no simplex e mecanismo de transferências equivalentes à multinomial, com uma classe compartilhada. Reconstrução posterior conjunta de L0/M/S condicionada ao mesmo Z, parâmetros e W está correta; preserva covariância negativa e capacidades. Esperanças pré-observação e contagens posteriores são distintas.",
+      "evidence": [
+        {"path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/contract_v1.json", "line_start": 48, "line_end": 58},
+        {"path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/contract_v1.json", "line_start": 99, "line_end": 106},
+        {"path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/proposal_v1.md", "line_start": 39, "line_end": 64},
+        {"path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/review_contract/checks.json", "line_start": 11, "line_end": 25}
+      ]
+    },
+    {
+      "id": "AD-OK-PRIORS",
+      "result": "Seis blocos, Exp(taxa=5) sobre variância, precisão 1/v, alpha N(0,1) e b0 N(0,0.0001) separados estão fiéis a A/G2. A prior de pi tem densidade pi1^-3 no domínio parcial; não impõe pi2>=pi3. Exp5 sobre SD produziria E[v]=0.08, em vez de 0.2, e não é a especificação adotada.",
+      "evidence": [
+        {"path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/contract_v1.json", "line_start": 39, "line_end": 46},
+        {"path": "quality_reports/results/mebane_gates/G0/round1/qbl_installed_3017de5.jags", "line_start": 13, "line_end": 18},
+        {"path": "quality_reports/results/mebane_gates/G0/round1/qbl_installed_3017de5.jags", "line_start": 74, "line_end": 112},
+        {"path": "quality_reports/results/mebane_gates/G0/round1/qbl_installed_3017de5.jags", "line_start": 127, "line_end": 149},
+        {"path": "quality_reports/results/mebane_gates/G2/round2/benchmark_contract.json", "line_start": 38, "line_end": 64},
+        {"path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/review_contract/checks.json", "line_start": 27, "line_end": 37}
+      ]
+    },
+    {
+      "id": "AD-OK-FUNCTIONALS",
+      "result": "M/S devem ser agregados dentro do draw conjunto com Z, tau/nu e magnitudes realizadas de A, preservando .999. Em D são magnitudes contínuas. São funcionais análogos, não parâmetros latentes idênticos, contagens observadas ou teste de igualdade A/D. As classes também não têm magnitudes de suporte idêntico: em A k restringe a média binomial; em D restringe a fração contínua.",
+      "evidence": [
+        {"path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/contract_v1.json", "line_start": 98, "line_end": 106},
+        {"path": "quality_reports/results/mebane_gates/G2/round2/benchmark_contract.json", "line_start": 91, "line_end": 104},
+        {"path": "quality_reports/results/mebane_gates/G2/round2/benchmark_contract.json", "line_start": 123, "line_end": 134},
+        {"path": "quality_reports/results/mebane_gates/G0/round1/qbl_installed_3017de5.jags", "line_start": 157, "line_end": 177}
+      ]
+    },
+    {
+      "id": "AD-OK-INITIALIZATION-BUDGET",
+      "result": "Todas as quatro inicializações especificadas têm log-massas observacionais finitas em A e D nos 143 registros arquivados, com Z=1. Auxiliares usam floor(N*mu), interpretando mu pelas transformações incremental/extrema já fixadas; não apenas logistic sem k. Versões R 4.4.2/JAGS 4.3.2 conferidas sem compilar modelo. Iterações, sementes e limite de tempo estão definidos; sua suficiência não foi empiricamente testada.",
+      "evidence": [
+        {"path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/contract_v1.json", "line_start": 60, "line_end": 89},
+        {"path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/review_contract/checks.json", "line_start": 39, "line_end": 93},
+        {"path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/review_contract/checks.json", "line_start": 108, "line_end": 129}
+      ]
+    },
+    {
+      "id": "AD-OK-DC-GOVERNANCE",
+      "result": "DC mantém a=NVoters-NValid e Votes para Vincent C. Gray; não equivale automaticamente à abstenção efetiva brasileira. Chamada arquivada usa Votes~1 antes de a~1. Quatro cadeias rjags diretas são protocolo experimental distinto da chamada autoral de uma cadeia com extensão automática. Ausência de referência numérica localizada não impede este experimento autorizado, mas impede certificar reprodução quantitativa/G10. G3 continua inconclusivo.",
+      "evidence": [
+        {"path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/decision.md", "line_start": 5, "line_end": 22},
+        {"path": "quality_reports/results/mebane_gates/coordination/authors_replication_discovery/archive/UMeforensics-eforensics_public-3017de5/vignettes/eforensics.Rmd", "line_start": 57, "line_end": 89},
+        {"path": "quality_reports/results/mebane_gates/coordination/authors_replication_discovery/archive/UMeforensics-eforensics_public-3017de5/R/ef_main.R", "line_start": 667, "line_end": 703},
+        {"path": "quality_reports/results/mebane_gates/coordination/authors_replication_discovery/replication_contract.json", "line_start": 14, "line_end": 16},
+        {"path": "quality_reports/results/mebane_gates/G3/round1/adjudication.md", "line_start": 26, "line_end": 40}
+      ]
+    }
+  ],
+  "deliberate_limitations_not_blocking_model_definition": [
+    {"id": "AD-LIM-01", "description": "A conserva F1/F2 e pode falhar. Não corrigir probabilidades, excluir observações ou retentar silenciosamente. A saída é comportamento do software, não validação física."},
+    {"id": "AD-LIM-02", "description": "D é um mecanismo hipotético não identificado por suporte correto. A equivalência sem transferências é condicional por seção; em pA=1 a extensão degenerada tem tau0=0 e nu arbitrário, em vez de calcular 0/0. Não é equivalência marginal entre hierarquias."},
+    {"id": "AD-LIM-03", "description": "Iniciar todas as classes em 1 garante aqui um ponto observacional válido, não dispersão entre modos nem convergência. Piloto curto, sem extensão, pode terminar inconclusivo."},
+    {"id": "AD-LIM-04", "description": "Mesmo número de iterações/sementes não produz draws pareados entre modelos nem igual precisão. Timings e ESS/s são descritivos em alvos análogos; não medem equivalência de samplers."},
+    {"id": "AD-LIM-05", "description": "M/S esperados podem diferir de contagens condicionadas a W. Não fabricar contagens posteriores de A por binomiais independentes e não interpretar o resíduo inteiro como adversário."},
+    {"id": "AD-LIM-06", "description": "Sem comparação numérica externa DC e sem inferência brasileira. G10, G3, produção e demais gates não são aprovados por este parecer."}
+  ],
+  "operational_clarification_from_current_user_message": {
+    "single_rjags_object_with_four_chains_per_model": true,
+    "sequential_phases": ["compile", "adapt", "burn", "sample"],
+    "concurrent_models": false,
+    "external_supervisor_timeout_per_model": true,
+    "assessment": "Consistente com max_concurrent_chains<=4 e modelo A seguido por D. Registrar no runner/preflight; não há exigência de quatro processos paralelos.",
+    "data_candidate_reported_by_user": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/data/run-20260930T235038Z-pid61600",
+    "data_candidate_reviewed_here": false,
+    "reason": "Preparação/validação de dados tem tarefa própria; não duplicada neste parecer."
+  },
+  "executed_verification": {
+    "result_file": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/review_contract/checks.json",
+    "successful_command": "env LC_ALL=C LANG=C Rscript --vanilla quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/review_contract/independent_checks_retry1.R /Users/manoelgaldino/Documents/DCP/Papers/electoralFraud",
+    "initial_attempt_command": "env LC_ALL=C LANG=C Rscript --vanilla quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/review_contract/independent_checks.R /Users/manoelgaldino/Documents/DCP/Papers/electoralFraud",
+    "initial_attempt_outcome": "Exit 1 no fixture diagnóstico do revisor: pooled < 1.01 is not TRUE. Matemática já havia passado. O controle inicial mantinha os modos separados também entre metades pooled; corrigido prospectivamente repetindo os modos em ambas as metades. Fonte e log originais preservados; nenhuma mudança no candidato.",
+    "successful_attempt_exit_code": 0,
+    "mechanism_distributions": 2504,
+    "mixture_distributions": 100,
+    "positive_conditional_distributions": 11294,
+    "zero_mass_cells": 9990,
+    "max_mechanism_mass_error": 9.992007221626409e-16,
+    "max_log_mass_error": 1.4210854715202004e-14,
+    "diagnostic_fixture_correct_rhat": 1.7210614021279973,
+    "diagnostic_fixture_wrongly_pooled_rhat": 0.9998749921865233,
+    "new_MCMC": false,
+    "JAGS_model_compilation": false,
+    "installation": false,
+    "data_preparation_repeated": false,
+    "candidate_edited": false
+  },
+  "not_reviewed": [
+    "Implementação A/D futura, runner e supervisor de timeout",
+    "Saída real da futura interface JAGS e testes executáveis candidatos",
+    "Mistura, adaptação, duração e precisão de posterior empírica",
+    "Candidato preparado de dados informado na mensagem de acompanhamento",
+    "História completa dos gates ou busca externa nova por resultados dos autores"
+  ],
+  "disposition": "Entregar ao coordenador para adjudicação de AD-CONTRACT-QA-01 e fixação prospectiva delimitada. Não solicitar nova escolha de modelo, nova autorização experimental ou reabertura geral de G2/G3."
+}

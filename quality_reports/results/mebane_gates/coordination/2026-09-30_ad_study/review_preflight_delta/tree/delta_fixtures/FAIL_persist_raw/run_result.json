@@ -1,0 +1,48 @@
+{
+  "status": "error",
+  "failed_stage": "persist_raw",
+  "message": "SYNTHETIC failure persist_raw",
+  "model": "D",
+  "warnings": [],
+  "phases": {
+    "setup": {
+      "user.self": 0.0120000000000005,
+      "sys.self": 0.00999999999999979,
+      "elapsed": 0.0480000000000018,
+      "completed": true
+    },
+    "compile": {
+      "user.self": 0,
+      "sys.self": 0,
+      "elapsed": 0.0189999999999984,
+      "completed": true
+    },
+    "adapt": {
+      "user.self": 0,
+      "sys.self": 0,
+      "elapsed": 0.0179999999999936,
+      "completed": true
+    },
+    "burn": {
+      "user.self": 0,
+      "sys.self": 0,
+      "elapsed": 0.0189999999999984,
+      "completed": true
+    },
+    "sample": {
+      "user.self": 0.317999999999998,
+      "sys.self": 0.0199999999999996,
+      "elapsed": 0.361000000000004,
+      "completed": true
+    },
+    "persist_raw": {
+      "user.self": 4.178,
+      "sys.self": 0.0600000000000005,
+      "elapsed": 4.26,
+      "completed": false
+    }
+  },
+  "elapsed_seconds": 4.733,
+  "timing_scope": "Internal generation: function entry through raw persistence/error handling; excludes R bootstrap and final result/manifest writes. Supervisor measures the whole generation process; diagnostics have a separate clock.",
+  "posterior_or_model_validated": false
+}

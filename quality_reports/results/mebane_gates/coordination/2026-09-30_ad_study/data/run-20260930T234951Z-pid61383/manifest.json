@@ -1,0 +1,115 @@
+{
+  "schema_version": "1.0",
+  "run_id": "run-20260930T234951Z-pid61383",
+  "status": "PREPARED_NOT_ESTIMATED_NOT_APPROVED",
+  "created_at_utc": "2026-09-30T23:49:51Z",
+  "source": {
+    "case_id": "dc2010",
+    "package": "UMeforensics/eforensics_public 0.0.4",
+    "commit": "3017de537450f97a01872d0157462a68bea348ee",
+    "vignette_date": "2019-08-16",
+    "package_commit_date": "2019-10-27",
+    "local_archive_download_date": "2026-09-29",
+    "accessed_at_utc": "2026-09-30T23:49:51Z",
+    "election_description": "Washington, D.C. 2010 mayoral example as described in the archived authors' vignette"
+  },
+  "inputs": {
+    "input": {
+      "path": "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/coordination/authors_replication_discovery/archive/UMeforensics-eforensics_public-3017de5/data/dc2010.rda",
+      "sha256": "0386dcc86155e543382c2725e9eb61ebf365b2e6f96a2b037324dbee80005196"
+    },
+    "discovery": {
+      "path": "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/coordination/authors_replication_discovery/discovery.md",
+      "sha256": "c2c70d52386aa1b0d7a1a6501b19296290e58c4956219ae55154ba390bd771ba"
+    },
+    "contract": {
+      "path": "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/coordination/authors_replication_discovery/replication_contract.json",
+      "sha256": "94c78c9d812d0628381e960b28cdc19a84636e883ba9a9eea704dac1cf8b71f2"
+    },
+    "model_a": {
+      "path": "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/G0/round1/qbl_installed_3017de5.jags",
+      "sha256": "f8360126424b7a463f76a1c99efc89a8a5cb81339213bd4931559f14595fbab6"
+    },
+    "script": {
+      "path": "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/R/experimental/mebane_ad/prepare_dc2010.R",
+      "sha256": "4696f938688dc42b0a8574c6c9c289407fefee7a38c67e1cc12e7c436b611c8e"
+    },
+    "test": {
+      "path": "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/tests/mebane/ad_study/test_dc2010.R",
+      "sha256": "a33745f6d979334912a2dd11b169d2cd9ae9161185a80a874e8d70a10fec9662"
+    }
+  },
+  "outputs": {
+    "csv": {
+      "file": "dc2010_common.csv",
+      "sha256": "0e75c520275459a05a4c159a508d2cb043f87757c87a79867b33a18968b1c5d2"
+    },
+    "rds": {
+      "file": "dc2010_ad_data.rds",
+      "sha256": "b2ef611dabb751f9286acbaae841a23c34948ed0a4b6306364cbe94d9d24903e"
+    },
+    "log": {
+      "file": "prepare.log",
+      "sha256": "6f65901c951682b08251656d538983c5badba2b55dbdde135ff9e3cd943cfaf3"
+    }
+  },
+  "data": {
+    "row_order": "Exact source RDA row order; no sorting or filtering",
+    "csv_columns": ["precinct", "N", "A", "W", "O"],
+    "summary": {
+      "precincts": 143,
+      "totals": {
+        "N": 452992,
+        "A": 320943,
+        "W": 97978,
+        "O": 34071
+      },
+      "fractions_of_registered_N": {
+        "A": 0.7085,
+        "W": 0.2163,
+        "O": 0.0752
+      },
+      "count_by_precinct": {
+        "N": {
+          "min": 843,
+          "median": 3066,
+          "mean": 3167.7762,
+          "max": 6287
+        },
+        "A": {
+          "min": 654,
+          "median": 2167,
+          "mean": 2244.3566,
+          "max": 4800
+        },
+        "W": {
+          "min": 77,
+          "median": 658,
+          "mean": 685.1608,
+          "max": 1983
+        },
+        "O": {
+          "min": 12,
+          "median": 159,
+          "mean": 238.2587,
+          "max": 988
+        }
+      },
+      "denominator_note": "Fractions use sum(NVoters) = sum(N) across all 143 precincts; count summaries use 143 precincts, not voters."
+    },
+    "model_a": "Original qbl JAGS observed a=A, w=W, N=NVoters; six intercept-only matrices; model file is not modified",
+    "model_d": "Candidate multinomial observed matrix columns A,W,O with N; no likelihood, prior or estimator is implemented",
+    "dc_brazil_mapping_note": "In this author-packaged D.C. example A is defined as NVoters-NValid. Do not relabel NValid as Brazilian turnout or transfer that definition to Brazilian data. O is an arithmetic residual, not necessarily votes for an opponent."
+  },
+  "environment": {
+    "R": "R version 4.4.2 (2024-10-31)",
+    "platform": "aarch64-apple-darwin20",
+    "jsonlite": "2.0.0",
+    "sha256_command": "shasum -a 256"
+  },
+  "commands": {
+    "prepare": "Rscript --vanilla R/experimental/mebane_ad/prepare_dc2010.R",
+    "test": "Rscript --vanilla tests/mebane/ad_study/test_dc2010.R /Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/data/run-20260930T234951Z-pid61383"
+  },
+  "limits": ["No model estimation or MCMC", "No G10 numeric author reference or gate approval", "Source RDA integrity checks do not establish original electoral provenance"]
+}

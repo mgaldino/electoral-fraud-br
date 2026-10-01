@@ -1,0 +1,50 @@
+{
+  "start_utc": "2026-10-01T00:46:13.067515+00:00",
+  "release_sha256": "31f0328a028353448bb3a23de98d9e46bdecd89ec084806e76dfe72d0253e667",
+  "runs": [
+    {
+      "command": [
+        "Rscript",
+        "--vanilla",
+        "R/experimental/mebane_ad/run_jags.R",
+        "A",
+        "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/contract_v2.json",
+        "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/data/run-20260930T235038Z-pid61600/dc2010_ad_data.rds",
+        "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/review_preflight_delta/tree/independent_supervisor/pair/A"
+      ],
+      "returncode": 7,
+      "timed_out": false,
+      "elapsed_seconds": 0.01,
+      "log": "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/review_preflight_delta/tree/independent_supervisor/pair/A_sampling.log",
+      "log_sha256": "62abc25e58b2d617de13f11944f436ef2a9623f18adafa0b4af04362aca99d81",
+      "model": "A"
+    },
+    {
+      "command": [
+        "Rscript",
+        "--vanilla",
+        "R/experimental/mebane_ad/run_jags.R",
+        "D",
+        "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/contract_v2.json",
+        "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/data/run-20260930T235038Z-pid61600/dc2010_ad_data.rds",
+        "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/review_preflight_delta/tree/independent_supervisor/pair/D"
+      ],
+      "returncode": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.01,
+      "log": "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/review_preflight_delta/tree/independent_supervisor/pair/D_sampling.log",
+      "log_sha256": "62abc25e58b2d617de13f11944f436ef2a9623f18adafa0b4af04362aca99d81",
+      "model": "D"
+    }
+  ],
+  "retries": 0,
+  "production_approved": false,
+  "G10_approved": false,
+  "timing_scope": "External process wall clocks: generation and postprocessing separately; sum per model is end-to-end compute excluding A/D queue wait and supervisor/report overhead",
+  "budgets_seconds": {
+    "generation_per_model": 1200,
+    "postprocessing_per_model": 1200
+  },
+  "end_utc": "2026-10-01T00:46:13.069476+00:00",
+  "result_interpretation": "Raw execution only; independent result review required"
+}

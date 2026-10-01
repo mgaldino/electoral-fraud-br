@@ -1,0 +1,47 @@
+{
+  "created_utc": "2026-10-01 00:46:37 UTC",
+  "files": [
+    {
+      "path": "delta_fixtures/D_FAKE_ENGINE/raw_chains.rds",
+      "snapshot": "delta_fixtures/D_processed/consumed_sources/delta_fixtures/D_FAKE_ENGINE/raw_chains.rds",
+      "bytes": 75932873,
+      "sha256": "6213dc4498c0387f7c677551b6f98b7315dfbced7167449770311590bbb6c1a5"
+    },
+    {
+      "path": "delta_fixtures/D_FAKE_ENGINE/run_result.json",
+      "snapshot": "delta_fixtures/D_processed/consumed_sources/delta_fixtures/D_FAKE_ENGINE/run_result.json",
+      "bytes": 1388,
+      "sha256": "4b96040ce76291dcff55adf88516a1a42638306eba2086693a923f1d3b08940c"
+    },
+    {
+      "path": "delta_fixtures/D_FAKE_ENGINE/sampling_metadata.json",
+      "snapshot": "delta_fixtures/D_processed/consumed_sources/delta_fixtures/D_FAKE_ENGINE/sampling_metadata.json",
+      "bytes": 2711,
+      "sha256": "8b1c6b7fcdd9a695a34d4bc8fdcf1180c341920a7399e5b89ba2b71123f6b0f7"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/data/run-20260930T235038Z-pid61600/dc2010_ad_data.rds",
+      "snapshot": "delta_fixtures/D_processed/consumed_sources/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/data/run-20260930T235038Z-pid61600/dc2010_ad_data.rds",
+      "bytes": 2539,
+      "sha256": "b2ef611dabb751f9286acbaae841a23c34948ed0a4b6306364cbe94d9d24903e"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/contract_v2.json",
+      "snapshot": "delta_fixtures/D_processed/consumed_sources/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/contract_v2.json",
+      "bytes": 15010,
+      "sha256": "d17b7f508a7ce87eec3ca71ed7df67666b528c755e005ec9e1299e5ff9deb509"
+    },
+    {
+      "path": "R/experimental/mebane_ad/diagnostics.R",
+      "snapshot": "delta_fixtures/D_processed/consumed_sources/R/experimental/mebane_ad/diagnostics.R",
+      "bytes": 13107,
+      "sha256": "4f30f9ff1772f83b54519e941cd9c6edea24fbe359d5019836223f60b995061c"
+    },
+    {
+      "path": "R/experimental/mebane_ad/io.R",
+      "snapshot": "delta_fixtures/D_processed/consumed_sources/R/experimental/mebane_ad/io.R",
+      "bytes": 2627,
+      "sha256": "913803dc29f9784d756ab9a1834b2a96b8201d754957dbd9f65286674b4abb2d"
+    }
+  ]
+}

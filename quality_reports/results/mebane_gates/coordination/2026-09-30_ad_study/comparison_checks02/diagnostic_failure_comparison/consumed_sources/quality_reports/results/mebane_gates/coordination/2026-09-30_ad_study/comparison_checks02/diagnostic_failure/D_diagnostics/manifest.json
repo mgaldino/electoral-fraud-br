@@ -1,0 +1,21 @@
+{
+  "note": "",
+  "files": [
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/comparison_checks02/diagnostic_failure/D_diagnostics/class_probabilities.csv",
+      "bytes": 112,
+      "sha256": "ba856126453f264a0df4def34b7dcd30793250e421c368b6bcc5c948873098e1"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/comparison_checks02/diagnostic_failure/D_diagnostics/diagnostic_result.json",
+      "bytes": 158,
+      "sha256": "340e16fe0f2913be0234c9cf4dd6ec83e129a4b748f338b1fdedde63bb5b281d"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/comparison_checks02/diagnostic_failure/D_diagnostics/diagnostics.csv",
+      "bytes": 202,
+      "sha256": "ea2f300a261fe635ce8a6620b641b2dc26178d4b1176157acad3f4b8e0fc3207"
+    }
+  ],
+  "excluded": "This manifest itself; active outer process logs are sealed separately"
+}

@@ -1,0 +1,30 @@
+{
+  "schema_version": "1.0",
+  "adjudication_id": "AD-DC2010:8f0783b5f352:round1",
+  "source": {
+    "reviewed_artifact": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/contract_v1.json",
+    "sha256": "8f0783b5f3520958a2b1a6d6de5bb217e2ea4ac8656a6ac114024b9d6a95dc17",
+    "artifact_intact": true
+  },
+  "contract": {"required": false, "path": null, "sha256": null, "contract_id": null, "artifact_sha256": null, "status": null, "stale": false},
+  "review_sources": [{"review_id": "AD-CONTRACT-QA", "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/review_contract/review.json", "sha256": "01090a2482c83dd6f7f0fa0233a94f6baf44899fb42b26eaff44e67d9945aedd"}],
+  "findings": [{
+    "finding_id": "AD-CONTRACT-QA-01",
+    "source_review": "AD-CONTRACT-QA",
+    "quoted_finding": "Fixar regra executável para diagnósticos discretos e relevância dos alvos",
+    "type": "method",
+    "severity": "major",
+    "scientific_dimension": "computational_diagnostics",
+    "held_decision": false,
+    "status": "CONFIRMED",
+    "source_locations": ["contract_v1.json: comparison.primary_common_outputs and diagnostics.discrete/verdict"],
+    "defect_evidence": ["Class probabilities are primary outputs, but no threshold or exhaustive diagnostic target list is specified for finite between-chain occupancy differences.", "The phrase relevant to reported comparisons leaves the target set open to post-result interpretation."],
+    "refuting_evidence": [],
+    "mechanical_checks": ["Reopened exact contract and review; SHA-256 values match the reviewed files. No empirical MCMC has been run."],
+    "reasoning": "Fix the target-statistic-threshold-action table prospectively. This is a safe implementation of the already authorized pilot, not a change in electoral estimand or model choice.",
+    "proposed_fix_assessment": "safe",
+    "disposition": "Create contract_v2 without replacing v1; require all named continuous/discrete diagnostic targets to meet fixed criteria and retain undefined statistics as inconclusive. Obtain independent delta review before pilot."
+  }],
+  "summary": {"total": 1, "confirmed": 1, "partial": 0, "refuted": 0, "unresolved": 0, "held_decisions": 0},
+  "adjudication": {"verdict": "READY_FOR_IMPLEMENTATION", "checked_at": "2026-09-30", "reasons": ["One bounded protocol repair is confirmed and authorized; no model or production approval is implied. Contract_v1 is not released for empirical estimation."]}
+}

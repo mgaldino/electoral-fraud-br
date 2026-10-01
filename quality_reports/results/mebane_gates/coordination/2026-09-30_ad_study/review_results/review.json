@@ -1,0 +1,173 @@
+{
+  "schema_version": "1.0-independent-ad-results-review",
+  "goal": "AD-4",
+  "status": "pass",
+  "status_scope": "Fidelidade quantitativa e documental da entrega congelada pilot01/comparison01 e PDF v1. Não é PASS de precisão posterior, convergência, identificação, inferência eleitoral ou produção.",
+  "pilot_verdict_independently_confirmed": "computationally_inconclusive",
+  "review_date_local": "2026-09-30",
+  "review_date_utc": "2026-10-01",
+  "timezone": "America/Sao_Paulo",
+  "executor_id": "019d795a-acfa-72c2-a210-d55a46c606c2",
+  "reviewer_id": "01a0f4b8-962b-77a3-a418-6247c6219e8b",
+  "reviewer_identity_evidence": "Own get_goal/create_goal threadId; distinct from executor and D implementer",
+  "repository_root": "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud",
+  "evidence_paths_relative_to": "repository_root unless explicitly an artifact under review_results",
+  "study_path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study",
+  "binding": {
+    "comparison_manifest": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/comparison01/manifest.json",
+    "comparison_manifest_sha256": "3bfbdaf1018518e09f0abe78deb2554a92906692e64e32d6570f0b3f79062545",
+    "comparison_report_sha256": "7ce47502798661813f976c0bf975af30e7a10237c70d23afd44baad01e682f50",
+    "pdf_sha256": "7d518b6a641b9793497264ec9eef261517c927f5610f858111f6610ee8389d6b",
+    "compare_runs_sha256": "ba835f6244341f26e425a4173f53edb1457162820dc0deed0649ea1cf2bae81f",
+    "comparison_test_sha256": "56c8773933b72a5e2c5b73298d55776b822a31c8b29b02d2691d0d4c131d3e76",
+    "release_sha256": "7daac83b6ac5b23c56db63c88100bd7571c422f1dbe8a3f49134e1ae12bcdfbe",
+    "execution_sha256": "00df77601d3a8b1c60c38b7edaddd3aac3982d6152e6837933fa9ab7b15c877d",
+    "contract_sha256": "d17b7f508a7ce87eec3ca71ed7df67666b528c755e005ec9e1299e5ff9deb509",
+    "preflight_full02_manifest_sha256": "7875d46b09301906dc3e7211b8319e53c43f3f19c21e141687d55a65cb65a337",
+    "A_raw_sha256": "4fdd7316850c1b3aca1e067aeee5338c41a45042fb5f3405e4a43f3b30d9dcbd",
+    "D_raw_sha256": "6fe3da66426201efe6da0176f7c880755df868cb9fb6b318a7a9eb1f6bed13ac",
+    "A_literal_sha256": "f8360126424b7a463f76a1c99efc89a8a5cb81339213bd4931559f14595fbab6",
+    "input_RDS_sha256": "b2ef611dabb751f9286acbaae841a23c34948ed0a4b6306364cbe94d9d24903e",
+    "original_RDA_sha256": "0386dcc86155e543382c2725e9eb61ebf365b2e6f96a2b037324dbee80005196"
+  },
+  "summary": "Não foi identificado defeito concreto no comparador, nos resultados ou no relatório congelado. Os 23 globais de cada modelo foram recalculados diretamente dos raw por cadeia, incluindo M/S; as regras v2 foram reaplicadas a todas as 3913 linhas obrigatórias. Contagens, tempos, denominadores ESS/s e números do relatório conferem. Os dois modelos terminaram e adaptaram, mas não satisfizeram os critérios de precisão. PASS certifica esta correspondência, não a posterior.",
+  "findings": [],
+  "checks": [
+    {
+      "id": "AD4-INTEGRITY",
+      "status": "pass",
+      "result": "150 entradas da release conferidas; release_consumed coincide com release_v1 e execution vincula seu hash. 103 arquivos pilot01/comparison01 vinculados, manifests/snapshots/logs verificados, raw hashes confirmados e reconferidos após a QA. O comparador final é byte-idêntico à leitura estática inicial. A revisão leu raw in-place, sem cópia integral de cadeias.",
+      "artifact": "input_binding.json",
+      "evidence": [
+        {"path": "R/experimental/mebane_ad/compare_runs.R", "line_start": 23, "line_end": 40},
+        {"path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/execution.json"},
+        {"path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/comparison01/manifest.json"}
+      ]
+    },
+    {
+      "id": "AD4-DATA-PROTOCOL",
+      "status": "pass",
+      "result": "Mesmas 143 unidades e ordem do RDA; N, A=a=NVoters-NValid, W e O=NValid-W conferidos sem exclusões. actual_jags_data coincide com cada braço do payload comum. Inputs/inits, RNG/seeds e metadados correspondem ao contrato. Quatro cadeias por modelo, 2000 registros por cadeia, mcpar 6001:8000 com thin=1. Run results indicam adaptação adequada, ausência de warnings, fases completas e processos sem timeout; A depois D, retries=0.",
+      "artifact": "checks_results.json",
+      "evidence": [
+        {"path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/A/run_result.json"},
+        {"path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/D/run_result.json"},
+        {"path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/comparison01/comparison_report.md", "line_start": 13, "line_end": 15}
+      ]
+    },
+    {
+      "id": "AD4-RAW-GLOBALS",
+      "status": "pass",
+      "result": "Recalculados 23 alvos por modelo em matrizes 2000x4, sem pooling de cadeias: pi[1:3], seis alpha, seis variâncias, seis b0, M_total e S_total. Médias, SD, quantis .025/.5/.975, quatro médias por cadeia, R-hat rank/fold/split, ESS bulk/tail e MCSE conferem com as tabelas. Todos os 23 globais de cada modelo têm estatísticas finitas, de modo que o filtro safe_extreme não omitiu global indefinido na tabela entregue.",
+      "artifacts": ["checks_results.json", "globals_recomputed.csv"],
+      "evidence": [
+        {"path": "R/experimental/mebane_ad/compare_runs.R", "line_start": 51, "line_end": 70},
+        {"path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/comparison01/common_functionals.csv"}
+      ]
+    },
+    {
+      "id": "AD4-JOINT-COUNTS",
+      "status": "pass",
+      "result": "M/S recalculados por unidade e draw com o mesmo Z: A usa auxiliares realizados e .999 literal nos endpoints manufactured; D usa mu contínuo. Iteração/cadeia, totais e frações/N_total conferem. Em D, arrays de contagens, IDs/seed, inteireza, suporte M_count+S_count<=W, agregação conjunta e médias condicionais conferem. Não foram sorteadas novas contagens nesta revisão.",
+      "artifact": "checks_results.json",
+      "evidence": [
+        {"path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/A_diagnostics/joint_functionals.csv"},
+        {"path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/D_diagnostics/joint_functionals.csv"},
+        {"path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/comparison01/comparison_report.md", "line_start": 39, "line_end": 51}
+      ]
+    },
+    {
+      "id": "AD4-ALL-RULES",
+      "status": "pass",
+      "result": "Universo completo de nomes/grupos obrigatório, unicidade e ausência de isenções conferidos: 2171 A e 1742 D. Reaplicados RH<1.01, ESS bulk/tail>=400, NA->falha e range<=.05 nas classes a todas as linhas. Ranges dos 429 indicadores e 3 contagens por modelo também recalculados dos Z por cadeia; contagens divididas por n. Probabilidades de classe conferem com raw e com a comparação. Falhas/NA/veredictos agregados coincidem, sem resgate por secundárias.",
+      "artifacts": ["checks_results.json", "mandatory_groups_recomputed.csv"],
+      "evidence": [
+        {"path": "R/experimental/mebane_ad/compare_runs.R", "line_start": 41, "line_end": 50},
+        {"path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/comparison01/comparison_report.md", "line_start": 29, "line_end": 35}
+      ]
+    },
+    {
+      "id": "AD4-TIMES-ESS",
+      "status": "pass",
+      "result": "Tempos de processo conferem com supervisores de geração e diagnóstico; fases e tempo interno conferem com run_result. End-to-end é somente a soma dos dois processos externos, sem dupla contagem das fases. Colunas ESS/s de geração interna, geração externa, amostragem e end-to-end usam exatamente os respectivos denominadores. Valores não sustentam ranking de eficiência validado com precisão reprovada.",
+      "artifact": "checks_results.json",
+      "evidence": [
+        {"path": "R/experimental/mebane_ad/compare_runs.R", "line_start": 52, "line_end": 84},
+        {"path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/comparison01/timings_diagnostics.csv", "line_start": 1, "line_end": 3},
+        {"path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/comparison01/comparison_report.md", "line_start": 71, "line_end": 73}
+      ]
+    },
+    {
+      "id": "AD4-REPRODUCTION-PDF",
+      "status": "pass",
+      "result": "Comparador reexecutado sobre inputs persistidos em nova pasta de QA: cinco arquivos principais byte-idênticos, inclusive relatório Markdown. Quatro cenários fornecidos de teste passaram. PDF com hash fornecido, três páginas, 44 unidades de texto/tabela correspondentes ao Markdown; todos os números/arredondamentos das tabelas conferidos. As três PNGs preservadas foram visualmente inspecionadas: sem corte/sobreposição; continuação da Tabela 1 repete cabeçalho.",
+      "artifact": "report_checks.json",
+      "evidence": [
+        {"path": "tests/mebane/ad_study/test_comparison.R", "line_start": 11, "line_end": 60},
+        {"path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/comparison01/comparison_report.md", "line_start": 19, "line_end": 47},
+        {"path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/comparison_A_D_DC2010_v1.pdf", "pages": [1, 2, 3]}
+      ]
+    },
+    {
+      "id": "AD4-INTERPRETATION",
+      "status": "pass",
+      "result": "Relatório apresenta inconclusão computacional, médias das amostras geradas e ressalvas de precisão. Não equipara essas médias a posterior convergida, fraude observada, contrafactual eleitoral ou validação da identificação. Contraste A/D é sensibilidade de modelos no mesmo caso, não teste de igualdade nem replicação numérica externa. G3 continua inconclusivo e G10/produção não são aprovados.",
+      "evidence": [
+        {"path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/comparison01/comparison_report.md", "line_start": 7, "line_end": 15},
+        {"path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/comparison01/comparison_report.md", "line_start": 39, "line_end": 57},
+        {"path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/comparison01/comparison_report.md", "line_start": 71, "line_end": 71}
+      ]
+    }
+  ],
+  "independently_recomputed_summary": {
+    "A": {"mandatory": 2171, "failed": 1605, "undefined_subset_of_failed": 432, "globals_failed": 15, "global_rhat_max": 3.45062748935555, "global_bulk_ESS_min": 4.41177089703738, "global_tail_ESS_min": 4.01606425702811, "generation_seconds": 102.570545708004, "postprocessing_seconds": 22.3473328340333, "end_to_end_compute_seconds": 124.917878542037, "M_sample_mean": 514.136566719402, "S_sample_mean": 64.0084749998354},
+    "D": {"mandatory": 1742, "failed": 1021, "undefined_subset_of_failed": 392, "globals_failed": 14, "global_rhat_max": 2.47192994285672, "global_bulk_ESS_min": 4.84288900094801, "global_tail_ESS_min": 4.99167376973706, "generation_seconds": 68.2468318750034, "postprocessing_seconds": 21.721774375008, "end_to_end_compute_seconds": 89.9686062500114, "M_sample_mean": 598.355721521761, "S_sample_mean": 62.4871720915568},
+    "interpretation": "Undefined counts are included in failed counts, not additive. Sample means describe generated chains only. Neither model passed the frozen precision criteria."
+  },
+  "executed_checks": {
+    "actual_results_checks": 91,
+    "report_pdf_checks": 22,
+    "supplied_synthetic_comparator_cases": 4,
+    "central_raw_targets_recomputed": 46,
+    "mandatory_decisions_recomputed": 3913,
+    "commands": [
+      "env PYTHONDONTWRITEBYTECODE=1 python3 quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/review_results/capture_static.py",
+      "env PYTHONDONTWRITEBYTECODE=1 python3 quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/review_results/bind_results.py",
+      "env LC_ALL=C LANG=C Rscript --vanilla quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/review_results/check_results.R",
+      "env PYTHONDONTWRITEBYTECODE=1 python3 quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/review_results/prepare_attempt2.py",
+      "env LC_ALL=C LANG=C Rscript --vanilla quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/review_results/check_results_attempt2.R",
+      "env PYTHONDONTWRITEBYTECODE=1 python3 quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/review_results/check_report.py",
+      "env PYTHONDONTWRITEBYTECODE=1 python3 quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/review_results/prepare_report_attempt2.py",
+      "env PYTHONDONTWRITEBYTECODE=1 python3 quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/review_results/check_report_attempt2.py",
+      "env PYTHONDONTWRITEBYTECODE=1 python3 quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/review_results/seal_results.py"
+    ],
+    "nested_commands": "report_checks.json records the comparator fixture/reproduction and pdftotext/pdfinfo commands with logs; no model fitting command was executed.",
+    "review_fixture_repairs": [
+      "First R QA attempt stopped on equal-valued all-NA range_limit columns inferred as logical versus numeric by read.csv. Attempt/source/log preserved; only all-NA storage normalization added, as documented in attempt1_explanation.json.",
+      "First PDF text assertion used layout order, interleaving numeric cells with a wrapped label. Original text/script retained; reading-order extraction resolves it without changing PDF or report. See report_attempt1_explanation.json."
+    ],
+    "proportionality": "Did not recompute every local R-hat/ESS from raw. Recomputed all 46 central targets directly; rechecked every mandatory decision from its persisted metrics, full target universe and all class ranges from Z. Frozen processor preflight evidence remains applicable. No historical re-audit, power analysis or new identification assessment.",
+    "raw_copies_created": false,
+    "new_MCMC": false
+  },
+  "limitations": [
+    "Both pilots are computationally inconclusive. Large global R-hat, low ESS and cross-chain differences remain observed limitations, not defects hidden by this PASS.",
+    "No numeric external author-result reference exists in the contracted DC2010 comparison. Same archived input/case is not a certified replication of published numerical estimates.",
+    "Known A F1/F2 and D identification limitations are unchanged; no new determination about power, identification or national use was attempted.",
+    "The supplied synthetic comparator tests validate state aggregation/arithmetic with simplified tables, not all empirical target metrics. Actual raw/table checks above supply the requested independent evidence.",
+    "The renderer manifest retains an earlier visual_qa=pending string; the separate visual_qa_v1.json and this independent inspection record the completed visual QA on the identical PDF. No file was silently updated."
+  ],
+  "authorization_boundary": {
+    "candidate_files_edited": false,
+    "new_MCMC": false,
+    "installs": false,
+    "deletions": false,
+    "new_round_or_extension_authorized": false,
+    "posterior_precision_approved": false,
+    "production_approved": false,
+    "G3_approved": false,
+    "G10_approved": false,
+    "coordinator_adjudication_required": true,
+    "delivery": "Final AD-4 review complete for the hashes above; coordinator adjudicates fidelity PASS while preserving the inconclusive pilot verdict."
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "schema_version": "1.0",
+  "adjudication_id": "AD-DC2010:preflight-full02",
+  "source": {
+    "reviewed_artifact": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/preflight_full02/candidate_manifest.json",
+    "sha256": "7875d46b09301906dc3e7211b8319e53c43f3f19c21e141687d55a65cb65a337",
+    "artifact_intact": true
+  },
+  "contract": {
+    "required": false,
+    "path": null,
+    "sha256": null,
+    "contract_id": null,
+    "artifact_sha256": null,
+    "status": null,
+    "stale": false
+  },
+  "review_sources": [
+    {
+      "review_id": "AD-PREFLIGHT-DELTA",
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/review_preflight_delta/review.json",
+      "sha256": "fad1ec65544cb5e43647a3bee359b30f2eb379bc2bfb6f34f31d3d1fe7f3f37d"
+    }
+  ],
+  "findings": [],
+  "summary": {
+    "total": 0,
+    "confirmed": 0,
+    "partial": 0,
+    "refuted": 0,
+    "unresolved": 0,
+    "held_decisions": 0
+  },
+  "adjudication": {
+    "verdict": "NO_CONFIRMED_DEFECTS",
+    "checked_at": "2026-10-01T00:51:46.982046+00:00",
+    "reasons": [
+      "Prior findings remain historically confirmed; independently checked repairs address them.",
+      "The coordinator checked exact candidate/review hashes and scoped evidence. Only the already authorized bounded pilot is released; no model or production approval."
+    ]
+  }
+}

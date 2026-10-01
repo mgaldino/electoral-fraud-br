@@ -1,0 +1,24 @@
+{
+  "status": "error",
+  "failed_stage": "compile",
+  "message": "SYNTHETIC failure compile",
+  "model": "D",
+  "warnings": [],
+  "phases": {
+    "setup": {
+      "user.self": 0.00999999999999801,
+      "sys.self": 0.0110000000000001,
+      "elapsed": 0.0480000000000018,
+      "completed": true
+    },
+    "compile": {
+      "user.self": 0,
+      "sys.self": 0,
+      "elapsed": 0.0189999999999984,
+      "completed": false
+    }
+  },
+  "elapsed_seconds": 0.0700000000000003,
+  "timing_scope": "Internal generation: function entry through raw persistence/error handling; excludes R bootstrap and final result/manifest writes. Supervisor measures the whole generation process; diagnostics have a separate clock.",
+  "posterior_or_model_validated": false
+}

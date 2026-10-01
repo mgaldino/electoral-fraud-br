@@ -1,0 +1,16 @@
+{
+  "note": "Bounded raw run; independent diagnostics and review pending",
+  "files": [
+    {
+      "path": "delta_fixtures/FAIL_input_read/events.jsonl",
+      "bytes": 607,
+      "sha256": "1e510b585f3012d3b3f434488cc1ef0a588c9081f1b291a1e5ac0d670003ebdd"
+    },
+    {
+      "path": "delta_fixtures/FAIL_input_read/run_result.json",
+      "bytes": 877,
+      "sha256": "d00ec00e8b396645e2915f730095e7eb441cdfc4a99bfdd3c4acd7f6361f936d"
+    }
+  ],
+  "excluded": "This manifest itself; active outer process logs are sealed separately"
+}

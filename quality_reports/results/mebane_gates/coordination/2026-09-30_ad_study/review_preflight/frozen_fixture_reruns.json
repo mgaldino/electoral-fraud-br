@@ -1,0 +1,73 @@
+{
+  "records": [
+    {
+      "label": "runner",
+      "command": [
+        "Rscript",
+        "--vanilla",
+        "tests/mebane/ad_study/test_runner.R",
+        "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/contract_v2.json",
+        "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/data/run-20260930T235038Z-pid61600/dc2010_ad_data.rds",
+        "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/review_preflight/frozen_fixture_reruns/runner"
+      ],
+      "cwd": "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/review_preflight/common01_tree",
+      "started_utc": "2026-10-01T00:29:15.990880+00:00",
+      "finished_utc": "2026-10-01T00:29:16.719246+00:00",
+      "returncode": 0,
+      "log": "frozen_fixture_reruns/runner.log",
+      "log_sha256": "5dc355ca2e55082a26158c0ee378bf7f57f0e4cf229d6a214dc96f9d5843f703"
+    },
+    {
+      "label": "supervisor",
+      "command": [
+        "python3",
+        "tests/mebane/ad_study/test_supervisor.py",
+        "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/review_preflight/frozen_fixture_reruns/supervisor"
+      ],
+      "cwd": "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/review_preflight/common01_tree",
+      "started_utc": "2026-10-01T00:29:16.719796+00:00",
+      "finished_utc": "2026-10-01T00:29:17.066321+00:00",
+      "returncode": 0,
+      "log": "frozen_fixture_reruns/supervisor.log",
+      "log_sha256": "2f8457916651fab5f2a939a8ffac08cbfff48eb3d793d4d16508d7514fa52b6e"
+    },
+    {
+      "label": "dc2010",
+      "command": [
+        "Rscript",
+        "--vanilla",
+        "tests/mebane/ad_study/test_dc2010.R",
+        "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/data/run-20260930T235038Z-pid61600"
+      ],
+      "cwd": "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/review_preflight/common01_tree",
+      "started_utc": "2026-10-01T00:29:17.066903+00:00",
+      "finished_utc": "2026-10-01T00:29:17.524247+00:00",
+      "returncode": 0,
+      "log": "frozen_fixture_reruns/dc2010.log",
+      "log_sha256": "df00606967dbb06035647c7fea1c9acfbde6e7d6cf95e0409a36822fafab9ad5"
+    },
+    {
+      "label": "model_d",
+      "command": [
+        "Rscript",
+        "--vanilla",
+        "tests/mebane/ad_study/test_model_d.R",
+        "R/experimental/mebane_ad/model_d.R",
+        "models/experimental/mebane_ad/d_multinomial.jags",
+        "quality_reports/results/mebane_gates/G0/round1/qbl_installed_3017de5.jags",
+        "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/contract_v2.json",
+        "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/data/run-20260930T235038Z-pid61600/dc2010_ad_data.rds",
+        "quality_reports/results/mebane_gates/coordination/authors_replication_discovery/archive/UMeforensics-eforensics_public-3017de5/data/dc2010.rda",
+        "R/experimental/mebane_ad/io.R"
+      ],
+      "cwd": "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/review_preflight/common01_tree",
+      "started_utc": "2026-10-01T00:29:17.524979+00:00",
+      "finished_utc": "2026-10-01T00:29:19.159501+00:00",
+      "returncode": 0,
+      "log": "frozen_fixture_reruns/model_d.log",
+      "log_sha256": "27242ca06ce7e78262e0e66a60bea38bcf327405c8d9d4e3997de740e2753004"
+    }
+  ],
+  "empirical_MCMC": false,
+  "D_JAGS": "synthetic fixed parents; no unobserved stochastic nodes"
+}

@@ -1,0 +1,61 @@
+{
+  "status": "pass",
+  "fixtures": [
+    {
+      "command": [
+        "/opt/homebrew/opt/python@3.13/bin/python3.13",
+        "-c",
+        "print('one successful invocation')"
+      ],
+      "returncode": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.03853429201990366,
+      "log": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/supervisor_checks02/success.log",
+      "log_sha256": "87309e2a0c2764506638ae1c5a6ebcd8fe06bfa1815811bae0e500b55f887bbc",
+      "fixture": "success"
+    },
+    {
+      "command": [
+        "/opt/homebrew/opt/python@3.13/bin/python3.13",
+        "-c",
+        "raise SystemExit(7)"
+      ],
+      "returncode": 7,
+      "timed_out": false,
+      "elapsed_seconds": 0.041214499971829355,
+      "log": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/supervisor_checks02/failure.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "fixture": "failure"
+    },
+    {
+      "command": [
+        "/opt/homebrew/opt/python@3.13/bin/python3.13",
+        "-c",
+        "import time; time.sleep(30)"
+      ],
+      "returncode": -15,
+      "timed_out": true,
+      "elapsed_seconds": 0.20542616600869223,
+      "log": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/supervisor_checks02/timeout.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "fixture": "timeout"
+    },
+    {
+      "command": [
+        "/opt/homebrew/opt/python@3.13/bin/python3.13",
+        "-c",
+        "import subprocess,sys,time; subprocess.Popen([sys.executable,'-c',\"import signal,time; signal.signal(signal.SIGTERM,signal.SIG_IGN); print('child-ready',flush=True); time.sleep(.5); print('late-write',flush=True)\"]); time.sleep(30)"
+      ],
+      "returncode": -15,
+      "timed_out": true,
+      "elapsed_seconds": 0.2084660839755088,
+      "log": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/supervisor_checks02/descendant.log",
+      "log_sha256": "5d2fe810d403c7780d52dd084fc44c0b7ea4f6b874dc10df064049084d3d4082",
+      "fixture": "descendant_ignores_SIGTERM"
+    }
+  ],
+  "overwrite_refused": true,
+  "MCMC": false,
+  "supervisor_sha256": "48fd61410eda632517adc804174bea7c9282c09bf06f140084ec5bff6f68a7b4",
+  "test_sha256": "ebf7201326f89419ba53ee9411ae5966fb7273eae6308645e080a0115ca13a2b"
+}

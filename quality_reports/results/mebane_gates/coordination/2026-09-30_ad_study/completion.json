@@ -1,0 +1,93 @@
+{
+  "status": "experimental_delivery_complete",
+  "created_utc": "2026-10-01T01:08:25.951838+00:00",
+  "study_id": "AD-DC2010",
+  "pilot_verdict": "computationally_inconclusive",
+  "independent_review": "pass_for_quantitative_documentary_fidelity_only",
+  "raw_runs_complete": true,
+  "attempts_per_model": 1,
+  "chains_per_model": 4,
+  "retained_iterations_per_chain": 2000,
+  "models_still_running": false,
+  "posterior_precision_approved": false,
+  "production_approved": false,
+  "G3_status": "inconclusive",
+  "G10_status": "queued",
+  "Brazil_new_fit": false,
+  "A_source_unchanged": true,
+  "historical_gates_unchanged": true,
+  "deletions": false,
+  "installs": false,
+  "next_investigation": "Diagnose current chains and plan an exact D/Stan engine comparison before identification validation and Brazilian scaling; not run in this lot",
+  "native_historical_goal": "Unfinished production-engine goal is not completed by this experimental delivery",
+  "checks": {
+    "central_raw_targets_independently_recomputed": 46,
+    "mandatory_decisions_rechecked": 3913,
+    "result_checks": 91,
+    "report_pdf_checks": 22,
+    "all_local_ESS_independently_recomputed": false
+  },
+  "artifacts": [
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/study_state.json",
+      "bytes": 2818,
+      "sha256": "90aaa26da6cce0330a3210f228dc78fb85269f5b30e43a73be472b6bc141ace4"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/decision.md",
+      "bytes": 3175,
+      "sha256": "d2940550c1d693a306de1e112d5e634ae2376b3530ed6762176bd2629dec0635"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/contract_v2.json",
+      "bytes": 15010,
+      "sha256": "d17b7f508a7ce87eec3ca71ed7df67666b528c755e005ec9e1299e5ff9deb509"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/release_v1.json",
+      "bytes": 37717,
+      "sha256": "7daac83b6ac5b23c56db63c88100bd7571c422f1dbe8a3f49134e1ae12bcdfbe"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/execution.json",
+      "bytes": 2196,
+      "sha256": "00df77601d3a8b1c60c38b7edaddd3aac3982d6152e6837933fa9ab7b15c877d"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/comparison01/manifest.json",
+      "bytes": 8634,
+      "sha256": "3bfbdaf1018518e09f0abe78deb2554a92906692e64e32d6570f0b3f79062545"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/comparison_A_D_DC2010_v1.pdf",
+      "bytes": 10751,
+      "sha256": "7d518b6a641b9793497264ec9eef261517c927f5610f858111f6610ee8389d6b"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/visual_qa_v1.json",
+      "bytes": 922,
+      "sha256": "9b0f0a1bb750f1c620e2faf7b09e31a6a13a3facbf4b72facf42eea96fbdb5f4"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/review_results/review.json",
+      "bytes": 15817,
+      "sha256": "8e1468d21bae539347e4d7b2c312fa8b77159949988503b2a944b95bc1dbc5a5"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/results_adjudication.json",
+      "bytes": 1799,
+      "sha256": "c5004e4669f0967b4b855659be58d064c4e99a6a8d7615e6a83e86d30622b22c"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/handoff.md",
+      "bytes": 5137,
+      "sha256": "6c3a8666c980db6f2b6c17067441a852eb14db46813b6b611feeb15f51c51251"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/preservation_check04.json",
+      "bytes": 329,
+      "sha256": "6e080064d343c114a671916e882d741da23f0c3c77a3afb674ec37d3682067d9"
+    }
+  ],
+  "full_manifest": "final_manifest.json"
+}

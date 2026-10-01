@@ -1,0 +1,147 @@
+{
+  "schema_version": "1.0-independent-ad-preflight-delta-review",
+  "status": "pass",
+  "scope": "Delta executável full01 -> full02 somente; reaproveita a revisão anterior das partes inalteradas. Não avalia resultados empíricos nem compare_runs.R.",
+  "review_date_local": "2026-09-30",
+  "review_date_utc": "2026-10-01",
+  "timezone": "America/Sao_Paulo",
+  "executor_id": "019d795a-acfa-72c2-a210-d55a46c606c2",
+  "reviewer_id": "01a0f4b8-962b-77a3-a418-6247c6219e8b",
+  "reviewer_identity_evidence": "Own get_goal/create_goal threadId, distinct from executor and D implementer",
+  "repository_root": "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud",
+  "study_path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study",
+  "candidate": "preflight_full02",
+  "candidate_manifest_sha256": "7875d46b09301906dc3e7211b8319e53c43f3f19c21e141687d55a65cb65a337",
+  "previous_candidate_manifest_sha256": "67a7336cd187dc2914066deba349b1a96a7e5cd6896beb3fb2651283f10db28a",
+  "contract_id": "AD-DC2010-v2",
+  "contract_sha256": "d17b7f508a7ce87eec3ca71ed7df67666b528c755e005ec9e1299e5ff9deb509",
+  "previous_review_sha256": "d5165c9c6632678f2fdeb8f061d65df805b9c46181a0637535fb69ed98cb36e0",
+  "adjudication_sha256": "85658238e5be22feaf2c0ad2f52684d8a122d9c7af576cc4fe422a92787796e7",
+  "frozen_source_prefix": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/preflight_full02/sources/",
+  "evidence_rule": "Source evidence paths below are appended to frozen_source_prefix; lines refer to those immutable bytes, not future live edits. Fixture paths are relative to review_preflight_delta/.",
+  "summary": "Os reparos dos dois achados adjudicados foram confirmados independentemente. Não há achado novo no delta. Setup e persist_raw são fases explícitas; erros ordinários preservam duração parcial; engine real encaminha as funções originais com argumentos científicos preservados; ESS/s usa nome e denominador internos explícitos; timeout atinge o grupo mesmo após saída do líder.",
+  "findings": [],
+  "previous_findings": [
+    {
+      "id": "AD-PREFLIGHT-01",
+      "prior_adjudication": "CONFIRMED",
+      "delta_assessment": "addressed",
+      "independent_status": "pass",
+      "evidence": [
+        {"path": "R/experimental/mebane_ad/run_jags.R", "line_start": 71, "line_end": 98},
+        {"path": "R/experimental/mebane_ad/run_jags.R", "line_start": 100, "line_end": 145},
+        {"path": "R/experimental/mebane_ad/run_jags.R", "line_start": 157, "line_end": 166},
+        {"path": "R/experimental/mebane_ad/diagnostics.R", "line_start": 206, "line_end": 208},
+        {"path": "R/experimental/mebane_ad/timing.md", "line_start": 3, "line_end": 24},
+        {"path": "R/experimental/mebane_ad/run_pair.py", "line_start": 72, "line_end": 100}
+      ],
+      "executed_evidence": "checks_delta.json: A/D success-phase-order, phase-times-inclusive-internal-total, ESS-denominator-columns-renamed-only, ESS-denominator-exact-internal-total; partial-error tests for all six phases and input-read error.",
+      "assessment": "Setup abrange leituras, validação, engine/dependências, snapshots e inputs/inits/metadata. Persistência está isolada. on.exit grava elapsed e completed=FALSE em falhas ordinárias. O tempo interno parcial agora é explicitamente nomeado e não confundido com custo total do processo. Há relógios externos separados para geração e diagnóstico; 1200 s por processo, sem extensão/retry MCMC. A futura síntese dos totais externos está documentada e permanece fora desta revisão.",
+      "coordinator_closure_required": true
+    },
+    {
+      "id": "AD-PREFLIGHT-02",
+      "prior_adjudication": "CONFIRMED",
+      "delta_assessment": "addressed",
+      "independent_status": "pass",
+      "evidence": [{"path": "R/experimental/mebane_ad/run_pair.py", "line_start": 34, "line_end": 52}],
+      "executed_evidence": "checks_supervisor.json: timeout-descendant-log-closed-before-seal, the same previous independent adversarial fixture with only output-root substitutions.",
+      "assessment": "SIGKILL é enviado ao grupo após a espera do líder, inclusive quando este já saiu. O filho ignorando SIGTERM não escreveu tardiamente e o hash do log permaneceu estável após 1.2 s de observação. Success/failure/timeout, anti-overwrite e ausência de retry também passaram.",
+      "stable_log_sha256": "5bf052464cc1690cd9b95bf39b2580e751656fa4489c6535b36cc30942b9a780",
+      "coordinator_closure_required": true
+    }
+  ],
+  "verified_delta": [
+    {
+      "id": "DELTA-HASH",
+      "status": "pass",
+      "result": "146 arquivos do full02 conferidos contra snapshot e original. Todos os 75 snapshots full01 continuam íntegros. Quatro paths existentes mudaram, 71 permaneceram byte-idênticos e nenhum foi removido. Os 171 artefatos do manifesto da revisão anterior também conferiram.",
+      "changed_existing_paths": ["R/experimental/mebane_ad/diagnostics.R", "R/experimental/mebane_ad/run_jags.R", "R/experimental/mebane_ad/run_pair.py", "tests/mebane/ad_study/test_supervisor.py"],
+      "artifact": "source_delta.json"
+    },
+    {
+      "id": "DELTA-SCIENCE",
+      "status": "pass",
+      "result": "Fontes A/D, helper D, RDA, dados preparados, io, prepare_dc2010 e contrato v2 são byte-idênticos. Os corpos/formais de ad_check_payload, ad_model_data, ad_initial_values e ad_monitors permanecem idênticos. Argumentos capturados do engine falso confirmam dados e inits idênticos, 4 chains, n.adapt=0 na compilação, 1000/5000/2000, thin=1 e monitores originais. Nenhum alvo, prior, seed ou limiar mudou.",
+      "artifacts": ["source_delta.json", "checks_delta.json", "run_jags.R.diff", "diagnostics.R.diff"],
+      "evidence": [
+        {"path": "R/experimental/mebane_ad/run_jags.R", "line_start": 10, "line_end": 58},
+        {"path": "R/experimental/mebane_ad/run_jags.R", "line_start": 129, "line_end": 138}
+      ]
+    },
+    {
+      "id": "DELTA-ENGINE",
+      "status": "pass",
+      "result": "identical() confirmou que compile/adapt/burn/sample retornados por ad_jags_engine são precisamente rjags::jags.model, rjags::adapt, stats::update e rjags::coda.samples. Não há wrapper que altere argumentos, modo de chamada ou posterior. A fábrica real foi inspecionada e chamada para obter referências; nenhuma dessas funções de engine foi invocada nesta revisão.",
+      "artifact": "checks_delta.json",
+      "evidence": [{"path": "R/experimental/mebane_ad/run_jags.R", "line_start": 61, "line_end": 68}]
+    },
+    {
+      "id": "DELTA-TIMING",
+      "status": "pass",
+      "result": "Runner real executado com engine falso em A e D. Ordem e completude das seis fases, duração e cobertura pelo total interno conferem. Falhas injetadas em setup, compile, adapt, burn, sample e persist_raw retêm completed=FALSE, duração parcial, estágio, evento e resultado/manifesto, sem avançar à fase seguinte. Falta de arquivo de entrada também é registrada como setup. run_result.phases inclui persist_raw; raw_chains.phases contém naturalmente apenas fases anteriores à sua própria escrita.",
+      "artifacts": ["checks_delta.json", "checks_delta.log", "tree/delta_fixtures"]
+    },
+    {
+      "id": "DELTA-POSTPROCESS",
+      "status": "pass",
+      "result": "ad_process_draws reexecutado integralmente em A e D sobre os mesmos draws sintéticos da revisão anterior, agora persistidos pelo runner reparado com engine falso. Diagnósticos idênticos salvo as duas colunas ESS/s renomeadas e seus novos denominadores efetivos; ambas igualam ESS/run_result.elapsed_seconds. Alvos 2171A/1742D, regras, NA e veredictos sintéticos preservados. CSVs de funcionais conjuntos e classes são byte-idênticos aos anteriores; objeto de contagens secundárias D é idêntico.",
+      "artifact": "checks_delta.json",
+      "evidence": [{"path": "R/experimental/mebane_ad/diagnostics.R", "line_start": 206, "line_end": 215}]
+    },
+    {
+      "id": "DELTA-SUPERVISOR",
+      "status": "pass",
+      "result": "Os nove fixtures independentes do supervisor passaram, inclusive o mesmo contraexemplo de descendente que falhara no full01. Orquestração simulada preserva A depois D, uma tentativa por modelo, diagnóstico separado e nenhum retry. execution.json explicita 1200 s de geração e 1200 s de pós-processamento, sem declarar aprovação de produção.",
+      "artifact": "checks_supervisor.json",
+      "evidence": [
+        {"path": "R/experimental/mebane_ad/run_pair.py", "line_start": 34, "line_end": 52},
+        {"path": "R/experimental/mebane_ad/run_pair.py", "line_start": 72, "line_end": 104}
+      ]
+    }
+  ],
+  "executed_checks": {
+    "independent_R_delta": {"passed": 49, "failed": 0, "result": "checks_delta.json", "log": "checks_delta.log"},
+    "independent_supervisor_reused": {"passed": 9, "failed": 0, "result": "checks_supervisor.json"},
+    "prior_evidence_reused": {"common_checks": 67, "D_checks": 27, "method": "Hash-bound prior evidence and unchanged source verification; no re-enumeration of D mathematics or historical audit."},
+    "candidate_test_outputs": "runner_checks03, timing_checks01 e supervisor_checks02 foram lidos e verificados como inputs congelados; não são substitutos dos 58 checks próprios desta revisão e não foram reexecutados como suítes separadas.",
+    "commands": [
+      "env PYTHONDONTWRITEBYTECODE=1 python3 quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/review_preflight_delta/prepare_delta.py",
+      "env LC_ALL=C LANG=C Rscript --vanilla quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/review_preflight_delta/check_delta.R",
+      "env PYTHONDONTWRITEBYTECODE=1 python3 quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/review_preflight_delta/check_supervisor_reused.py",
+      "env PYTHONDONTWRITEBYTECODE=1 python3 quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/review_preflight_delta/seal_delta.py"
+    ],
+    "working_directory": "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud",
+    "execution_context": "Scripts mudam internamente para review_preflight_delta/tree, sem alterar candidato. R 4.4.2/JAGS 4.3.2 instalados; engine real nunca compilou/adaptou/amostrou modelo. Nenhuma MCMC, nem condicionada, foi necessária nesta delta-review.",
+    "reproduction": "Preservar todos os outputs. Scripts recusam sobrescrita; reprodução requer nova pasta de revisão com os mesmos snapshots e payloads, não limpeza desta tentativa."
+  },
+  "source_hashes": {
+    "run_jags.R": "7a92fdc9d234c8652cf6ae764f2dd22d86ef0b0f10ab8b929c8c2b4461dc651d",
+    "diagnostics.R": "4f30f9ff1772f83b54519e941cd9c6edea24fbe359d5019836223f60b995061c",
+    "run_pair.py": "48fd61410eda632517adc804174bea7c9282c09bf06f140084ec5bff6f68a7b4",
+    "timing.md": "db3f96e88cb28ae54c42f539a377fcf5fe3ec4bd716adf0249e6e8c9044433f8",
+    "D_JAGS_unchanged": "6ddb9624f60b15e196cc27ed9694852c40b6553a684a9962003168da4ecfaf5b",
+    "D_helper_unchanged": "e5154c01c6f111cc47d5e9d9f49654f1ee081bb4001664038c840b8c0d86710a",
+    "A_unchanged": "f8360126424b7a463f76a1c99efc89a8a5cb81339213bd4931559f14595fbab6",
+    "RDA_unchanged": "0386dcc86155e543382c2725e9eb61ebf365b2e6f96a2b037324dbee80005196"
+  },
+  "deliberate_limits": [
+    "O total interno continua excluindo bootstrap e escritas finais por definição agora explícita; não é total-process nem end-to-end. O supervisor mede cada processo completo, e a soma externa por modelo será avaliada na síntese futura.",
+    "Erro ordinário de R permite on.exit; encerramento forçado pode impedir a última gravação. Nessa situação, prevalecem registro e relógio do supervisor, conforme timing.md.",
+    "Os draws e erros desta revisão são sintéticos. Não se mediu convergência, precisão, adaptação ou eficiência empírica dos modelos.",
+    "compare_runs.R e a incorporação dos tempos externos à síntese final permanecem fora do escopo; isso não cria novo achado no reparo atual.",
+    "Permanecem os limites deliberados anteriores: F1/F2 de A, identificação não estabelecida de D, ausência de referência numérica externa e distinção DC2010/Brasil. Não foram reabertos nesta revisão."
+  ],
+  "authorization_boundary": {
+    "candidate_edited": false,
+    "empirical_MCMC": false,
+    "installs": false,
+    "deletions": false,
+    "compare_runs_reviewed": false,
+    "production_approved": false,
+    "G3_approved": false,
+    "G10_approved": false,
+    "coordinator_adjudication_required": true,
+    "next_step": "Coordenador pode adjudicar o delta e fechar os dois reparos de preflight. Este parecer não executa nem emite release de MCMC; eventual piloto segue o contrato v2 e a liberação específica do freeze."
+  }
+}

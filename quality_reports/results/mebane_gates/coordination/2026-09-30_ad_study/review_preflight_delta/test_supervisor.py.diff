@@ -1,0 +1,26 @@
+--- full01/tests/mebane/ad_study/test_supervisor.py
++++ full02/tests/mebane/ad_study/test_supervisor.py
+@@ -5,6 +5,7 @@
+ import json
+ import shutil
+ import sys
++import time
+ from pathlib import Path
+ 
+ 
+@@ -33,6 +34,15 @@
+     assert records[1]["returncode"] == 7 and not records[1]["timed_out"]
+     assert records[2]["returncode"] != 0 and records[2]["timed_out"]
+     assert records[2]["elapsed_seconds"] < 12
++    child = "import signal,time; signal.signal(signal.SIGTERM,signal.SIG_IGN); print('child-ready',flush=True); time.sleep(.5); print('late-write',flush=True)"
++    parent = f"import subprocess,sys,time; subprocess.Popen([sys.executable,'-c',{child!r}]); time.sleep(30)"
++    record = module.run_command([sys.executable, "-c", parent],
++                                args.output / "descendant.log", .2)
++    time.sleep(.7)
++    assert record["timed_out"] and record["log_sha256"] == module.sha(args.output / "descendant.log")
++    assert "late-write" not in (args.output / "descendant.log").read_text()
++    record["fixture"] = "descendant_ignores_SIGTERM"
++    records.append(record)
+     try:
+         module.run_command([sys.executable, "-c", "raise SystemExit(99)"],
+                             args.output / "success.log", 5)

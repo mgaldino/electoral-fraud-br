@@ -1,0 +1,108 @@
+{
+  "schema_version": "1.0-independent-ad-contract-delta-review",
+  "review_date_local": "2026-09-30",
+  "timezone": "America/Sao_Paulo",
+  "executor_id": "019d795a-acfa-72c2-a210-d55a46c606c2",
+  "reviewer_id": "01a0f4b8-962b-77a3-a418-6247c6219e8b",
+  "reviewer_identity_evidence": "Own get_goal/create_goal and CODEX_THREAD_ID; distinct from executor_id",
+  "repository_root": "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud",
+  "evidence_paths_relative_to": "repository_root",
+  "contract_id": "AD-DC2010-v2",
+  "contract_path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/contract_v2.json",
+  "contract_sha256": "d17b7f508a7ce87eec3ca71ed7df67666b528c755e005ec9e1299e5ff9deb509",
+  "previous_contract_sha256": "8f0783b5f3520958a2b1a6d6de5bb217e2ea4ac8656a6ac114024b9d6a95dc17",
+  "previous_review_sha256": "01090a2482c83dd6f7f0fa0233a94f6baf44899fb42b26eaff44e67d9945aedd",
+  "adjudication_v1_sha256": "30adc6e3e8be431daacf727ff0b870b2e79ce7e1fa7f021332cca4246cbe9dd5",
+  "status": "pass",
+  "status_scope": "Somente o delta prospectivo do contrato v2 e o reparo de AD-CONTRACT-QA-01; não aprovação de implementação, resultado empírico, MCMC, G3, G10 ou produção.",
+  "summary": "O delta fecha a lacuna de decisão diagnóstica: universo obrigatório, estatísticas, limiares, escala da discrepância entre cadeias e ações de falha/NA estão fixados antes do piloto. Não há novo achado impeditivo. A matemática aceita na v1 não foi reenumerada.",
+  "findings": [],
+  "prior_finding_assessment": {
+    "id": "AD-CONTRACT-QA-01",
+    "historical_adjudication": "CONFIRMED",
+    "repair_status": "addressed_in_exact_v2_independent_delta_review",
+    "coordinator_closure_required": true,
+    "evidence": [
+      {"path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/contract_v2.json", "line_start": 193, "line_end": 201},
+      {"path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/contract_v2.json", "line_start": 202, "line_end": 277},
+      {"path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/contract_v2.json", "line_start": 295, "line_end": 301},
+      {"path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/contract_adjudication_v1.json", "line_start": 19, "line_end": 29}
+    ]
+  },
+  "verified_delta": [
+    {
+      "id": "AD-V2-01",
+      "result": "Hash v2 coincide com o solicitado; hash v1 e vínculo ao parecer/adjudicação são corretos. Oito arquivos do manifesto da revisão v1 permanecem byte a byte intactos.",
+      "evidence_file": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/review_contract/delta_checks_v2.json"
+    },
+    {
+      "id": "AD-V2-02",
+      "result": "Comparação recursiva de JSON encontrou exatamente dez caminhos de alteração autorizados. As seções A, D, case, comparison e monitoring são semanticamente idênticas. Sementes, iterações, priors, likelihood, dados/referências, orçamento e falhas não mudaram. No preflight foi apenas acrescentado o fixture decisório; dois checkpoints posteriores foram preservados.",
+      "semantic_changed_paths": ["/contract_id", "/paired_design/initialization/A_auxiliary_counts", "/paired_design/execution", "/diagnostics/discrete", "/diagnostics/verdict", "/diagnostics/analytic_exemptions_in_empirical_pilot", "/diagnostics/decision_table", "/preflight_tests/checks", "/checkpoints", "/supersedes"]
+    },
+    {
+      "id": "AD-V2-03",
+      "result": "As quatro linhas obrigatórias exigem R-hat<1.01 e ESS bulk/tail>=400: 23 globais; 6*n mu e 2*n ou 3*n probabilidades observacionais; 3*n indicadores de classe e três contagens por draw; 4*n auxiliares em A. Para n=143, são 2171 alvos escalares obrigatórios em A e 1742 em D, derivados do contrato, não de implementação entregue.",
+      "evidence": [{"path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/contract_v2.json", "line_start": 202, "line_end": 265}]
+    },
+    {
+      "id": "AD-V2-04",
+      "result": "Indicadores e contagens de classe têm teto inclusivo 0.05 para max(mean_por_cadeia)-min(mean_por_cadeia). Somente nessa checagem as contagens são divididas por n. O teto é operacional/prospectivo, não teste de fraude, igualdade posterior ou garantia autônoma de precisão.",
+      "evidence": [{"path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/contract_v2.json", "line_start": 234, "line_end": 250}]
+    },
+    {
+      "id": "AD-V2-05",
+      "result": "Não há isenções analíticas no piloto. Qualquer diagnóstico obrigatório ausente, indefinido ou reprovado produz computationally_inconclusive; constância apenas amostral não é tratada como zero analítico. Rótulo exact_not_MC em fixture conceitual não autoriza exceção empírica. Ambos os modelos devem completar e adaptar adequadamente.",
+      "evidence": [
+        {"path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/contract_v2.json", "line_start": 196, "line_end": 201},
+        {"path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/contract_v2.json", "line_start": 248, "line_end": 250},
+        {"path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/contract_v2.json", "line_start": 295, "line_end": 295}
+      ]
+    },
+    {
+      "id": "AD-V2-06",
+      "result": "Reconstruções secundárias não podem resgatar diagnósticos da posterior primária; falhas de suporte/identidade bloqueiam resultados como defeito de implementação, mesmo na linha não obrigatória para precisão. M_total/S_total permanecem obrigatórios; dividir por N_total positivo conhecido não cria nova cadeia ou informação e não remove sua exigência diagnóstica.",
+      "evidence": [
+        {"path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/contract_v2.json", "line_start": 204, "line_end": 216},
+        {"path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/contract_v2.json", "line_start": 267, "line_end": 275}
+      ]
+    },
+    {
+      "id": "AD-V2-07",
+      "result": "floor(N*mu) agora nomeia explicitamente as transformações incremental/extrema, consistente com a interpretação já testada na v1. Um objeto rjags com quatro cadeias por modelo, execução A depois D e timeout externo é compatível com o limite de quatro cadeias, sem mudar sementes ou iterações.",
+      "evidence": [{"path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/contract_v2.json", "line_start": 108, "line_end": 141}]
+    }
+  ],
+  "executed_checks": {
+    "command": "env LC_ALL=C LANG=C Rscript --vanilla quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/review_contract/check_delta_v2.R /Users/manoelgaldino/Documents/DCP/Papers/electoralFraud",
+    "exit_code": 0,
+    "semantic_changes": 10,
+    "decision_truth_table_fixtures": 14,
+    "previous_manifest_files_intact": 8,
+    "fixture_scope": "Avaliador independente da regra textual. Checa fronteiras RH/ESS/range, escala das contagens, NA/ausência/não finito, constância amostral, execução/adaptação incompleta e falha de suporte secundária. Não verifica o código diagnóstico do futuro executor.",
+    "results": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/review_contract/delta_checks_v2.json",
+    "log": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/review_contract/delta_checks_v2.log",
+    "mathematical_enumerations_repeated": false,
+    "data_preparation_repeated": false,
+    "model_compilation": false,
+    "MCMC": false,
+    "candidate_implementation_reviewed": false,
+    "candidate_files_edited": false
+  },
+  "deliberate_limitations": [
+    "Critérios para todos os indicadores, inclusive raros, são conservadores e podem tornar o piloto inconclusivo; isso não é defeito lógico nem prova de não convergência ou de ausência de fraude.",
+    "O teto 0.05 não é calibrado como teste estatístico e não substitui os requisitos de R-hat/ESS.",
+    "A revisão executável ainda deve testar a extração de todos os alvos, preservação iteration x chain, cálculo de indicadores/contagens, tratamento de NA/constância e agregação do veredicto.",
+    "Timeout, persistência dos draws/logs e adaptação são requisitos do futuro runner, não funcionalidades testadas nesta rechecagem.",
+    "Limitações matemáticas/substantivas deliberadas de A/D da revisão v1 permanecem; G3, G10 e produção não recebem aprovação."
+  ],
+  "authorization_boundary": {
+    "experimental_D_implementation_authorized_by_current_user": true,
+    "empirical_MCMC_authorized_by_this_review": false,
+    "remaining_before_empirical_MCMC": ["Fechamento/adjudicação do contrato v2 pelo coordenador", "Revisão e adjudicação independentes da implementação/preflight"],
+    "G3_approved": false,
+    "G10_approved": false,
+    "production_approved": false
+  },
+  "disposition": "Recomendo fechar AD-CONTRACT-QA-01 na adjudicação da v2 exata. Nenhuma nova correção de contrato é solicitada nesta revisão delimitada. Preservar v1 e seu parecer changes_requested como registros históricos."
+}

@@ -1,0 +1,133 @@
+{
+  "schema_version": "1.0-experimental-ad",
+  "contract_id": "AD-DC2010-v1",
+  "date": "2026-09-30",
+  "status": "candidate_requires_independent_review",
+  "authorization_quote": "Isso, vamos preservar A e estudar D. IDealmente aplicando no mesmo caso e ver como se comparam.",
+  "purpose": "Paired exploratory model comparison on one author-packaged empirical case, not inference or numeric reproduction of published estimates",
+  "preserve_A": true,
+  "production_approved": false,
+  "G10_approval_claim_allowed": false,
+  "historical_gate_states_unchanged": true,
+  "case": {
+    "id": "dc2010",
+    "source": "quality_reports/results/mebane_gates/coordination/authors_replication_discovery/archive/UMeforensics-eforensics_public-3017de5/data/dc2010.rda",
+    "sha256": "0386dcc86155e543382c2725e9eb61ebf365b2e6f96a2b037324dbee80005196",
+    "rows": 143,
+    "unit": "precinct in the authors' D.C. 2010 data",
+    "mapping": {"id": "precinct", "N": "NVoters", "A": "a", "W": "Votes", "O": "NVoters-a-Votes"},
+    "author_identity": "a=NVoters-NValid",
+    "exclusions": "none",
+    "row_order": "original RDA order",
+    "reinterpret_abstention_or_invalid_votes": false,
+    "numeric_external_reference_available": false,
+    "data_validation": ["finite integer counts", "N>=1", "A>=0", "W>=0", "O>=0", "A+W+O=N", "unique nonmissing precinct IDs", "143 original rows", "identical data and order in both models", "six all-one n by 1 design matrices for A", "asymmetric A/W interface sentinel and swapped negative control"]
+  },
+  "A": {
+    "model": "literal qbl, not a certified physical generator",
+    "source": "quality_reports/results/mebane_gates/G0/round1/qbl_installed_3017de5.jags",
+    "sha256": "f8360126424b7a463f76a1c99efc89a8a5cb81339213bd4931559f14595fbab6",
+    "specification_contract": "quality_reports/results/mebane_gates/G2/round2/benchmark_contract.json",
+    "specification_sha256": "63b61fb0594d0302a03d999bcff6c62967b6e999f37b4c9a8821f0f8e9ed18d2",
+    "runner": "direct rjags data route, not the original one-chain adaptive vignette workflow",
+    "source_edits_allowed": false,
+    "clamp_truncation_or_probability_fix_allowed": false,
+    "known_limitations": ["F1: some positive-prior parent states imply invalid pW", "F2: observation support permits A+W>N", "runtime completion is not validation", "a failed run is retained, not retried until a desired result"]
+  },
+  "D": {
+    "model": "experimental multinomial transfer mixture with section-level hierarchy",
+    "block_order": ["tau", "nu", "iota.m", "iota.s", "chi.m", "chi.s"],
+    "predictor": "eta[i,b]=alpha[b]+b0[b]+sqrt(v[b])*z[i,b], z standard Normal; centered JAGS expression h[i,b]~Normal(alpha[b],precision=1/v[b]), eta=h+b0 is equivalent",
+    "priors": {
+      "alpha": "independent Normal(mean=0,variance=1)",
+      "b0": "independent Normal(mean=0,variance=0.0001); do not merge with alpha",
+      "v": "independent Exponential(rate=5), on variance, not SD",
+      "pi": "u1~U(0,1); u2,u3|u1 independent U(0,u1); pi=u/sum(u)",
+      "partial_order": "pi1>=max(pi2,pi3); no order between pi2 and pi3"
+    },
+    "k": 0.7,
+    "transforms": {"tau": "logistic(eta_tau)", "nu": "logistic(eta_nu)", "m2": "0.7*logistic(eta_iota.m)", "s2": "0.7*logistic(eta_iota.s)", "m3": "0.7+0.3*logistic(eta_chi.m)", "s3": "0.7+0.3*logistic(eta_chi.s)", "m1": 0, "s1": 0},
+    "class": "one Z[i]~Categorical(pi), shared by all three count categories",
+    "probabilities": {"pA": "(1-tau)*(1-m[Z])", "pW": "tau*nu+(1-tau)*m[Z]+tau*(1-nu)*s[Z]", "pO": "tau*(1-nu)*(1-s[Z])"},
+    "observation": "(A,W,O)~Multinomial(N; pA,pW,pO)",
+    "mechanism": "(A0,L0,O0)~Multinomial(N;1-tau,tau*nu,tau*(1-nu)); M|A0~Binomial(A0,m), S|O0~Binomial(O0,s) conditionally independent; A=A0-M,W=L0+M+S,O=O0-S",
+    "no_auxiliary_Binomial_N_counts": true,
+    "no_endpoint_0999_transform": true,
+    "no_clamp": true,
+    "no_observed_A_substitution_in_pW": true,
+    "identification": "conditional per-section probabilities can be matched by m=s=0 using tau0=1-pA,nu0=pW/(1-pA); identification requires across-section restrictions and is not established here"
+  },
+  "paired_design": {
+    "engine": "rjags/JAGS for both, same installed versions and machine",
+    "JAGS_version_required": "4.3.2",
+    "R_version_observed": "4.4.2",
+    "geography": "intercept-only, full six observation-specific effects, no geographic predictors",
+    "chains": 4,
+    "adapt_iterations": 1000,
+    "burn_iterations": 5000,
+    "post_iterations": 2000,
+    "thin": 1,
+    "chain_seeds": [930261, 930262, 930263, 930264],
+    "RNG_name": "base::Wichmann-Hill",
+    "postprocess_seed": 930269,
+    "model_execution_order": ["A", "D"],
+    "max_concurrent_chains": 4,
+    "max_elapsed_seconds_per_model": 1200,
+    "extension_or_automatic_retry": false,
+    "initialization": {
+      "class": "Z=1 for every precinct in every chain to provide a valid starting state; no claim this explores all posterior modes",
+      "tau_alpha": "logit(sum(N-A)/sum(N)) plus offsets [-0.4,-0.1,0.1,0.4] by chain",
+      "nu_alpha": "logit(sum(W)/sum(N-A)) plus offsets [0.4,0.1,-0.1,-0.4] by chain",
+      "magnitude_alphas": "all four equal the chain-specific value [-1,0,1,-0.5]",
+      "b0": "zero",
+      "v": "all six equal chain-specific [0.1,0.2,0.3,0.4]",
+      "h": "each equal its alpha initially",
+      "pi_aux": "[0.8,0.2,0.1] for all chains",
+      "A_auxiliary_counts": "floor(N*the corresponding initial logistic magnitude), with original endpoint transformation untouched"
+    },
+    "timing": "separate setup/compile/adaptation/burn/sampling/postprocessing and total elapsed; concurrent-model timings prohibited; seconds alone are not effective precision",
+    "failures": "save error/warnings/stage/inputs/seed/log; no changed model, dropped chain, replacement seed, data exclusion, retry or extension; other independent tasks can finish"
+  },
+  "monitoring": {
+    "shared": ["pi", "six alphas", "six b0", "six variances", "six logistic means per unit", "Z"],
+    "A_extra": ["N.iota.m", "N.iota.s", "N.chi.m", "N.chi.s", "p.a", "p.w"],
+    "D_extra": ["all three observation probabilities"],
+    "persist_raw_before_diagnostics": true,
+    "draw_shape": "iterations by chains by variables, with chain identity retained"
+  },
+  "comparison": {
+    "primary_common_outputs": ["pi[1:3] posterior means/SD/quantiles and per-chain means", "six alphas and variances", "expected-vote functionals M=sum_i N_i*(1-tau_i)*m_i and S=sum_i N_i*tau_i*(1-nu_i)*s_i within each joint draw", "M/N_total and S/N_total with N_total explicit", "posterior class probabilities per precinct and descriptive classification differences", "timings and ESS per second where ESS is defined"],
+    "m_s_mapping": "A uses its realized auxiliary count fractions and literal .999 manufactured endpoint; D uses continuous logistic magnitudes. These are analogous model functionals, not identical latent quantities or observed ballot counts",
+    "classes": "retain Z for joint totals; empirical class probabilities and modal labels are descriptive. Preserve ties without assigning one class silently",
+    "D_ballot_counts_secondary": "given the same posterior Z and parameter draw, (L0,M_count,S_count)|W~Multinomial(W; tau*nu/pW,(1-tau)*m/pW,tau*(1-nu)*s/pW). Summarize separately from expected-vote functionals; exact degenerate W=0,pW=0 yields all zero",
+    "A_vs_D_equality_acceptance_test": false,
+    "difference_interpretation": "sensitivity to jointly changed likelihood and latent-magnitude construction, not sampler equivalence and not isolated causal contribution of one modification",
+    "no_Bayes_factors_or_LOO_across_A_D": true,
+    "no_claim_of_observed_fraud_or_counterfactual_winner": true
+  },
+  "diagnostics": {
+    "primary_continuous_targets": ["pi[1:3]", "six alphas", "six variances", "six b0", "M_total", "S_total"],
+    "all_monitored_continuous_targets_audited": true,
+    "rhat": "posterior rank-normalized folded split R-hat <1.01",
+    "bulk_ESS_min": 400,
+    "tail_ESS_min": 400,
+    "undefined_statistic": "report NA and reason; not a pass. Analytically constant quantities are separate, not waived merely because sampled values were constant",
+    "discrete": "report chain occupancy, per-chain class probability differences and undefined diagnostics; no acceptance by ignoring NA",
+    "adaptation": "report end.adaptation result and warnings; inadequate adaptation precludes a reliable-comparison verdict",
+    "verdict": "exploratory-comparison-only if both complete and all predeclared diagnostics relevant to reported comparisons pass; otherwise computationally_inconclusive. Even a computational success is not validation of A, identification, G10 or production",
+    "no_post_result_threshold_changes": true
+  },
+  "preflight_tests": {
+    "tolerance_probability_absolute": 1e-11,
+    "tolerance_log_mass_absolute": 1e-9,
+    "grid": "N=1..4, tau/nu/m/s each in {0,0.2,0.7,1}; include .999 and asymmetric example tau=.6,nu=.4,m=.2,s=.3",
+    "checks": ["simplex and physical support", "independent transfer-mechanism enumeration versus multinomial", "sequential Binomial factorization and zero-turnout boundary", "full conditional transfer-count distribution including covariance", "three-class mixture versus explicit class summation", "JAGS D probabilities on fixed deterministic parents agree with R", "ordered pi prior and Exp(5) variance plus alpha/b0 audit against A", "asymmetric actual data interface and wrong-input negative control", "chain-array shape and synthetic between-chain separation detected", "A source/data hashes unchanged", "no clamp, hidden renormalization or data exclusion"]
+  },
+  "checkpoints": [
+    "Independent contract review and adjudication before target implementation or MCMC",
+    "Independent executable/preflight review and adjudication before real-case MCMC",
+    "Independent result review before claims in the user-facing report"
+  ],
+  "preservation": "new paths only for fits, logs, tests and rounds; no deletion or overwriting previous attempts; preserve failures and all consumed inputs/code/configuration in manifests",
+  "later_work": ["D-only JAGS/Stan same-target comparison", "author-output search or different complete external replication target", "identification/sensitivity simulation in G4 after requisite approvals", "Brasilia 2022 common-input comparison after appropriate gates", "national scaling and inference remain separate"]
+}

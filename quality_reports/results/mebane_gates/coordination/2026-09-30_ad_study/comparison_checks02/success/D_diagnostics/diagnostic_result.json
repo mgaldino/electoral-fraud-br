@@ -1,0 +1,7 @@
+{
+  "status": "diagnostics_met_for_this_model",
+  "elapsed_seconds": 3,
+  "mandatory_targets": 23,
+  "failed_targets": 0,
+  "undefined_required_targets": 0
+}

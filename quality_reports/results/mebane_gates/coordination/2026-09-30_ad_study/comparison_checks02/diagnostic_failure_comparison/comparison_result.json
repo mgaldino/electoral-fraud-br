@@ -1,0 +1,26 @@
+{
+  "status": "computationally_inconclusive",
+  "case": "dc2010",
+  "units": 143,
+  "same_input_sha256": "b2ef611dabb751f9286acbaae841a23c34948ed0a4b6306364cbe94d9d24903e",
+  "contract_sha256": "d17b7f508a7ce87eec3ca71ed7df67666b528c755e005ec9e1299e5ff9deb509",
+  "A_preserved_sha256": "f8360126424b7a463f76a1c99efc89a8a5cb81339213bd4931559f14595fbab6",
+  "totals": {
+    "N": 452992,
+    "A": 320943,
+    "W": 97978,
+    "O": 34071
+  },
+  "runs_complete": {
+    "A": true,
+    "D": false
+  },
+  "precision_met": {
+    "A": true,
+    "D": true
+  },
+  "production_approved": false,
+  "G10_approved": false,
+  "no_new_MCMC_in_this_script": true,
+  "interpretation": "A/D is model sensitivity, not an equality test, author-result numeric replication or evidence of electoral fraud"
+}

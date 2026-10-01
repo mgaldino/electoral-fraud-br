@@ -1,0 +1,19 @@
+{
+  "scope": "Resource sanity check for 143 precincts, not a national scaling benchmark",
+  "R": "4.4.2",
+  "JAGS": "4.3.2",
+  "rjags": "4.17",
+  "posterior": "1.7.0",
+  "logical_cores_observed": 14,
+  "memory_capacity_bytes_observed": 38654705664,
+  "disk_available_reported": "274 GiB",
+  "commands": ["Rscript --vanilla: packageVersion/rjags::jags.version/parallel::detectCores", "sysctl -n hw.memsize", "df -h ."],
+  "permission_note": "Read-only sysctl query initially denied by sandbox, then succeeded through the approved escalation tool. No system or environment change.",
+  "draws_per_model": 8000,
+  "expected_monitored_scalar_nodes": {"A": 1880, "D": 1451},
+  "estimated_raw_numeric_bytes_without_object_overhead": {"A": 120320000, "D": 92864000},
+  "measured_peak_memory": null,
+  "runtime_prediction": null,
+  "safeguard": "A and D run sequentially as one four-chain rjags object each. External timeout 1200 seconds per model; no retry or automatic extension. No installation or national job.",
+  "interpretation": "Storage/array arithmetic and observed machine capacity make this bounded pilot feasible to attempt. They do not establish convergence, effective precision or national scalability."
+}

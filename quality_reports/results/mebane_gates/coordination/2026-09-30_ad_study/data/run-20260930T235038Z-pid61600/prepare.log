@@ -1,0 +1,12 @@
+run_id: run-20260930T235038Z-pid61600
+created_at_utc: 2026-09-30T23:50:38Z
+status: PREPARED_NOT_ESTIMATED_NOT_APPROVED
+command: Rscript --vanilla R/experimental/mebane_ad/prepare_dc2010.R
+input: /Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/coordination/authors_replication_discovery/archive/UMeforensics-eforensics_public-3017de5/data/dc2010.rda
+input_sha256: 0386dcc86155e543382c2725e9eb61ebf365b2e6f96a2b037324dbee80005196
+checks: schema, integer/finite/NA, 143 rows, unique IDs, count bounds, author a mapping, A+W+O=N: PASS
+sum_N: 452992
+sum_A: 320943
+sum_W: 97978
+sum_O: 34071
+estimation: NONE

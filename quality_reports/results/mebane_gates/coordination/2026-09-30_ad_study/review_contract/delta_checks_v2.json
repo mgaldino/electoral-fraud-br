@@ -1,0 +1,74 @@
+{
+  "schema_version": "1.0-independent-delta-checks",
+  "started_at_utc": "2026-10-01 00:06:53 UTC",
+  "finished_at_utc": "2026-10-01 00:06:53 UTC",
+  "reviewer_id": "01a0f4b8-962b-77a3-a418-6247c6219e8b",
+  "executor_id": "019d795a-acfa-72c2-a210-d55a46c606c2",
+  "contract_sha256": "d17b7f508a7ce87eec3ca71ed7df67666b528c755e005ec9e1299e5ff9deb509",
+  "status": "pass_bounded_delta_checks",
+  "semantic_changes": [
+    "/contract_id",
+    "/paired_design/initialization/A_auxiliary_counts",
+    "/paired_design/execution",
+    "/diagnostics/discrete",
+    "/diagnostics/verdict",
+    "/diagnostics/analytic_exemptions_in_empirical_pilot",
+    "/diagnostics/decision_table",
+    "/preflight_tests/checks",
+    "/checkpoints",
+    "/supersedes"
+  ],
+  "undeclared_changes": [],
+  "previous_manifest_files_intact": 8,
+  "expected_mandatory_targets": {
+    "A": 2171,
+    "D": 1742
+  },
+  "decision_fixtures": {
+    "inclusive_ESS_and_range_boundary": "eligible_row_pass",
+    "rhat_boundary_fails": "computationally_inconclusive",
+    "bulk_below_boundary": "computationally_inconclusive",
+    "tail_below_boundary": "computationally_inconclusive",
+    "range_above_ceiling": "computationally_inconclusive",
+    "counts_scaled_below_ceiling": "eligible_row_pass",
+    "counts_scaled_above_ceiling": "computationally_inconclusive",
+    "required_NA": "computationally_inconclusive",
+    "required_missing": "computationally_inconclusive",
+    "nonfinite": "computationally_inconclusive",
+    "sample_constant": "computationally_inconclusive",
+    "incomplete_run": "computationally_inconclusive",
+    "inadequate_adaptation": "computationally_inconclusive",
+    "secondary_support_defect": "computationally_inconclusive"
+  },
+  "source_hashes": [
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/contract_v1.json",
+      "sha256": "8f0783b5f3520958a2b1a6d6de5bb217e2ea4ac8656a6ac114024b9d6a95dc17"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/contract_v2.json",
+      "sha256": "d17b7f508a7ce87eec3ca71ed7df67666b528c755e005ec9e1299e5ff9deb509"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/contract_adjudication_v1.json",
+      "sha256": "30adc6e3e8be431daacf727ff0b870b2e79ce7e1fa7f021332cca4246cbe9dd5"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/review_contract/review.json",
+      "sha256": "01090a2482c83dd6f7f0fa0233a94f6baf44899fb42b26eaff44e67d9945aedd"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/review_contract/review.md",
+      "sha256": "bfb38c46a1ba75c8accaac36fe7abbd083ce2abb0bd350571e1d46407e840c75"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/review_contract/delivery_manifest.json",
+      "sha256": "065579eb677d30d303f38f03c528337b58b968737b0626a036c47bf54f81e44d"
+    }
+  ],
+  "script_sha256": "f033913a797f98489ffeb7d86e8345190ff3f2cbb666858a7b60e8707dd22d89",
+  "mathematical_enumeration_repeated": false,
+  "MCMC": false,
+  "future_implementation_reviewed": false,
+  "command": "env LC_ALL=C LANG=C Rscript --vanilla quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/review_contract/check_delta_v2.R /Users/manoelgaldino/Documents/DCP/Papers/electoralFraud"
+}

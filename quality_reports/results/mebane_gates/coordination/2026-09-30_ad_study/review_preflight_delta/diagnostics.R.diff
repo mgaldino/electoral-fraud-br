@@ -1,0 +1,13 @@
+--- full01/R/experimental/mebane_ad/diagnostics.R
++++ full02/R/experimental/mebane_ad/diagnostics.R
+@@ -204,8 +204,8 @@
+     support$conditional_probability_error_max <- max_probability_error
+   }
+   diagnostics <- do.call(rbind, rows)
+-  diagnostics$ess_bulk_per_total_run_second <- diagnostics$ess_bulk / run$elapsed_seconds
+-  diagnostics$ess_tail_per_total_run_second <- diagnostics$ess_tail / run$elapsed_seconds
++  diagnostics$ess_bulk_per_internal_generation_second <- diagnostics$ess_bulk / run$elapsed_seconds
++  diagnostics$ess_tail_per_internal_generation_second <- diagnostics$ess_tail / run$elapsed_seconds
+   expected_mandatory <- if (model == "A") 23L + 15L*n + 3L else 23L + 12L*n + 3L
+   stopifnot(sum(diagnostics$mandatory) == expected_mandatory,
+             sum(diagnostics$group == "global") == 23L,

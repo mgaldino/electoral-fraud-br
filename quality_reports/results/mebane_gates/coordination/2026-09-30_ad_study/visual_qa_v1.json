@@ -1,0 +1,12 @@
+{
+  "status": "pass",
+  "pdf": "comparison_A_D_DC2010_v1.pdf",
+  "pdf_sha256": "7d518b6a641b9793497264ec9eef261517c927f5610f858111f6610ee8389d6b",
+  "source_sha256": "7ce47502798661813f976c0bf975af30e7a10237c70d23afd44baad01e682f50",
+  "renderer_sha256": "fe09ea8c588e4e64cd7c94c5602f3b9d5340841c3a88986ebc8b9c8476ab28f7",
+  "pages": 3,
+  "render": "pdftoppm -png -r 110",
+  "inspected_images": ["comparison_A_D_DC2010_v1_page-1.png", "comparison_A_D_DC2010_v1_page-2.png", "comparison_A_D_DC2010_v1_page-3.png"],
+  "checks": ["All three rendered pages visually inspected", "Portuguese accents and values legible", "No clipping or overlap of body with footer", "Table 1 continuation repeats header on page 2", "Tables numbered with scope and units", "References and SHA-256 strings remain legible"],
+  "scope": "Presentation QA only. Quantitative independent result review is separate. No posterior/inference approval."
+}

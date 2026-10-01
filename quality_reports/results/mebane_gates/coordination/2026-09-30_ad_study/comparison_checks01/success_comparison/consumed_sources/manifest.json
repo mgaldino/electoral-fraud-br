@@ -1,0 +1,131 @@
+{
+  "created_utc": "2026-10-01 00:45:22 UTC",
+  "files": [
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/contract_v2.json",
+      "snapshot": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/comparison_checks01/success_comparison/consumed_sources/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/contract_v2.json",
+      "bytes": 15010,
+      "sha256": "d17b7f508a7ce87eec3ca71ed7df67666b528c755e005ec9e1299e5ff9deb509"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/data/run-20260930T235038Z-pid61600/dc2010_ad_data.rds",
+      "snapshot": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/comparison_checks01/success_comparison/consumed_sources/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/data/run-20260930T235038Z-pid61600/dc2010_ad_data.rds",
+      "bytes": 2539,
+      "sha256": "b2ef611dabb751f9286acbaae841a23c34948ed0a4b6306364cbe94d9d24903e"
+    },
+    {
+      "path": "R/experimental/mebane_ad/io.R",
+      "snapshot": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/comparison_checks01/success_comparison/consumed_sources/R/experimental/mebane_ad/io.R",
+      "bytes": 2627,
+      "sha256": "913803dc29f9784d756ab9a1834b2a96b8201d754957dbd9f65286674b4abb2d"
+    },
+    {
+      "path": "R/experimental/mebane_ad/compare_runs.R",
+      "snapshot": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/comparison_checks01/success_comparison/consumed_sources/R/experimental/mebane_ad/compare_runs.R",
+      "bytes": 16236,
+      "sha256": "ba835f6244341f26e425a4173f53edb1457162820dc0deed0649ea1cf2bae81f"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/comparison_checks01/success/execution.json",
+      "snapshot": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/comparison_checks01/success_comparison/consumed_sources/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/comparison_checks01/success/execution.json",
+      "bytes": 24,
+      "sha256": "efa82530f0281abdf7bff98dbf617ee4427f964100fa5fe3f2e8673792b268cf"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/comparison_checks01/success/A/run_result.json",
+      "snapshot": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/comparison_checks01/success_comparison/consumed_sources/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/comparison_checks01/success/A/run_result.json",
+      "bytes": 368,
+      "sha256": "65fb8956a63436da30870d6cf9b8deb6788b33ae574ab669d2d55b495b9854ba"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/comparison_checks01/success/A_diagnostics/diagnostic_result.json",
+      "snapshot": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/comparison_checks01/success_comparison/consumed_sources/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/comparison_checks01/success/A_diagnostics/diagnostic_result.json",
+      "bytes": 158,
+      "sha256": "340e16fe0f2913be0234c9cf4dd6ec83e129a4b748f338b1fdedde63bb5b281d"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/comparison_checks01/success/A_diagnostics/diagnostics.csv",
+      "snapshot": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/comparison_checks01/success_comparison/consumed_sources/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/comparison_checks01/success/A_diagnostics/diagnostics.csv",
+      "bytes": 202,
+      "sha256": "ea2f300a261fe635ce8a6620b641b2dc26178d4b1176157acad3f4b8e0fc3207"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/comparison_checks01/success/A_diagnostics/class_probabilities.csv",
+      "snapshot": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/comparison_checks01/success_comparison/consumed_sources/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/comparison_checks01/success/A_diagnostics/class_probabilities.csv",
+      "bytes": 112,
+      "sha256": "ba856126453f264a0df4def34b7dcd30793250e421c368b6bcc5c948873098e1"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/comparison_checks01/success/A_supervisor.json",
+      "snapshot": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/comparison_checks01/success_comparison/consumed_sources/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/comparison_checks01/success/A_supervisor.json",
+      "bytes": 269,
+      "sha256": "15d0cc60a9471d79ba0a2f113d46c7de814e4a5a78bc763f93d26f82d5e6fd28"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/comparison_checks01/success/A_diagnostics_supervisor.json",
+      "snapshot": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/comparison_checks01/success_comparison/consumed_sources/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/comparison_checks01/success/A_diagnostics_supervisor.json",
+      "bytes": 268,
+      "sha256": "5ee3f0a8ee4bde8a316975109137f2108acfe340ddb36a4f49c639cfaa45c5f1"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/comparison_checks01/success/A/manifest.json",
+      "snapshot": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/comparison_checks01/success_comparison/consumed_sources/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/comparison_checks01/success/A/manifest.json",
+      "bytes": 370,
+      "sha256": "f4b2a3af4bab541633f80563803de9b072708d0db522accb022bb09674900acd"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/comparison_checks01/success/A_diagnostics/manifest.json",
+      "snapshot": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/comparison_checks01/success_comparison/consumed_sources/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/comparison_checks01/success/A_diagnostics/manifest.json",
+      "bytes": 919,
+      "sha256": "12d1cb6ec03edc518a62ca01f096b9e94caa4ee20fc76063b7699b5a5d6417f9"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/comparison_checks01/success/D/run_result.json",
+      "snapshot": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/comparison_checks01/success_comparison/consumed_sources/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/comparison_checks01/success/D/run_result.json",
+      "bytes": 368,
+      "sha256": "65fb8956a63436da30870d6cf9b8deb6788b33ae574ab669d2d55b495b9854ba"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/comparison_checks01/success/D_diagnostics/diagnostic_result.json",
+      "snapshot": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/comparison_checks01/success_comparison/consumed_sources/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/comparison_checks01/success/D_diagnostics/diagnostic_result.json",
+      "bytes": 158,
+      "sha256": "340e16fe0f2913be0234c9cf4dd6ec83e129a4b748f338b1fdedde63bb5b281d"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/comparison_checks01/success/D_diagnostics/diagnostics.csv",
+      "snapshot": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/comparison_checks01/success_comparison/consumed_sources/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/comparison_checks01/success/D_diagnostics/diagnostics.csv",
+      "bytes": 202,
+      "sha256": "ea2f300a261fe635ce8a6620b641b2dc26178d4b1176157acad3f4b8e0fc3207"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/comparison_checks01/success/D_diagnostics/class_probabilities.csv",
+      "snapshot": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/comparison_checks01/success_comparison/consumed_sources/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/comparison_checks01/success/D_diagnostics/class_probabilities.csv",
+      "bytes": 112,
+      "sha256": "ba856126453f264a0df4def34b7dcd30793250e421c368b6bcc5c948873098e1"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/comparison_checks01/success/D_supervisor.json",
+      "snapshot": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/comparison_checks01/success_comparison/consumed_sources/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/comparison_checks01/success/D_supervisor.json",
+      "bytes": 269,
+      "sha256": "f8ee58f62d4f3e61bc770e899e6af7c5a3837d9321a044a826919646ace3061e"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/comparison_checks01/success/D_diagnostics_supervisor.json",
+      "snapshot": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/comparison_checks01/success_comparison/consumed_sources/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/comparison_checks01/success/D_diagnostics_supervisor.json",
+      "bytes": 268,
+      "sha256": "c695c3e766b381a6c4baf446f4561aa748d4ebbe5f6991022c8f6a12527faabf"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/comparison_checks01/success/D/manifest.json",
+      "snapshot": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/comparison_checks01/success_comparison/consumed_sources/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/comparison_checks01/success/D/manifest.json",
+      "bytes": 370,
+      "sha256": "f23f586932a57d1bd0fa2499f7936dc41d5e7940c310e6ba85584bf3934674b1"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/comparison_checks01/success/D_diagnostics/manifest.json",
+      "snapshot": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/comparison_checks01/success_comparison/consumed_sources/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/comparison_checks01/success/D_diagnostics/manifest.json",
+      "bytes": 919,
+      "sha256": "0495e06157f69374e86b3c99c1dfc90489e7120ceb9388da8ed4813afb429a23"
+    }
+  ]
+}

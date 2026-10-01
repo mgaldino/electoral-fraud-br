@@ -1,0 +1,10 @@
+{
+  "created_utc": "2026-10-01T00:50:56.657230+00:00",
+  "candidate_manifest_sha256": "7875d46b09301906dc3e7211b8319e53c43f3f19c21e141687d55a65cb65a337",
+  "files_verified": 146,
+  "previous_review_files_verified": 171,
+  "reviewer_id": "01a0f4b8-962b-77a3-a418-6247c6219e8b",
+  "new_findings": 0,
+  "checks_passed": 58,
+  "empirical_MCMC": false
+}

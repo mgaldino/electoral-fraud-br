@@ -1,0 +1,16 @@
+{
+  "command": [
+    "Rscript",
+    "--vanilla",
+    "R/experimental/mebane_ad/diagnostics.R",
+    "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/review_preflight/common01_tree/independent_supervisor/pair/D",
+    "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/data/run-20260930T235038Z-pid61600/dc2010_ad_data.rds",
+    "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/contract_v2.json",
+    "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/review_preflight/common01_tree/independent_supervisor/pair/D_diagnostics"
+  ],
+  "returncode": 0,
+  "timed_out": false,
+  "elapsed_seconds": 0.01,
+  "log": "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/review_preflight/common01_tree/independent_supervisor/pair/D_diagnostics.log",
+  "log_sha256": "62abc25e58b2d617de13f11944f436ef2a9623f18adafa0b4af04362aca99d81"
+}

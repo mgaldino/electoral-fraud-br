@@ -1,0 +1,23 @@
+{
+  "status": "error",
+  "failed_stage": "setup",
+  "message": "cannot open the connection",
+  "model": "D",
+  "warnings": [
+    {
+      "stage": "setup",
+      "message": "cannot open compressed file 'quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/data/run-20260930T235038Z-pid61600/dc2010_ad_data.rds.absent', probable reason 'No such file or directory'"
+    }
+  ],
+  "phases": {
+    "setup": {
+      "user.self": 0.001,
+      "sys.self": 0,
+      "elapsed": 0.002,
+      "completed": false
+    }
+  },
+  "elapsed_seconds": 0.003,
+  "timing_scope": "Internal generation: function entry through raw persistence/error handling; excludes R bootstrap and final result/manifest writes. Supervisor measures the whole generation process; diagnostics have a separate clock.",
+  "posterior_or_model_validated": false
+}

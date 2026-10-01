@@ -1,0 +1,71 @@
+{
+  "note": "Raw draw diagnostics, joint functionals and secondary D reconstruction; not electoral inference",
+  "files": [
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/A_diagnostics/class_probabilities.csv",
+      "bytes": 13794,
+      "sha256": "1b7a0eb17c0383fadefcda24410377d1b60aafc06b3577ad3d4d7ca1daeed905"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/A_diagnostics/consumed_sources/R/experimental/mebane_ad/diagnostics.R",
+      "bytes": 13107,
+      "sha256": "4f30f9ff1772f83b54519e941cd9c6edea24fbe359d5019836223f60b995061c"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/A_diagnostics/consumed_sources/R/experimental/mebane_ad/io.R",
+      "bytes": 2627,
+      "sha256": "913803dc29f9784d756ab9a1834b2a96b8201d754957dbd9f65286674b4abb2d"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/A_diagnostics/consumed_sources/manifest.json",
+      "bytes": 3066,
+      "sha256": "e1591df589fdccff525bedaec35d2c55b8c0c96034b3251226f997fee307ad2d"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/A_diagnostics/consumed_sources/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/contract_v2.json",
+      "bytes": 15010,
+      "sha256": "d17b7f508a7ce87eec3ca71ed7df67666b528c755e005ec9e1299e5ff9deb509"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/A_diagnostics/consumed_sources/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/data/run-20260930T235038Z-pid61600/dc2010_ad_data.rds",
+      "bytes": 2539,
+      "sha256": "b2ef611dabb751f9286acbaae841a23c34948ed0a4b6306364cbe94d9d24903e"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/A_diagnostics/consumed_sources/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/A/raw_chains.rds",
+      "bytes": 76388680,
+      "sha256": "4fdd7316850c1b3aca1e067aeee5338c41a45042fb5f3405e4a43f3b30d9dcbd"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/A_diagnostics/consumed_sources/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/A/run_result.json",
+      "bytes": 1308,
+      "sha256": "feddc59c03ccc21b127b4460c2aa342033c08c3958907a80ec0f90d4780be341"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/A_diagnostics/consumed_sources/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/A/sampling_metadata.json",
+      "bytes": 2745,
+      "sha256": "8b08073fa901d0ba81a3c15340ddf2668b9202c5cdaf68b275c9f8a29e619d10"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/A_diagnostics/diagnostic_result.json",
+      "bytes": 695,
+      "sha256": "17527e97910ab252bfbef20332be5eac82ce197444a51a86d46e817b5db6cfaf"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/A_diagnostics/diagnostics.csv",
+      "bytes": 632065,
+      "sha256": "8e7bc585ee0f3ee1513cc47556bc451ba001a27849f5cde0291380851a62c079"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/A_diagnostics/joint_functionals.csv",
+      "bytes": 383757,
+      "sha256": "503a8b77b9d5a3f3f8063328f971a800d26011fda9bb26b0530bc71147276dd0"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/A_diagnostics/support_checks.json",
+      "bytes": 198,
+      "sha256": "9eb065ef6e18c50aeaa9b324faa559faa8eb73c6a7fe960ff139f2b2006d83cb"
+    }
+  ],
+  "excluded": "This manifest itself; active outer process logs are sealed separately"
+}

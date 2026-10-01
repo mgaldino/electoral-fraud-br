@@ -1,0 +1,48 @@
+{
+  "status": "pass",
+  "fixtures": [
+    {
+      "command": [
+        "/opt/homebrew/opt/python@3.13/bin/python3.13",
+        "-c",
+        "print('one successful invocation')"
+      ],
+      "returncode": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.03837358398595825,
+      "log": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/supervisor_checks01/success.log",
+      "log_sha256": "87309e2a0c2764506638ae1c5a6ebcd8fe06bfa1815811bae0e500b55f887bbc",
+      "fixture": "success"
+    },
+    {
+      "command": [
+        "/opt/homebrew/opt/python@3.13/bin/python3.13",
+        "-c",
+        "raise SystemExit(7)"
+      ],
+      "returncode": 7,
+      "timed_out": false,
+      "elapsed_seconds": 0.036841334018390626,
+      "log": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/supervisor_checks01/failure.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "fixture": "failure"
+    },
+    {
+      "command": [
+        "/opt/homebrew/opt/python@3.13/bin/python3.13",
+        "-c",
+        "import time; time.sleep(30)"
+      ],
+      "returncode": -15,
+      "timed_out": true,
+      "elapsed_seconds": 0.20853495894698426,
+      "log": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/supervisor_checks01/timeout.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "fixture": "timeout"
+    }
+  ],
+  "overwrite_refused": true,
+  "MCMC": false,
+  "supervisor_sha256": "0779722ed30041e7859c342ebbab069c131c288832692de8c9a2a74def7711b8",
+  "test_sha256": "60c4471ed7ade50ea6c83c0e442e2c3b7d7c707f7e2daed6639e0bc35d97b239"
+}

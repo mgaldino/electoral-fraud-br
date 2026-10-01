@@ -1,0 +1,257 @@
+{
+  "status": "pass",
+  "checks": [
+    {
+      "id": "pure-forward-compile",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "pure-forward-adapt",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "pure-forward-burn",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "pure-forward-sample",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "engine-version-modules-forward",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "unchanged-body-ad_check_payload",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "unchanged-body-ad_model_data",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "unchanged-body-ad_initial_values",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "unchanged-body-ad_monitors",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "A success-phase-order",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "A phase-times-inclusive-internal-total",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "A same-compile-args-data-inits",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "A unchanged-iteration-and-monitor-args",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "A actual-input-files-match-arguments",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "A raw-retains-pre-persistence-phases",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "A internal-total-labelled-as-partial",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "A ESS-denominator-columns-renamed-only",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "A ESS-denominator-exact-internal-total",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "A unchanged joint_functionals.csv",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "A unchanged class_probabilities.csv",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "A same-targets-verdict-no-pair-release",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "A synthetic-diagnostic-failures-not-waived",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "D success-phase-order",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "D phase-times-inclusive-internal-total",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "D same-compile-args-data-inits",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "D unchanged-iteration-and-monitor-args",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "D actual-input-files-match-arguments",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "D raw-retains-pre-persistence-phases",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "D internal-total-labelled-as-partial",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "D ESS-denominator-columns-renamed-only",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "D ESS-denominator-exact-internal-total",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "D unchanged joint_functionals.csv",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "D unchanged class_probabilities.csv",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "unchanged-D-secondary-counts",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "D same-targets-verdict-no-pair-release",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "D synthetic-diagnostic-failures-not-waived",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "partial-error setup",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "failure-event-and-result setup",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "partial-error compile",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "failure-event-and-result compile",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "partial-error adapt",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "failure-event-and-result adapt",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "partial-error burn",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "failure-event-and-result burn",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "partial-error sample",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "failure-event-and-result sample",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "partial-error persist_raw",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "failure-event-and-result persist_raw",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "input-read-error-is-setup-with-partial-time",
+      "pass": true,
+      "detail": {}
+    }
+  ],
+  "created_utc": "2026-10-01 00:47:03 UTC",
+  "reviewer_id": "01a0f4b8-962b-77a3-a418-6247c6219e8b",
+  "empirical_MCMC": false,
+  "engine_real_functions_invoked": false,
+  "synthetic_draws_reused": true,
+  "R": "R version 4.4.2 (2024-10-31)",
+  "JAGS": "4.3.2"
+}

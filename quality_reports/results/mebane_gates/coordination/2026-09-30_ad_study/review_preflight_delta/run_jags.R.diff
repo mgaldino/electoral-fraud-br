@@ -1,0 +1,142 @@
+--- full01/R/experimental/mebane_ad/run_jags.R
++++ full02/R/experimental/mebane_ad/run_jags.R
+@@ -58,22 +58,20 @@
+     if (model == "A") paste0("N.", ad_blocks[3:6]) else "p.o")
+ }
+ 
+-ad_run_jags <- function(model, contract_path, data_path, out) {
+-  contract <- jsonlite::read_json(contract_path, simplifyVector = TRUE)
+-  stopifnot(contract$contract_id == "AD-DC2010-v2", model %in% c("A", "D"),
+-            contract$paired_design$chains == 4L,
+-            contract$paired_design$post_iterations == 2000L)
+-  payload <- readRDS(data_path)
+-  ad_check_payload(payload, contract)
++ad_jags_engine <- function() {
+   for (package in c("rjags", "coda")) {
+     if (!requireNamespace(package, quietly = TRUE)) stop("Missing existing package: ", package)
+   }
+-  stopifnot(as.character(rjags::jags.version()) == contract$paired_design$JAGS_version_required)
+-  model_path <- if (model == "A") contract$A$source else
+-    "models/experimental/mebane_ad/d_multinomial.jags"
++  list(version = as.character(rjags::jags.version()),
++       package_version = as.character(utils::packageVersion("rjags")),
++       modules = rjags::list.modules(), compile = rjags::jags.model,
++       adapt = rjags::adapt, burn = stats::update, sample = rjags::coda.samples)
++}
++
++ad_run_jags <- function(model, contract_path, data_path, out) {
++  start <- proc.time()[["elapsed"]]
+   ad_new_dir(out)
+-  start <- Sys.time()
+-  stage <- "preparation"
++  stage <- "setup"
+   warnings <- list()
+   phases <- list()
+   event <- function(type, value) {
+@@ -84,50 +82,67 @@
+     cat(model, stage, type, value, "\n")
+     flush.console()
+   }
+-  files <- c(contract_path, data_path, contract$case$source,
+-             contract$A$specification_contract, model_path,
+-             "R/experimental/mebane_ad/io.R", "R/experimental/mebane_ad/prepare_dc2010.R",
+-             "R/experimental/mebane_ad/run_jags.R")
+-  ad_snapshot(files, file.path(out, "consumed_sources"))
+-  dat <- ad_model_data(model, payload)
+-  inits <- ad_initial_values(model, payload, contract)
+-  saveRDS(dat, file.path(out, "actual_jags_data.rds"))
+-  saveRDS(inits, file.path(out, "actual_initial_values.rds"))
+-  ad_json(list(model = model, contract_sha256 = ad_sha(contract_path),
+-               model_sha256 = ad_sha(model_path), data_sha256 = ad_sha(data_path),
+-               sampling = contract$paired_design, monitored = ad_monitors(model),
+-               R = R.version.string, JAGS = as.character(rjags::jags.version()),
+-               rjags = as.character(utils::packageVersion("rjags")),
+-               modules = rjags::list.modules(),
+-               executor_id = "019d795a-acfa-72c2-a210-d55a46c606c2"),
+-          file.path(out, "sampling_metadata.json"))
+   timed <- function(label, code) {
+     stage <<- label
+     event("start", label)
+     t0 <- proc.time()
++    complete <- FALSE
++    on.exit({
++      dt <- proc.time() - t0
++      phases[[label]] <<- c(as.list(dt[c("user.self", "sys.self", "elapsed")]),
++                            list(completed = complete))
++      event(if (complete) "complete" else "failed_elapsed", unname(dt[["elapsed"]]))
++    })
+     ans <- force(code)
+-    dt <- proc.time() - t0
+-    phases[[label]] <<- as.list(dt[c("user.self", "sys.self", "elapsed")])
+-    event("complete", unname(dt[["elapsed"]]))
++    complete <- TRUE
+     ans
+   }
+   result <- tryCatch(withCallingHandlers({
+-    jm <- timed("compile", rjags::jags.model(model_path, data = dat, inits = inits,
++    timed("setup", {
++      contract <- jsonlite::read_json(contract_path, simplifyVector = TRUE)
++      stopifnot(contract$contract_id == "AD-DC2010-v2", model %in% c("A", "D"),
++                contract$paired_design$chains == 4L,
++                contract$paired_design$post_iterations == 2000L)
++      payload <- readRDS(data_path)
++      ad_check_payload(payload, contract)
++      engine <- ad_jags_engine()
++      stopifnot(engine$version == contract$paired_design$JAGS_version_required)
++      model_path <- if (model == "A") contract$A$source else
++        "models/experimental/mebane_ad/d_multinomial.jags"
++      files <- c(contract_path, data_path, contract$case$source,
++                 contract$A$specification_contract, model_path,
++                 "R/experimental/mebane_ad/io.R", "R/experimental/mebane_ad/prepare_dc2010.R",
++                 "R/experimental/mebane_ad/run_jags.R", "R/experimental/mebane_ad/timing.md")
++      ad_snapshot(files, file.path(out, "consumed_sources"))
++      dat <- ad_model_data(model, payload)
++      inits <- ad_initial_values(model, payload, contract)
++      saveRDS(dat, file.path(out, "actual_jags_data.rds"))
++      saveRDS(inits, file.path(out, "actual_initial_values.rds"))
++      ad_json(list(model = model, contract_sha256 = ad_sha(contract_path),
++                   model_sha256 = ad_sha(model_path), data_sha256 = ad_sha(data_path),
++                   sampling = contract$paired_design, monitored = ad_monitors(model),
++                   R = R.version.string, JAGS = engine$version,
++                   rjags = engine$package_version, modules = engine$modules,
++                   executor_id = "019d795a-acfa-72c2-a210-d55a46c606c2"),
++              file.path(out, "sampling_metadata.json"))
++    })
++    jm <- timed("compile", engine$compile(model_path, data = dat, inits = inits,
+                                             n.chains = 4L, n.adapt = 0L, quiet = TRUE))
+-    adequate <- timed("adapt", rjags::adapt(jm, contract$paired_design$adapt_iterations,
++    adequate <- timed("adapt", engine$adapt(jm, contract$paired_design$adapt_iterations,
+                                            end.adaptation = TRUE))
+     event("adaptation_adequate", adequate)
+-    timed("burn", stats::update(jm, contract$paired_design$burn_iterations,
++    timed("burn", engine$burn(jm, contract$paired_design$burn_iterations,
+                                  progress.bar = "none"))
+-    draws <- timed("sample", rjags::coda.samples(jm, ad_monitors(model),
++    draws <- timed("sample", engine$sample(jm, ad_monitors(model),
+                                                 n.iter = contract$paired_design$post_iterations,
+                                                 thin = 1L, progress.bar = "none"))
+-    stage <- "persist_raw"
+-    saveRDS(list(model = model, draws = draws, contract_sha256 = ad_sha(contract_path),
++    timed("persist_raw", {
++      saveRDS(list(model = model, draws = draws, contract_sha256 = ad_sha(contract_path),
+                  seeds = contract$paired_design$chain_seeds,
+                  adaptation_adequate = adequate, phases = phases),
+             file.path(out, "raw_chains.rds"), compress = "gzip")
+-    saveRDS(jm$state(internal = TRUE), file.path(out, "final_jags_state.rds"))
++      saveRDS(jm$state(internal = TRUE), file.path(out, "final_jags_state.rds"))
++    })
+     list(status = "sampled_not_diagnosed", adaptation_adequate = adequate,
+          chains = length(draws), iterations = vapply(draws, nrow, integer(1)),
+          raw_sha256 = ad_sha(file.path(out, "raw_chains.rds")))
+@@ -142,7 +157,10 @@
+   result$model <- model
+   result$warnings <- warnings
+   result$phases <- phases
+-  result$elapsed_seconds <- as.numeric(difftime(Sys.time(), start, units = "secs"))
++  result$elapsed_seconds <- unname(proc.time()[["elapsed"]] - start)
++  result$timing_scope <- paste("Internal generation: function entry through raw persistence/error handling;",
++                              "excludes R bootstrap and final result/manifest writes.",
++                              "Supervisor measures the whole generation process; diagnostics have a separate clock.")
+   result$posterior_or_model_validated <- FALSE
+   ad_json(result, file.path(out, "run_result.json"))
+   ad_manifest(out, note = "Bounded raw run; independent diagnostics and review pending")

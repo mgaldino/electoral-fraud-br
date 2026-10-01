@@ -1,0 +1,13 @@
+{"utc":"2026-10-01 00:46:30 UTC","model":"D","stage":"setup","type":"start","value":"setup"} 
+{"utc":"2026-10-01 00:46:30 UTC","model":"D","stage":"setup","type":"complete","value":0.052} 
+{"utc":"2026-10-01 00:46:30 UTC","model":"D","stage":"compile","type":"start","value":"compile"} 
+{"utc":"2026-10-01 00:46:30 UTC","model":"D","stage":"compile","type":"complete","value":0.019} 
+{"utc":"2026-10-01 00:46:30 UTC","model":"D","stage":"adapt","type":"start","value":"adapt"} 
+{"utc":"2026-10-01 00:46:30 UTC","model":"D","stage":"adapt","type":"complete","value":0.019} 
+{"utc":"2026-10-01 00:46:30 UTC","model":"D","stage":"adapt","type":"adaptation_adequate","value":true} 
+{"utc":"2026-10-01 00:46:30 UTC","model":"D","stage":"burn","type":"start","value":"burn"} 
+{"utc":"2026-10-01 00:46:30 UTC","model":"D","stage":"burn","type":"complete","value":0.019} 
+{"utc":"2026-10-01 00:46:30 UTC","model":"D","stage":"sample","type":"start","value":"sample"} 
+{"utc":"2026-10-01 00:46:30 UTC","model":"D","stage":"sample","type":"complete","value":0.363} 
+{"utc":"2026-10-01 00:46:30 UTC","model":"D","stage":"persist_raw","type":"start","value":"persist_raw"} 
+{"utc":"2026-10-01 00:46:34 UTC","model":"D","stage":"persist_raw","type":"complete","value":4.213} 

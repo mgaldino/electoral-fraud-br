@@ -1,0 +1,30 @@
+{
+  "status": "error",
+  "failed_stage": "adapt",
+  "message": "SYNTHETIC failure adapt",
+  "model": "D",
+  "warnings": [],
+  "phases": {
+    "setup": {
+      "user.self": 0.0120000000000005,
+      "sys.self": 0.00900000000000034,
+      "elapsed": 0.0499999999999972,
+      "completed": true
+    },
+    "compile": {
+      "user.self": 0,
+      "sys.self": 0,
+      "elapsed": 0.0189999999999984,
+      "completed": true
+    },
+    "adapt": {
+      "user.self": 0,
+      "sys.self": 0,
+      "elapsed": 0.0180000000000007,
+      "completed": false
+    }
+  },
+  "elapsed_seconds": 0.0899999999999963,
+  "timing_scope": "Internal generation: function entry through raw persistence/error handling; excludes R bootstrap and final result/manifest writes. Supervisor measures the whole generation process; diagnostics have a separate clock.",
+  "posterior_or_model_validated": false
+}

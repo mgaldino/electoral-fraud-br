@@ -1,0 +1,219 @@
+{
+  "schema_version": "1.0-independent-contract-checks",
+  "reviewer_id": "01a0f4b8-962b-77a3-a418-6247c6219e8b",
+  "executor_id": "019d795a-acfa-72c2-a210-d55a46c606c2",
+  "started_at_utc": "2026-09-30 23:55:31 UTC",
+  "finished_at_utc": "2026-09-30 23:55:35 UTC",
+  "contract_sha256": "8f0783b5f3520958a2b1a6d6de5bb217e2ea4ac8656a6ac114024b9d6a95dc17",
+  "computational_checks_status": "pass",
+  "review_status_inferred_from_checks": false,
+  "MCMC_run": false,
+  "distributions": 2504,
+  "positive_conditionals": 11294,
+  "zero_mass_cells": 9990,
+  "mixture_distributions": 100,
+  "max_absolute_errors": {
+    "simplex": 2.2204460492503131e-16,
+    "normalization": 8.8817841970012523e-16,
+    "mechanism": 9.9920072216264089e-16,
+    "log_mass": 1.4210854715202004e-14,
+    "sequential": 6.6613381477509392e-16,
+    "conditional_joint": 8.8817841970012523e-16,
+    "conditional_moments": 8.8817841970012523e-16,
+    "conditional_covariance": 7.7715611723760958e-16,
+    "no_transfer_match": 2.3980817331903373e-16,
+    "mixture": 2.4980018054066022e-16
+  },
+  "priors": {
+    "variance_mean": 0.20000000000000001,
+    "fixed_intercept_variance": 0.0001,
+    "alpha_plus_b0_variance": 1.0001,
+    "marginal_eta_variance": 1.2000999999999999,
+    "wrong_sd_Exp5_variance_mean": 0.080000000000000002,
+    "pi_density_integral": 1.0000000000000002,
+    "partial_order_examples": [
+      [0.72727272727272729, 0.18181818181818182, 0.090909090909090912],
+      [0.72727272727272729, 0.090909090909090912, 0.18181818181818182]
+    ]
+  },
+  "data_use": {
+    "rows": 143,
+    "N_total": 452992,
+    "A_total": 320943,
+    "W_total": 97978,
+    "O_total": 34071,
+    "identity_a_NVoters_minus_NValid": true,
+    "purpose": "initialization evaluation only; no prepared data exported"
+  },
+  "initialization": [
+    {
+      "chain": 1,
+      "tau_alpha": -1.2880904714437127,
+      "nu_alpha": 1.456296381095429,
+      "pA_A": 0.78382380629305715,
+      "pW_A_range": [0.10746401576217587, 0.36394552061795182],
+      "probabilities_D": [0.78382380629305715, 0.17531144847386421, 0.040864745233078641],
+      "finite_log_mass_A_and_D": true,
+      "auxiliary_range": [158, 4908],
+      "extreme_auxiliary_uses_k_plus_one_minus_k_logistic": true
+    },
+    {
+      "chain": 2,
+      "tau_alpha": -0.98809047144371265,
+      "nu_alpha": 1.156296381095429,
+      "pA_A": 0.728710589756284,
+      "pW_A_range": [0.10079772184037955, 0.34136896050382304],
+      "probabilities_D": [0.728710589756284, 0.20635875776055945, 0.064930652483156534],
+      "finite_log_mass_A_and_D": true,
+      "auxiliary_range": [295, 5343],
+      "extreme_auxiliary_uses_k_plus_one_minus_k_logistic": true
+    },
+    {
+      "chain": 3,
+      "tau_alpha": -0.78809047144371269,
+      "nu_alpha": 0.95629638109542892,
+      "pA_A": 0.68742117078656473,
+      "pW_A_range": [0.095725174385018902, 0.32418989910911306],
+      "probabilities_D": [0.68742117078656473, 0.22580059040001513, 0.086778238813420075],
+      "finite_log_mass_A_and_D": true,
+      "auxiliary_range": [431, 5779],
+      "extreme_auxiliary_uses_k_plus_one_minus_k_logistic": true
+    },
+    {
+      "chain": 4,
+      "tau_alpha": -0.48809047144371265,
+      "nu_alpha": 0.65629638109542887,
+      "pA_A": 0.6196564931580707,
+      "pW_A_range": [0.087250695877165968, 0.29548960840592736],
+      "probabilities_D": [0.6196564931580707, 0.25042878857363116, 0.12991471826829817],
+      "finite_log_mass_A_and_D": true,
+      "auxiliary_range": [222, 5112],
+      "extreme_auxiliary_uses_k_plus_one_minus_k_logistic": true
+    }
+  ],
+  "diagnostics_fixture": {
+    "shape": [2000, 4, 1],
+    "separated_rhat": 1.7210614021279973,
+    "wrongly_pooled_rhat": 0.99987499218652331,
+    "constant_tail_ESS": null,
+    "label": "deterministic fixture; not fitted or MCMC-generated draws"
+  },
+  "example": {
+    "N": 1000,
+    "W_observed": 400,
+    "expected_M_S": [80, 108],
+    "conditional_mean_M_S": [74.766355140186917, 100.93457943925235],
+    "conditional_cov_M_S": -18.866276530701374
+  },
+  "runtime": {
+    "R": "R version 4.4.2 (2024-10-31)",
+    "JAGS": "4.3.2",
+    "packages": [
+      {
+        "name": "jsonlite",
+        "version": "2.0.0"
+      },
+      {
+        "name": "digest",
+        "version": "0.6.39"
+      },
+      {
+        "name": "posterior",
+        "version": "1.7.0"
+      },
+      {
+        "name": "rjags",
+        "version": "4.17"
+      }
+    ],
+    "probe": "namespace/version only; no model compilation, adaptation or MCMC"
+  },
+  "source_hashes": {
+    "contract": {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/contract_v1.json",
+      "expected": "8f0783b5f3520958a2b1a6d6de5bb217e2ea4ac8656a6ac114024b9d6a95dc17",
+      "actual": "8f0783b5f3520958a2b1a6d6de5bb217e2ea4ac8656a6ac114024b9d6a95dc17",
+      "matches": true
+    },
+    "decision": {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/decision.md",
+      "expected": "d2940550c1d693a306de1e112d5e634ae2376b3530ed6762176bd2629dec0635",
+      "actual": "d2940550c1d693a306de1e112d5e634ae2376b3530ed6762176bd2629dec0635",
+      "matches": true
+    },
+    "A": {
+      "path": "quality_reports/results/mebane_gates/G0/round1/qbl_installed_3017de5.jags",
+      "expected": "f8360126424b7a463f76a1c99efc89a8a5cb81339213bd4931559f14595fbab6",
+      "actual": "f8360126424b7a463f76a1c99efc89a8a5cb81339213bd4931559f14595fbab6",
+      "matches": true
+    },
+    "G2": {
+      "path": "quality_reports/results/mebane_gates/G2/round2/benchmark_contract.json",
+      "expected": "63b61fb0594d0302a03d999bcff6c62967b6e999f37b4c9a8821f0f8e9ed18d2",
+      "actual": "63b61fb0594d0302a03d999bcff6c62967b6e999f37b4c9a8821f0f8e9ed18d2",
+      "matches": true
+    },
+    "D_proposal": {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_model_proposal/proposal_v1.md",
+      "expected": "7fe462ed99561dee68d49fe1c5595845664249060459d018b4d01829fd61153c",
+      "actual": "7fe462ed99561dee68d49fe1c5595845664249060459d018b4d01829fd61153c",
+      "matches": true
+    },
+    "dc2010": {
+      "path": "quality_reports/results/mebane_gates/coordination/authors_replication_discovery/archive/UMeforensics-eforensics_public-3017de5/data/dc2010.rda",
+      "expected": "0386dcc86155e543382c2725e9eb61ebf365b2e6f96a2b037324dbee80005196",
+      "actual": "0386dcc86155e543382c2725e9eb61ebf365b2e6f96a2b037324dbee80005196",
+      "matches": true
+    },
+    "vignette": {
+      "path": "quality_reports/results/mebane_gates/coordination/authors_replication_discovery/archive/UMeforensics-eforensics_public-3017de5/vignettes/eforensics.Rmd",
+      "expected": "1d5f6894c66cd9a7882adb52f13b31d6fa87d363d2cce30dcf2e54e071c4c7a6",
+      "actual": "1d5f6894c66cd9a7882adb52f13b31d6fa87d363d2cce30dcf2e54e071c4c7a6",
+      "matches": true
+    },
+    "wrapper": {
+      "path": "quality_reports/results/mebane_gates/coordination/authors_replication_discovery/archive/UMeforensics-eforensics_public-3017de5/R/ef_main.R",
+      "expected": "ee626c0c939f84567c0ee74a100954229567911711193716a46837e1d6e3ce8b",
+      "actual": "ee626c0c939f84567c0ee74a100954229567911711193716a46837e1d6e3ce8b",
+      "matches": true
+    },
+    "metadata": {
+      "path": "quality_reports/results/mebane_gates/coordination/authors_replication_discovery/archive/UMeforensics-eforensics_public-3017de5/man/dc2010.Rd",
+      "expected": "36668fe6f8c1bf933d1f749849569887e7c9c190fa718afd838ed7d498ce5873",
+      "actual": "36668fe6f8c1bf933d1f749849569887e7c9c190fa718afd838ed7d498ce5873",
+      "matches": true
+    }
+  },
+  "supplementary_sources": [
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/authors_replication_discovery/discovery.md",
+      "sha256": "c2c70d52386aa1b0d7a1a6501b19296290e58c4956219ae55154ba390bd771ba"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/authors_replication_discovery/replication_contract.json",
+      "sha256": "94c78c9d812d0628381e960b28cdc19a84636e883ba9a9eea704dac1cf8b71f2"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/authors_replication_discovery/source_manifest.json",
+      "sha256": "31832d81027ff0af50fb0ab0549203f8b701854a1e76635ef8eeaeda7fd8bc57"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G3/round1/adjudication.md",
+      "sha256": "9ec22580d2ca0a92a7a08c6e946c5eef605f9d29a1ed6e3830f4a1b6146177da"
+    },
+    {
+      "path": "quality_reports/plans/mebane_2022_2026_gates.json",
+      "sha256": "c98a6e4ff02243e61ba1109ae02c55f748ef9a7d55163aa9fd7a678e35682f86"
+    },
+    {
+      "path": "CLAUDE.md",
+      "sha256": "e207a5ba47b925dc303a736e70f0617898b8eda74140c6628c32cb8fb669a1a5"
+    },
+    {
+      "path": "README.md",
+      "sha256": "f9a3fd42c7bf0237887e4277a20a67dccdb63aebfdca07c1cbe54f460dcabb9d"
+    }
+  ],
+  "script_sha256": "805895d61ef29b620c1431b85e32cd4fc5b15e0610d7dddeaf1367a58d2722a8",
+  "not_tested": ["future D JAGS source or runtime", "future actual outgoing runner interface", "empirical posterior mixing or run budget feasibility", "candidate implementation", "data-preparation outputs", "external numeric replication"]
+}

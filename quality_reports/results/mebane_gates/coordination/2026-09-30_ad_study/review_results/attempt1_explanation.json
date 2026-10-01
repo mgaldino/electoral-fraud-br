@@ -1,0 +1,10 @@
+{
+  "status": "review_fixture_storage_type_error_not_candidate_finding",
+  "source_sha256": "7068c7b4df7b9e759d99da259ac24e387f2ffd171662c7d1244eba7db98274a8",
+  "retained_log": "checks_results.log",
+  "failure": "A common-table-identical-source-rows",
+  "cause": "range_limit is entirely NA among globals/scaled rows; read.csv inferred logical in comparison CSV, numeric in full diagnostics CSV. Values and missingness coincide.",
+  "repair": "Only treat equal-length entirely-NA columns as semantically equal; all nonmissing comparisons unchanged.",
+  "new_source": "check_results_attempt2.R",
+  "candidate_modified": false
+}

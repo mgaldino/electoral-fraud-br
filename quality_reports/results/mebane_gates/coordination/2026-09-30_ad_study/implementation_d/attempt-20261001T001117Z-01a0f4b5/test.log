@@ -1,0 +1,6 @@
+hashes and local runtime: PASS
+grid: 1024 distributions, 8704 physical cells, 1024 conditional blocks; max errors 7.2164e-16 / 3.5527e-15
+Error in dmultinom(as.numeric(e$states[j, c("A", "W", "O")]), p) : 
+  argument "prob" is missing, with no default
+Calls: near -> dmultinom
+Execution halted

@@ -1,0 +1,6 @@
+{
+  "status": "pass",
+  "cases": ["success", "generation_timeout", "diagnostic_failure", "no_outputs"],
+  "synthetic": true,
+  "empirical_MCMC": false
+}

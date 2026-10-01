@@ -1,0 +1,29 @@
+{
+  "study_id": "AD-DC2010",
+  "scope": "experimental paired study, not a production gate or published-output replication",
+  "authorization": "decision.md",
+  "contract": "contract_v2.json",
+  "contract_sha256": "d17b7f508a7ce87eec3ca71ed7df67666b528c755e005ec9e1299e5ff9deb509",
+  "status": "completed_with_inconclusive_pilot",
+  "independent_delivery_review": "pass_for_fidelity_only",
+  "result_adjudication": "results_adjudication.json",
+  "computational_outcome": "computationally_inconclusive",
+  "comparison": "comparison01/manifest.json",
+  "report": "comparison_A_D_DC2010_v1.pdf",
+  "release": "release_v1.json",
+  "pilot": "pilot01",
+  "coordinator_id": "019d795a-acfa-72c2-a210-d55a46c606c2",
+  "historical_goal": "blocked, not completed by this experimental study",
+  "model_A_changed": false,
+  "production_approved": false,
+  "G3_status": "inconclusive",
+  "G10_status": "queued",
+  "todos": [
+    {"id": "AD-1a", "task": "Freeze new paired mathematical/procedural contract without altering A", "status": "done", "evidence": ["contract_v2.json", "decision.md", "contract_adjudication_v2.json"]},
+    {"id": "AD-1b", "task": "Prepare and audit identical 143-row author data for A and D", "status": "done", "agent_id": "01a0f4b5-4434-7b83-91b9-69ced11b40ba", "model_requested": "gpt-6-sol", "effort": "xhigh", "evidence": ["data/run-20260930T235038Z-pid61600/manifest.json", "data/verification_2026-09-30.log", "review_preflight/review.json:PF-DATA"]},
+    {"id": "AD-1c", "task": "Independent contract review and adjudication", "status": "done", "agent_id": "01a0f4b8-962b-77a3-a418-6247c6219e8b", "model_requested": "inherit", "effort": "xhigh", "evidence": ["review_contract/review_v2.json", "contract_adjudication_v2.json"]},
+    {"id": "AD-2", "task": "Implement D, common runner and deterministic tests; independent preflight review", "status": "done", "executor_ids": ["01a0f4b5-4434-7b83-91b9-69ced11b40ba", "019d795a-acfa-72c2-a210-d55a46c606c2"], "reviewer_id": "01a0f4b8-962b-77a3-a418-6247c6219e8b", "evidence": ["preflight_full02/candidate_manifest.json", "preflight_adjudication_v2.json", "review_preflight_delta/review.json", "implementation_d/attempt-20261001T001549Z-01a0f4b5/manifest.json", "runner_checks03/result.json", "supervisor_checks02/result.json", "timing_checks01/result.json"]},
+    {"id": "AD-3", "task": "Run exactly the reviewed bounded paired pilot, retain draws, errors and timings", "status": "done", "evidence": ["release_v1.json", "pilot01/execution.json", "comparison01/manifest.json"]},
+    {"id": "AD-4", "task": "Independent result review and user-facing comparative report", "status": "done", "evidence": ["comparison01/comparison_report.md", "comparison_A_D_DC2010_v1.pdf", "visual_qa_v1.json", "review_results/review.json", "results_adjudication.json"]}
+  ]
+}

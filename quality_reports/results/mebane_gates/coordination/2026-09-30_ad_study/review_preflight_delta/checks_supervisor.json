@@ -1,0 +1,138 @@
+{
+  "status": "review_fixtures_complete",
+  "checks": [
+    {
+      "check": "success",
+      "pass": true,
+      "evidence": {
+        "command": [
+          "/opt/homebrew/opt/python@3.13/bin/python3.13",
+          "-c",
+          "print('single call', flush=True)"
+        ],
+        "returncode": 0,
+        "timed_out": false,
+        "elapsed_seconds": 0.04069191700546071,
+        "log": "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/review_preflight_delta/tree/independent_supervisor/success.log",
+        "log_sha256": "971900bb30aebadb1ae79133406c79d0b70d6fb35eff405fcad3f04eb2fcf6e1"
+      }
+    },
+    {
+      "check": "failure",
+      "pass": true,
+      "evidence": {
+        "command": [
+          "/opt/homebrew/opt/python@3.13/bin/python3.13",
+          "-c",
+          "print('failed once', flush=True); raise SystemExit(7)"
+        ],
+        "returncode": 7,
+        "timed_out": false,
+        "elapsed_seconds": 0.04066933301510289,
+        "log": "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/review_preflight_delta/tree/independent_supervisor/failure.log",
+        "log_sha256": "209cfc1e197001f36a54b85deb6be1974e2fcbbc57ba97ecd9b32da7d4d7dcbd"
+      }
+    },
+    {
+      "check": "timeout",
+      "pass": true,
+      "evidence": {
+        "command": [
+          "/opt/homebrew/opt/python@3.13/bin/python3.13",
+          "-c",
+          "import time; print('started once',flush=True); time.sleep(2)"
+        ],
+        "returncode": -15,
+        "timed_out": true,
+        "elapsed_seconds": 0.15409354103030637,
+        "log": "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/review_preflight_delta/tree/independent_supervisor/timeout.log",
+        "log_sha256": "18caa2fc59ba59b9e6aed3d49580e7a8ad825d46fde91efbf0a26ef56e914cd7"
+      }
+    },
+    {
+      "check": "existing-log-refused-before-process",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "check": "timeout-descendant-log-closed-before-seal",
+      "pass": true,
+      "evidence": {
+        "command": [
+          "/opt/homebrew/opt/python@3.13/bin/python3.13",
+          "-c",
+          "import subprocess,sys,time; subprocess.Popen([sys.executable,'-c',\"import signal,time; signal.signal(signal.SIGTERM,signal.SIG_IGN); print('child_ready',flush=True); time.sleep(1); print('child_finished_after_timeout',flush=True)\"]); time.sleep(3)"
+        ],
+        "returncode": -15,
+        "timed_out": true,
+        "elapsed_seconds": 0.2082414590404369,
+        "log": "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/review_preflight_delta/tree/independent_supervisor/descendant.log",
+        "log_sha256": "5bf052464cc1690cd9b95bf39b2580e751656fa4489c6535b36cc30942b9a780",
+        "sha256_after_child_exit": "5bf052464cc1690cd9b95bf39b2580e751656fa4489c6535b36cc30942b9a780",
+        "log_after_child_exit": "child_ready\n",
+        "scope": "adversarial subprocess fixture, not a demonstrated child in current rjags runner"
+      }
+    },
+    {
+      "check": "A-failure-does-not-retry-and-D-runs-once",
+      "pass": true,
+      "evidence": [
+        {
+          "command": [
+            "Rscript",
+            "--vanilla",
+            "R/experimental/mebane_ad/run_jags.R",
+            "A",
+            "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/contract_v2.json",
+            "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/data/run-20260930T235038Z-pid61600/dc2010_ad_data.rds",
+            "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/review_preflight_delta/tree/independent_supervisor/pair/A"
+          ],
+          "timeout": 1200
+        },
+        {
+          "command": [
+            "Rscript",
+            "--vanilla",
+            "R/experimental/mebane_ad/run_jags.R",
+            "D",
+            "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/contract_v2.json",
+            "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/data/run-20260930T235038Z-pid61600/dc2010_ad_data.rds",
+            "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/review_preflight_delta/tree/independent_supervisor/pair/D"
+          ],
+          "timeout": 1200
+        },
+        {
+          "command": [
+            "Rscript",
+            "--vanilla",
+            "R/experimental/mebane_ad/diagnostics.R",
+            "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/review_preflight_delta/tree/independent_supervisor/pair/D",
+            "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/data/run-20260930T235038Z-pid61600/dc2010_ad_data.rds",
+            "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/contract_v2.json",
+            "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/review_preflight_delta/tree/independent_supervisor/pair/D_diagnostics"
+          ],
+          "timeout": 1200
+        }
+      ]
+    },
+    {
+      "check": "pair-record-retries-zero-and-no-production",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "check": "existing-pair-refused",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "check": "bad-contract-hash-rejected-before-run",
+      "pass": true,
+      "evidence": null
+    }
+  ],
+  "failures": [],
+  "supervisor_sha256": "48fd61410eda632517adc804174bea7c9282c09bf06f140084ec5bff6f68a7b4",
+  "MCMC": false,
+  "reviewer_id": "01a0f4b8-962b-77a3-a418-6247c6219e8b"
+}

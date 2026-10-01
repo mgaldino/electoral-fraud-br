@@ -1,0 +1,4 @@
+Error in identical(as.numeric(rjags::jags.version()), c(4, 3, 2)) : 
+  'list' object cannot be coerced to type 'double'
+Calls: check -> isTRUE -> identical
+Execution halted

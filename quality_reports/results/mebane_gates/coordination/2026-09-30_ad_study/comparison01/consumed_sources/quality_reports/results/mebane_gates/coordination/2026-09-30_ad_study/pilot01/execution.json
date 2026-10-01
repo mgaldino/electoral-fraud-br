@@ -1,0 +1,50 @@
+{
+  "start_utc": "2026-10-01T00:51:47.216761+00:00",
+  "release_sha256": "7daac83b6ac5b23c56db63c88100bd7571c422f1dbe8a3f49134e1ae12bcdfbe",
+  "runs": [
+    {
+      "command": [
+        "Rscript",
+        "--vanilla",
+        "R/experimental/mebane_ad/run_jags.R",
+        "A",
+        "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/contract_v2.json",
+        "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/data/run-20260930T235038Z-pid61600/dc2010_ad_data.rds",
+        "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/A"
+      ],
+      "returncode": 0,
+      "timed_out": false,
+      "elapsed_seconds": 102.57054570800392,
+      "log": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/A_sampling.log",
+      "log_sha256": "e9b0f25d4622edd10178188b0501b18e9dcead39517da050a0f05bea915281e3",
+      "model": "A"
+    },
+    {
+      "command": [
+        "Rscript",
+        "--vanilla",
+        "R/experimental/mebane_ad/run_jags.R",
+        "D",
+        "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/contract_v2.json",
+        "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/data/run-20260930T235038Z-pid61600/dc2010_ad_data.rds",
+        "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/D"
+      ],
+      "returncode": 0,
+      "timed_out": false,
+      "elapsed_seconds": 68.24683187500341,
+      "log": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/D_sampling.log",
+      "log_sha256": "44e7927ccac5cae0160c0c701ab187677b26cee6a214b76ec2a2c1b9a368b625",
+      "model": "D"
+    }
+  ],
+  "retries": 0,
+  "production_approved": false,
+  "G10_approved": false,
+  "timing_scope": "External process wall clocks: generation and postprocessing separately; sum per model is end-to-end compute excluding A/D queue wait and supervisor/report overhead",
+  "budgets_seconds": {
+    "generation_per_model": 1200,
+    "postprocessing_per_model": 1200
+  },
+  "end_utc": "2026-10-01T00:55:22.118726+00:00",
+  "result_interpretation": "Raw execution only; independent result review required"
+}

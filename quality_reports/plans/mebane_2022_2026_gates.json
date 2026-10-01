@@ -3,7 +3,19 @@
   "plan_id": "mebane-brasil-2022-2026",
   "date": "2026-09-28",
   "scope": "Modelo eforensics qbl para eleição presidencial brasileira de 2022 e preparação para 2026, com execução por subagentes, goals delimitados e revisão independente.",
-  "current_deliverable": "G3 round1 encerrado como inconclusive: testes pequenos executados, diagnósticos reparados e revisão independente concluída; sete versões históricas recuperadas em suplemento, sem atestação universal de todos os inputs antigos. F1/F2 e o critério discreto de ESS de cauda continuam abertos; nenhuma engine de produção aprovada. Proposta comparativa de 30/09 recomenda estudar uma candidata multinomial, sem adoção ou nova estimação. G2 continua aprovado apenas como benchmark literal. G10 permanece não executado, faltando alvo externo completo; G4/G6 não liberados. Nenhuma exclusão de arquivos está autorizada.",
+  "current_deliverable": "Primeiro estudo experimental A/D em D.C.2010 concluído, mantendo A literal intacta e D multinomial separada. Mesmas 143 unidades, JAGS em ambos, quatro cadeias e 2000 amostras retidas por cadeia. Ambos computacionalmente inconclusivos: R-hat global máximo A=3.451/D=2.472, ESS bulk mínimo A=4.41/D=4.84; geração+diagnóstico A=124.92s/D=89.97s. Revisão independente e adjudicação aprovaram fidelidade da entrega, não precisão posterior. PDF, fontes e handoff em coordination/2026-09-30_ad_study sob resultados dos gates. Próxima investigação proposta: mistura das cadeias e tradução exata de D para Stan, antes de escalar. G2 histórico preservado, G3 inconclusive, G10 pendente e sem engine de produção ou inferência brasileira aprovadas. O estudo não substitui referência numérica externa dos autores. Nenhuma exclusão ou instalação autorizada.",
+  "experimental_studies": [
+    {
+      "id": "AD-DC2010",
+      "decision": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/decision.md",
+      "state": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/study_state.json",
+      "completion": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/completion.json",
+      "status": "completed_with_inconclusive_pilot",
+      "report": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/comparison_A_D_DC2010_v1.pdf",
+      "historical_gates_unchanged": true,
+      "production_approval": false
+    }
+  ],
   "integrity_hold": {
     "incident": "G2-R2-QA-I1",
     "path": "ssrn-4073770.pdf.download/ssrn-4073770.pdf",

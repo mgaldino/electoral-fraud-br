@@ -1,0 +1,184 @@
+{
+  "schema_version": "1.0",
+  "contract_id": "G2-round2-literal-qbl-software-benchmark",
+  "gate_id": "G2",
+  "round": "round2",
+  "authorization": {
+    "status": "authorized_by_user",
+    "basis": "Instrução explícita do usuário nesta conversa para fechamento documental G2 round2",
+    "quote": "Ok, pode prosseguir. Mas adota também em algum momento replicarmos algo já feito em outro lugar, pelos autores, para conferirmos que estamos fazendo direito.",
+    "interpretation": "Reprodução fiel do qbl/JAGS primeiro, nos limites especificados pelo usuário; não autorização inferencial ou autoaprovação do gate.",
+    "external_conversation_id": "unknown"
+  },
+  "gate_approved": false,
+  "inferential_approval": false,
+  "round2_independent_review_status": "pending",
+  "target_kind": "literal_software_benchmark_not_certified_data_generator",
+  "baseline": {
+    "commit": "3017de537450f97a01872d0157462a68bea348ee",
+    "engine": "JAGS",
+    "engine_version_required": "4.3.2",
+    "engine_runtime_probed_in_round2": false,
+    "qbl": {
+      "path": "quality_reports/results/mebane_gates/G0/round1/qbl_installed_3017de5.jags",
+      "sha256": "f8360126424b7a463f76a1c99efc89a8a5cb81339213bd4931559f14595fbab6"
+    },
+    "qbl_R_source": {
+      "path": "quality_reports/results/mebane_gates/G0/round1/ef_models_3017de5.R",
+      "sha256": "7140c70f03cdc01cffc32b29f18b8ccbc785b9f460282b518df4bf3625910b4a"
+    },
+    "historical_Stan_is_exact_port": false,
+    "k": 0.7
+  },
+  "decision_resolution": [
+    {"finding_id": "G2-QA-D1", "previous_classification": "CONFIRMED", "owner_choice_status": "authorized_by_user", "choice": "Benchmark literal de software; não corrigir F1/F2, não presumir gerador válido ou semântica runtime", "scientific_defect_refuted": false, "independent_revalidation": "pending"},
+    {"finding_id": "G2-QA-D2", "previous_classification": "CONFIRMED", "owner_choice_status": "authorized_by_user", "choice": "Priors e hierarquia efetivas de JAGS, alpha+b0 e primeiro desenho intercept-only; geografia de produção adiada para G4 antes de G6", "scientific_defect_refuted": false, "independent_revalidation": "pending"},
+    {"finding_id": "G2-QA-D3", "previous_classification": "CONFIRMED", "owner_choice_status": "authorized_by_user", "choice": "Distribuição conjunta completa dos funcionais por draw, médias condicionais separadas e limites condicionais de margem", "scientific_defect_refuted": false, "independent_revalidation": "pending"}
+  ],
+  "priors": {
+    "pi": {
+      "auxiliary": "H~U(0,1); B,C|H independent U(0,H); pi=(H,B,C)/(H+B+C)",
+      "order": "pi1>=max(pi2,pi3)",
+      "pi2_ge_pi3_required": false,
+      "simplex_density": "pi1^(-3) on partial-order domain, with respect to d(pi2)d(pi3)",
+      "total_order_or_uniform_truncated_simplex_allowed": false
+    },
+    "block_names": ["tau", "nu", "iota.m", "iota.s", "chi.m", "chi.s"],
+    "variance": {"distribution": "exponential", "rate": 5, "jags_precision": "1/v", "sd": "sqrt(v)", "exponential_on_sd": false},
+    "alpha": {"mean": 0, "variance": 1},
+    "fixed_intercept": {"mean": 0, "variance": 0.0001, "precision": 10000, "retain_separately_from_alpha": true},
+    "slopes": {"mean": 0, "variance": 1, "precision": 1},
+    "observation_effect": "h[i,b]|alpha[b],v[b] ~ Normal(alpha[b],variance=v[b]); independent conditional on block parameters",
+    "predictor": "inprod(X_b[i,],beta_b1)+h[i,b]; reported beta_b replaces its first coordinate by alpha but is not used in this product",
+    "blocks_per_observation": 6
+  },
+  "first_harness": {
+    "design": "intercept_only",
+    "fixed_design_matrices": ["Xa", "Xw", "X.iota.m", "X.iota.s", "X.chi.m", "X.chi.s"],
+    "each_matrix": "n by 1, all entries exactly 1; each associated coefficient dimension equals 1",
+    "full_hierarchy_retained": true,
+    "alpha_plus_b0_retained": true,
+    "national_geography_selected": false,
+    "slope_and_dummy_checks": "fidelity_only_not_production_geography_selection",
+    "geography_production_approval_gate": "G4_before_G6",
+    "changed_prior_design_or_target_requires": "reopen_affected_G2_decision_before_use"
+  },
+  "wrapper_interface": {
+    "primary_source": "quality_reports/results/mebane_gates/G2/round2/sources/ef_main_3017de5.R",
+    "primary_sha256": "ee626c0c939f84567c0ee74a100954229567911711193716a46837e1d6e3ce8b",
+    "locator": "eforensics_main_par, lines 667-675; getRegMatrix, lines 303-345",
+    "formula1_response": "w",
+    "formula1_matrix": "Xw",
+    "formula2_response": "a",
+    "formula2_matrix": "Xa",
+    "first_harness_formulas": ["formula1=w~1", "formula2=a~1"],
+    "magnitude_formulas": {"formula3": "X.iota.m", "formula4": "X.iota.s", "formula5": "X.chi.m", "formula6": "X.chi.s"},
+    "G3_asymmetric_sentinel_required": true,
+    "sentinel_example": {"N": [10, 12], "a": [2, 5], "w": [7, 3]},
+    "sentinel_scope": "G3 must inspect the actual outgoing JAGS data and design matrices, in wrapper and direct-list paths, and fail on swapped responses; equal responses cannot detect the error. Round2 tests contract fixtures and source text only, not the full wrapper.",
+    "historical_inverted_calls": [
+      {"path": "quality_reports/results/mebane_gates/G0/round1/final_state/R/05_eforensics_umeforensics_qbl.R", "lines": "103-104,153-154,187-188"},
+      {"path": "quality_reports/results/mebane_gates/G0/round1/final_state/R/07_brasil_full_qbl.R", "lines": "150-151"}
+    ],
+    "direct_lists_not_inverted": [
+      {"path": "quality_reports/results/mebane_gates/G0/round1/final_state/R/05_eforensics_qbl_fresh_diagnostic.R", "lines": "68-76; w=bsb$w,a=bsb$a"},
+      {"path": "quality_reports/results/mebane_gates/G0/round1/final_state/R/05_jags_qbl_zone_fe.R", "lines": "64-72; w=bsb$w,a=bsb$a"}
+    ],
+    "classification": "historical_wrapper_interface_bug_not_a_model_change",
+    "causal_explanation_of_prior_or_convergence_failures": "not_established",
+    "historical_scripts_modified": false
+  },
+  "latent_counts": {
+    "nodes": ["N.iota.m", "N.iota.s", "N.chi.m", "N.chi.s"],
+    "number_per_observation": 4,
+    "distribution": "Binomial(N,mu)",
+    "denominator": "N_eligible_voters",
+    "conditional_independence": true,
+    "incremental_probability": "k*ilogit(eta)",
+    "extreme_probability": "k+(1-k)*ilogit(eta)",
+    "manufactured_map": "if R==N then 0.999 else R/N",
+    "manufactured_endpoint": 0.999,
+    "stolen_map": "R/N",
+    "class": "one Z[i]~Categorical(pi) shared by a[i] and w[i]",
+    "class1_m_s": 0,
+    "truncate_realized_counts_at_k": false
+  },
+  "likelihood": {
+    "observed": "N integer >=1; A=N-V and W integers in [0,N]; physical input contract A+W<=N remains required but does not fix model support",
+    "pA": "(1-tau)*(1-m)",
+    "pW": "nu*(1-s)/(1-m)*(1-m-A/N)+(A/N)*(m-s)/(1-m)+s",
+    "class1_pW": "nu*(1-A/N)",
+    "responses": "A~Binomial(N,pA); W~Binomial(N,pW(A/N))",
+    "N_minus_A_trials_allowed": false,
+    "clamp_allowed": false,
+    "denominator_floor_allowed": false,
+    "latent_mean_plugin_allowed": false,
+    "silent_normalization_or_truncation_allowed": false,
+    "F1_F2_repair_allowed": false,
+    "invalid_parent_runtime_semantics": "unknown_to_be_observed_in_G3",
+    "zero_invalid_diagnostic_kernel": "mathematical_audit_only_not_assumed_JAGS_semantics_or_generator",
+    "literal_generation_failure_policy": "record_case_inputs_failure_stage_support_report_and_all_attempts; do_not_discard_or_redraw_until_valid_without_an_explicit_new_normalized_target",
+    "certified_physical_generator": false
+  },
+  "estimands": {
+    "primary_uncertainty_target": "complete_joint_functional_distribution_per_draw",
+    "requires_joint_nodes": ["Z", "mu.tau", "mu.nu", "N.iota.m", "N.iota.s", "N.chi.m", "N.chi.s"],
+    "latent_source": "same_joint_draw_or_exact_joint_conditional_reconstruction; never independent fresh prior draws",
+    "manufactured": "M_i=N_i*m_i[Z_i]*(1-tau_i)",
+    "stolen": "S_i=N_i*s_i[Z_i]*tau_i*(1-nu_i)",
+    "units": "model_functionals_in_expected_vote_units_not_observed_ballot_counts",
+    "additional_binomial_ballot_draw_allowed": false,
+    "aggregation": "sum_units_within_each_joint_draw_then_compute_summaries",
+    "conditional_means": "separate_auxiliary_or_sensitivity_output; valid_for_posterior_means_not_a_substitute_for_full_distribution_quantiles",
+    "classes": "retain_joint_Z_draws; modal_labels_expected_class_counts_and_draw_class_counts_are_distinct; report_ties_without_silent_assignment",
+    "observed_fraud_interpretation_approved": false
+  },
+  "margin": {
+    "Dobs": "observed_leader_votes_minus_observed_votes_of_fixed_runner_up",
+    "identity": "D0=Dobs-M-S-S_R",
+    "origin_assumption": "0<=S_R<=S",
+    "lower": "Dobs-M-2*S",
+    "upper": "Dobs-M-S",
+    "requires_feasibility": true,
+    "feasibility_policy": "check_model_functional_reconstruction_and_source_capacity_assumptions; flag_infeasible_cases_without_clipping_or_silent_dropping; bounds_are_conditional_not_identified_ballot_totals",
+    "all_stolen_from_runner_up_assumed": false,
+    "point_counterfactual_winner_identified": false,
+    "lost_votes_or_behavioral_responses_modeled": false
+  },
+  "held_limitations": [
+    {"id": "F1", "held": true, "statement": "Positive-mass parent states yield pW>1 (minimal example pW=499.5); runtime handling unknown and not silently repaired."},
+    {"id": "F2", "held": true, "statement": "N-trial observation nodes allow A+W>N even without fraud; software reproduction is not certification of physical support."},
+    {"id": "PAPER_JAGS_STAN", "held": true, "statement": "Paper/JAGS/Stan targets differ in priors, latent counts, dependence on observed abstention and clamp; choosing JAGS does not refute those differences."},
+    {"id": "NORMALIZATION", "held": true, "statement": "Zero-invalid diagnostic finite sums are not an automatically normalized sampling model or proven runtime policy; conditioning and truncation require explicit parameter-dependent normalizers."},
+    {"id": "IDENTIFICATION", "held": true, "statement": "Ordered priors and computational convergence do not establish mechanism identification, intended fraud or empirical validity."},
+    {"id": "TOTALS_AND_ORIGIN", "held": true, "statement": "M and S are model functionals, not observed counts. Origin of stolen is unidentified in the aggregate residual; margin bounds need feasibility and stated assumptions."},
+    {"id": "GEOGRAPHY", "held": true, "statement": "Intercept-only harness and dummy-prior fidelity tests do not select national production geography. Approval required in G4 before G6."},
+    {"id": "HISTORICAL_FITS", "held": true, "statement": "Completion of historical JAGS/Stan runs did not establish convergence or approve any inferential fit; timing comparisons were not controlled."},
+    {"id": "MARGINALIZATION_COST", "held": true, "statement": "Small-case exact sums condition on continuous parameters and on the explicitly defined diagnostic kernel; O(sum N_i^2) is an operation count, not a measured national benchmark."}
+  ],
+  "G3_go_no_go": {
+    "scope": "additional target-fidelity criteria, not a replacement for the existing G3 gate or authorization to execute it now",
+    "entry": "independent_round2_review_and_coordinator_adjudication_of_this_exact_candidate_required",
+    "criteria": [
+      {"id": "G3-L1", "requirement": "Freeze the consumed literal source hash and record actual JAGS version 4.3.2, wrapper/data hashes and environment; mismatches are no-go for fidelity."},
+      {"id": "G3-L2", "requirement": "Start with six fixed n-by-1 matrices of ones, full hierarchy and alpha+b0. Verify partial pi prior, Exp5 variances, precisions, four Bin(N,mu) counts and endpoint 0.999; prior/dummy tests do not choose national geography."},
+      {"id": "G3-L3", "requirement": "On valid small states compare formulas and discrete conditional sums to the explicitly named target, retaining all constants; predeclare numerical tolerances and cases before results. Never compare mean plug-ins as exact marginalization."},
+      {"id": "G3-L4", "requirement": "Probe invalid-parent runtime with N=A=R_M=1,R_S=0,tau=nu=0.5,W=0 and a valid control; preserve exact model/probe bytes, actual pW, phase, conditions, errors and logs. Test active/inactive class cases and relevant initial/proposal/data-generation stages without assuming error, rejection or zero likelihood."},
+      {"id": "G3-L5", "requirement": "Any literal generator failure is retained with a support report covering attempts, invalid pW, nonfinite values and A+W>N. No retry-until-valid, clamp, truncation or silent normalizer. Runtime failure may be a faithfully reproduced result, never a certified physical generator."},
+      {"id": "G3-L6", "requirement": "Output jointly compatible Z and all latent inputs needed for M,S, aggregate within draw and label model functionals; separate conditional means. Verify conditional margin bounds and report infeasible cases without clipping or invented ballot draws."},
+      {"id": "G3-L7", "requirement": "No-go for unqualified exact-port claims if runtime behavior remains unknown or differs on tested cases; unresolved mismatch or need to repair F1/F2 reopens the affected G2 choice. Independent G3 QA remains mandatory."},
+      {"id": "G3-L8", "requirement": "Before any fitting, run an asymmetric sentinel a!=w through the actual wrapper and direct-list routes. Require formula1=w~... -> w/Xw and formula2=a~... -> a/Xa, verify emitted JAGS data/matrices and detect a deliberately swapped negative control. Equal or symmetric responses are insufficient."}
+    ],
+    "software_fidelity_go": "criteria satisfied with source-bound evidence including reproduced failures and independent review; does not imply probabilistic coherence or inference",
+    "generator_go": false,
+    "stochastic_inference_or_power_claims_authorized": false
+  },
+  "author_replication": {
+    "decision": "authorized_future_replication_of_an_authors_case",
+    "coordination_owner": "coordinator_and_separately_assigned_agent",
+    "planned_gate": "G10_before_G4",
+    "searched_or_executed_here": false,
+    "ledger_edited_here": false,
+    "replication_case": "not_selected_in_this_round"
+  }
+}

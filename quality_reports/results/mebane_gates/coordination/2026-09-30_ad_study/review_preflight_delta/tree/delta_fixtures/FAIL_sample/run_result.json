@@ -1,0 +1,42 @@
+{
+  "status": "error",
+  "failed_stage": "sample",
+  "message": "SYNTHETIC failure sample",
+  "model": "D",
+  "warnings": [],
+  "phases": {
+    "setup": {
+      "user.self": 0.00999999999999801,
+      "sys.self": 0.00999999999999979,
+      "elapsed": 0.0459999999999994,
+      "completed": true
+    },
+    "compile": {
+      "user.self": 0,
+      "sys.self": 0,
+      "elapsed": 0.0159999999999982,
+      "completed": true
+    },
+    "adapt": {
+      "user.self": 0,
+      "sys.self": 0,
+      "elapsed": 0.0180000000000007,
+      "completed": true
+    },
+    "burn": {
+      "user.self": 0,
+      "sys.self": 0,
+      "elapsed": 0.0180000000000007,
+      "completed": true
+    },
+    "sample": {
+      "user.self": 0,
+      "sys.self": 0,
+      "elapsed": 0.0190000000000055,
+      "completed": false
+    }
+  },
+  "elapsed_seconds": 0.124000000000002,
+  "timing_scope": "Internal generation: function entry through raw persistence/error handling; excludes R bootstrap and final result/manifest writes. Supervisor measures the whole generation process; diagnostics have a separate clock.",
+  "posterior_or_model_validated": false
+}

@@ -1,0 +1,10 @@
+{"utc":"2026-10-01 00:46:57 UTC","model":"D","stage":"setup","type":"start","value":"setup"} 
+{"utc":"2026-10-01 00:46:57 UTC","model":"D","stage":"setup","type":"complete","value":0.045} 
+{"utc":"2026-10-01 00:46:57 UTC","model":"D","stage":"compile","type":"start","value":"compile"} 
+{"utc":"2026-10-01 00:46:57 UTC","model":"D","stage":"compile","type":"complete","value":0.019} 
+{"utc":"2026-10-01 00:46:57 UTC","model":"D","stage":"adapt","type":"start","value":"adapt"} 
+{"utc":"2026-10-01 00:46:57 UTC","model":"D","stage":"adapt","type":"complete","value":0.019} 
+{"utc":"2026-10-01 00:46:57 UTC","model":"D","stage":"adapt","type":"adaptation_adequate","value":true} 
+{"utc":"2026-10-01 00:46:57 UTC","model":"D","stage":"burn","type":"start","value":"burn"} 
+{"utc":"2026-10-01 00:46:57 UTC","model":"D","stage":"burn","type":"failed_elapsed","value":0.016} 
+{"utc":"2026-10-01 00:46:57 UTC","model":"D","stage":"burn","type":"error","value":"SYNTHETIC failure burn"} 

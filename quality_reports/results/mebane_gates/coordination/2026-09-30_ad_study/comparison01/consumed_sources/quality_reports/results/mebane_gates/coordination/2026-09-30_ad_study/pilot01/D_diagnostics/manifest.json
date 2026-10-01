@@ -1,0 +1,76 @@
+{
+  "note": "Raw draw diagnostics, joint functionals and secondary D reconstruction; not electoral inference",
+  "files": [
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/D_diagnostics/class_probabilities.csv",
+      "bytes": 14867,
+      "sha256": "9dd4f5c08a0e50d98bffe9d77cbb3eaa19a86c95c61580a54fd5ce941a5fc275"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/D_diagnostics/consumed_sources/R/experimental/mebane_ad/diagnostics.R",
+      "bytes": 13107,
+      "sha256": "4f30f9ff1772f83b54519e941cd9c6edea24fbe359d5019836223f60b995061c"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/D_diagnostics/consumed_sources/R/experimental/mebane_ad/io.R",
+      "bytes": 2627,
+      "sha256": "913803dc29f9784d756ab9a1834b2a96b8201d754957dbd9f65286674b4abb2d"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/D_diagnostics/consumed_sources/manifest.json",
+      "bytes": 3066,
+      "sha256": "187e7661fb96bd00e7100afbd7c6f8039a1a241d5d7c8b1375c78e7c2dab75c8"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/D_diagnostics/consumed_sources/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/contract_v2.json",
+      "bytes": 15010,
+      "sha256": "d17b7f508a7ce87eec3ca71ed7df67666b528c755e005ec9e1299e5ff9deb509"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/D_diagnostics/consumed_sources/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/data/run-20260930T235038Z-pid61600/dc2010_ad_data.rds",
+      "bytes": 2539,
+      "sha256": "b2ef611dabb751f9286acbaae841a23c34948ed0a4b6306364cbe94d9d24903e"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/D_diagnostics/consumed_sources/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/D/raw_chains.rds",
+      "bytes": 76685219,
+      "sha256": "6fe3da66426201efe6da0176f7c880755df868cb9fb6b318a7a9eb1f6bed13ac"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/D_diagnostics/consumed_sources/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/D/run_result.json",
+      "bytes": 1320,
+      "sha256": "d61e701a54404e35c9f23c7cd525b55f2b4772a148ea26b9277cdfb7f7c9db76"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/D_diagnostics/consumed_sources/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/D/sampling_metadata.json",
+      "bytes": 2706,
+      "sha256": "6815c62a492249d95b2b8246873579d404344efb777e14bc2a52bf207f0579b1"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/D_diagnostics/diagnostic_result.json",
+      "bytes": 690,
+      "sha256": "5d6e90a2d670f516a3ffac344824429793b69a7499904c08b7459f6d9f2b327f"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/D_diagnostics/diagnostics.csv",
+      "bytes": 543193,
+      "sha256": "2a4b4fec9f5f52652483f1e4c9bcef6706cc5ca025dfdea60aadfe26da9987a6"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/D_diagnostics/joint_functionals.csv",
+      "bytes": 722295,
+      "sha256": "5bfb633554ebb9aaa34fca8be1425fa1997c9c5344e4574e45196b21edc01b24"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/D_diagnostics/secondary_counts_by_unit.rds",
+      "bytes": 80875,
+      "sha256": "6e475b207fa6f09b959fcfd89e212c352f31ba5d349b6022d0cc5ac65d100144"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/D_diagnostics/support_checks.json",
+      "bytes": 342,
+      "sha256": "c256fb174bcf93bf6847755b9509748135110ff6e6013b6d8ce91ce9375d5949"
+    }
+  ],
+  "excluded": "This manifest itself; active outer process logs are sealed separately"
+}

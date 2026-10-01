@@ -1,0 +1,13 @@
+{
+  "attempt_id": "attempt-20261001T001117Z-01a0f4b5",
+  "executor_id": "01a0f4b5-4434-7b83-91b9-69ced11b40ba",
+  "status": "failed_preflight",
+  "exit_code": 1,
+  "failure": "Boundary test called dmultinom without named prob argument; core grid passed before failure",
+  "source_snapshot_manifest_sha256": "12dfde395c014193a45deb0f9132f8fb47c8e849423751eec0cd54005b714196",
+  "test_log_sha256": "a3132fbe34714c4a67e15fffd424c3f904789f02e3e68fc0ae9c61fdca45a832",
+  "test_source_sha256": "3351ff1bf46788ba7004d99260aa691ef4c2ce4ef893049cde58813934e36668",
+  "model_r_sha256": "e5154c01c6f111cc47d5e9d9f49654f1ee081bb4001664038c840b8c0d86710a",
+  "model_jags_sha256": "6ddb9624f60b15e196cc27ed9694852c40b6553a684a9962003168da4ecfaf5b",
+  "no_empirical_pilot": true
+}

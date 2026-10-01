@@ -1,0 +1,364 @@
+{
+  "status": "pass",
+  "created_utc": "2026-10-01T01:01:32.227904+00:00",
+  "checks": [
+    {
+      "check": "reproduced-byte-identical-timings_diagnostics.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reproduced-byte-identical-common_functionals.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reproduced-byte-identical-class_probabilities_compared.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reproduced-byte-identical-comparison_result.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reproduced-byte-identical-comparison_report.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "pdf-fixed-sha",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "markdown-fixed-sha",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "three-pdf-pages",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "all-markdown-paragraphs-headings-table-rows-in-PDF",
+      "passed": true,
+      "detail": 44
+    },
+    {
+      "check": "table-one-header-repeated",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "all-table-one-values-and-rounding",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "table-two-independent-raw-pi[1]",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "table-two-independent-raw-pi[2]",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "table-two-independent-raw-pi[3]",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "table-two-independent-raw-M_total",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "table-two-independent-raw-S_total",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "scope-computacionalmente inconclusiva",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "scope-não estimativas validadas de fraude",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "scope-não certifica reprodução de uma tabela publicada pelos autores",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "scope-não aprova G10",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "scope-G3 histórico permanece inconclusivo",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "scope-esses valores não estabelecem superioridade de uma alternativa",
+      "passed": true,
+      "detail": null
+    }
+  ],
+  "commands": [
+    {
+      "name": "comparison_fixtures",
+      "command": [
+        "Rscript",
+        "--vanilla",
+        "tests/mebane/ad_study/test_comparison.R",
+        "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/contract_v2.json",
+        "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/data/run-20260930T235038Z-pid61600/dc2010_ad_data.rds",
+        "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/review_results/comparison_fixtures"
+      ],
+      "exit_code": 0,
+      "evidence": "Completed in initial attempt before text-order assertion; not rerun",
+      "log": "comparison_fixtures.log",
+      "log_sha256": "aa52a6b676cde30a680d1aa2d5427e9faffb9cdc5e4c63e8eefc5a5b493e0e47"
+    },
+    {
+      "name": "comparison_recomputed",
+      "command": [
+        "Rscript",
+        "--vanilla",
+        "R/experimental/mebane_ad/compare_runs.R",
+        "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01",
+        "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/contract_v2.json",
+        "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/data/run-20260930T235038Z-pid61600/dc2010_ad_data.rds",
+        "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/review_results/comparison_recomputed"
+      ],
+      "exit_code": 0,
+      "evidence": "Completed in initial attempt before text-order assertion; not rerun",
+      "log": "comparison_recomputed.log",
+      "log_sha256": "2102d842d870ae058e27187784ae0086779c5b660173d3b81e462c88ee731c1d"
+    },
+    {
+      "name": "pdf_text",
+      "command": [
+        "pdftotext",
+        "-layout",
+        "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/comparison_A_D_DC2010_v1.pdf",
+        "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/review_results/pdf_text.txt"
+      ],
+      "exit_code": 0,
+      "evidence": "Completed in initial attempt before text-order assertion; not rerun",
+      "log": "pdf_text.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "pdf_info",
+      "command": [
+        "pdfinfo",
+        "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/comparison_A_D_DC2010_v1.pdf"
+      ],
+      "exit_code": 0,
+      "evidence": "Completed in initial attempt before text-order assertion; not rerun",
+      "log": "pdf_info.log",
+      "log_sha256": "e19b7512c757c5ff85a68a716b9d419aec6878a8396def9a33b923fc01430f15"
+    },
+    {
+      "name": "pdf_reading_order",
+      "command": [
+        "pdftotext",
+        "-raw",
+        "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/comparison_A_D_DC2010_v1.pdf",
+        "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/review_results/pdf_text_reading_order.txt"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "pdf_text_units": [
+    {
+      "text": "A e D no mesmo caso: primeiro estudo experimental",
+      "present": true
+    },
+    {
+      "text": "Caso: Washington, D.C. 2010, dados empacotados pelos autores. Contrato: AD-DC2010-v2. Relatório gerado de resultados persistidos; nenhuma estimação ocorre nesta etapa.",
+      "present": true
+    },
+    {
+      "text": "1. Resultado e alcance",
+      "present": true
+    },
+    {
+      "text": "A comparação terminou computacionalmente inconclusiva pelos critérios prospectivos. Execução concluída, quando presente, não basta para tratar os resumos como estimativas posteriores confiáveis. Os valores abaixo descrevem as amostras geradas e permanecem sujeitos às falhas diagnósticas registradas.",
+      "present": true
+    },
+    {
+      "text": "A foi preservado integralmente. D muda a distribuição conjunta para uma multinomial e remove as contagens auxiliares Binomial(N) do qbl. As diferenças combinam essas alterações; não isolam o efeito causal de uma única mudança. Ambas as execuções usam JAGS, para não acrescentar uma troca de engine ao contraste.",
+      "present": true
+    },
+    {
+      "text": "2. Dados e protocolo",
+      "present": true
+    },
+    {
+      "text": "Foram usadas as mesmas 143 unidades, na ordem original, sem exclusões. Totais: N=452.992, A=320.943, W=97.978, O=34.071. Nesta base A=NVoters-NValid é a codificação dos autores; não equivale automaticamente à abstenção efetiva brasileira. O resíduo não é identificado como votos de um único adversário.",
+      "present": true
+    },
+    {
+      "text": "Quatro cadeias por modelo, 1.000 iterações de adaptação, 5.000 de aquecimento e 2.000 amostras retidas por cadeia; mesmas prioris compartilhadas, desenho intercept-only com seis efeitos por unidade, sementes e inicializações predefinidas. Um objeto rjags por modelo, A seguido de D, sem modelos concorrentes e sem extensão automática. As mesmas sementes não tornam os draws dos modelos pareados ou de igual precisão.",
+      "present": true
+    },
+    {
+      "text": "3. Tempo e diagnósticos",
+      "present": true
+    },
+    {
+      "text": "Tabela 1. Tempo de processo por modelo e diagnósticos dos 23 alvos globais. Os totais de falhas incluem também alvos locais e discretos. NA não é aprovação. Tempo, sozinho, não mede qualidade ou eficiência estatística.",
+      "present": true
+    },
+    {
+      "text": "| Medida | A: qbl literal | D: multinomial |",
+      "present": true
+    },
+    {
+      "text": "| Geração: processo completo (s) | 102,57 | 68,25 |",
+      "present": true
+    },
+    {
+      "text": "| Preparação interna (s) | 0,14 | 0,12 |",
+      "present": true
+    },
+    {
+      "text": "| Amostragem (s) | 24,92 | 16,27 |",
+      "present": true
+    },
+    {
+      "text": "| Persistência dos draws (s) | 5,99 | 3,99 |",
+      "present": true
+    },
+    {
+      "text": "| Pós-processamento: processo (s) | 22,35 | 21,72 |",
+      "present": true
+    },
+    {
+      "text": "| Geração + pós-processamento (s) | 124,92 | 89,97 |",
+      "present": true
+    },
+    {
+      "text": "| R-hat máximo, globais | 3,451 | 2,472 |",
+      "present": true
+    },
+    {
+      "text": "| ESS bulk mínimo, globais | 4,41 | 4,84 |",
+      "present": true
+    },
+    {
+      "text": "| ESS cauda mínimo, globais | 4,02 | 4,99 |",
+      "present": true
+    },
+    {
+      "text": "| Alvos obrigatórios reprovados | 1.605 | 1.021 |",
+      "present": true
+    },
+    {
+      "text": "| Alvos com diagnóstico obrigatório indefinido | 432 | 392 |",
+      "present": true
+    },
+    {
+      "text": "R-hat menor que 1,01 e ESS bulk/cauda de pelo menos 400 são exigidos para todos os alvos obrigatórios. Indicadores e contagens de classe têm também teto de cinco pontos percentuais para a amplitude das médias entre cadeias, com contagens divididas por 143 nessa checagem. Indicadores raros podem ter diagnósticos indefinidos; isso mantém o resultado inconclusivo e não prova ausência de uma classe nem, isoladamente, não convergência.",
+      "present": true
+    },
+    {
+      "text": "4. Comparação descritiva das saídas",
+      "present": true
+    },
+    {
+      "text": "Tabela 2. Médias das amostras geradas, não estimativas validadas de fraude. pi são pesos da mistura, não proporções observadas de seções fraudulentas. M e S são funcionais análogos em unidades de votos esperados, calculados e agregados dentro de cada draw conjunto; as variáveis latentes subjacentes diferem entre A e D. Quantis, resultados por cadeia e diagnósticos individuais estão nos CSVs.",
+      "present": true
+    },
+    {
+      "text": "| Funcional | A | D |",
+      "present": true
+    },
+    {
+      "text": "| pi[1] | 0,9759 | 0,9714 |",
+      "present": true
+    },
+    {
+      "text": "| pi[2] | 0,0173 | 0,0219 |",
+      "present": true
+    },
+    {
+      "text": "| pi[3] | 0,0068 | 0,0067 |",
+      "present": true
+    },
+    {
+      "text": "| M_total | 514,1 | 598,4 |",
+      "present": true
+    },
+    {
+      "text": "| S_total | 64,0 | 62,5 |",
+      "present": true
+    },
+    {
+      "text": "M representa transferências esperadas do grupo inicialmente não votante para votos no candidato focal; S representa transferências esperadas de votos inicialmente destinados aos demais candidatos. São rótulos internos do mecanismo estatístico, não eventos observados. Em cada unidade: M=N(1-tau)m e S=N tau(1-nu)s; tau é a participação inicial, nu é a preferência inicial pelo candidato focal, m e s são intensidades dependentes da classe.",
+      "present": true
+    },
+    {
+      "text": "D também permite reconstruir contagens condicionadas a W, preservando a mesma classe e parâmetros de cada draw. Essas contagens secundárias ficam separadas dos funcionais M/S da tabela; não podem ser comparadas a A como se fossem o mesmo estimando, nem usadas para resgatar diagnósticos da posterior primária.",
+      "present": true
+    },
+    {
+      "text": "5. O que ainda falta",
+      "present": true
+    },
+    {
+      "text": "O qbl A conserva os contraexemplos já confirmados de probabilidades inválidas em certos estados e de contagens fora do suporte físico. D corrige o suporte por construção, mas probabilidades por seção também podem ser reproduzidas sem transferências quando os parâmetros são livres. É necessário estudar identificação, restrições hierárquicas, prioris e heterogeneidade legítima antes de qualquer conclusão eleitoral.",
+      "present": true
+    },
+    {
+      "text": "Não há saída numérica externa imutável localizada para o exemplo D.C. Assim, este piloto não certifica reprodução de uma tabela publicada pelos autores e não aprova G10. G3 histórico permanece inconclusivo; os gates de validação e escala para o Brasil não foram liberados.",
+      "present": true
+    },
+    {
+      "text": "A sequência posterior é diagnosticar os limites evidenciados aqui, comparar D em JAGS e Stan no mesmo alvo, completar a replicação externa e só depois avançar aos testes de identificação e ao caso brasileiro aprovado. Qualquer nova rodada deve preservar esta e fixar prospectivamente seus ajustes; não se prevê repetir até obter concordância.",
+      "present": true
+    },
+    {
+      "text": "6. Fontes e reprodução",
+      "present": true
+    },
+    {
+      "text": "Fonte empírica: Ferrari, Diogo; McAlister, Kevin; Mebane, Walter R., Jr.; Wu, Patrick Y. (2019). eforensics 0.0.4, commit 3017de537450f97a01872d0157462a68bea348ee; vignette Introduction to eforensics, 16/08/2019, exemplo D.C. 2010. Código e RDA arquivados no projeto. D é derivação experimental própria, não implementação exata dessa fonte.",
+      "present": true
+    },
+    {
+      "text": "Mebane, Walter R., Jr.; Ferrari, Diogo; McAlister, Kevin; Wu, Patrick Y. (2022). Measuring Election Frauds. Manuscrito, versão de 6 de março de 2022, especificação nas páginas impressas 3-7. Texto dos autores. Cópia local preservada no projeto.",
+      "present": true
+    },
+    {
+      "text": "Mebane, Walter R., Jr. (2023). Lost Votes and Posterior Multimodality in the eforensics Model. PolMeth 2023, Stanford, 9-11 de julho; versão de 2 de julho de 2023, páginas impressas 5-8. Texto do autor. Cópia local preservada no projeto.",
+      "present": true
+    },
+    {
+      "text": "Vehtari, Aki; Gelman, Andrew; Simpson, Daniel; Carpenter, Bob; Bürkner, Paul-Christian (2021). Rank-Normalization, Folding, and Localization: An Improved R-hat for Assessing Convergence of MCMC (with Discussion). Bayesian Analysis, 16(2), 667-718. DOI: 10.1214/20-BA1221. Referência dos diagnósticos; este estudo não replica os experimentos do artigo.",
+      "present": true
+    },
+    {
+      "text": "As medidas de custo separam fases internas e relógios externos. O tempo geração + pós-processamento soma os dois processos, sem contar duas vezes adaptação ou amostragem, e exclui espera pelo outro modelo, supervisor e elaboração do relatório. Os CSVs distinguem ESS/s de amostragem, geração interna, geração externa e computação total. Sem aprovação diagnóstica, esses valores não estabelecem superioridade de uma alternativa.",
+      "present": true
+    },
+    {
+      "text": "Entrada comum SHA-256: b2ef611dabb751f9286acbaae841a23c34948ed0a4b6306364cbe94d9d24903e. Modelo A preservado SHA-256: f8360126424b7a463f76a1c99efc89a8a5cb81339213bd4931559f14595fbab6. Contrato, scripts, entradas e saídas usados são vinculados pelos manifestos do estudo. O script de reprodução deste relatório é R/experimental/mebane_ad/compare_runs.R; a renderização do PDF é separada dos cálculos.",
+      "present": true
+    }
+  ],
+  "visual_inspection": "All three provided PNG pages independently viewed; no clipping/overlap; continued table header repeated.",
+  "source_pdf_sha256": "7d518b6a641b9793497264ec9eef261517c927f5610f858111f6610ee8389d6b",
+  "empirical_MCMC": false
+}

@@ -1,0 +1,65 @@
+{
+  "created_utc": "2026-10-01 00:12:48 UTC",
+  "files": [
+    {
+      "path": "R/experimental/mebane_ad/io.R",
+      "snapshot": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/implementation_d/attempt-20261001T001241Z-01a0f4b5/sources/R/experimental/mebane_ad/io.R",
+      "bytes": 2627,
+      "sha256": "913803dc29f9784d756ab9a1834b2a96b8201d754957dbd9f65286674b4abb2d"
+    },
+    {
+      "path": "R/experimental/mebane_ad/model_d.R",
+      "snapshot": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/implementation_d/attempt-20261001T001241Z-01a0f4b5/sources/R/experimental/mebane_ad/model_d.R",
+      "bytes": 5043,
+      "sha256": "e5154c01c6f111cc47d5e9d9f49654f1ee081bb4001664038c840b8c0d86710a"
+    },
+    {
+      "path": "models/experimental/mebane_ad/d_multinomial.jags",
+      "snapshot": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/implementation_d/attempt-20261001T001241Z-01a0f4b5/sources/models/experimental/mebane_ad/d_multinomial.jags",
+      "bytes": 2036,
+      "sha256": "6ddb9624f60b15e196cc27ed9694852c40b6553a684a9962003168da4ecfaf5b"
+    },
+    {
+      "path": "tests/mebane/ad_study/test_model_d.R",
+      "snapshot": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/implementation_d/attempt-20261001T001241Z-01a0f4b5/sources/tests/mebane/ad_study/test_model_d.R",
+      "bytes": 12052,
+      "sha256": "3b925eecf95851425651d1d2826d44c219668dc96ffb22289eaf32bf4a86cbbc"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/G0/round1/qbl_installed_3017de5.jags",
+      "snapshot": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/implementation_d/attempt-20261001T001241Z-01a0f4b5/sources/quality_reports/results/mebane_gates/G0/round1/qbl_installed_3017de5.jags",
+      "bytes": 6761,
+      "sha256": "f8360126424b7a463f76a1c99efc89a8a5cb81339213bd4931559f14595fbab6"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/contract_v1.json",
+      "snapshot": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/implementation_d/attempt-20261001T001241Z-01a0f4b5/sources/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/contract_v1.json",
+      "bytes": 10456,
+      "sha256": "8f0783b5f3520958a2b1a6d6de5bb217e2ea4ac8656a6ac114024b9d6a95dc17"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/contract_v2.json",
+      "snapshot": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/implementation_d/attempt-20261001T001241Z-01a0f4b5/sources/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/contract_v2.json",
+      "bytes": 15010,
+      "sha256": "d17b7f508a7ce87eec3ca71ed7df67666b528c755e005ec9e1299e5ff9deb509"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/review_contract/review.json",
+      "snapshot": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/implementation_d/attempt-20261001T001241Z-01a0f4b5/sources/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/review_contract/review.json",
+      "bytes": 14461,
+      "sha256": "01090a2482c83dd6f7f0fa0233a94f6baf44899fb42b26eaff44e67d9945aedd"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/data/run-20260930T235038Z-pid61600/dc2010_ad_data.rds",
+      "snapshot": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/implementation_d/attempt-20261001T001241Z-01a0f4b5/sources/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/data/run-20260930T235038Z-pid61600/dc2010_ad_data.rds",
+      "bytes": 2539,
+      "sha256": "b2ef611dabb751f9286acbaae841a23c34948ed0a4b6306364cbe94d9d24903e"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/data/run-20260930T235038Z-pid61600/manifest.json",
+      "snapshot": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/implementation_d/attempt-20261001T001241Z-01a0f4b5/sources/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/data/run-20260930T235038Z-pid61600/manifest.json",
+      "bytes": 4938,
+      "sha256": "ce9801aaf618c124bf870021de57e9a79670f8e943232414a0f05f9e09332f36"
+    }
+  ]
+}

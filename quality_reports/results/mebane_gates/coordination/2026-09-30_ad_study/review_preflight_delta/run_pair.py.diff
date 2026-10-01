@@ -1,0 +1,37 @@
+--- full01/R/experimental/mebane_ad/run_pair.py
++++ full02/R/experimental/mebane_ad/run_pair.py
+@@ -33,12 +33,20 @@
+             returncode = proc.wait(timeout=timeout)
+         except subprocess.TimeoutExpired:
+             timed_out = True
+-            os.killpg(proc.pid, signal.SIGTERM)
++            try:
++                os.killpg(proc.pid, signal.SIGTERM)
++            except ProcessLookupError:
++                pass
+             try:
+                 returncode = proc.wait(timeout=10)
+             except subprocess.TimeoutExpired:
++                pass
++            # The leader can exit while a descendant ignores SIGTERM.
++            try:
+                 os.killpg(proc.pid, signal.SIGKILL)
+-                returncode = proc.wait()
++            except ProcessLookupError:
++                pass
++            returncode = proc.wait()
+     return {"command": command, "returncode": returncode, "timed_out": timed_out,
+             "elapsed_seconds": time.monotonic() - start,
+             "log": str(log_path), "log_sha256": sha(log_path)}
+@@ -63,7 +71,10 @@
+     write_new(args.output / "release_consumed.json", release)
+     execution = {"start_utc": datetime.now(timezone.utc).isoformat(),
+                  "release_sha256": sha(args.release), "runs": [], "retries": 0,
+-                 "production_approved": False, "G10_approved": False}
++                 "production_approved": False, "G10_approved": False,
++                 "timing_scope": "External process wall clocks: generation and postprocessing separately; sum per model is end-to-end compute excluding A/D queue wait and supervisor/report overhead",
++                 "budgets_seconds": {"generation_per_model": 1200,
++                                     "postprocessing_per_model": 1200}}
+     for model in contract["paired_design"]["model_execution_order"]:
+         # Recheck each frozen dependency immediately before each model.
+         for item in release["files"]:

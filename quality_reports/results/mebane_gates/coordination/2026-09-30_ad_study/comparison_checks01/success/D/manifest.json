@@ -1,0 +1,11 @@
+{
+  "note": "",
+  "files": [
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/comparison_checks01/success/D/run_result.json",
+      "bytes": 368,
+      "sha256": "65fb8956a63436da30870d6cf9b8deb6788b33ae574ab669d2d55b495b9854ba"
+    }
+  ],
+  "excluded": "This manifest itself; active outer process logs are sealed separately"
+}

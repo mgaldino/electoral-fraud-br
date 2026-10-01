@@ -1,0 +1,38 @@
+{
+  "created_utc": "2026-10-01T01:04:26.149571+00:00",
+  "pilot_comparison_inputs_unchanged": 103,
+  "pdf_inputs": [
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/comparison_A_D_DC2010_v1.pdf",
+      "sha256": "7d518b6a641b9793497264ec9eef261517c927f5610f858111f6610ee8389d6b"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/comparison_A_D_DC2010_v1.manifest.json",
+      "sha256": "4bcb9c9421e9c700d17e134fc4646cf83484d51034be7a0c42b338abe22108db"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/visual_qa_v1.json",
+      "sha256": "9b0f0a1bb750f1c620e2faf7b09e31a6a13a3facbf4b72facf42eea96fbdb5f4"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/render_report.py",
+      "sha256": "fe09ea8c588e4e64cd7c94c5602f3b9d5340841c3a88986ebc8b9c8476ab28f7"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/comparison_A_D_DC2010_v1_page-1.png",
+      "sha256": "fb586b6828e10b45f5e6c53110f5be08627e71807762d592cd01afc809af9e88"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/comparison_A_D_DC2010_v1_page-2.png",
+      "sha256": "1339715daf0f489b1392f34a43e3bdf01abead9cd71e602f7096aa6a490743e6"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/comparison_A_D_DC2010_v1_page-3.png",
+      "sha256": "e0966d749dd07b52ce5bfcb6aa71d437d8509f66e78e87475d013a1bbcb29888"
+    }
+  ],
+  "actual_result_checks": 91,
+  "report_pdf_checks": 22,
+  "findings": 0,
+  "new_MCMC": false
+}

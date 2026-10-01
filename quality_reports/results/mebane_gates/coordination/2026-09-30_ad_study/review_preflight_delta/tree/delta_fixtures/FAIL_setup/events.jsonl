@@ -1,0 +1,3 @@
+{"utc":"2026-10-01 00:46:57 UTC","model":"D","stage":"setup","type":"start","value":"setup"} 
+{"utc":"2026-10-01 00:46:57 UTC","model":"D","stage":"setup","type":"failed_elapsed","value":0.022} 
+{"utc":"2026-10-01 00:46:57 UTC","model":"D","stage":"setup","type":"error","value":"SYNTHETIC failure setup"} 

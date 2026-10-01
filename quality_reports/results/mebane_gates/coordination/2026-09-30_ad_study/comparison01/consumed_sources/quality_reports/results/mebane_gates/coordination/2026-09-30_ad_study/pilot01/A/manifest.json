@@ -1,0 +1,91 @@
+{
+  "note": "Bounded raw run; independent diagnostics and review pending",
+  "files": [
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/A/actual_initial_values.rds",
+      "bytes": 4040,
+      "sha256": "31028dfca6cb2fec7b6e7cfe51bb0cc95546039b90797781ff3ea2e2b9b8c474"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/A/actual_jags_data.rds",
+      "bytes": 1954,
+      "sha256": "d335364ed13890867aac9c2dd4b3a05c0af8080c7a54ceba43b0a157400a4c87"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/A/consumed_sources/R/experimental/mebane_ad/io.R",
+      "bytes": 2627,
+      "sha256": "913803dc29f9784d756ab9a1834b2a96b8201d754957dbd9f65286674b4abb2d"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/A/consumed_sources/R/experimental/mebane_ad/prepare_dc2010.R",
+      "bytes": 10287,
+      "sha256": "051f0421448bd349ffdfa9a668ac78ac22bccc09bf4b8ff5718cd80c7e788313"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/A/consumed_sources/R/experimental/mebane_ad/run_jags.R",
+      "bytes": 8413,
+      "sha256": "7a92fdc9d234c8652cf6ae764f2dd22d86ef0b0f10ab8b929c8c2b4461dc651d"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/A/consumed_sources/R/experimental/mebane_ad/timing.md",
+      "bytes": 1852,
+      "sha256": "db3f96e88cb28ae54c42f539a377fcf5fe3ec4bd716adf0249e6e8c9044433f8"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/A/consumed_sources/manifest.json",
+      "bytes": 3619,
+      "sha256": "90b45f4749c72fb1bfff6ab1b89d89f138ac4ddde37c50a311748b02282f92f3"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/A/consumed_sources/quality_reports/results/mebane_gates/G0/round1/qbl_installed_3017de5.jags",
+      "bytes": 6761,
+      "sha256": "f8360126424b7a463f76a1c99efc89a8a5cb81339213bd4931559f14595fbab6"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/A/consumed_sources/quality_reports/results/mebane_gates/G2/round2/benchmark_contract.json",
+      "bytes": 14203,
+      "sha256": "63b61fb0594d0302a03d999bcff6c62967b6e999f37b4c9a8821f0f8e9ed18d2"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/A/consumed_sources/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/contract_v2.json",
+      "bytes": 15010,
+      "sha256": "d17b7f508a7ce87eec3ca71ed7df67666b528c755e005ec9e1299e5ff9deb509"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/A/consumed_sources/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/data/run-20260930T235038Z-pid61600/dc2010_ad_data.rds",
+      "bytes": 2539,
+      "sha256": "b2ef611dabb751f9286acbaae841a23c34948ed0a4b6306364cbe94d9d24903e"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/A/consumed_sources/quality_reports/results/mebane_gates/coordination/authors_replication_discovery/archive/UMeforensics-eforensics_public-3017de5/data/dc2010.rda",
+      "bytes": 2010,
+      "sha256": "0386dcc86155e543382c2725e9eb61ebf365b2e6f96a2b037324dbee80005196"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/A/events.jsonl",
+      "bytes": 1264,
+      "sha256": "677d010661845b3ee97c4e3590ffd4d7c6e7807875dc358ef4b90dada279ca79"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/A/final_jags_state.rds",
+      "bytes": 34911,
+      "sha256": "52d6788b50b1de4f8a023a968f7259854187ee140d1500d2f5961754e31b1050"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/A/raw_chains.rds",
+      "bytes": 76388680,
+      "sha256": "4fdd7316850c1b3aca1e067aeee5338c41a45042fb5f3405e4a43f3b30d9dcbd"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/A/run_result.json",
+      "bytes": 1308,
+      "sha256": "feddc59c03ccc21b127b4460c2aa342033c08c3958907a80ec0f90d4780be341"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/A/sampling_metadata.json",
+      "bytes": 2745,
+      "sha256": "8b08073fa901d0ba81a3c15340ddf2668b9202c5cdaf68b275c9f8a29e619d10"
+    }
+  ],
+  "excluded": "This manifest itself; active outer process logs are sealed separately"
+}

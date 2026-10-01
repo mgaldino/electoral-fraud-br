@@ -1,0 +1,530 @@
+{
+  "status": "pass_hash_binding",
+  "created_utc": "2026-10-01T00:57:09.032413+00:00",
+  "reviewer_id": "01a0f4b8-962b-77a3-a418-6247c6219e8b",
+  "comparison_manifest_sha256": "3bfbdaf1018518e09f0abe78deb2554a92906692e64e32d6570f0b3f79062545",
+  "comparison_report_sha256": "7ce47502798661813f976c0bf975af30e7a10237c70d23afd44baad01e682f50",
+  "execution_sha256": "00df77601d3a8b1c60c38b7edaddd3aac3982d6152e6837933fa9ab7b15c877d",
+  "release_sha256": "7daac83b6ac5b23c56db63c88100bd7571c422f1dbe8a3f49134e1ae12bcdfbe",
+  "contract_sha256": "d17b7f508a7ce87eec3ca71ed7df67666b528c755e005ec9e1299e5ff9deb509",
+  "files": [
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/A/actual_initial_values.rds",
+      "bytes": 4040,
+      "sha256": "31028dfca6cb2fec7b6e7cfe51bb0cc95546039b90797781ff3ea2e2b9b8c474"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/A/actual_jags_data.rds",
+      "bytes": 1954,
+      "sha256": "d335364ed13890867aac9c2dd4b3a05c0af8080c7a54ceba43b0a157400a4c87"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/A/consumed_sources/R/experimental/mebane_ad/io.R",
+      "bytes": 2627,
+      "sha256": "913803dc29f9784d756ab9a1834b2a96b8201d754957dbd9f65286674b4abb2d"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/A/consumed_sources/R/experimental/mebane_ad/prepare_dc2010.R",
+      "bytes": 10287,
+      "sha256": "051f0421448bd349ffdfa9a668ac78ac22bccc09bf4b8ff5718cd80c7e788313"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/A/consumed_sources/R/experimental/mebane_ad/run_jags.R",
+      "bytes": 8413,
+      "sha256": "7a92fdc9d234c8652cf6ae764f2dd22d86ef0b0f10ab8b929c8c2b4461dc651d"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/A/consumed_sources/R/experimental/mebane_ad/timing.md",
+      "bytes": 1852,
+      "sha256": "db3f96e88cb28ae54c42f539a377fcf5fe3ec4bd716adf0249e6e8c9044433f8"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/A/consumed_sources/manifest.json",
+      "bytes": 3619,
+      "sha256": "90b45f4749c72fb1bfff6ab1b89d89f138ac4ddde37c50a311748b02282f92f3"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/A/consumed_sources/quality_reports/results/mebane_gates/G0/round1/qbl_installed_3017de5.jags",
+      "bytes": 6761,
+      "sha256": "f8360126424b7a463f76a1c99efc89a8a5cb81339213bd4931559f14595fbab6"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/A/consumed_sources/quality_reports/results/mebane_gates/G2/round2/benchmark_contract.json",
+      "bytes": 14203,
+      "sha256": "63b61fb0594d0302a03d999bcff6c62967b6e999f37b4c9a8821f0f8e9ed18d2"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/A/consumed_sources/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/contract_v2.json",
+      "bytes": 15010,
+      "sha256": "d17b7f508a7ce87eec3ca71ed7df67666b528c755e005ec9e1299e5ff9deb509"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/A/consumed_sources/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/data/run-20260930T235038Z-pid61600/dc2010_ad_data.rds",
+      "bytes": 2539,
+      "sha256": "b2ef611dabb751f9286acbaae841a23c34948ed0a4b6306364cbe94d9d24903e"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/A/consumed_sources/quality_reports/results/mebane_gates/coordination/authors_replication_discovery/archive/UMeforensics-eforensics_public-3017de5/data/dc2010.rda",
+      "bytes": 2010,
+      "sha256": "0386dcc86155e543382c2725e9eb61ebf365b2e6f96a2b037324dbee80005196"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/A/events.jsonl",
+      "bytes": 1264,
+      "sha256": "677d010661845b3ee97c4e3590ffd4d7c6e7807875dc358ef4b90dada279ca79"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/A/final_jags_state.rds",
+      "bytes": 34911,
+      "sha256": "52d6788b50b1de4f8a023a968f7259854187ee140d1500d2f5961754e31b1050"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/A/manifest.json",
+      "bytes": 4787,
+      "sha256": "76e9c7a6ba01598383a8a6f6e076f0373f569c93a9dc30ce31a330c1f9a9d3d6"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/A/raw_chains.rds",
+      "bytes": 76388680,
+      "sha256": "4fdd7316850c1b3aca1e067aeee5338c41a45042fb5f3405e4a43f3b30d9dcbd"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/A/run_result.json",
+      "bytes": 1308,
+      "sha256": "feddc59c03ccc21b127b4460c2aa342033c08c3958907a80ec0f90d4780be341"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/A/sampling_metadata.json",
+      "bytes": 2745,
+      "sha256": "8b08073fa901d0ba81a3c15340ddf2668b9202c5cdaf68b275c9f8a29e619d10"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/A_diagnostics/class_probabilities.csv",
+      "bytes": 13794,
+      "sha256": "1b7a0eb17c0383fadefcda24410377d1b60aafc06b3577ad3d4d7ca1daeed905"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/A_diagnostics/consumed_sources/R/experimental/mebane_ad/diagnostics.R",
+      "bytes": 13107,
+      "sha256": "4f30f9ff1772f83b54519e941cd9c6edea24fbe359d5019836223f60b995061c"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/A_diagnostics/consumed_sources/R/experimental/mebane_ad/io.R",
+      "bytes": 2627,
+      "sha256": "913803dc29f9784d756ab9a1834b2a96b8201d754957dbd9f65286674b4abb2d"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/A_diagnostics/consumed_sources/manifest.json",
+      "bytes": 3066,
+      "sha256": "e1591df589fdccff525bedaec35d2c55b8c0c96034b3251226f997fee307ad2d"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/A_diagnostics/consumed_sources/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/contract_v2.json",
+      "bytes": 15010,
+      "sha256": "d17b7f508a7ce87eec3ca71ed7df67666b528c755e005ec9e1299e5ff9deb509"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/A_diagnostics/consumed_sources/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/data/run-20260930T235038Z-pid61600/dc2010_ad_data.rds",
+      "bytes": 2539,
+      "sha256": "b2ef611dabb751f9286acbaae841a23c34948ed0a4b6306364cbe94d9d24903e"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/A_diagnostics/consumed_sources/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/A/raw_chains.rds",
+      "bytes": 76388680,
+      "sha256": "4fdd7316850c1b3aca1e067aeee5338c41a45042fb5f3405e4a43f3b30d9dcbd"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/A_diagnostics/consumed_sources/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/A/run_result.json",
+      "bytes": 1308,
+      "sha256": "feddc59c03ccc21b127b4460c2aa342033c08c3958907a80ec0f90d4780be341"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/A_diagnostics/consumed_sources/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/A/sampling_metadata.json",
+      "bytes": 2745,
+      "sha256": "8b08073fa901d0ba81a3c15340ddf2668b9202c5cdaf68b275c9f8a29e619d10"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/A_diagnostics/diagnostic_result.json",
+      "bytes": 695,
+      "sha256": "17527e97910ab252bfbef20332be5eac82ce197444a51a86d46e817b5db6cfaf"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/A_diagnostics/diagnostics.csv",
+      "bytes": 632065,
+      "sha256": "8e7bc585ee0f3ee1513cc47556bc451ba001a27849f5cde0291380851a62c079"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/A_diagnostics/joint_functionals.csv",
+      "bytes": 383757,
+      "sha256": "503a8b77b9d5a3f3f8063328f971a800d26011fda9bb26b0530bc71147276dd0"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/A_diagnostics/manifest.json",
+      "bytes": 3992,
+      "sha256": "2105dd966390914e20174dadb04397bd905f072842077fb6a4033eb333e7222e"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/A_diagnostics/support_checks.json",
+      "bytes": 198,
+      "sha256": "9eb065ef6e18c50aeaa9b324faa559faa8eb73c6a7fe960ff139f2b2006d83cb"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/A_diagnostics.log",
+      "bytes": 790,
+      "sha256": "9fab4cddcecc646336ba74c90d69c2651931ac50d74ceab8686257bd1a5104f5"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/A_diagnostics_supervisor.json",
+      "bytes": 785,
+      "sha256": "18e7e8323221045df0fe585cf290d3bc76fe80df6308dc3230a669ac69265f4d"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/A_sampling.log",
+      "bytes": 1832,
+      "sha256": "e9b0f25d4622edd10178188b0501b18e9dcead39517da050a0f05bea915281e3"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/A_supervisor.json",
+      "bytes": 705,
+      "sha256": "aac26c6b6b5a170c9d6418c0813c7efae9471355846e6efec957f73e66e7cb28"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/D/actual_initial_values.rds",
+      "bytes": 704,
+      "sha256": "2879f39af87897208cd20b8449644d17e70fa10865e9b9ff93a3bcb71326f81a"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/D/actual_jags_data.rds",
+      "bytes": 1907,
+      "sha256": "01f4653485b3075c4b84a08d1e1bdae32b1df851c5f321e594210c2da10713f7"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/D/consumed_sources/R/experimental/mebane_ad/io.R",
+      "bytes": 2627,
+      "sha256": "913803dc29f9784d756ab9a1834b2a96b8201d754957dbd9f65286674b4abb2d"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/D/consumed_sources/R/experimental/mebane_ad/prepare_dc2010.R",
+      "bytes": 10287,
+      "sha256": "051f0421448bd349ffdfa9a668ac78ac22bccc09bf4b8ff5718cd80c7e788313"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/D/consumed_sources/R/experimental/mebane_ad/run_jags.R",
+      "bytes": 8413,
+      "sha256": "7a92fdc9d234c8652cf6ae764f2dd22d86ef0b0f10ab8b929c8c2b4461dc651d"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/D/consumed_sources/R/experimental/mebane_ad/timing.md",
+      "bytes": 1852,
+      "sha256": "db3f96e88cb28ae54c42f539a377fcf5fe3ec4bd716adf0249e6e8c9044433f8"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/D/consumed_sources/manifest.json",
+      "bytes": 3569,
+      "sha256": "e95318261e93515c771583a455f2b86f93e891fbb48dcd1096408754b25e2dde"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/D/consumed_sources/models/experimental/mebane_ad/d_multinomial.jags",
+      "bytes": 2036,
+      "sha256": "6ddb9624f60b15e196cc27ed9694852c40b6553a684a9962003168da4ecfaf5b"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/D/consumed_sources/quality_reports/results/mebane_gates/G2/round2/benchmark_contract.json",
+      "bytes": 14203,
+      "sha256": "63b61fb0594d0302a03d999bcff6c62967b6e999f37b4c9a8821f0f8e9ed18d2"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/D/consumed_sources/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/contract_v2.json",
+      "bytes": 15010,
+      "sha256": "d17b7f508a7ce87eec3ca71ed7df67666b528c755e005ec9e1299e5ff9deb509"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/D/consumed_sources/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/data/run-20260930T235038Z-pid61600/dc2010_ad_data.rds",
+      "bytes": 2539,
+      "sha256": "b2ef611dabb751f9286acbaae841a23c34948ed0a4b6306364cbe94d9d24903e"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/D/consumed_sources/quality_reports/results/mebane_gates/coordination/authors_replication_discovery/archive/UMeforensics-eforensics_public-3017de5/data/dc2010.rda",
+      "bytes": 2010,
+      "sha256": "0386dcc86155e543382c2725e9eb61ebf365b2e6f96a2b037324dbee80005196"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/D/events.jsonl",
+      "bytes": 1265,
+      "sha256": "68f01a702259a5b8539b195e26e3a9116991358473164fa85456a9459e9be121"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/D/final_jags_state.rds",
+      "bytes": 27832,
+      "sha256": "8692a84a4957d9f890897e2d259ec586835c7502b9ff6805e973baf96a62f3bf"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/D/manifest.json",
+      "bytes": 4761,
+      "sha256": "ede7eec48495c09a4ae6c6543c1636c3e551c3d0659f788e8621e1b245520300"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/D/raw_chains.rds",
+      "bytes": 76685219,
+      "sha256": "6fe3da66426201efe6da0176f7c880755df868cb9fb6b318a7a9eb1f6bed13ac"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/D/run_result.json",
+      "bytes": 1320,
+      "sha256": "d61e701a54404e35c9f23c7cd525b55f2b4772a148ea26b9277cdfb7f7c9db76"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/D/sampling_metadata.json",
+      "bytes": 2706,
+      "sha256": "6815c62a492249d95b2b8246873579d404344efb777e14bc2a52bf207f0579b1"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/D_diagnostics/class_probabilities.csv",
+      "bytes": 14867,
+      "sha256": "9dd4f5c08a0e50d98bffe9d77cbb3eaa19a86c95c61580a54fd5ce941a5fc275"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/D_diagnostics/consumed_sources/R/experimental/mebane_ad/diagnostics.R",
+      "bytes": 13107,
+      "sha256": "4f30f9ff1772f83b54519e941cd9c6edea24fbe359d5019836223f60b995061c"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/D_diagnostics/consumed_sources/R/experimental/mebane_ad/io.R",
+      "bytes": 2627,
+      "sha256": "913803dc29f9784d756ab9a1834b2a96b8201d754957dbd9f65286674b4abb2d"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/D_diagnostics/consumed_sources/manifest.json",
+      "bytes": 3066,
+      "sha256": "187e7661fb96bd00e7100afbd7c6f8039a1a241d5d7c8b1375c78e7c2dab75c8"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/D_diagnostics/consumed_sources/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/contract_v2.json",
+      "bytes": 15010,
+      "sha256": "d17b7f508a7ce87eec3ca71ed7df67666b528c755e005ec9e1299e5ff9deb509"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/D_diagnostics/consumed_sources/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/data/run-20260930T235038Z-pid61600/dc2010_ad_data.rds",
+      "bytes": 2539,
+      "sha256": "b2ef611dabb751f9286acbaae841a23c34948ed0a4b6306364cbe94d9d24903e"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/D_diagnostics/consumed_sources/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/D/raw_chains.rds",
+      "bytes": 76685219,
+      "sha256": "6fe3da66426201efe6da0176f7c880755df868cb9fb6b318a7a9eb1f6bed13ac"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/D_diagnostics/consumed_sources/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/D/run_result.json",
+      "bytes": 1320,
+      "sha256": "d61e701a54404e35c9f23c7cd525b55f2b4772a148ea26b9277cdfb7f7c9db76"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/D_diagnostics/consumed_sources/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/D/sampling_metadata.json",
+      "bytes": 2706,
+      "sha256": "6815c62a492249d95b2b8246873579d404344efb777e14bc2a52bf207f0579b1"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/D_diagnostics/diagnostic_result.json",
+      "bytes": 690,
+      "sha256": "5d6e90a2d670f516a3ffac344824429793b69a7499904c08b7459f6d9f2b327f"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/D_diagnostics/diagnostics.csv",
+      "bytes": 543193,
+      "sha256": "2a4b4fec9f5f52652483f1e4c9bcef6706cc5ca025dfdea60aadfe26da9987a6"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/D_diagnostics/joint_functionals.csv",
+      "bytes": 722295,
+      "sha256": "5bfb633554ebb9aaa34fca8be1425fa1997c9c5344e4574e45196b21edc01b24"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/D_diagnostics/manifest.json",
+      "bytes": 4248,
+      "sha256": "51164a6afe58c0b2acf633a5204cc72a6349ef4018d7c24b74349dc4770262ed"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/D_diagnostics/secondary_counts_by_unit.rds",
+      "bytes": 80875,
+      "sha256": "6e475b207fa6f09b959fcfd89e212c352f31ba5d349b6022d0cc5ac65d100144"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/D_diagnostics/support_checks.json",
+      "bytes": 342,
+      "sha256": "c256fb174bcf93bf6847755b9509748135110ff6e6013b6d8ce91ce9375d5949"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/D_diagnostics.log",
+      "bytes": 775,
+      "sha256": "ec8e51bc8f7a6f181d1de4c2e6e6a245ee77ace43f0aa80b95bf9c7a22ce8c56"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/D_diagnostics_supervisor.json",
+      "bytes": 785,
+      "sha256": "778b6709c3a249b856c4072f53e4e669fdd44fb8538f468d0b3ef52f8ef39591"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/D_sampling.log",
+      "bytes": 1832,
+      "sha256": "44e7927ccac5cae0160c0c701ab187677b26cee6a214b76ec2a2c1b9a368b625"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/D_supervisor.json",
+      "bytes": 704,
+      "sha256": "578576823d3a448f16d9adba7cbb93ebe676f86393c8caa50c567ae69f3c7067"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/execution.json",
+      "bytes": 2196,
+      "sha256": "00df77601d3a8b1c60c38b7edaddd3aac3982d6152e6837933fa9ab7b15c877d"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/release_consumed.json",
+      "bytes": 37717,
+      "sha256": "7daac83b6ac5b23c56db63c88100bd7571c422f1dbe8a3f49134e1ae12bcdfbe"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/comparison01/class_probabilities_compared.csv",
+      "bytes": 16192,
+      "sha256": "576e9e76c4dea6896e981a0e2f26cf8704439740f0c9ef4ce8352ebe8cb43673"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/comparison01/common_functionals.csv",
+      "bytes": 23692,
+      "sha256": "95e7ecc611ad7c3412c5f4280e4e4674aef7f3cc3f85953709ab5665e67d2777"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/comparison01/comparison_report.md",
+      "bytes": 7696,
+      "sha256": "7ce47502798661813f976c0bf975af30e7a10237c70d23afd44baad01e682f50"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/comparison01/comparison_result.json",
+      "bytes": 782,
+      "sha256": "ec510340a7a9c60de3cfbf630007f2c2adc16d4a6a9c2ae274d6e74197ba26bd"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/comparison01/consumed_sources/R/experimental/mebane_ad/compare_runs.R",
+      "bytes": 16236,
+      "sha256": "ba835f6244341f26e425a4173f53edb1457162820dc0deed0649ea1cf2bae81f"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/comparison01/consumed_sources/R/experimental/mebane_ad/io.R",
+      "bytes": 2627,
+      "sha256": "913803dc29f9784d756ab9a1834b2a96b8201d754957dbd9f65286674b4abb2d"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/comparison01/consumed_sources/manifest.json",
+      "bytes": 9525,
+      "sha256": "dc0b5e98653c920b258d0c6ac99026b7d2fe4755860edba9e5301617ed687245"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/comparison01/consumed_sources/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/contract_v2.json",
+      "bytes": 15010,
+      "sha256": "d17b7f508a7ce87eec3ca71ed7df67666b528c755e005ec9e1299e5ff9deb509"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/comparison01/consumed_sources/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/data/run-20260930T235038Z-pid61600/dc2010_ad_data.rds",
+      "bytes": 2539,
+      "sha256": "b2ef611dabb751f9286acbaae841a23c34948ed0a4b6306364cbe94d9d24903e"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/comparison01/consumed_sources/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/A/manifest.json",
+      "bytes": 4787,
+      "sha256": "76e9c7a6ba01598383a8a6f6e076f0373f569c93a9dc30ce31a330c1f9a9d3d6"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/comparison01/consumed_sources/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/A/run_result.json",
+      "bytes": 1308,
+      "sha256": "feddc59c03ccc21b127b4460c2aa342033c08c3958907a80ec0f90d4780be341"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/comparison01/consumed_sources/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/A_diagnostics/class_probabilities.csv",
+      "bytes": 13794,
+      "sha256": "1b7a0eb17c0383fadefcda24410377d1b60aafc06b3577ad3d4d7ca1daeed905"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/comparison01/consumed_sources/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/A_diagnostics/diagnostic_result.json",
+      "bytes": 695,
+      "sha256": "17527e97910ab252bfbef20332be5eac82ce197444a51a86d46e817b5db6cfaf"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/comparison01/consumed_sources/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/A_diagnostics/diagnostics.csv",
+      "bytes": 632065,
+      "sha256": "8e7bc585ee0f3ee1513cc47556bc451ba001a27849f5cde0291380851a62c079"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/comparison01/consumed_sources/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/A_diagnostics/manifest.json",
+      "bytes": 3992,
+      "sha256": "2105dd966390914e20174dadb04397bd905f072842077fb6a4033eb333e7222e"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/comparison01/consumed_sources/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/A_diagnostics_supervisor.json",
+      "bytes": 785,
+      "sha256": "18e7e8323221045df0fe585cf290d3bc76fe80df6308dc3230a669ac69265f4d"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/comparison01/consumed_sources/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/A_supervisor.json",
+      "bytes": 705,
+      "sha256": "aac26c6b6b5a170c9d6418c0813c7efae9471355846e6efec957f73e66e7cb28"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/comparison01/consumed_sources/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/D/manifest.json",
+      "bytes": 4761,
+      "sha256": "ede7eec48495c09a4ae6c6543c1636c3e551c3d0659f788e8621e1b245520300"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/comparison01/consumed_sources/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/D/run_result.json",
+      "bytes": 1320,
+      "sha256": "d61e701a54404e35c9f23c7cd525b55f2b4772a148ea26b9277cdfb7f7c9db76"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/comparison01/consumed_sources/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/D_diagnostics/class_probabilities.csv",
+      "bytes": 14867,
+      "sha256": "9dd4f5c08a0e50d98bffe9d77cbb3eaa19a86c95c61580a54fd5ce941a5fc275"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/comparison01/consumed_sources/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/D_diagnostics/diagnostic_result.json",
+      "bytes": 690,
+      "sha256": "5d6e90a2d670f516a3ffac344824429793b69a7499904c08b7459f6d9f2b327f"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/comparison01/consumed_sources/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/D_diagnostics/diagnostics.csv",
+      "bytes": 543193,
+      "sha256": "2a4b4fec9f5f52652483f1e4c9bcef6706cc5ca025dfdea60aadfe26da9987a6"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/comparison01/consumed_sources/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/D_diagnostics/manifest.json",
+      "bytes": 4248,
+      "sha256": "51164a6afe58c0b2acf633a5204cc72a6349ef4018d7c24b74349dc4770262ed"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/comparison01/consumed_sources/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/D_diagnostics_supervisor.json",
+      "bytes": 785,
+      "sha256": "778b6709c3a249b856c4072f53e4e669fdd44fb8538f468d0b3ef52f8ef39591"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/comparison01/consumed_sources/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/D_supervisor.json",
+      "bytes": 704,
+      "sha256": "578576823d3a448f16d9adba7cbb93ebe676f86393c8caa50c567ae69f3c7067"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/comparison01/consumed_sources/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/pilot01/execution.json",
+      "bytes": 2196,
+      "sha256": "00df77601d3a8b1c60c38b7edaddd3aac3982d6152e6837933fa9ab7b15c877d"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/comparison01/manifest.json",
+      "bytes": 8634,
+      "sha256": "3bfbdaf1018518e09f0abe78deb2554a92906692e64e32d6570f0b3f79062545"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/comparison01/timings_diagnostics.csv",
+      "bytes": 800,
+      "sha256": "1fe4e0928e6f4a1d143e069626a31e861bb6f1fce740e5a2206d605ac94d972b"
+    }
+  ],
+  "release_files_verified": 150,
+  "raw_copied": false,
+  "new_MCMC": false
+}

@@ -1,0 +1,188 @@
+{
+  "schema_version": "1.0-independent-ad-executable-preflight-review",
+  "review_date_local": "2026-09-30",
+  "timezone": "America/Sao_Paulo",
+  "review_date_utc": "2026-10-01",
+  "executor_id": "019d795a-acfa-72c2-a210-d55a46c606c2",
+  "reviewer_id": "01a0f4b8-962b-77a3-a418-6247c6219e8b",
+  "reviewer_identity_evidence": "Own get_goal/create_goal threadId and CODEX_THREAD_ID; distinct from both implementers",
+  "repository_root": "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud",
+  "study_path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study",
+  "evidence_paths_relative_to": "repository_root; fixture paths relative to review_preflight",
+  "frozen_source_prefix": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/preflight_full01/sources/",
+  "line_evidence_rule": "Each source path in evidence identifies the file under frozen_source_prefix, with its exact hash in candidate_manifest.json; live paths are not the review authority.",
+  "candidate": "preflight_full01",
+  "candidate_manifest_sha256": "67a7336cd187dc2914066deba349b1a96a7e5cd6896beb3fb2651283f10db28a",
+  "common_candidate_manifest_sha256": "2ad5651ebb55c090864297583bb674ac4a0d61b34d130afd122fd9d3989451a6",
+  "contract_id": "AD-DC2010-v2",
+  "contract_sha256": "d17b7f508a7ce87eec3ca71ed7df67666b528c755e005ec9e1299e5ff9deb509",
+  "status": "changes_requested",
+  "status_scope": "Executable preflight only. One bounded timing/instrumentation blocker; no empirical MCMC release, result approval, G3/G10 approval or production approval.",
+  "summary": "A extração real sobre payloads sintéticos, as regras v2, os vínculos de dados, a construção D e suas contagens condicionais passaram. O candidato não satisfaz integralmente a separação contratada dos tempos e rotula ESS/s com um total parcial. Há ainda uma limitação não impeditiva demonstrada para descendentes que ignorem SIGTERM, sem evidência de tal descendente no runner rjags atual.",
+  "blocking_findings": [
+    {
+      "id": "AD-PREFLIGHT-01",
+      "severity": "P2",
+      "blocking": true,
+      "title": "Setup não medido separadamente e ESS/s rotulado com total parcial",
+      "observed": "ad_run_jags lê contrato/dados, valida contra RDA e carrega dependências antes de start. Apenas compile/adapt/burn/sample usam timed(). Snapshot/preparação e persistência não possuem duração isolada. elapsed_seconds termina antes de run_result.json/manifest.json. diagnostics usa esse elapsed_seconds como denominador de ess_*_per_total_run_second, sem o tempo de pós-processamento ou o total externo do supervisor.",
+      "why_blocking": "A linha timing do contrato exige setup e demais fases separados, além de total. O custo comparável e o denominador ESS/s ficam incompletos/ambíguos antes de observar qualquer posterior. O total externo já existente limita o processo, mas não reconstrói a separação ausente.",
+      "evidence": [
+        {"path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/contract_v2.json", "line_start": 139, "line_end": 141},
+        {"path": "R/experimental/mebane_ad/run_jags.R", "line_start": 61, "line_end": 103},
+        {"path": "R/experimental/mebane_ad/run_jags.R", "line_start": 104, "line_end": 130},
+        {"path": "R/experimental/mebane_ad/run_jags.R", "line_start": 142, "line_end": 148},
+        {"path": "R/experimental/mebane_ad/diagnostics.R", "line_start": 207, "line_end": 208},
+        {"path": "R/experimental/mebane_ad/diagnostics.R", "line_start": 232, "line_end": 237},
+        {"path": "R/experimental/mebane_ad/run_pair.py", "line_start": 25, "line_end": 44}
+      ],
+      "requested_repair": "Instrumentar setup antes das operações pertinentes; distinguir persistência de amostragem; documentar limites dos relógios interno e externo, inclusive escrita final. Fixar prospectivamente a definição e o nome do denominador ESS/s. Se for end-to-end, usar total externo de geração mais pós-processamento, sem dupla contagem; se for custo de geração, nomeá-lo explicitamente e manter total end-to-end separado. Não mudar modelos, dados, seeds, iterações, critérios ou limiares.",
+      "verification_after_repair": "Novo freeze e delta-review com relógios/engine simulados, sem MCMC: comprovar fases e denominador, inclusive erro/timeout; repetir fixtures comuns afetados. Não requer reauditar G2/G3, identificação ou potência.",
+      "prospective_clarification": "run_pair aplica 1200 s ao processo run_jags e outros 1200 s ao processo diagnostics. Registrar explicitamente a cobertura do orçamento: geração versus pós-processamento separado. Não demonstrado retry/extensão de cadeias. A persistência como subfase é recomendação de reconciliação dos tempos; a exigência textual inequívoca hoje ausente é setup separado."
+    }
+  ],
+  "nonblocking_findings": [
+    {
+      "id": "AD-PREFLIGHT-02",
+      "severity": "P3",
+      "blocking": false,
+      "title": "Timeout não garante encerramento de descendente que ignore SIGTERM",
+      "observed": "Após SIGTERM ao grupo, run_command espera somente o líder. Se este termina e um descendente ignora SIGTERM, não ocorre SIGKILL. Fixture próprio retornou em 0.204445875 s, mas o filho escreveu no log depois do retorno; o hash selado ficou obsoleto.",
+      "evidence": [
+        {"path": "R/experimental/mebane_ad/run_pair.py", "line_start": 34, "line_end": 44}
+      ],
+      "fixture": "checks_supervisor.json: checks[4], reproduced by check_supervisor.py",
+      "sealed_log_sha256": "5bf052464cc1690cd9b95bf39b2580e751656fa4489c6535b36cc30942b9a780",
+      "final_log_sha256": "3c8a3874bd78e5d2eee04284e13e560a24fbbb7fbf155d3b8223e561e22a775a",
+      "scope_reason": "O candidato executa um único objeto rjags de quatro cadeias no processo R, sem criação explícita de subprocessos. O fixture adversarial não demonstra uma violação no trajeto A/D atual. Não é fundamento adicional para bloquear o piloto nesse escopo; é defeito de robustez antes de reutilizar o supervisor para árvores de processos.",
+      "suggested_repair": "Se o supervisor precisar garantir encerramento do grupo inteiro, verificar/tratar sobreviventes mesmo após a saída do líder e selar o log somente ao final. Preservar esta falha e seu fixture."
+    }
+  ],
+  "checks": [
+    {
+      "id": "PF-SOURCE",
+      "status": "pass",
+      "method": "Independent byte/hash verification, not trust in implementer summary",
+      "result": "75 originais e respectivos snapshots conferiram na entrada; os 19 arquivos comuns são byte-idênticos no freeze completo. RDA original, A literal, G2, contrato, dados preparados e fontes D vinculados. Verificação final dos snapshots em integrity_final.json.",
+      "artifacts": ["source_check_common01.json", "source_check_full01.json", "integrity_final.json"]
+    },
+    {
+      "id": "PF-DATA",
+      "status": "pass",
+      "result": "143 IDs/linhas na ordem original; N=NVoters, A=a=NVoters-NValid, W=Votes e O=NValid-Votes. A e D consomem os mesmos valores; seis matrizes 143x1 de uns. Swaps A/W, colunas D e permutações de IDs/linhas são rejeitados. Nenhuma nova preparação de dados ou exclusão.",
+      "artifacts": ["checks_common01.json", "frozen_fixture_reruns/dc2010.log"],
+      "evidence": [{"path": "R/experimental/mebane_ad/run_jags.R", "line_start": 10, "line_end": 17}]
+    },
+    {
+      "id": "PF-EXTRACT",
+      "status": "pass",
+      "result": "ad_process_draws foi efetivamente executado com mcmc.list sintético, 2000x4 e 143 unidades em cada modelo: 2171 alvos obrigatórios A e 1742 D; sem duplicatas, pooling ou perda de identidade de cadeia. Todas as extrações diretas e probabilidades de classe conferidas com matrizes geradoras independentes; classe modal preserva empates.",
+      "artifacts": ["check_common01.R", "checks_common01.json", "common01_tree/synthetic_review_fixtures"],
+      "evidence": [
+        {"path": "R/experimental/mebane_ad/diagnostics.R", "line_start": 6, "line_end": 20},
+        {"path": "R/experimental/mebane_ad/diagnostics.R", "line_start": 119, "line_end": 151},
+        {"path": "R/experimental/mebane_ad/diagnostics.R", "line_start": 209, "line_end": 215}
+      ]
+    },
+    {
+      "id": "PF-FUNCTIONALS",
+      "status": "pass",
+      "result": "M/S agregados dentro do mesmo draw com Z compartilhado; N_total explícito. A usa frações auxiliares realizadas e endpoint .999 apenas para magnitude manufactured; D usa mu contínuo. Reconstrução secundária D condiciona em W com o mesmo Z/parâmetro: médias, suporte, inteireza e agregação conferidos. Todos os 1144000 sorteios condicionais sintéticos foram reproduzidos com seed 930269.",
+      "artifacts": ["checks_common01.json"],
+      "evidence": [
+        {"path": "R/experimental/mebane_ad/diagnostics.R", "line_start": 98, "line_end": 113},
+        {"path": "R/experimental/mebane_ad/diagnostics.R", "line_start": 157, "line_end": 205}
+      ]
+    },
+    {
+      "id": "PF-V2",
+      "status": "pass",
+      "result": "RH<1.01 estrito, ESS bulk/tail>=400 inclusivo, range<=.05; contagens de classe divididas por n apenas para range. NA/constância amostral não passam; nenhuma isenção analítica empírica; falha de adaptação/incompletude não passa. Secundárias D não resgatam precisão primária. Saída por modelo não emite veredicto pareado.",
+      "artifacts": ["checks_common01.json", "frozen_fixture_reruns/runner/checks.csv"],
+      "evidence": [
+        {"path": "R/experimental/mebane_ad/diagnostics.R", "line_start": 23, "line_end": 62},
+        {"path": "R/experimental/mebane_ad/diagnostics.R", "line_start": 194, "line_end": 195},
+        {"path": "R/experimental/mebane_ad/diagnostics.R", "line_start": 220, "line_end": 235}
+      ]
+    },
+    {
+      "id": "PF-D-SOURCE",
+      "status": "pass",
+      "result": "Fonte D implementa o contrato: seis variâncias Exp(5), precisão 1/v, alpha e b0 separados, ordem parcial pi, Z único por unidade, multinomial A/W/O e ausência de auxiliares Bin(N), clamp ou .999. Helper usa mistura de massas multinomiais, não multinomial das probabilidades médias. Teste próprio com b0 não nulo/variâncias distintas confirmou corpo JAGS e extração coda nativa; zero samplers em grafo totalmente condicionado.",
+      "artifacts": ["checks_d_frozen.json", "frozen_fixture_reruns/model_d.log"],
+      "evidence": [
+        {"path": "models/experimental/mebane_ad/d_multinomial.jags", "line_start": 4, "line_end": 36},
+        {"path": "models/experimental/mebane_ad/d_multinomial.jags", "line_start": 38, "line_end": 71},
+        {"path": "R/experimental/mebane_ad/model_d.R", "line_start": 84, "line_end": 132}
+      ]
+    },
+    {
+      "id": "PF-INIT-RUNNER",
+      "status": "pass_except_AD-PREFLIGHT-01",
+      "result": "Inits/classes/seeds, floor(N*mu), likelihood inicial finita, quatro cadeias, n.adapt=0 na compilação e fases 1000/5000/2000 são coerentes. Supervisor sequencial A depois D; fixtures provaram ausência de retry e continuação independente D após falha A. Limite de tempo real do processo simples funciona; ressalva de descendentes em AD-PREFLIGHT-02. Engine empírico não executado.",
+      "artifacts": ["checks_common01.json", "checks_supervisor.json", "frozen_fixture_reruns/runner/checks.csv"],
+      "evidence": [
+        {"path": "R/experimental/mebane_ad/run_jags.R", "line_start": 25, "line_end": 58},
+        {"path": "R/experimental/mebane_ad/run_jags.R", "line_start": 114, "line_end": 133},
+        {"path": "R/experimental/mebane_ad/run_pair.py", "line_start": 47, "line_end": 93}
+      ]
+    },
+    {
+      "id": "PF-PROVENANCE",
+      "status": "pass_with_timeout_scope_caveat",
+      "result": "Checks de hashes em release, snapshot dos inputs reais/inits, identidade raw/metadata/contrato/data e manifests de pós-processamento inspecionados. Hashes dos outputs sintéticos efetivos conferem. Diretórios/logs existentes são recusados. O manifesto do raw-run foi inspecionado, não produzido por MCMC nesta revisão.",
+      "artifacts": ["checks_common01.json", "checks_supervisor.json"],
+      "evidence": [
+        {"path": "R/experimental/mebane_ad/io.R", "line_start": 17, "line_end": 63},
+        {"path": "R/experimental/mebane_ad/run_jags.R", "line_start": 87, "line_end": 103},
+        {"path": "R/experimental/mebane_ad/diagnostics.R", "line_start": 65, "line_end": 89}
+      ]
+    }
+  ],
+  "executed_suites": {
+    "independent_common_checks": {"passed": 67, "failed": 0, "artifact": "checks_common01.json"},
+    "independent_D_checks": {"passed": 27, "failed": 0, "artifact": "checks_d_frozen.json"},
+    "independent_supervisor_checks": {"passed": 8, "failed": 1, "artifact": "checks_supervisor.json", "failure": "AD-PREFLIGHT-02; bounded adversarial descendant fixture"},
+    "frozen_suites_reexecuted": {"suites": 4, "nonzero_exit_codes": 0, "artifact": "frozen_fixture_reruns.json", "details": "69 runner checks; 3 subprocess fixtures plus anti-overwrite; DC2010 identity suite; D 1024 distributions/8704 cells/1024 conditional blocks plus fixed-parent JAGS"},
+    "empirical_MCMC": false,
+    "conditioned_JAGS_only": true,
+    "new_data_preparation": false,
+    "commands": [
+      "env PYTHONDONTWRITEBYTECODE=1 python3 quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/review_preflight/prepare_review.py",
+      "env PYTHONDONTWRITEBYTECODE=1 python3 quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/review_preflight/verify_full01.py",
+      "env LC_ALL=C LANG=C Rscript --vanilla quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/review_preflight/check_common01.R",
+      "env PYTHONDONTWRITEBYTECODE=1 python3 quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/review_preflight/check_supervisor.py",
+      "env PYTHONDONTWRITEBYTECODE=1 python3 quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/review_preflight/rerun_frozen.py",
+      "env LC_ALL=C LANG=C Rscript --vanilla quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/review_preflight/check_d_frozen.R",
+      "env PYTHONDONTWRITEBYTECODE=1 python3 quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/review_preflight/seal_review.py"
+    ],
+    "reproduction_note": "Scripts recusam sobrescrita. Para reexecutar, usar nova pasta de revisão com mesmos snapshots e preservar estes outputs; não apagar tentativas. Comandos internos, UTCs e log hashes dos testes fornecidos estão em frozen_fixture_reruns.json."
+  },
+  "key_hashes": {
+    "A_literal": "f8360126424b7a463f76a1c99efc89a8a5cb81339213bd4931559f14595fbab6",
+    "RDA_original": "0386dcc86155e543382c2725e9eb61ebf365b2e6f96a2b037324dbee80005196",
+    "prepared_RDS": "b2ef611dabb751f9286acbaae841a23c34948ed0a4b6306364cbe94d9d24903e",
+    "D_JAGS": "6ddb9624f60b15e196cc27ed9694852c40b6553a684a9962003168da4ecfaf5b",
+    "D_helper": "e5154c01c6f111cc47d5e9d9f49654f1ee081bb4001664038c840b8c0d86710a"
+  },
+  "deliberate_limitations": [
+    "Não se executou o piloto, não se mediu desempenho empírico, adaptação ou convergência real. Os veredictos inconclusivos dos fixtures são propriedades sintéticas intencionais, não resultados sobre DC2010.",
+    "Classes raras e constância amostral podem tornar o piloto inconclusivo pelos critérios prospectivos conservadores; não se pede relaxamento nem calibração adicional.",
+    "A literal permanece com limitações F1/F2; preservação byte-idêntica não é aprovação de gerador físico. D é outro modelo e não restaura identificação por si só.",
+    "M/S são funcionais esperados análogos mas não variáveis latentes idênticas entre A/D; contagens condicionais D são secundárias, não votos fraudulentos observados.",
+    "DC2010 não tem referência numérica externa neste contrato; a=NVoters-NValid não é reinterpretado como abstention/invalid do Brasil.",
+    "compare_runs.R, veredicto pareado final e apresentação de resultados ficam expressamente fora desta revisão. G3, G10 e produção não recebem aprovação.",
+    "O release de execução é posterior à adjudicação, não este manifesto candidato. A revisão não herda autoaprovação dos implementadores."
+  ],
+  "authorization_boundary": {
+    "candidate_files_edited": false,
+    "installs": false,
+    "deletions": false,
+    "empirical_MCMC_authorized_by_this_review": false,
+    "production_approved": false,
+    "G3_approved": false,
+    "G10_approved": false,
+    "coordinator_adjudication_required": true,
+    "next_step": "Adjudicar AD-PREFLIGHT-01; preservar full01; congelar reparo de instrumentação e solicitar delta-review executável sem MCMC antes da liberação do piloto."
+  }
+}

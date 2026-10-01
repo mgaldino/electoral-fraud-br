@@ -1,0 +1,347 @@
+{
+  "status": "pass_common_synthetic_checks",
+  "checks": [
+    {
+      "id": "source-RDA-sha",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "literal-A-sha",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "G2-sha",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "full-outgoing-payload-matches-archived-source",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "independent-row-mapping",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "design-Xa",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "design-Xw",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "design-X.iota.m",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "design-X.iota.s",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "design-X.chi.m",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "design-X.chi.s",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "reject-swap-A",
+      "pass": true,
+      "detail": "Outgoing data differ from the frozen author input"
+    },
+    {
+      "id": "reject-swap-D",
+      "pass": true,
+      "detail": "Outgoing data differ from the frozen author input"
+    },
+    {
+      "id": "reject-permute-ID",
+      "pass": true,
+      "detail": "Outgoing data differ from the frozen author input"
+    },
+    {
+      "id": "reject-permute-all-rows",
+      "pass": true,
+      "detail": "Outgoing data differ from the frozen author input"
+    },
+    {
+      "id": "A 1 init-nodes",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "A 2 init-nodes",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "A 3 init-nodes",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "A 4 init-nodes",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "D 1 init-nodes",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "D 2 init-nodes",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "D 3 init-nodes",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "D 4 init-nodes",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "rule-rhat-strict",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "rule-ESS-inclusive",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "rule-bulk-below",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "rule-tail-below",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "rule-range-inclusive",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "rule-range-above",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "rule-NA",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "sample-constant-NA-inconclusive",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "adaptation-fails-closed",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "completion-fails-closed",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "A actual-mandatory-target-count",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "A no-duplicate-diagnostic-targets",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "A shape-iteration-chain",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "A joint-M-exact",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "A joint-S-exact",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "A fixed-denominator",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "A all-direct-extractions-chain-means",
+      "pass": true,
+      "detail": 1737
+    },
+    {
+      "id": "A actual-Rhat-preserves-chains",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "A all-class-probabilities-rowmapping",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "A class-count-range-divided-by-n",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "A ties-preserved",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "A every-row-v2-decision",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "A synthetic-inconclusive-not-pair-release",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "A postprocess-manifest-all-hashes",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "A process-refuses-overwrite",
+      "pass": true,
+      "detail": "Output already exists: synthetic_review_fixtures/A_SYNTHETIC_processed"
+    },
+    {
+      "id": "D actual-mandatory-target-count",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "D no-duplicate-diagnostic-targets",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "D shape-iteration-chain",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "D joint-M-exact",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "D joint-S-exact",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "D fixed-denominator",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "D all-direct-extractions-chain-means",
+      "pass": true,
+      "detail": 1308
+    },
+    {
+      "id": "D actual-Rhat-preserves-chains",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "D all-class-probabilities-rowmapping",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "D class-count-range-divided-by-n",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "D ties-preserved",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "D every-row-v2-decision",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "D synthetic-inconclusive-not-pair-release",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "D-conditional-means-exact",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "D-count-array-and-capacities",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "D-count-joint-aggregation",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "D-all-conditional-draws-same-Z-and-seed",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "D postprocess-manifest-all-hashes",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "id": "D process-refuses-overwrite",
+      "pass": true,
+      "detail": "Output already exists: synthetic_review_fixtures/D_SYNTHETIC_processed"
+    }
+  ],
+  "reviewer_id": "01a0f4b8-962b-77a3-a418-6247c6219e8b",
+  "executor_id": "019d795a-acfa-72c2-a210-d55a46c606c2",
+  "created_utc": "2026-10-01 00:23:34 UTC",
+  "MCMC": false,
+  "D_source_read": false,
+  "payload_scope": "synthetic real-format coda matrices, actual 143-row common input",
+  "candidate_manifest_sha256": "2ad5651ebb55c090864297583bb674ac4a0d61b34d130afd122fd9d3989451a6"
+}

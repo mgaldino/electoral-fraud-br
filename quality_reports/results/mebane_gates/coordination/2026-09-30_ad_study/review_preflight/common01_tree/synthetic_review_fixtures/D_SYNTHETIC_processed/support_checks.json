@@ -1,0 +1,11 @@
+{
+  "model": "D",
+  "expected_functionals_are_ballot_counts": false,
+  "A_literal_source_preserved": true,
+  "expected_M_plus_S_gt_observed_W_fraction": 0.335472027972028,
+  "N_total": 452992,
+  "W_total": 97978,
+  "draw_probability_identity_error": 3.33066907387547e-16,
+  "conditional_counts_support_pass": true,
+  "conditional_probability_error_max": 0
+}

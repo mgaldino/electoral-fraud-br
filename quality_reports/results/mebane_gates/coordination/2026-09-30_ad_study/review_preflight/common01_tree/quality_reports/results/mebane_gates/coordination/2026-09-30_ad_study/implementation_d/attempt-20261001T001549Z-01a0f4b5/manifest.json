@@ -1,0 +1,47 @@
+{
+  "schema_version": "1.0-implementation-d-preflight",
+  "attempt_id": "attempt-20261001T001549Z-01a0f4b5",
+  "executor_id": "01a0f4b5-4434-7b83-91b9-69ced11b40ba",
+  "status": "candidate_reviewable_preflight_pass_not_gate_approved",
+  "test_exit_code": 0,
+  "working_directory": "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud",
+  "test_command_argv": ["LC_ALL=C", "Rscript", "--vanilla", "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/implementation_d/attempt-20261001T001549Z-01a0f4b5/sources/tests/mebane/ad_study/test_model_d.R", "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/implementation_d/attempt-20261001T001549Z-01a0f4b5/sources/R/experimental/mebane_ad/model_d.R", "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/implementation_d/attempt-20261001T001549Z-01a0f4b5/sources/models/experimental/mebane_ad/d_multinomial.jags", "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/implementation_d/attempt-20261001T001549Z-01a0f4b5/sources/quality_reports/results/mebane_gates/G0/round1/qbl_installed_3017de5.jags", "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/implementation_d/attempt-20261001T001549Z-01a0f4b5/sources/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/contract_v2.json", "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/implementation_d/attempt-20261001T001549Z-01a0f4b5/sources/quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/data/run-20260930T235038Z-pid61600/dc2010_ad_data.rds", "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/implementation_d/attempt-20261001T001549Z-01a0f4b5/sources/quality_reports/results/mebane_gates/coordination/authors_replication_discovery/archive/UMeforensics-eforensics_public-3017de5/data/dc2010.rda", "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/implementation_d/attempt-20261001T001549Z-01a0f4b5/sources/R/experimental/mebane_ad/io.R"],
+  "source_snapshot_manifest": {
+    "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/implementation_d/attempt-20261001T001549Z-01a0f4b5/sources/manifest.json",
+    "sha256": "4e7ba66fd55b0c2f671921e6e36fa76fadda461467e97112c6b9e025f9454b79",
+    "file_count": 11
+  },
+  "test_log": {
+    "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/implementation_d/attempt-20261001T001549Z-01a0f4b5/test.log",
+    "sha256": "27242ca06ce7e78262e0e66a60bea38bcf327405c8d9d4e3997de740e2753004"
+  },
+  "sources": {
+    "model_r_sha256": "e5154c01c6f111cc47d5e9d9f49654f1ee081bb4001664038c840b8c0d86710a",
+    "model_jags_sha256": "6ddb9624f60b15e196cc27ed9694852c40b6553a684a9962003168da4ecfaf5b",
+    "test_sha256": "cd4386ba45247a2805f0bb4b3a391246dce257eb637c331003dfbe6b1281eb60",
+    "contract_v2_sha256": "d17b7f508a7ce87eec3ca71ed7df67666b528c755e005ec9e1299e5ff9deb509",
+    "A_jags_sha256": "f8360126424b7a463f76a1c99efc89a8a5cb81339213bd4931559f14595fbab6",
+    "dc2010_rda_sha256": "0386dcc86155e543382c2725e9eb61ebf365b2e6f96a2b037324dbee80005196"
+  },
+  "api": ["ad_d_probabilities", "ad_d_magnitudes", "ad_d_class_probabilities", "ad_d_validate_observed", "ad_d_loglik_multinomial", "ad_d_mixture_probabilities", "ad_d_mixture_loglik", "ad_d_conditional_lms", "ad_d_conditional_lms_logpmf"],
+  "tests": {
+    "grid_distributions": 1024,
+    "physical_cells": 8704,
+    "conditional_blocks": 1024,
+    "max_probability_error": 7.2164e-16,
+    "max_logmass_error": 3.5527e-15,
+    "absolute_probability_tolerance": 1e-11,
+    "absolute_logmass_tolerance": 1e-09,
+    "JAGS_version": "4.3.2",
+    "fixed_parent_synthetic_n": 3,
+    "fixed_parent_nonzero_b0": true,
+    "fixed_parent_deterministic_sample_iterations": 1
+  },
+  "scope": {
+    "empirical_pilot": false,
+    "posterior_D_C_2010": false,
+    "runner_or_diagnostics_implemented": false,
+    "gate_approved": false
+  },
+  "prior_attempts_preserved": ["attempt-20261001T001017Z-01a0f4b5", "attempt-20261001T001117Z-01a0f4b5", "attempt-20261001T001159Z-01a0f4b5", "attempt-20261001T001241Z-01a0f4b5", "attempt-20261001T001402Z-01a0f4b5"]
+}

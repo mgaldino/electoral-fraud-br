@@ -1,0 +1,69 @@
+PASS bounded delta: 10 declared changed paths; 14 decision fixtures; 8 prior delivery files intact.
+Expected mandatory scalar targets: A 2171 D 1742 
+[[1]]
+[[1]]$path
+[1] "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/contract_v1.json"
+
+[[1]]$sha256
+[1] "8f0783b5f3520958a2b1a6d6de5bb217e2ea4ac8656a6ac114024b9d6a95dc17"
+
+
+[[2]]
+[[2]]$path
+[1] "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/contract_v2.json"
+
+[[2]]$sha256
+[1] "d17b7f508a7ce87eec3ca71ed7df67666b528c755e005ec9e1299e5ff9deb509"
+
+
+[[3]]
+[[3]]$path
+[1] "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/contract_adjudication_v1.json"
+
+[[3]]$sha256
+[1] "30adc6e3e8be431daacf727ff0b870b2e79ce7e1fa7f021332cca4246cbe9dd5"
+
+
+[[4]]
+[[4]]$path
+[1] "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/review_contract/review.json"
+
+[[4]]$sha256
+[1] "01090a2482c83dd6f7f0fa0233a94f6baf44899fb42b26eaff44e67d9945aedd"
+
+
+[[5]]
+[[5]]$path
+[1] "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/review_contract/review.md"
+
+[[5]]$sha256
+[1] "bfb38c46a1ba75c8accaac36fe7abbd083ce2abb0bd350571e1d46407e840c75"
+
+
+[[6]]
+[[6]]$path
+[1] "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/review_contract/delivery_manifest.json"
+
+[[6]]$sha256
+[1] "065579eb677d30d303f38f03c528337b58b968737b0626a036c47bf54f81e44d"
+
+
+R version 4.4.2 (2024-10-31)
+Platform: aarch64-apple-darwin20
+Running under: macOS Sonoma 14.7.3
+
+Matrix products: default
+BLAS:   /Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/lib/libRblas.0.dylib 
+LAPACK: /Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/lib/libRlapack.dylib;  LAPACK version 3.12.0
+
+locale:
+[1] C
+
+time zone: America/Sao_Paulo
+tzcode source: internal
+
+attached base packages:
+[1] stats     graphics  grDevices utils     datasets  methods   base     
+
+loaded via a namespace (and not attached):
+[1] compiler_4.4.2 digest_0.6.39  jsonlite_2.0.0

@@ -1,0 +1,129 @@
+A setup start setup 
+A setup complete 0.141 
+A compile start compile 
+A compile complete 0.21 
+A adapt start adapt 
+A adapt complete 11.865 
+A adapt adaptation_adequate TRUE 
+A burn start burn 
+A burn complete 58.462 
+A sample start sample 
+A sample complete 24.92 
+A persist_raw start persist_raw 
+A persist_raw complete 5.992 
+$status
+[1] "sampled_not_diagnosed"
+
+$adaptation_adequate
+[1] TRUE
+
+$chains
+[1] 4
+
+$iterations
+[1] 2000 2000 2000 2000
+
+$raw_sha256
+[1] "4fdd7316850c1b3aca1e067aeee5338c41a45042fb5f3405e4a43f3b30d9dcbd"
+
+$model
+[1] "A"
+
+$warnings
+list()
+
+$phases
+$phases$setup
+$phases$setup$user.self
+[1] 0.099
+
+$phases$setup$sys.self
+[1] 0.017
+
+$phases$setup$elapsed
+[1] 0.141
+
+$phases$setup$completed
+[1] TRUE
+
+
+$phases$compile
+$phases$compile$user.self
+[1] 0.204
+
+$phases$compile$sys.self
+[1] 0.003
+
+$phases$compile$elapsed
+[1] 0.21
+
+$phases$compile$completed
+[1] TRUE
+
+
+$phases$adapt
+$phases$adapt$user.self
+[1] 11.83
+
+$phases$adapt$sys.self
+[1] 0.033
+
+$phases$adapt$elapsed
+[1] 11.865
+
+$phases$adapt$completed
+[1] TRUE
+
+
+$phases$burn
+$phases$burn$user.self
+[1] 58.262
+
+$phases$burn$sys.self
+[1] 0.18
+
+$phases$burn$elapsed
+[1] 58.462
+
+$phases$burn$completed
+[1] TRUE
+
+
+$phases$sample
+$phases$sample$user.self
+[1] 24.518
+
+$phases$sample$sys.self
+[1] 0.374
+
+$phases$sample$elapsed
+[1] 24.92
+
+$phases$sample$completed
+[1] TRUE
+
+
+$phases$persist_raw
+$phases$persist_raw$user.self
+[1] 5.895
+
+$phases$persist_raw$sys.self
+[1] 0.091
+
+$phases$persist_raw$elapsed
+[1] 5.992
+
+$phases$persist_raw$completed
+[1] TRUE
+
+
+
+$elapsed_seconds
+[1] 101.932
+
+$timing_scope
+[1] "Internal generation: function entry through raw persistence/error handling; excludes R bootstrap and final result/manifest writes. Supervisor measures the whole generation process; diagnostics have a separate clock."
+
+$posterior_or_model_validated
+[1] FALSE
+

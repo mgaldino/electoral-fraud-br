@@ -1,0 +1,36 @@
+{
+  "status": "error",
+  "failed_stage": "burn",
+  "message": "SYNTHETIC failure burn",
+  "model": "D",
+  "warnings": [],
+  "phases": {
+    "setup": {
+      "user.self": 0.00900000000000034,
+      "sys.self": 0.00899999999999945,
+      "elapsed": 0.0449999999999946,
+      "completed": true
+    },
+    "compile": {
+      "user.self": 0.000999999999997669,
+      "sys.self": 0,
+      "elapsed": 0.0190000000000055,
+      "completed": true
+    },
+    "adapt": {
+      "user.self": 0,
+      "sys.self": 0,
+      "elapsed": 0.0189999999999984,
+      "completed": true
+    },
+    "burn": {
+      "user.self": 0,
+      "sys.self": 0,
+      "elapsed": 0.0160000000000053,
+      "completed": false
+    }
+  },
+  "elapsed_seconds": 0.103000000000002,
+  "timing_scope": "Internal generation: function entry through raw persistence/error handling; excludes R bootstrap and final result/manifest writes. Supervisor measures the whole generation process; diagnostics have a separate clock.",
+  "posterior_or_model_validated": false
+}

@@ -1,0 +1,13 @@
+{
+  "attempt_id": "attempt-20261001T001159Z-01a0f4b5",
+  "executor_id": "01a0f4b5-4434-7b83-91b9-69ced11b40ba",
+  "status": "failed_preflight",
+  "exit_code": 1,
+  "failure": "Actual data role assertion compared named matrix column with unnamed A vector; mathematical grid, boundary, mixture, covariance and static prior checks passed",
+  "source_snapshot_manifest_sha256": "79ec7a170c93a56a0b07d4adf9cec14729b77cdbb7d73b2005a3bb3507a2b381",
+  "test_log_sha256": "f0eab4d1a3b260b0e6d1a038a95a3b11bcc194997f7bbdff38e46150a3d9124f",
+  "test_source_sha256": "ea2c3b2266d7c563b00117928bf51d121a468075450351a8ff3d254ec1924139",
+  "model_r_sha256": "e5154c01c6f111cc47d5e9d9f49654f1ee081bb4001664038c840b8c0d86710a",
+  "model_jags_sha256": "6ddb9624f60b15e196cc27ed9694852c40b6553a684a9962003168da4ecfaf5b",
+  "no_empirical_pilot": true
+}

@@ -1,0 +1,11 @@
+"model","target","group","rhat","ess_bulk","ess_tail","mean","ess_bulk_per_generation_process_second","ess_tail_per_generation_process_second","ess_bulk_per_end_to_end_compute_second","ess_tail_per_end_to_end_compute_second","ess_bulk_per_sampling_second","ess_tail_per_sampling_second"
+"A","pi[1]","global",1,800,600,1,40,30,32,24,133.333333333333,100
+"A","pi[2]","global",1,800,600,1,40,30,32,24,133.333333333333,100
+"A","pi[3]","global",1,800,600,1,40,30,32,24,133.333333333333,100
+"A","M_total","global",1,800,600,1,40,30,32,24,133.333333333333,100
+"A","S_total","global",1,800,600,1,40,30,32,24,133.333333333333,100
+"D","pi[1]","global",1,800,600,1,40,30,32,24,133.333333333333,100
+"D","pi[2]","global",1,800,600,1,40,30,32,24,133.333333333333,100
+"D","pi[3]","global",1,800,600,1,40,30,32,24,133.333333333333,100
+"D","M_total","global",1,800,600,1,40,30,32,24,133.333333333333,100
+"D","S_total","global",1,800,600,1,40,30,32,24,133.333333333333,100

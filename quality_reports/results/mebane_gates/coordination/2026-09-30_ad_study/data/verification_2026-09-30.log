@@ -1,0 +1,36 @@
+verification_id: dc2010-ad-preintegration-2026-09-30
+executor_id: 01a0f4b5-4434-7b83-91b9-69ced11b40ba
+executor_id_basis: get_goal/create_goal threadId for the task that created both runs
+verified_at_utc: 2026-09-30T23:55:44Z
+scope: data preparation only; no D implementation, estimation, MCMC or gate approval
+original_manifests_and_prepare_logs_modified: no
+
+shared_input_rda_sha256: 0386dcc86155e543382c2725e9eb61ebf365b2e6f96a2b037324dbee80005196
+
+first_run_id: run-20260930T234951Z-pid61383
+first_manifest_sha256: 9c9542621efe85e37e2c083cecb6925fc7b6521bcaafe101c43e14fce0767d6b
+first_prepare_log_sha256: 6f65901c951682b08251656d538983c5badba2b55dbdde135ff9e3cd943cfaf3
+first_script_source: historical_sources/run-20260930T234951Z-pid61383/prepare_dc2010.R
+first_script_sha256: 4696f938688dc42b0a8574c6c9c289407fefee7a38c67e1cc12e7c436b611c8e
+first_test_source: historical_sources/run-20260930T234951Z-pid61383/test_dc2010.R
+first_test_sha256: a33745f6d979334912a2dd11b169d2cd9ae9161185a80a874e8d70a10fec9662
+first_source_reconstruction: Reversed the two script edits and one test edit documented in this task; both reconstructed byte streams match the hashes in the first frozen manifest.
+first_manifest_hash_check: 6 inputs and 3 outputs verified against present files
+first_SHA256SUMS_status: malformed one-space separator; shasum -a 256 -c fails; superseded
+first_historical_test_status: passed at creation under its old line-based check; not rerun in this verification
+
+candidate_run_id: run-20260930T235038Z-pid61600
+candidate_manifest_sha256: ce9801aaf618c124bf870021de57e9a79670f8e943232414a0f05f9e09332f36
+candidate_prepare_log_sha256: 92561f8c39056b8c29bb82ba01a2c3c9c9ebfd43f6d50713b7a5b17c55390f5a
+candidate_script_source: ../../../../../../R/experimental/mebane_ad/prepare_dc2010.R
+candidate_script_sha256: 051f0421448bd349ffdfa9a668ac78ac22bccc09bf4b8ff5718cd80c7e788313
+candidate_test_source: ../../../../../../tests/mebane/ad_study/test_dc2010.R
+candidate_test_sha256: 70039df8c8597e96f26ad837c8467a69ea97ae71362f68080f0cd0dbecddf1ca
+candidate_manifest_hash_check: 6 inputs and 3 outputs verified against present files
+candidate_test_command: LC_ALL=C Rscript --vanilla tests/mebane/ad_study/test_dc2010.R quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/data/run-20260930T235038Z-pid61600
+candidate_test_exit_code: 0
+candidate_test_output: PASS: asymmetric mapping, invalid-data rejection, 143-row frozen input, output identity, hashes, overwrite refusal
+candidate_checksum_command: LC_ALL=C shasum -a 256 -c SHA256SUMS (working directory: candidate run)
+candidate_checksum_output: dc2010_common.csv OK; dc2010_ad_data.rds OK; prepare.log OK; manifest.json OK
+
+limitation: The original frozen manifests and prepare.log files contain run_id and source hashes but no executor_id field. This new log and RUNS.md link the real executor_id to those immutable run records; they do not retroactively change them.

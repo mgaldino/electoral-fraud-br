@@ -1,0 +1,21 @@
+{
+  "status": "approved_for_bounded_experiment",
+  "SYNTHETIC_TEST_NOT_A_RELEASE": true,
+  "contract_path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/contract_v2.json",
+  "contract_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+  "data_path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/data/run-20260930T235038Z-pid61600/dc2010_ad_data.rds",
+  "files": [
+    {
+      "path": "R/experimental/mebane_ad/run_pair.py",
+      "sha256": "0779722ed30041e7859c342ebbab069c131c288832692de8c9a2a74def7711b8"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/contract_v2.json",
+      "sha256": "d17b7f508a7ce87eec3ca71ed7df67666b528c755e005ec9e1299e5ff9deb509"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/data/run-20260930T235038Z-pid61600/dc2010_ad_data.rds",
+      "sha256": "b2ef611dabb751f9286acbaae841a23c34948ed0a4b6306364cbe94d9d24903e"
+    }
+  ]
+}

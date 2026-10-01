@@ -1,0 +1,7 @@
+{
+  "returncode": 0,
+  "timed_out": false,
+  "elapsed_seconds": 5,
+  "log": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/comparison_checks01/success/D.log",
+  "log_sha256": "19fa6a8324b1854f4b52a92a07c046bdefa2b52f992832be5772ba919a06f6d9"
+}

@@ -1,0 +1,9 @@
+{
+  "status": "extraction_order_artifact_not_candidate_finding",
+  "unmatched_markdown_line": 33,
+  "text": "Alvos com diagnóstico obrigatório indefinido | 432 | 392",
+  "cause": "pdftotext -layout interleaves 432/392 before the wrapped word indefinido. Visual inspection shows the complete label in its cell.",
+  "correction": "Read-only pdftotext -raw extraction; retain original layout text and check source. No PDF or report edited.",
+  "completed_before_failure": "Four synthetic reporter cases, byte-identical actual reproduction, PDF/MD hashes and 3 pages all passed.",
+  "candidate_modified": false
+}

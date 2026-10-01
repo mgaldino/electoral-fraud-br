@@ -1,0 +1,10 @@
+"model","group","n","failed","undefined","passed"
+"A","global",23,15,0,8
+"A","local_continuous",1144,586,0,558
+"A","class_count",3,3,3,0
+"A","class_indicator",429,429,429,0
+"A","A_auxiliary",572,572,0,0
+"D","global",23,14,0,9
+"D","local_continuous",1287,603,0,684
+"D","class_count",3,3,2,0
+"D","class_indicator",429,401,390,28

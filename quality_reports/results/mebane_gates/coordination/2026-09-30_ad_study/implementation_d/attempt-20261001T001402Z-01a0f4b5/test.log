@@ -1,0 +1,9 @@
+hashes and local runtime: PASS
+grid: 1024 distributions, 8704 physical cells, 1024 conditional blocks; max errors 7.2164e-16 / 3.5527e-15
+boundaries, log mass, mixture and conditional covariance: PASS
+prior/source static audit: PASS
+prepared data interface and swapped negative control: PASS
+JAGS fixed-parent call: jags.model(n=3, all stochastic parents and observations conditioned, n.adapt=0)
+JAGS fixed-parent call: jags.samples(p.a,p.w,p.o,m,s, n.iter=1)
+JAGS deterministic fixed-parent comparison: PASS
+ALL MODEL D PREFLIGHT CHECKS PASS; NO EMPIRICAL POSTERIOR OR MCMC PILOT

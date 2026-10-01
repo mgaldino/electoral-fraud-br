@@ -1,0 +1,40 @@
+{
+  "status": "pass_delivery_integrity",
+  "checked_at_utc": "2026-10-01 00:10:37 UTC",
+  "reviewer_id": "01a0f4b8-962b-77a3-a418-6247c6219e8b",
+  "executor_id": "019d795a-acfa-72c2-a210-d55a46c606c2",
+  "contract_sha256": "d17b7f508a7ce87eec3ca71ed7df67666b528c755e005ec9e1299e5ff9deb509",
+  "evidence_ranges_checked": 12,
+  "links_checked": 9,
+  "previous_manifest_files_intact": 8,
+  "command": "env LC_ALL=C LANG=C Rscript --vanilla quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/review_contract/verify_delivery_v2.R /Users/manoelgaldino/Documents/DCP/Papers/electoralFraud",
+  "validator_note": "An initial ad-hoc validator failed because R $ partially matched evidence_file to evidence. Exact [[ indexing fixes the validator; candidate and review contents were not changed.",
+  "files": [
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/review_contract/check_delta_v2.R",
+      "sha256": "f033913a797f98489ffeb7d86e8345190ff3f2cbb666858a7b60e8707dd22d89"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/review_contract/delta_checks_v2.json",
+      "sha256": "56a0602ae2746bdda30273361326b414fce076b500756372aa8fb46ac796037a"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/review_contract/delta_checks_v2.log",
+      "sha256": "c5cb656365a2ba2ca32c16b5c247288ac37c254668cfe664a555ce1dceca4f20"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/review_contract/review_v2.json",
+      "sha256": "8652c016c90b86d66fdf308d2094766973ea4e0d70364399e29d834ea801bc90"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/review_contract/review_v2.md",
+      "sha256": "6c305e7c198cc0195c86c460f6c58bc3e5d1deb57eb419032eaf0215c857f25f"
+    },
+    {
+      "path": "quality_reports/results/mebane_gates/coordination/2026-09-30_ad_study/review_contract/verify_delivery_v2.R",
+      "sha256": "50f79f7408f910322c2f23122e51ea67c0955a3a48c7ecad07aec3ad9a07a571"
+    }
+  ],
+  "MCMC": false,
+  "self_hash_excluded": true
+}
