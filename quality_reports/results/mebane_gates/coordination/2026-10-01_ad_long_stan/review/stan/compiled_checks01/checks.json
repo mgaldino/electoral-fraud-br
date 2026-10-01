@@ -1,0 +1,57 @@
+{
+  "status": "pass",
+  "reviewer_id": "01a0f4b8-962b-77a3-a418-6247c6219e8b",
+  "preparation_manifest_sha256": "2ad3246c3b1a5b5e0c676a85434824644b440cc75c386bc45feeabc34b789bfb",
+  "adapter_manifest_sha256": "3562d593731cec1fe156ee52266a975cd0cbf6d6fe8666c26b15652298bb08b0",
+  "checks": [
+    {
+      "name": "preparation_and_preflight_all_file_hashes",
+      "pass": true,
+      "error": {}
+    },
+    {
+      "name": "adapter_all_14_sources_and_snapshots",
+      "pass": true,
+      "error": {}
+    },
+    {
+      "name": "native_log_densities_Jacobians_NCP_and_gradients",
+      "pass": true,
+      "error": {}
+    },
+    {
+      "name": "mixture_not_multinomial_at_average_probability",
+      "pass": true,
+      "error": {}
+    },
+    {
+      "name": "native_standalone_probability_and_mass_functions",
+      "pass": true,
+      "error": {}
+    },
+    {
+      "name": "existing_fixed_parameter_GQ_independent_reconstruction",
+      "pass": true,
+      "error": {}
+    },
+    {
+      "name": "143_rows_data_and_four_initial_states_unchanged",
+      "pass": true,
+      "error": {}
+    },
+    {
+      "name": "adapter_ESS_NA_masks_and_denominators_recheck",
+      "pass": true,
+      "error": {}
+    },
+    {
+      "name": "frozen_artifacts_unchanged_after_native_reads",
+      "pass": true,
+      "error": {}
+    }
+  ],
+  "empirical_MCMC": false,
+  "compilation": false,
+  "generated_new_Stan_draws": false,
+  "completed_utc": "2026-10-01 11:02:02 UTC"
+}

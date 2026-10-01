@@ -90,9 +90,17 @@ inspect_model <- function(model) {
             length(run$warnings) == 0L, length(raw$draws) == 4L,
             length(init) == 4L)
   for (i in 1:4) {
+    alpha_tau <- qlogis(sum(N - payload$A$a) / sum(N)) + c(-.4, -.1, .1, .4)[i]
+    alpha_nu <- qlogis(sum(payload$A$w) / sum(N - payload$A$a)) + c(.4, .1, -.1, -.4)[i]
     stopifnot(init[[i]]$.RNG.seed == raw$seeds[i],
               identical(init[[i]]$.RNG.name, "base::Wichmann-Hill"),
               identical(as.integer(init[[i]]$Z), rep(1L, n)),
+              isTRUE(all.equal(init[[i]]$tau.alpha, alpha_tau)),
+              isTRUE(all.equal(init[[i]]$nu.alpha, alpha_nu)),
+              all(unlist(init[[i]][paste0(blocks, ".alpha")][3:6]) == c(-1, 0, 1, -.5)[i]),
+              all(unlist(init[[i]][paste0("beta.", blocks, "1")]) == 0),
+              all(unlist(init[[i]][c("tb", "nb", "imb", "isb", "cmb", "csb")]) ==
+                    c(.1, .2, .3, .4)[i]),
               isTRUE(all.equal(unname(unlist(init[[i]][c("pi.aux1", "pi.aux2", "pi.aux3")])),
                                c(.8, .2, .1))))
   }

@@ -1,0 +1,10 @@
+PASS preparation_and_preflight_all_file_hashes  
+PASS adapter_all_14_sources_and_snapshots  
+PASS native_log_densities_Jacobians_NCP_and_gradients  
+PASS mixture_not_multinomial_at_average_probability  
+PASS native_standalone_probability_and_mass_functions  
+PASS existing_fixed_parameter_GQ_independent_reconstruction  
+PASS 143_rows_data_and_four_initial_states_unchanged  
+PASS adapter_ESS_NA_masks_and_denominators_recheck  
+PASS frozen_artifacts_unchanged_after_native_reads  
+Completed deterministic native checks; no compilation, GQ generation or MCMC invoked.

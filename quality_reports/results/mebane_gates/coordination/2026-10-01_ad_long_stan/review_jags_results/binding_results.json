@@ -1,0 +1,13 @@
+{
+  "status": "pass",
+  "manifests": 6,
+  "manifest_entries_verified": 108,
+  "source_A_D_preserved": true,
+  "comparison_global_rows_verified": 92,
+  "diagnostic_group_rows_verified": 18,
+  "execution_order_verified": "A generation, D generation, A diagnostics, D diagnostics",
+  "old_timing_rows_matched": 2,
+  "new_timing_rows_matched": 2,
+  "stan_row": "not_available",
+  "scope": "JAGS results and descriptive 2k/20k comparison only; no Stan or PDF QA"
+}

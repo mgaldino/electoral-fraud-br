@@ -1,0 +1,10 @@
+{
+  "preparation_files": 25,
+  "preflight_files": 58,
+  "adapter_files": 14,
+  "executable": "/Users/manoelgaldino/Documents/DCP/Papers/electoralFraud/quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_impl/run-20261001T105406Z-attempt03-01a0f4b5/preparation/build/d_multinomial",
+  "executable_sha256": "c2d882526d9893236c2ebaeec92a8eacdfa0d327f6f19de7f961d936ab6d65f1",
+  "model_sha256": "b38de93ef22b826233f35898b5d3becfae1fb46df774ead065b8d4133c127c9b",
+  "compile_seconds": 43.1641881465912,
+  "compile_scope": "CmdStan executable plus C++ model-method interface for log_prob and gradients; standalone function interface timed separately in preflight tests"
+}

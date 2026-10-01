@@ -1,0 +1,10 @@
+{
+  "status": "pass",
+  "own_checker_error": "review_near disallowed expected NA; finite values and NA locations now checked separately",
+  "candidate_changed": false,
+  "prior_attempt_preserved": true,
+  "mandatory_NA_targets": 429,
+  "output_status": "computationally_inconclusive",
+  "Rhat_ESS_thresholds_unchanged": true,
+  "full_pipeline_not_repeated": true
+}
