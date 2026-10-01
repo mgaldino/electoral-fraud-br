@@ -1,0 +1,9 @@
+{
+  "status": "accepted_fidelity_only",
+  "review_sha256": "d68a96b2a351d1caf8e7deb3bb84327a885b866ef8df373bc8513ec299fa9ac9",
+  "reviewer_id": "01a0f717-7535-72e3-baf8-4db20da81abb",
+  "findings_received": 0,
+  "decision": "New JAGS20k A and D results confirmed computationally inconclusive; no production or gate approval",
+  "raw_A_sha256": "19d8afcb832433feb573569eac28a9a03764f91938d4f5c7ccb264f971db74cd",
+  "raw_D_sha256": "37630c67bc47c5efb3c1f5e126444ff448fa13956cf2b8b764472b010fde588f"
+}

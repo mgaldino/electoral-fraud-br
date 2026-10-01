@@ -1,0 +1,15 @@
+{
+  "status": "approved_for_one_Stan_D_2k_round",
+  "review_path": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/review/stan/review.json",
+  "review_sha256": "c17428bb83135426d0d05a51bc516e2bc4f429c9ba8111f8d652a05ffcc78dee",
+  "reviewer_id": "01a0f4b8-962b-77a3-a418-6247c6219e8b",
+  "preparation_manifest_sha256": "2ad3246c3b1a5b5e0c676a85434824644b440cc75c386bc45feeabc34b789bfb",
+  "adapter_manifest_sha256": "3562d593731cec1fe156ee52266a975cd0cbf6d6fe8666c26b15652298bb08b0",
+  "findings_received": 0,
+  "blocking_findings": 0,
+  "own_checker_issue": "Independent near() assertion rejected expected NA; scoped recheck confirmed correct candidate output and unchanged thresholds",
+  "posterior_precision_not_yet_observed": true,
+  "production_approved": false,
+  "authorization": "User request for JAGS20k and exact D Stan2k, same approved case; no new authorization required for this bounded sampling phase",
+  "retries": 0
+}

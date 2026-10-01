@@ -1,12 +1,12 @@
 {
-  "status": "JAGS20k_complete_inconclusive_Stan_preflight",
+  "status": "JAGS20k_complete_inconclusive_Stan2k_running",
   "date": "2026-10-01",
   "A_preserved": true,
   "old_study_preserved": true,
   "production_approved": false,
   "todos": {
-    "JAGS20k": "generation and diagnostics complete; A and D inconclusive; independent result QA running",
-    "StanD2k": "compilation and deterministic preflight; no empirical sampling yet",
+    "JAGS20k": "complete and independently checked; A and D computationally inconclusive",
+    "StanD2k": "independent preflight PASS adjudicated; one 4-chain serial run underway",
     "comparison": "JAGS 2k/20k preliminary comparison preserved in comparison_jags01; Stan pending"
   }
 }

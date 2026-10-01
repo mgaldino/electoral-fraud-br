@@ -1,0 +1,74 @@
+{
+  "status": "PASS",
+  "reviewer_id": "01a0f4b8-962b-77a3-a418-6247c6219e8b",
+  "coordinator_id": "019d795a-acfa-72c2-a210-d55a46c606c2",
+  "candidate_executor_id": "01a0f4b5-4434-7b83-91b9-69ced11b40ba",
+  "issued_utc": "2026-10-01T11:06:23Z",
+  "scope": "Independent, source-bound preflight of D/Stan compiled target and diagnostic adapter. No empirical posterior, JAGS20k results, comparison report or production approval.",
+  "preparation_manifest": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_impl/run-20261001T105406Z-attempt03-01a0f4b5/preparation/manifest.json",
+  "preparation_manifest_sha256": "2ad3246c3b1a5b5e0c676a85434824644b440cc75c386bc45feeabc34b789bfb",
+  "preflight_manifest_sha256": "7169d8b0e2536739ad2b2a9a9b9f6bfb471b9e6da3424aaad7cf86bd801d0c23",
+  "adapter_manifest": "quality_reports/results/mebane_gates/coordination/2026-10-01_ad_long_stan/stan_diagnostic_candidate/manifest.json",
+  "adapter_manifest_sha256": "3562d593731cec1fe156ee52266a975cd0cbf6d6fe8666c26b15652298bb08b0",
+  "contract_sha256": "fb4a296c9bf0af25812d7d8dd2ab63340fe10d4e73e806e64b5dba3f7dcf481a",
+  "diagnostic_contract_sha256": "e33a59939f0d55513fea6ae05a2cc90fac617f3385193ec56e4a2a7a9b6df264",
+  "model_sha256": "b38de93ef22b826233f35898b5d3becfae1fb46df774ead065b8d4133c127c9b",
+  "executable_sha256": "c2d882526d9893236c2ebaeec92a8eacdfa0d327f6f19de7f961d936ab6d65f1",
+  "findings": [],
+  "blocking_findings_count": 0,
+  "checks": {
+    "static_review": "PASS: exact integrated ratio prior; Exp(5) on variances and NCP; per-unit joint multinomial mixture; conditional GQ and same-Z functionals; shape/name mapping; mandatory HMC/NCP/common diagnostics; frozen-source, timeout and no-retry execution path.",
+    "hash_binding": "PASS: all 25 preparation entries, 58 preflight entries and 14 adapter entries checked, including source snapshots and native products; consumed frozen artifacts unchanged after checks.",
+    "compiled_target": "PASS: nine independent deterministic check groups, using preserved native libraries and existing synthetic fixed-parameter output; no recompilation or new draws.",
+    "density_max_absolute_difference_error": 7.105427357601e-15,
+    "gradient_max_scaled_error": 4.16366718880568e-10,
+    "GQ_existing_rows_reconstructed": 256,
+    "GQ_synthetic_units": 3,
+    "adapter": "PASS: all 1451 mapped columns in 2000 iterations x 4 chains, all 1742 mandatory common decisions, 860 mandatory internal names/diagnostics, joint M/S, secondary RB separation and HMC/NCP rejection fixtures.",
+    "adapter_initial_check_groups": 20,
+    "adapter_initial_passed": 19,
+    "adapter_remaining_checker_error_resolved": true,
+    "data_and_initial_states": "PASS: 143 prepared cases and four prescribed initial states checked without preparing or changing data.",
+    "provided_183_check_suite": "Frozen outputs inspected and hash-checked; not rerun in full. Independent native and adapter checks used instead.",
+    "supervisor": "Static review of frozen source; existing frozen supervisor fixture evidence reused. No empirical execution requested by this review."
+  },
+  "own_checker_resolution": {
+    "issue": "review_near required !anyNA even where tail ESS was correctly undefined.",
+    "resolution": "Compared NA masks separately and ESS/123 on finite entries; verified all 429 required NA targets fail and overall status remains computationally_inconclusive.",
+    "candidate_changed": false,
+    "thresholds_changed": false,
+    "prior_failed_logs_preserved": true,
+    "full_adapter_suite_repeated": false,
+    "intermediate_status_superseded": "adapter_checks02/checks.json needs_revision was an intermediate checker status, not an unresolved candidate defect; its target_preparation_pending field predates the final target check."
+  },
+  "evidence": [
+    {
+      "path": "compiled_checks01/checks.json",
+      "sha256": "d7e1b9fdbe11be3890fc7326ffb69ed3f1279a4ee7c8b9b109aba382bc944999"
+    },
+    {
+      "path": "adapter_checks02/checks.json",
+      "sha256": "2d8e1339def90cbe8da559bbfd7f6d2ae53794382762d89bb9b0da5d7512f978"
+    },
+    {
+      "path": "compiled_checks01/adapter_ESS_resolution.json",
+      "sha256": "27c2411c4d14defb5d819e8b783deb6f2d47676190c620c9a4c48c63d1b97d55"
+    }
+  ],
+  "timing_scope": {
+    "compile_seconds": 43.1641881465912,
+    "definition": "CmdStan executable plus C++ model-method interface for log_prob and gradients; standalone function interface timed separately in the preflight tests.",
+    "adapter_internal_ESS_denominator": "Stan sampling-call wall seconds, explicitly identified in metadata; not external generation-plus-diagnostics elapsed time."
+  },
+  "limitations": [
+    "No empirical Stan MCMC, new Stan draws or recompilation performed by reviewer. Synthetic fixtures and deterministic native evaluations do not establish empirical mixing, precision or runtime.",
+    "Actual run remains subject to prospective common, HMC and 860-internal diagnostic rules, with every mandatory undefined diagnostic inconclusive.",
+    "This PASS is technical preflight evidence for coordinator adjudication under the existing authorization, not a posterior-convergence or substantive-inference claim."
+  ],
+  "empirical_MCMC": false,
+  "candidate_edits": false,
+  "installation": false,
+  "deletion": false,
+  "new_Stan_draws": false,
+  "recompilation": false
+}
